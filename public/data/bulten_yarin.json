@@ -1,0 +1,2191 @@
+{
+  "tarih": "16.11.2026",
+  "seciliGun": "16/11/2026",
+  "gunAdi": "Pazartesi",
+  "expectedCities": [
+    "Bursa",
+    "Şanlıurfa"
+  ],
+  "guncellemeZamani": "2026-11-15T19:13:38.135Z",
+  "sonSenkronizasyon": "22:13:38",
+  "kaynak": "TJK Resmî Yarış Programı (Bursa Osmangazi & Şanlıurfa)",
+  "hipodromlar": [
+    {
+      "id": "bursa",
+      "isim": "Bursa Osmangazi Hipodromu",
+      "sehir": "Bursa",
+      "tarih": "16.11.2026",
+      "havaDurumu": {
+        "temp": 15,
+        "conditionText": "Parçalı Bulutlu",
+        "humidity": 62,
+        "wind": 12
+      },
+      "rawTrackInfo": "Kum (Normal)",
+      "cimOlcum": "Yarış Yok",
+      "kumOlcum": "Kum (3.8 Normal)",
+      "sentetikOlcum": "Yarış Yok",
+      "birimFiyat": 1.25,
+      "birimFiyatEtiket": "Büyük Şehir Hipodromu (1.25 ₺)",
+      "asgariKuponTL": 20,
+      "kosular": [
+        {
+          "kosu_no": 1,
+          "saat": "14:30",
+          "mesafe": 1300,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Maiden / 2 Yaşlı İngilizler",
+          "ikramiye": "545.000 ₺",
+          "altiliAyagi": null,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "ARSLANBEYLİ",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "PAPA CLEM",
+              "anne": "LADY ARWEN",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "H.ÇİZİK",
+              "siklet": 57,
+              "kulvar": 1,
+              "handikap_puani": 38,
+              "son_yarislar": "432",
+              "dinlenme_gunu": 18,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 28,
+              "ganyan": "2.40",
+              "son_galop": {
+                "derece": "24.2",
+                "son400hiz": 59.5
+              }
+            },
+            {
+              "no": 2,
+              "isim": "KUMKADI ASLANI",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "LION HEART",
+              "anne": "AL MAHA",
+              "kisrak_babasi": "VICTORY GALLOP",
+              "jokey": "A.YILDIZ",
+              "siklet": 57,
+              "kulvar": 2,
+              "handikap_puani": 36,
+              "son_yarislar": "35",
+              "dinlenme_gunu": 21,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 22,
+              "ganyan": "3.50",
+              "son_galop": {
+                "derece": "24.6",
+                "son400hiz": 58.5
+              }
+            },
+            {
+              "no": 3,
+              "isim": "MİR BEG",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "BODEMEISTER",
+              "anne": "FLYING BEAUTY",
+              "kisrak_babasi": "ROYAL ABJAR",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 57,
+              "kulvar": 3,
+              "handikap_puani": 34,
+              "son_yarislar": "4",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 16,
+              "ganyan": "5.20",
+              "son_galop": {
+                "derece": "25.0",
+                "son400hiz": 57.6
+              }
+            },
+            {
+              "no": 4,
+              "isim": "MY NOBLE SON",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "DAREDEVIL",
+              "anne": "MY SECRET",
+              "kisrak_babasi": "KANEKO",
+              "jokey": "M.KAYA",
+              "siklet": 57,
+              "kulvar": 4,
+              "handikap_puani": 32,
+              "son_yarislar": "56",
+              "dinlenme_gunu": 14,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 12,
+              "ganyan": "7.10",
+              "son_galop": {
+                "derece": "25.2",
+                "son400hiz": 57.1
+              }
+            },
+            {
+              "no": 5,
+              "isim": "RAŞAMO",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "MENDIP",
+              "anne": "GOLDEN SHOWER",
+              "kisrak_babasi": "SRI PEKAN",
+              "jokey": "R.KETME",
+              "siklet": 57,
+              "kulvar": 5,
+              "handikap_puani": 29,
+              "son_yarislar": "6",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 8,
+              "ganyan": "11.40",
+              "son_galop": {
+                "derece": "25.8",
+                "son400hiz": 55.8
+              }
+            },
+            {
+              "no": 6,
+              "isim": "HOLD ON TO LIFE",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "TOROK",
+              "anne": "QUEEN OF VANDAMME",
+              "kisrak_babasi": "LUXOR",
+              "jokey": "A.İNCİ",
+              "siklet": 55,
+              "kulvar": 6,
+              "handikap_puani": 26,
+              "son_yarislar": "7",
+              "dinlenme_gunu": 24,
+              "takilar": [
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 5,
+              "ganyan": "16.80",
+              "son_galop": {
+                "derece": "26.0",
+                "son400hiz": 55.3
+              }
+            },
+            {
+              "no": 7,
+              "isim": "WORKIN LADY",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "TİZWAY",
+              "anne": "LADY WORK",
+              "kisrak_babasi": "NATIVE KHAN",
+              "jokey": "O.ATMACA",
+              "siklet": 55,
+              "kulvar": 7,
+              "handikap_puani": 25,
+              "son_yarislar": "8",
+              "dinlenme_gunu": 42,
+              "takilar": [
+                "KG"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 4,
+              "ganyan": "19.50",
+              "son_galop": {
+                "derece": "26.2",
+                "son400hiz": 54.9
+              }
+            },
+            {
+              "no": 8,
+              "isim": "MY LIFE ELİF",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "PAPA CLEM",
+              "anne": "LIFE IS LIFE",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "İ.GÜN",
+              "siklet": 52,
+              "apranti_indirimi": true,
+              "kulvar": 8,
+              "handikap_puani": 22,
+              "son_yarislar": "9",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 3,
+              "ganyan": "24.00",
+              "son_galop": {
+                "derece": "26.5",
+                "son400hiz": 54.3
+              }
+            },
+            {
+              "no": 9,
+              "isim": "STEEL HUNTER",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "CORINTHIAN",
+              "anne": "STEEL CAT",
+              "kisrak_babasi": "MOUNTAIN CAT",
+              "jokey": "MAH.TURAN",
+              "siklet": 57,
+              "kulvar": 9,
+              "handikap_puani": 20,
+              "son_yarislar": "0",
+              "dinlenme_gunu": 45,
+              "takilar": [
+                "KG"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 2,
+              "ganyan": "32.00",
+              "son_galop": {
+                "derece": "26.8",
+                "son400hiz": 53.7
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 2,
+          "saat": "15:00",
+          "mesafe": 1400,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Handikap 16 / H2 / 3 ve Yukarı İngilizler",
+          "ikramiye": "630.000 ₺",
+          "altiliAyagi": 1,
+          "atlar": [
+            {
+              "no": 2,
+              "isim": "BEYLERİNBEYİ",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "VICTORY GALLOP",
+              "anne": "LADY SMITH",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 61,
+              "kulvar": 2,
+              "handikap_puani": 63,
+              "son_yarislar": "213412",
+              "dinlenme_gunu": 19,
+              "takilar": [
+                "KG",
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 32,
+              "ganyan": "2.80",
+              "son_galop": {
+                "derece": "24.0",
+                "son400hiz": 60
+              }
+            },
+            {
+              "no": 3,
+              "isim": "KUZEY EFESİ",
+              "yas": 4,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "DAREDEVIL",
+              "anne": "KUZEYİN GÜLÜ",
+              "kisrak_babasi": "LION HEART",
+              "jokey": "R.KETME",
+              "siklet": 61,
+              "kulvar": 3,
+              "handikap_puani": 63,
+              "son_yarislar": "142351",
+              "dinlenme_gunu": 25,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 24,
+              "ganyan": "3.90",
+              "son_galop": {
+                "derece": "24.4",
+                "son400hiz": 59
+              }
+            },
+            {
+              "no": 4,
+              "isim": "TYRAXES",
+              "yas": 4,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "MENDIP",
+              "anne": "LADY CHARLOTTE",
+              "kisrak_babasi": "SRI PEKAN",
+              "jokey": "M.BAĞ",
+              "siklet": 59.5,
+              "kulvar": 4,
+              "handikap_puani": 62,
+              "son_yarislar": "331245",
+              "dinlenme_gunu": 16,
+              "takilar": [
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 18,
+              "ganyan": "4.70",
+              "son_galop": {
+                "derece": "24.8",
+                "son400hiz": 58
+              }
+            },
+            {
+              "no": 7,
+              "isim": "COME AND SEE",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "BODEMEISTER",
+              "anne": "QUEEN OF THE STORM",
+              "kisrak_babasi": "ROYAL ABJAR",
+              "jokey": "M.KAYA",
+              "siklet": 55,
+              "kulvar": 7,
+              "handikap_puani": 51,
+              "son_yarislar": "415234",
+              "dinlenme_gunu": 22,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 12,
+              "ganyan": "6.80",
+              "son_galop": {
+                "derece": "24.2",
+                "son400hiz": 59.5
+              }
+            },
+            {
+              "no": 10,
+              "isim": "KUMSALIM",
+              "yas": 5,
+              "irk": "İngiliz",
+              "cinsiyet": "Kısrak",
+              "baba": "PAPA CLEM",
+              "anne": "BEACH GIRL",
+              "kisrak_babasi": "KANEKO",
+              "jokey": "E.AKPINAR",
+              "siklet": 55,
+              "kulvar": 10,
+              "handikap_puani": 48,
+              "son_yarislar": "542316",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 7,
+              "ganyan": "12.50",
+              "son_galop": {
+                "derece": "25.1",
+                "son400hiz": 57.3
+              }
+            },
+            {
+              "no": 11,
+              "isim": "ALPS FIRE",
+              "yas": 4,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "CORINTHIAN",
+              "anne": "ALPINE GLOW",
+              "kisrak_babasi": "FAST 'N' FAMOUS",
+              "jokey": "A.YILDIZ",
+              "siklet": 55,
+              "kulvar": 11,
+              "handikap_puani": 47,
+              "son_yarislar": "623451",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 4,
+              "ganyan": "18.00",
+              "son_galop": {
+                "derece": "25.4",
+                "son400hiz": 56.7
+              }
+            },
+            {
+              "no": 13,
+              "isim": "TM BATAILE",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "TİZWAY",
+              "anne": "BATAILE NOIRE",
+              "kisrak_babasi": "LUXOR",
+              "jokey": "Ö.F.ÖZEN",
+              "siklet": 52.5,
+              "kulvar": 13,
+              "handikap_puani": 46,
+              "son_yarislar": "341562",
+              "dinlenme_gunu": 20,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 2,
+              "ganyan": "26.00",
+              "son_galop": {
+                "derece": "25.6",
+                "son400hiz": 56.2
+              }
+            },
+            {
+              "no": 15,
+              "isim": "İŞİN ASLI",
+              "yas": 10,
+              "irk": "İngiliz",
+              "cinsiyet": "Kısrak",
+              "baba": "AGRESIVO",
+              "anne": "DONT MAKE ME CRY",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "O.ATMACA",
+              "siklet": 53,
+              "kulvar": 15,
+              "handikap_puani": 43,
+              "son_yarislar": "765431",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "KG",
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 1,
+              "ganyan": "45.00",
+              "son_galop": {
+                "derece": "26.0",
+                "son400hiz": 55.3
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 3,
+          "saat": "15:30",
+          "mesafe": 1400,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "ŞARTLI 4 / DHÖW / 3 Yaşlı Araplar",
+          "ikramiye": "490.000 ₺",
+          "altiliAyagi": 2,
+          "atlar": [
+            {
+              "no": 2,
+              "isim": "ÖZ GÜMÜŞ",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "ÖZHABER",
+              "anne": "GÜMÜŞKIZ",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "H.ÇİZİK",
+              "siklet": 58,
+              "kulvar": 2,
+              "handikap_puani": 55,
+              "son_yarislar": "123145",
+              "dinlenme_gunu": 21,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 34,
+              "ganyan": "2.40",
+              "son_galop": {
+                "derece": "27.5",
+                "son400hiz": 52.3
+              }
+            },
+            {
+              "no": 3,
+              "isim": "TEKNİKTAKTİK",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "SERHANTAY",
+              "anne": "TAKTİK HANIM",
+              "kisrak_babasi": "DEMİRKAZIK",
+              "jokey": "HA.GÖKÇE",
+              "siklet": 57,
+              "kulvar": 3,
+              "handikap_puani": 52,
+              "son_yarislar": "214231",
+              "dinlenme_gunu": 17,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 25,
+              "ganyan": "3.60",
+              "son_galop": {
+                "derece": "28.0",
+                "son400hiz": 51.4
+              }
+            },
+            {
+              "no": 6,
+              "isim": "DELİNİN GÜCÜ",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "KAIZBERT",
+              "anne": "DELİKIZ",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "A.YILDIZ",
+              "siklet": 57,
+              "kulvar": 6,
+              "handikap_puani": 50,
+              "son_yarislar": "431256",
+              "dinlenme_gunu": 15,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 18,
+              "ganyan": "4.90",
+              "son_galop": {
+                "derece": "27.8",
+                "son400hiz": 51.8
+              }
+            },
+            {
+              "no": 11,
+              "isim": "ÖZGÜN BAŞKAN",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "ÖZGÜNHAN",
+              "anne": "BAŞKAN SULTAN",
+              "kisrak_babasi": "BATYSKAF",
+              "jokey": "M.KAYA",
+              "siklet": 57,
+              "kulvar": 11,
+              "handikap_puani": 49,
+              "son_yarislar": "312453",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 11,
+              "ganyan": "7.80",
+              "son_galop": {
+                "derece": "27.2",
+                "son400hiz": 52.9
+              }
+            },
+            {
+              "no": 12,
+              "isim": "TÜMERK",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "TÜMÖZ BEY",
+              "anne": "ERKIZ",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "K.TOKAÇOĞLU",
+              "siklet": 57,
+              "kulvar": 12,
+              "handikap_puani": 47,
+              "son_yarislar": "523146",
+              "dinlenme_gunu": 24,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 7,
+              "ganyan": "12.00",
+              "son_galop": {
+                "derece": "28.2",
+                "son400hiz": 51
+              }
+            },
+            {
+              "no": 14,
+              "isim": "GÖLGE ADAM",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "AYABAKAN",
+              "anne": "GÖLGE KIZ",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 55,
+              "kulvar": 14,
+              "handikap_puani": 44,
+              "son_yarislar": "634215",
+              "dinlenme_gunu": 33,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 3,
+              "ganyan": "22.00",
+              "son_galop": {
+                "derece": "28.5",
+                "son400hiz": 50.5
+              }
+            },
+            {
+              "no": 15,
+              "isim": "HATUN DİDEM",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Dişi",
+              "baba": "SERHANTAY",
+              "anne": "DİDEM HANIM",
+              "kisrak_babasi": "ÖZHABER",
+              "jokey": "MAH.TURAN",
+              "siklet": 53,
+              "kulvar": 15,
+              "handikap_puani": 40,
+              "son_yarislar": "756321",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 2,
+              "ganyan": "35.00",
+              "son_galop": {
+                "derece": "28.8",
+                "son400hiz": 50
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 4,
+          "saat": "16:00",
+          "mesafe": 1300,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Maiden / 2 Yaşlı İngilizler / Bölünen",
+          "ikramiye": "545.000 ₺",
+          "altiliAyagi": 3,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "DRAGON FURIOUS",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "DAREDEVIL",
+              "anne": "LADY FURIOUS",
+              "kisrak_babasi": "LION HEART",
+              "jokey": "H.ÇİZİK",
+              "siklet": 57,
+              "kulvar": 1,
+              "handikap_puani": 39,
+              "son_yarislar": "22",
+              "dinlenme_gunu": 16,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 42,
+              "ganyan": "1.90",
+              "son_galop": {
+                "derece": "23.9",
+                "son400hiz": 60.2
+              }
+            },
+            {
+              "no": 2,
+              "isim": "KING OF BURSA",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "PAPA CLEM",
+              "anne": "BURSA GÜZELİ",
+              "kisrak_babasi": "VICTORY GALLOP",
+              "jokey": "M.KAYA",
+              "siklet": 57,
+              "kulvar": 2,
+              "handikap_puani": 35,
+              "son_yarislar": "34",
+              "dinlenme_gunu": 20,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 26,
+              "ganyan": "3.20",
+              "son_galop": {
+                "derece": "24.4",
+                "son400hiz": 59
+              }
+            },
+            {
+              "no": 3,
+              "isim": "BLUE SHADOW",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "BODEMEISTER",
+              "anne": "SHADOW DANCER",
+              "kisrak_babasi": "ROYAL ABJAR",
+              "jokey": "A.YILDIZ",
+              "siklet": 57,
+              "kulvar": 3,
+              "handikap_puani": 31,
+              "son_yarislar": "5",
+              "dinlenme_gunu": 25,
+              "takilar": [
+                "KG"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 15,
+              "ganyan": "5.80",
+              "son_galop": {
+                "derece": "24.9",
+                "son400hiz": 57.8
+              }
+            },
+            {
+              "no": 4,
+              "isim": "NOBLE RUNNER",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "MENDIP",
+              "anne": "NOBLE LADY",
+              "kisrak_babasi": "KANEKO",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 57,
+              "kulvar": 4,
+              "handikap_puani": 28,
+              "son_yarislar": "6",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 9,
+              "ganyan": "9.50",
+              "son_galop": {
+                "derece": "25.3",
+                "son400hiz": 56.9
+              }
+            },
+            {
+              "no": 5,
+              "isim": "SILVER QUEEN",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "TOROK",
+              "anne": "SILVER LADY",
+              "kisrak_babasi": "SRI PEKAN",
+              "jokey": "R.KETME",
+              "siklet": 55,
+              "kulvar": 5,
+              "handikap_puani": 24,
+              "son_yarislar": "7",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 5,
+              "ganyan": "16.00",
+              "son_galop": {
+                "derece": "25.7",
+                "son400hiz": 56
+              }
+            },
+            {
+              "no": 6,
+              "isim": "FAST LIGHTNING",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "FAST 'N' FAMOUS",
+              "anne": "LIGHTNING STORM",
+              "kisrak_babasi": "LUXOR",
+              "jokey": "MAH.TURAN",
+              "siklet": 57,
+              "kulvar": 6,
+              "handikap_puani": 20,
+              "son_yarislar": "8",
+              "dinlenme_gunu": 40,
+              "takilar": [
+                "KG"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 3,
+              "ganyan": "28.00",
+              "son_galop": {
+                "derece": "26.2",
+                "son400hiz": 54.9
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 5,
+          "saat": "16:30",
+          "mesafe": 1900,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "ŞARTLI 5 / 3 Yaşlı İngilizler",
+          "ikramiye": "590.000 ₺",
+          "altiliAyagi": 4,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "LION OF BABYLON",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "LION HEART",
+              "anne": "BABYLON QUEEN",
+              "kisrak_babasi": "VICTORY GALLOP",
+              "jokey": "H.ÇİZİK",
+              "siklet": 60,
+              "kulvar": 1,
+              "handikap_puani": 78,
+              "son_yarislar": "112314",
+              "dinlenme_gunu": 21,
+              "takilar": [
+                "KG",
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 40,
+              "ganyan": "2.10",
+              "son_galop": {
+                "derece": "24.1",
+                "son400hiz": 59.7
+              }
+            },
+            {
+              "no": 2,
+              "isim": "MASTER FORCE",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "DAREDEVIL",
+              "anne": "FORCEFUL",
+              "kisrak_babasi": "PAPA CLEM",
+              "jokey": "M.KAYA",
+              "siklet": 58,
+              "kulvar": 2,
+              "handikap_puani": 74,
+              "son_yarislar": "213125",
+              "dinlenme_gunu": 18,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 28,
+              "ganyan": "3.40",
+              "son_galop": {
+                "derece": "24.5",
+                "son400hiz": 58.7
+              }
+            },
+            {
+              "no": 3,
+              "isim": "DESERT KING",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "BODEMEISTER",
+              "anne": "DESERT ROSE",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 58,
+              "kulvar": 3,
+              "handikap_puani": 71,
+              "son_yarislar": "321452",
+              "dinlenme_gunu": 25,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 18,
+              "ganyan": "4.80",
+              "son_galop": {
+                "derece": "23.9",
+                "son400hiz": 60.2
+              }
+            },
+            {
+              "no": 4,
+              "isim": "WARRIOR CHIEF",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "MENDIP",
+              "anne": "WARRIOR QUEEN",
+              "kisrak_babasi": "SRI PEKAN",
+              "jokey": "A.YILDIZ",
+              "siklet": 56,
+              "kulvar": 4,
+              "handikap_puani": 65,
+              "son_yarislar": "432516",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 9,
+              "ganyan": "8.50",
+              "son_galop": {
+                "derece": "24.8",
+                "son400hiz": 58
+              }
+            },
+            {
+              "no": 5,
+              "isim": "IRON HORSE",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "CORINTHIAN",
+              "anne": "IRON LADY",
+              "kisrak_babasi": "KANEKO",
+              "jokey": "R.KETME",
+              "siklet": 55,
+              "kulvar": 5,
+              "handikap_puani": 58,
+              "son_yarislar": "543215",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 5,
+              "ganyan": "16.00",
+              "son_galop": {
+                "derece": "25.2",
+                "son400hiz": 57.1
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 6,
+          "saat": "17:00",
+          "mesafe": 1200,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "ŞARTLI 4 / DHÖW / 4 ve Yukarı Araplar",
+          "ikramiye": "490.000 ₺",
+          "altiliAyagi": 5,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "DESPOTLU",
+              "yas": 5,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "KAIZBERT",
+              "anne": "DESPOTKIZ",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "H.ÇİZİK",
+              "siklet": 61,
+              "kulvar": 1,
+              "handikap_puani": 85,
+              "son_yarislar": "121132",
+              "dinlenme_gunu": 15,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 48,
+              "ganyan": "1.75",
+              "son_galop": {
+                "derece": "26.8",
+                "son400hiz": 53.7
+              }
+            },
+            {
+              "no": 2,
+              "isim": "ÇELİKKALKAN",
+              "yas": 6,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "SERHANTAY",
+              "anne": "ÇELİKKIZ",
+              "kisrak_babasi": "DEMİRKAZIK",
+              "jokey": "M.KAYA",
+              "siklet": 59,
+              "kulvar": 2,
+              "handikap_puani": 80,
+              "son_yarislar": "213241",
+              "dinlenme_gunu": 22,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 25,
+              "ganyan": "3.40",
+              "son_galop": {
+                "derece": "27.2",
+                "son400hiz": 52.9
+              }
+            },
+            {
+              "no": 3,
+              "isim": "BABA ARİF",
+              "yas": 7,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "ÖZHABER",
+              "anne": "ARİFE HANIM",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 58,
+              "kulvar": 3,
+              "handikap_puani": 76,
+              "son_yarislar": "341253",
+              "dinlenme_gunu": 19,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 14,
+              "ganyan": "5.80",
+              "son_galop": {
+                "derece": "26.9",
+                "son400hiz": 53.5
+              }
+            },
+            {
+              "no": 4,
+              "isim": "YİĞİT EFE",
+              "yas": 5,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "TÜMÖZ BEY",
+              "anne": "YİĞİT KIZ",
+              "kisrak_babasi": "BATYSKAF",
+              "jokey": "A.YILDIZ",
+              "siklet": 57,
+              "kulvar": 4,
+              "handikap_puani": 72,
+              "son_yarislar": "432514",
+              "dinlenme_gunu": 26,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 8,
+              "ganyan": "9.20",
+              "son_galop": {
+                "derece": "27.5",
+                "son400hiz": 52.3
+              }
+            },
+            {
+              "no": 5,
+              "isim": "SON FIRTINA",
+              "yas": 6,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "AYABAKAN",
+              "anne": "FIRTINA GÜZELİ",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "R.KETME",
+              "siklet": 56,
+              "kulvar": 5,
+              "handikap_puani": 68,
+              "son_yarislar": "564125",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 5,
+              "ganyan": "16.00",
+              "son_galop": {
+                "derece": "27.8",
+                "son400hiz": 51.8
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 7,
+          "saat": "17:30",
+          "mesafe": 1900,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Handikap 16 / DHÖW / H2 / 4 ve Yukarı Araplar",
+          "ikramiye": "630.000 ₺",
+          "altiliAyagi": 6,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "SERİNTEPE",
+              "yas": 4,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "YAVUZBEY",
+              "anne": "SU GAZELİ",
+              "kisrak_babasi": "DEMİRKAZIK",
+              "jokey": "M.KAYA",
+              "siklet": 61.5,
+              "kulvar": 1,
+              "handikap_puani": 65,
+              "son_yarislar": "132145",
+              "dinlenme_gunu": 18,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 28,
+              "ganyan": "3.20",
+              "son_galop": {
+                "derece": "27.1",
+                "son400hiz": 53.1
+              }
+            },
+            {
+              "no": 2,
+              "isim": "STEPHENSON",
+              "yas": 5,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "DİLİRAN",
+              "anne": "SABUR ABLA",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "H.ÇİZİK",
+              "siklet": 63,
+              "kulvar": 2,
+              "handikap_puani": 64,
+              "son_yarislar": "214321",
+              "dinlenme_gunu": 24,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 24,
+              "ganyan": "3.80",
+              "son_galop": {
+                "derece": "27.4",
+                "son400hiz": 52.5
+              }
+            },
+            {
+              "no": 3,
+              "isim": "TATARUŞAĞI",
+              "yas": 4,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "TAMERİNOĞLU",
+              "anne": "TATARKIZ",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "A.YILDIZ",
+              "siklet": 60,
+              "kulvar": 3,
+              "handikap_puani": 62,
+              "son_yarislar": "321542",
+              "dinlenme_gunu": 14,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 18,
+              "ganyan": "4.70",
+              "son_galop": {
+                "derece": "26.9",
+                "son400hiz": 53.5
+              }
+            },
+            {
+              "no": 4,
+              "isim": "ESKİ TOPRAK",
+              "yas": 6,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "TÜMÖZ BEY",
+              "anne": "TOPRAK KOKUSU",
+              "kisrak_babasi": "BATYSKAF",
+              "jokey": "M.M.BİLGİN",
+              "siklet": 61,
+              "kulvar": 4,
+              "handikap_puani": 61,
+              "son_yarislar": "145231",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG",
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 14,
+              "ganyan": "6.20",
+              "son_galop": {
+                "derece": "27.6",
+                "son400hiz": 52.1
+              }
+            },
+            {
+              "no": 5,
+              "isim": "KOPUK UÇURTMA",
+              "yas": 4,
+              "irk": "Arap",
+              "cinsiyet": "Kısrak",
+              "baba": "OĞLUMEGE",
+              "anne": "KONUKSEVER",
+              "kisrak_babasi": "ÖZHABER",
+              "jokey": "R.KETME",
+              "siklet": 59.5,
+              "kulvar": 5,
+              "handikap_puani": 59,
+              "son_yarislar": "432156",
+              "dinlenme_gunu": 20,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 8,
+              "ganyan": "9.50",
+              "son_galop": {
+                "derece": "28.0",
+                "son400hiz": 51.4
+              }
+            },
+            {
+              "no": 6,
+              "isim": "AFŞINTAY",
+              "yas": 5,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "KURTÇABEY",
+              "anne": "BAHTIEVER",
+              "kisrak_babasi": "SERHANTAY",
+              "jokey": "MAH.TURAN",
+              "siklet": 59,
+              "kulvar": 6,
+              "handikap_puani": 57,
+              "son_yarislar": "561423",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 5,
+              "ganyan": "16.00",
+              "son_galop": {
+                "derece": "28.3",
+                "son400hiz": 50.8
+              }
+            },
+            {
+              "no": 7,
+              "isim": "HAS TARKAN",
+              "yas": 6,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "BİLGİN",
+              "anne": "TACİSERİM",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "O.ATMACA",
+              "siklet": 57,
+              "kulvar": 7,
+              "handikap_puani": 55,
+              "son_yarislar": "643512",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 3,
+              "ganyan": "22.00",
+              "son_galop": {
+                "derece": "28.5",
+                "son400hiz": 50.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sanliurfa",
+      "isim": "Şanlıurfa Hipodromu",
+      "sehir": "Şanlıurfa",
+      "tarih": "16.11.2026",
+      "havaDurumu": {
+        "temp": 18,
+        "conditionText": "Açık / Ilık",
+        "humidity": 48,
+        "wind": 9
+      },
+      "rawTrackInfo": "Kum (Normal)",
+      "cimOlcum": "Yarış Yok",
+      "kumOlcum": "Kum (3.7 Normal)",
+      "sentetikOlcum": "Yarış Yok",
+      "birimFiyat": 1,
+      "birimFiyatEtiket": "Güneydoğu / Doğu Hipodromu (1.00 ₺)",
+      "asgariKuponTL": 20,
+      "kosular": [
+        {
+          "kosu_no": 1,
+          "saat": "18:00",
+          "mesafe": 1400,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "ŞARTLI 3 / 2 Yaşlı İngilizler",
+          "ikramiye": "380.000 ₺",
+          "altiliAyagi": 1,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "ADDRESS HILL ONE",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "DAREDEVIL",
+              "anne": "ADDRESS HILL",
+              "kisrak_babasi": "LION HEART",
+              "jokey": "F.YARDIMCI",
+              "siklet": 57,
+              "kulvar": 6,
+              "handikap_puani": 44,
+              "son_yarislar": "1231",
+              "dinlenme_gunu": 21,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 35,
+              "ganyan": "2.30",
+              "son_galop": {
+                "derece": "24.5",
+                "son400hiz": 58.7
+              }
+            },
+            {
+              "no": 2,
+              "isim": "WILD FALCON",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "MENDIP",
+              "anne": "FALCON QUEEN",
+              "kisrak_babasi": "PAPA CLEM",
+              "jokey": "İ.AKYAVUZ",
+              "siklet": 57,
+              "kulvar": 5,
+              "handikap_puani": 42,
+              "son_yarislar": "2142",
+              "dinlenme_gunu": 18,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 28,
+              "ganyan": "3.20",
+              "son_galop": {
+                "derece": "24.7",
+                "son400hiz": 58.2
+              }
+            },
+            {
+              "no": 3,
+              "isim": "ADARYAM",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "BODEMEISTER",
+              "anne": "ADAR KIZI",
+              "kisrak_babasi": "VICTORY GALLOP",
+              "jokey": "M.ŞAKİR",
+              "apranti_indirimi": true,
+              "siklet": 53,
+              "kulvar": 1,
+              "handikap_puani": 38,
+              "son_yarislar": "3154",
+              "dinlenme_gunu": 25,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 16,
+              "ganyan": "5.40",
+              "son_galop": {
+                "derece": "25.1",
+                "son400hiz": 57.3
+              }
+            },
+            {
+              "no": 4,
+              "isim": "BERRYBELLA",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "TİZWAY",
+              "anne": "BERRY QUEEN",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "A.ÇANKAYA",
+              "siklet": 55,
+              "kulvar": 9,
+              "handikap_puani": 35,
+              "son_yarislar": "4231",
+              "dinlenme_gunu": 15,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 11,
+              "ganyan": "7.80",
+              "son_galop": {
+                "derece": "24.9",
+                "son400hiz": 57.8
+              }
+            },
+            {
+              "no": 5,
+              "isim": "GARGARON",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "CORINTHIAN",
+              "anne": "GARGARA",
+              "kisrak_babasi": "SRI PEKAN",
+              "jokey": "M.DOĞAN",
+              "siklet": 55,
+              "kulvar": 3,
+              "handikap_puani": 32,
+              "son_yarislar": "5342",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 6,
+              "ganyan": "12.00",
+              "son_galop": {
+                "derece": "25.5",
+                "son400hiz": 56.4
+              }
+            },
+            {
+              "no": 6,
+              "isim": "GÖKTE YAZI",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "PAPA CLEM",
+              "anne": "GÖKTEKİ",
+              "kisrak_babasi": "ROYAL ABJAR",
+              "jokey": "A.AKDEMİR",
+              "siklet": 54,
+              "kulvar": 7,
+              "handikap_puani": 28,
+              "son_yarislar": "6453",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 4,
+              "ganyan": "18.00",
+              "son_galop": {
+                "derece": "25.8",
+                "son400hiz": 55.8
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 2,
+          "saat": "18:30",
+          "mesafe": 1400,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Maiden / DHÖW / 3 Yaşlı Araplar",
+          "ikramiye": "480.000 ₺",
+          "altiliAyagi": 2,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "PİRİM ÖZER",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "ÖZHABER",
+              "anne": "PİRİMKIZ",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "Y.CENGİZ",
+              "siklet": 57,
+              "kulvar": 1,
+              "handikap_puani": 37,
+              "son_yarislar": "232",
+              "dinlenme_gunu": 14,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 38,
+              "ganyan": "2.10",
+              "son_galop": {
+                "derece": "27.8",
+                "son400hiz": 51.8
+              }
+            },
+            {
+              "no": 8,
+              "isim": "ZOR AĞA",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "SERHANTAY",
+              "anne": "ZORKIZ",
+              "kisrak_babasi": "DEMİRKAZIK",
+              "jokey": "F.YARDIMCI",
+              "siklet": 57,
+              "kulvar": 8,
+              "handikap_puani": 34,
+              "son_yarislar": "34",
+              "dinlenme_gunu": 21,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 26,
+              "ganyan": "3.40",
+              "son_galop": {
+                "derece": "28.1",
+                "son400hiz": 51.2
+              }
+            },
+            {
+              "no": 9,
+              "isim": "ROZERİNA",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Dişi",
+              "baba": "SERHANTAY",
+              "anne": "ROZERİN",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "İ.AKYAVUZ",
+              "siklet": 55,
+              "kulvar": 9,
+              "handikap_puani": 31,
+              "son_yarislar": "45",
+              "dinlenme_gunu": 19,
+              "takilar": [
+                "KG"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 18,
+              "ganyan": "5.10",
+              "son_galop": {
+                "derece": "28.5",
+                "son400hiz": 50.5
+              }
+            },
+            {
+              "no": 11,
+              "isim": "DİLEK ABLA",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Dişi",
+              "baba": "KAIZBERT",
+              "anne": "DİLEK HANIM",
+              "kisrak_babasi": "BATYSKAF",
+              "jokey": "M.DOĞAN",
+              "siklet": 55,
+              "kulvar": 11,
+              "handikap_puani": 28,
+              "son_yarislar": "5",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 12,
+              "ganyan": "7.80",
+              "son_galop": {
+                "derece": "28.8",
+                "son400hiz": 50
+              }
+            },
+            {
+              "no": 12,
+              "isim": "GÜNEŞİN KIZI",
+              "yas": 3,
+              "irk": "Arap",
+              "cinsiyet": "Dişi",
+              "baba": "TÜMÖZ BEY",
+              "anne": "GÜNEŞİM",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "A.ÇANKAYA",
+              "siklet": 55,
+              "kulvar": 12,
+              "handikap_puani": 24,
+              "son_yarislar": "6",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 6,
+              "ganyan": "14.00",
+              "son_galop": {
+                "derece": "29.2",
+                "son400hiz": 49.3
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 3,
+          "saat": "19:00",
+          "mesafe": 1400,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Handikap 14 / H3 / 3 ve Yukarı İngilizler",
+          "ikramiye": "410.000 ₺",
+          "altiliAyagi": 3,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "BEYOND THE SEA",
+              "yas": 6,
+              "irk": "İngiliz",
+              "cinsiyet": "Kısrak",
+              "baba": "VICTORY GALLOP",
+              "anne": "SEA OF LOVE",
+              "kisrak_babasi": "UNACCOUNTED FOR",
+              "jokey": "İ.KATAR",
+              "siklet": 63,
+              "kulvar": 1,
+              "handikap_puani": 58,
+              "son_yarislar": "123145",
+              "dinlenme_gunu": 16,
+              "takilar": [
+                "KG",
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 32,
+              "ganyan": "2.80",
+              "son_galop": {
+                "derece": "24.4",
+                "son400hiz": 59
+              }
+            },
+            {
+              "no": 8,
+              "isim": "AYHAN IN MY HEART",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "LION HEART",
+              "anne": "AYHAN SULTAN",
+              "kisrak_babasi": "SRI PEKAN",
+              "jokey": "İ.AKYAVUZ",
+              "siklet": 57,
+              "kulvar": 8,
+              "handikap_puani": 52,
+              "son_yarislar": "312451",
+              "dinlenme_gunu": 22,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 26,
+              "ganyan": "3.50",
+              "son_galop": {
+                "derece": "24.6",
+                "son400hiz": 58.5
+              }
+            },
+            {
+              "no": 3,
+              "isim": "URFA ASLANI",
+              "yas": 4,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "DAREDEVIL",
+              "anne": "URFA GÜZELİ",
+              "kisrak_babasi": "PAPA CLEM",
+              "jokey": "F.YARDIMCI",
+              "siklet": 60,
+              "kulvar": 3,
+              "handikap_puani": 50,
+              "son_yarislar": "241532",
+              "dinlenme_gunu": 19,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 20,
+              "ganyan": "4.40",
+              "son_galop": {
+                "derece": "24.8",
+                "son400hiz": 58
+              }
+            },
+            {
+              "no": 4,
+              "isim": "KARA ŞİMŞEK",
+              "yas": 5,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "BODEMEISTER",
+              "anne": "KARA KIZ",
+              "kisrak_babasi": "KANEKO",
+              "jokey": "M.DOĞAN",
+              "siklet": 58,
+              "kulvar": 4,
+              "handikap_puani": 46,
+              "son_yarislar": "432165",
+              "dinlenme_gunu": 25,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 12,
+              "ganyan": "7.20",
+              "son_galop": {
+                "derece": "25.2",
+                "son400hiz": 57.1
+              }
+            },
+            {
+              "no": 5,
+              "isim": "DESERT STORM",
+              "yas": 4,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "MENDIP",
+              "anne": "STORM DANCER",
+              "kisrak_babasi": "ROYAL ABJAR",
+              "jokey": "A.ÇANKAYA",
+              "siklet": 56,
+              "kulvar": 5,
+              "handikap_puani": 42,
+              "son_yarislar": "563412",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 7,
+              "ganyan": "12.00",
+              "son_galop": {
+                "derece": "25.5",
+                "son400hiz": 56.4
+              }
+            },
+            {
+              "no": 6,
+              "isim": "GOLDEN FLASH",
+              "yas": 3,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "CORINTHIAN",
+              "anne": "FLASH LADY",
+              "kisrak_babasi": "LUXOR",
+              "jokey": "Y.CENGİZ",
+              "siklet": 54,
+              "kulvar": 6,
+              "handikap_puani": 38,
+              "son_yarislar": "654231",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 3,
+              "ganyan": "22.00",
+              "son_galop": {
+                "derece": "25.9",
+                "son400hiz": 55.6
+              }
+            }
+          ]
+        },
+        {
+          "kosu_no": 6,
+          "saat": "20:30",
+          "mesafe": 2000,
+          "pist": "Kum",
+          "pist_tipi": "Kaba Kum",
+          "grup_sinifi": "Hilvan Belediye Başkanlığı Koşusu (KV-6/DHT) / 4 ve Yukarı Araplar",
+          "ikramiye": "500.000 ₺",
+          "altiliAyagi": 6,
+          "atlar": [
+            {
+              "no": 1,
+              "isim": "DUMRUL",
+              "yas": 9,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "ŞİMŞEĞİNOĞLU",
+              "anne": "MÜGE",
+              "kisrak_babasi": "HABERBATUR",
+              "jokey": "F.YARDIMCI",
+              "siklet": 61,
+              "kulvar": 1,
+              "handikap_puani": 88,
+              "son_yarislar": "112134",
+              "dinlenme_gunu": 18,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "agf_orani": 44,
+              "ganyan": "1.90",
+              "son_galop": {
+                "derece": "26.9",
+                "son400hiz": 53.5
+              }
+            },
+            {
+              "no": 2,
+              "isim": "KAŞEMUM KARA",
+              "yas": 7,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "SONALP",
+              "anne": "ERVAGÜL",
+              "kisrak_babasi": "DEMİRKAZIK",
+              "jokey": "İ.AKYAVUZ",
+              "siklet": 61,
+              "kulvar": 2,
+              "handikap_puani": 84,
+              "son_yarislar": "213215",
+              "dinlenme_gunu": 21,
+              "takilar": [
+                "KG",
+                "SK"
+              ],
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "agf_orani": 28,
+              "ganyan": "3.20",
+              "son_galop": {
+                "derece": "27.2",
+                "son400hiz": 52.9
+              }
+            },
+            {
+              "no": 3,
+              "isim": "GECE IŞIĞI",
+              "yas": 7,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "SONALP",
+              "anne": "BENİL",
+              "kisrak_babasi": "BİRADER",
+              "jokey": "M.DOĞAN",
+              "siklet": 59,
+              "kulvar": 3,
+              "handikap_puani": 80,
+              "son_yarislar": "321452",
+              "dinlenme_gunu": 15,
+              "takilar": [
+                "KG"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 16,
+              "ganyan": "5.20",
+              "son_galop": {
+                "derece": "26.7",
+                "son400hiz": 53.9
+              }
+            },
+            {
+              "no": 4,
+              "isim": "ÇİLOBEY",
+              "yas": 6,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "ÖZHABER",
+              "anne": "ÇİLO KIZ",
+              "kisrak_babasi": "SERHANTAY",
+              "jokey": "İ.KATAR",
+              "siklet": 58,
+              "kulvar": 4,
+              "handikap_puani": 76,
+              "son_yarislar": "432514",
+              "dinlenme_gunu": 28,
+              "takilar": [
+                "KG",
+                "DB",
+                "SK"
+              ],
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "agf_orani": 8,
+              "ganyan": "9.50",
+              "son_galop": {
+                "derece": "27.5",
+                "son400hiz": 52.3
+              }
+            },
+            {
+              "no": 5,
+              "isim": "HİLVAN RÜZGARI",
+              "yas": 5,
+              "irk": "Arap",
+              "cinsiyet": "Erkek",
+              "baba": "KAIZBERT",
+              "anne": "HİLVANKIZI",
+              "kisrak_babasi": "BATYSKAF",
+              "jokey": "A.ÇANKAYA",
+              "siklet": 56,
+              "kulvar": 5,
+              "handikap_puani": 71,
+              "son_yarislar": "543216",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "SK"
+              ],
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "agf_orani": 4,
+              "ganyan": "18.00",
+              "son_galop": {
+                "derece": "27.8",
+                "son400hiz": 51.8
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
