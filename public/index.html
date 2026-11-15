@@ -932,8 +932,22 @@ function renderKosular() {
 // 🏁 SAFKAN KOŞU STİLİ, TEMPO SENARYOSU VE TAKTİKSEL PUAN MOTORU
 // ══════════════════════════════════════════════════════════════════════════════════
 function enrichHorseRunningStyle(at, idx, raceHorses = []) {
-  if (at.kosu_stili && at.stil_ikon && at.stil_renk && at.stil_bg && at.stil_border && at.taktik_yorum) {
-    return;
+  const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`.toUpperCase();
+
+  // 1. ÖNCELİK: Safkanın Gerçek Geçmiş Koşu Çizgileri (runningLine & pastRaces)
+  let pastPosAvg = null;
+  if (at.pastRaces && at.pastRaces.length > 0) {
+    const validLines = at.pastRaces.map(p => p.runningLine).filter(Boolean);
+    if (validLines.length > 0) {
+      let sumPos = 0;
+      let count = 0;
+      validLines.forEach(l => {
+        const parts = l.split('-');
+        const pos = parseInt(parts[0]);
+        if (!isNaN(pos)) { sumPos += pos; count++; }
+      });
+      if (count > 0) pastPosAvg = sumPos / count;
+    }
   }
 
   const styleRules = [
@@ -944,7 +958,7 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       renk: '#ef4444',
       bg: 'rgba(239, 68, 68, 0.15)',
       border: 'rgba(239, 68, 68, 0.4)',
-      taktik: 'Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.'
+      taktik: 'Startla birlikte kafayı almayı hedefler, bariyer dibinden yüksek tempoda kaçmayı sever.'
     },
     {
       regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|DON ÇİÇİ|RECHARGE|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
@@ -953,20 +967,28 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       renk: '#10b981',
       bg: 'rgba(16, 185, 129, 0.15)',
       border: 'rgba(16, 185, 129, 0.4)',
-      taktik: 'Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.'
+      taktik: 'Liderin hemen ardında 2.-3. sıraya yerleşir, son virajda tempoyu artırarak pres yapar.'
     },
     {
-      regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|UZBOYLU|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
+      regex: /UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
+      stil: 'Orta Grup',
+      ikon: '🛡️',
+      renk: '#3b82f6',
+      bg: 'rgba(59, 130, 246, 0.15)',
+      border: 'rgba(59, 130, 246, 0.4)',
+      taktik: '4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.'
+    },
+    {
+      regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
       stil: 'Düzlük Sprinteri',
       ikon: '🚀',
       renk: '#a855f7',
       bg: 'rgba(168, 85, 247, 0.15)',
       border: 'rgba(168, 85, 247, 0.4)',
-      taktik: 'Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.'
+      taktik: 'Gruptan kopmadan geride pusuya yatar, son 400-300 metrede sert düzlük sprinti atar.'
     }
   ];
 
-  const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`;
   let matched = null;
   for (const rule of styleRules) {
     if (rule.regex.test(textToScan)) {
@@ -975,46 +997,31 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
     }
   }
 
+  // Geçmiş yarış ilk pozisyon ortalaması varsa belirleyici kıl
+  if (!matched && pastPosAvg !== null) {
+    if (pastPosAvg <= 1.5) {
+      matched = styleRules[0]; // Kaçak
+    } else if (pastPosAvg <= 3.5) {
+      matched = styleRules[1]; // Presçi
+    } else if (pastPosAvg <= 6.0) {
+      matched = styleRules[2]; // Orta Grup
+    } else {
+      matched = styleRules[3]; // Sprinter
+    }
+  }
+
   if (!matched) {
     const kulvar = Number(at.kulvar || (idx + 1));
     const sprintSpeed = at.son_galop?.son400hiz || 50;
 
-    if (kulvar <= 2 && sprintSpeed >= 51.5) {
-      matched = {
-        stil: 'Kaçak / Lider',
-        ikon: '⚡',
-        renk: '#ef4444',
-        bg: 'rgba(239, 68, 68, 0.15)',
-        border: 'rgba(239, 68, 68, 0.4)',
-        taktik: 'İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar.'
-      };
-    } else if (sprintSpeed >= 52) {
-      matched = {
-        stil: 'Düzlük Sprinteri',
-        ikon: '🚀',
-        renk: '#a855f7',
-        bg: 'rgba(168, 85, 247, 0.15)',
-        border: 'rgba(168, 85, 247, 0.4)',
-        taktik: 'Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder.'
-      };
+    if (kulvar <= 2 && sprintSpeed >= 53) {
+      matched = styleRules[0]; // Kaçak
     } else if (kulvar <= 5) {
-      matched = {
-        stil: 'Presçi',
-        ikon: '🏹',
-        renk: '#10b981',
-        bg: 'rgba(16, 185, 129, 0.15)',
-        border: 'rgba(16, 185, 129, 0.4)',
-        taktik: 'Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar.'
-      };
+      matched = styleRules[1]; // Presçi
+    } else if (sprintSpeed >= 54) {
+      matched = styleRules[3]; // Sprinter
     } else {
-      matched = {
-        stil: 'Orta Grup',
-        ikon: '🛡️',
-        renk: '#3b82f6',
-        bg: 'rgba(59, 130, 246, 0.15)',
-        border: 'rgba(59, 130, 246, 0.4)',
-        taktik: '4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar.'
-      };
+      matched = styleRules[2]; // Orta Grup
     }
   }
 
@@ -1029,17 +1036,6 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
 function enrichRaceRunningStylesAndPace(kosu) {
   if (!kosu || !kosu.atlar) return;
   kosu.atlar.forEach((at, idx) => enrichHorseRunningStyle(at, idx, kosu.atlar));
-
-  const kacaklar = kosu.atlar.filter(a => (a.kosu_stili || '').includes('Kaçak'));
-  if (kacaklar.length === 0 && kosu.atlar.length > 0) {
-    const first = kosu.atlar[0];
-    first.kosu_stili = 'Kaçak / Lider';
-    first.stil_ikon = '⚡';
-    first.stil_renk = '#ef4444';
-    first.stil_bg = 'rgba(239, 68, 68, 0.15)';
-    first.stil_border = 'rgba(239, 68, 68, 0.4)';
-    first.taktik_yorum = 'Yarışta kaçak azlığından faydalanıp startla kafaya çıkacaktır.';
-  }
 }
 
 function enrichBultenRunningStylesAndPace(bultenData) {
@@ -1049,73 +1045,144 @@ function enrichBultenRunningStylesAndPace(bultenData) {
   });
 }
 
-function calculatePaceAdjustment(horse, kosu) {
+// ── BİLİMSEL YARIŞ TEMPOSU TAHMİN MOTORU (Aşırı Puan Uydurmasını Önler) ──
+function estimateRacePace(kosu) {
   const atlar = kosu.atlar || [];
   const kacaklar = atlar.filter(h => (h.kosu_stili || '').includes('Kaçak'));
   const presciler = atlar.filter(h => (h.kosu_stili || '').includes('Pres'));
 
-  let paceType = 'BALANCED';
-  if (kacaklar.length >= 2 || (kacaklar.length === 1 && presciler.length >= 2)) {
-    paceType = 'FAST'; // Aşırı Yüksek Tempo
-  } else if (kacaklar.length === 1 && presciler.length <= 1) {
-    paceType = 'SLOW'; // Rölanti / Yavaş Tempo
+  // Yalnızca 2 veya daha fazla gerçek kaçak kafada kapışıyorsa AŞIRI YÜKSEK TEMPO olur
+  if (kacaklar.length >= 2) {
+    return {
+      type: 'FAST',
+      badge: '🔥 AŞIRI YÜKSEK TEMPO',
+      title: 'AŞIRI YÜKSEK TEMPO / ERKEN LİDERLİK ÇEKİŞMESİ',
+      color: '#ef4444',
+      bg: 'linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.05))',
+      border: 'rgba(239, 68, 68, 0.4)',
+      desc: `Yarışta birden fazla kaçak safkan (${kacaklar.map(h => h.isim).join(' ve ')}) startla birlikte kafayı almak için birbiriyle sert çekişmeye girecek. İlk 800 metre süratli geçileceğinden ön grupta yorulma riski yüksektir.`,
+      kimeYarar: '🛡️ Orta grupta yıpranmadan bekleyen ve son 400 kopuş hızı kuvvetli safkanlar son düzlükte avantaj sağlar.'
+    };
   }
 
+  // Hiç kaçak yoksa veya yalnız 1 kaçak olup arkasında takipçi yoksa RÖLANTİ
+  if (kacaklar.length === 0) {
+    return {
+      type: 'SLOW',
+      badge: '🐢 KONTROLLÜ / YAVAŞ TEMPO',
+      title: 'KONTROLLÜ / YAVAŞ TEMPO (KAÇAKSIZ KOŞU)',
+      color: '#3b82f6',
+      bg: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.05))',
+      border: 'rgba(59, 130, 246, 0.4)',
+      desc: 'Yarışta belirgin kaçak safkan bulunmuyor. Ön gruptaki presçiler veya iç kulvardaki safkanlar kontrollü bir tempo tutturacak, yarış son 600m virajına kadar ağır akacaktır.',
+      kimeYarar: '👑 İnisiyatif alıp öne çıkan veya bariyer dibinde diri bekleyen isimler son 400 sprintine diri girer.'
+    };
+  }
+
+  if (kacaklar.length === 1 && presciler.length <= 1) {
+    return {
+      type: 'SLOW',
+      badge: '🕊️ RÖLANTİ TEMPO (YALNIZ KAÇAK)',
+      title: 'RÖLANTİ TEMPO (BEYAZ BAYRAK AYNA ADAYI)',
+      color: '#3b82f6',
+      bg: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.05))',
+      border: 'rgba(59, 130, 246, 0.4)',
+      desc: `Grupta tek kaçak <b>${kacaklar[0].isim}</b> var ve ensesine yapışacak sert presçi yok. Lider yarışı dilediği gibi rölantiye alıp nefeslenerek son düzlüğü görebilir.`,
+      kimeYarar: `⚡ <b>${kacaklar[0].isim}</b> rölanti tempoyu avantaja çevirip beyaz bayrak ayna (starttan finişe) yapmaya çok yakındır.`
+    };
+  }
+
+  // 1 Kaçak + Takipçiler: DENGELİ TEMPO
+  return {
+    type: 'BALANCED',
+    badge: '⚖️ DENGELİ TEMPO',
+    title: 'DENGELİ / TAKTİKSEL TEMPO',
+    color: '#10b981',
+    bg: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.05))',
+    border: 'rgba(16, 185, 129, 0.4)',
+    desc: `Önde tek lider <b>${kacaklar[0].isim}</b> tempoyu belirlerken, arkasındaki presçiler (${presciler.slice(0, 2).map(h => h.isim).join(', ')}) kontrollü takipte kalacaktır. Ne intihar kapışması yaşanır ne de yarış kilitlenir.`,
+    kimeYarar: '👑 Genel güç endeksi yüksek, taktik disiplinli ve virajı diri dönen safkanlar avantajlıdır.'
+  };
+}
+
+// ── HAK EDİLMİŞ VE KADEMELİ TAKTİK PUAN HESAPLAMA (Maksimum ±2 Puan) ──
+function calculatePaceAdjustment(horse, kosu) {
+  const pace = estimateRacePace(kosu);
   const stil = horse.kosu_stili || '';
+  const sprintSpeed = horse.son_galop?.son400hiz || 50;
+  const mesafe = parseInt(kosu.mesafe) || 1600;
+
   let delta = 0;
   let label = '';
   let color = '#94a3b8';
 
-  if (paceType === 'FAST') {
-    if (stil.includes('Sprinter')) {
-      delta = 5;
-      label = '🔥 Yüksek tempo düzlük sprintine yarar (+5 Puan)';
-      color = '#a855f7';
-    } else if (stil.includes('Orta')) {
-      delta = 2;
-      label = '🛡️ Yıpranmadan düzlüğe çıkma avantajı (+2 Puan)';
-      color = '#3b82f6';
+  if (pace.type === 'FAST') {
+    if (stil.includes('Kaçak')) {
+      delta = -2;
+      label = '⚠️ Erken liderlik kavgası yıpratabilir (-2 Puan)';
+      color = '#ef4444';
     } else if (stil.includes('Pres')) {
       delta = -1;
-      label = '🏹 Ön grup çekişmesinde hafif yıpranma (-1 Puan)';
+      label = '🏹 Yüksek ön grup temposunda takip (-1 Puan)';
       color = '#f59e0b';
-    } else if (stil.includes('Kaçak')) {
-      delta = -4;
-      label = '⚠️ Erken liderlik kavgası ve yorulma riski (-4 Puan)';
-      color = '#ef4444';
+    } else if (stil.includes('Orta')) {
+      delta = +1;
+      label = '🛡️ Yıpranmadan son viraja gelme avantajı (+1 Puan)';
+      color = '#3b82f6';
+    } else if (stil.includes('Sprinter')) {
+      // Sprintere KÖRÜ KÖRÜNE +5 VERİLMEZ! Hak edilmiş galop sprint gücüne göre:
+      if (sprintSpeed >= 53.5 && mesafe >= 1400) {
+        delta = +2;
+        label = `🚀 Yüksek tempo & elit son 400 sprinti (${sprintSpeed} km/h) (+2 Puan)`;
+        color = '#a855f7';
+      } else if (sprintSpeed >= 51.5) {
+        delta = +1;
+        label = '🚀 Yüksek tempoda düzlük atağı şansı (+1 Puan)';
+        color = '#a855f7';
+      } else {
+        delta = 0;
+        label = '🚀 Tempo yüksek ancak son 400 kopuş hızı sınırlı (0 Puan)';
+        color = '#94a3b8';
+      }
     }
-  } else if (paceType === 'SLOW') {
+  } else if (pace.type === 'SLOW') {
     if (stil.includes('Kaçak')) {
-      delta = 6;
-      label = '👑 Yalnız lider rölanti tempoyu bitirebilir (+6 Puan)';
+      delta = +2;
+      label = '👑 Yalnız lider rölanti tempoyu bitirebilir (+2 Puan)';
       color = '#10b981';
     } else if (stil.includes('Pres')) {
-      delta = 2;
-      label = '🏹 Liderin arkasında rahat takip (+2 Puan)';
+      delta = +1;
+      label = '🏹 Liderin arkasında rahat takip (+1 Puan)';
       color = '#10b981';
     } else if (stil.includes('Orta')) {
-      delta = -2;
-      label = '🛡️ Yavaş tempoda öndekileri yakalamak zor (-2 Puan)';
+      delta = -1;
+      label = '🛡️ Yavaş tempoda öndekileri yakalamak zor (-1 Puan)';
       color = '#f59e0b';
     } else if (stil.includes('Sprinter')) {
-      delta = -5;
-      label = '⚠️ Ön grup diri kalır, sprinte mesafe yetmeyebilir (-5 Puan)';
+      delta = -2;
+      label = '⚠️ Ön grup diri kalır, sprinte mesafe yetmeyebilir (-2 Puan)';
       color = '#ef4444';
     }
   } else {
-    // BALANCED
-    if (stil.includes('Pres')) {
-      delta = 2;
-      label = '🏹 İdeal takip pozisyonu (+2 Puan)';
-      color = '#10b981';
-    } else if (stil.includes('Kaçak')) {
-      delta = 1;
+    // BALANCED (DENGELİ TEMPO)
+    if (stil.includes('Kaçak')) {
+      delta = +1;
       label = '⚡ Kontrollü liderlik (+1 Puan)';
       color = '#3b82f6';
+    } else if (stil.includes('Pres')) {
+      delta = +1;
+      label = '🏹 İdeal takip pozisyonu (+1 Puan)';
+      color = '#10b981';
     } else if (stil.includes('Sprinter')) {
-      delta = 1;
-      label = '🚀 Normal tempo sprint şansı (+1 Puan)';
-      color = '#a855f7';
+      if (sprintSpeed >= 54) {
+        delta = +1;
+        label = '🚀 Güçlü son 400 ivmesi (+1 Puan)';
+        color = '#a855f7';
+      } else {
+        delta = 0;
+        label = '🛡️ Dengeli koşu (0 Puan)';
+        color = '#94a3b8';
+      }
     } else {
       delta = 0;
       label = '🛡️ Taktik denge (0 Puan)';
@@ -1123,7 +1190,7 @@ function calculatePaceAdjustment(horse, kosu) {
     }
   }
 
-  return { delta, label, color, paceType };
+  return { delta, label, color, paceType: pace.type };
 }
 
 // ══════════════════════════════════════════════════════════════════════════════════
@@ -1582,47 +1649,22 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
   const ortagrup = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Orta'));
   const sprinterler = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Sprinter'));
 
-  // Calculate Pace Dynamic
-  const paceType = (kacaklar.length >= 2 || (kacaklar.length === 1 && presciler.length >= 2)) ? 'FAST' : ((kacaklar.length === 1 && presciler.length <= 1) ? 'SLOW' : 'BALANCED');
+  // Bilimsel tempo tahmin motorundan dinamik veriyi al
+  const pace = estimateRacePace(kosu);
+  const paceType = pace.type;
 
-  const hat1Points = paceType === 'FAST' ? '<span style="color:#ef4444; font-weight:700;">-4 Puan (Yorulma Riski)</span>' : (paceType === 'SLOW' ? '<span style="color:#10b981; font-weight:700;">+6 Puan (Liderlik Avantajı)</span>' : '<span style="color:#60a5fa; font-weight:700;">+1 Puan</span>');
-  const hat2Points = paceType === 'FAST' ? '<span style="color:#f59e0b; font-weight:700;">-1 Puan</span>' : '<span style="color:#10b981; font-weight:700;">+2 Puan (Takip Avantajı)</span>';
-  const hat3Points = paceType === 'FAST' ? '<span style="color:#60a5fa; font-weight:700;">+2 Puan (Korunma)</span>' : (paceType === 'SLOW' ? '<span style="color:#ef4444; font-weight:700;">-2 Puan</span>' : '<span style="color:#94a3b8; font-weight:700;">0 Puan</span>');
-  const hat4Points = paceType === 'FAST' ? '<span style="color:#a855f7; font-weight:700;">+5 Puan (Sprint Avantajı)</span>' : (paceType === 'SLOW' ? '<span style="color:#ef4444; font-weight:700;">-5 Puan (Yetişememe Riski)</span>' : '<span style="color:#a855f7; font-weight:700;">+1 Puan</span>');
+  const hat1Points = paceType === 'FAST' ? '<span style="color:#ef4444; font-weight:700;">-2 Puan (Çekişme Riski)</span>' : (paceType === 'SLOW' ? '<span style="color:#10b981; font-weight:700;">+2 Puan (Liderlik Avantajı)</span>' : '<span style="color:#60a5fa; font-weight:700;">+1 Puan (Kontrollü)</span>');
+  const hat2Points = paceType === 'FAST' ? '<span style="color:#f59e0b; font-weight:700;">-1 Puan</span>' : '<span style="color:#10b981; font-weight:700;">+1 Puan (Takip Avantajı)</span>';
+  const hat3Points = paceType === 'FAST' ? '<span style="color:#60a5fa; font-weight:700;">+1 Puan (Korunma)</span>' : (paceType === 'SLOW' ? '<span style="color:#ef4444; font-weight:700;">-1 Puan</span>' : '<span style="color:#94a3b8; font-weight:700;">0 Puan</span>');
+  const hat4Points = paceType === 'FAST' ? '<span style="color:#a855f7; font-weight:700;">+1 / +2 Puan (Sprint Şansı)</span>' : (paceType === 'SLOW' ? '<span style="color:#ef4444; font-weight:700;">-2 Puan (Yetişememe Riski)</span>' : '<span style="color:#94a3b8; font-weight:700;">0 / +1 Puan</span>');
 
-  let tempoTitle = '';
-  let tempoBadge = '';
-  let tempoDesc = '';
-  let tempoAdvantage = '';
-  let tempoColor = '#10b981';
-  let tempoBg = 'rgba(16, 185, 129, 0.12)';
-  let tempoBorder = 'rgba(16, 185, 129, 0.35)';
-
-  if (paceType === 'FAST') {
-    tempoTitle = 'AŞIRI YÜKSEK TEMPO / ERKEN LİDERLİK KAVGASI';
-    tempoBadge = '🔥 AŞIRI YÜKSEK TEMPO';
-    tempoColor = '#ef4444';
-    tempoBg = 'linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.05))';
-    tempoBorder = 'rgba(239, 68, 68, 0.4)';
-    tempoDesc = `Yarışta birden fazla kaçak veya presçi safkan (${kacaklar.map(h => h.isim).join(', ')}) startla beraber liderlik mücadelesine girecek. İlk 800m çok yüksek tempolu geçecek; ön grup son 400'de yorulacaktır.`;
-    tempoAdvantage = `🚀 <b>DÜZLÜK SPRİNTERLERİNE ÇOK YARAR (+5 Puan):</b> Ön gruptaki yıpranmadan en çok istifade edecek isimler: <b>${(sprinterler.length > 0 ? sprinterler.slice(0, 3).map(h => h.isim).join(', ') : horsesWithMetrics.slice(1, 3).map(h => h.isim).join(', '))}</b>.`;
-  } else if (paceType === 'SLOW') {
-    tempoTitle = 'RÖLANTİ / YAVAŞ TEMPO (BEYAZ BAYRAK AYNA ADAYI)';
-    tempoBadge = '🕊️ RÖLANTİ / YAVAŞ TEMPO';
-    tempoColor = '#3b82f6';
-    tempoBg = 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.05))';
-    tempoBorder = 'rgba(59, 130, 246, 0.4)';
-    tempoDesc = `Yarışta tek belirgin kaçak (${kacaklar[0]?.isim || 'Öncü'}) var ve ciddi pres yapacak safkan yok. Lider yarışı rölantiye alacak, arkasındakiler tempo yapmazsa virajı çok rahat dönüp bitirebilir.`;
-    tempoAdvantage = `⚡ <b>LİDERE & ÖN GRUBA YARAR (+6 Puan):</b> <b>${kacaklar[0]?.isim || 'Lider At'}</b> yalnız kalacağı için "Beyaz Bayrak Ayna" yapma şansı çok yüksek. Arkasından gelecek <b>${(presciler[0]?.isim || ortagrup[0]?.isim || 'Plase')}</b> de ikiliyi tamamlayabilir.`;
-  } else {
-    tempoTitle = 'DENGELİ / NORMAL TEMPO';
-    tempoBadge = '⚖️ DENGELİ TEMPO';
-    tempoColor = '#10b981';
-    tempoBg = 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.05))';
-    tempoBorder = 'rgba(16, 185, 129, 0.4)';
-    tempoDesc = `Ön grup ile takipçiler arasında taktiksel bir denge var. Yarış ne aşırı rölantiye kilitlenecek ne de yıkıcı bir liderlik kavgası yaşanacak.`;
-    tempoAdvantage = `👑 <b>KOMPLE VE YÜKSEK GÜÇ ENDEKSLİ SAFKANLARA YARAR:</b> Taktik disiplini olan ve genel güç puanı yüksek isimler avantajlı: <b>${horsesWithMetrics.slice(0, 3).map(h => h.isim).join(', ')}</b>.`;
-  }
+  const tempoTitle = pace.title;
+  const tempoBadge = pace.badge;
+  const tempoDesc = pace.desc;
+  const tempoAdvantage = pace.kimeYarar;
+  const tempoColor = pace.color;
+  const tempoBg = pace.bg;
+  const tempoBorder = pace.border;
 
   // Helper function to render a track zone chips
   const renderZoneHorses = (list, emptyText) => {
