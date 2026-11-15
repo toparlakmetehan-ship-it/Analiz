@@ -25217,7 +25217,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 57,
               "agf_kaynak": "gercek",
               "ganyan": "3.25",
@@ -25539,11 +25539,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 5,
@@ -25575,7 +25575,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -25872,11 +25872,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 6,
@@ -25908,7 +25908,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "1.45",
@@ -26246,11 +26246,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %8 (Kumda %40 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 7,
@@ -26857,7 +26857,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 22,
               "agf_kaynak": "gercek",
               "ganyan": "2.75",
@@ -27139,11 +27139,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             }
           ],
           "sehir": "İstanbul",
@@ -34684,7 +34684,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 23,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -35058,11 +35058,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 8,
@@ -36050,7 +36050,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 11,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -36468,11 +36468,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%44)",
                 "delta": 4
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             }
           ],
           "sehir": "İstanbul",
@@ -44772,7 +44772,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "3.00",
@@ -45170,11 +45170,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 7,
@@ -46000,7 +46000,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -46284,11 +46284,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 10,
@@ -46320,7 +46320,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -46687,11 +46687,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %57 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 11,
@@ -55661,7 +55661,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -56074,11 +56074,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 4,
@@ -62705,7 +62705,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 24,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -63129,11 +63129,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 2,
@@ -65451,7 +65451,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -65816,11 +65816,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 8,
@@ -71664,7 +71664,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 15,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -71908,11 +71908,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 3,
@@ -73111,7 +73111,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 33,
               "agf_kaynak": "gercek",
               "ganyan": "1.05",
@@ -73379,11 +73379,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %15 (Kumda %47 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 8,
@@ -77971,7 +77971,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "18.95",
@@ -78394,11 +78394,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %15 (Kumda %43 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 3,
@@ -80531,7 +80531,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -80923,11 +80923,11 @@
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%50 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 9,
@@ -80957,7 +80957,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "21.15",
@@ -81377,11 +81377,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %13 (Kumda %47 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 10,
@@ -83570,7 +83570,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -83915,11 +83915,11 @@
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%53 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             }
           ],
           "sehir": "İstanbul",
@@ -106206,7 +106206,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "4.75",
@@ -106546,11 +106546,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %42 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             }
           ],
           "sehir": "Adana",
@@ -111796,7 +111796,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -112206,11 +112206,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%50)",
                 "delta": 4
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 5,
@@ -114197,7 +114197,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -114561,11 +114561,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 11,
@@ -114990,7 +114990,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -115328,11 +115328,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             }
           ],
           "sehir": "Adana",
@@ -122566,7 +122566,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -122950,11 +122950,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 4,
@@ -129605,7 +129605,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -129980,11 +129980,11 @@
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%47 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 2,
@@ -130468,7 +130468,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -130842,11 +130842,11 @@
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%53 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 4,
@@ -154542,7 +154542,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "1.15",
@@ -154964,11 +154964,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 2,
@@ -154999,7 +154999,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 30,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -155418,11 +155418,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 3,
@@ -157541,7 +157541,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "10.15",
@@ -157951,11 +157951,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 9,
@@ -158444,7 +158444,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -158861,11 +158861,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır."
             },
             {
               "no": 11,

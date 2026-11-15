@@ -1002,7 +1002,7 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
 
   const styleRules = [
     {
-      regex: /KAIZBERT|TURBO|AŞIKBEY|LION HEART|LUXOR|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|YALNIZ AŞIK|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
+      regex: /^DON ÇİÇİ$|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|YALNIZ AŞIK|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
       stil: 'Kaçak / Lider',
       ikon: '⚡',
       renk: '#ef4444',
@@ -1011,7 +1011,7 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       taktik: 'Startla birlikte kafayı almayı hedefler, bariyer dibinden yüksek tempoda kaçmayı sever.'
     },
     {
-      regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|DON ÇİÇİ|RECHARGE|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
+      regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
       stil: 'Presçi',
       ikon: '🏹',
       renk: '#10b981',
@@ -1020,7 +1020,7 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       taktik: 'Liderin hemen ardında 2.-3. sıraya yerleşir, son virajda tempoyu artırarak pres yapar.'
     },
     {
-      regex: /UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
+      regex: /^RECHARGE|RECHARGE MY HEART|UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
       stil: 'Orta Grup',
       ikon: '🛡️',
       renk: '#3b82f6',
@@ -1029,7 +1029,7 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       taktik: '4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.'
     },
     {
-      regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
+      regex: /ALWAYS HARD|BEST LINE|DRAGON PRIME|MACAPA|NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
       stil: 'Düzlük Sprinteri',
       ikon: '🚀',
       renk: '#a855f7',
@@ -1040,16 +1040,17 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
   ];
 
   let matched = null;
+  // 1. ÖNCELİK: Safkanın kendi adına göre spesifik koşu karakteri
   for (const rule of styleRules) {
-    if (rule.regex.test(textToScan)) {
+    if (rule.regex.test((at.isim || '').trim())) {
       matched = rule;
       break;
     }
   }
 
-  // Geçmiş yarış ilk pozisyon ortalaması varsa belirleyici kıl
+  // 2. ÖNCELİK: Geçmiş yarış ilk pozisyon ortalaması (runningLine: 4-4-2 vb.)
   if (!matched && pastPosAvg !== null) {
-    if (pastPosAvg <= 1.5) {
+    if (pastPosAvg <= 1.8) {
       matched = styleRules[0]; // Kaçak
     } else if (pastPosAvg <= 3.5) {
       matched = styleRules[1]; // Presçi
@@ -1057,6 +1058,16 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       matched = styleRules[2]; // Orta Grup
     } else {
       matched = styleRules[3]; // Sprinter
+    }
+  }
+
+  // 3. ÖNCELİK: Soy kütüğü desteği (Kaçak harici aygırlar)
+  if (!matched) {
+    for (let rIdx = 1; rIdx < styleRules.length; rIdx++) {
+      if (styleRules[rIdx].regex.test(textToScan)) {
+        matched = styleRules[rIdx];
+        break;
+      }
     }
   }
 

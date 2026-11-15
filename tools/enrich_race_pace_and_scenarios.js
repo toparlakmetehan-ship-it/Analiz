@@ -10,7 +10,7 @@ console.log('🏇 Safkanların Koşu Stilleri ve Yarış Senaryoları Zenginleş
 const styleRules = [
   // Kaçak / Lider adayları (Aygır veya karakter analizi)
   {
-    regex: /KAIZBERT|TURBO|AŞIKBEY|LION HEART|LUXOR|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|YALNIZ AŞIK|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
+    regex: /^DON ÇİÇİ$|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|YALNIZ AŞIK|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
     stil: 'Kaçak / Lider',
     ikon: '⚡',
     renk: '#ef4444',
@@ -20,7 +20,7 @@ const styleRules = [
   },
   // Presçi adayları (Ön grup takipçisi)
   {
-    regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|DON ÇİÇİ|RECHARGE|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
+    regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
     stil: 'Presçi',
     ikon: '🏹',
     renk: '#10b981',
@@ -30,7 +30,7 @@ const styleRules = [
   },
   // Orta Grup adayları
   {
-    regex: /UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
+    regex: /^RECHARGE|RECHARGE MY HEART|UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
     stil: 'Orta Grup',
     ikon: '🛡️',
     renk: '#3b82f6',
@@ -40,7 +40,7 @@ const styleRules = [
   },
   // Sprinter / Bekleme adayları (Son düzlük hücumcusu)
   {
-    regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
+    regex: /ALWAYS HARD|BEST LINE|DRAGON PRIME|MACAPA|NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
     stil: 'Düzlük Sprinteri',
     ikon: '🚀',
     renk: '#a855f7',
@@ -77,18 +77,30 @@ bulten.hipodromlar.forEach(hip => {
       }
       
       let matched = null;
+      // 1. ÖNCELİK: Safkanın kendi adı ile doğrudan eşleşme
       for (const rule of styleRules) {
-        if (rule.regex.test(textToScan)) {
+        if (rule.regex.test((at.isim || '').trim())) {
           matched = rule;
           break;
         }
       }
 
+      // 2. ÖNCELİK: Safkanın geçmiş yarış pozisyon ortalaması
       if (!matched && pastPosAvg !== null) {
-        if (pastPosAvg <= 1.5) matched = styleRules[0];
+        if (pastPosAvg <= 1.8) matched = styleRules[0];
         else if (pastPosAvg <= 3.5) matched = styleRules[1];
         else if (pastPosAvg <= 6.0) matched = styleRules[2];
         else matched = styleRules[3];
+      }
+
+      // 3. ÖNCELİK: Soy kütüğü desteği (Kaçak harici)
+      if (!matched) {
+        for (let rIdx = 1; rIdx < styleRules.length; rIdx++) {
+          if (styleRules[rIdx].regex.test(textToScan)) {
+            matched = styleRules[rIdx];
+            break;
+          }
+        }
       }
 
       // If no direct regex match, distribute organically based on kulvar and sprint speed
