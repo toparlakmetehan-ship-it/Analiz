@@ -2,7 +2,7 @@
   "Istanbul": {
     "latitude": 41.03005,
     "longitude": 29.018282,
-    "generationtime_ms": 0.1876354217529297,
+    "generationtime_ms": 0.4363059997558594,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -145,7 +145,7 @@
   "Ankara": {
     "latitude": 39.94997,
     "longitude": 32.884026,
-    "generationtime_ms": 0.1348257064819336,
+    "generationtime_ms": 0.5356073379516602,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -288,7 +288,7 @@
   "Izmir": {
     "latitude": 38.432575,
     "longitude": 27.208298,
-    "generationtime_ms": 0.3669261932373047,
+    "generationtime_ms": 0.6371736526489258,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -431,7 +431,7 @@
   "Adana": {
     "latitude": 36.97813,
     "longitude": 35.33118,
-    "generationtime_ms": 0.13184547424316406,
+    "generationtime_ms": 0.4887580871582031,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -574,7 +574,7 @@
   "Bursa": {
     "latitude": 40.212605,
     "longitude": 29.01397,
-    "generationtime_ms": 0.12445449829101562,
+    "generationtime_ms": 0.48339366912841797,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
