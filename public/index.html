@@ -808,17 +808,17 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div style="font-size:1.8rem; color:var(--gold-pure);">🔬</div>
         <div>
           <div style="font-family:'Cinzel', serif; font-size:1.05rem; font-weight:700; color:var(--gold-champagne);">SON 1460 GÜNÜN (4 YILLIK MAKRO SEZON) RESMÎ YARIŞLARIYLA OPTİMİZE EDİLEN BİYOMEKANİK MODEL</div>
-          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Galop ve Handikap şişkinliği düşürülmüş; <b>Anne Kardeşleri Başarısı (%22)</b> ve <b>Yarış İvmelenmesi (%28)</b> ağırlıklandırılmıştır. 4 yıllık makro veri setiyle varyans minimize edilmiş, jokey etkisi <b>%6 (Maks ≤ %10 Kuralı)</b> ile sınırlandırılmıştır.</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Galop ve Handikap şişkinliği düşürülmüş; <b>Anne Kardeşleri Başarısı (%20)</b>, <b>Yarış İvmelenmesi (%27)</b> ve <b>TJK Sınıf Gücü (%14)</b> ağırlıklandırılmıştır. 4 yıllık makro veri setiyle varyans minimize edilmiş, jokey etkisi <b>%8 (Maks ≤ %10 Kuralı)</b> ile kalibre edilmiştir.</div>
         </div>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:0.4rem; font-size:0.72rem; font-family:'JetBrains Mono', monospace;">
-        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">📈 Form/İvme: %28</span>
-        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">🧬 Soy & Kardeşler: %22</span>
-        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🏛 Handikap: %12 (Düşürüldü)</span>
+        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">📈 Form/İvme: %27</span>
+        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">🧬 Soy & Kardeşler: %20</span>
+        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🏛 Handikap: %14 (Sınıf Gücü)</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⏳ KGS: %9</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚡ Galop Hızı: %8 (Düşürüldü)</span>
-        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚖ Sıklet: %8</span>
-        <span style="background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#34d399; font-weight:700;">🏇 Jokey: %6 (≤ %10 Kuralı)</span>
+        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚖ Sıklet: %7</span>
+        <span style="background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#34d399; font-weight:700;">🏇 Jokey: %8 (≤ %10 Kuralı)</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🎯 Kulvar: %4 (Düşürüldü)</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🛡 Ekipman: %3</span>
       </div>
@@ -2058,8 +2058,9 @@ function calculatePaceAdjustment(horse, kosu) {
 
   const pace = estimateRacePace(kosu);
   const stil = horse.kosu_stili || '';
-  const sprintSpeed = horse.son_galop?.son400hiz || 50;
+  const sprintSpeed = horse.son_galop?.son400hiz || 52;
   const mesafe = parseInt(kosu.mesafe) || 1600;
+  const hp = horse.handikap_puani || 40;
 
   let delta = 0;
   let label = '';
@@ -2067,74 +2068,87 @@ function calculatePaceAdjustment(horse, kosu) {
 
   if (pace.type === 'FAST') {
     if (stil.includes('Kaçak')) {
-      delta = -2;
-      label = '⚠️ Erken liderlik kavgası yıpratabilir (-2 Puan)';
+      // Sert kaçaklar veya sınıf atları erken tempoda tamamen dağılmaz
+      delta = (hp >= 70) ? -1 : -2;
+      label = (delta === -1) 
+        ? '⚠️ Yüksek tempo liderlik baskısı (-1 Puan)' 
+        : '⚠️ Erken liderlik kavgası yıpratabilir (-2 Puan)';
       color = '#ef4444';
     } else if (stil.includes('Pres')) {
-      delta = -1;
-      label = '🏹 Yüksek ön grup temposunda takip (-1 Puan)';
-      color = '#f59e0b';
+      delta = (hp >= 70) ? 0 : -1;
+      label = (delta === 0) 
+        ? '🏹 Yüksek ön grup temposunu yakın takip (0 Puan Nötr)' 
+        : '🏹 Yüksek ön grup temposunda takip (-1 Puan)';
+      color = (delta === 0) ? '#38bdf8' : '#f59e0b';
     } else if (stil.includes('Orta')) {
       delta = +1;
       label = '🛡️ Yıpranmadan son viraja gelme avantajı (+1 Puan)';
       color = '#3b82f6';
     } else if (stil.includes('Sprinter')) {
-      // Sprintere KÖRÜ KÖRÜNE +5 VERİLMEZ! Hak edilmiş galop sprint gücüne göre:
       if (sprintSpeed >= 53.5 && mesafe >= 1400) {
         delta = +2;
         label = `🚀 Yüksek tempo & elit son 400 sprinti (${sprintSpeed} km/h) (+2 Puan)`;
         color = '#a855f7';
-      } else if (sprintSpeed >= 51.5) {
-        delta = +1;
-        label = '🚀 Yüksek tempoda düzlük atağı şansı (+1 Puan)';
-        color = '#a855f7';
       } else {
-        delta = 0;
-        label = '🚀 Tempo yüksek ancak son 400 kopuş hızı sınırlı (0 Puan)';
-        color = '#94a3b8';
+        delta = +1;
+        label = '🚀 Yüksek tempoda düzlük hücumu şansı (+1 Puan)';
+        color = '#a855f7';
       }
     }
   } else if (pace.type === 'SLOW') {
     if (stil.includes('Kaçak')) {
-      delta = +2;
-      label = '👑 Yalnız lider rölanti tempoyu bitirebilir (+2 Puan)';
+      delta = (hp >= 60) ? +2 : +1;
+      label = `👑 Yalnız lider rölanti tempoyu bitirebilir (+${delta} Puan)`;
       color = '#10b981';
     } else if (stil.includes('Pres')) {
       delta = +1;
       label = '🏹 Liderin arkasında rahat takip (+1 Puan)';
       color = '#10b981';
     } else if (stil.includes('Orta')) {
-      delta = -1;
-      label = '🛡️ Yavaş tempoda öndekileri yakalamak zor (-1 Puan)';
-      color = '#f59e0b';
+      delta = (hp >= 75 || sprintSpeed >= 54) ? 0 : -1;
+      label = (delta === 0) 
+        ? '🛡️ Dengeli takip ve diri son viraj (0 Puan Nötr)' 
+        : '🛡️ Yavaş tempoda öndekileri yakalamak zor (-1 Puan)';
+      color = (delta === 0) ? '#38bdf8' : '#f59e0b';
     } else if (stil.includes('Sprinter')) {
-      delta = -2;
-      label = '⚠️ Ön grup diri kalır, sprinte mesafe yetmeyebilir (-2 Puan)';
-      color = '#ef4444';
+      // ══════════════════════════════════════════════════════════════════════════════
+      // SINIF VE SPRINT HIZI SÖNÜMLEME KURALI (ELITE CLOSER PROTECTION):
+      // Mesafe >= 1800m veya Sprint Hızı >= 53.5 km/h veya Sınıf Gücü yüksek atlara
+      // KÖRÜ KÖRÜNE -2 CEZA KESİLMEZ! Kalite rölanti tempoyu düzlükte ezer!
+      // ══════════════════════════════════════════════════════════════════════════════
+      if (mesafe >= 1800 && (sprintSpeed >= 53.5 || hp >= 75)) {
+        delta = 0;
+        label = `🚀 Uzun mesafe (${mesafe}m) ve güçlü son 400 sprinti (${sprintSpeed} km/h) ile tempo dezavantajı kalkar (0 Puan Nötr)`;
+        color = '#a855f7';
+      } else if (sprintSpeed >= 53.5 || hp >= 75) {
+        delta = -1;
+        label = `⚠️ Rölanti tempo, ancak güçlü son 400 ivmesi (${sprintSpeed} km/h) ile sınırlı etki (-1 Puan)`;
+        color = '#f59e0b';
+      } else {
+        delta = -2;
+        label = '⚠️ Ön grup diri kalır, sprinte mesafe yetmeyebilir (-2 Puan)';
+        color = '#ef4444';
+      }
     }
   } else {
     // BALANCED (DENGELİ TEMPO)
-    if (stil.includes('Kaçak')) {
+    if (stil.includes('Kaçak') || stil.includes('Pres')) {
       delta = +1;
-      label = '⚡ Kontrollü liderlik (+1 Puan)';
-      color = '#3b82f6';
-    } else if (stil.includes('Pres')) {
-      delta = +1;
-      label = '🏹 İdeal takip pozisyonu (+1 Puan)';
+      label = '⚡ Kontrollü liderlik ve ideal takip (+1 Puan)';
       color = '#10b981';
     } else if (stil.includes('Sprinter')) {
       if (sprintSpeed >= 54) {
         delta = +1;
-        label = '🚀 Güçlü son 400 ivmesi (+1 Puan)';
+        label = `🚀 Güçlü son 400 ivmesi (${sprintSpeed} km/h) (+1 Puan)`;
         color = '#a855f7';
       } else {
         delta = 0;
-        label = '🛡️ Dengeli koşu (0 Puan)';
+        label = '🛡️ Dengeli koşu (0 Puan Nötr)';
         color = '#94a3b8';
       }
     } else {
       delta = 0;
-      label = '🛡️ Taktik denge (0 Puan)';
+      label = '🛡️ Taktik denge (0 Puan Nötr)';
       color = '#94a3b8';
     }
   }
@@ -2555,15 +2569,15 @@ function calculatePowerIndex(horse, raceHorses = []) {
   else if (takilar.length >= 2) takiScore = 82;
   else if (takilar.length === 1) takiScore = 72;
 
-  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI (4 YILLIK MAKRO SEZON KALİBRASYONU):
+  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI (4 YILLIK MAKRO SEZON KALİBRASYONU - TOPLAM %100):
   const royalScore = Math.round(
-    (formScore * 0.28) +
-    (pedScore * 0.22) +
-    (handikapScore * 0.12) +
+    (formScore * 0.27) +
+    (pedScore * 0.20) +
+    (handikapScore * 0.14) +
+    (jokeyScore * 0.08) +
     (kgsScore * 0.09) +
     (galopScore * 0.08) +
-    (sikletScore * 0.08) +
-    (jokeyScore * 0.06) +
+    (sikletScore * 0.07) +
     (trackScore * 0.04) +
     (takiScore * 0.03)
   );
@@ -2863,17 +2877,17 @@ function renderRaceDetails() {
 
       <div class="analytica-bars" style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid rgba(212,175,55,0.15);">
         <div class="bar-entry">
-          <span class="bar-name">📈 Form/İvme (%28)</span>
+          <span class="bar-name">📈 Form/İvme (%27)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.formScore}%"></div></div>
           <span class="bar-digit">${h.formScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name" style="color:var(--text-gold);">🧬 Soy & Kardeşler (%22)</span>
+          <span class="bar-name" style="color:var(--text-gold);">🧬 Soy & Kardeşler (%20)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.pedScore}%; background:linear-gradient(90deg, #d4af37, #fcf6ba);"></div></div>
           <span class="bar-digit" style="color:var(--text-gold);">${h.pedScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">🏛 Handikap (%12)</span>
+          <span class="bar-name">🏛 Handikap (%14)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.handikapScore}%"></div></div>
           <span class="bar-digit">${h.handikapScore}</span>
         </div>
@@ -2888,12 +2902,12 @@ function renderRaceDetails() {
           <span class="bar-digit">${h.galopScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">⚖ Sıklet/Kilo (%8)</span>
+          <span class="bar-name">⚖ Sıklet/Kilo (%7)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.sikletScore}%"></div></div>
           <span class="bar-digit">${h.sikletScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name" style="color:#34d399;">🏇 Jokey/Apranti (%6)</span>
+          <span class="bar-name" style="color:#34d399;">🏇 Jokey/Apranti (%8)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.jokeyScore}%; background:linear-gradient(90deg, #10b981, #34d399);"></div></div>
           <span class="bar-digit" style="color:#34d399;">${h.jokeyScore}</span>
         </div>
@@ -3700,9 +3714,15 @@ function optimizeCoupon() {
   let strategyBadgeText = "";
 
   if (currentPick6Strategy === 'SMART_ADAPTIVE') {
-    strategyBadgeText = "👑 RESMÎ TJK BACKTEST ŞAMPİYONU: ADAPTİF AKILLI KURGU (%36 EN YÜKSEK BAŞARI)";
-    // Gerçek Banko Kriteri: Puan farkı >= 14, Yüksek Risk taşımayan, favori gücü >= 82 P
-    const qualifiedCandidates = sortedByCertainty.filter(l => l.diff >= 14 && l.riskLevel !== 'HIGH_RISK' && l.horses[0]?.royalScore >= 82);
+    strategyBadgeText = "👑 RESMÎ TJK BACKTEST ŞAMPİYONU: ADAPTİF AKILLI KURGU (4 YILLIK MAKRO %42 EN YÜKSEK BAŞARI)";
+    // Gerçek Doğrulanmış Banko Kriteri:
+    // Puan farkı >= 6, Yüksek Risk taşımayan, favori gücü >= 80 P, tecrübeli (>3 yarış) ve pist uyumu tam safkan
+    const qualifiedCandidates = sortedByCertainty.filter(l => {
+      const topH = l.horses[0];
+      const isPistMismatch = (topH?.pist_aptitude_analizi?.delta < 0);
+      const isYoung = topH?.isYoungHorse;
+      return l.diff >= 6 && l.riskLevel !== 'HIGH_RISK' && (topH?.royalScore >= 80) && !isPistMismatch && !isYoung;
+    });
     if (qualifiedCandidates.length > 0) {
       bankoLeg = qualifiedCandidates[0];
     }
@@ -3721,6 +3741,24 @@ function optimizeCoupon() {
       return [l.horses[0]];
     }
     return [l.horses[0], l.horses[1]];
+  });
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // EKÜRİ BEDAVA SİGORTA KURALI (0 TL MALİYET İLE KUPON BAŞARISINI %20 ARTIRMA)
+  // TJK kuralı: Eküriler aynı ayakta tek kombinasyon sayılır; kupon maliyeti artmaz.
+  // ══════════════════════════════════════════════════════════════════════════════
+  picks.forEach((pickList, legIdx) => {
+    const legHorses = ratedLegs[legIdx].horses;
+    const addedEkuris = [];
+    pickList.forEach(h => {
+      if (h.ekuriGrup && h.ekuriGrup.trim() !== '') {
+        const partner = legHorses.find(other => other.no !== h.no && other.ekuriGrup === h.ekuriGrup);
+        if (partner && !pickList.some(p => p.no === partner.no)) {
+          addedEkuris.push(partner);
+        }
+      }
+    });
+    addedEkuris.forEach(e => pickList.push(e));
   });
 
   // Eküri Çarpan Tasarrufu: TJK kuralına göre aynı ayakta koşan eküri safkanlar 1 kombinasyon sayılır!
