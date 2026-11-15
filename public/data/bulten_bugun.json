@@ -64,7 +64,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "10.45",
@@ -485,7 +485,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 2,
@@ -516,7 +521,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "9.35",
@@ -942,7 +947,12 @@
                 "surfaceAptitudeScore": 54,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 3,
@@ -974,7 +984,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 21,
               "agf_kaynak": "gercek",
               "ganyan": "5.65",
@@ -1414,7 +1424,12 @@
                 "surfaceAptitudeScore": 51,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 4,
@@ -1445,7 +1460,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "19.75",
@@ -1882,7 +1897,12 @@
                 "surfaceAptitudeScore": 67,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 5,
@@ -1912,7 +1932,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "3.40",
@@ -2349,7 +2369,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 6,
@@ -2380,7 +2405,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "25.45",
@@ -2797,7 +2822,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 7,
@@ -2827,7 +2857,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "1.85",
@@ -3290,7 +3320,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 8,
@@ -3320,7 +3355,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "44.50",
@@ -3756,7 +3791,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %15 (Kumda %53 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 9,
@@ -3787,7 +3827,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "89.05",
@@ -4175,7 +4215,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 10,
@@ -4207,7 +4252,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "10.45",
@@ -4673,7 +4718,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             }
           ],
           "sehir": "İstanbul",
@@ -11062,7 +11112,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "1.55",
@@ -11422,7 +11472,12 @@
                 "surfaceAptitudeScore": 74,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 2,
@@ -11454,7 +11509,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -11821,7 +11876,12 @@
                 "surfaceAptitudeScore": 56,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 3,
@@ -11852,7 +11912,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -12212,7 +12272,12 @@
                 "surfaceAptitudeScore": 54,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 4,
@@ -12244,7 +12309,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "1.50",
@@ -12706,7 +12771,12 @@
                 "surfaceAptitudeScore": 72,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%46 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 5,
@@ -12737,7 +12807,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 25,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -13155,7 +13225,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -13187,7 +13262,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 16,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -13602,7 +13677,12 @@
                 "surfaceAptitudeScore": 66,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 7,
@@ -13633,7 +13713,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -14006,7 +14086,12 @@
                 "surfaceAptitudeScore": 67,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 8,
@@ -14038,7 +14123,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -14411,7 +14496,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 9,
@@ -14442,7 +14532,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -14812,7 +14902,12 @@
                 "surfaceAptitudeScore": 75,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%50 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 10,
@@ -14844,7 +14939,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -15204,7 +15299,12 @@
                 "surfaceAptitudeScore": 51,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 11,
@@ -15237,7 +15337,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "51.10",
@@ -15601,7 +15701,12 @@
                 "surfaceAptitudeScore": 77,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%53 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 12,
@@ -15632,7 +15737,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -15989,7 +16094,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 13,
@@ -16020,7 +16130,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -16378,7 +16488,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             }
           ],
           "sehir": "İstanbul",
@@ -23988,7 +24103,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -24326,7 +24441,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 2,
@@ -24358,7 +24478,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "23.60",
@@ -24664,7 +24784,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 3,
@@ -24695,7 +24820,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -25058,7 +25183,12 @@
                 "surfaceAptitudeScore": 53,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 4,
@@ -25408,7 +25538,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 5,
@@ -25440,7 +25575,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -25736,7 +25871,12 @@
                 "surfaceAptitudeScore": 53,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 6,
@@ -25768,7 +25908,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "1.45",
@@ -26105,7 +26245,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %8 (Kumda %40 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 7,
@@ -26137,7 +26282,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "23.60",
@@ -26364,7 +26509,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 8,
@@ -26395,7 +26545,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -26671,7 +26821,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 9,
@@ -26702,7 +26857,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 22,
               "agf_kaynak": "gercek",
               "ganyan": "2.75",
@@ -26983,7 +27138,12 @@
                 "surfaceAptitudeScore": 66,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             }
           ],
           "sehir": "İstanbul",
@@ -31686,7 +31846,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -32098,7 +32258,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 2,
@@ -32129,7 +32294,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "1.60",
@@ -32585,7 +32750,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 3,
@@ -32615,7 +32785,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "7.50",
@@ -33070,7 +33240,12 @@
                 "surfaceAptitudeScore": 60,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 4,
@@ -33101,7 +33276,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -33513,7 +33688,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 5,
@@ -33544,7 +33724,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "5.30",
@@ -33970,7 +34150,12 @@
                 "surfaceAptitudeScore": 75,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -34001,7 +34186,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "9.00",
@@ -34463,7 +34648,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -34494,7 +34684,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 23,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -34867,7 +35057,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 8,
@@ -34897,7 +35092,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "5.30",
@@ -35318,7 +35513,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 9,
@@ -35350,7 +35550,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "9.00",
@@ -35813,7 +36013,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 10,
@@ -35845,7 +36050,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 11,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -36262,7 +36467,12 @@
                 "surfaceAptitudeScore": 76,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%44)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             }
           ],
           "sehir": "İstanbul",
@@ -42639,7 +42849,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "3.00",
@@ -42966,7 +43176,12 @@
                 "surfaceAptitudeScore": 77,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%53 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 2,
@@ -42996,7 +43211,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "3.00",
@@ -43435,7 +43650,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -43467,7 +43687,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -43782,7 +44002,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 4,
@@ -43809,7 +44034,7 @@
               "dinlenme_gunu": 21,
               "takilar": [],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 44,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -44185,7 +44410,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 5,
@@ -44215,7 +44445,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -44507,7 +44737,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %8 (Kumda %40 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -44537,7 +44772,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "3.00",
@@ -44934,7 +45169,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 7,
@@ -44963,7 +45203,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "3.45",
@@ -45348,7 +45588,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 8,
@@ -45380,7 +45625,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 20,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -45719,7 +45964,12 @@
                 "surfaceAptitudeScore": 66,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 9,
@@ -45750,7 +46000,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -46033,7 +46283,12 @@
                 "surfaceAptitudeScore": 51,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 10,
@@ -46065,7 +46320,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -46431,7 +46686,12 @@
                 "surfaceAptitudeScore": 47,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %57 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 11,
@@ -46461,7 +46721,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -46696,7 +46956,12 @@
                 "surfaceAptitudeScore": 66,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 12,
@@ -46726,7 +46991,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -47105,7 +47370,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 13,
@@ -47135,7 +47405,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -47499,7 +47769,12 @@
                 "surfaceAptitudeScore": 64,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             }
           ],
           "sehir": "İstanbul",
@@ -54478,7 +54753,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -54896,7 +55171,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 2,
@@ -54925,7 +55205,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "1.50",
@@ -55345,7 +55625,12 @@
                 "surfaceAptitudeScore": 51,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -55376,7 +55661,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -55788,7 +56073,12 @@
                 "surfaceAptitudeScore": 48,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 4,
@@ -55819,7 +56109,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -56235,7 +56525,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %13 (Kumda %41 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 5,
@@ -56265,7 +56560,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "1.60",
@@ -56733,7 +57028,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %10 (Kumda %44 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -56764,7 +57064,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "1.50",
@@ -57241,7 +57541,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 7,
@@ -57270,7 +57575,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 60,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -57681,7 +57986,12 @@
                 "surfaceAptitudeScore": 72,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%46 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             }
           ],
           "sehir": "İstanbul",
@@ -62395,7 +62705,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 24,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -62818,7 +63128,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 2,
@@ -62848,7 +63163,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -63260,7 +63575,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -63293,7 +63613,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "3.85",
@@ -63696,7 +64016,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %10 (Kumda %44 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 4,
@@ -63728,7 +64053,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 25,
               "agf_kaynak": "gercek",
               "ganyan": "1.25",
@@ -64208,7 +64533,12 @@
                 "surfaceAptitudeScore": 56,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 5,
@@ -64238,7 +64568,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 17,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -64657,7 +64987,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -64688,7 +65023,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 17,
               "agf_kaynak": "gercek",
               "ganyan": "3.85",
@@ -65081,7 +65416,12 @@
                 "surfaceAptitudeScore": 64,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 7,
@@ -65111,7 +65451,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -65475,7 +65815,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 8,
@@ -65505,7 +65850,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -65864,7 +66209,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %40 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             }
           ],
           "sehir": "İstanbul",
@@ -70911,7 +71261,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 21,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -71277,7 +71627,12 @@
                 "surfaceAptitudeScore": 77,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%53 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 2,
@@ -71309,7 +71664,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 15,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -71552,7 +71907,12 @@
                 "surfaceAptitudeScore": 58,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 3,
@@ -71581,7 +71941,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 11,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -71807,7 +72167,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 4,
@@ -71838,7 +72203,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -72058,7 +72423,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %13 (Kumda %41 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 5,
@@ -72090,7 +72460,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -72450,7 +72820,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 6,
@@ -72481,7 +72856,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -72701,7 +73076,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -72731,7 +73111,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 33,
               "agf_kaynak": "gercek",
               "ganyan": "1.05",
@@ -72998,7 +73378,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %15 (Kumda %47 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 8,
@@ -73029,7 +73414,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -73255,7 +73640,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             }
           ],
           "sehir": "İstanbul",
@@ -77080,7 +77470,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "1.05",
@@ -77546,7 +77936,12 @@
                 "surfaceAptitudeScore": 58,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 2,
@@ -77576,7 +77971,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "18.95",
@@ -77998,7 +78393,12 @@
                 "surfaceAptitudeScore": 53,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %15 (Kumda %43 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 3,
@@ -78028,7 +78428,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -78388,7 +78788,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 4,
@@ -78418,7 +78823,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 10,
               "agf_kaynak": "gercek",
               "ganyan": "90.00",
@@ -78785,7 +79190,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %8 (Kumda %44 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 5,
@@ -78817,7 +79227,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -79200,7 +79610,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -79229,7 +79644,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -79623,7 +80038,12 @@
                 "surfaceAptitudeScore": 54,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -79656,7 +80076,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 24,
               "agf_kaynak": "gercek",
               "ganyan": "13.30",
@@ -80075,7 +80495,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %43 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 8,
@@ -80106,7 +80531,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -80497,7 +80922,12 @@
                 "surfaceAptitudeScore": 82,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%50 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 9,
@@ -80527,7 +80957,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "21.15",
@@ -80946,7 +81376,12 @@
                 "surfaceAptitudeScore": 52,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %13 (Kumda %47 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 10,
@@ -80978,7 +81413,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "13.30",
@@ -81347,7 +81782,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 11,
@@ -81379,7 +81819,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -81778,7 +82218,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 12,
@@ -81810,7 +82255,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -82212,7 +82657,12 @@
                 "surfaceAptitudeScore": 54,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 13,
@@ -82243,7 +82693,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -82645,7 +83095,12 @@
                 "surfaceAptitudeScore": 58,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 14,
@@ -82676,7 +83131,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -83078,7 +83533,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 15,
@@ -83110,7 +83570,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -83454,7 +83914,12 @@
                 "surfaceAptitudeScore": 86,
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%53 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             }
           ],
           "sehir": "İstanbul",
@@ -92132,7 +92597,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "14.35",
@@ -92556,7 +93021,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 2,
@@ -92589,7 +93059,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "28.70",
@@ -92993,7 +93463,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 3,
@@ -93020,7 +93495,7 @@
               "dinlenme_gunu": 28,
               "takilar": [],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 15,
               "agf_kaynak": "gercek",
               "ganyan": "28.70",
@@ -93432,7 +93907,12 @@
                 "surfaceAptitudeScore": 75,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%50 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 4,
@@ -93881,7 +94361,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 5,
@@ -93913,7 +94398,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "1.75",
@@ -94288,7 +94773,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 6,
@@ -94724,7 +95214,12 @@
                 "surfaceAptitudeScore": 51,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 7,
@@ -94757,7 +95252,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 20,
               "agf_kaynak": "gercek",
               "ganyan": "1.75",
@@ -95150,7 +95645,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 8,
@@ -95553,7 +96053,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %10 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 9,
@@ -95584,7 +96089,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 34,
               "agf_kaynak": "gercek",
               "ganyan": "28.70",
@@ -95966,7 +96471,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 10,
@@ -95997,7 +96507,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "28.70",
@@ -96344,7 +96854,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 11,
@@ -96777,7 +97292,12 @@
                 "surfaceAptitudeScore": 67,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             }
           ],
           "sehir": "Adana",
@@ -103362,7 +103882,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -103571,7 +104091,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 2,
@@ -103601,7 +104126,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -103865,7 +104390,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -103895,7 +104425,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -104120,7 +104650,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 4,
@@ -104151,7 +104686,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -104400,7 +104935,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %18 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 5,
@@ -104432,7 +104972,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 14,
               "agf_kaynak": "gercek",
               "ganyan": "41.70",
@@ -104740,7 +105280,12 @@
                 "surfaceAptitudeScore": 52,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 6,
@@ -104770,7 +105315,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 30,
               "agf_kaynak": "gercek",
               "ganyan": "4.75",
@@ -105171,7 +105716,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -105204,7 +105754,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 41,
               "agf_kaynak": "gercek",
               "ganyan": "1.05",
@@ -105620,7 +106170,12 @@
                 "surfaceAptitudeScore": 81,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%57 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 8,
@@ -105651,7 +106206,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "4.75",
@@ -105990,7 +106545,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             }
           ],
           "sehir": "Adana",
@@ -110015,7 +110575,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 36,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -110350,7 +110910,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 2,
@@ -110794,7 +111359,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 3,
@@ -110825,7 +111395,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 43,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -111191,7 +111761,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 4,
@@ -111221,7 +111796,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -111630,7 +112205,12 @@
                 "surfaceAptitudeScore": 75,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%50)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 5,
@@ -111660,7 +112240,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -112054,7 +112634,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -112538,7 +113123,12 @@
                 "surfaceAptitudeScore": 70,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%44)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 7,
@@ -112570,7 +113160,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -112919,7 +113509,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 8,
@@ -112949,7 +113544,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -113259,7 +113854,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 9,
@@ -113290,7 +113890,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -113561,7 +114161,12 @@
                 "surfaceAptitudeScore": 54,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 10,
@@ -113955,7 +114560,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 11,
@@ -113988,7 +114598,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -114343,7 +114953,12 @@
                 "surfaceAptitudeScore": 61,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 12,
@@ -114712,7 +115327,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             }
           ],
           "sehir": "Adana",
@@ -121365,7 +121985,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -121649,7 +122269,12 @@
                 "surfaceAptitudeScore": 46,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 2,
@@ -121679,7 +122304,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -121904,7 +122529,12 @@
                 "surfaceAptitudeScore": 52,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -121936,7 +122566,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -122319,7 +122949,12 @@
                 "surfaceAptitudeScore": 67,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 4,
@@ -122352,7 +122987,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 52,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -122632,7 +123267,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 5,
@@ -122664,7 +123304,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 11,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -122876,7 +123516,12 @@
                 "surfaceAptitudeScore": 75,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%50 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -122905,7 +123550,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 27,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -123222,7 +123867,12 @@
                 "surfaceAptitudeScore": 58,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -123254,7 +123904,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -123578,7 +124228,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %18 (Çimde %53 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 8,
@@ -123610,7 +124265,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "2.10",
@@ -123942,7 +124597,12 @@
                 "surfaceAptitudeScore": 67,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 9,
@@ -123972,7 +124632,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "2.10",
@@ -124330,7 +124990,12 @@
                 "surfaceAptitudeScore": 74,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             }
           ],
           "sehir": "Adana",
@@ -128940,7 +129605,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -129314,7 +129979,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%47 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 2,
@@ -129344,7 +130014,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -129763,7 +130433,12 @@
                 "surfaceAptitudeScore": 55,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -129793,7 +130468,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -130166,7 +130841,12 @@
                 "surfaceAptitudeScore": 85,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%53 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 4,
@@ -130196,7 +130876,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 20,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -130599,7 +131279,12 @@
                 "surfaceAptitudeScore": 58,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 5,
@@ -130629,7 +131314,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 40,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -131056,7 +131741,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %18 (Çimde %46 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -131088,7 +131778,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 10,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -131501,7 +132191,12 @@
                 "surfaceAptitudeScore": 39,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %8 (Çimde %50 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 7,
@@ -131532,7 +132227,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -131907,7 +132602,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 8,
@@ -131939,7 +132639,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "2.55",
@@ -132374,7 +133074,12 @@
                 "surfaceAptitudeScore": 52,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 9,
@@ -132405,7 +133110,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "1.50",
@@ -132804,7 +133509,12 @@
                 "surfaceAptitudeScore": 49,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %18 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             }
           ],
           "sehir": "Adana",
@@ -138518,7 +139228,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 29,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -138929,7 +139639,12 @@
                 "surfaceAptitudeScore": 73,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%47 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 2,
@@ -138961,7 +139676,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -139371,7 +140086,12 @@
                 "surfaceAptitudeScore": 55,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -139402,7 +140122,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Presçi",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -139812,7 +140532,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 4,
@@ -139843,7 +140568,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -140238,7 +140963,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 5,
@@ -140688,7 +141418,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
             },
             {
               "no": 6,
@@ -140720,7 +141455,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 22,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -141132,7 +141867,12 @@
                 "surfaceAptitudeScore": 40,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %8 (Çimde %50 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 7,
@@ -141163,7 +141903,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -141567,7 +142307,12 @@
                 "surfaceAptitudeScore": 60,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 8,
@@ -141598,7 +142343,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 35,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -142008,7 +142753,12 @@
                 "surfaceAptitudeScore": 66,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             }
           ],
           "sehir": "Adana",
@@ -147084,7 +147834,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 51,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -147503,7 +148253,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar."
             },
             {
               "no": 2,
@@ -147533,7 +148288,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -147898,7 +148653,12 @@
                 "surfaceAptitudeScore": 81,
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%57 Kazanma)",
                 "delta": 5
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 3,
@@ -147927,7 +148687,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -148351,7 +149111,12 @@
                 "surfaceAptitudeScore": 44,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %13 (Çimde %42 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 4,
@@ -148382,7 +149147,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 17,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -148795,7 +149560,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 5,
@@ -148825,7 +149595,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -149084,7 +149854,12 @@
                 "surfaceAptitudeScore": 42,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %10 (Çimde %50 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 6,
@@ -149114,7 +149889,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -149431,7 +150206,12 @@
                 "surfaceAptitudeScore": 45,
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %46 Başarılı)",
                 "delta": -6
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -149461,7 +150241,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 18,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -149694,7 +150474,12 @@
                 "surfaceAptitudeScore": 68,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             }
           ],
           "sehir": "Adana",
@@ -153757,7 +154542,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "1.15",
@@ -154178,7 +154963,12 @@
                 "surfaceAptitudeScore": 62,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 2,
@@ -154209,7 +154999,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 30,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -154627,7 +155417,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 3,
@@ -154658,7 +155453,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -155052,7 +155847,12 @@
                 "surfaceAptitudeScore": 60,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 4,
@@ -155083,7 +155883,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -155506,7 +156306,12 @@
                 "surfaceAptitudeScore": 67,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 5,
@@ -155539,7 +156344,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -155912,7 +156717,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar."
             },
             {
               "no": 6,
@@ -155943,7 +156753,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -156295,7 +157105,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 7,
@@ -156326,7 +157141,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -156691,7 +157506,12 @@
                 "surfaceAptitudeScore": 63,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 8,
@@ -156721,7 +157541,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "10.15",
@@ -157130,7 +157950,12 @@
                 "surfaceAptitudeScore": 65,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 9,
@@ -157162,7 +157987,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 15,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -157583,7 +158408,12 @@
                 "surfaceAptitudeScore": 69,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             },
             {
               "no": 10,
@@ -157614,7 +158444,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -158030,7 +158860,12 @@
                 "surfaceAptitudeScore": 54,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
             },
             {
               "no": 11,
@@ -158060,7 +158895,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Bekleme/Sprint",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -158423,7 +159258,12 @@
                 "surfaceAptitudeScore": 59,
                 "warningBadge": null,
                 "delta": 0
-              }
+              },
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
             }
           ],
           "sehir": "Adana",

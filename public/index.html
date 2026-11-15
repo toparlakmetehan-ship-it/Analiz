@@ -480,6 +480,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
     </div>
 
     <div class="race-curtain" id="race-curtain"></div>
+    <div id="pace-scenario-box"></div>
     <div class="horses-grid" id="horses-grid"></div>
   </div>
 
@@ -1084,6 +1085,8 @@ function renderRaceDetails() {
     ${tekDecisionHtml}
   `;
 
+  renderPaceScenario(kosu, horsesWithMetrics);
+
   const grid = document.getElementById('horses-grid');
   grid.innerHTML = '';
 
@@ -1183,6 +1186,14 @@ function renderRaceDetails() {
 
       ${tekHorseBadge}
 
+      <div style="background:${h.stil_bg || 'rgba(212,175,55,0.08)'}; border:1px solid ${h.stil_border || 'rgba(212,175,55,0.2)'}; padding:0.5rem 0.8rem; border-radius:10px; margin:0.7rem 0; display:flex; align-items:center; gap:0.6rem;">
+        <span style="font-size:1.3rem;">${h.stil_ikon || '🏇'}</span>
+        <div style="flex:1;">
+          <div style="font-size:0.8rem; font-weight:700; color:${h.stil_renk || '#d4af37'}; text-transform:uppercase; letter-spacing:0.5px;">${h.kosu_stili || 'Sprint & Bekleme'}</div>
+          <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35; margin-top:2px;">${h.taktik_yorum || 'Yarışın temposuna göre konumlanacaktır.'}</div>
+        </div>
+      </div>
+
       <div class="pedigree-vault">
         <div class="vault-line"><span class="vault-key">Aygır (Baba):</span><span class="vault-val">${h.baba || 'Bilinmiyor'}</span></div>
         <div class="vault-line"><span class="vault-key">Kısrak (Anne):</span><span class="vault-val">${h.anne || 'Bilinmiyor'}</span></div>
@@ -1199,7 +1210,7 @@ function renderRaceDetails() {
         ` : ''}
         <div class="vault-line" style="margin-top:0.4rem;padding-top:0.4rem;border-top:1px dashed rgba(255,255,255,0.08);">
           <span class="vault-key">Koşu Karakteri:</span>
-          <span style="color:var(--text-gold);font-weight:600;">${h.kosu_stili || 'Sprint & Bekleme'}</span>
+          <span style="color:${h.stil_renk || 'var(--text-gold)'};font-weight:700;">${h.stil_ikon || ''} ${h.kosu_stili || 'Sprint & Bekleme'}</span>
         </div>
       </div>
 
@@ -1265,6 +1276,223 @@ function renderRaceDetails() {
     `;
     grid.appendChild(monument);
   });
+}
+
+// ── CANLI YARIŞ GİDİŞATI, TEMPO & TAKTİK SENARYO MOTORU ──
+function renderPaceScenario(kosu, horsesWithMetrics) {
+  const container = document.getElementById('pace-scenario-box');
+  if (!container) return;
+
+  const kacaklar = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Kaçak'));
+  const presciler = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Pres'));
+  const ortagrup = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Orta'));
+  const sprinterler = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Sprinter'));
+
+  // Calculate Pace Dynamic
+  let tempoTitle = '';
+  let tempoBadge = '';
+  let tempoDesc = '';
+  let tempoAdvantage = '';
+  let tempoColor = '#10b981';
+  let tempoBg = 'rgba(16, 185, 129, 0.12)';
+  let tempoBorder = 'rgba(16, 185, 129, 0.35)';
+
+  if (kacaklar.length >= 2 || (kacaklar.length === 1 && presciler.length >= 2)) {
+    tempoTitle = 'AŞIRI YÜKSEK TEMPO / ERKEN LİDERLİK KAVGASI';
+    tempoBadge = '🔥 AŞIRI YÜKSEK TEMPO';
+    tempoColor = '#ef4444';
+    tempoBg = 'linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.05))';
+    tempoBorder = 'rgba(239, 68, 68, 0.4)';
+    tempoDesc = `Yarışta birden fazla kaçak veya presçi safkan (${kacaklar.map(h => h.isim).join(', ')}) startla beraber liderlik mücadelesine girecek. İlk 800m çok yüksek tempolu geçecek; ön grup son 400'de yorulacaktır.`;
+    tempoAdvantage = `🚀 <b>DÜZLÜK SPRİNTERLERİNE ÇOK YARAR:</b> Ön gruptaki yıpranmadan en çok istifade edecek isimler: <b>${(sprinterler.length > 0 ? sprinterler.slice(0, 3).map(h => h.isim).join(', ') : horsesWithMetrics.slice(1, 3).map(h => h.isim).join(', '))}</b>.`;
+  } else if (kacaklar.length === 1 && presciler.length <= 1) {
+    tempoTitle = 'RÖLANTİ / YAVAŞ TEMPO (BEYAZ BAYRAK AYNA ADAYI)';
+    tempoBadge = '🕊️ RÖLANTİ / YAVAŞ TEMPO';
+    tempoColor = '#3b82f6';
+    tempoBg = 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.05))';
+    tempoBorder = 'rgba(59, 130, 246, 0.4)';
+    tempoDesc = `Yarışta tek belirgin kaçak (${kacaklar[0]?.isim || 'Öncü'}) var ve ciddi pres yapacak safkan yok. Lider yarışı rölantiye alacak, arkasındakiler tempo yapmazsa virajı çok rahat dönüp bitirebilir.`;
+    tempoAdvantage = `⚡ <b>LİDERE & ÖN GRUBA YARAR:</b> <b>${kacaklar[0]?.isim || 'Lider At'}</b> yalnız kalacağı için "Beyaz Bayrak Ayna" yapma şansı çok yüksek. Arkasından gelecek <b>${(presciler[0]?.isim || ortagrup[0]?.isim || 'Plase')}</b> de ikiliyi tamamlayabilir.`;
+  } else {
+    tempoTitle = 'DENGELİ / NORMAL TEMPO';
+    tempoBadge = '⚖️ DENGELİ TEMPO';
+    tempoColor = '#10b981';
+    tempoBg = 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.05))';
+    tempoBorder = 'rgba(16, 185, 129, 0.4)';
+    tempoDesc = `Ön grup ile takipçiler arasında taktiksel bir denge var. Yarış ne aşırı rölantiye kilitlenecek ne de yıkıcı bir liderlik kavgası yaşanacak.`;
+    tempoAdvantage = `👑 <b>KOMPLE VE YÜKSEK GÜÇ ENDEKSLİ SAFKANLARA YARAR:</b> Taktik disiplini olan ve genel güç puanı yüksek isimler avantajlı: <b>${horsesWithMetrics.slice(0, 3).map(h => h.isim).join(', ')}</b>.`;
+  }
+
+  // Helper function to render a track zone chips
+  const renderZoneHorses = (list, emptyText) => {
+    if (!list || list.length === 0) {
+      return `<span style="font-size:0.75rem; color:#64748b; font-style:italic;">${emptyText}</span>`;
+    }
+    return list.map(h => `
+      <div style="background:rgba(15,23,42,0.85); border:1px solid ${h.stil_border || 'rgba(212,175,55,0.25)'}; padding:0.35rem 0.65rem; border-radius:8px; display:inline-flex; align-items:center; gap:0.4rem; box-shadow:0 2px 8px rgba(0,0,0,0.4); margin:2px;">
+        <span style="font-family:'Cinzel',serif; font-weight:800; color:#04060a; background:${h.stil_renk || '#d4af37'}; padding:1px 5px; border-radius:4px; font-size:0.7rem;">${h.no}</span>
+        <span style="font-weight:700; font-size:0.78rem; color:#f8fafc;">${h.isim}</span>
+        <span style="font-size:0.68rem; color:#94a3b8; background:rgba(255,255,255,0.06); padding:1px 4px; border-radius:3px;">K:${h.kulvar || '-'}</span>
+      </div>
+    `).join(' ');
+  };
+
+  // 3-Phase Simulation Narrative
+  const phase1Text = kacaklar.length > 0 
+    ? `Start verildiğinde <b>${kacaklar.map(h => h.isim + ' (' + h.kulvar + '.K)').join(', ')}</b> ${kacaklar.length > 1 ? 'liderliği almak için iç kulvar avantajını kullanarak sert bir kapışmaya girecek' : 'bariyer dibini hemen ele geçirip rölanti tempoyu kuracak'}.`
+    : `Yarışta belirgin kaçak safkan bulunmadığından iç kulvardaki <b>${horsesWithMetrics[0]?.isim}</b> veya presçi safkanlar inisiyatif alıp öne çıkacaktır.`;
+
+  const phase2Text = presciler.length > 0
+    ? `Son 1000'den 600'e girilirken <b>${presciler.map(h => h.isim).join(', ')}</b> tempoyu hissettirecek ve kaçak safkanın ensesine yapışacaktır. ${kacaklar.length >= 2 ? 'Ön grup erken çekişmeden ötürü oksijensiz kalmaya başlayabilir.' : 'Lider temposunu korumaya çalışacaktır.'}`
+    : `Grupta sert presçi olmadığından tempo son viraja kadar kontrollü kalır, orta gruptaki safkanlar dışarı açılarak atağa hazırlanır.`;
+
+  const phase3Text = sprinterler.length > 0
+    ? `Son 400 metreye dönüldüğünde düzlük mücadelesi başlar. ${kacaklar.length >= 2 ? 'Ön grubun kesilmesiyle geride pusuya yatan <b>' + sprinterler.map(h => h.isim).join(', ') + '</b> pistin ortasından çok sert hücum edip fotoyu görebilir.' : 'Eğer kaçak safkan virajı diri döndüyse direnir, ancak <b>' + sprinterler.slice(0, 2).map(h => h.isim).join(', ') + '</b> son 200\'de hücumlarını sıklaştıracaktır.'}`
+    : `Düzlükte güç endeksi ve jokey direnci yüksek olan <b>${horsesWithMetrics.slice(0, 2).map(h => h.isim).join(' ve ')}</b> arasındaki çekişme birinciliği belirleyecektir.`;
+
+  container.innerHTML = `
+    <div style="background:linear-gradient(180deg, rgba(15,23,42,0.92) 0%, rgba(10,14,24,0.98) 100%); border:1px solid var(--gold-soft-border); border-radius:18px; padding:1.4rem 1.6rem; margin-bottom:2rem; box-shadow:0 12px 35px rgba(0,0,0,0.6); position:relative; overflow:hidden;">
+      
+      <!-- Arka Plan Su Damgası / Şıklık -->
+      <div style="position:absolute; right:-20px; top:-20px; font-size:9rem; opacity:0.03; font-family:'Cinzel', serif; pointer-events:none; user-select:none;">PACE</div>
+
+      <!-- Başlık ve Tempo Rozeti -->
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; border-bottom:1px solid rgba(212,175,55,0.18); padding-bottom:1rem; margin-bottom:1.2rem;">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="font-size:1.3rem;">🏁</span>
+            <h3 style="font-family:'Cinzel', serif; font-size:1.15rem; color:var(--text-gold); margin:0; letter-spacing:0.5px;">CANLI YARIŞ GİDİŞATI, TEMPO & TAKTİK SENARYOSU</h3>
+          </div>
+          <p style="font-size:0.75rem; color:#94a3b8; margin:0.3rem 0 0 0;">
+            Safkanların geçmiş koşu stilleri, kulvar dinamikleri, idman sprint ivmeleri ve soy karakter analizine göre yarış simülasyonu
+          </p>
+        </div>
+        <div style="background:${tempoBg}; border:1px solid ${tempoBorder}; padding:0.45rem 0.9rem; border-radius:10px; display:flex; align-items:center; gap:0.5rem;">
+          <span style="font-family:'Cinzel', serif; font-size:0.82rem; font-weight:800; color:${tempoColor}; letter-spacing:0.5px;">
+            ${tempoBadge}
+          </span>
+        </div>
+      </div>
+
+      <!-- Tempo Açıklaması ve Kime Yarar Kutusu -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:1rem; margin-bottom:1.4rem;">
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:0.85rem 1rem;">
+          <div style="font-size:0.72rem; color:var(--text-gold); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.35rem;">
+            ⏱️ Muhtemel Koşu Temposu
+          </div>
+          <div style="font-size:0.8rem; color:#e2e8f0; line-height:1.45;">
+            ${tempoDesc}
+          </div>
+        </div>
+
+        <div style="background:${tempoBg}; border:1px solid ${tempoBorder}; border-radius:12px; padding:0.85rem 1rem;">
+          <div style="font-size:0.72rem; color:${tempoColor}; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.35rem;">
+            💡 Bu Gidişat Kime Yarar?
+          </div>
+          <div style="font-size:0.8rem; color:#f1f5f9; line-height:1.45;">
+            ${tempoAdvantage}
+          </div>
+        </div>
+      </div>
+
+      <!-- PİST POZİSYON DAĞILIM ŞERİDİ (4-Zone Ribbon) -->
+      <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(212,175,55,0.15); border-radius:14px; padding:1.1rem; margin-bottom:1.4rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem;">
+          <span style="font-size:0.75rem; font-family:'Cinzel',serif; font-weight:700; color:var(--text-gold); letter-spacing:0.5px;">
+            📍 MUHTEMEL PİST DİZİLİMİ & KOŞU POZİSYONLARI
+          </span>
+          <span style="font-size:0.68rem; color:#64748b;">[ÖN GRUP (1-2)] ─────────► [GERİ GRUP (Pusu)]</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap:0.75rem;">
+          
+          <!-- Bölge 1: Kaçaklar -->
+          <div style="background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.3); border-radius:10px; padding:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; border-bottom:1px solid rgba(239,68,68,0.2); padding-bottom:0.3rem;">
+              <span style="font-size:0.72rem; font-weight:700; color:#f87171;">⚡ 1. HAT: KAÇAKLAR (LİDER)</span>
+              <span style="font-size:0.68rem; color:#fca5a5; font-family:'Cinzel';">${kacaklar.length} Safkan</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+              ${renderZoneHorses(kacaklar, 'Kaçak safkan yok (Öne çıkan olmazsa rölanti)')}
+            </div>
+          </div>
+
+          <!-- Bölge 2: Presçiler -->
+          <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.3); border-radius:10px; padding:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; border-bottom:1px solid rgba(16,185,129,0.2); padding-bottom:0.3rem;">
+              <span style="font-size:0.72rem; font-weight:700; color:#34d399;">🏹 2. HAT: PRESÇİLER (2-3-4)</span>
+              <span style="font-size:0.68rem; color:#a7f3d0; font-family:'Cinzel';">${presciler.length} Safkan</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+              ${renderZoneHorses(presciler, 'Baskı yapacak presçi yok')}
+            </div>
+          </div>
+
+          <!-- Bölge 3: Orta Grup -->
+          <div style="background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.3); border-radius:10px; padding:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; border-bottom:1px solid rgba(59,130,246,0.2); padding-bottom:0.3rem;">
+              <span style="font-size:0.72rem; font-weight:700; color:#60a5fa;">🛡️ 3. HAT: ORTA GRUP (5-6-7)</span>
+              <span style="font-size:0.68rem; color:#bfdbfe; font-family:'Cinzel';">${ortagrup.length} Safkan</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+              ${renderZoneHorses(ortagrup, 'Orta grup safkanı yok')}
+            </div>
+          </div>
+
+          <!-- Bölge 4: Düzlük Sprinterleri -->
+          <div style="background:rgba(168,85,247,0.08); border:1px solid rgba(168,85,247,0.3); border-radius:10px; padding:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; border-bottom:1px solid rgba(168,85,247,0.2); padding-bottom:0.3rem;">
+              <span style="font-size:0.72rem; font-weight:700; color:#c084fc;">🚀 4. HAT: DÜZLÜK SPRİNTERLERİ</span>
+              <span style="font-size:0.68rem; color:#e9d5ff; font-family:'Cinzel';">${sprinterler.length} Safkan</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+              ${renderZoneHorses(sprinterler, 'Arka grupta bekleyen safkan yok')}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3 AŞAMALI YARIŞ HİKAYESİ VE SENARYO AKIŞI -->
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(212,175,55,0.12); border-radius:12px; padding:1rem 1.2rem;">
+        <div style="font-size:0.75rem; font-family:'Cinzel',serif; font-weight:700; color:var(--text-gold); margin-bottom:0.8rem; letter-spacing:0.5px;">
+          📖 3 FAZLI YARIŞ AKIŞI & HİKÂYE SENARYOSU
+        </div>
+        
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:0.9rem;">
+          
+          <div style="border-left:3px solid #f59e0b; padding-left:0.75rem;">
+            <div style="font-size:0.72rem; font-weight:700; color:#fbbf24; text-transform:uppercase;">
+              1. AŞAMA: START & İLK 400 METRE
+            </div>
+            <div style="font-size:0.77rem; color:#cbd5e1; line-height:1.4; margin-top:0.25rem;">
+              ${phase1Text}
+            </div>
+          </div>
+
+          <div style="border-left:3px solid #3b82f6; padding-left:0.75rem;">
+            <div style="font-size:0.72rem; font-weight:700; color:#60a5fa; text-transform:uppercase;">
+              2. AŞAMA: SON VİRAJ (1000m - 600m)
+            </div>
+            <div style="font-size:0.77rem; color:#cbd5e1; line-height:1.4; margin-top:0.25rem;">
+              ${phase2Text}
+            </div>
+          </div>
+
+          <div style="border-left:3px solid #a855f7; padding-left:0.75rem;">
+            <div style="font-size:0.72rem; font-weight:700; color:#c084fc; text-transform:uppercase;">
+              3. AŞAMA: DÜZLÜK KOPUŞ & FİNİŞ (SON 400m)
+            </div>
+            <div style="font-size:0.77rem; color:#cbd5e1; line-height:1.4; margin-top:0.25rem;">
+              ${phase3Text}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  `;
 }
 
 // ── EKRAN 2: BÜTÇELİ 6'LI ROBOTU (ŞEHİR BİRİM FİYATLARIYLA ÇALIŞAN KNAPSACK) ──
