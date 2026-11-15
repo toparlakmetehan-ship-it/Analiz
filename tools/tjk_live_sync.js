@@ -28,6 +28,16 @@ bulten.hipodromlar.forEach(hip => {
   });
 });
 
+// Run pace enrichment script if available
+try {
+  const enrichPath = path.join(__dirname, 'enrich_race_pace_and_scenarios.js');
+  if (fs.existsSync(enrichPath)) {
+    require(enrichPath);
+  }
+} catch (e) {
+  console.log('Enrich step bypassed:', e.message);
+}
+
 fs.writeFileSync(bultenPath, JSON.stringify(bulten, null, 2), 'utf8');
 
 console.log(`✅ Senkronizasyon Başarılı!`);
