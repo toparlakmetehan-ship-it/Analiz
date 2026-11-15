@@ -490,7 +490,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -953,7 +953,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             },
             {
@@ -1431,7 +1431,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -1463,7 +1463,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "19.75",
@@ -1901,11 +1901,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -2378,7 +2378,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -2832,7 +2832,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -3331,7 +3331,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -3803,7 +3803,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -4228,7 +4228,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -4261,7 +4261,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "10.45",
@@ -4728,11 +4728,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -11487,7 +11487,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -11892,7 +11892,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -12289,7 +12289,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -12789,7 +12789,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -13244,7 +13244,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -13697,7 +13697,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             },
             {
@@ -14107,7 +14107,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             },
             {
@@ -14518,7 +14518,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -14925,7 +14925,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -15323,7 +15323,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             },
             {
@@ -15726,7 +15726,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -16120,7 +16120,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -16515,7 +16515,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -24469,7 +24469,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -25213,7 +25213,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -25903,7 +25903,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -32295,7 +32295,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -32788,7 +32788,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -33279,7 +33279,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -33728,7 +33728,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -34191,7 +34191,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -34690,7 +34690,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -35100,7 +35100,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -35557,7 +35557,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -36058,7 +36058,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -36513,7 +36513,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -43698,7 +43698,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -44460,7 +44460,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -45221,7 +45221,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -45641,7 +45641,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -46018,7 +46018,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -46742,7 +46742,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -47428,7 +47428,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -47828,7 +47828,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             }
           ],
@@ -55231,7 +55231,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -55686,7 +55686,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -56135,7 +56135,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             },
             {
@@ -56588,7 +56588,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -57092,7 +57092,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -57606,7 +57606,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -58052,7 +58052,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.",
+              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -63195,7 +63195,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -63643,7 +63643,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -64085,7 +64085,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -64603,7 +64603,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
               "isYoungHorse": false
             },
             {
@@ -65058,7 +65058,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -65488,7 +65488,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -65888,7 +65888,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -66283,7 +66283,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -71702,7 +71702,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -72899,7 +72899,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -78019,7 +78019,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -78477,7 +78477,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -78873,7 +78873,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -79276,7 +79276,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -79697,7 +79697,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -80126,7 +80126,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -80584,7 +80584,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -81012,7 +81012,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -81467,7 +81467,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -81874,7 +81874,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -82311,7 +82311,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -82751,7 +82751,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -83190,7 +83190,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -83629,7 +83629,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -84011,7 +84011,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -93119,7 +93119,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -93562,7 +93562,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -94007,7 +94007,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -94462,7 +94462,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -94875,7 +94875,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -95317,7 +95317,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -95749,7 +95749,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -96158,7 +96158,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -96577,7 +96577,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -96961,7 +96961,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -97400,7 +97400,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -105830,7 +105830,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -106285,7 +106285,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -111027,7 +111027,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -111477,7 +111477,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -111880,7 +111880,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -112325,7 +112325,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -112755,7 +112755,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -113245,7 +113245,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -113632,7 +113632,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -113978,7 +113978,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -114686,7 +114686,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -115080,7 +115080,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -115455,7 +115455,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -123080,7 +123080,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -124001,7 +124001,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -124363,7 +124363,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -124733,7 +124733,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -125127,7 +125127,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -130117,7 +130117,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -130572,7 +130572,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -130981,7 +130981,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -131420,7 +131420,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -131883,7 +131883,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -132334,7 +132334,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -132746,7 +132746,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -133219,7 +133219,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -133655,7 +133655,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -139786,7 +139786,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             },
             {
@@ -140234,7 +140234,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -140266,7 +140266,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -140677,11 +140677,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -141113,7 +141113,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -141569,7 +141569,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -142019,7 +142019,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -142460,7 +142460,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -142907,7 +142907,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],
@@ -148408,7 +148408,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -148809,7 +148809,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -149268,7 +149268,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -149718,7 +149718,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.",
+              "taktik_yorum": "Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
               "isYoungHorse": false
             },
             {
@@ -150366,7 +150366,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -155125,7 +155125,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -155580,7 +155580,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -156011,7 +156011,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -156471,7 +156471,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -156883,7 +156883,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -157272,7 +157272,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -157674,7 +157674,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -158119,7 +158119,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -158578,7 +158578,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -159031,7 +159031,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             },
             {
@@ -159430,7 +159430,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.",
+              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
               "isYoungHorse": false
             }
           ],

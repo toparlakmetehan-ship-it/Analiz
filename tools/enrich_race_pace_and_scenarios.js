@@ -6,47 +6,47 @@ const bulten = JSON.parse(fs.readFileSync(bultenPath, 'utf8'));
 
 console.log('🏇 Safkanların Koşu Stilleri ve Yarış Senaryoları Zenginleştiriliyor...');
 
-// Running style patterns based on pedigree, past comments, and sprinting profile
+// ── SAFKANIN KENDİ KOŞU GEÇMİŞİ VE TAKTİK PROFİLİ (ANNE/BABA KULLANILMAZ) ──
 const styleRules = [
-  // Kaçak / Lider adayları (Aygır veya karakter analizi)
+  // Kaçak / Lider safkanlar (Kendi koşu karakteriyle önde kaçanlar)
   {
-    regex: /^DON ÇİÇİ$|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|YALNIZ AŞIK|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
+    regex: /^SPEED QUEEN$|^THUNDERSTRUCK$|^ASLIHANOĞLU$|^SANCAR$|^GÖK BERK$|^MISS DEVRAN$|^YALNIZ AŞIK$|^LUSİA$|^ORMANCIBEY$|^BOZKIR KARTALI$/i,
     stil: 'Kaçak / Lider',
     ikon: '⚡',
     renk: '#ef4444',
     bg: 'rgba(239, 68, 68, 0.15)',
     border: 'rgba(239, 68, 68, 0.4)',
-    taktik: 'Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever.'
+    taktik: 'Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.'
   },
-  // Presçi adayları (Ön grup takipçisi)
+  // Presçi safkanlar (Ön grup takipçisi 2.-3.lük)
   {
-    regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
+    regex: /^ÜSTÜNSOY$|^SERDÜMEN$|^GÜMBÜRGÜMBÜR$|^BALKIBEY$|^DOSTBAŞAR$|^HAYRETBİŞEY$|^TOR GOLD$|^REFLECTED$|^EFE KAPTAN$|^AĞILMUS$|^ALKATRAZ$|^ALATTİN$|^ÇELİK ABİ$|^CAYMAZBEY$/i,
     stil: 'Presçi',
     ikon: '🏹',
     renk: '#10b981',
     bg: 'rgba(16, 185, 129, 0.15)',
     border: 'rgba(16, 185, 129, 0.4)',
-    taktik: 'Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.'
+    taktik: 'Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.'
   },
-  // Orta Grup adayları
+  // Orta Grup safkanlar (4.-6. sıralarda bekleyen)
   {
-    regex: /^RECHARGE|RECHARGE MY HEART|UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
+    regex: /^UZBOYLU$|^TAŞKARA$|^AYDIN DAYI$|^AĞILMUS ASLANI$/i,
     stil: 'Orta Grup',
     ikon: '🛡️',
     renk: '#3b82f6',
     bg: 'rgba(59, 130, 246, 0.15)',
     border: 'rgba(59, 130, 246, 0.4)',
-    taktik: '4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.'
+    taktik: 'Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.'
   },
-  // Sprinter / Bekleme adayları (Son düzlük hücumcusu)
+  // Sprinter / Bekleme safkanları (Düzlük hücumcusu)
   {
-    regex: /ALWAYS HARD|BEST LINE|DRAGON PRIME|MACAPA|NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
+    regex: /^ALWAYS HARD$|^DRAGON PRIME$|^GHOST COMMANDER$|^VOLITIVO$|^CHARABANC$|^WHIZBANG$|^SPECIAL MAN$|^EFLAH$|^KAYIPSIZ$|^DELİ ŞİMŞEK$/i,
     stil: 'Düzlük Sprinteri',
     ikon: '🚀',
     renk: '#a855f7',
     bg: 'rgba(168, 85, 247, 0.15)',
     border: 'rgba(168, 85, 247, 0.4)',
-    taktik: 'Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar.'
+    taktik: 'Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.'
   }
 ];
 
@@ -92,52 +92,52 @@ bulten.hipodromlar.forEach(hip => {
       }
 
       at.isYoungHorse = false;
-      const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`.toUpperCase();
+      const horseName = (at.isim || '').trim();
 
-      // 1. ÖNCELİK: Safkanın Gerçek Geçmiş Koşu Çizgileri
-      let pastPosAvg = null;
-      if (at.pastRaces && at.pastRaces.length > 0) {
-        const validLines = at.pastRaces.map(p => p.runningLine).filter(Boolean);
-        if (validLines.length > 0) {
-          let sumPos = 0;
-          let count = 0;
-          validLines.forEach(l => {
-            const parts = l.split('-');
-            const pos = parseInt(parts[0]);
-            if (!isNaN(pos)) { sumPos += pos; count++; }
-          });
-          if (count > 0) pastPosAvg = sumPos / count;
-        }
-      }
-      
       let matched = null;
-      // 1. ÖNCELİK: Safkanın kendi adı ile doğrudan eşleşme
+      // 1. ÖNCELİK: Safkanın kendi adı ile doğrudan eşleşme (Doğal kaçak / presçi / sprinter)
       for (const rule of styleRules) {
-        if (rule.regex.test((at.isim || '').trim())) {
+        if (rule.regex.test(horseName)) {
           matched = rule;
           break;
         }
       }
 
-      // 2. ÖNCELİK: Safkanın geçmiş yarış pozisyon ortalaması
-      if (!matched && pastPosAvg !== null) {
-        if (pastPosAvg <= 1.8) matched = styleRules[0];
-        else if (pastPosAvg <= 3.5) matched = styleRules[1];
-        else if (pastPosAvg <= 6.0) matched = styleRules[2];
-        else matched = styleRules[3];
-      }
+      // 2. ÖNCELİK: Safkanın kendi geçmiş yarış takip pozisyonu ortalaması (runningLine / early split)
+      if (!matched && at.pastRaces && at.pastRaces.length > 0) {
+        let earlyPositions = [];
+        at.pastRaces.forEach(p => {
+          if (p.runningLine) {
+            const parts = p.runningLine.split('-');
+            const pos = parseInt(parts[0], 10);
+            if (!isNaN(pos)) earlyPositions.push(pos);
+          }
+        });
 
-      // 3. ÖNCELİK: Soy kütüğü desteği (Kaçak harici)
-      if (!matched) {
-        for (let rIdx = 1; rIdx < styleRules.length; rIdx++) {
-          if (styleRules[rIdx].regex.test(textToScan)) {
-            matched = styleRules[rIdx];
-            break;
+        if (earlyPositions.length > 0) {
+          // Son 2 yarışa 2 kat ağırlık vererek en sık takip ettiği taktiği bul
+          let weightedSum = 0;
+          let weightTotal = 0;
+          earlyPositions.forEach((pos, pIdx) => {
+            const w = pIdx < 2 ? 2.0 : 1.0;
+            weightedSum += pos * w;
+            weightTotal += w;
+          });
+          const avgPos = weightedSum / weightTotal;
+
+          if (avgPos <= 1.8) {
+            matched = styleRules[0]; // Kaçak
+          } else if (avgPos <= 3.2) {
+            matched = styleRules[1]; // Presçi
+          } else if (avgPos <= 5.8) {
+            matched = styleRules[2]; // Orta Grup
+          } else {
+            matched = styleRules[3]; // Sprinter
           }
         }
       }
 
-      // If no direct regex match, distribute organically based on kulvar and sprint speed
+      // 3. ÖNCELİK: Kendi kulvar ve galop sprint ivmesine göre organik dağılım (ASLA ANNE/BABA KULLANILMAZ)
       if (!matched) {
         const kulvar = Number(at.kulvar || (idx + 1));
         const sprintSpeed = at.son_galop?.son400hiz || 50;
