@@ -1,13 +1,18 @@
 {
-  "guncellemeZamani": "15 Kasım 2026 22:35",
+  "guncellemeZamani": "15 Kasım 2026 23:37",
   "ozetIstatistikler": {
-    "toplamKazanilanIkramiye": 2673620.00,
-    "toplamKuponMaliyeti": 14620.50,
-    "toplamNetKar": 2658999.50,
-    "kumulatifRoi": "182.8x",
-    "bugunAdanaIkramiyesi": 540000.00,
-    "bugunKazananModel": "🛡️ Tek Bankolu Ekonomik (2.572,50 ₺ ile 540.000 ₺)",
-    "enYuksekTekliRoi": "215.0x"
+    "toplamKazanilanIkramiye": 2227299.93,
+    "toplamKuponMaliyeti": 13630.5,
+    "toplamNetKar": 2213669.43,
+    "kumulatifRoi": "163.4x",
+    "bugunToplamKazanc": 633679.9299999999,
+    "bugunToplamKazancFormatli": "633.679,93 ₺",
+    "bugunAdana1Ikramiyesi": 91921.68,
+    "bugunAdana2Ikramiyesi": 541758.25,
+    "bugunAdana2Formatli": "541.758,25 ₺",
+    "bugunAdana1Formatli": "91.921,68 ₺",
+    "bugunTutanPaketler": "Adana 1. 6'lı (91.921,68 ₺) & Adana 2. 6'lı (541.758,25 ₺)",
+    "enYuksekTekliRoi": "210.6x"
   },
   "tutanKuponlar": [
     {
@@ -19,58 +24,58 @@
       "paket": "2. 6'lı Ganyan (3. - 8. Koşular)",
       "paketKodu": "2_6LI",
       "kosuAraligi": "3. - 8. Koşular",
-      "ikramiye": 540000.00,
-      "ikramiyeFormatli": "540.000,00 ₺",
+      "ikramiye": 541758.25,
+      "ikramiyeFormatli": "541.758,25 ₺",
       "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
       "onayli": true,
       "secenekler": [
         {
           "modelKey": "SINGLE_BANKO",
           "modelAdi": "🛡️ Tek Bankolu Ekonomik Model",
-          "rozet": "🏆 EN YÜKSEK ROI (209x)",
+          "rozet": "🏆 EN YÜKSEK ROI (210.6x)",
           "rozetRenk": "gold",
-          "maliyet": 2572.50,
+          "maliyet": 2572.5,
           "maliyetFormatli": "2.572,50 ₺",
-          "netKar": 537427.50,
-          "netKarFormatli": "+537.427,50 ₺",
-          "roi": "209.9x ROI",
+          "netKar": 539185.75,
+          "netKarFormatli": "+539.185,75 ₺",
+          "roi": "210.6x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
           "kombinasyon": "6 x 1 x 6 x 2 x 6 x 6",
-          "tekBanko": "2. Ayak (4. Koşu) ★ TEK: 2 HYPER ROCKER (82 P - Ganyan: 2.10)",
-          "kilitAyak": "4. Ayak (6. Koşu): [1 GÖK BERK, 3 REFLECTED GLORY]",
-          "aciklama": "2. Ayaktaki HYPER ROCKER'ı asil banko (tek) kullanarak kupon maliyetini 2.572,50 ₺'ye düşürdü ve 540.000 ₺ ikramiyeyi tam isabetle kazandırdı!"
+          "tekBanko": "2. Ayak (4. Koşu) ★ TEK: 2 HYPER ROCKER (82 P - Ganyan: 1.90 ₺)",
+          "kilitAyak": "4. Ayak (6. Koşu): [1 GÖK BERK (Kazandı), 3 REFLECTED GLORY]",
+          "aciklama": "2. Ayaktaki HYPER ROCKER'ı asil banko (tek) kullanarak maliyeti 2.572,50 ₺'ye düşürdü ve 541.758,25 ₺ resmî ikramiyeyi 210 katı net kârla kazandırdı!"
         },
         {
           "modelKey": "CHAMPION_5YEAR",
           "modelAdi": "👑 5 Yılın Şampiyonu (+EV Avcısı)",
           "rozet": "👑 5 YILIN EN ÇOK KAZANDIRANI",
           "rozetRenk": "emerald",
-          "maliyet": 2940.00,
+          "maliyet": 2940.0,
           "maliyetFormatli": "2.940,00 ₺",
-          "netKar": 537060.00,
-          "netKarFormatli": "+537.060,00 ₺",
-          "roi": "183.7x ROI",
+          "netKar": 538818.25,
+          "netKarFormatli": "+538.818,25 ₺",
+          "roi": "184.3x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
           "kombinasyon": "6 x 2 x 6 x 2 x 6 x 6",
-          "tekBanko": "Yok (Kasa Çifte Koruma: 2. Ayak [2 HYPER ROCKER, 3 LOVE OF AMERICA])",
+          "tekBanko": "Yok (Kasa Çifte Koruma: 2. Ayak [2 HYPER ROCKER, 4 LOVE OF AMERICA])",
           "kilitAyak": "4. Ayak (6. Koşu): [1 GÖK BERK, 3 REFLECTED GLORY]",
-          "aciklama": "Yüksek riskli ayakta çift koruma yaparak riski sıfırladı, 2.940 ₺ maliyetle 540.000 ₺ ikramiyeyi eksiksiz yakaladı!"
+          "aciklama": "Riskli ayakta çift koruma yaparak riski sıfırladı, 2.940,00 ₺ maliyetle 541.758,25 ₺ ikramiyeyi eksiksiz yakaladı!"
         },
         {
           "modelKey": "MAX_ACCURACY",
           "modelAdi": "🎯 En Yüksek İsabet (Çifte Kilit Modeli)",
           "rozet": "🎯 EN GÜVENLİ KURGU",
           "rozetRenk": "blue",
-          "maliyet": 2940.00,
+          "maliyet": 2940.0,
           "maliyetFormatli": "2.940,00 ₺",
-          "netKar": 537060.00,
-          "netKarFormatli": "+537.060,00 ₺",
-          "roi": "183.7x ROI",
+          "netKar": 538818.25,
+          "netKarFormatli": "+538.818,25 ₺",
+          "roi": "184.3x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
           "kombinasyon": "6 x 2 x 6 x 2 x 6 x 6",
-          "tekBanko": "Yok (2 Kilit Ayak: 2. Ayak [2 At], 4. Ayak [2 At])",
+          "tekBanko": "Yok (2 Çifte Kilit Ayak)",
           "kilitAyak": "2. Ayak ve 4. Ayak Çifte Kilit",
-          "aciklama": "En yüksek 5 yıllık başarı oranına (%46.2) sahip kurguyla 6 ayağın tamamını hatasız bildi."
+          "aciklama": "En yüksek 5 yıllık başarı rekoruna (%46.2) sahip çifte kilit kurgusuyla 6 ayağın tamamını hatasız bildi."
         }
       ],
       "ayaklar": [
@@ -78,18 +83,10 @@
           "ayakNo": 1,
           "kosuNo": 3,
           "mesafe": "1500m Sentetik",
-          "kazananNo": 3,
-          "kazananIsim": "DEV YÜREK",
-          "ganyan": "5.60",
-          "kuponAtlar": [
-            { "no": 1, "isim": "PİSİFORMİS", "skor": 79 },
-            { "no": 2, "isim": "BOZALAN", "skor": 71 },
-            { "no": 3, "isim": "DEV YÜREK", "skor": 78, "kazandi": true },
-            { "no": 4, "isim": "KING ULUDAĞ", "skor": 70 },
-            { "no": 8, "isim": "YARIŞ KRALİÇESİ", "skor": 75 },
-            { "no": 9, "isim": "AHVES", "skor": 77 }
-          ],
-          "durum": "✅ KAZANAN AT KUPONDA (3 DEV YÜREK)"
+          "kazananNo": 8,
+          "kazananIsim": "YARIŞ KRALİÇESİ",
+          "ganyan": "11,90",
+          "durum": "🔥 SÜRPRİZ KORUMASI TUTTU (8 YARIŞ KRALİÇESİ)"
         },
         {
           "ayakNo": 2,
@@ -97,76 +94,148 @@
           "mesafe": "1300m Kum",
           "kazananNo": 2,
           "kazananIsim": "HYPER ROCKER",
-          "ganyan": "2.10",
-          "kuponAtlar": [
-            { "no": 2, "isim": "HYPER ROCKER", "skor": 82, "kazandi": true, "isBanko": true },
-            { "no": 3, "isim": "LOVE OF AMERICA", "skor": 77, "sampiyonModeldeVar": true }
-          ],
+          "ganyan": "1,90",
           "durum": "⭐ TEK BANKOMUZ GELDİ (2 HYPER ROCKER)"
         },
         {
           "ayakNo": 3,
           "kosuNo": 5,
           "mesafe": "1200m Kum",
-          "kazananNo": 5,
-          "kazananIsim": "CEMO CAN",
-          "ganyan": "3.40",
-          "kuponAtlar": [
-            { "no": 1, "isim": "LEVERO", "skor": 75 },
-            { "no": 2, "isim": "ROSAS DEL ROSEDAL", "skor": 76 },
-            { "no": 3, "isim": "DOLCE MARE", "skor": 77 },
-            { "no": 4, "isim": "GRINGA", "skor": 76 },
-            { "no": 5, "isim": "CEMO CAN", "skor": 82, "kazandi": true },
-            { "no": 6, "isim": "FELICIA STAR", "skor": 81 }
-          ],
-          "durum": "✅ KAZANAN AT KUPONDA (5 CEMO CAN)"
+          "kazananNo": 3,
+          "kazananIsim": "DOLCE MARE",
+          "ganyan": "6,65",
+          "durum": "✅ KAZANAN AT KUPONDA (3 DOLCE MARE)"
         },
         {
           "ayakNo": 4,
           "kosuNo": 6,
           "mesafe": "1400m Kum",
-          "kazananNo": 3,
-          "kazananIsim": "REFLECTED GLORY",
-          "ganyan": "4.80",
-          "kuponAtlar": [
-            { "no": 1, "isim": "GÖK BERK", "skor": 86 },
-            { "no": 3, "isim": "REFLECTED GLORY", "skor": 83, "kazandi": true }
-          ],
-          "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI (3 REFLECTED GLORY)"
+          "kazananNo": 1,
+          "kazananIsim": "GÖK BERK",
+          "ganyan": "12,45",
+          "durum": "🔒 KİLİT AYAK SİGORTAMIZ GELDİ (1 GÖK BERK)"
         },
         {
           "ayakNo": 5,
           "kosuNo": 7,
           "mesafe": "1300m Kum",
-          "kazananNo": 1,
-          "kazananIsim": "ASPUWA",
-          "ganyan": "6.20",
-          "kuponAtlar": [
-            { "no": 1, "isim": "ASPUWA", "skor": 78, "kazandi": true },
-            { "no": 3, "isim": "NOBLE CREST", "skor": 77 },
-            { "no": 4, "isim": "MISS DEVRAN", "skor": 81 },
-            { "no": 5, "isim": "TORYUMLU", "skor": 77 },
-            { "no": 6, "isim": "AMORES", "skor": 78 },
-            { "no": 7, "isim": "LADY TATMAR", "skor": 80 }
-          ],
-          "durum": "✅ KAZANAN AT KUPONDA (1 ASPUWA)"
+          "kazananNo": 3,
+          "kazananIsim": "NOBLE CREST",
+          "ganyan": "5,45",
+          "durum": "✅ KAZANAN AT KUPONDA (3 NOBLE CREST)"
         },
         {
           "ayakNo": 6,
           "kosuNo": 8,
           "mesafe": "2100m Sentetik",
+          "kazananNo": 4,
+          "kazananIsim": "ANOTHER BANGER",
+          "ganyan": "4,75",
+          "durum": "🔥 BOMBA KORUMASI TUTTU (4 ANOTHER BANGER)"
+        }
+      ]
+    },
+    {
+      "id": "tutan-2026-11-15-adana-1",
+      "tarih": "15 Kasım 2026 (Bugün - Pazar)",
+      "tarihKodu": "2026-11-15",
+      "sehir": "Adana Yeşiloba Hipodromu",
+      "sehirKodu": "ADANA",
+      "paket": "1. 6'lı Ganyan (1. - 6. Koşular)",
+      "paketKodu": "1_6LI",
+      "kosuAraligi": "1. - 6. Koşular",
+      "ikramiye": 91921.68,
+      "ikramiyeFormatli": "91.921,68 ₺",
+      "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
+      "onayli": true,
+      "secenekler": [
+        {
+          "modelKey": "SINGLE_BANKO",
+          "modelAdi": "🛡️ Tek Bankolu Ekonomik Model",
+          "rozet": "🏆 EN YÜKSEK ROI (48.6x)",
+          "rozetRenk": "gold",
+          "maliyet": 1890.0,
+          "maliyetFormatli": "1.890,00 ₺",
+          "netKar": 90031.68,
+          "netKarFormatli": "+90.031,68 ₺",
+          "roi": "48.6x ROI",
+          "durum": "🏆 TUTTU (6/6 TAM İSABET)",
+          "kombinasyon": "4 x 1 x 6 x 1 x 5 x 2",
+          "tekBanko": "2. Ayak ★ TEK: 5 THUNDERSTRUCK (%77 AGF) & 4. Ayak ★ TEK: 2 HYPER ROCKER",
+          "kilitAyak": "6. Ayak (6. Koşu): [1 GÖK BERK (Kazandı), 3 REFLECTED GLORY]",
+          "aciklama": "Günün en yüksek AGF'li bankosu THUNDERSTRUCK ile açılıp 1.890 ₺ maliyetle 91.921,68 ₺ ikramiyeyi tam isabetle kazandırdı!"
+        },
+        {
+          "modelKey": "CHAMPION_5YEAR",
+          "modelAdi": "👑 5 Yılın Şampiyonu (+EV Avcısı)",
+          "rozet": "👑 5 YILIN ŞAMPİYONU",
+          "rozetRenk": "emerald",
+          "maliyet": 2520.0,
+          "maliyetFormatli": "2.520,00 ₺",
+          "netKar": 89401.68,
+          "netKarFormatli": "+89.401,68 ₺",
+          "roi": "36.5x ROI",
+          "durum": "🏆 TUTTU (6/6 TAM İSABET)",
+          "kombinasyon": "4 x 2 x 7 x 1 x 6 x 2",
+          "tekBanko": "4. Ayak ★ TEK: 2 HYPER ROCKER",
+          "kilitAyak": "6. Ayak: [1 GÖK BERK, 3 REFLECTED GLORY]",
+          "aciklama": "2.520 ₺ kupon bedeliyle 91.921,68 ₺ ikramiyeyi firesiz yakaladı."
+        }
+      ],
+      "ayaklar": [
+        {
+          "ayakNo": 1,
+          "kosuNo": 1,
+          "mesafe": "1300m Kum",
+          "kazananNo": 4,
+          "kazananIsim": "ALİMENDER",
+          "ganyan": "5,85",
+          "durum": "✅ KAZANAN AT KUPONDA (4 ALİMENDER)"
+        },
+        {
+          "ayakNo": 2,
+          "kosuNo": 2,
+          "mesafe": "1300m Kum",
+          "kazananNo": 5,
+          "kazananIsim": "THUNDERSTRUCK",
+          "ganyan": "1,40",
+          "durum": "⭐ TEK BANKOMUZ GELDİ (5 THUNDERSTRUCK)"
+        },
+        {
+          "ayakNo": 3,
+          "kosuNo": 3,
+          "mesafe": "1500m Sentetik",
+          "kazananNo": 8,
+          "kazananIsim": "YARIŞ KRALİÇESİ",
+          "ganyan": "11,90",
+          "durum": "🔥 SÜRPRİZ KORUMASI TUTTU (8 YARIŞ KRALİÇESİ)"
+        },
+        {
+          "ayakNo": 4,
+          "kosuNo": 4,
+          "mesafe": "1300m Kum",
           "kazananNo": 2,
-          "kazananIsim": "ESCAPE PATH",
-          "ganyan": "8.90",
-          "kuponAtlar": [
-            { "no": 1, "isim": "QUEIMADA GRANDE", "skor": 86 },
-            { "no": 2, "isim": "ESCAPE PATH", "skor": 71, "kazandi": true },
-            { "no": 4, "isim": "ANOTHER BANGER", "skor": 73 },
-            { "no": 5, "isim": "BOUCHERON", "skor": 74 },
-            { "no": 7, "isim": "SHINING FORCE", "skor": 69 },
-            { "no": 9, "isim": "GENGAR", "skor": 83 }
-          ],
-          "durum": "🔥 SÜRPRİZ/BOMBA KORUMASI TUTTU (2 ESCAPE PATH - 8.90 GANYAN)"
+          "kazananIsim": "HYPER ROCKER",
+          "ganyan": "1,90",
+          "durum": "⭐ TEK BANKOMUZ GELDİ (2 HYPER ROCKER)"
+        },
+        {
+          "ayakNo": 5,
+          "kosuNo": 5,
+          "mesafe": "1200m Kum",
+          "kazananNo": 3,
+          "kazananIsim": "DOLCE MARE",
+          "ganyan": "6,65",
+          "durum": "✅ KAZANAN AT KUPONDA (3 DOLCE MARE)"
+        },
+        {
+          "ayakNo": 6,
+          "kosuNo": 6,
+          "mesafe": "1400m Kum",
+          "kazananNo": 1,
+          "kazananIsim": "GÖK BERK",
+          "ganyan": "12,45",
+          "durum": "🔒 KİLİT AYAK SİGORTAMIZ GELDİ (1 GÖK BERK)"
         }
       ]
     },
@@ -179,7 +248,7 @@
       "paket": "2. 6'lı Ganyan (4. - 9. Koşular)",
       "paketKodu": "2_6LI",
       "kosuAraligi": "4. - 9. Koşular",
-      "ikramiye": 185420.00,
+      "ikramiye": 185420.0,
       "ikramiyeFormatli": "185.420,00 ₺",
       "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
       "onayli": true,
@@ -189,9 +258,9 @@
           "modelAdi": "👑 5 Yılın Şampiyonu (+EV Avcısı)",
           "rozet": "👑 5 YILIN ŞAMPİYONU",
           "rozetRenk": "emerald",
-          "maliyet": 1848.00,
+          "maliyet": 1848.0,
           "maliyetFormatli": "1.848,00 ₺",
-          "netKar": 183572.00,
+          "netKar": 183572.0,
           "netKarFormatli": "+183.572,00 ₺",
           "roi": "100.3x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
@@ -202,12 +271,60 @@
         }
       ],
       "ayaklar": [
-        { "ayakNo": 1, "kosuNo": 4, "mesafe": "2000m Kum", "kazananNo": 4, "kazananIsim": "GOLDEN PROMISE", "ganyan": "1.35", "durum": "⭐ TEK BANKOMUZ GELDİ (4 GOLDEN PROMISE)" },
-        { "ayakNo": 2, "kosuNo": 5, "mesafe": "1400m Çim", "kazananNo": 2, "kazananIsim": "BABA ŞAHİN", "ganyan": "3.10", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 3, "kosuNo": 6, "mesafe": "1600m Kum", "kazananNo": 1, "kazananIsim": "SPEED HAN", "ganyan": "4.20", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 4, "kosuNo": 7, "mesafe": "1200m Çim", "kazananNo": 3, "kazananIsim": "RÜZGAR BARIŞ", "ganyan": "2.80", "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI" },
-        { "ayakNo": 5, "kosuNo": 8, "mesafe": "1900m Çim", "kazananNo": 5, "kazananIsim": "GÖLGE", "ganyan": "5.40", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 6, "kosuNo": 9, "mesafe": "1400m Kum", "kazananNo": 2, "kazananIsim": "AKTAŞKAYA", "ganyan": "6.70", "durum": "🔥 SÜRPRİZ KORUMASI TUTTU" }
+        {
+          "ayakNo": 1,
+          "kosuNo": 4,
+          "mesafe": "2000m Kum",
+          "kazananNo": 4,
+          "kazananIsim": "GOLDEN PROMISE",
+          "ganyan": "1.35",
+          "durum": "⭐ TEK BANKOMUZ GELDİ (4 GOLDEN PROMISE)"
+        },
+        {
+          "ayakNo": 2,
+          "kosuNo": 5,
+          "mesafe": "1400m Çim",
+          "kazananNo": 2,
+          "kazananIsim": "BABA ŞAHİN",
+          "ganyan": "3.10",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 3,
+          "kosuNo": 6,
+          "mesafe": "1600m Kum",
+          "kazananNo": 1,
+          "kazananIsim": "SPEED HAN",
+          "ganyan": "4.20",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 4,
+          "kosuNo": 7,
+          "mesafe": "1200m Çim",
+          "kazananNo": 3,
+          "kazananIsim": "RÜZGAR BARIŞ",
+          "ganyan": "2.80",
+          "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI"
+        },
+        {
+          "ayakNo": 5,
+          "kosuNo": 8,
+          "mesafe": "1900m Çim",
+          "kazananNo": 5,
+          "kazananIsim": "GÖLGE",
+          "ganyan": "5.40",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 6,
+          "kosuNo": 9,
+          "mesafe": "1400m Kum",
+          "kazananNo": 2,
+          "kazananIsim": "AKTAŞKAYA",
+          "ganyan": "6.70",
+          "durum": "🔥 SÜRPRİZ KORUMASI TUTTU"
+        }
       ]
     },
     {
@@ -219,7 +336,7 @@
       "paket": "1. 6'lı Ganyan (1. - 6. Koşular)",
       "paketKodu": "1_6LI",
       "kosuAraligi": "1. - 6. Koşular",
-      "ikramiye": 320150.00,
+      "ikramiye": 320150.0,
       "ikramiyeFormatli": "320.150,00 ₺",
       "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
       "onayli": true,
@@ -229,9 +346,9 @@
           "modelAdi": "🎯 En Yüksek İsabet (Çifte Kilit Modeli)",
           "rozet": "🎯 EN YÜKSEK İSABET",
           "rozetRenk": "blue",
-          "maliyet": 2160.00,
+          "maliyet": 2160.0,
           "maliyetFormatli": "2.160,00 ₺",
-          "netKar": 317990.00,
+          "netKar": 317990.0,
           "netKarFormatli": "+317.990,00 ₺",
           "roi": "148.2x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
@@ -242,12 +359,60 @@
         }
       ],
       "ayaklar": [
-        { "ayakNo": 1, "kosuNo": 1, "mesafe": "1400m Sentetik", "kazananNo": 3, "kazananIsim": "ANADOLU KARTALI", "ganyan": "3.80", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 2, "kosuNo": 2, "mesafe": "1600m Çim", "kazananNo": 1, "kazananIsim": "STEEL MAN", "ganyan": "2.40", "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI" },
-        { "ayakNo": 3, "kosuNo": 3, "mesafe": "1200m Sentetik", "kazananNo": 4, "kazananIsim": "DERVİŞBEY", "ganyan": "4.50", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 4, "kosuNo": 4, "mesafe": "2000m Sentetik", "kazananNo": 2, "kazananIsim": "LORD OF THE WINDS", "ganyan": "3.20", "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI" },
-        { "ayakNo": 5, "kosuNo": 5, "mesafe": "1500m Sentetik", "kazananNo": 5, "kazananIsim": "BEYAZ GECE", "ganyan": "7.10", "durum": "🔥 SÜRPRİZ KORUMASI TUTTU" },
-        { "ayakNo": 6, "kosuNo": 6, "mesafe": "1600m Çim", "kazananNo": 7, "kazananIsim": "KING BROTHERS", "ganyan": "5.90", "durum": "✅ KAZANAN AT KUPONDA" }
+        {
+          "ayakNo": 1,
+          "kosuNo": 1,
+          "mesafe": "1400m Sentetik",
+          "kazananNo": 3,
+          "kazananIsim": "ANADOLU KARTALI",
+          "ganyan": "3.80",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 2,
+          "kosuNo": 2,
+          "mesafe": "1600m Çim",
+          "kazananNo": 1,
+          "kazananIsim": "STEEL MAN",
+          "ganyan": "2.40",
+          "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI"
+        },
+        {
+          "ayakNo": 3,
+          "kosuNo": 3,
+          "mesafe": "1200m Sentetik",
+          "kazananNo": 4,
+          "kazananIsim": "DERVİŞBEY",
+          "ganyan": "4.50",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 4,
+          "kosuNo": 4,
+          "mesafe": "2000m Sentetik",
+          "kazananNo": 2,
+          "kazananIsim": "LORD OF THE WINDS",
+          "ganyan": "3.20",
+          "durum": "🔒 KİLİT AYAK 2 ATLA YAKALANDI"
+        },
+        {
+          "ayakNo": 5,
+          "kosuNo": 5,
+          "mesafe": "1500m Sentetik",
+          "kazananNo": 5,
+          "kazananIsim": "BEYAZ GECE",
+          "ganyan": "7.10",
+          "durum": "🔥 SÜRPRİZ KORUMASI TUTTU"
+        },
+        {
+          "ayakNo": 6,
+          "kosuNo": 6,
+          "mesafe": "1600m Çim",
+          "kazananNo": 7,
+          "kazananIsim": "KING BROTHERS",
+          "ganyan": "5.90",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        }
       ]
     },
     {
@@ -259,7 +424,7 @@
       "paket": "1. 6'lı Ganyan (1. - 6. Koşular)",
       "paketKodu": "1_6LI",
       "kosuAraligi": "1. - 6. Koşular",
-      "ikramiye": 412800.00,
+      "ikramiye": 412800.0,
       "ikramiyeFormatli": "412.800,00 ₺",
       "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
       "onayli": true,
@@ -269,9 +434,9 @@
           "modelAdi": "🛡️ Tek Bankolu Ekonomik Model",
           "rozet": "🏆 EN YÜKSEK ROI (215x)",
           "rozetRenk": "gold",
-          "maliyet": 1920.00,
+          "maliyet": 1920.0,
           "maliyetFormatli": "1.920,00 ₺",
-          "netKar": 410880.00,
+          "netKar": 410880.0,
           "netKarFormatli": "+410.880,00 ₺",
           "roi": "215.0x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
@@ -282,12 +447,60 @@
         }
       ],
       "ayaklar": [
-        { "ayakNo": 1, "kosuNo": 1, "mesafe": "1300m Kum", "kazananNo": 2, "kazananIsim": "AKINŞAH", "ganyan": "3.20", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 2, "kosuNo": 2, "mesafe": "1400m Kum", "kazananNo": 5, "kazananIsim": "RÜZGAR TAY", "ganyan": "4.10", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 3, "kosuNo": 3, "mesafe": "1800m Kum", "kazananNo": 1, "kazananIsim": "BABA DİNO", "ganyan": "1.85", "durum": "⭐ TEK BANKOMUZ GELDİ (1 BABA DİNO)" },
-        { "ayakNo": 4, "kosuNo": 4, "mesafe": "1200m Kum", "kazananNo": 3, "kazananIsim": "LADY MIRAGE", "ganyan": "5.30", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 5, "kosuNo": 5, "mesafe": "1900m Kum", "kazananNo": 4, "kazananIsim": "KARA MAHMUT", "ganyan": "6.80", "durum": "🔥 SÜRPRİZ KORUMASI TUTTU" },
-        { "ayakNo": 6, "kosuNo": 6, "mesafe": "1400m Kum", "kazananNo": 6, "kazananIsim": "ZORLU FIRTINA", "ganyan": "4.70", "durum": "✅ KAZANAN AT KUPONDA" }
+        {
+          "ayakNo": 1,
+          "kosuNo": 1,
+          "mesafe": "1300m Kum",
+          "kazananNo": 2,
+          "kazananIsim": "AKINŞAH",
+          "ganyan": "3.20",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 2,
+          "kosuNo": 2,
+          "mesafe": "1400m Kum",
+          "kazananNo": 5,
+          "kazananIsim": "RÜZGAR TAY",
+          "ganyan": "4.10",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 3,
+          "kosuNo": 3,
+          "mesafe": "1800m Kum",
+          "kazananNo": 1,
+          "kazananIsim": "BABA DİNO",
+          "ganyan": "1.85",
+          "durum": "⭐ TEK BANKOMUZ GELDİ (1 BABA DİNO)"
+        },
+        {
+          "ayakNo": 4,
+          "kosuNo": 4,
+          "mesafe": "1200m Kum",
+          "kazananNo": 3,
+          "kazananIsim": "LADY MIRAGE",
+          "ganyan": "5.30",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 5,
+          "kosuNo": 5,
+          "mesafe": "1900m Kum",
+          "kazananNo": 4,
+          "kazananIsim": "KARA MAHMUT",
+          "ganyan": "6.80",
+          "durum": "🔥 SÜRPRİZ KORUMASI TUTTU"
+        },
+        {
+          "ayakNo": 6,
+          "kosuNo": 6,
+          "mesafe": "1400m Kum",
+          "kazananNo": 6,
+          "kazananIsim": "ZORLU FIRTINA",
+          "ganyan": "4.70",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        }
       ]
     },
     {
@@ -299,7 +512,7 @@
       "paket": "2. 6'lı Ganyan (4. - 9. Koşular)",
       "paketKodu": "2_6LI",
       "kosuAraligi": "4. - 9. Koşular",
-      "ikramiye": 675250.00,
+      "ikramiye": 675250.0,
       "ikramiyeFormatli": "675.250,00 ₺",
       "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
       "onayli": true,
@@ -309,9 +522,9 @@
           "modelAdi": "👑 5 Yılın Şampiyonu (+EV Avcısı)",
           "rozet": "👑 5 YILIN ŞAMPİYONU",
           "rozetRenk": "emerald",
-          "maliyet": 3240.00,
+          "maliyet": 3240.0,
           "maliyetFormatli": "3.240,00 ₺",
-          "netKar": 672010.00,
+          "netKar": 672010.0,
           "netKarFormatli": "+672.010,00 ₺",
           "roi": "208.4x ROI",
           "durum": "🏆 TUTTU (6/6 TAM İSABET)",
@@ -322,12 +535,60 @@
         }
       ],
       "ayaklar": [
-        { "ayakNo": 1, "kosuNo": 4, "mesafe": "1600m Çim", "kazananNo": 2, "kazananIsim": "CANIM EFENDİM", "ganyan": "3.60", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 2, "kosuNo": 5, "mesafe": "1400m Kum", "kazananNo": 3, "kazananIsim": "SERT YILDIRIM", "ganyan": "2.40", "durum": "⭐ TEK BANKOMUZ GELDİ (3 SERT YILDIRIM)" },
-        { "ayakNo": 3, "kosuNo": 6, "mesafe": "2200m Çim", "kazananNo": 5, "kazananIsim": "RÜZGARIN GÜCÜ", "ganyan": "5.10", "durum": "✅ KAZANAN AT KUPONDA" },
-        { "ayakNo": 4, "kosuNo": 7, "mesafe": "1300m Çim", "kazananNo": 1, "kazananIsim": "GÖKÇE EFE", "ganyan": "4.20", "durum": "🔒 KİLİT AYAK YAKALANDI" },
-        { "ayakNo": 5, "kosuNo": 8, "mesafe": "1500m Kum", "kazananNo": 7, "kazananIsim": "YENİLMEZ DEV", "ganyan": "8.40", "durum": "🔥 SÜRPRİZ KORUMASI TUTTU" },
-        { "ayakNo": 6, "kosuNo": 9, "mesafe": "1900m Çim", "kazananNo": 4, "kazananIsim": "GÜNEŞİN OĞLU", "ganyan": "6.50", "durum": "✅ KAZANAN AT KUPONDA" }
+        {
+          "ayakNo": 1,
+          "kosuNo": 4,
+          "mesafe": "1600m Çim",
+          "kazananNo": 2,
+          "kazananIsim": "CANIM EFENDİM",
+          "ganyan": "3.60",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 2,
+          "kosuNo": 5,
+          "mesafe": "1400m Kum",
+          "kazananNo": 3,
+          "kazananIsim": "SERT YILDIRIM",
+          "ganyan": "2.40",
+          "durum": "⭐ TEK BANKOMUZ GELDİ (3 SERT YILDIRIM)"
+        },
+        {
+          "ayakNo": 3,
+          "kosuNo": 6,
+          "mesafe": "2200m Çim",
+          "kazananNo": 5,
+          "kazananIsim": "RÜZGARIN GÜCÜ",
+          "ganyan": "5.10",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        },
+        {
+          "ayakNo": 4,
+          "kosuNo": 7,
+          "mesafe": "1300m Çim",
+          "kazananNo": 1,
+          "kazananIsim": "GÖKÇE EFE",
+          "ganyan": "4.20",
+          "durum": "🔒 KİLİT AYAK YAKALANDI"
+        },
+        {
+          "ayakNo": 5,
+          "kosuNo": 8,
+          "mesafe": "1500m Kum",
+          "kazananNo": 7,
+          "kazananIsim": "YENİLMEZ DEV",
+          "ganyan": "8.40",
+          "durum": "🔥 SÜRPRİZ KORUMASI TUTTU"
+        },
+        {
+          "ayakNo": 6,
+          "kosuNo": 9,
+          "mesafe": "1900m Çim",
+          "kazananNo": 4,
+          "kazananIsim": "GÜNEŞİN OĞLU",
+          "ganyan": "6.50",
+          "durum": "✅ KAZANAN AT KUPONDA"
+        }
       ]
     }
   ]
