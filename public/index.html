@@ -4659,48 +4659,68 @@ function optimizeCoupon() {
     };
   });
 
-  const sortedByCertainty = [...ratedLegs].sort((a, b) => b.diff - a.diff);
+  // Handikap koşularında handikap puan farkı yanıltıcı olduğundan kilit ayak olamaz;
+  // Güvenilirlik sıralaması: diff yüksekliği + grup kalitesi (KV / Açık / Şartlı > Handikap)
+  const sortedByCertainty = [...ratedLegs].sort((a, b) => {
+    const isHandikapA = (a.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
+    const isHandikapB = (b.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
+    if (isHandikapA && !isHandikapB) return 1;
+    if (!isHandikapA && isHandikapB) return -1;
+    return b.diff - a.diff;
+  });
 
   // 1. STRATEJİYE GÖRE ASİL BANKO VE KİLİT AYAK TESPİTİ (5 Yıllık TJK Resmî Makro Kalibrasyon)
   let bankoLeg = null;
+  let bankoLeg2 = null;
   let lockLegs = [];
   let strategyBadgeText = "";
 
   // Doğrulanmış Asil Banko Kriteri:
-  // Puan farkı >= 6, Yüksek Risk taşımayan, favori gücü >= 80 P, tecrübeli (>3 yarış) ve pist adaptasyon deltası >= 0
+  // Puan farkı >= 4, lider güç puanı >= 80 P, pist adaptasyon deltası >= 0 ve Handikap olmayan net koşular
   const qualifiedBankoCandidates = sortedByCertainty.filter(l => {
     const topH = l.horses[0];
     const isPistMismatch = (topH?.pist_aptitude_analizi?.delta < 0);
-    const isYoung = topH?.isYoungHorse;
-    return l.diff >= 6 && l.riskLevel !== 'HIGH_RISK' && (topH?.royalScore >= 80) && !isPistMismatch && !isYoung;
+    const isHandikap = (l.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
+    return l.diff >= 4 && (topH?.royalScore >= 80) && !isPistMismatch && !isHandikap;
   });
 
   if (currentPick6Strategy === 'CHAMPION_5YEAR' || currentPick6Strategy === 'SMART_ADAPTIVE') {
     strategyBadgeText = "👑 5 YILLIK MAKRO ŞAMPİYON: İKRAMİYE & +EV AVCISI (8.4x ROI · EN ÇOK KAZANDIRAN)";
     if (qualifiedBankoCandidates.length > 0) {
       bankoLeg = qualifiedBankoCandidates[0];
-      const remainingNet = sortedByCertainty.filter(l => l !== bankoLeg);
+      const remainingNet = sortedByCertainty.filter(l => l !== bankoLeg && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
       if (remainingNet.length > 0) lockLegs = [remainingNet[0]];
     } else {
       // Nitelikli banko yoksa en net 2 ayak kilitlenir (Çifte Sigorta - 5 yılda %46.2 ile en yüksek başarı)
-      lockLegs = [sortedByCertainty[0], sortedByCertainty[1]];
+      const nonHandikaps = sortedByCertainty.filter(l => !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      lockLegs = nonHandikaps.length >= 2 ? [nonHandikaps[0], nonHandikaps[1]] : [sortedByCertainty[0], sortedByCertainty[1]];
     }
   } else if (currentPick6Strategy === 'MAX_ACCURACY') {
     strategyBadgeText = "🎯 EN YÜKSEK İSABET: ÇİFTE KİLİT KASA (%46.2 BAŞARI · EN ÇOK YAKALAYAN)";
-    lockLegs = [sortedByCertainty[0], sortedByCertainty[1]];
+    const nonHandikaps = sortedByCertainty.filter(l => !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+    lockLegs = nonHandikaps.length >= 2 ? [nonHandikaps[0], nonHandikaps[1]] : [sortedByCertainty[0], sortedByCertainty[1]];
     bankoLeg = null;
   } else if (currentPick6Strategy === 'SINGLE_BANKO') {
     strategyBadgeText = "🛡️ TEK BANKOLU EKONOMİK KASA (DÜŞÜK BÜTÇEYLE YÜKSEK VERİM)";
-    bankoLeg = qualifiedBankoCandidates.length > 0 ? qualifiedBankoCandidates[0] : sortedByCertainty[0];
+    if (qualifiedBankoCandidates.length >= 2 && targetBudget <= 600) {
+      bankoLeg = qualifiedBankoCandidates[0];
+      bankoLeg2 = qualifiedBankoCandidates[1];
+      const rem = sortedByCertainty.filter(l => l !== bankoLeg && l !== bankoLeg2 && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      if (rem.length > 0) lockLegs = [rem[0]];
+    } else {
+      bankoLeg = qualifiedBankoCandidates.length > 0 ? qualifiedBankoCandidates[0] : sortedByCertainty[0];
+      const rem = sortedByCertainty.filter(l => l !== bankoLeg && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      if (rem.length > 0) lockLegs = [rem[0]];
+    }
   } else {
     // MULTI_COVER
     strategyBadgeText = "💎 MEGA İKRAMİYE & TEVZİAT AVCISI (+EV SÜRPRİZ VE BOMBA KORUMASI)";
     bankoLeg = null;
   }
 
-  // 2. Başlangıç atları (Banko varsa 1 at, kilit ayaklarda 2 at, diğerlerinde 2 at)
+  // 2. Başlangıç atları (Banko varsa 1 at, diğerlerinde 2 at)
   const picks = ratedLegs.map(l => {
-    if (l === bankoLeg) {
+    if (l === bankoLeg || l === bankoLeg2) {
       return [l.horses[0]];
     }
     return [l.horses[0], l.horses[1]];
@@ -4759,41 +4779,38 @@ function optimizeCoupon() {
     }
   }
 
-  // 3. BÜTÇEYİ KOŞU RİSKİNE VE +EV DEĞERİNE GÖRE AKILLI DAĞIT
-  // Son 5 Yıllık Veri Kanıtı: Maiden ve kalabalık Handikap ayaklarına sadece favori değil,
-  // AGF'si düşük (%5 - %14) ama model gücü / sprint hızı yüksek (+EV) safkanları eklemek büyük ikramiyeyi getirir!
+  // 3. BÜTÇEYİ DENGELİ ROUND-ROBIN ŞAMPİYON MODELLE DAĞIT
+  // En az ata sahip olan açık ayakları kademeli olarak büyütür. Böylece hiçbir ayak aç bırakılmaz,
+  // tüm ayaklar 6'şar safkana dengeli ulaşarak sürpriz ve bomba korumasını firesiz sağlar!
   let added = true;
   while (added && calcCost() <= targetBudget) {
     added = false;
-    const priorityLegs = [...ratedLegs]
-      .filter((l, i) => l !== bankoLeg && picks[i].length < Math.min(7, l.horses.length))
+    const candidateLegs = [...ratedLegs]
+      .filter((l, i) => l !== bankoLeg && l !== bankoLeg2 && picks[i].length < Math.min(7, l.horses.length))
       .sort((a, b) => {
+        const countA = picks[ratedLegs.indexOf(a)].length;
+        const countB = picks[ratedLegs.indexOf(b)].length;
         const isLockA = lockLegs.includes(a);
         const isLockB = lockLegs.includes(b);
-        if (isLockA && !isLockB) return 1;
-        if (!isLockA && isLockB) return -1;
+
+        const nonLockCounts = picks.filter((p, idx) => ratedLegs[idx] !== bankoLeg && ratedLegs[idx] !== bankoLeg2 && !lockLegs.includes(ratedLegs[idx])).map(p => p.length);
+        const minOtherCount = nonLockCounts.length > 0 ? Math.min(...nonLockCounts) : 6;
+        if (isLockA && countA >= 2 && minOtherCount < 6) return 1;
+        if (isLockB && countB >= 2 && minOtherCount < 6) return -1;
+
+        if (countA !== countB) return countA - countB;
+
         const riskWeight = { 'HIGH_RISK': 3, 'NORMAL': 2, 'LOW_RISK': 1 };
         return (riskWeight[b.riskLevel] - riskWeight[a.riskLevel]) || (a.diff - b.diff);
       });
 
-    for (const leg of priorityLegs) {
+    for (const leg of candidateLegs) {
       const legIdx = ratedLegs.indexOf(leg);
       const currentPickedNos = new Set(picks[legIdx].map(p => p.no));
       const unpicked = leg.horses.filter(h => !currentPickedNos.has(h.no));
       if (unpicked.length === 0) continue;
 
       let candidateHorse = unpicked[0];
-      // Şampiyon model kaotik ayaklarda +EV Cazip Sürpriz atları öne alır!
-      if ((currentPick6Strategy === 'CHAMPION_5YEAR' || currentPick6Strategy === 'SMART_ADAPTIVE' || currentPick6Strategy === 'MULTI_COVER') && leg.riskLevel === 'HIGH_RISK') {
-        const rankedByValue = [...unpicked].sort((a, b) => {
-          const agfA = parseFloat(a.agf_orani) || 10;
-          const agfB = parseFloat(b.agf_orani) || 10;
-          const bonusA = (agfA <= 14 && (a.royalScore >= 66 || (a.son_galop && a.son_galop.son400hiz >= 53.5))) ? 16 : 0;
-          const bonusB = (agfB <= 14 && (b.royalScore >= 66 || (b.son_galop && b.son_galop.son400hiz >= 53.5))) ? 16 : 0;
-          return (b.royalScore + bonusA) - (a.royalScore + bonusB);
-        });
-        candidateHorse = rankedByValue[0];
-      }
 
       picks[legIdx].push(candidateHorse);
       let partnerAdded = null;
