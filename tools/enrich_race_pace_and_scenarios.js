@@ -10,7 +10,7 @@ console.log('🏇 Safkanların Koşu Stilleri ve Yarış Senaryoları Zenginleş
 const styleRules = [
   // Kaçak / Lider adayları (Aygır veya karakter analizi)
   {
-    regex: /KAIZBERT|TURBO|AŞIKBEY|ÖZHABER|LION HEART|LUXOR|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN/i,
+    regex: /KAIZBERT|TURBO|AŞIKBEY|LION HEART|LUXOR|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
     stil: 'Kaçak / Lider',
     ikon: '⚡',
     renk: '#ef4444',
@@ -20,7 +20,7 @@ const styleRules = [
   },
   // Presçi adayları (Ön grup takipçisi)
   {
-    regex: /SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|DON ÇİÇİ|RECHARGE|HAYRETBİŞEY|TOR GOLD|REFLECTED/i,
+    regex: /ÜSTÜNSOY|SERDÜMEN|GÜMBÜRGÜMBÜR|BALKIBEY|DOSTBAŞAR|DON ÇİÇİ|RECHARGE|HAYRETBİŞEY|TOR GOLD|REFLECTED|EFE KAPTAN|AĞILMUS|ALKATRAZ|ALATTİN|ÇELİK ABİ|CAYMAZBEY/i,
     stil: 'Presçi',
     ikon: '🏹',
     renk: '#10b981',
@@ -30,7 +30,7 @@ const styleRules = [
   },
   // Sprinter / Bekleme adayları (Son düzlük hücumcusu)
   {
-    regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|ÜSTÜNSOY|UZBOYLU|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN/i,
+    regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|UZBOYLU|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
     stil: 'Düzlük Sprinteri',
     ikon: '🚀',
     renk: '#a855f7',

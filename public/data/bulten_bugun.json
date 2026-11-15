@@ -64,7 +64,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Kaçak / Lider",
+              "kosu_stili": "Presçi",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "10.45",
@@ -486,11 +486,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "⚡",
-              "stil_renk": "#ef4444",
-              "stil_bg": "rgba(239, 68, 68, 0.15)",
-              "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 2,
@@ -4721,9 +4721,9 @@
               },
               "stil_ikon": "🏹",
               "stil_renk": "#10b981",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             }
           ],
           "sehir": "İstanbul",
@@ -11879,9 +11879,9 @@
               },
               "stil_ikon": "🏹",
               "stil_renk": "#10b981",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 3,
@@ -12275,9 +12275,9 @@
               },
               "stil_ikon": "🏹",
               "stil_renk": "#10b981",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar."
+              "taktik_yorum": "Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar."
             },
             {
               "no": 4,
@@ -13230,7 +13230,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 6,
@@ -14501,7 +14501,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 9,
@@ -16099,7 +16099,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder."
+              "taktik_yorum": "Gruptan kopmadan geride pusuya yatar, son 400-300 metrede çok sert düzlük sprinti atar."
             },
             {
               "no": 13,
@@ -93026,7 +93026,7 @@
               "stil_renk": "#ef4444",
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
-              "taktik_yorum": "Startla birlikte liderliği alır, son viraja kadar yüksek tempoda kaçmayı sever."
+              "taktik_yorum": "Yarışta kaçak azlığından faydalanıp startla kafaya çıkacaktır."
             },
             {
               "no": 2,
