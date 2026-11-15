@@ -1809,7 +1809,7 @@ async function syncTjkLiveNow() {
       renderHipodroms();
       if (typeof optimizeCoupon === 'function') optimizeCoupon();
 
-      if (txt) txt.innerText = `🟢 TJK Resmî Canlı Senkron (${lastSyncTime})`;
+      if (txt) txt.innerText = `🟢 TJK Resmî Canlı Senkron (${lastSyncTime}) · 5 Dk Periyot`;
       if (dot) dot.style.background = "#10b981";
       showToast(`✓ TJK Canlı Verileri Senkronize Edildi (${lastSyncTime})`);
     }
@@ -1819,10 +1819,10 @@ async function syncTjkLiveNow() {
   }
 }
 
-// Otomatik Periyodik Senkronizasyon (Her 60 saniyede bir sessiz arka plan kontrolü)
+// Otomatik Periyodik Senkronizasyon (Her 5 dakikada bir otomatik TJK canlı kontrolü)
 setInterval(() => {
   syncTjkLiveNow();
-}, 60000);
+}, 300000);
 
 function showToast(msg) {
   let toast = document.getElementById('royal-toast');
@@ -2017,7 +2017,7 @@ function renderTekAtRadarContent() {
 window.onload = () => {
   initPlatform();
   const txt = document.getElementById('sync-text');
-  if (txt) txt.innerText = `🟢 TJK Resmî Canlı Senkron (${lastSyncTime})`;
+  if (txt) txt.innerText = `🟢 TJK Resmî Canlı Senkron (${lastSyncTime}) · 5 Dk Periyot`;
 };
 </script>
 
