@@ -1274,16 +1274,14 @@ function calculatePowerIndex(horse, raceHorses = []) {
   };
 }
 
-function renderRaceDetails() {
-  const hip = bulten.hipodromlar[currentHipIdx];
-  const kosu = hip.kosular[currentKosuIdx];
-  const rateInfo = getTjkCityRate(hip.sehir || hip.isim);
-
-  // 1. Her safkanın taktik stilini ve koşu karakterini garantiye al
+// ══════════════════════════════════════════════════════════════════════════════════
+// TEK MERKEZİ HESAPLAMA MOTORU: TEMPO & TAKTİK SENARYOSU ENTEGRELİ NİHAİ PUANLAR
+// (Bülten Detayları, 6'lı Ganyan Robotu ve Tek At Radarı bu fonksiyonu kullanır!)
+// ══════════════════════════════════════════════════════════════════════════════════
+function getHorsesWithFinalTacticalScores(kosu) {
+  if (!kosu || !kosu.atlar) return [];
   enrichRaceRunningStylesAndPace(kosu);
-
-  // 2. Ham güç puanı ve tempo senaryosu etki puanını (Delta) hesapla
-  const horsesWithMetrics = (kosu.atlar || []).map(h => {
+  return (kosu.atlar || []).map(h => {
     const power = calculatePowerIndex(h, kosu.atlar);
     const paceAdj = calculatePaceAdjustment(h, kosu);
     const baseScore = power.royalScore;
@@ -1296,9 +1294,18 @@ function renderRaceDetails() {
       paceLabel: paceAdj.label,
       paceColor: paceAdj.color,
       paceType: paceAdj.paceType,
-      royalScore: finalScore // Nihai taktiksel sıralama ve Tek At kararı buna göre verilir!
+      royalScore: finalScore // Nihai taktiksel skor (Tempo etkisi dahil)
     };
   }).sort((a, b) => b.royalScore - a.royalScore);
+}
+
+function renderRaceDetails() {
+  const hip = bulten.hipodromlar[currentHipIdx];
+  const kosu = hip.kosular[currentKosuIdx];
+  const rateInfo = getTjkCityRate(hip.sehir || hip.isim);
+
+  // 1. Merkezi taktiksel motordan tempo ayarlı safkan listesini al
+  const horsesWithMetrics = getHorsesWithFinalTacticalScores(kosu);
 
   const topHorse = horsesWithMetrics[0];
   const secondHorse = horsesWithMetrics[1];
@@ -1884,13 +1891,10 @@ function optimizeCoupon() {
   const rateInfo = getTjkCityRate(hip.sehir || hip.isim);
   const cityUnitCost = rateInfo.birimFiyat;
 
-  // Ayaklardaki atları puanla ve netlik farkını bul
+  // Ayaklardaki atları tempo senaryolu merkezi motorla puanla ve netlik farkını bul
   const ratedLegs = kosular.map((k, idx) => {
     const realRaceNum = startRaceOffset + idx;
-    const scored = (k.atlar || []).map(h => ({
-      ...h,
-      ...calculatePowerIndex(h, k.atlar)
-    })).sort((a, b) => b.royalScore - a.royalScore);
+    const scored = getHorsesWithFinalTacticalScores(k);
 
     const topDiff = scored.length > 1 ? (scored[0].royalScore - scored[1].royalScore) : 25;
     return {
@@ -1958,7 +1962,7 @@ function optimizeCoupon() {
     <div class="custom-coupon-card">
       <div class="coupon-head-flex">
         <div>
-          <div class="coupon-tag-badge">👑 ${(hip.isim || hip.sehir).toUpperCase()} — ${packageLabel}</div>
+          <div class="coupon-tag-badge">👑 ${(hip.isim || hip.sehir).toUpperCase()} — ${packageLabel} <span style="color:#34d399; margin-left:6px; font-size:0.75rem;">(TEMPO & TAKTİK AYARLI)</span></div>
           <div style="font-size:0.75rem; color:var(--text-gold); margin-top:4px;">
             Resmî Şehir Birim Fiyatı: <strong>${cityUnitCost.toFixed(2)} ₺</strong> | Asgari Kupon: ${rateInfo.minKupon.toFixed(2)} ₺
           </div>
@@ -1983,13 +1987,19 @@ function optimizeCoupon() {
                 ${isSingle ? '★ ASİL BANKO (TEK)' : 'KORUMALI AYAK'} · ${leg.kosu.saat ? '⏱️ ' + leg.kosu.saat + ' · ' : ''}${leg.kosu.pist || ''} ${leg.kosu.mesafe || ''}m
               </div>
               <div class="picked-horses-list">
-                ${sortedPickList.map(h => `
-                  <div class="p-horse">
+                ${sortedPickList.map(h => {
+                  const deltaStr = (h.paceDelta > 0) ? `+${h.paceDelta}` : (h.paceDelta !== 0 ? `${h.paceDelta}` : '0');
+                  const deltaColor = (h.paceDelta > 0) ? '#10b981' : ((h.paceDelta < 0) ? '#ef4444' : '#94a3b8');
+                  return `
+                  <div class="p-horse" title="${h.paceLabel || ''}">
                     <span class="p-no">${h.no}</span>
-                    <span class="p-name">${h.isim}</span>
-                    <span class="p-score">${h.royalScore} P</span>
+                    <span class="p-name">${h.isim} <span style="font-size:0.75rem; opacity:0.85;">${h.stil_ikon || ''}</span></span>
+                    <span class="p-score" style="display:flex; align-items:center; gap:4px;">
+                      <strong>${h.royalScore} P</strong>
+                      <span style="font-size:0.65rem; padding:1px 4px; border-radius:3px; background:rgba(0,0,0,0.4); color:${deltaColor}; border:1px solid ${deltaColor}44;">${deltaStr}</span>
+                    </span>
                   </div>
-                `).join('')}
+                `;}).join('')}
               </div>
             </div>
           `;
@@ -2419,10 +2429,7 @@ function renderTekAtRadarContent() {
   bulten.hipodromlar.forEach((hip, hIdx) => {
     if (currentRadarScope === 'current' && hIdx !== currentHipIdx) return;
     (hip.kosular || []).forEach((kosu, kIdx) => {
-      const horses = (kosu.atlar || []).map(h => ({
-        ...h,
-        ...calculatePowerIndex(h, kosu.atlar)
-      })).sort((a, b) => b.royalScore - a.royalScore);
+      const horses = getHorsesWithFinalTacticalScores(kosu);
 
       const top = horses[0];
       const second = horses[1];
@@ -2504,16 +2511,16 @@ function renderTekAtRadarContent() {
                   ${item.topHorse ? item.topHorse.no : '?'}
                 </span>
                 <span style="font-weight:700; color:#fff; font-size:1.05rem; font-family:'Playfair Display', serif;">
-                  ${item.topHorse ? item.topHorse.isim : '-'}
+                  ${item.topHorse ? item.topHorse.isim : '-'} <span style="font-size:0.85rem;">${item.topHorse?.stil_ikon || ''}</span>
                 </span>
                 <span style="color:var(--text-gold); font-weight:700; font-size:0.9rem;">
-                  (${item.topHorse ? item.topHorse.royalScore : ''} Puan)
+                  (${item.topHorse ? item.topHorse.royalScore : ''} Puan ${item.topHorse && item.topHorse.paceDelta !== undefined ? `<span style="font-size:0.75rem; color:${item.topHorse.paceColor || '#34d399'};">[${item.topHorse.paceDelta >= 0 ? '+' + item.topHorse.paceDelta : item.topHorse.paceDelta}]</span>` : ''})
                 </span>
               </div>
 
               ${item.secondHorse ? `
                 <div style="font-size:0.78rem; color:var(--text-muted);">
-                  2. Rakip: <b style="color:#e2e8f0;">${item.secondHorse.no} - ${item.secondHorse.isim}</b> (${item.secondHorse.royalScore} P)
+                  2. Rakip: <b style="color:#e2e8f0;">${item.secondHorse.no} - ${item.secondHorse.isim} ${item.secondHorse.stil_ikon || ''}</b> (${item.secondHorse.royalScore} P)
                   <span style="color:${badgeTextColor}; font-weight:700; margin-left:4px;">[Fark: +${item.diff} P]</span>
                 </div>
               ` : ''}
