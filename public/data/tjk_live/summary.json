@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T19:18:00.316788",
+  "generated_at": "2026-11-15T19:45:19.999979",
   "total_horses": 200,
   "top10": [
     {
@@ -15,7 +15,7 @@
     {
       "id": "H0124",
       "name": "Horse_124",
-      "score": 85.7
+      "score": 85.6
     },
     {
       "id": "H0154",
@@ -40,7 +40,7 @@
     {
       "id": "H0092",
       "name": "Horse_92",
-      "score": 85.3
+      "score": 85.2
     },
     {
       "id": "H0173",
@@ -50,7 +50,7 @@
     {
       "id": "H0013",
       "name": "Horse_13",
-      "score": 85.1
+      "score": 85.0
     }
   ],
   "weather_cities": [
