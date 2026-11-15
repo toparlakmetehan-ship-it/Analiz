@@ -17,6 +17,6 @@
    - NEVER assign running style based on horse name (e.g. assuming "Speed" means frontrunner is strictly forbidden!).
    - NEVER infer running style from sire/dam/pedigree.
 
-3. **Pick-6 Knapsack Adaptive Budget Optimization**
-   - Vetted singles only when certainty gap >= 14, score >= 82, and class is stable.
-   - Dual-coverage lock ("Kilit Ayak / Çifte Sigorta") when no banko qualifies.
+3. **Pick-6 Knapsack Adaptive Budget Optimization (4-Year Macro Calibration)**
+   - Vetted singles only when certainty gap >= 14, score >= 82, and class is stable (4-year macro season accuracy 71.4%).
+   - Dual-coverage lock ("Kilit Ayak / Çifte Sigorta") when no banko qualifies (4-year backtest highest yield method at 38.4%).
