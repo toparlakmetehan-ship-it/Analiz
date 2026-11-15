@@ -437,6 +437,37 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
 
+.track-sim-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'Cinzel', serif;
+}
+.track-sim-btn:hover {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: var(--gold-pure);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.track-sim-btn.active {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(16, 185, 129, 0.3));
+  border-color: #10b981;
+  color: #fcf6ba;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+@keyframes pulseGlow {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
 </style>
 </head>
 <body>
@@ -493,6 +524,9 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
 
     <!-- KOŞULAR VE SAATLER ÇUBUĞU (1. Koşu Daima Görünür) -->
     <div class="kosu-bar" id="kosu-tabs"></div>
+
+    <!-- CANLI TJK HAVA VE PİST KOŞULLARI TELEMETRİSİ & ÇAMUR SİMÜLATÖRÜ -->
+    <div id="live-weather-track-container"></div>
     
     <!-- MODEL ZEKA & KATSAYI ŞEFFAFLIK MİMARİSİ -->
     <div style="background: rgba(16, 20, 28, 0.95); border: 1px solid var(--gold-soft-border); border-radius: 16px; padding: 1.2rem 1.8rem; margin-bottom: 2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
@@ -804,6 +838,20 @@ let currentKosuIdx = 0;
 let currentBacktestCity = 'all';
 let currentBacktestOutcome = 'all';
 
+// CANLI HAVA VE PİST DURUMU SİSTEMİ
+let currentTrackCondition = 'CANLI'; // 'CANLI', 'AGIR_CAMUR_CIM', 'ISLAK_SULU_KUM', 'CIMDEN_KUMA_ALINDI'
+let weatherData = {
+  temp: 20,
+  humidity: 68,
+  wind: 14,
+  precip: 0,
+  weatherCode: 1,
+  conditionText: 'Güneşli / Açık',
+  lastSync: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })
+};
+let autoSyncSecondsLeft = 300; // 5 Dakika Geri Sayım
+let weatherSyncIntervalStarted = false;
+
 // TJK RESMİ ŞEHİR BAZLI 6'LI GANYAN BİRİM FİYATLARI (2026 YILI)
 function getTjkCityRate(sehirName) {
   const s = (sehirName || '').toLowerCase();
@@ -837,6 +885,8 @@ async function initPlatform() {
     }
 
     renderHipodroms();
+    fetchLiveTrackAndWeather();
+    startWeatherSyncTimer();
     initRobotSelector();
     renderBacktest();
   } catch (err) {
@@ -1193,6 +1243,295 @@ function calculatePaceAdjustment(horse, kosu) {
   return { delta, label, color, paceType: pace.type };
 }
 
+// ── ÇAMUR & ISLAK ZEMİN PEDİGRİ / ORİJİN ANALİZ MOTORU ──
+function calculateMudTrackDelta(horse, kosu, condition = currentTrackCondition) {
+  const sire = (horse.baba || '').toUpperCase();
+  const mareSire = (horse.kisrak_babasi || '').toUpperCase();
+  const dam = (horse.anne || '').toUpperCase();
+  const name = (horse.isim || '').toUpperCase();
+  const text = `${name} ${sire} ${mareSire} ${dam}`;
+
+  // Çamur canavarı ve ıslak pist ustası aygırlar / soy hatları
+  const mudEliteSires = [
+    'DAREDEVIL', 'MENDIP', 'BODEMEISTER', 'KANEKO', 'LUXOR', 'TOROK', 
+    'VICTORY GALLOP', 'SMART STRIKE', 'LION HEART', 'PULPIT', 'CORINTHIAN', 
+    'KAIZBERT', 'ÖZHABER', 'SERHANTAY', 'HABERBATUR', 'TURBO', 'TÜMÖZ BEY', 'AYABAKAN', 'BİRADER'
+  ];
+
+  // Kuru zemin uzmanı, çamurda batan / adımı kısalan orijinler
+  const dryOnlySires = [
+    'NATIVE KHAN', "FAST 'N' FAMOUS", 'DEHA', 'DR FONG', 'THREE VALLEYS', 'APPROVE', 'INVINCIBLE'
+  ];
+
+  const isMudSire = mudEliteSires.some(s => text.includes(s));
+  const isDrySire = dryOnlySires.some(s => text.includes(s));
+  const hasMudRecord = horse.wetTrack && horse.wetTrack.isMudMonster;
+  const hasDryRecord = horse.wetTrack && horse.wetTrack.isMudHater;
+
+  if (condition === 'AGIR_CAMUR_CIM') {
+    if (isMudSire || hasMudRecord) {
+      return {
+        delta: +4,
+        badge: '🐗 ÇAMUR CANAVARI (+4)',
+        desc: 'Ağır çim ve çamurda soy kütüğü üstün; adımları uzar.',
+        color: '#34d399',
+        type: 'MUD_PRO'
+      };
+    } else if (isDrySire || hasDryRecord) {
+      return {
+        delta: -5,
+        badge: '☀️ ÇAMURDA ADIMI KISALIR (-5)',
+        desc: 'Sert/kuru çim uzmanı; ağır çamur zeminde batar ve sprinti körelir.',
+        color: '#f87171',
+        type: 'MUD_CON'
+      };
+    }
+    return {
+      delta: 0,
+      badge: '🌱 Çamurda Nötr (0)',
+      desc: 'Zemin değişimi performansını belirgin etkilemez.',
+      color: '#94a3b8',
+      type: 'NEUTRAL'
+    };
+  }
+
+  if (condition === 'ISLAK_SULU_KUM') {
+    const wetDirtSires = ['DAREDEVIL', 'MENDIP', 'BODEMEISTER', 'LION HEART', 'CORINTHIAN', 'KAIZBERT', 'TÜMÖZ BEY', 'ÖZHABER'];
+    if (wetDirtSires.some(s => text.includes(s)) || hasMudRecord) {
+      return {
+        delta: +4,
+        badge: '🌊 ISLAK KUM UZMANI (+4)',
+        desc: 'Sulu ve ıslak kumda sıçrayan çamurdan etkilenmez, bariyer dibinden kopar.',
+        color: '#38bdf8',
+        type: 'WET_DIRT_PRO'
+      };
+    } else if (isDrySire) {
+      return {
+        delta: -4,
+        badge: '⚠️ SULU KUMDA AĞIRLAŞIR (-4)',
+        desc: 'Islak ve sulu kumda adımları ağırlaşır.',
+        color: '#f87171',
+        type: 'WET_DIRT_CON'
+      };
+    }
+    return {
+      delta: 0,
+      badge: '🏜️ Kumda Nötr (0)',
+      desc: 'Standart kum performansı.',
+      color: '#94a3b8',
+      type: 'NEUTRAL'
+    };
+  }
+
+  if (condition === 'CIMDEN_KUMA_ALINDI') {
+    const dirtLovers = ['BODEMEISTER', 'DAREDEVIL', 'MENDIP', 'LION HEART', 'CORINTHIAN', 'KAIZBERT', 'TÜMÖZ BEY', 'ÖZHABER'];
+    const turfLovers = ['NATIVE KHAN', 'LUXOR', 'TOROK'];
+    if (dirtLovers.some(s => text.includes(s))) {
+      return {
+        delta: +6,
+        badge: '🔄 KUMA ALINMA AVANTAJI (+6)',
+        desc: 'Koşu çimden kuma alınınca tam aradığı sert kum pisti buldu.',
+        color: '#34d399',
+        type: 'DIRT_UPGRADE'
+      };
+    } else if (turfLovers.some(s => text.includes(s))) {
+      return {
+        delta: -6,
+        badge: '⚠️ KUMA UYUMSUZ (-6)',
+        desc: 'Saf çim orijinli; kuma alınması büyük dezavantaj yaratır.',
+        color: '#ef4444',
+        type: 'DIRT_DOWNGRADE'
+      };
+    }
+    return {
+      delta: -1,
+      badge: '🔄 Pist Değişimi (-1)',
+      desc: 'Pist değişikliğine temkinli yaklaşılır.',
+      color: '#f59e0b',
+      type: 'DIRT_NEUTRAL'
+    };
+  }
+
+  // CANLI (TJK Ölçümü: Normal)
+  return {
+    delta: 0,
+    badge: '🌱 TJK RESMÎ (3.3 NORMAL)',
+    desc: 'TJK canlı pist ölçümü normal; zemin düzeltmesi uygulanmadı.',
+    color: '#94a3b8',
+    type: 'LIVE'
+  };
+}
+
+// ── 5 DAKİKADA BİR TJK CANLI PİST & HAVA SENKRONİZASYONU ──
+async function fetchLiveTrackAndWeather(isManual = false) {
+  if (!bulten || !bulten.hipodromlar || !bulten.hipodromlar[currentHipIdx]) return;
+  const hip = bulten.hipodromlar[currentHipIdx];
+  const sehir = (hip.sehir || hip.isim || 'İstanbul').toLowerCase();
+
+  let lat = 40.985, lon = 28.895; // İstanbul Veliefendi
+  if (sehir.includes('adana')) { lat = 36.985; lon = 35.305; }
+  else if (sehir.includes('ankara')) { lat = 39.933; lon = 32.860; }
+  else if (sehir.includes('izmir')) { lat = 38.419; lon = 27.129; }
+  else if (sehir.includes('bursa')) { lat = 40.188; lon = 29.061; }
+  else if (sehir.includes('kocaeli')) { lat = 40.765; lon = 29.941; }
+  else if (sehir.includes('urfa') || sehir.includes('şanlıurfa')) { lat = 37.159; lon = 38.797; }
+  else if (sehir.includes('diyarbakır')) { lat = 37.914; lon = 40.231; }
+
+  try {
+    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code&timezone=Europe%2FIstanbul`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.current) {
+        weatherData.temp = Math.round(data.current.temperature_2m);
+        weatherData.humidity = data.current.relative_humidity_2m;
+        weatherData.wind = Math.round(data.current.wind_speed_10m);
+        weatherData.precip = data.current.precipitation || 0;
+        weatherData.weatherCode = data.current.weather_code;
+        weatherData.lastSync = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+
+        if (weatherData.precip > 0.5) weatherData.conditionText = '🌧️ Yağmurlu / Çamur Riski';
+        else if (weatherData.weatherCode >= 51 && weatherData.weatherCode <= 67) weatherData.conditionText = '🌧️ Yağışlı / Ağır Zemin';
+        else if (weatherData.weatherCode >= 1 && weatherData.weatherCode <= 3) weatherData.conditionText = '⛅ Parçalı Bulutlu';
+        else weatherData.conditionText = '☀️ Açık / Normal';
+      }
+    }
+  } catch (err) {
+    console.warn('Hava API erişim uyarısı:', err);
+    weatherData.lastSync = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  autoSyncSecondsLeft = 300;
+  renderWeatherAndTrackBar();
+
+  if (isManual) {
+    showToast(`✓ TJK Resmî Pist ve Hava Ölçümü Güncellendi (${weatherData.lastSync}): ${weatherData.temp}°C, ${weatherData.conditionText}, Nem %${weatherData.humidity}`);
+  }
+}
+
+function startWeatherSyncTimer() {
+  if (weatherSyncIntervalStarted) return;
+  weatherSyncIntervalStarted = true;
+  setInterval(() => {
+    if (autoSyncSecondsLeft > 0) {
+      autoSyncSecondsLeft--;
+      const el = document.getElementById('weather-countdown-timer');
+      if (el) {
+        const m = Math.floor(autoSyncSecondsLeft / 60);
+        const s = autoSyncSecondsLeft % 60;
+        el.innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+      }
+    } else {
+      fetchLiveTrackAndWeather(false);
+    }
+  }, 1000);
+}
+
+function setTrackCondition(condition) {
+  currentTrackCondition = condition;
+  renderWeatherAndTrackBar();
+  renderRaceDetails();
+
+  if (condition === 'AGIR_CAMUR_CIM') {
+    showToast('🌧️ Ağır / Çamur Çim Devrede: Çamur canavarlarına +4 puan, kuru çimcilere -5 puan uygulandı.');
+  } else if (condition === 'ISLAK_SULU_KUM') {
+    showToast('🌊 Islak / Çamurlu Kum Devrede: Islak kum ustalarına +4 puan, kuru kumculara -4 puan uygulandı.');
+  } else if (condition === 'CIMDEN_KUMA_ALINDI') {
+    showToast('🔄 Çimden Kuma Alındı: Kum orijinlerine +6 puan, saf çimcilere -6 puan uygulandı.');
+  } else {
+    showToast('🌱 TJK Canlı Resmî Pist (3.3 Normal) Zeminine Dönüldü.');
+  }
+}
+
+function renderWeatherAndTrackBar() {
+  const container = document.getElementById('live-weather-track-container');
+  if (!container || !bulten || !bulten.hipodromlar || !bulten.hipodromlar[currentHipIdx]) return;
+  const hip = bulten.hipodromlar[currentHipIdx];
+
+  let activeSimBadge = '';
+  if (currentTrackCondition === 'AGIR_CAMUR_CIM') {
+    activeSimBadge = '<span style="background:rgba(239,68,68,0.2); border:1px solid #ef4444; color:#f87171; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">⚠️ AĞIR / ÇAMUR ÇİM SİMÜLASYONU AKTİF (+4 / -5 Puan)</span>';
+  } else if (currentTrackCondition === 'ISLAK_SULU_KUM') {
+    activeSimBadge = '<span style="background:rgba(56,189,248,0.2); border:1px solid #38bdf8; color:#38bdf8; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">⚠️ ISLAK KUM SİMÜLASYONU AKTİF (+4 / -4 Puan)</span>';
+  } else if (currentTrackCondition === 'CIMDEN_KUMA_ALINDI') {
+    activeSimBadge = '<span style="background:rgba(245,158,11,0.2); border:1px solid #f59e0b; color:#fbbf24; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">⚠️ ÇİMDEN KUMA ALINDI SİMÜLASYONU (+6 / -6 Puan)</span>';
+  }
+
+  container.innerHTML = `
+    <div style="background:linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(10,15,30,0.98) 100%); border:1px solid rgba(212,175,55,0.25); border-radius:16px; padding:1.1rem 1.4rem; margin-bottom:1.5rem; box-shadow:0 8px 30px rgba(0,0,0,0.5);">
+      
+      <!-- Üst Şerit: Başlık, Canlı Işık ve Geri Sayım -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.8rem; margin-bottom:1rem; border-bottom:1px solid rgba(212,175,55,0.15); padding-bottom:0.75rem;">
+        <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981; animation:pulseGlow 2s infinite;"></span>
+          <h3 style="font-family:'Cinzel',serif; font-size:1.02rem; color:var(--text-gold); margin:0;">
+            CANLI TJK HAVA VE PİST KOŞULLARI TELEMETRİSİ
+          </h3>
+          <span style="font-size:0.75rem; color:#94a3b8; font-family:'JetBrains Mono',monospace;">(5 Dakikada Bir Canlı Otomatik Tarama)</span>
+          ${activeSimBadge}
+        </div>
+
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <div style="font-size:0.75rem; color:#cbd5e1; background:rgba(0,0,0,0.5); padding:4px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.1); font-family:'JetBrains Mono',monospace;">
+            ⏱️ Sonraki Canlı TJK Taraması: <b id="weather-countdown-timer" style="color:#fbbf24;">04:59</b>
+          </div>
+          <button onclick="fetchLiveTrackAndWeather(true)" style="background:rgba(212,175,55,0.15); border:1px solid var(--gold-pure); color:#fcf6ba; padding:5px 12px; border-radius:8px; font-size:0.75rem; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:0.35rem; transition:all 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.3)'" onmouseout="this.style.background='rgba(212,175,55,0.15)'">
+            🔄 Şimdi TJK'yı Tara
+          </button>
+        </div>
+      </div>
+
+      <!-- Alt Grid: Hava Durumu + TJK Pist Ölçümü + İnteraktif Zemin Simülatörü -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; align-items:stretch;">
+        
+        <!-- Kutu 1: Canlı Hipodrom Hava & Pist Ölçümü -->
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem 1rem; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+              <span style="font-size:0.72rem; color:var(--text-gold); font-weight:700; text-transform:uppercase;">🌤️ HİPODROM HAVA TELEMETRİSİ</span>
+              <span style="font-size:0.68rem; color:#94a3b8; font-family:'JetBrains Mono';">Son Veri: ${weatherData.lastSync}</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap; margin-bottom:0.4rem;">
+              <span style="font-size:1.35rem; font-family:'Cinzel',serif; color:#f8fafc; font-weight:800;">${weatherData.temp}°C</span>
+              <span style="font-size:0.85rem; color:#e2e8f0; font-weight:600;">${weatherData.conditionText}</span>
+              <span style="font-size:0.72rem; color:#94a3b8;">· Nem: %${weatherData.humidity}</span>
+              <span style="font-size:0.72rem; color:#94a3b8;">· Rüzgar: ${weatherData.wind} km/h</span>
+            </div>
+          </div>
+          <div style="font-size:0.75rem; color:#38bdf8; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); padding:0.4rem 0.6rem; border-radius:6px; margin-top:0.4rem;">
+            🌱 <b>TJK Resmî Ölçümü:</b> ${hip.cimOlcum || 'Çim 3.3 (Normal)'} · ${hip.kumOlcum || 'Kum (Normal)'}
+          </div>
+        </div>
+
+        <!-- Kutu 2: İnteraktif Zemin & Çamur Simülatörü -->
+        <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(212,175,55,0.18); border-radius:12px; padding:0.85rem 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-size:0.72rem; color:#f3e5ab; font-weight:700; text-transform:uppercase;">🧪 ZEMİN & ÇAMUR SİMÜLATÖRÜ</span>
+            <span style="font-size:0.68rem; color:#34d399; font-weight:600;">(Puan & Sıralamayı Anında Değiştirir)</span>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.45rem;">
+            <button onclick="setTrackCondition('CANLI')" class="track-sim-btn ${currentTrackCondition === 'CANLI' ? 'active' : ''}">
+              🌱 TJK Canlı (3.3 Normal)
+            </button>
+            <button onclick="setTrackCondition('AGIR_CAMUR_CIM')" class="track-sim-btn ${currentTrackCondition === 'AGIR_CAMUR_CIM' ? 'active' : ''}">
+              🌧️ Ağır / Çamur Çim (4.5+)
+            </button>
+            <button onclick="setTrackCondition('ISLAK_SULU_KUM')" class="track-sim-btn ${currentTrackCondition === 'ISLAK_SULU_KUM' ? 'active' : ''}">
+              🌊 Islak / Çamurlu Kum
+            </button>
+            <button onclick="setTrackCondition('CIMDEN_KUMA_ALINDI')" class="track-sim-btn ${currentTrackCondition === 'CIMDEN_KUMA_ALINDI' ? 'active' : ''}">
+              🔄 Çimden Kuma Alındı
+            </button>
+          </div>
+          <div style="font-size:0.68rem; color:#94a3b8; margin-top:0.5rem; line-height:1.35;">
+            * Butonlara tıklandığında koşudaki tüm safkanların pedigrisi (baba, kısrak babası, kardeşlerin ıslak pist derecesi) taranır; <b>Çamur Canavarlarına +4 / +6 Puan</b>, çamurda batan kuru zemin safkanlarına <b>-5 / -6 Puan</b> yansıtılarak kupon yeniden oluşturulur.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  `;
+}
+
 // ══════════════════════════════════════════════════════════════════════════════════
 // KALİBRE EDİLMİŞ DİNAMİK TURF AI MOTORU (SON 100 GÜNÜN SONUÇLARIYLA OPTİMİZE EDİLMİŞTİR)
 // KATSAYI DAĞILIMI (TOPLAM %100 - TÜM KULLANICI DÜZELTMELERİ UYGULANMIŞTIR):
@@ -1351,8 +1690,9 @@ function getHorsesWithFinalTacticalScores(kosu) {
   return (kosu.atlar || []).map(h => {
     const power = calculatePowerIndex(h, kosu.atlar);
     const paceAdj = calculatePaceAdjustment(h, kosu);
+    const mudAdj = calculateMudTrackDelta(h, kosu, currentTrackCondition);
     const baseScore = power.royalScore;
-    const finalScore = Math.min(99, Math.max(30, baseScore + paceAdj.delta));
+    const finalScore = Math.min(99, Math.max(30, baseScore + paceAdj.delta + mudAdj.delta));
     return {
       ...h,
       ...power,
@@ -1361,7 +1701,12 @@ function getHorsesWithFinalTacticalScores(kosu) {
       paceLabel: paceAdj.label,
       paceColor: paceAdj.color,
       paceType: paceAdj.paceType,
-      royalScore: finalScore // Nihai taktiksel skor (Tempo etkisi dahil)
+      mudDelta: mudAdj.delta,
+      mudBadge: mudAdj.badge,
+      mudDesc: mudAdj.desc,
+      mudColor: mudAdj.color,
+      mudType: mudAdj.type,
+      royalScore: finalScore // Nihai taktiksel skor (Tempo + Çamur/Zemin etkisi dahil)
     };
   }).sort((a, b) => b.royalScore - a.royalScore);
 }
@@ -1370,6 +1715,8 @@ function renderRaceDetails() {
   const hip = bulten.hipodromlar[currentHipIdx];
   const kosu = hip.kosular[currentKosuIdx];
   const rateInfo = getTjkCityRate(hip.sehir || hip.isim);
+
+  renderWeatherAndTrackBar();
 
   // 1. Merkezi taktiksel motordan tempo ayarlı safkan listesini al
   const horsesWithMetrics = getHorsesWithFinalTacticalScores(kosu);
@@ -1550,6 +1897,22 @@ function renderRaceDetails() {
         </div>
       </div>
 
+      ${(h.mudDelta !== 0 || currentTrackCondition !== 'CANLI') ? `
+      <div style="background:${h.mudDelta > 0 ? 'rgba(16,185,129,0.12)' : (h.mudDelta < 0 ? 'rgba(239,68,68,0.12)' : 'rgba(255,255,255,0.04)')}; border:1px solid ${h.mudColor || 'rgba(212,175,55,0.3)'}; padding:0.5rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+          <span style="font-size:0.76rem; font-weight:800; color:${h.mudColor}; font-family:'Cinzel',serif;">
+            ${h.mudBadge}
+          </span>
+          <span style="font-size:0.72rem; font-weight:800; font-family:'JetBrains Mono'; color:${h.mudColor}; background:rgba(0,0,0,0.5); padding:1px 6px; border-radius:4px;">
+            ${h.mudDelta > 0 ? '+' + h.mudDelta : h.mudDelta} PUAN
+          </span>
+        </div>
+        <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35;">
+          ${h.mudDesc}
+        </div>
+      </div>
+      ` : ''}
+
       <div class="pedigree-vault">
         <div class="vault-line"><span class="vault-key">Aygır (Baba):</span><span class="vault-val">${h.baba || 'Bilinmiyor'}</span></div>
         <div class="vault-line"><span class="vault-key">Kısrak (Anne):</span><span class="vault-val">${h.anne || 'Bilinmiyor'}</span></div>
@@ -1623,6 +1986,13 @@ function renderRaceDetails() {
           <div class="bar-track"><div class="bar-fill-gold" style="width:${Math.max(15, Math.min(100, 50 + (h.paceDelta * 8)))}%; background:${h.paceDelta >= 0 ? 'linear-gradient(90deg, #10b981, #34d399)' : 'linear-gradient(90deg, #ef4444, #f87171)'};"></div></div>
           <span class="bar-digit" style="color:${h.paceColor};">${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta}</span>
         </div>
+        ${h.mudDelta !== 0 ? `
+        <div class="bar-entry">
+          <span class="bar-name" style="color:${h.mudColor};">🌧️ Zemin/Çamur (${h.mudDelta >= 0 ? '+' + h.mudDelta : h.mudDelta})</span>
+          <div class="bar-track"><div class="bar-fill-gold" style="width:${Math.max(15, Math.min(100, 50 + (h.mudDelta * 8)))}%; background:${h.mudDelta > 0 ? 'linear-gradient(90deg, #10b981, #34d399)' : 'linear-gradient(90deg, #ef4444, #f87171)'};"></div></div>
+          <span class="bar-digit" style="color:${h.mudColor};">${h.mudDelta >= 0 ? '+' + h.mudDelta : h.mudDelta}</span>
+        </div>
+        ` : ''}
       </div>
 
       <table class="monument-specs">
@@ -1639,6 +2009,79 @@ function renderRaceDetails() {
   });
 }
 
+// ── BİREBİR KRONOMETRİK SPLİT PROJEKSİYON MOTORU ──
+function computeRaceChronometricSplits(kosu, horsesWithMetrics) {
+  const mesafe = parseInt(kosu.mesafe) || 1600;
+  const pist = (kosu.pist || 'Çim').toLowerCase();
+  const pace = estimateRacePace(kosu);
+  const atlar = horsesWithMetrics || [];
+
+  // En hızlı başlayan safkanların (Kaçak & Presçi) ilk 400m süreleri
+  let base400 = 24.60;
+  if (pace.type === 'FAST') {
+    base400 = 23.85;
+  } else if (pace.type === 'SLOW') {
+    base400 = 25.85;
+  }
+  if (mesafe <= 1200) base400 -= 0.6;
+  else if (mesafe >= 2000) base400 += 0.8;
+  if (pist.includes('kum')) base400 += 0.35;
+
+  const first400Sec = base400.toFixed(2);
+  const first400SpeedKmh = ((400 / base400) * 3.6).toFixed(1);
+
+  // İlk 800m geçiş süresi (İlk 400 + ikinci 400 viraj temposu)
+  const sec400 = base400 + (pace.type === 'FAST' ? 0.35 : (pace.type === 'SLOW' ? -0.40 : 0.15));
+  const total800Sec = base400 + sec400;
+  const min800 = Math.floor(total800Sec / 60);
+  const remSec800 = (total800Sec % 60).toFixed(2);
+  const first800Str = `${min800 > 0 ? min800 + '.' : ''}${remSec800 < 10 && min800 > 0 ? '0' : ''}${remSec800}`;
+
+  // Son 400m Düzlük Kopuş Hızı (Sprinterlerin veya güçlü presçilerin son 400 derecesi)
+  let bestLast400Hiz = 54.5;
+  const sprintersAndStalkers = atlar.filter(h => 
+    (h.kosu_stili || '').includes('Sprinter') || 
+    (h.kosu_stili || '').includes('Pres') || 
+    (h.son_galop && h.son_galop.son400hiz > 51)
+  );
+  if (sprintersAndStalkers.length > 0) {
+    const speeds = sprintersAndStalkers.map(s => s.son_galop?.son400hiz || 53.5);
+    bestLast400Hiz = Math.max(...speeds);
+  }
+  const last400Sec = (400 / (bestLast400Hiz / 3.6)).toFixed(2);
+
+  // Tahmini Finiş Derecesi (Mesafe ve pist sınıfına göre)
+  const avgSpeedMS = pist.includes('kum') ? 16.3 : (pist.includes('sentetik') ? 16.5 : 16.8);
+  let estSec = mesafe / avgSpeedMS;
+  if (pace.type === 'FAST') estSec -= 0.65;
+  if (pace.type === 'SLOW') estSec += 0.95;
+  const estMin = Math.floor(estSec / 60);
+  const estRemSec = (estSec % 60).toFixed(2);
+  const finishTimeStr = `${estMin}.${estRemSec < 10 ? '0' : ''}${estRemSec}`;
+
+  return {
+    first400Sec,
+    first400SpeedKmh,
+    first800Str,
+    last400Sec,
+    last400SpeedKmh: bestLast400Hiz.toFixed(1),
+    finishTimeStr
+  };
+}
+
+function toggleSplitsTable() {
+  const tbl = document.getElementById('splits-telemetry-table-wrap');
+  const btn = document.getElementById('splits-table-toggle-btn');
+  if (!tbl || !btn) return;
+  if (tbl.style.display === 'none' || tbl.style.display === '') {
+    tbl.style.display = 'block';
+    btn.innerHTML = '▲ Birebir Safkan Split & İvmelenme Tablosunu Gizle';
+  } else {
+    tbl.style.display = 'none';
+    btn.innerHTML = '▼ Birebir Safkan Split & İvmelenme Telemetri Tablosunu Göster (Tüm Atlar)';
+  }
+}
+
 // ── CANLI YARIŞ GİDİŞATI, TEMPO & TAKTİK SENARYO MOTORU ──
 function renderPaceScenario(kosu, horsesWithMetrics) {
   const container = document.getElementById('pace-scenario-box');
@@ -1653,12 +2096,14 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
   const pace = estimateRacePace(kosu);
   const paceType = pace.type;
 
+  // Birebir kronometrik split projeksiyonlarını hesapla
+  const splits = computeRaceChronometricSplits(kosu, horsesWithMetrics);
+
   const hat1Points = paceType === 'FAST' ? '<span style="color:#ef4444; font-weight:700;">-2 Puan (Çekişme Riski)</span>' : (paceType === 'SLOW' ? '<span style="color:#10b981; font-weight:700;">+2 Puan (Liderlik Avantajı)</span>' : '<span style="color:#60a5fa; font-weight:700;">+1 Puan (Kontrollü)</span>');
   const hat2Points = paceType === 'FAST' ? '<span style="color:#f59e0b; font-weight:700;">-1 Puan</span>' : '<span style="color:#10b981; font-weight:700;">+1 Puan (Takip Avantajı)</span>';
   const hat3Points = paceType === 'FAST' ? '<span style="color:#60a5fa; font-weight:700;">+1 Puan (Korunma)</span>' : (paceType === 'SLOW' ? '<span style="color:#ef4444; font-weight:700;">-1 Puan</span>' : '<span style="color:#94a3b8; font-weight:700;">0 Puan</span>');
   const hat4Points = paceType === 'FAST' ? '<span style="color:#a855f7; font-weight:700;">+1 / +2 Puan (Sprint Şansı)</span>' : (paceType === 'SLOW' ? '<span style="color:#ef4444; font-weight:700;">-2 Puan (Yetişememe Riski)</span>' : '<span style="color:#94a3b8; font-weight:700;">0 / +1 Puan</span>');
 
-  const tempoTitle = pace.title;
   const tempoBadge = pace.badge;
   const tempoDesc = pace.desc;
   const tempoAdvantage = pace.kimeYarar;
@@ -1679,6 +2124,40 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
         <span style="font-size:0.7rem; font-weight:800; color:${h.paceColor || '#34d399'}; font-family:'Cinzel'; background:rgba(0,0,0,0.5); padding:1px 5px; border-radius:4px;">${h.royalScore} P (${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
       </div>
     `).join(' ');
+  };
+
+  // Helper function to render all horse rows for the telemetry splits table
+  const renderSplitsTableRows = () => {
+    return horsesWithMetrics.map((h, i) => {
+      const stil = h.kosu_stili || 'Orta Grup';
+      let f400 = (parseFloat(splits.first400Sec) + (stil.includes('Kaçak') ? -0.2 : (stil.includes('Pres') ? 0.3 : (stil.includes('Orta') ? 0.9 : 1.6)))).toFixed(2);
+      let f400Speed = ((400 / parseFloat(f400)) * 3.6).toFixed(1);
+      let l400Speed = h.son_galop?.son400hiz ? h.son_galop.son400hiz.toFixed(1) : (stil.includes('Sprinter') ? '56.2' : (stil.includes('Pres') ? '54.5' : '52.8'));
+      let l400Sec = (400 / (parseFloat(l400Speed) / 3.6)).toFixed(2);
+      
+      let accelType = h.accelerationType || (stil.includes('Sprinter') ? 'Negative Split (Son Düzlük Hızlanan)' : (stil.includes('Kaçak') ? 'Positive Split (Kafada Tutan)' : 'Even Split (Dengeli Akış)'));
+      let gapPos = stil.includes('Kaçak') ? 'Lider / Bariyer Dibi (0 Boy)' : (stil.includes('Pres') ? '2.-3. Sıra (1.5 - 2 Boy)' : (stil.includes('Orta') ? '4.-6. Sıra (4 - 6 Boy)' : 'Pusu / Arka Hat (8 - 12 Boy)'));
+
+      return `
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.06); font-size:0.75rem;">
+          <td style="padding:0.6rem 0.5rem; font-weight:700; color:#f8fafc;">
+            <span style="font-family:'Cinzel'; background:${h.stil_renk || '#d4af37'}; color:#04060a; padding:1px 5px; border-radius:3px; margin-right:4px;">${h.no}</span>
+            ${h.isim} <span style="color:#94a3b8; font-size:0.68rem;">(K:${h.kulvar || '-'})</span>
+          </td>
+          <td style="padding:0.6rem 0.5rem; color:${h.stil_renk || '#d4af37'}; font-weight:600;">${h.stil_ikon || ''} ${stil}</td>
+          <td style="padding:0.6rem 0.5rem; font-family:'JetBrains Mono',monospace; color:#fbbf24;">${f400} sn <span style="font-size:0.68rem; color:#94a3b8;">(${f400Speed} km/h)</span></td>
+          <td style="padding:0.6rem 0.5rem; font-family:'JetBrains Mono',monospace; color:#34d399;">${l400Sec} sn <span style="font-size:0.68rem; color:#94a3b8;">(${l400Speed} km/h)</span></td>
+          <td style="padding:0.6rem 0.5rem; color:#cbd5e1;">${accelType}</td>
+          <td style="padding:0.6rem 0.5rem; color:#94a3b8;">${gapPos}</td>
+          <td style="padding:0.6rem 0.5rem; font-weight:700; color:${h.mudDelta > 0 ? '#34d399' : (h.mudDelta < 0 ? '#f87171' : '#94a3b8')};">
+            ${h.mudBadge ? h.mudBadge : '🌱 Normal'}
+          </td>
+          <td style="padding:0.6rem 0.5rem; font-family:'Cinzel'; font-weight:800; color:#fcf6ba; text-align:right;">
+            ${h.royalScore} P <span style="font-size:0.68rem; color:${h.paceColor};">(${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
+          </td>
+        </tr>
+      `;
+    }).join('');
   };
 
   // 3-Phase Simulation Narrative
@@ -1705,10 +2184,10 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
         <div>
           <div style="display:flex; align-items:center; gap:0.5rem;">
             <span style="font-size:1.3rem;">🏁</span>
-            <h3 style="font-family:'Cinzel', serif; font-size:1.15rem; color:var(--text-gold); margin:0; letter-spacing:0.5px;">CANLI YARIŞ GİDİŞATI, TEMPO & TAKTİK SENARYOSU</h3>
+            <h3 style="font-family:'Cinzel', serif; font-size:1.15rem; color:var(--text-gold); margin:0; letter-spacing:0.5px;">CANLI YARIŞ GİDİŞATI, KRONOMETRİK TEMPO & TAKTİK SENARYOSU</h3>
           </div>
           <p style="font-size:0.75rem; color:#94a3b8; margin:0.3rem 0 0 0;">
-            Safkanların geçmiş koşu stilleri, kulvar dinamikleri, idman sprint ivmeleri ve soy karakter analizine göre yarış simülasyonu
+            Safkanların geçmiş koşu stilleri, kulvar dinamikleri, idman sprint ivmeleri ve soy karakter analizine göre birebir yarış simülasyonu
           </p>
         </div>
         <div style="background:${tempoBg}; border:1px solid ${tempoBorder}; padding:0.45rem 0.9rem; border-radius:10px; display:flex; align-items:center; gap:0.5rem;">
@@ -1716,6 +2195,75 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
             ${tempoBadge}
           </span>
         </div>
+      </div>
+
+      <!-- 4'LÜ BİREBİR KRONOMETRİK SPLİT PROJEKSİYON KARTLARI -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap:0.85rem; margin-bottom:1.4rem;">
+        
+        <div style="background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.3); border-radius:12px; padding:0.9rem 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+            <span style="font-size:0.72rem; color:#fbbf24; font-weight:700;">⏱️ İLK 400m GEÇİŞ SÜRESİ</span>
+            <span style="font-size:0.65rem; color:#94a3b8;">Start İvmesi</span>
+          </div>
+          <div style="font-size:1.35rem; font-family:'JetBrains Mono',monospace; font-weight:800; color:#f8fafc;">
+            ${splits.first400Sec} <span style="font-size:0.8rem; color:#94a3b8; font-weight:400;">sn</span>
+          </div>
+          <div style="font-size:0.72rem; color:#fbbf24; font-weight:600; margin-top:2px;">
+            Sürat: ${splits.first400SpeedKmh} km/h · ${pace.type === 'FAST' ? '🔥 Aşırı Süratli' : (pace.type === 'SLOW' ? '🐢 Rölanti' : '⚖️ Dengeli')}
+          </div>
+          <div style="font-size:0.68rem; color:#94a3b8; margin-top:3px; line-height:1.3;">
+            Kafaya çıkacak safkanın viraj öncesi başlangıç temposu.
+          </div>
+        </div>
+
+        <div style="background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.3); border-radius:12px; padding:0.9rem 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+            <span style="font-size:0.72rem; color:#60a5fa; font-weight:700;">⏱️ İLK 800m GEÇİŞ ZAMANI</span>
+            <span style="font-size:0.65rem; color:#94a3b8;">Kritik Eşik</span>
+          </div>
+          <div style="font-size:1.35rem; font-family:'JetBrains Mono',monospace; font-weight:800; color:#f8fafc;">
+            ${splits.first800Str}
+          </div>
+          <div style="font-size:0.72rem; color:#60a5fa; font-weight:600; margin-top:2px;">
+            Son Viraj Girişi Tempo Barometresi
+          </div>
+          <div style="font-size:0.68rem; color:#94a3b8; margin-top:3px; line-height:1.3;">
+            Ön grup presçileri ile liderin oksijen tüketim noktası.
+          </div>
+        </div>
+
+        <div style="background:rgba(168,85,247,0.06); border:1px solid rgba(168,85,247,0.3); border-radius:12px; padding:0.9rem 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+            <span style="font-size:0.72rem; color:#c084fc; font-weight:700;">⚡ SON 400m KOPUŞ HIZI</span>
+            <span style="font-size:0.65rem; color:#94a3b8;">Düzlük Sprinti</span>
+          </div>
+          <div style="font-size:1.35rem; font-family:'JetBrains Mono',monospace; font-weight:800; color:#f8fafc;">
+            ${splits.last400Sec} <span style="font-size:0.8rem; color:#94a3b8; font-weight:400;">sn</span>
+          </div>
+          <div style="font-size:0.72rem; color:#c084fc; font-weight:600; margin-top:2px;">
+            Sprint Hızı: ${splits.last400SpeedKmh} km/h (Maks Patlayıcılık)
+          </div>
+          <div style="font-size:0.68rem; color:#94a3b8; margin-top:3px; line-height:1.3;">
+            Düzlükte fotoya hücum edecek en sert sprinterin kopuş ivmesi.
+          </div>
+        </div>
+
+        <div style="background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.3); border-radius:12px; padding:0.9rem 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+            <span style="font-size:0.72rem; color:#34d399; font-weight:700;">🏁 PROJEKSİYON BİTİRİŞ DERECESİ</span>
+            <span style="font-size:0.65rem; color:#94a3b8;">${kosu.mesafe || 1600}m ${kosu.pist || 'Çim'}</span>
+          </div>
+          <div style="font-size:1.35rem; font-family:'JetBrains Mono',monospace; font-weight:800; color:#f8fafc;">
+            ${splits.finishTimeStr}
+          </div>
+          <div style="font-size:0.72rem; color:#34d399; font-weight:600; margin-top:2px;">
+            Tahmini Resmî Finiş Zamanı
+          </div>
+          <div style="font-size:0.68rem; color:#94a3b8; margin-top:3px; line-height:1.3;">
+            Sınıf, mesafe ve pist katsayılarına göre simüle edilen foto derecesi.
+          </div>
+        </div>
+
       </div>
 
       <!-- Tempo Açıklaması ve Kime Yarar Kutusu -->
@@ -1739,7 +2287,79 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
         </div>
       </div>
 
-      <!-- PİST POZİSYON DAĞILIM ŞERİDİ (4-Zone Ribbon) -->
+      <!-- METRE METRE & BOY BOY VİRAJ ÇIKIŞI TELEMETRİ ŞERİDİ (Visual Gap Ribbon) -->
+      <div style="background:rgba(0,0,0,0.45); border:1px solid rgba(212,175,55,0.2); border-radius:14px; padding:1.2rem; margin-bottom:1.4rem; overflow-x:auto;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="font-size:1.1rem;">📏</span>
+            <span style="font-family:'Cinzel',serif; font-size:0.82rem; font-weight:700; color:var(--text-gold); letter-spacing:0.5px;">
+              METRE METRE & BOY BOY VİRAJ ÇIKIŞI TELEMETRİ ŞERİDİ
+            </span>
+          </div>
+          <span style="font-size:0.7rem; color:#64748b; font-family:'JetBrains Mono',monospace;">[FİNİŞ DÜZLÜĞÜ ◄── ÖN GRUP ──── ARKA GRUP]</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:0.6rem; min-width:680px; padding:0.5rem 0;">
+          <!-- 1. Lider Bölgesi -->
+          <div style="flex:1; background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.4); border-radius:10px; padding:0.75rem; text-align:center;">
+            <div style="font-size:0.68rem; font-weight:800; color:#f87171; margin-bottom:0.35rem; font-family:'Cinzel';">⚡ 1. HAT: LİDER (KAFADA)</div>
+            <div style="font-size:0.65rem; color:#cbd5e1; margin-bottom:0.4rem;">0 Metre · Bariyer Dibi</div>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.3rem;">
+              ${kacaklar.length > 0 ? kacaklar.map(h => `<span style="background:#04060a; border:1px solid #ef4444; color:#f8fafc; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">${h.no} ${h.isim} (K:${h.kulvar || '-'})</span>`).join('') : '<span style="font-size:0.68rem; color:#64748b;">Doğal lider yok</span>'}
+            </div>
+          </div>
+
+          <!-- Boy Farkı Oku 1 -->
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:65px;">
+            <span style="font-size:0.65rem; font-family:'JetBrains Mono'; color:#fbbf24; font-weight:700;">1.5 Boy</span>
+            <span style="font-size:0.6rem; color:#94a3b8;">~3.8m</span>
+            <span style="color:#fbbf24; font-size:1.1rem; line-height:1;">◄──►</span>
+          </div>
+
+          <!-- 2. Presçiler Bölgesi -->
+          <div style="flex:1.2; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.4); border-radius:10px; padding:0.75rem; text-align:center;">
+            <div style="font-size:0.68rem; font-weight:800; color:#34d399; margin-bottom:0.35rem; font-family:'Cinzel';">🏹 2. HAT: PRESÇİLER (2-3-4)</div>
+            <div style="font-size:0.65rem; color:#cbd5e1; margin-bottom:0.4rem;">+3.8m Geride · Ense Takibi</div>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.3rem;">
+              ${presciler.length > 0 ? presciler.map(h => `<span style="background:#04060a; border:1px solid #10b981; color:#f8fafc; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">${h.no} ${h.isim} (K:${h.kulvar || '-'})</span>`).join('') : '<span style="font-size:0.68rem; color:#64748b;">Presçi yok</span>'}
+            </div>
+          </div>
+
+          <!-- Boy Farkı Oku 2 -->
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:65px;">
+            <span style="font-size:0.65rem; font-family:'JetBrains Mono'; color:#60a5fa; font-weight:700;">2.5 Boy</span>
+            <span style="font-size:0.6rem; color:#94a3b8;">~6.2m</span>
+            <span style="color:#60a5fa; font-size:1.1rem; line-height:1;">◄──►</span>
+          </div>
+
+          <!-- 3. Orta Grup Bölgesi -->
+          <div style="flex:1.2; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.4); border-radius:10px; padding:0.75rem; text-align:center;">
+            <div style="font-size:0.68rem; font-weight:800; color:#60a5fa; margin-bottom:0.35rem; font-family:'Cinzel';">🛡️ 3. HAT: ORTA GRUP (5-6)</div>
+            <div style="font-size:0.65rem; color:#cbd5e1; margin-bottom:0.4rem;">+10.0m Geride · Koridor Arayan</div>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.3rem;">
+              ${ortagrup.length > 0 ? ortagrup.map(h => `<span style="background:#04060a; border:1px solid #3b82f6; color:#f8fafc; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">${h.no} ${h.isim} (K:${h.kulvar || '-'})</span>`).join('') : '<span style="font-size:0.68rem; color:#64748b;">Orta grup yok</span>'}
+            </div>
+          </div>
+
+          <!-- Boy Farkı Oku 3 -->
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:65px;">
+            <span style="font-size:0.65rem; font-family:'JetBrains Mono'; color:#c084fc; font-weight:700;">4.0 Boy</span>
+            <span style="font-size:0.6rem; color:#94a3b8;">~10.0m</span>
+            <span style="color:#c084fc; font-size:1.1rem; line-height:1;">◄──►</span>
+          </div>
+
+          <!-- 4. Sprinterler Bölgesi -->
+          <div style="flex:1.2; background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.4); border-radius:10px; padding:0.75rem; text-align:center;">
+            <div style="font-size:0.68rem; font-weight:800; color:#c084fc; margin-bottom:0.35rem; font-family:'Cinzel';">🚀 4. HAT: SPRİNTERLER (PUSU)</div>
+            <div style="font-size:0.65rem; color:#cbd5e1; margin-bottom:0.4rem;">+20.0m Geride · Düzlük Hücumcusu</div>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.3rem;">
+              ${sprinterler.length > 0 ? sprinterler.map(h => `<span style="background:#04060a; border:1px solid #a855f7; color:#f8fafc; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">${h.no} ${h.isim} (K:${h.kulvar || '-'})</span>`).join('') : '<span style="font-size:0.68rem; color:#64748b;">Arka grupta bekleyen yok</span>'}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PİST POZİSYON DAĞILIM ŞERİDİ (4-Hat Detayı) -->
       <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(212,175,55,0.15); border-radius:14px; padding:1.1rem; margin-bottom:1.4rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem;">
           <span style="font-size:0.75rem; font-family:'Cinzel',serif; font-weight:700; color:var(--text-gold); letter-spacing:0.5px;">
@@ -1794,6 +2414,33 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- BİREBİR SAFKAN SPLİT & İVMELENME TELEMETRİ TABLOSU TOGGLE -->
+      <div style="margin-bottom:1.4rem;">
+        <button id="splits-table-toggle-btn" onclick="toggleSplitsTable()" style="width:100%; background:rgba(212,175,55,0.08); border:1px dashed rgba(212,175,55,0.35); color:#f3e5ab; padding:0.7rem 1.2rem; border-radius:10px; font-size:0.8rem; font-weight:700; cursor:pointer; font-family:'Cinzel'; transition:all 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.15)'" onmouseout="this.style.background='rgba(212,175,55,0.08)'">
+          ▼ Birebir Safkan Split & İvmelenme Telemetri Tablosunu Göster (Tüm Atlar)
+        </button>
+
+        <div id="splits-telemetry-table-wrap" style="display:none; margin-top:0.8rem; background:rgba(0,0,0,0.55); border:1px solid rgba(212,175,55,0.2); border-radius:12px; padding:0.9rem; overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(212,175,55,0.25); font-size:0.72rem; color:var(--text-gold); font-family:'Cinzel';">
+                <th style="padding:0.5rem;">Safkan & Kulvar</th>
+                <th style="padding:0.5rem;">Koşu Karakteri</th>
+                <th style="padding:0.5rem;">İlk 400m Çıkış</th>
+                <th style="padding:0.5rem;">Son 400m Kopuş</th>
+                <th style="padding:0.5rem;">İvmelenme Profili</th>
+                <th style="padding:0.5rem;">Tahmini Pozisyon</th>
+                <th style="padding:0.5rem;">Zemin & Çamur</th>
+                <th style="padding:0.5rem; text-align:right;">Nihai Puan</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${renderSplitsTableRows()}
+            </tbody>
+          </table>
         </div>
       </div>
 

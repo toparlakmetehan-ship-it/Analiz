@@ -10,7 +10,7 @@ console.log('🏇 Safkanların Koşu Stilleri ve Yarış Senaryoları Zenginleş
 const styleRules = [
   // Kaçak / Lider adayları (Aygır veya karakter analizi)
   {
-    regex: /KAIZBERT|TURBO|AŞIKBEY|LION HEART|LUXOR|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
+    regex: /KAIZBERT|TURBO|AŞIKBEY|LION HEART|LUXOR|SPEED QUEEN|THUNDERSTRUCK|ASLIHANOĞLU|SANCAR|GÖK BERK|MISS DEVRAN|YALNIZ AŞIK|LUSİA|ORMANCIBEY|BOZKIR KARTALI/i,
     stil: 'Kaçak / Lider',
     ikon: '⚡',
     renk: '#ef4444',
@@ -28,9 +28,19 @@ const styleRules = [
     border: 'rgba(16, 185, 129, 0.4)',
     taktik: 'Liderin hemen ardında 2.-3. sıraya yerleşir, virajda tempoyu artırarak pres yapar.'
   },
+  // Orta Grup adayları
+  {
+    regex: /UZBOYLU|TAŞKARA|AYDIN DAYI|AĞILMUS ASLANI/i,
+    stil: 'Orta Grup',
+    ikon: '🛡️',
+    renk: '#3b82f6',
+    bg: 'rgba(59, 130, 246, 0.15)',
+    border: 'rgba(59, 130, 246, 0.4)',
+    taktik: '4.-6. sıralarda yarışın temposunu izler, viraja kadar efor sarf etmeden diri kalır.'
+  },
   // Sprinter / Bekleme adayları (Son düzlük hücumcusu)
   {
-    regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|UZBOYLU|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
+    regex: /NATIVE KHAN|TOROK|VICTORY GALLOP|INVINCIBLE|GHOST COMMANDER|VOLITIVO|CHARABANC|WHIZBANG|SPECIAL MAN|EFLAH|KAYIPSIZ|DELİ ŞİMŞEK/i,
     stil: 'Düzlük Sprinteri',
     ikon: '🚀',
     renk: '#a855f7',
@@ -44,13 +54,27 @@ let totalEnriched = 0;
 
 bulten.hipodromlar.forEach(hip => {
   hip.kosular.forEach(kosu => {
-    // Collect horses in race
     const atlar = kosu.atlar || [];
     
-    // Sort or map horses
     atlar.forEach((at, idx) => {
       totalEnriched++;
-      const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`;
+      const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`.toUpperCase();
+
+      // 1. ÖNCELİK: Safkanın Gerçek Geçmiş Koşu Çizgileri
+      let pastPosAvg = null;
+      if (at.pastRaces && at.pastRaces.length > 0) {
+        const validLines = at.pastRaces.map(p => p.runningLine).filter(Boolean);
+        if (validLines.length > 0) {
+          let sumPos = 0;
+          let count = 0;
+          validLines.forEach(l => {
+            const parts = l.split('-');
+            const pos = parseInt(parts[0]);
+            if (!isNaN(pos)) { sumPos += pos; count++; }
+          });
+          if (count > 0) pastPosAvg = sumPos / count;
+        }
+      }
       
       let matched = null;
       for (const rule of styleRules) {
@@ -60,47 +84,26 @@ bulten.hipodromlar.forEach(hip => {
         }
       }
 
+      if (!matched && pastPosAvg !== null) {
+        if (pastPosAvg <= 1.5) matched = styleRules[0];
+        else if (pastPosAvg <= 3.5) matched = styleRules[1];
+        else if (pastPosAvg <= 6.0) matched = styleRules[2];
+        else matched = styleRules[3];
+      }
+
       // If no direct regex match, distribute organically based on kulvar and sprint speed
       if (!matched) {
         const kulvar = Number(at.kulvar || (idx + 1));
         const sprintSpeed = at.son_galop?.son400hiz || 50;
 
-        if (kulvar <= 2 && sprintSpeed >= 51.5) {
-          matched = {
-            stil: 'Kaçak / Lider',
-            ikon: '⚡',
-            renk: '#ef4444',
-            bg: 'rgba(239, 68, 68, 0.15)',
-            border: 'rgba(239, 68, 68, 0.4)',
-            taktik: 'İç kulvar avantajıyla startta öne fırlayıp bariyer dibinden liderliği kovalar.'
-          };
-        } else if (sprintSpeed >= 52) {
-          matched = {
-            stil: 'Düzlük Sprinteri',
-            ikon: '🚀',
-            renk: '#a855f7',
-            bg: 'rgba(168, 85, 247, 0.15)',
-            border: 'rgba(168, 85, 247, 0.4)',
-            taktik: 'Müthiş son 400 kopuş hızına sahip; geride bekleyip düzlükte sert hücum eder.'
-          };
+        if (kulvar <= 2 && sprintSpeed >= 53) {
+          matched = styleRules[0];
         } else if (kulvar <= 5) {
-          matched = {
-            stil: 'Presçi',
-            ikon: '🏹',
-            renk: '#10b981',
-            bg: 'rgba(168, 85, 247, 0.15)',
-            border: 'rgba(16, 185, 129, 0.4)',
-            taktik: 'Ön grubun arkasında yer tutar, son viraj dönülürken hücuma kalkar.'
-          };
+          matched = styleRules[1];
+        } else if (sprintSpeed >= 54) {
+          matched = styleRules[3];
         } else {
-          matched = {
-            stil: 'Orta Grup',
-            ikon: '🛡️',
-            renk: '#3b82f6',
-            bg: 'rgba(59, 130, 246, 0.15)',
-            border: 'rgba(59, 130, 246, 0.4)',
-            taktik: '4.-6. sıralarda yarışın temposunu izler, virajda dış kulvardan bindirme yapar.'
-          };
+          matched = styleRules[2];
         }
       }
 
@@ -112,19 +115,6 @@ bulten.hipodromlar.forEach(hip => {
       at.stil_border = matched.border;
       at.taktik_yorum = matched.taktik;
     });
-
-    // Ensure at least one pace setter if race has 6+ horses
-    const kacaklar = atlar.filter(a => a.kosu_stili === 'Kaçak / Lider');
-    if (kacaklar.length === 0 && atlar.length > 0) {
-      // Pick horse with lowest kulvar or fastest start
-      const first = atlar[0];
-      first.kosu_stili = 'Kaçak / Lider';
-      first.stil_ikon = '⚡';
-      first.stil_renk = '#ef4444';
-      first.stil_bg = 'rgba(239, 68, 68, 0.15)';
-      first.stil_border = 'rgba(239, 68, 68, 0.4)';
-      first.taktik_yorum = 'Yarışta kaçak azlığından faydalanıp startla kafaya çıkacaktır.';
-    }
   });
 });
 
