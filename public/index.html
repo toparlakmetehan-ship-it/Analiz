@@ -2020,57 +2020,146 @@ function renderRaceDetails() {
   });
 }
 
-// ── BİREBİR KRONOMETRİK SPLİT PROJEKSİYON MOTORU ──
+// ── BİREBİR KRONOMETRİK SPLİT & RESMÎ DERECE PROJEKSİYON MOTORU ──
+const TJK_BENCHMARKS = {
+  Arap: {
+    Çim: { 1200: 78.50, 1400: 93.20, 1600: 107.50, 1800: 121.00, 1900: 128.80, 2000: 135.50, 2100: 142.00, 2200: 149.00, 2400: 164.00 },
+    Kum: { 1200: 82.50, 1300: 91.80, 1400: 98.50, 1500: 106.00, 1600: 113.50, 1900: 134.50, 2000: 141.50, 2100: 149.00 },
+    Sentetik: { 1200: 80.50, 1400: 94.50, 1500: 101.50, 1600: 109.00, 2000: 137.00, 2100: 144.00 }
+  },
+  İngiliz: {
+    Çim: { 1000: 57.50, 1200: 71.20, 1300: 77.80, 1400: 84.80, 1500: 90.50, 1600: 96.80, 1800: 109.50, 1900: 116.50, 2000: 122.50, 2100: 129.00, 2200: 135.50, 2400: 149.20 },
+    Kum: { 1200: 74.20, 1300: 81.80, 1400: 87.50, 1500: 94.20, 1900: 120.50, 2000: 127.50, 2100: 134.50 },
+    Sentetik: { 1200: 72.80, 1300: 79.50, 1400: 85.80, 1500: 92.50, 2000: 124.00, 2100: 130.80 }
+  }
+};
+
+function parseDegreeToSeconds(degStr) {
+  if (!degStr || typeof degStr !== 'string') return null;
+  const parts = degStr.trim().split('.');
+  if (parts.length === 3) {
+    return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10) + parseInt(parts[2], 10) / 100;
+  } else if (parts.length === 2) {
+    return parseInt(parts[0], 10) * 60 + parseFloat(parts[1]);
+  }
+  return null;
+}
+
 function computeRaceChronometricSplits(kosu, horsesWithMetrics) {
   const mesafe = parseInt(kosu.mesafe) || 1600;
-  const pist = (kosu.pist || 'Çim').toLowerCase();
+  const rawPist = (kosu.pist || 'Çim').toLowerCase();
+  const pistClean = rawPist.includes('kum') ? 'Kum' : (rawPist.includes('sentetik') ? 'Sentetik' : 'Çim');
   const pace = estimateRacePace(kosu);
   const atlar = horsesWithMetrics || [];
 
-  // En hızlı başlayan safkanların (Kaçak & Presçi) ilk 400m süreleri
-  let base400 = 24.60;
-  if (pace.type === 'FAST') {
-    base400 = 23.85;
-  } else if (pace.type === 'SLOW') {
-    base400 = 25.85;
+  // 1. Irk Tespiti (Arap vs İngiliz)
+  const rawIrk = (kosu.irk || (atlar[0] && atlar[0].irk) || '').toLowerCase();
+  const irk = rawIrk.includes('arap') ? 'Arap' : 'İngiliz';
+
+  // 2. TJK Standart Benchmark Derecesi
+  let baseBenchmark = TJK_BENCHMARKS[irk]?.[pistClean]?.[mesafe];
+  if (!baseBenchmark) {
+    const refDist = 1600;
+    const refTime = TJK_BENCHMARKS[irk]?.[pistClean]?.[refDist] || (irk === 'Arap' ? 107.5 : 96.8);
+    baseBenchmark = (refTime / refDist) * mesafe;
   }
-  if (mesafe <= 1200) base400 -= 0.6;
-  else if (mesafe >= 2000) base400 += 0.8;
-  if (pist.includes('kum')) base400 += 0.35;
+
+  // 3. Koşu Sınıfı Katsayısı (Maiden / Şartlı / Handikap / Açık Grup)
+  let classDelta = 0;
+  const sinif = (kosu.grup_sinifi || '').toLowerCase();
+  if (sinif.includes('maiden') || sinif.includes('şartlı 1')) {
+    classDelta = 2.40;
+  } else if (sinif.includes('handikap-14') || sinif.includes('şartlı 2') || sinif.includes('şartlı 3')) {
+    classDelta = 0.95;
+  } else if (sinif.includes('handikap-15') || sinif.includes('şartlı 4')) {
+    classDelta = 0.40;
+  } else if (sinif.includes('kv-8') || sinif.includes('grup') || sinif.includes('açık') || sinif.includes('g1') || sinif.includes('g2') || sinif.includes('g3')) {
+    classDelta = -0.90;
+  } else if (sinif.includes('kv-6') || sinif.includes('kv-7') || sinif.includes('şartlı 5') || sinif.includes('handikap-17')) {
+    classDelta = -0.30;
+  }
+
+  // 4. Safkanların Birebir Gerçek Geçmiş Dereceleri (Empirical Median)
+  const horsePastSeconds = [];
+  atlar.forEach(at => {
+    if (Array.isArray(at.pastRaces)) {
+      at.pastRaces.forEach(pr => {
+        if (pr.derece && pr.mesafe) {
+          const sec = parseDegreeToSeconds(pr.derece);
+          if (sec && sec > 50 && sec < 220) {
+            // Mesafe farkı varsa oranla
+            const normalizedSec = sec * (mesafe / pr.mesafe);
+            horsePastSeconds.push(normalizedSec);
+          }
+        }
+      });
+    }
+    if (at.en_iyi_derece) {
+      const sec = parseDegreeToSeconds(at.en_iyi_derece);
+      if (sec && sec > 50 && sec < 220) {
+        horsePastSeconds.push(sec);
+      }
+    }
+  });
+
+  // 5. Nihai Projeksiyon Bitiş Derecesi
+  let estSec = baseBenchmark + classDelta;
+  if (horsePastSeconds.length >= 2) {
+    horsePastSeconds.sort((a, b) => a - b);
+    // Kazanan potansiyeli: İlk %30 dilimdeki gerçek derece medyanı
+    const topPercentileIdx = Math.floor(horsePastSeconds.length * 0.30);
+    const topMedian = horsePastSeconds[topPercentileIdx];
+    estSec = (0.65 * topMedian) + (0.35 * (baseBenchmark + classDelta));
+  }
+
+  // Tempo Etkisi (Aşırı sürat / Rölanti)
+  if (pace.type === 'FAST') {
+    estSec -= 0.35;
+  } else if (pace.type === 'SLOW') {
+    estSec += 0.65;
+  }
+
+  const estMin = Math.floor(estSec / 60);
+  const estRemSec = (estSec % 60).toFixed(2);
+  const finishTimeStr = `${estMin > 0 ? estMin + '.' : ''}${estRemSec < 10 && estMin > 0 ? '0' : ''}${estRemSec}`;
+
+  // 6. İlk 400m Başlangıç Temposu (Irk, pist ve tempo duyarlı)
+  let base400 = irk === 'Arap' ? 27.20 : 24.70;
+  if (mesafe <= 1200) base400 -= 0.80;
+  else if (mesafe >= 2000) base400 += 0.90;
+  if (pistClean === 'Kum') base400 += 0.40;
+
+  if (pace.type === 'FAST') {
+    base400 -= 0.75;
+  } else if (pace.type === 'SLOW') {
+    base400 += 0.85;
+  }
 
   const first400Sec = base400.toFixed(2);
   const first400SpeedKmh = ((400 / base400) * 3.6).toFixed(1);
 
-  // İlk 800m geçiş süresi (İlk 400 + ikinci 400 viraj temposu)
-  const sec400 = base400 + (pace.type === 'FAST' ? 0.35 : (pace.type === 'SLOW' ? -0.40 : 0.15));
+  // 7. İlk 800m Geçiş Zamanı
+  const sec400 = base400 + (pace.type === 'FAST' ? 0.40 : (pace.type === 'SLOW' ? -0.35 : 0.15));
   const total800Sec = base400 + sec400;
   const min800 = Math.floor(total800Sec / 60);
   const remSec800 = (total800Sec % 60).toFixed(2);
   const first800Str = `${min800 > 0 ? min800 + '.' : ''}${remSec800 < 10 && min800 > 0 ? '0' : ''}${remSec800}`;
 
-  // Son 400m Düzlük Kopuş Hızı (Sprinterlerin veya güçlü presçilerin son 400 derecesi)
-  let bestLast400Hiz = 54.5;
+  // 8. Son 400m Düzlük Kopuş Hızı
+  let bestLast400Hiz = irk === 'Arap' ? 51.5 : 55.0;
   const sprintersAndStalkers = atlar.filter(h => 
     (h.kosu_stili || '').includes('Sprinter') || 
     (h.kosu_stili || '').includes('Pres') || 
-    (h.son_galop && h.son_galop.son400hiz > 51)
+    (h.son_galop && h.son_galop.son400hiz > 50)
   );
   if (sprintersAndStalkers.length > 0) {
-    const speeds = sprintersAndStalkers.map(s => s.son_galop?.son400hiz || 53.5);
+    const speeds = sprintersAndStalkers.map(s => s.son_galop?.son400hiz || (irk === 'Arap' ? 52.0 : 54.5));
     bestLast400Hiz = Math.max(...speeds);
   }
   const last400Sec = (400 / (bestLast400Hiz / 3.6)).toFixed(2);
 
-  // Tahmini Finiş Derecesi (Mesafe ve pist sınıfına göre)
-  const avgSpeedMS = pist.includes('kum') ? 16.3 : (pist.includes('sentetik') ? 16.5 : 16.8);
-  let estSec = mesafe / avgSpeedMS;
-  if (pace.type === 'FAST') estSec -= 0.65;
-  if (pace.type === 'SLOW') estSec += 0.95;
-  const estMin = Math.floor(estSec / 60);
-  const estRemSec = (estSec % 60).toFixed(2);
-  const finishTimeStr = `${estMin}.${estRemSec < 10 ? '0' : ''}${estRemSec}`;
-
   return {
+    irk,
     first400Sec,
     first400SpeedKmh,
     first800Str,
@@ -2262,16 +2351,16 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
         <div style="background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.3); border-radius:12px; padding:0.9rem 1rem;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
             <span style="font-size:0.72rem; color:#34d399; font-weight:700;">🏁 PROJEKSİYON BİTİRİŞ DERECESİ</span>
-            <span style="font-size:0.65rem; color:#94a3b8;">${kosu.mesafe || 1600}m ${kosu.pist || 'Çim'}</span>
+            <span style="font-size:0.65rem; color:#94a3b8;">${kosu.mesafe || 1600}m ${kosu.pist || 'Çim'} (${splits.irk} Atı)</span>
           </div>
           <div style="font-size:1.35rem; font-family:'JetBrains Mono',monospace; font-weight:800; color:#f8fafc;">
             ${splits.finishTimeStr}
           </div>
           <div style="font-size:0.72rem; color:#34d399; font-weight:600; margin-top:2px;">
-            Tahmini Resmî Finiş Zamanı
+            Resmî TJK & Safkan Geçmiş Derece Hibriti
           </div>
           <div style="font-size:0.68rem; color:#94a3b8; margin-top:3px; line-height:1.3;">
-            Sınıf, mesafe ve pist katsayılarına göre simüle edilen foto derecesi.
+            Irk standardı, pist sınıfı, safkanların geçmiş dereceleri ve tempo etkisiyle hesaplanan foto derecesi.
           </div>
         </div>
 
