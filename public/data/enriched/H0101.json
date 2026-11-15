@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0101",
+  "name": "Horse_101",
+  "finish_time": 70.54,
+  "weight": 430,
+  "jockey": "Joker3",
+  "track": "Dirt",
+  "distance": 1462,
+  "weather": "Windy",
+  "track_type": "Dirt",
+  "race_time": 1034,
+  "jockey_recent_performance": 47
+}

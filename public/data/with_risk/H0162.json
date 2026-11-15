@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0162",
+  "name": "Horse_162",
+  "finish_time": 80.9,
+  "weight": 428,
+  "jockey": "Joker4",
+  "track": "Sand",
+  "distance": 1817,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 251,
+  "jockey_recent_performance": 92,
+  "predicted_finish_time": 80.84899139404297,
+  "risk_score": 0
+}

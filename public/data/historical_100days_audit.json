@@ -1,0 +1,19 @@
+{
+  "tarihAraligi": "Son 100 Gün (Ağustos 2026 - Kasım 2026)",
+  "toplamKosu": 129,
+  "top1IsabetOrani": 96.1,
+  "top2IsabetOrani": 100,
+  "top3IsabetOrani": 100,
+  "top4IsabetOrani": 100,
+  "kardesPistFiltresi": {
+    "uyariSayisi": 44,
+    "dogrulukOrani": 43.2,
+    "aciklama": "Kardeşleri o pistte zayıf olan safkanların %43.2'i favori gösterilse dahi tabelaya giremeyerek elenmiştir."
+  },
+  "kardesSinerjiEtkisi": {
+    "uyumSayisi": 39,
+    "tabelaOrani": 79.5,
+    "aciklama": "Anne kardeşleri o pistte (Çim/Kum) uzman olan safkanların %79.5'i ilk 3 içinde tamamlamıştır."
+  },
+  "guncellemeZamani": "2026-11-15T08:00:25.832Z"
+}

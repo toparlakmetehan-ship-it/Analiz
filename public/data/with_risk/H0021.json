@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0021",
+  "name": "Horse_21",
+  "finish_time": 90.62,
+  "weight": 393,
+  "jockey": "Joker4",
+  "track": "Grass",
+  "distance": 1699,
+  "weather": "Rainy",
+  "track_type": "Sand",
+  "race_time": 12,
+  "jockey_recent_performance": 61,
+  "predicted_finish_time": 90.56533813476562,
+  "risk_score": 0
+}

@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0134",
+  "name": "Horse_134",
+  "finish_time": 110.35,
+  "weight": 455,
+  "jockey": "Joker2",
+  "track": "Grass",
+  "distance": 1275,
+  "weather": "Windy",
+  "track_type": "Grass",
+  "race_time": 396,
+  "jockey_recent_performance": 16
+}

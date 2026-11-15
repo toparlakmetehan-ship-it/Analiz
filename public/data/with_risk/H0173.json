@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0173",
+  "name": "Horse_173",
+  "finish_time": 108.91,
+  "weight": 482,
+  "jockey": "Joker3",
+  "track": "Grass",
+  "distance": 1753,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 1077,
+  "jockey_recent_performance": 95,
+  "predicted_finish_time": 108.5721435546875,
+  "risk_score": 100
+}

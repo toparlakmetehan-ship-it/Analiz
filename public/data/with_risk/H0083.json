@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0083",
+  "name": "Horse_83",
+  "finish_time": 111.72,
+  "weight": 390,
+  "jockey": "Joker5",
+  "track": "Sand",
+  "distance": 1424,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 818,
+  "jockey_recent_performance": 12,
+  "predicted_finish_time": 96.4704818725586,
+  "risk_score": 21.56999969482422
+}

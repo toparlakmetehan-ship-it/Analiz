@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0110",
+  "name": "Horse_110",
+  "finish_time": 89.49,
+  "weight": 476,
+  "jockey": "Joker3",
+  "track": "Grass",
+  "distance": 1893,
+  "weather": "Cloudy",
+  "track_type": "Grass",
+  "race_time": 718,
+  "jockey_recent_performance": 54,
+  "predicted_finish_time": 89.44557189941406,
+  "risk_score": 0
+}

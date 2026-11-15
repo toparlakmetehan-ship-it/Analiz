@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0150",
+  "name": "Horse_150",
+  "finish_time": 83.96,
+  "weight": 466,
+  "jockey": "Joker1",
+  "track": "Dirt",
+  "distance": 1821,
+  "weather": "Cloudy",
+  "track_type": "Dirt",
+  "race_time": 375,
+  "jockey_recent_performance": 32,
+  "predicted_finish_time": 84.11477661132812,
+  "risk_score": 0
+}

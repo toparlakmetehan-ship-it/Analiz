@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0108",
+  "name": "Horse_108",
+  "finish_time": 73.67,
+  "weight": 524,
+  "jockey": "Joker2",
+  "track": "Sand",
+  "distance": 1092,
+  "weather": "Sunny",
+  "track_type": "Sand",
+  "race_time": 776,
+  "jockey_recent_performance": 79,
+  "predicted_finish_time": 73.70875549316406,
+  "risk_score": 0
+}

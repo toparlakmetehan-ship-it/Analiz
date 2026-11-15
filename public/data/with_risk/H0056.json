@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0056",
+  "name": "Horse_56",
+  "finish_time": 114.21,
+  "weight": 411,
+  "jockey": "Joker5",
+  "track": "Dirt",
+  "distance": 1238,
+  "weather": "Windy",
+  "track_type": "Sand",
+  "race_time": 313,
+  "jockey_recent_performance": 84,
+  "predicted_finish_time": 89.37849426269531,
+  "risk_score": 0
+}

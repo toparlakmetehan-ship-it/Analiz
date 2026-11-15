@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0120",
+  "name": "Horse_120",
+  "finish_time": 72.64,
+  "weight": 511,
+  "jockey": "Joker5",
+  "track": "Grass",
+  "distance": 1076,
+  "weather": "Sunny",
+  "track_type": "Grass",
+  "race_time": 172,
+  "jockey_recent_performance": 66,
+  "predicted_finish_time": 72.67227935791016,
+  "risk_score": 0
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0040",
+  "name": "Horse_40",
+  "finish_time": 73.81,
+  "weight": 527,
+  "jockey": "Joker3",
+  "track": "Dirt",
+  "distance": 1952,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 398,
+  "jockey_recent_performance": 97,
+  "predicted_finish_time": 73.81039428710938,
+  "risk_score": 0
+}

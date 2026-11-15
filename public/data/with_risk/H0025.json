@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0025",
+  "name": "Horse_25",
+  "finish_time": 117.52,
+  "weight": 475,
+  "jockey": "Joker5",
+  "track": "Dirt",
+  "distance": 1939,
+  "weather": "Sunny",
+  "track_type": "Sand",
+  "race_time": 26,
+  "jockey_recent_performance": 46,
+  "predicted_finish_time": 117.40821075439453,
+  "risk_score": 100
+}

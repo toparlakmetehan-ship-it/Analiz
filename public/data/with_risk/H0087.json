@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0087",
+  "name": "Horse_87",
+  "finish_time": 95.11,
+  "weight": 408,
+  "jockey": "Joker5",
+  "track": "Grass",
+  "distance": 1477,
+  "weather": "Windy",
+  "track_type": "Grass",
+  "race_time": 1140,
+  "jockey_recent_performance": 49,
+  "predicted_finish_time": 95.04351806640625,
+  "risk_score": 11.050000190734863
+}

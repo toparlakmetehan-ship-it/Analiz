@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0079",
+  "name": "Horse_79",
+  "finish_time": 106.47,
+  "weight": 458,
+  "jockey": "Joker2",
+  "track": "Sand",
+  "distance": 1782,
+  "weather": "Rainy",
+  "track_type": "Sand",
+  "race_time": 286,
+  "jockey_recent_performance": 33,
+  "predicted_finish_time": 85.02046203613281,
+  "risk_score": 0
+}

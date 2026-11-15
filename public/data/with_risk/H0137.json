@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0137",
+  "name": "Horse_137",
+  "finish_time": 107.22,
+  "weight": 498,
+  "jockey": "Joker1",
+  "track": "Grass",
+  "distance": 1109,
+  "weather": "Cloudy",
+  "track_type": "Dirt",
+  "race_time": 1348,
+  "jockey_recent_performance": 87,
+  "predicted_finish_time": 107.12370300292969,
+  "risk_score": 100
+}

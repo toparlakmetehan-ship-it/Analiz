@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0011",
+  "name": "Horse_11",
+  "finish_time": 96.63,
+  "weight": 540,
+  "jockey": "Joker4",
+  "track": "Grass",
+  "distance": 1909,
+  "weather": "Cloudy",
+  "track_type": "Dirt",
+  "race_time": 1209,
+  "jockey_recent_performance": 3,
+  "predicted_finish_time": 96.62852478027344,
+  "risk_score": 22.729999542236328
+}

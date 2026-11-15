@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0144",
+  "name": "Horse_144",
+  "finish_time": 84.01,
+  "weight": 492,
+  "jockey": "Joker1",
+  "track": "Grass",
+  "distance": 1206,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 74,
+  "jockey_recent_performance": 34,
+  "predicted_finish_time": 83.97886657714844,
+  "risk_score": 0
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0122",
+  "name": "Horse_122",
+  "finish_time": 88.48,
+  "weight": 504,
+  "jockey": "Joker1",
+  "track": "Grass",
+  "distance": 1335,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 1106,
+  "jockey_recent_performance": 64,
+  "predicted_finish_time": 88.7113265991211,
+  "risk_score": 0
+}

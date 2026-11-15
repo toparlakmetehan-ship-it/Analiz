@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0029",
+  "name": "Horse_29",
+  "finish_time": 98.93,
+  "weight": 549,
+  "jockey": "Joker3",
+  "track": "Grass",
+  "distance": 1454,
+  "weather": "Sunny",
+  "track_type": "Sand",
+  "race_time": 880,
+  "jockey_recent_performance": 71,
+  "predicted_finish_time": 98.70358276367188,
+  "risk_score": 38.02000045776367
+}

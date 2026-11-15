@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0180",
+  "name": "Horse_180",
+  "finish_time": 75.35,
+  "weight": 513,
+  "jockey": "Joker1",
+  "track": "Grass",
+  "distance": 1874,
+  "weather": "Sunny",
+  "track_type": "Grass",
+  "race_time": 470,
+  "jockey_recent_performance": 50
+}

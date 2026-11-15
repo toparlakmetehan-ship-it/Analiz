@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0094",
+  "name": "Horse_94",
+  "finish_time": 117.52,
+  "weight": 400,
+  "jockey": "Joker1",
+  "track": "Dirt",
+  "distance": 1400,
+  "weather": "Windy",
+  "track_type": "Sand",
+  "race_time": 60,
+  "jockey_recent_performance": 17,
+  "predicted_finish_time": 99.19844055175781,
+  "risk_score": 41.66999816894531
+}

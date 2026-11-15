@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0130",
+  "name": "Horse_130",
+  "finish_time": 108.01,
+  "weight": 419,
+  "jockey": "Joker5",
+  "track": "Sand",
+  "distance": 1190,
+  "weather": "Cloudy",
+  "track_type": "Sand",
+  "race_time": 1082,
+  "jockey_recent_performance": 77,
+  "predicted_finish_time": 107.95014953613281,
+  "risk_score": 100
+}

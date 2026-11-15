@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0131",
+  "name": "Horse_131",
+  "finish_time": 86.61,
+  "weight": 550,
+  "jockey": "Joker2",
+  "track": "Dirt",
+  "distance": 1551,
+  "weather": "Windy",
+  "track_type": "Sand",
+  "race_time": 1222,
+  "jockey_recent_performance": 18,
+  "predicted_finish_time": 86.65777587890625,
+  "risk_score": 0
+}

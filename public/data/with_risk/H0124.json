@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0124",
+  "name": "Horse_124",
+  "finish_time": 105.56,
+  "weight": 504,
+  "jockey": "Joker2",
+  "track": "Sand",
+  "distance": 1659,
+  "weather": "Cloudy",
+  "track_type": "Dirt",
+  "race_time": 1116,
+  "jockey_recent_performance": 96,
+  "predicted_finish_time": 105.54801177978516,
+  "risk_score": 88.45999908447266
+}

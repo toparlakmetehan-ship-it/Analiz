@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0001",
+  "name": "Horse_1",
+  "finish_time": 89.39,
+  "weight": 460,
+  "jockey": "Joker4",
+  "track": "Grass",
+  "distance": 1303,
+  "weather": "Cloudy",
+  "track_type": "Sand",
+  "race_time": 1060,
+  "jockey_recent_performance": 90
+}

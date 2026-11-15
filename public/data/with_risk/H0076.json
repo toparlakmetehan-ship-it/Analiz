@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0076",
+  "name": "Horse_76",
+  "finish_time": 75.61,
+  "weight": 516,
+  "jockey": "Joker4",
+  "track": "Grass",
+  "distance": 1180,
+  "weather": "Windy",
+  "track_type": "Grass",
+  "race_time": 279,
+  "jockey_recent_performance": 85,
+  "predicted_finish_time": 95.9701919555664,
+  "risk_score": 17.8799991607666
+}

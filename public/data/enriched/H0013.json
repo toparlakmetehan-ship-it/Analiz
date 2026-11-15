@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0013",
+  "name": "Horse_13",
+  "finish_time": 78.92,
+  "weight": 505,
+  "jockey": "Joker5",
+  "track": "Sand",
+  "distance": 1259,
+  "weather": "Rainy",
+  "track_type": "Sand",
+  "race_time": 350,
+  "jockey_recent_performance": 94
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0072",
+  "name": "Horse_72",
+  "finish_time": 118.8,
+  "weight": 513,
+  "jockey": "Joker4",
+  "track": "Dirt",
+  "distance": 1199,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 743,
+  "jockey_recent_performance": 39,
+  "predicted_finish_time": 118.39080810546875,
+  "risk_score": 100
+}

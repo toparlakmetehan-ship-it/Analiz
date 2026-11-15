@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0139",
+  "name": "Horse_139",
+  "finish_time": 85.97,
+  "weight": 517,
+  "jockey": "Joker5",
+  "track": "Grass",
+  "distance": 1963,
+  "weather": "Cloudy",
+  "track_type": "Grass",
+  "race_time": 304,
+  "jockey_recent_performance": 69,
+  "predicted_finish_time": 85.92993927001953,
+  "risk_score": 0
+}

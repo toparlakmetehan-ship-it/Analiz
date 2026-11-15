@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0059",
+  "name": "Horse_59",
+  "finish_time": 84.71,
+  "weight": 507,
+  "jockey": "Joker2",
+  "track": "Dirt",
+  "distance": 1443,
+  "weather": "Windy",
+  "track_type": "Dirt",
+  "race_time": 78,
+  "jockey_recent_performance": 77,
+  "predicted_finish_time": 84.87183380126953,
+  "risk_score": 0
+}

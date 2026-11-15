@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0042",
+  "name": "Horse_42",
+  "finish_time": 111.1,
+  "weight": 528,
+  "jockey": "Joker5",
+  "track": "Dirt",
+  "distance": 1633,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 32,
+  "jockey_recent_performance": 76,
+  "predicted_finish_time": 111.1090316772461,
+  "risk_score": 100
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0104",
+  "name": "Horse_104",
+  "finish_time": 90.74,
+  "weight": 544,
+  "jockey": "Joker4",
+  "track": "Sand",
+  "distance": 1706,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 476,
+  "jockey_recent_performance": 49,
+  "predicted_finish_time": 90.76986694335938,
+  "risk_score": 0
+}

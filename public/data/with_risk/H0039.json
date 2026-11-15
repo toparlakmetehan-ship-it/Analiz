@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0039",
+  "name": "Horse_39",
+  "finish_time": 109.85,
+  "weight": 469,
+  "jockey": "Joker4",
+  "track": "Dirt",
+  "distance": 1335,
+  "weather": "Sunny",
+  "track_type": "Grass",
+  "race_time": 905,
+  "jockey_recent_performance": 88,
+  "predicted_finish_time": 109.66950225830078,
+  "risk_score": 100
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0153",
+  "name": "Horse_153",
+  "finish_time": 112.75,
+  "weight": 470,
+  "jockey": "Joker5",
+  "track": "Dirt",
+  "distance": 1327,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 451,
+  "jockey_recent_performance": 98,
+  "predicted_finish_time": 103.06199645996094,
+  "risk_score": 70.13999938964844
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0106",
+  "name": "Horse_106",
+  "finish_time": 77.55,
+  "weight": 526,
+  "jockey": "Joker1",
+  "track": "Dirt",
+  "distance": 1400,
+  "weather": "Sunny",
+  "track_type": "Dirt",
+  "race_time": 789,
+  "jockey_recent_performance": 93,
+  "predicted_finish_time": 77.53623962402344,
+  "risk_score": 0
+}

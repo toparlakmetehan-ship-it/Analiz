@@ -1,0 +1,13 @@
+{
+  "horse_id": "H001",
+  "name": "Alpina",
+  "finish_time": 85.4,
+  "weight": 480,
+  "jockey": "Joker1",
+  "track": "Grass",
+  "distance": 1200,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 481,
+  "jockey_recent_performance": 64
+}

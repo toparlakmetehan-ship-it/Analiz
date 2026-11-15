@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0060",
+  "name": "Horse_60",
+  "finish_time": 73.62,
+  "weight": 535,
+  "jockey": "Joker3",
+  "track": "Sand",
+  "distance": 1074,
+  "weather": "Sunny",
+  "track_type": "Sand",
+  "race_time": 584,
+  "jockey_recent_performance": 71,
+  "predicted_finish_time": 74.01918029785156,
+  "risk_score": 0
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0051",
+  "name": "Horse_51",
+  "finish_time": 97.43,
+  "weight": 385,
+  "jockey": "Joker2",
+  "track": "Sand",
+  "distance": 1649,
+  "weather": "Cloudy",
+  "track_type": "Grass",
+  "race_time": 23,
+  "jockey_recent_performance": 32,
+  "predicted_finish_time": 97.34022521972656,
+  "risk_score": 27.979999542236328
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0198",
+  "name": "Horse_198",
+  "finish_time": 118.12,
+  "weight": 515,
+  "jockey": "Joker2",
+  "track": "Sand",
+  "distance": 1921,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 1368,
+  "jockey_recent_performance": 87,
+  "predicted_finish_time": 118.06954193115234,
+  "risk_score": 100
+}

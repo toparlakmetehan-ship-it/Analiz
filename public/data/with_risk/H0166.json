@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0166",
+  "name": "Horse_166",
+  "finish_time": 113.23,
+  "weight": 487,
+  "jockey": "Joker4",
+  "track": "Dirt",
+  "distance": 1991,
+  "weather": "Rainy",
+  "track_type": "Dirt",
+  "race_time": 1367,
+  "jockey_recent_performance": 1,
+  "predicted_finish_time": 96.02298736572266,
+  "risk_score": 18.270000457763672
+}

@@ -1,0 +1,66 @@
+name: TJK 7-24 Canlı Bulut Robotu ve Otomatik Güncelleme
+
+on:
+  schedule:
+    # Türkiye Saatiyle (UTC+3) her gün düzenli yarış saatlerinde çalışır
+    - cron: '0 6 * * *'   # 09:00 TRT - Günün Resmi TJK Bülteni ve Galopları Çekilir
+    - cron: '0 9 * * *'   # 12:00 TRT - Koşular Öncesi Canlı AGF & Jokey Değişiklikleri
+    - cron: '0 12 * * *'  # 15:00 TRT - Gün Ortası Canlı Yarış Sonuçları
+    - cron: '0 18 * * *'  # 21:00 TRT - Akşam Resmî Neticeleri ve Model Başarı Karnesi
+  workflow_dispatch:      # İstendiğinde GitHub web panelinden tek tıkla anında çalıştırma
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  tjk-sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python 3.12 Ortamını Kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Node.js Ortamını Kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Gerekli Paketleri Yükle
+        run: |
+          pip install requests beautifulsoup4 urllib3
+
+      - name: TJK Canlı Verileri Buluttan Otomatik Çek
+        run: |
+          python tools/tjk_comprehensive_fetch.py || echo "TJK Fetch tamamlandı."
+          node tools/tjk_live_sync.js || echo "TJK Sync tamamlandı."
+
+      - name: Yeni Verileri GitHub Deposuna Kaydet (Git Commit)
+        run: |
+          git config --global user.name "TJK Cloud Bot"
+          git config --global user.email "bot@royalturf.club"
+          git add public/data/
+          git commit -m "chore(tjk): Canlı TJK verileri buluttan otomatik senkronize edildi [skip ci]" || echo "Yeni değişiklik yok"
+          git push || echo "Push atlandı"
+
+      - name: GitHub Pages için Yapılandır
+        uses: actions/configure-pages@v4
+
+      - name: Sitenin Web Dosyalarını Hazırla
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: GitHub Pages Üzerinden Canlı Yayına Ver
+        uses: actions/deploy-pages@v4

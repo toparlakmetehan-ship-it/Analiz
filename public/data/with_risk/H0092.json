@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0092",
+  "name": "Horse_92",
+  "finish_time": 89.03,
+  "weight": 445,
+  "jockey": "Joker2",
+  "track": "Dirt",
+  "distance": 1181,
+  "weather": "Cloudy",
+  "track_type": "Grass",
+  "race_time": 1285,
+  "jockey_recent_performance": 95,
+  "predicted_finish_time": 89.11420440673828,
+  "risk_score": 0
+}

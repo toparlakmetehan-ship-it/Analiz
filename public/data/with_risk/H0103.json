@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0103",
+  "name": "Horse_103",
+  "finish_time": 77.26,
+  "weight": 436,
+  "jockey": "Joker2",
+  "track": "Dirt",
+  "distance": 1884,
+  "weather": "Cloudy",
+  "track_type": "Sand",
+  "race_time": 1035,
+  "jockey_recent_performance": 15,
+  "predicted_finish_time": 77.32828521728516,
+  "risk_score": 0
+}

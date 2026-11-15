@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0027",
+  "name": "Horse_27",
+  "finish_time": 106.78,
+  "weight": 403,
+  "jockey": "Joker4",
+  "track": "Dirt",
+  "distance": 1957,
+  "weather": "Rainy",
+  "track_type": "Sand",
+  "race_time": 1255,
+  "jockey_recent_performance": 41,
+  "predicted_finish_time": 106.88896179199219,
+  "risk_score": 98.33999633789062
+}

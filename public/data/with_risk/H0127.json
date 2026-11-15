@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0127",
+  "name": "Horse_127",
+  "finish_time": 80.94,
+  "weight": 525,
+  "jockey": "Joker3",
+  "track": "Dirt",
+  "distance": 1947,
+  "weather": "Sunny",
+  "track_type": "Dirt",
+  "race_time": 1196,
+  "jockey_recent_performance": 100,
+  "predicted_finish_time": 81.0110092163086,
+  "risk_score": 0
+}

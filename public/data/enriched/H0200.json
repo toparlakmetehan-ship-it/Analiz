@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0200",
+  "name": "Horse_200",
+  "finish_time": 107.26,
+  "weight": 513,
+  "jockey": "Joker2",
+  "track": "Grass",
+  "distance": 1453,
+  "weather": "Rainy",
+  "track_type": "Sand",
+  "race_time": 915,
+  "jockey_recent_performance": 28
+}

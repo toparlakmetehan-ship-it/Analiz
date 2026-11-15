@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0074",
+  "name": "Horse_74",
+  "finish_time": 71.11,
+  "weight": 558,
+  "jockey": "Joker1",
+  "track": "Sand",
+  "distance": 1913,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 1405,
+  "jockey_recent_performance": 82,
+  "predicted_finish_time": 71.30412292480469,
+  "risk_score": 0
+}

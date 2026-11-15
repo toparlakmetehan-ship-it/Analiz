@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0146",
+  "name": "Horse_146",
+  "finish_time": 102.84,
+  "weight": 382,
+  "jockey": "Joker3",
+  "track": "Sand",
+  "distance": 1395,
+  "weather": "Cloudy",
+  "track_type": "Dirt",
+  "race_time": 1400,
+  "jockey_recent_performance": 84,
+  "predicted_finish_time": 102.81304168701172,
+  "risk_score": 68.30000305175781
+}

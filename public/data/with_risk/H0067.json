@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0067",
+  "name": "Horse_67",
+  "finish_time": 78.81,
+  "weight": 524,
+  "jockey": "Joker5",
+  "track": "Sand",
+  "distance": 1832,
+  "weather": "Sunny",
+  "track_type": "Sand",
+  "race_time": 362,
+  "jockey_recent_performance": 52,
+  "predicted_finish_time": 72.35523986816406,
+  "risk_score": 0
+}

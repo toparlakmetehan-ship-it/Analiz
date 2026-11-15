@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0190",
+  "name": "Horse_190",
+  "finish_time": 73.21,
+  "weight": 385,
+  "jockey": "Joker2",
+  "track": "Grass",
+  "distance": 1556,
+  "weather": "Cloudy",
+  "track_type": "Sand",
+  "race_time": 1088,
+  "jockey_recent_performance": 96,
+  "predicted_finish_time": 73.29733276367188,
+  "risk_score": 0
+}

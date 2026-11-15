@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0017",
+  "name": "Horse_17",
+  "finish_time": 107.49,
+  "weight": 531,
+  "jockey": "Joker1",
+  "track": "Sand",
+  "distance": 1316,
+  "weather": "Cloudy",
+  "track_type": "Grass",
+  "race_time": 1052,
+  "jockey_recent_performance": 21,
+  "predicted_finish_time": 89.205810546875,
+  "risk_score": 0
+}

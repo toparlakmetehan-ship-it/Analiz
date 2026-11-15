@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0112",
+  "name": "Horse_112",
+  "finish_time": 75.7,
+  "weight": 467,
+  "jockey": "Joker1",
+  "track": "Sand",
+  "distance": 1600,
+  "weather": "Rainy",
+  "track_type": "Grass",
+  "race_time": 1359,
+  "jockey_recent_performance": 3,
+  "predicted_finish_time": 75.86370086669922,
+  "risk_score": 0
+}

@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0143",
+  "name": "Horse_143",
+  "finish_time": 84.38,
+  "weight": 392,
+  "jockey": "Joker4",
+  "track": "Sand",
+  "distance": 1331,
+  "weather": "Windy",
+  "track_type": "Sand",
+  "race_time": 199,
+  "jockey_recent_performance": 51,
+  "predicted_finish_time": 84.52151489257812,
+  "risk_score": 0
+}

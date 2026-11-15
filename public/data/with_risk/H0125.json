@@ -1,0 +1,15 @@
+{
+  "horse_id": "H0125",
+  "name": "Horse_125",
+  "finish_time": 80.2,
+  "weight": 531,
+  "jockey": "Joker2",
+  "track": "Sand",
+  "distance": 1957,
+  "weather": "Sunny",
+  "track_type": "Sand",
+  "race_time": 7,
+  "jockey_recent_performance": 82,
+  "predicted_finish_time": 101.98180389404297,
+  "risk_score": 62.18000030517578
+}

@@ -1,0 +1,13 @@
+{
+  "horse_id": "H0022",
+  "name": "Horse_22",
+  "finish_time": 115.45,
+  "weight": 544,
+  "jockey": "Joker4",
+  "track": "Sand",
+  "distance": 1069,
+  "weather": "Cloudy",
+  "track_type": "Dirt",
+  "race_time": 170,
+  "jockey_recent_performance": 49
+}
