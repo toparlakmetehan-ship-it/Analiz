@@ -1,5 +1,6 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const CACHE_NAME = 'royal-turf-v6-nav-fix';
+const APP_VERSION = 'v10-tutan-634k-official-tjk';
+const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -30,7 +31,15 @@ self.addEventListener('activate', event => {
           }
         })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => {
+      return self.clients.claim();
+    }).then(() => {
+      return self.clients.matchAll().then(clients => {
+        clients.forEach(client => {
+          client.postMessage({ type: 'SW_UPDATED', version: APP_VERSION });
+        });
+      });
+    })
   );
 });
 
