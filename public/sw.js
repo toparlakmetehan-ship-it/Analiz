@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const CACHE_NAME = 'royal-turf-v5-live';
+const CACHE_NAME = 'royal-turf-v6-nav-fix';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

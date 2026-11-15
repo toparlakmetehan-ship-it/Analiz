@@ -593,9 +593,76 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
   .brand-text h1 { font-size: 1.15rem; letter-spacing: 1.5px; }
   .brand-text span { font-size: 0.55rem; letter-spacing: 1.5px; }
   
-  /* Üst view butonlarını mobilde gizle, alt nav bara devret */
-  .nav-views { display: none !important; }
+  /* Üst view butonlarını mobilde yatay kaydırılabilir şık sekmeler yap */
+  .navbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.6rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+  .nav-views {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 0.45rem !important;
+    width: 100% !important;
+    padding-bottom: 2px !important;
+    scrollbar-width: none !important;
+  }
+  .view-btn {
+    white-space: nowrap !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.75rem !important;
+    flex-shrink: 0 !important;
+  }
   .mobile-bottom-nav { display: flex !important; }
+
+  /* Hipodrom Butonları Mobilde Pürüzsüz Yatay Kaydırma */
+  .hipodrom-selector {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 0.5rem !important;
+    justify-content: flex-start !important;
+    padding-bottom: 0.5rem !important;
+    scrollbar-width: none !important;
+  }
+  .hipodrom-btn {
+    white-space: nowrap !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.8rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 6'lı Robotu ve Doğrulama Ekranları Mobil Uyum */
+  .budget-console, .backtest-monument {
+    padding: 1.2rem 0.85rem !important;
+    border-radius: 16px !important;
+    margin-bottom: 2rem !important;
+  }
+  .console-header { margin-bottom: 1.5rem !important; }
+  .console-header h3 { font-size: 1.3rem !important; }
+  .console-header p { font-size: 0.78rem !important; }
+  .preset-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+  }
+  .preset-btn {
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    flex: 1 1 auto !important;
+  }
+  .budget-input-wrapper { max-width: 100% !important; }
+  .budget-input { font-size: 1.3rem !important; padding: 0.65rem !important; }
+  .generate-btn { font-size: 0.95rem !important; padding: 0.85rem !important; width: 100% !important; }
+
+  /* Tek At Radarı Modalı Mobil Uyum */
+  #tek-at-modal > div {
+    padding: 1.2rem 1rem !important;
+    max-height: 94vh !important;
+    border-radius: 16px !important;
+  }
 
   .container {
     padding: 1rem 0.8rem 3rem !important;
@@ -1111,19 +1178,54 @@ async function initPlatform() {
 }
 
 // ── TAB GEÇİŞLERİ ──
+// ── TAB VE EKRAN GEÇİŞLERİ (MOBİL VE MASAÜSTÜ SENKRON) ──
 function switchView(viewId) {
+  // Gelen değer numara veya anahtar ise resmi view-pane id'sine çevir
+  if (viewId === 0 || viewId === 'bulten' || viewId === 'bulten-view') viewId = 'bulten-view';
+  else if (viewId === 1 || viewId === 'altili' || viewId === 'robot' || viewId === 'robot-view') viewId = 'robot-view';
+  else if (viewId === 2 || viewId === 'dogrulama' || viewId === 'backtest' || viewId === 'backtest-view') viewId = 'backtest-view';
+
+  // 1. Tüm view pane'leri ve butonları pasife çek
   document.querySelectorAll('.view-pane').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
 
-  document.getElementById(viewId).classList.add('active');
-  const btn = Array.from(document.querySelectorAll('.view-btn')).find(b => b.getAttribute('onclick').includes(viewId));
-  if (btn) btn.classList.add('active');
+  // 2. Hedef pane'i aktif et
+  const targetPane = document.getElementById(viewId);
+  if (!targetPane) {
+    console.error('viewId DOM üzerinde bulunamadı:', viewId);
+    return;
+  }
+  targetPane.classList.add('active');
 
+  // 3. Masaüstü üst menü butonunu aktif et
+  const desktopBtns = document.querySelectorAll('.view-btn');
+  desktopBtns.forEach(b => {
+    const onc = b.getAttribute('onclick') || '';
+    if (onc.includes(viewId)) {
+      b.classList.add('active');
+    }
+  });
+
+  // 4. Sabit mobil alt bar butonunu aktif et
+  const mobileNavItems = document.querySelectorAll('.m-nav-item');
+  mobileNavItems.forEach(item => item.classList.remove('active'));
+
+  if (viewId === 'bulten-view') {
+    document.getElementById('m-nav-bulten')?.classList.add('active');
+  } else if (viewId === 'robot-view') {
+    document.getElementById('m-nav-altili')?.classList.add('active');
+  } else if (viewId === 'backtest-view') {
+    document.getElementById('m-nav-dogrulama')?.classList.add('active');
+  }
+
+  // 5. Görünüme özel dinamik render fonksiyonlarını tetikle
   if (viewId === 'robot-view') {
     optimizeCoupon();
   } else if (viewId === 'backtest-view') {
     renderBacktest();
   }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ── EKRAN 1: RESMİ BÜLTEN ──
@@ -4357,18 +4459,8 @@ function triggerPwaNativeInstall() {
   }
 }
 
-function switchMobileTab(tabKey, viewIdx) {
-  // Update desktop view switcher
-  switchView(viewIdx);
-
-  // Update mobile bottom nav active classes
-  const navItems = document.querySelectorAll('.m-nav-item');
-  navItems.forEach(item => item.classList.remove('active'));
-
-  const activeBtn = document.getElementById('m-nav-' + tabKey);
-  if (activeBtn) activeBtn.classList.add('active');
-
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+function switchMobileTab(viewId) {
+  switchView(viewId);
 }
 
 function openTekAtModalFromMobile() {
@@ -4423,19 +4515,19 @@ function openTekAtModalFromMobile() {
 
 <!-- SABİT ALT MOBİL NAVİGASYON ÇUBUĞU (NATIVE APP BAR) -->
 <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
-  <button class="m-nav-item active" id="m-nav-bulten" onclick="switchMobileTab('bulten', 0)">
+  <button class="m-nav-item active" id="m-nav-bulten" onclick="switchView('bulten-view')">
     <span class="icon">🏇</span>
     <span>Bülten</span>
   </button>
-  <button class="m-nav-item" id="m-nav-altili" onclick="switchMobileTab('altili', 1)">
+  <button class="m-nav-item" id="m-nav-altili" onclick="switchView('robot-view')">
     <span class="icon">🎟️</span>
     <span>6'lı Robotu</span>
   </button>
-  <button class="m-nav-item" id="m-nav-tekat" onclick="openTekAtModalFromMobile()">
+  <button class="m-nav-item" id="m-nav-tekat" onclick="openTekAtRadarModal()">
     <span class="icon">🎯</span>
     <span>Tek At</span>
   </button>
-  <button class="m-nav-item" id="m-nav-dogrulama" onclick="switchMobileTab('dogrulama', 2)">
+  <button class="m-nav-item" id="m-nav-dogrulama" onclick="switchView('backtest-view')">
     <span class="icon">📊</span>
     <span>Doğrulama</span>
   </button>
