@@ -990,17 +990,56 @@ function renderKosular() {
 // ══════════════════════════════════════════════════════════════════════════════════
 // 🏁 SAFKAN KOŞU STİLİ, TEMPO SENARYOSU VE TAKTİKSEL PUAN MOTORU
 // ══════════════════════════════════════════════════════════════════════════════════
+// ── KOŞU STİLİ ŞABLONLARI (ASLA AT İSMİ VEYA SOY KÜTÜĞÜ KULLANILMAZ) ──
+const styleDefinitions = {
+  kacak: {
+    stil: 'Kaçak / Lider',
+    ikon: '⚡',
+    renk: '#ef4444',
+    bg: 'rgba(239, 68, 68, 0.15)',
+    border: 'rgba(239, 68, 68, 0.4)',
+    taktik: 'Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.'
+  },
+  presci: {
+    stil: 'Presçi',
+    ikon: '🏹',
+    renk: '#10b981',
+    bg: 'rgba(16, 185, 129, 0.15)',
+    border: 'rgba(16, 185, 129, 0.4)',
+    taktik: 'Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.'
+  },
+  ortagrup: {
+    stil: 'Orta Grup',
+    ikon: '🛡️',
+    renk: '#3b82f6',
+    bg: 'rgba(59, 130, 246, 0.15)',
+    border: 'rgba(59, 130, 246, 0.4)',
+    taktik: 'Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.'
+  },
+  sprinter: {
+    stil: 'Düzlük Sprinteri',
+    ikon: '🚀',
+    renk: '#a855f7',
+    bg: 'rgba(168, 85, 247, 0.15)',
+    border: 'rgba(168, 85, 247, 0.4)',
+    taktik: 'Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.'
+  }
+};
+
+// GENEL VE DEĞİŞMEZ KURAL: Kariyerinde <= 3 koşu koşan hiçbir safkana kalıplaşmış gidişat atanmaz
 function isYoungInexperiencedHorse(at) {
   if (!at) return false;
   if (at.isFirstTimeStarter) return true;
+  if (at.yas === 2) return true; // 2 yaşındaki İngiliz tayları yarış hayatının başındadır
   if (at.careerSummary && typeof at.careerSummary.toplamKosu === 'number') {
     return at.careerSummary.toplamKosu <= 3;
   }
   if (typeof at.realRacesCount === 'number' && at.realRacesCount > 0) {
     return at.realRacesCount <= 3;
   }
-  if (Array.isArray(at.pastRaces) && at.pastRaces.length > 0) {
-    return at.pastRaces.length <= 3;
+  if (Array.isArray(at.pastRaces)) {
+    if (at.pastRaces.length === 0) return true;
+    if (at.pastRaces.length <= 3) return true;
   }
   const cleanYarislar = (at.son_yarislar || '').replace(/[^0-9]/g, '');
   if (cleanYarislar.length > 0) {
@@ -1024,58 +1063,10 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
   }
 
   at.isYoungHorse = false;
-  const horseName = (at.isim || '').trim();
-
-  const styleRules = [
-    {
-      regex: /^SPEED QUEEN$|^THUNDERSTRUCK$|^ASLIHANOĞLU$|^SANCAR$|^GÖK BERK$|^MISS DEVRAN$|^YALNIZ AŞIK$|^LUSİA$|^ORMANCIBEY$|^BOZKIR KARTALI$/i,
-      stil: 'Kaçak / Lider',
-      ikon: '⚡',
-      renk: '#ef4444',
-      bg: 'rgba(239, 68, 68, 0.15)',
-      border: 'rgba(239, 68, 68, 0.4)',
-      taktik: 'Geçmiş koşularında startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.'
-    },
-    {
-      regex: /^ÜSTÜNSOY$|^SERDÜMEN$|^GÜMBÜRGÜMBÜR$|^BALKIBEY$|^DOSTBAŞAR$|^HAYRETBİŞEY$|^TOR GOLD$|^REFLECTED$|^EFE KAPTAN$|^AĞILMUS$|^ALKATRAZ$|^ALATTİN$|^ÇELİK ABİ$|^CAYMAZBEY$/i,
-      stil: 'Presçi',
-      ikon: '🏹',
-      renk: '#10b981',
-      bg: 'rgba(16, 185, 129, 0.15)',
-      border: 'rgba(16, 185, 129, 0.4)',
-      taktik: 'Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.'
-    },
-    {
-      regex: /^UZBOYLU$|^TAŞKARA$|^AYDIN DAYI$|^AĞILMUS ASLANI$/i,
-      stil: 'Orta Grup',
-      ikon: '🛡️',
-      renk: '#3b82f6',
-      bg: 'rgba(59, 130, 246, 0.15)',
-      border: 'rgba(59, 130, 246, 0.4)',
-      taktik: 'Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.'
-    },
-    {
-      regex: /^ALWAYS HARD$|^DRAGON PRIME$|^GHOST COMMANDER$|^VOLITIVO$|^CHARABANC$|^WHIZBANG$|^SPECIAL MAN$|^EFLAH$|^KAYIPSIZ$|^DELİ ŞİMŞEK$/i,
-      stil: 'Düzlük Sprinteri',
-      ikon: '🚀',
-      renk: '#a855f7',
-      bg: 'rgba(168, 85, 247, 0.15)',
-      border: 'rgba(168, 85, 247, 0.4)',
-      taktik: 'Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.'
-    }
-  ];
-
   let matched = null;
-  // 1. ÖNCELİK: Safkanın kendi adı ile doğrudan eşleşme (Doğal kaçak / presçi / sprinter)
-  for (const rule of styleRules) {
-    if (rule.regex.test(horseName)) {
-      matched = rule;
-      break;
-    }
-  }
 
-  // 2. ÖNCELİK: Safkanın kendi geçmiş yarış takip pozisyonu ortalaması (runningLine / early split)
-  if (!matched && at.pastRaces && at.pastRaces.length > 0) {
+  // 1. ÖNCELİK: Safkanın kendi geçmiş yarış takip pozisyonu ortalaması (runningLine / early split)
+  if (at.pastRaces && at.pastRaces.length > 0) {
     let earlyPositions = [];
     at.pastRaces.forEach(p => {
       if (p.runningLine) {
@@ -1097,30 +1088,30 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
       const avgPos = weightedSum / weightTotal;
 
       if (avgPos <= 1.8) {
-        matched = styleRules[0]; // Kaçak
+        matched = styleDefinitions.kacak;
       } else if (avgPos <= 3.2) {
-        matched = styleRules[1]; // Presçi
+        matched = styleDefinitions.presci;
       } else if (avgPos <= 5.8) {
-        matched = styleRules[2]; // Orta Grup
+        matched = styleDefinitions.ortagrup;
       } else {
-        matched = styleRules[3]; // Sprinter
+        matched = styleDefinitions.sprinter;
       }
     }
   }
 
-  // 3. ÖNCELİK: Kendi kulvar ve galop sprint ivmesine göre organik dağılım (ASLA ANNE/BABA KULLANILMAZ)
+  // 2. ÖNCELİK: Geçmiş yarış çizgisi bulunamayan tecrübeli safkanlar için son galop sprint ivmesi & kulvar dağılımı
   if (!matched) {
     const kulvar = Number(at.kulvar || (idx + 1));
     const sprintSpeed = at.son_galop?.son400hiz || 50;
 
     if (kulvar <= 2 && sprintSpeed >= 53) {
-      matched = styleRules[0]; // Kaçak
+      matched = styleDefinitions.kacak;
     } else if (kulvar <= 5) {
-      matched = styleRules[1]; // Presçi
+      matched = styleDefinitions.presci;
     } else if (sprintSpeed >= 54) {
-      matched = styleRules[3]; // Sprinter
+      matched = styleDefinitions.sprinter;
     } else {
-      matched = styleRules[2]; // Orta Grup
+      matched = styleDefinitions.ortagrup;
     }
   }
 
