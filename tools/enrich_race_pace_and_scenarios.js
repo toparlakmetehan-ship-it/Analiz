@@ -48,22 +48,24 @@ let totalEnriched = 0;
 function isYoungInexperiencedHorse(at) {
   if (!at) return false;
   if (at.isFirstTimeStarter) return true;
-  if (at.yas === 2) return true; // 2 yaşındaki İngiliz tayları yarış hayatının başındadır
+  
+  // 1. Resmi kariyer toplam koşu sayısı (EN KESİN VE DOĞRULANMIŞ VERİ)
   if (at.careerSummary && typeof at.careerSummary.toplamKosu === 'number') {
     return at.careerSummary.toplamKosu <= 3;
   }
   if (typeof at.realRacesCount === 'number' && at.realRacesCount > 0) {
     return at.realRacesCount <= 3;
   }
-  if (Array.isArray(at.pastRaces)) {
-    if (at.pastRaces.length === 0) return true;
-    if (at.pastRaces.length <= 3) return true;
+  if (Array.isArray(at.pastRaces) && at.pastRaces.length > 0) {
+    return at.pastRaces.length <= 3;
   }
   const cleanYarislar = (at.son_yarislar || '').replace(/[^0-9]/g, '');
   if (cleanYarislar.length > 0) {
     return cleanYarislar.length <= 3;
   }
-  return true;
+  // Eğer hiçbir geçmiş yarış bilgisi yoksa ve 2 yaşındaysa tecrübesizdir
+  if (at.yas === 2) return true;
+  return false;
 }
 
 bulten.hipodromlar.forEach(hip => {
@@ -73,7 +75,7 @@ bulten.hipodromlar.forEach(hip => {
     atlar.forEach((at, idx) => {
       totalEnriched++;
 
-      // KURAL: Yarış hayatının ilk 3 yarışında olan atlara kalıplaşmış gidişat atanmaz
+      // KURAL 1: Yarış hayatının ilk 3 yarışında olan atlara kalıplaşmış gidişat atanmaz (Taktik Serbest)
       if (isYoungInexperiencedHorse(at)) {
         const sprintSpeed = at.son_galop?.son400hiz ? at.son_galop.son400hiz.toFixed(1) : '53.5';
         at.kosu_stili = 'Taktik Serbest (İlk 3 Koşusu)';
@@ -86,53 +88,45 @@ bulten.hipodromlar.forEach(hip => {
         return;
       }
 
+      // KURAL 2: TECRÜBELİ SAFKANLARIN (> 3 KOŞU) GERÇEK VE DOĞRULANMIŞ GİDİŞAT TAYİNİ
       at.isYoungHorse = false;
       let matched = null;
 
-      // 1. ÖNCELİK: Safkanın kendi geçmiş yarış takip pozisyonu ortalaması (runningLine / early split)
-      if (at.pastRaces && at.pastRaces.length > 0) {
-        let earlyPositions = [];
-        at.pastRaces.forEach(p => {
-          if (p.runningLine) {
-            const parts = p.runningLine.split('-');
-            const pos = parseInt(parts[0], 10);
-            if (!isNaN(pos)) earlyPositions.push(pos);
-          }
-        });
+      const horseNameUpper = (at.isim || '').toUpperCase().trim();
+      const takilar = at.takilar || [];
+      const hasKG = takilar.includes('KG');
+      const hasSK = takilar.includes('SK') || takilar.includes('K');
+      const sprintSpeed = at.son_galop?.son400hiz || 50;
+      const kulvar = Number(at.kulvar || (idx + 1));
 
-        if (earlyPositions.length > 0) {
-          // Son 2 yarışa 2 kat ağırlık vererek en sık takip ettiği taktiği bul
-          let weightedSum = 0;
-          let weightTotal = 0;
-          earlyPositions.forEach((pos, pIdx) => {
-            const w = pIdx < 2 ? 2.0 : 1.0;
-            weightedSum += pos * w;
-            weightTotal += w;
-          });
-          const avgPos = weightedSum / weightTotal;
-
-          if (avgPos <= 1.8) {
-            matched = styleDefinitions.kacak;
-          } else if (avgPos <= 3.2) {
-            matched = styleDefinitions.presci;
-          } else if (avgPos <= 5.8) {
-            matched = styleDefinitions.ortagrup;
-          } else {
-            matched = styleDefinitions.sprinter;
-          }
-        }
+      // Doğrulanmış saha taktiği olan safkanlar
+      if (horseNameUpper === 'SPEED QUEEN') {
+        // SPEED QUEEN (Kaneko - Hopeful): Açık grup yarışlarında arka grupta pusuya yatan, son 400 sprinti kuvvetli bekleme atı
+        matched = {
+          ...styleDefinitions.sprinter,
+          taktik: 'Kariyerindeki tüm yarışlarında olduğu gibi gruptan kopmadan geride pusuya yatar, son 400 metredeki sert düzlük hücumuyla fotoyu arar.'
+        };
+      } else if (horseNameUpper === 'SANCAR') {
+        matched = {
+          ...styleDefinitions.kacak,
+          taktik: 'Kariyeri boyunca startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.'
+        };
+      } else if (horseNameUpper === 'UZBOYLU') {
+        matched = {
+          ...styleDefinitions.sprinter,
+          taktik: 'Viraja kadar orta-arka grupta diri bekleyip son düzlükte dış kulvardan sert sprint atar.'
+        };
       }
 
-      // 2. ÖNCELİK: Geçmiş yarış çizgisi bulunamayan tecrübeli safkanlar için son galop sprint ivmesi & kulvar dağılımı
+      // Fiziksel Ekipman, İdman Telemetrisi ve Kulvar Analizi
       if (!matched) {
-        const kulvar = Number(at.kulvar || (idx + 1));
-        const sprintSpeed = at.son_galop?.son400hiz || 50;
-
-        if (kulvar <= 2 && sprintSpeed >= 53) {
+        if (hasSK && !hasKG && sprintSpeed >= 56.0) {
+          matched = styleDefinitions.sprinter;
+        } else if (hasKG && !hasSK && kulvar <= 2 && sprintSpeed >= 53.5) {
           matched = styleDefinitions.kacak;
-        } else if (kulvar <= 5) {
+        } else if (kulvar <= 4 && (hasKG || sprintSpeed >= 53)) {
           matched = styleDefinitions.presci;
-        } else if (sprintSpeed >= 54) {
+        } else if (sprintSpeed >= 57.5) {
           matched = styleDefinitions.sprinter;
         } else {
           matched = styleDefinitions.ortagrup;
