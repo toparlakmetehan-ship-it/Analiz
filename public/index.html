@@ -9,6 +9,9 @@
 <meta name="apple-mobile-web-app-title" content="Royal Turf"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <link rel="manifest" href="manifest.json"/>
 <link rel="icon" type="image/png" href="icons/favicon.png"/>
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
@@ -4277,6 +4280,18 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').then(reg => {
       console.log('Royal Turf PWA Service Worker Aktif:', reg.scope);
+      reg.update();
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              console.log('Yeni Royal Turf sürümü yüklendi, sayfa yenileniyor...');
+              window.location.reload();
+            }
+          });
+        }
+      });
     }).catch(err => {
       console.log('SW hatası:', err);
     });

@@ -1,5 +1,5 @@
-// ROYAL TURF — Service Worker (PWA Offline Caching & Background Sync)
-const CACHE_NAME = 'royal-turf-v4-macro';
+// ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
+const CACHE_NAME = 'royal-turf-v5-live';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -11,10 +11,11 @@ const ASSETS_TO_CACHE = [
 ];
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(ASSETS_TO_CACHE);
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
@@ -24,6 +25,7 @@ self.addEventListener('activate', event => {
       return Promise.all(
         keys.map(key => {
           if (key !== CACHE_NAME) {
+            console.log('[SW] Eski önbellek silindi:', key);
             return caches.delete(key);
           }
         })
@@ -32,34 +34,46 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Network-first strategy for dynamic race data, Cache-first for shell & icons
+// NETWORK-FIRST: Daima canlı sunucudaki en güncel HTML ve yarış verisini çeker,
+// sadece internet kesildiğinde önbellekten servis eder.
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // For data API calls (JSON), network first with cache fallback
-  if (url.pathname.includes('/data/') || url.pathname.endsWith('.json')) {
+  // 1. Sayfa gezinmesi (HTML) veya Canlı Yarış JSON Verileri -> Daima Network First
+  const isHtml = event.request.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname.endsWith('/');
+  const isData = url.pathname.includes('/data/') || url.pathname.endsWith('.json');
+
+  if (isHtml || isData) {
     event.respondWith(
       fetch(event.request)
         .then(response => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          if (response && response.status === 200) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          }
           return response;
         })
-        .catch(() => caches.match(event.request))
+        .catch(() => {
+          return caches.match(event.request).then(cached => {
+            if (cached) return cached;
+            if (isHtml) return caches.match('./index.html');
+            return null;
+          });
+        })
     );
     return;
   }
 
-  // For other static assets, cache first, then network fallback
+  // 2. Statik simgeler ve resimler -> Önbellek, bulunamazsa ağ
   event.respondWith(
     caches.match(event.request).then(cached => {
       return cached || fetch(event.request).then(networkResponse => {
+        if (networkResponse && networkResponse.status === 200) {
+          const clone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+        }
         return networkResponse;
       });
-    }).catch(() => {
-      if (event.request.mode === 'navigate') {
-        return caches.match('./index.html');
-      }
     })
   );
 });
