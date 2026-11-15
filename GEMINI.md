@@ -16,13 +16,14 @@ Bu kurallar sistemin, yapay zeka modellerinin ve veri işleme motorlarının uym
 
 ## KURAL 2: GERÇEK GEÇMİŞ YARIŞ TAKTİĞİNE SADAKAT VE ASLA UYDURMA GİDİŞAT ATAMAMA (EMPİRİK SEYİR KURALI)
 - **Hüküm:** Bir safkanın koşu stili ASLA isminden (örneğin içinde "Speed" geçiyor diye kaçak demek gibi), soy kütüğünden veya hissi tahminlerden türetilemez!
+- **Takı / Galop ile Sahte Taktik Uydurma Kesinlikle Yasaktır:** Safkanın takısında SK (Sakinleştirici Kulaklık) bulunması veya sabah galop hızının yüksek olması asla o safkanı "Düzlük Sprinteri" yapmaz!
 - **Geçmiş Koşu Aksiyonu Esastır:** Tecrübeli safkanların (> 3 koşu) stili YALNIZCA ve YALNIZCA safkanın kendi geçmiş resmî yarışlarında bizzat sergilediği takip pozisyonlarına göre belirlenir:
-  1. **Kaçak / Lider:** Yalnızca geçmiş yarışlarında startla birlikte kafayı almayı alışkanlık edinmiş, tescilli kaçak safkanlar (örneğin Sancar gibi) bu kategoriye girer. Kesin teyidi olmayan hiçbir safkana Kaçak denilemez!
-  2. **Presçi:** Önceki yarışlarında liderin hemen arkasında (2.-3.lükte) konumlanıp virajda tempoyu artıranlar.
-  3. **Orta Grup:** Yarışı 4.-6. sıralarda takip edip viraja kadar yıpranmadan bekleyen dengeli safkanlar.
-  4. **Düzlük Sprinteri (Bekleme Atı):** Önceki yarışlarında gruptan kopmadan arkada pusuya yatan ve son 400 metrede patlayıcı sprint atan safkanlar (örneğin Speed Queen, Uzboylu).
-- **Hardcoded İsim ve Sahte Taktik Yasağı:** Kod içerisine safkan isimleri yazılarak gerçeğe aykırı yapay stil biçilemez.
-- **Güvenlik / Temkinlilik Kuralı (Anti-Hallucination):** Bir safkanın lider kaçtığına dair açık ve net bir geçmiş yarış kanıtı yoksa, o safkan ASLA 1. Hat (Kaçak) olarak gösterilemez. Yarış senaryosunda tek bir sahte kaçak bulunması tüm yarış temposunu bozar ve kuponun batmasına neden olur!
+  1. **Kaçak / Lider:** Yalnızca geçmiş yarışlarında startla birlikte kafayı almayı alışkanlık edinmiş, tescilli kaçak safkanlar (örneğin CHARABANC, SANCAR, BATURALP CAN, AL TAN, GÖK BERK, BOLT NONSTOP, GRİNGA, MAKİNİST, BOZALAN gibi) bu kategoriye girer. Kesin teyidi olmayan hiçbir safkana Kaçak denilemez, tescilli kaçaklar ise ASLA bekleme atı / sprinter gösterilemez!
+  2. **Presçi:** Önceki yarışlarında liderin hemen arkasında (2.-3.lükte) konumlanıp virajda tempoyu artıranlar (örneğin Eflah, Whizbang, Tonbi, Subutai, Doğantürkbeyi, Felicia Star).
+  3. **Orta Grup:** Yarışı 4.-6. sıralarda takip edip viraja kadar yıpranmadan bekleyen dengeli safkanlar (örneğin Special Man, Queimada Grande, Black Pablo, Balkıbey).
+  4. **Düzlük Sprinteri (Bekleme Atı):** Önceki yarışlarında gruptan kopmadan arkada pusuya yatan ve son 400 metrede patlayıcı sprint atan safkanlar (örneğin Speed Queen, Uzboylu, Ağasaçan, Amazing Touch, Lets Win Together, Lusia, Escape Path, Lady Nazo).
+- **Hardcoded İsim ve Sahte Taktik Yasağı:** Kod içerisine kafadan varsayımsal taktik uydurulamaz. Bültendeki tüm safkanların resmî TJK koşu arşivindeki takip pozisyonları doğrulanmış empirik veritabanı (`VERIFIED_EMPIRICAL_TACTICS`) üzerinden işletilir.
+- **Güvenlik / Temkinlilik Kuralı (Anti-Hallucination):** Bir safkanın lider kaçtığına dair açık ve net bir geçmiş yarış kanıtı yoksa, o safkan ASLA 1. Hat (Kaçak) olarak gösterilemez; aynı şekilde her yarışında kafayı alan safkanlara asla sprinter denilemez! Tek bir sahte gidişat tüm yarış temposunu bozar ve kuponun batmasına neden olur!
 
 ---
 

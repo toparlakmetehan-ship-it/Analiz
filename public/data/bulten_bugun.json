@@ -490,7 +490,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Startla birlikte ön grupta konumlanır, liderin hemen arkasında pres kurarak virajı döner.",
               "isYoungHorse": false
             },
             {
@@ -522,7 +522,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "9.35",
@@ -949,11 +949,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Ön grubun arkasında 3.-5. sıralarda pusuya yatar, düzlük hücumuyla sonuç arar.",
               "isYoungHorse": false
             },
             {
@@ -1431,7 +1431,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yıpranmadan dengeli seyreder, son 400'de devreye girer.",
               "isYoungHorse": false
             },
             {
@@ -1905,7 +1905,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Yarışı orta grupta takip eder, viraj çıkışı dış kulvardan hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -2410,7 +2410,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "25.45",
@@ -2828,11 +2828,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Erken tempolara karışmaz, arka grupta bekleyip son düzlükte güçlü kapanış yapar.",
               "isYoungHorse": false
             },
             {
@@ -3331,7 +3331,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yer tutar, düzlükte temposunu artırarak tabelayı hedefler.",
               "isYoungHorse": false
             },
             {
@@ -3803,7 +3803,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Grupta dengeli seyreder, viraja kadar kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -3835,7 +3835,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "89.05",
@@ -4224,11 +4224,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta kendini yıpratmadan bekler, düzlükte etkili gelmeye çalışır.",
               "isYoungHorse": false
             },
             {
@@ -4261,7 +4261,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "10.45",
@@ -4728,11 +4728,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta bekleyerek son virajda pozisyon alır.",
               "isYoungHorse": false
             }
           ],
@@ -11487,7 +11487,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yer tutar, viraja kadar temposunu korur.",
               "isYoungHorse": false
             },
             {
@@ -11520,7 +11520,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -11888,11 +11888,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli bekler, son düzlükte mücadeleye katılır.",
               "isYoungHorse": false
             },
             {
@@ -11924,7 +11924,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -12285,11 +12285,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Bekleme taktiği uygular, son 200'de dış kulvardan güçlü hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -12322,7 +12322,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "1.50",
@@ -12785,11 +12785,11 @@
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%46 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Önde veya öne yakın gitmeyi sever, liderin bitişiğinde yer tutar.",
               "isYoungHorse": false
             },
             {
@@ -13244,7 +13244,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Ön grubun hemen arkasında 2.-3.lükte konumlanır, virajda liderliği zorlayarak pres yapar.",
               "isYoungHorse": false
             },
             {
@@ -13729,7 +13729,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "51.10",
@@ -14103,11 +14103,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gerilerde sabırla bekler, son 400'de patlayıcı dış kulvar sprintiyle rakiplerini avlar.",
               "isYoungHorse": false
             },
             {
@@ -14518,7 +14518,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta sakin seyreder, viraj dönüşü hamle yapar.",
               "isYoungHorse": false
             },
             {
@@ -14925,7 +14925,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta kendini saklar, düzlükte sprint arar.",
               "isYoungHorse": false
             },
             {
@@ -15323,7 +15323,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta takip pozisyonunda kalır.",
               "isYoungHorse": false
             },
             {
@@ -15726,7 +15726,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Grup içinde dengeli koşar, virajda atağa kalkar.",
               "isYoungHorse": false
             },
             {
@@ -16120,7 +16120,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yerini korur, düzlükte sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -16152,7 +16152,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -16511,11 +16511,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geride bekleyerek son düzlükte dış kulvardan gelir.",
               "isYoungHorse": false
             }
           ],
@@ -24469,7 +24469,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Ön gruba yakın konumlanır, lideri yakın takip eder.",
               "isYoungHorse": false
             },
             {
@@ -24845,7 +24845,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -25209,11 +25209,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli bekler, düzlükte hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -25903,7 +25903,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Arka grupta sabırla bekler, son 400'de güçlü sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -32295,7 +32295,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Geride pusuya yatar, son 400 sprintiyle fotoyu arar.",
               "isYoungHorse": false
             },
             {
@@ -32788,7 +32788,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yer tutar, temponun durumuna göre mukavemet arar.",
               "isYoungHorse": false
             },
             {
@@ -33279,7 +33279,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Arka grupta bekler, son düzlükte güçlü gelir.",
               "isYoungHorse": false
             },
             {
@@ -33311,7 +33311,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -33724,11 +33724,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta yerini muhafaza eder, viraj çıkışı hızlanır.",
               "isYoungHorse": false
             },
             {
@@ -34191,7 +34191,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Ön grupta liderin hemen arkasında konumlanır, virajda baskısını artırır.",
               "isYoungHorse": false
             },
             {
@@ -34223,7 +34223,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Presçi",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "9.00",
@@ -34686,11 +34686,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön gruba sokulur, liderin arkasında pres kurarak yarışa tempo verir.",
               "isYoungHorse": false
             },
             {
@@ -34722,7 +34722,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 23,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -35096,11 +35096,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Acele etmez, orta-arka grupta bekleyip düzlükte sprint gücünü devreye sokar.",
               "isYoungHorse": false
             },
             {
@@ -35131,7 +35131,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "5.30",
@@ -35553,11 +35553,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -35590,7 +35590,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 12,
               "agf_kaynak": "gercek",
               "ganyan": "9.00",
@@ -36054,11 +36054,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır, önde tempo vererek kaçar.",
               "isYoungHorse": false
             },
             {
@@ -36091,7 +36091,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 11,
               "agf_kaynak": "gercek",
               "ganyan": "45.15",
@@ -36509,11 +36509,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%44)",
                 "delta": 4
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Gerilerde saklanır, son düzlük hücumuyla gelir.",
               "isYoungHorse": false
             }
           ],
@@ -43254,7 +43254,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "3.00",
@@ -43694,11 +43694,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla beraber liderliği alır, yüksek tempoda çıktığı gibi bitirmeye çalışır.",
               "isYoungHorse": false
             },
             {
@@ -44079,7 +44079,7 @@
               "dinlenme_gunu": 21,
               "takilar": [],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 44,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -44456,11 +44456,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Ön grubun hemen arkasında konumlanır, düzlükteki gücüyle sonuca gitmeye çalışır.",
               "isYoungHorse": false
             },
             {
@@ -44819,7 +44819,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "3.00",
@@ -45217,11 +45217,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli bekler.",
               "isYoungHorse": false
             },
             {
@@ -45251,7 +45251,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "3.45",
@@ -45637,11 +45637,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -46018,7 +46018,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Ön grupta lideri yakından takip eder, virajda pres kurar.",
               "isYoungHorse": false
             },
             {
@@ -46371,7 +46371,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -46738,11 +46738,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %57 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Orta-arka grupta yer tutarak tempoyu takip eder, düzlük sprintiyle hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -47044,7 +47044,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -47424,11 +47424,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta viraja kadar bekler.",
               "isYoungHorse": false
             },
             {
@@ -54808,7 +54808,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -55227,11 +55227,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Kariyerinde startla birlikte kafayı almayı alışkanlık edinmiştir, yüksek tempoyla yarışı önde forse eder ve beyaz bayrak ayna peşindedir.",
               "isYoungHorse": false
             },
             {
@@ -55686,7 +55686,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Orta-arka grupta sabırla bekler, son düzlükteki güçlü sprintiyle rakiplerini yakalar.",
               "isYoungHorse": false
             },
             {
@@ -55718,7 +55718,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 3,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -56131,11 +56131,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Ön-orta grupta 3.-4.lük çeperinde konumlanır, son virajda keskin sprintle hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -56167,7 +56167,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Presçi",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -56584,11 +56584,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %13 (Kumda %41 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen arkasında ön grupta yer tutar, düzlükte mukavemet gösterir.",
               "isYoungHorse": false
             },
             {
@@ -57092,7 +57092,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Ön gruba yakın seyreder, liderin arkasında 2.-3.lükte tempoyu kontrol eder.",
               "isYoungHorse": false
             },
             {
@@ -57606,7 +57606,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Yarışın başında acele etmeyip geride bekler, son 400'deki patlayıcı sprintiyle hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -57636,7 +57636,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 60,
               "agf_kaynak": "gercek",
               "ganyan": "25.90",
@@ -58048,11 +58048,11 @@
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%46 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grupta liderin hemen yanına konumlanır, yüksek tempoda lideri sürekli pres altında tutar.",
               "isYoungHorse": false
             }
           ],
@@ -62767,7 +62767,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 24,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -63191,11 +63191,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte öne düşerek tempoyu kurar, çıktığı gibi bitirmeye çalışır.",
               "isYoungHorse": false
             },
             {
@@ -63226,7 +63226,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -63639,11 +63639,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Öndeki temponun arkasında orta grupta takip eder, düzlükte etkili sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -63677,7 +63677,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "3.85",
@@ -64081,11 +64081,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %10 (Kumda %44 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Orta-arka grupta bekleme yapar, son virajda dış kulvardan uzun soluklu sprint başlatır.",
               "isYoungHorse": false
             },
             {
@@ -64603,7 +64603,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Ön sıralarda veya liderin arkasında tempoyu forse eder.",
               "isYoungHorse": false
             },
             {
@@ -64634,7 +64634,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 17,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -65054,11 +65054,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -65488,7 +65488,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Arkada bekleyerek ekürisiyle birlikte son düzlükte güçlü tempo yapar.",
               "isYoungHorse": false
             },
             {
@@ -65519,7 +65519,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -65884,11 +65884,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -65919,7 +65919,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -66279,11 +66279,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %40 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta viraja kadar bekler.",
               "isYoungHorse": false
             }
           ],
@@ -71331,7 +71331,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Presçi",
               "agf_orani": 21,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -71698,11 +71698,11 @@
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%53 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen dibinde pres kurar, virajda liderliği zorlar.",
               "isYoungHorse": false
             },
             {
@@ -72534,7 +72534,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "561.20",
@@ -72895,11 +72895,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "1200m sürat koşusunda startla kafayı alır, seri adımlarla bariyerden kaçar.",
               "isYoungHorse": false
             },
             {
@@ -78019,7 +78019,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Arka grupta bekler, son düzlük hücumuyla gelir.",
               "isYoungHorse": false
             },
             {
@@ -78050,7 +78050,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "18.95",
@@ -78473,11 +78473,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %15 (Kumda %43 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte liderliği alır ya da liderin dibinde baskı kurarak önde tempo belirler.",
               "isYoungHorse": false
             },
             {
@@ -78508,7 +78508,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 8,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -78869,11 +78869,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -78904,7 +78904,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 10,
               "agf_kaynak": "gercek",
               "ganyan": "90.00",
@@ -79272,11 +79272,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %8 (Kumda %44 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta pozisyonunu korur.",
               "isYoungHorse": false
             },
             {
@@ -79697,7 +79697,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Orta-arka grupta sabırla bekler, son düzlükte dış kulvardan sert sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -80126,7 +80126,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Erken metrelerde geride kalır, öndekilerin yorulmasından faydalanarak sonlarda akar.",
               "isYoungHorse": false
             },
             {
@@ -80160,7 +80160,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 24,
               "agf_kaynak": "gercek",
               "ganyan": "13.30",
@@ -80580,11 +80580,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %7 (Kumda %43 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta viraja kadar yıpranmadan gelir.",
               "isYoungHorse": false
             },
             {
@@ -80616,7 +80616,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -81008,11 +81008,11 @@
                 "warningBadge": "🟢 ÇİM SİNERJİSİ: Kardeşleri Çim Uzmanı (%50 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli bekler.",
               "isYoungHorse": false
             },
             {
@@ -81043,7 +81043,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Presçi",
               "agf_orani": 13,
               "agf_kaynak": "gercek",
               "ganyan": "21.15",
@@ -81463,11 +81463,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Çimde %13 (Kumda %47 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Öne erken hamle yapar, ön grupta yer tutarak son virajda atağa kalkar.",
               "isYoungHorse": false
             },
             {
@@ -81500,7 +81500,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "13.30",
@@ -81870,11 +81870,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta seyreder, düzlükte sprint arar.",
               "isYoungHorse": false
             },
             {
@@ -81907,7 +81907,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -82307,11 +82307,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geride pusuya yatar, son 400'de sprint gücünü gösterir.",
               "isYoungHorse": false
             },
             {
@@ -82344,7 +82344,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -82747,11 +82747,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta takip pozisyonunda kalır.",
               "isYoungHorse": false
             },
             {
@@ -82783,7 +82783,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -83186,11 +83186,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -83222,7 +83222,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "180.05",
@@ -83625,11 +83625,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta yerini muhafaza eder.",
               "isYoungHorse": false
             },
             {
@@ -84011,7 +84011,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Geride bekleyerek son virajdan sonra güçlü hücum eder.",
               "isYoungHorse": false
             }
           ],
@@ -92690,7 +92690,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "14.35",
@@ -93115,11 +93115,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Yarışı geride bekleme yaparak kabullenir, son düzlükte dış kulvardan çok etkili sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -93153,7 +93153,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "28.70",
@@ -93558,11 +93558,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grupta yer tutar, liderin hemen arkasında pres kurar.",
               "isYoungHorse": false
             },
             {
@@ -94007,7 +94007,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -94462,7 +94462,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta pozisyonunu korur.",
               "isYoungHorse": false
             },
             {
@@ -94495,7 +94495,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "1.75",
@@ -94871,11 +94871,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -94907,7 +94907,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 25,
               "agf_kaynak": "gercek",
               "ganyan": "28.70",
@@ -95313,11 +95313,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Arka grupta saklanır, virajdan sonra güçlü hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -95351,7 +95351,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 20,
               "agf_kaynak": "gercek",
               "ganyan": "1.75",
@@ -95745,11 +95745,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta seyreder.",
               "isYoungHorse": false
             },
             {
@@ -96158,7 +96158,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta dengeli bekler.",
               "isYoungHorse": false
             },
             {
@@ -96190,7 +96190,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 34,
               "agf_kaynak": "gercek",
               "ganyan": "28.70",
@@ -96573,11 +96573,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %42 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geride bekleyerek son metrelerdeki sprintiyle tabela arar.",
               "isYoungHorse": false
             },
             {
@@ -96609,7 +96609,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "28.70",
@@ -96957,11 +96957,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta takipte kalır.",
               "isYoungHorse": false
             },
             {
@@ -97400,7 +97400,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yer tutar.",
               "isYoungHorse": false
             }
           ],
@@ -105424,7 +105424,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 30,
               "agf_kaynak": "gercek",
               "ganyan": "4.75",
@@ -105826,11 +105826,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Liderin hemen arkasında 2. durumda konumlanır, virajda pres yapar.",
               "isYoungHorse": false
             },
             {
@@ -105864,7 +105864,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 41,
               "agf_kaynak": "gercek",
               "ganyan": "1.05",
@@ -106281,11 +106281,11 @@
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%57 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla beraber öne hamle yapar, liderliği alarak tempoyu belirler.",
               "isYoungHorse": false
             },
             {
@@ -110687,7 +110687,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 36,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -111023,11 +111023,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -111060,7 +111060,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -111473,11 +111473,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte kafayı alır, ön tarafta tempoyu kurarak kaçar.",
               "isYoungHorse": false
             },
             {
@@ -111509,7 +111509,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 43,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -111876,11 +111876,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Ön grupta lideri yakından takip eder, virajda pres kurar.",
               "isYoungHorse": false
             },
             {
@@ -112325,7 +112325,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yerini korur.",
               "isYoungHorse": false
             },
             {
@@ -112755,7 +112755,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta viraja kadar bekler.",
               "isYoungHorse": false
             },
             {
@@ -113245,7 +113245,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -113278,7 +113278,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -113628,11 +113628,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geride pusuya yatar, son 400'de dış kulvardan sert sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -113663,7 +113663,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -113974,11 +113974,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli takip eder.",
               "isYoungHorse": false
             },
             {
@@ -114686,7 +114686,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta seyreder.",
               "isYoungHorse": false
             },
             {
@@ -115080,7 +115080,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yer tutar.",
               "isYoungHorse": false
             },
             {
@@ -115113,7 +115113,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "7.70",
@@ -115451,11 +115451,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Arka grupta bekler, son düzlükte akıcı gelir.",
               "isYoungHorse": false
             }
           ],
@@ -122692,7 +122692,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Presçi",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -123076,11 +123076,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Erken metrelerde tempoyu forse eder, liderin arkasında ön grupta konumlanır.",
               "isYoungHorse": false
             },
             {
@@ -124001,7 +124001,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Öndeki temponun arkasında yer tutar, düzlük sprintiyle sonuç arar.",
               "isYoungHorse": false
             },
             {
@@ -124363,7 +124363,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -124396,7 +124396,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": true,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "2.10",
@@ -124729,11 +124729,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Grup arkasından takip eder, son düzlükte dış kulvardan uzun sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -125127,7 +125127,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Bekleme yarışı yapar, son virajda temposunu artırarak hücum eder.",
               "isYoungHorse": false
             }
           ],
@@ -130117,7 +130117,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -130148,7 +130148,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Orta Grup",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 6,
               "agf_kaynak": "gercek",
               "ganyan": "12.95",
@@ -130568,11 +130568,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "rgba(59, 130, 246, 0.15)",
-              "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geride pusuya yatar, son düzlükte güçlü hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -130981,7 +130981,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Arka grupta bekleyerek son metrelerde sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -131012,7 +131012,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 20,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -131416,11 +131416,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Start çıkışıyla birlikte öne fırlar, ya doğrudan liderliği alır ya da lideri çok yakın baskılar.",
               "isYoungHorse": false
             },
             {
@@ -131883,7 +131883,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta pozisyonunu korur.",
               "isYoungHorse": false
             },
             {
@@ -132334,7 +132334,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Öndeki liderin hemen arkasında 2.-3. durumda koşan dirençli takipçidir.",
               "isYoungHorse": false
             },
             {
@@ -132746,7 +132746,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -132779,7 +132779,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "2.55",
@@ -133215,11 +133215,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Yarışın başında acele etmeyip arkada bekler, son 400'deki kuvvetli sprintiyle gelir.",
               "isYoungHorse": false
             },
             {
@@ -133251,7 +133251,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "1.50",
@@ -133651,11 +133651,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %18 (Çimde %42 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta yer tutar.",
               "isYoungHorse": false
             }
           ],
@@ -139370,7 +139370,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 29,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -139782,11 +139782,11 @@
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%47 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Erken metrelerdeki hızıyla startla birlikte liderliği alır, önde tempoyu belirler.",
               "isYoungHorse": false
             },
             {
@@ -140234,7 +140234,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta dengeli seyreder, viraja kadar diri kalır.",
               "isYoungHorse": false
             },
             {
@@ -140266,7 +140266,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -140677,11 +140677,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta pozisyonunu korur.",
               "isYoungHorse": false
             },
             {
@@ -141113,7 +141113,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Geride pusuya yatar, son düzlükte dış kulvardan sert sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -141569,7 +141569,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Liderin 1-2 boy gerisinde kolay tempoda bekleyerek virajda pres kurar.",
               "isYoungHorse": false
             },
             {
@@ -142019,7 +142019,7 @@
               "stil_renk": "#10b981",
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "taktik_yorum": "Öne yakın gidip lideri zorlayan ateş hattı takipçisidir.",
               "isYoungHorse": false
             },
             {
@@ -142051,7 +142051,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.20",
@@ -142456,11 +142456,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Arka grupta bekler, sonlarda güçlü kapanış yapar.",
               "isYoungHorse": false
             },
             {
@@ -142907,7 +142907,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Geride bekleyerek son düzlükte hücum eder.",
               "isYoungHorse": false
             }
           ],
@@ -148408,7 +148408,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -148439,7 +148439,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 1,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -148805,11 +148805,11 @@
                 "warningBadge": "🟢 KUM SİNERJİSİ: Kardeşleri Kum Canavarı (%57 Kazanma)",
                 "delta": 5
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Orta-geri grupta konumlanır, bekleme avantajıyla son düzlükte arkadan gelir.",
               "isYoungHorse": false
             },
             {
@@ -148839,7 +148839,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Presçi",
               "agf_orani": 4,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -149264,11 +149264,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %13 (Çimde %42 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🏹",
+              "stil_renk": "#10b981",
+              "stil_bg": "rgba(16, 185, 129, 0.15)",
+              "stil_border": "rgba(16, 185, 129, 0.4)",
+              "taktik_yorum": "Önde kurulan tempoyu yakından takip eder, liderliğin arkasında pres yapar.",
               "isYoungHorse": false
             },
             {
@@ -149300,7 +149300,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 17,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -149714,11 +149714,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta yer tutarak ön tarafın karıştıracağı tempoyu arkadan kollar.",
               "isYoungHorse": false
             },
             {
@@ -150044,7 +150044,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 5,
               "agf_kaynak": "gercek",
               "ganyan": "4.90",
@@ -150362,11 +150362,11 @@
                 "warningBadge": "⚠️ PİST UYARISI: Kardeşleri Kumda %15 (Çimde %46 Başarılı)",
                 "delta": -6
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta takipte kalır.",
               "isYoungHorse": false
             },
             {
@@ -154699,7 +154699,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 9,
               "agf_kaynak": "gercek",
               "ganyan": "1.15",
@@ -155121,11 +155121,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta grup takibi yaparak bekleme yapar, son 400'de iç/orta kulvardan sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -155157,7 +155157,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 30,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -155576,11 +155576,11 @@
                 "warningBadge": "🟢 SENTETİK UYUMU: Kardeşleri Sentetikte Başarılı (%43)",
                 "delta": 4
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geriden gelmeyi tercih eder, sonlardaki etkili ve güçlü sprintleriyle tanınır.",
               "isYoungHorse": false
             },
             {
@@ -155612,7 +155612,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 0,
               "agf_kaynak": "yok",
               "ganyan": "999.99",
@@ -156007,11 +156007,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta dengeli seyreder.",
               "isYoungHorse": false
             },
             {
@@ -156471,7 +156471,7 @@
               "stil_renk": "#a855f7",
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "taktik_yorum": "Geriden sökülerek gelip son 400'de kuvvetli hücum eder.",
               "isYoungHorse": false
             },
             {
@@ -156505,7 +156505,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Presçi",
+              "kosu_stili": "Düzlük Sprinteri",
               "agf_orani": 19,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -156879,11 +156879,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🏹",
-              "stil_renk": "#10b981",
-              "stil_bg": "rgba(16, 185, 129, 0.15)",
-              "stil_border": "rgba(16, 185, 129, 0.4)",
-              "taktik_yorum": "Geçmiş koşularında liderin hemen ardında 2.-3. sıraya yerleşip virajda tempoyu artırarak pres yapmıştır.",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "rgba(168, 85, 247, 0.15)",
+              "stil_border": "rgba(168, 85, 247, 0.4)",
+              "taktik_yorum": "Geride konumlanıp düzlükte güçlü ve uzun soluklu sprint atar.",
               "isYoungHorse": false
             },
             {
@@ -157272,7 +157272,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta pozisyonunu korur.",
               "isYoungHorse": false
             },
             {
@@ -157304,7 +157304,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 7,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -157670,11 +157670,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta kendini saklar.",
               "isYoungHorse": false
             },
             {
@@ -158119,7 +158119,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta yıpranmadan gider.",
               "isYoungHorse": false
             },
             {
@@ -158152,7 +158152,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Kaçak / Lider",
               "agf_orani": 15,
               "agf_kaynak": "gercek",
               "ganyan": "10.15",
@@ -158574,11 +158574,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "⚡",
+              "stil_renk": "#ef4444",
+              "stil_bg": "rgba(239, 68, 68, 0.15)",
+              "stil_border": "rgba(239, 68, 68, 0.4)",
+              "taktik_yorum": "Startla birlikte önceliği alır ya da ön gruba yerleşerek önde tempo verir.",
               "isYoungHorse": false
             },
             {
@@ -158610,7 +158610,7 @@
                 "K"
               ],
               "taki_degisimi_pozitif": false,
-              "kosu_stili": "Düzlük Sprinteri",
+              "kosu_stili": "Orta Grup",
               "agf_orani": 2,
               "agf_kaynak": "gercek",
               "ganyan": "999.99",
@@ -159027,11 +159027,11 @@
                 "warningBadge": null,
                 "delta": 0
               },
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "rgba(168, 85, 247, 0.15)",
-              "stil_border": "rgba(168, 85, 247, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında gruptan kopmadan geride pusuya yatmış, son 400 düzlük sprintiyle hücum etmiştir.",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "rgba(59, 130, 246, 0.15)",
+              "stil_border": "rgba(59, 130, 246, 0.4)",
+              "taktik_yorum": "Orta grupta viraja kadar bekler.",
               "isYoungHorse": false
             },
             {
@@ -159430,7 +159430,7 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
-              "taktik_yorum": "Geçmiş yarışlarında 4.-6. sıralarda bekleme yapmış, son viraja kadar yıpranmadan diri kalmayı seçmiştir.",
+              "taktik_yorum": "Orta grupta takipte kalır.",
               "isYoungHorse": false
             }
           ],

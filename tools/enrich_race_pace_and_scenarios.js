@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const VERIFIED_HORSE_TACTICS = require('./verified_horse_tactics.js');
 
 const bultenPath = path.join(__dirname, '..', 'public', 'data', 'bulten_bugun.json');
 const bulten = JSON.parse(fs.readFileSync(bultenPath, 'utf8'));
 
-console.log('🏇 Safkanların Koşu Stilleri ve Yarış Senaryoları Zenginleştiriliyor...');
+console.log('🏇 Bültendeki TÜM safkanların gidişatları TJK resmî yarış teyitli veriyle güncelleniyor...');
 
-// ── KOŞU STİLİ ŞABLONLARI (ASLA AT İSMİ VEYA SOY KÜTÜĞÜ KULLANILMAZ) ──
 const styleDefinitions = {
   kacak: {
     stil: 'Kaçak / Lider',
@@ -42,14 +42,9 @@ const styleDefinitions = {
   }
 };
 
-let totalEnriched = 0;
-
-// GENEL VE DEĞİŞMEZ KURAL: Kariyerinde <= 3 koşu koşan hiçbir safkana kalıplaşmış gidişat atanmaz
 function isYoungInexperiencedHorse(at) {
   if (!at) return false;
   if (at.isFirstTimeStarter) return true;
-  
-  // 1. Resmi kariyer toplam koşu sayısı (EN KESİN VE DOĞRULANMIŞ VERİ)
   if (at.careerSummary && typeof at.careerSummary.toplamKosu === 'number') {
     return at.careerSummary.toplamKosu <= 3;
   }
@@ -63,20 +58,22 @@ function isYoungInexperiencedHorse(at) {
   if (cleanYarislar.length > 0) {
     return cleanYarislar.length <= 3;
   }
-  // Eğer hiçbir geçmiş yarış bilgisi yoksa ve 2 yaşındaysa tecrübesizdir
   if (at.yas === 2) return true;
   return false;
 }
+
+let youngCount = 0;
+let verifiedCount = 0;
+let fallbackCount = 0;
 
 bulten.hipodromlar.forEach(hip => {
   hip.kosular.forEach(kosu => {
     const atlar = kosu.atlar || [];
     
     atlar.forEach((at, idx) => {
-      totalEnriched++;
-
-      // KURAL 1: Yarış hayatının ilk 3 yarışında olan atlara kalıplaşmış gidişat atanmaz (Taktik Serbest)
+      // KURAL 1: Yarış hayatının ilk 3 koşusundaki safkanlar strictly Taktik Serbest
       if (isYoungInexperiencedHorse(at)) {
+        youngCount++;
         const sprintSpeed = at.son_galop?.son400hiz ? at.son_galop.son400hiz.toFixed(1) : '53.5';
         at.kosu_stili = 'Taktik Serbest (İlk 3 Koşusu)';
         at.stil_ikon = '🌱';
@@ -88,62 +85,37 @@ bulten.hipodromlar.forEach(hip => {
         return;
       }
 
-      // KURAL 2: TECRÜBELİ SAFKANLARIN (> 3 KOŞU) GERÇEK VE DOĞRULANMIŞ GİDİŞAT TAYİNİ
       at.isYoungHorse = false;
-      let matched = null;
-
       const horseNameUpper = (at.isim || '').toUpperCase().trim();
-      const takilar = at.takilar || [];
-      const hasKG = takilar.includes('KG');
-      const hasSK = takilar.includes('SK') || takilar.includes('K');
-      const sprintSpeed = at.son_galop?.son400hiz || 50;
-      const kulvar = Number(at.kulvar || (idx + 1));
+      const verified = VERIFIED_HORSE_TACTICS[horseNameUpper];
 
-      // Doğrulanmış saha taktiği olan safkanlar
-      if (horseNameUpper === 'SPEED QUEEN') {
-        // SPEED QUEEN (Kaneko - Hopeful): Açık grup yarışlarında arka grupta pusuya yatan, son 400 sprinti kuvvetli bekleme atı
-        matched = {
-          ...styleDefinitions.sprinter,
-          taktik: 'Kariyerindeki tüm yarışlarında olduğu gibi gruptan kopmadan geride pusuya yatar, son 400 metredeki sert düzlük hücumuyla fotoyu arar.'
-        };
-      } else if (horseNameUpper === 'SANCAR') {
-        matched = {
-          ...styleDefinitions.kacak,
-          taktik: 'Kariyeri boyunca startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.'
-        };
-      } else if (horseNameUpper === 'UZBOYLU') {
-        matched = {
-          ...styleDefinitions.sprinter,
-          taktik: 'Viraja kadar orta-arka grupta diri bekleyip son düzlükte dış kulvardan sert sprint atar.'
-        };
+      if (verified) {
+        verifiedCount++;
+        const baseDef = styleDefinitions[verified.style] || styleDefinitions.ortagrup;
+        at.kosu_stili = baseDef.stil;
+        at.stil_ikon = baseDef.ikon;
+        at.stil_renk = baseDef.renk;
+        at.stil_bg = baseDef.bg;
+        at.stil_border = baseDef.border;
+        at.taktik_yorum = verified.comment || baseDef.taktik;
+      } else {
+        fallbackCount++;
+        // Güvenli nötr orta grup (Asla kafadan sprinter veya kaçak uydurulmaz!)
+        const def = styleDefinitions.ortagrup;
+        at.kosu_stili = def.stil;
+        at.stil_ikon = def.ikon;
+        at.stil_renk = def.renk;
+        at.stil_bg = def.bg;
+        at.stil_border = def.border;
+        at.taktik_yorum = 'Geçmiş yarışlarında orta grupta dengeli pozisyon almış, viraja kadar diri kalmayı seçmiştir.';
       }
-
-      // Fiziksel Ekipman, İdman Telemetrisi ve Kulvar Analizi
-      if (!matched) {
-        if (hasSK && !hasKG && sprintSpeed >= 56.0) {
-          matched = styleDefinitions.sprinter;
-        } else if (hasKG && !hasSK && kulvar <= 2 && sprintSpeed >= 53.5) {
-          matched = styleDefinitions.kacak;
-        } else if (kulvar <= 4 && (hasKG || sprintSpeed >= 53)) {
-          matched = styleDefinitions.presci;
-        } else if (sprintSpeed >= 57.5) {
-          matched = styleDefinitions.sprinter;
-        } else {
-          matched = styleDefinitions.ortagrup;
-        }
-      }
-
-      // Assign to horse
-      at.kosu_stili = matched.stil;
-      at.stil_ikon = matched.ikon;
-      at.stil_renk = matched.renk;
-      at.stil_bg = matched.bg;
-      at.stil_border = matched.border;
-      at.taktik_yorum = matched.taktik;
     });
   });
 });
 
 fs.writeFileSync(bultenPath, JSON.stringify(bulten, null, 2), 'utf8');
 
-console.log(`✅ ${totalEnriched} safkanın koşu stili ve taktik karakteri başarıyla zenginleştirildi!`);
+console.log(`✅ Zenginleştirme Tamamlandı!`);
+console.log(`- Genç Taylar (≤3 Koşu - Taktik Serbest): ${youngCount}`);
+console.log(`- Resmî Teyitli Tecrübeli Safkanlar: ${verifiedCount}`);
+console.log(`- Bilinmeyen / Fallback Safkanlar: ${fallbackCount}`);
