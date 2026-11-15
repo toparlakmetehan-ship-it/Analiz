@@ -981,7 +981,40 @@ function renderKosular() {
 // ══════════════════════════════════════════════════════════════════════════════════
 // 🏁 SAFKAN KOŞU STİLİ, TEMPO SENARYOSU VE TAKTİKSEL PUAN MOTORU
 // ══════════════════════════════════════════════════════════════════════════════════
+function isYoungInexperiencedHorse(at) {
+  if (!at) return false;
+  if (at.isFirstTimeStarter) return true;
+  if (at.careerSummary && typeof at.careerSummary.toplamKosu === 'number') {
+    return at.careerSummary.toplamKosu <= 3;
+  }
+  if (typeof at.realRacesCount === 'number' && at.realRacesCount > 0) {
+    return at.realRacesCount <= 3;
+  }
+  if (Array.isArray(at.pastRaces) && at.pastRaces.length > 0) {
+    return at.pastRaces.length <= 3;
+  }
+  const cleanYarislar = (at.son_yarislar || '').replace(/[^0-9]/g, '');
+  if (cleanYarislar.length > 0) {
+    return cleanYarislar.length <= 3;
+  }
+  return true;
+}
+
 function enrichHorseRunningStyle(at, idx, raceHorses = []) {
+  // KURAL: Yarış hayatının ilk 3 koşusundaki safkanlara kalıplaşmış gidişat atanmaz
+  if (isYoungInexperiencedHorse(at)) {
+    const sprintSpeed = at.son_galop?.son400hiz ? at.son_galop.son400hiz.toFixed(1) : '53.5';
+    at.kosu_stili = 'Taktik Serbest (İlk 3 Koşusu)';
+    at.stil_ikon = '🌱';
+    at.stil_renk = '#38bdf8';
+    at.stil_bg = 'rgba(56, 189, 248, 0.12)';
+    at.stil_border = 'rgba(56, 189, 248, 0.35)';
+    at.taktik_yorum = `Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (${sprintSpeed} km/h) ile fiziksel tempo potansiyeli takip edilir.`;
+    at.isYoungHorse = true;
+    return;
+  }
+
+  at.isYoungHorse = false;
   const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`.toUpperCase();
 
   // 1. ÖNCELİK: Safkanın Gerçek Geçmiş Koşu Çizgileri (runningLine & pastRaces)
@@ -1109,8 +1142,24 @@ function enrichBultenRunningStylesAndPace(bultenData) {
 // ── BİLİMSEL YARIŞ TEMPOSU TAHMİN MOTORU (Aşırı Puan Uydurmasını Önler) ──
 function estimateRacePace(kosu) {
   const atlar = kosu.atlar || [];
-  const kacaklar = atlar.filter(h => (h.kosu_stili || '').includes('Kaçak'));
-  const presciler = atlar.filter(h => (h.kosu_stili || '').includes('Pres'));
+  // Yarış hayatının ilk 3 koşusundaki atlar taktik karakterleri henüz oturmadığı için tempo kitlemesine sokulmaz
+  const tecrubeliAtlar = atlar.filter(h => !isYoungInexperiencedHorse(h) && !h.isYoungHorse);
+  const kacaklar = tecrubeliAtlar.filter(h => (h.kosu_stili || '').includes('Kaçak'));
+  const presciler = tecrubeliAtlar.filter(h => (h.kosu_stili || '').includes('Pres'));
+
+  // Eğer tüm safkanlar ilk 3 koşusundaysa (örn. 2-3 yaş Maiden)
+  if (tecrubeliAtlar.length === 0) {
+    return {
+      type: 'BALANCED',
+      badge: '🌱 GELİŞİM & TEMPO KOŞUSU',
+      title: 'GELİŞİM / İLK KOŞULAR TEMPOSU',
+      color: '#38bdf8',
+      bg: 'linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(14, 165, 233, 0.05))',
+      border: 'rgba(56, 189, 248, 0.4)',
+      desc: 'Koşudaki safkanların tamamı yarış hayatının ilk 3 koşusundadır. Karakter oturmadığından gidişat senaryosu kilitlenmez; safkanların idman hazırlıkları ve jokey tercihlerine göre serbest akış beklenir.',
+      kimeYarar: '🎯 İdman galoplarında yüksek sprint ivmesi gösteren ve pedigrisi mesafeye yatkın genç safkanlar öne çıkar.'
+    };
+  }
 
   // Yalnızca 2 veya daha fazla gerçek kaçak kafada kapışıyorsa AŞIRI YÜKSEK TEMPO olur
   if (kacaklar.length >= 2) {
@@ -1168,6 +1217,16 @@ function estimateRacePace(kosu) {
 
 // ── HAK EDİLMİŞ VE KADEMELİ TAKTİK PUAN HESAPLAMA (Maksimum ±2 Puan) ──
 function calculatePaceAdjustment(horse, kosu) {
+  // KURAL: İlk 3 koşusundaki safkanlara gidişat puanı uygulanmaz (0 Puan Nötr)
+  if (isYoungInexperiencedHorse(horse) || horse.isYoungHorse) {
+    const sprintSpeed = horse.son_galop?.son400hiz ? horse.son_galop.son400hiz.toFixed(1) : '53.5';
+    return {
+      delta: 0,
+      label: `🌱 İlk 3 Koşusu / Taktik Serbest (0 Puan Nötr · Sprint Potansiyeli: ${sprintSpeed} km/h)`,
+      color: '#38bdf8'
+    };
+  }
+
   const pace = estimateRacePace(kosu);
   const stil = horse.kosu_stili || '';
   const sprintSpeed = horse.son_galop?.son400hiz || 50;
@@ -2187,10 +2246,14 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
   const container = document.getElementById('pace-scenario-box');
   if (!container) return;
 
-  const kacaklar = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Kaçak'));
-  const presciler = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Pres'));
-  const ortagrup = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Orta'));
-  const sprinterler = horsesWithMetrics.filter(h => (h.kosu_stili || '').includes('Sprinter'));
+  // KURAL: Yarış hayatının ilk 3 koşusundaki safkanlar gidişat taktiğine dahil edilmez
+  const tecrubesizler = horsesWithMetrics.filter(h => isYoungInexperiencedHorse(h) || h.isYoungHorse);
+  const tecrubeliler = horsesWithMetrics.filter(h => !isYoungInexperiencedHorse(h) && !h.isYoungHorse);
+
+  const kacaklar = tecrubeliler.filter(h => (h.kosu_stili || '').includes('Kaçak'));
+  const presciler = tecrubeliler.filter(h => (h.kosu_stili || '').includes('Pres'));
+  const ortagrup = tecrubeliler.filter(h => (h.kosu_stili || '').includes('Orta'));
+  const sprinterler = tecrubeliler.filter(h => (h.kosu_stili || '').includes('Sprinter'));
 
   // Bilimsel tempo tahmin motorundan dinamik veriyi al
   const pace = estimateRacePace(kosu);
@@ -2221,7 +2284,7 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
         <span style="font-family:'Cinzel',serif; font-weight:800; color:#04060a; background:${h.stil_renk || '#d4af37'}; padding:1px 5px; border-radius:4px; font-size:0.7rem;">${h.no}</span>
         <span style="font-weight:700; font-size:0.78rem; color:#f8fafc;">${h.isim}</span>
         <span style="font-size:0.68rem; color:#94a3b8; background:rgba(255,255,255,0.06); padding:1px 4px; border-radius:3px;">K:${h.kulvar || '-'}</span>
-        <span style="font-size:0.7rem; font-weight:800; color:${h.paceColor || '#34d399'}; font-family:'Cinzel'; background:rgba(0,0,0,0.5); padding:1px 5px; border-radius:4px;">${h.royalScore} P (${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
+        <span style="font-size:0.7rem; font-weight:800; color:${h.paceColor || '#38bdf8'}; font-family:'Cinzel'; background:rgba(0,0,0,0.5); padding:1px 5px; border-radius:4px;">${h.royalScore} P (${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
       </div>
     `).join(' ');
   };
@@ -2229,14 +2292,19 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
   // Helper function to render all horse rows for the telemetry splits table
   const renderSplitsTableRows = () => {
     return horsesWithMetrics.map((h, i) => {
-      const stil = h.kosu_stili || 'Orta Grup';
-      let f400 = (parseFloat(splits.first400Sec) + (stil.includes('Kaçak') ? -0.2 : (stil.includes('Pres') ? 0.3 : (stil.includes('Orta') ? 0.9 : 1.6)))).toFixed(2);
+      const isYoung = isYoungInexperiencedHorse(h) || h.isYoungHorse;
+      const stil = h.kosu_stili || (isYoung ? 'Taktik Serbest (İlk 3 Koşusu)' : 'Orta Grup');
+      let f400 = (parseFloat(splits.first400Sec) + (stil.includes('Kaçak') ? -0.2 : (stil.includes('Pres') ? 0.3 : (stil.includes('Orta') ? 0.9 : (isYoung ? 0.4 : 1.4))))).toFixed(2);
       let f400Speed = ((400 / parseFloat(f400)) * 3.6).toFixed(1);
-      let l400Speed = h.son_galop?.son400hiz ? h.son_galop.son400hiz.toFixed(1) : (stil.includes('Sprinter') ? '56.2' : (stil.includes('Pres') ? '54.5' : '52.8'));
+      let l400Speed = h.son_galop?.son400hiz ? h.son_galop.son400hiz.toFixed(1) : (stil.includes('Sprinter') ? '56.2' : (stil.includes('Pres') ? '54.5' : (isYoung ? '53.5' : '52.8')));
       let l400Sec = (400 / (parseFloat(l400Speed) / 3.6)).toFixed(2);
       
-      let accelType = h.accelerationType || (stil.includes('Sprinter') ? 'Negative Split (Son Düzlük Hızlanan)' : (stil.includes('Kaçak') ? 'Positive Split (Kafada Tutan)' : 'Even Split (Dengeli Akış)'));
-      let gapPos = stil.includes('Kaçak') ? 'Lider / Bariyer Dibi (0 Boy)' : (stil.includes('Pres') ? '2.-3. Sıra (1.5 - 2 Boy)' : (stil.includes('Orta') ? '4.-6. Sıra (4 - 6 Boy)' : 'Pusu / Arka Hat (8 - 12 Boy)'));
+      let accelType = isYoung 
+        ? '🌱 Gelişim / Serbest Akış' 
+        : (h.accelerationType || (stil.includes('Sprinter') ? 'Negative Split (Son Düzlük Hızlanan)' : (stil.includes('Kaçak') ? 'Positive Split (Kafada Tutan)' : 'Even Split (Dengeli Akış)')));
+      let gapPos = isYoung
+        ? '🎯 Serbest (Jokey İnisiyatifi & Gelişim)'
+        : (stil.includes('Kaçak') ? 'Lider / Bariyer Dibi (0 Boy)' : (stil.includes('Pres') ? '2.-3. Sıra (1.5 - 2 Boy)' : (stil.includes('Orta') ? '4.-6. Sıra (4 - 6 Boy)' : 'Pusu / Arka Hat (8 - 12 Boy)')));
 
       return `
         <tr style="border-bottom:1px solid rgba(255,255,255,0.06); font-size:0.75rem;">
@@ -2253,7 +2321,7 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
             ${h.mudBadge ? h.mudBadge : '🌱 Normal'}
           </td>
           <td style="padding:0.6rem 0.5rem; font-family:'Cinzel'; font-weight:800; color:#fcf6ba; text-align:right;">
-            ${h.royalScore} P <span style="font-size:0.68rem; color:${h.paceColor};">(${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
+            ${h.royalScore} P <span style="font-size:0.68rem; color:${h.paceColor || '#38bdf8'};">(${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
           </td>
         </tr>
       `;
@@ -2456,6 +2524,24 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
               ${sprinterler.length > 0 ? sprinterler.map(h => `<span style="background:#04060a; border:1px solid #a855f7; color:#f8fafc; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">${h.no} ${h.isim} (K:${h.kulvar || '-'})</span>`).join('') : '<span style="font-size:0.68rem; color:#64748b;">Arka grupta bekleyen yok</span>'}
             </div>
           </div>
+
+          ${tecrubesizler.length > 0 ? `
+          <!-- Boy Farkı Oku Serbest -->
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:55px;">
+            <span style="font-size:0.65rem; font-family:'JetBrains Mono'; color:#38bdf8; font-weight:700;">Serbest</span>
+            <span style="font-size:0.6rem; color:#94a3b8;">Gelişim</span>
+            <span style="color:#38bdf8; font-size:1.1rem; line-height:1;">◄──►</span>
+          </div>
+
+          <!-- Özel Bölge: Taktik Serbest (İlk 3 Koşusu) -->
+          <div style="flex:1.2; background:rgba(56,189,248,0.08); border:1px dashed rgba(56,189,248,0.4); border-radius:10px; padding:0.75rem; text-align:center;">
+            <div style="font-size:0.68rem; font-weight:800; color:#38bdf8; margin-bottom:0.35rem; font-family:'Cinzel';">🎯 TAKTİK SERBEST</div>
+            <div style="font-size:0.65rem; color:#cbd5e1; margin-bottom:0.4rem;">İlk 3 Koşusu · Pozisyon Esnek</div>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.3rem;">
+              ${tecrubesizler.map(h => `<span style="background:#04060a; border:1px solid #38bdf8; color:#f8fafc; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">${h.no} ${h.isim} (K:${h.kulvar || '-'})</span>`).join('')}
+            </div>
+          </div>
+          ` : ''}
         </div>
       </div>
 
@@ -2513,6 +2599,22 @@ function renderPaceScenario(kosu, horsesWithMetrics) {
               ${renderZoneHorses(sprinterler, 'Arka grupta bekleyen safkan yok')}
             </div>
           </div>
+
+          ${tecrubesizler.length > 0 ? `
+          <!-- 5. ÖZEL BÖLGE: İLK 3 KOŞUSUNDAKİ GENÇ SAFKANLAR (TAKTİK SERBEST) -->
+          <div style="grid-column: 1 / -1; background:rgba(56,189,248,0.06); border:1px dashed rgba(56,189,248,0.35); border-radius:10px; padding:0.8rem 1rem; margin-top:0.4rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem; border-bottom:1px solid rgba(56,189,248,0.2); padding-bottom:0.3rem;">
+              <span style="font-size:0.75rem; font-weight:700; color:#38bdf8;">🎯 TAKTİK SERBEST / GELİŞİM (İLK 3 KOŞUSU): ${tecrubesizler.length} Safkan</span>
+              <span style="font-size:0.68rem; font-family:'Cinzel'; color:#38bdf8;">0 Puan (Nötr · Karakter Henüz Oturmamış)</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+              ${renderZoneHorses(tecrubesizler, '')}
+            </div>
+            <div style="font-size:0.68rem; color:#94a3b8; margin-top:0.35rem; line-height:1.35;">
+              🌱 <b>Gidişat Kuralı:</b> Yarış hayatının ilk 3 koşusundaki safkanların koşu stili henüz oturmadığından suni gidişat kalıplarına sokulmaz ve puan eklenip kırılmaz. Yalnızca idman galop sprinti ve telemetri tempoları öngörülür.
+            </div>
+          </div>
+          ` : ''}
 
         </div>
       </div>

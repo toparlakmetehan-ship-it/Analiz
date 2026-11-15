@@ -52,12 +52,46 @@ const styleRules = [
 
 let totalEnriched = 0;
 
+function isYoungInexperiencedHorse(at) {
+  if (!at) return false;
+  if (at.isFirstTimeStarter) return true;
+  if (at.careerSummary && typeof at.careerSummary.toplamKosu === 'number') {
+    return at.careerSummary.toplamKosu <= 3;
+  }
+  if (typeof at.realRacesCount === 'number' && at.realRacesCount > 0) {
+    return at.realRacesCount <= 3;
+  }
+  if (Array.isArray(at.pastRaces) && at.pastRaces.length > 0) {
+    return at.pastRaces.length <= 3;
+  }
+  const cleanYarislar = (at.son_yarislar || '').replace(/[^0-9]/g, '');
+  if (cleanYarislar.length > 0) {
+    return cleanYarislar.length <= 3;
+  }
+  return true;
+}
+
 bulten.hipodromlar.forEach(hip => {
   hip.kosular.forEach(kosu => {
     const atlar = kosu.atlar || [];
     
     atlar.forEach((at, idx) => {
       totalEnriched++;
+
+      // KURAL: Yarış hayatının ilk 3 yarışında olan atlara kalıplaşmış gidişat atanmaz
+      if (isYoungInexperiencedHorse(at)) {
+        const sprintSpeed = at.son_galop?.son400hiz ? at.son_galop.son400hiz.toFixed(1) : '53.5';
+        at.kosu_stili = 'Taktik Serbest (İlk 3 Koşusu)';
+        at.stil_ikon = '🌱';
+        at.stil_renk = '#38bdf8';
+        at.stil_bg = 'rgba(56, 189, 248, 0.12)';
+        at.stil_border = 'rgba(56, 189, 248, 0.35)';
+        at.taktik_yorum = `Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (${sprintSpeed} km/h) ile fiziksel tempo potansiyeli takip edilir.`;
+        at.isYoungHorse = true;
+        return;
+      }
+
+      at.isYoungHorse = false;
       const textToScan = `${at.isim || ''} ${at.baba || ''} ${at.anne || ''} ${at.kisrak_babasi || ''}`.toUpperCase();
 
       // 1. ÖNCELİK: Safkanın Gerçek Geçmiş Koşu Çizgileri
