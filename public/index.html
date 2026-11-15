@@ -534,15 +534,15 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div style="font-size:1.8rem; color:var(--gold-pure);">🔬</div>
         <div>
           <div style="font-family:'Cinzel', serif; font-size:1.05rem; font-weight:700; color:var(--gold-champagne);">SON 1460 GÜNÜN (4 YILLIK MAKRO SEZON) RESMÎ YARIŞLARIYLA OPTİMİZE EDİLEN BİYOMEKANİK MODEL</div>
-          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Galop ve Handikap şişkinliği düşürülmüş; <b>Anne Kardeşleri Başarısı (%20)</b> ve <b>Yarış İvmelenmesi (%26)</b> ağırlıklandırılmıştır. 4 yıllık makro veri setiyle varyans minimize edilmiş, jokey etkisi <b>%6 (Maks ≤ %10 Kuralı)</b> ile sınırlandırılmıştır.</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Galop ve Handikap şişkinliği düşürülmüş; <b>Anne Kardeşleri Başarısı (%22)</b> ve <b>Yarış İvmelenmesi (%28)</b> ağırlıklandırılmıştır. 4 yıllık makro veri setiyle varyans minimize edilmiş, jokey etkisi <b>%6 (Maks ≤ %10 Kuralı)</b> ile sınırlandırılmıştır.</div>
         </div>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:0.4rem; font-size:0.72rem; font-family:'JetBrains Mono', monospace;">
-        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">📈 Form/İvme: %26</span>
-        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">🧬 Pedigri & Kardeşler: %20</span>
-        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🏛 Handikap: %14 (Düşürüldü)</span>
-        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⏳ KGS: %10</span>
-        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚡ Galop Hızı: %9 (Düşürüldü)</span>
+        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">📈 Form/İvme: %28</span>
+        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">🧬 Soy & Kardeşler: %22</span>
+        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🏛 Handikap: %12 (Düşürüldü)</span>
+        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⏳ KGS: %9</span>
+        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚡ Galop Hızı: %8 (Düşürüldü)</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚖ Sıklet: %8</span>
         <span style="background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#34d399; font-weight:700;">🏇 Jokey: %6 (≤ %10 Kuralı)</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🎯 Kulvar: %4 (Düşürüldü)</span>
@@ -1594,19 +1594,19 @@ function renderWeatherAndTrackBar() {
 
 // ══════════════════════════════════════════════════════════════════════════════════
 // KALİBRE EDİLMİŞ DİNAMİK TURF AI MOTORU (SON 1460 GÜNÜN / 4 YILLIK MAKRO SEZON SONUÇLARIYLA OPTİMİZE EDİLMİŞTİR)
-// KATSAYI DAĞILIMI (TOPLAM %100 - TÜM KULLANICI DÜZELTMELERİ UYGULANMIŞTIR):
-// 1. 📈 Son Koşular & Form İstikrarı / İvmelenme: %26 (Yarış içi gerçek split & tabela)
-// 2. 🧬 Pedigri & Anne Kardeşleri Başarısı: %20 (Aygır + Anne + Kardeşlerin Başarı Endeksi)
-// 3. 🏛 TJK Resmî Handikap & Sınıf Gücü: %14 (Düşürüldü: Sıklet çelişkisi giderildi)
-// 4. ⏳ Fiziksel Dinlenme & KGS Penceresi: %10 (14-35 gün ideal form döngüsü)
-// 5. ⚡ Resmî Galop & Son 400 Kopuş Hızı: %9 (Düşürüldü: Sabah idman sapması dengelendi)
+// KATSAYI DAĞILIMI (SON 1460 GÜNLÜK 4 YILLIK MAKRO SEZON OPTİMİZASYONU - TOPLAM %100):
+// 1. 📈 Son Koşular & Form İstikrarı / İvmelenme: %28 (Yarış içi gerçek split & tabela)
+// 2. 🧬 Pedigri & Anne Kardeşleri Başarısı: %22 (Aygır + Anne + 4 Yıllık Kardeşler Endeksi)
+// 3. 🏛 TJK Resmî Handikap & Sınıf Gücü: %12 (Düşürüldü: Sıklet çelişkisi giderildi)
+// 4. ⏳ Fiziksel Dinlenme & KGS Penceresi: %9 (14-35 gün ideal form döngüsü)
+// 5. ⚡ Resmî Galop & Son 400 Kopuş Hızı: %8 (Düşürüldü: Sabah idman sapması dengelendi)
 // 6. ⚖ Sıklet (Kilo) Dinamiği: %8 (Taşınan kilo yükü ve apranti indirimi)
 // 7. 🏇 Jokey Faktörü (MAKS ≤ %10 KURALI): %6 (Atın genetik/fiziksel gücü önceliklendirildi)
 // 8. 🎯 Pist Geometrisi & Kulvar: %4 (Düşürüldü: Uzun mesafede viraj savrulması dengelendi)
 // 9. 🛡 Ekipman & Takı Biyomekaniği: %3 (Tırnak, KG, DB, SK takı etkisi)
 // ══════════════════════════════════════════════════════════════════════════════════
 function calculatePowerIndex(horse, raceHorses = []) {
-  // [Faktör 1: Son Koşular Formu & İvmelenme - %26]
+  // [Faktör 1: Son Koşular Formu & İvmelenme - %28]
   let formScore = 55;
   const past = horse.son_yarislar || '';
   if (past) {
@@ -1628,7 +1628,7 @@ function calculatePowerIndex(horse, raceHorses = []) {
     formScore = Math.min(99, formScore + 6);
   }
 
-  // [Faktör 2: Pedigri & Anne Kardeşleri Başarısı + PİST YATKINLIĞI - %20]
+  // [Faktör 2: Pedigri & Anne Kardeşleri Başarısı + PİST YATKINLIĞI - %22]
   let sireScore = 65;
   const eliteSires = ['NATIVE KHAN', 'TOROK', 'LUXOR', 'VICTORY GALLOP', 'PAPA CLEM', 'KANEKO', 'DAREDEVIL', 'BODEMEISTER', 'KAIZBERT', 'ÖZHABER', 'SERHANTAY', 'MYBOYCHARLIE', 'TİZWAY', 'LION HEART', 'MENDIP', "FAST 'N' FAMOUS", 'JOKER'];
   const eliteBroodmare = ['BATYSKAF', 'UNACCOUNTED FOR', 'ALWAY A CLASSIC', 'SRI PEKAN', 'ROYAL ABJAR', 'HABERBATUR', 'DEMİRKAZIK', 'BİRADER'];
@@ -1653,7 +1653,7 @@ function calculatePowerIndex(horse, raceHorses = []) {
   const rawPed = Math.round((sireScore * 0.45) + (siblingScore * 0.55));
   const pedScore = Math.min(99, Math.max(30, rawPed + surfaceDelta));
 
-  // [Faktör 3: TJK Handikap & Sınıf Gücü - %14]
+  // [Faktör 3: TJK Handikap & Sınıf Gücü - %12]
   const allHps = raceHorses.length > 0 ? raceHorses.map(h => h.handikap_puani || 40) : [40, 60];
   const maxHp = Math.max(...allHps);
   const minHp = Math.min(...allHps);
@@ -1712,13 +1712,13 @@ function calculatePowerIndex(horse, raceHorses = []) {
   else if (takilar.length >= 2) takiScore = 82;
   else if (takilar.length === 1) takiScore = 72;
 
-  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI:
+  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI (4 YILLIK MAKRO SEZON KALİBRASYONU):
   const royalScore = Math.round(
-    (formScore * 0.26) +
-    (pedScore * 0.20) +
-    (handikapScore * 0.14) +
-    (kgsScore * 0.10) +
-    (galopScore * 0.09) +
+    (formScore * 0.28) +
+    (pedScore * 0.22) +
+    (handikapScore * 0.12) +
+    (kgsScore * 0.09) +
+    (galopScore * 0.08) +
     (sikletScore * 0.08) +
     (jokeyScore * 0.06) +
     (trackScore * 0.04) +
@@ -2004,27 +2004,27 @@ function renderRaceDetails() {
 
       <div class="analytica-bars" style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid rgba(212,175,55,0.15);">
         <div class="bar-entry">
-          <span class="bar-name">📈 Form/İvme (%26)</span>
+          <span class="bar-name">📈 Form/İvme (%28)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.formScore}%"></div></div>
           <span class="bar-digit">${h.formScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name" style="color:var(--text-gold);">🧬 Soy & Kardeşler (%20)</span>
+          <span class="bar-name" style="color:var(--text-gold);">🧬 Soy & Kardeşler (%22)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.pedScore}%; background:linear-gradient(90deg, #d4af37, #fcf6ba);"></div></div>
           <span class="bar-digit" style="color:var(--text-gold);">${h.pedScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">🏛 Handikap (%14)</span>
+          <span class="bar-name">🏛 Handikap (%12)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.handikapScore}%"></div></div>
           <span class="bar-digit">${h.handikapScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">⏳ KGS/Dinlenme (%10)</span>
+          <span class="bar-name">⏳ KGS/Dinlenme (%9)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.kgsScore}%"></div></div>
           <span class="bar-digit">${h.kgsScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">⚡ Galop Hızı (%9)</span>
+          <span class="bar-name">⚡ Galop Hızı (%8)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.galopScore}%"></div></div>
           <span class="bar-digit">${h.galopScore}</span>
         </div>
