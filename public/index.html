@@ -2381,10 +2381,14 @@ function calculatePowerIndex(horse, raceHorses = []) {
     siblingScore = horse.anne_kardesleri.score;
   }
 
-  // PİST YATKINLIĞI CEZASI / BONUSU (Kardeşleri Çimde Kötü Koşuyorsa Ceza, Uzmansa Bonus)
+  // ══════════════════════════════════════════════════════════════════════════════════
+  // KABA KUM / SENTETİK VE PİST YATKINLIĞI ETKİSİ (EMPİRİK PİST DENEYİMİ + GENETİK)
+  // ══════════════════════════════════════════════════════════════════════════════════
   let surfaceDelta = 0;
-  if (horse.pist_genetik_analizi && horse.pist_genetik_analizi.delta) {
-    surfaceDelta = horse.pist_genetik_analizi.delta; // -6 ceza veya +5 bonus
+  if (horse.pist_aptitude_analizi && horse.pist_aptitude_analizi.delta !== undefined) {
+    surfaceDelta = horse.pist_aptitude_analizi.delta; // Kaba Kum vs Sentetik uzmanlığı (+5), dual (+4) veya ters pist cezası (-5)
+  } else if (horse.pist_genetik_analizi && horse.pist_genetik_analizi.delta) {
+    surfaceDelta = horse.pist_genetik_analizi.delta;
   }
 
   const rawPed = Math.round((sireScore * 0.45) + (siblingScore * 0.55));
@@ -2701,6 +2705,22 @@ function renderRaceDetails() {
         </div>
       </div>
 
+      ${(h.pist_aptitude_analizi && h.pist_aptitude_analizi.badge) ? `
+      <div style="background:${h.pist_aptitude_analizi.delta > 0 ? 'rgba(16,185,129,0.12)' : (h.pist_aptitude_analizi.delta < 0 ? 'rgba(239,68,68,0.12)' : 'rgba(212,175,55,0.06)')}; border:1px solid ${h.pist_aptitude_analizi.color || 'rgba(212,175,55,0.3)'}; padding:0.55rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+          <span style="font-size:0.76rem; font-weight:800; color:${h.pist_aptitude_analizi.color}; font-family:'Cinzel',serif; display:flex; align-items:center; gap:0.35rem;">
+            ${h.pist_aptitude_analizi.badge}
+          </span>
+          <span style="font-size:0.72rem; font-weight:800; font-family:'JetBrains Mono'; color:${h.pist_aptitude_analizi.color}; background:rgba(0,0,0,0.5); padding:1px 6px; border-radius:4px;">
+            ${h.pist_aptitude_analizi.delta > 0 ? '+' + h.pist_aptitude_analizi.delta : h.pist_aptitude_analizi.delta} PUAN
+          </span>
+        </div>
+        <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35;">
+          ${h.pist_aptitude_analizi.desc}
+        </div>
+      </div>
+      ` : ''}
+
       ${(h.mudDelta !== 0 || currentTrackCondition !== 'CANLI') ? `
       <div style="background:${h.mudDelta > 0 ? 'rgba(16,185,129,0.12)' : (h.mudDelta < 0 ? 'rgba(239,68,68,0.12)' : 'rgba(255,255,255,0.04)')}; border:1px solid ${h.mudColor || 'rgba(212,175,55,0.3)'}; padding:0.5rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
@@ -2785,6 +2805,13 @@ function renderRaceDetails() {
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.takiScore}%"></div></div>
           <span class="bar-digit">${h.takiScore}</span>
         </div>
+        ${(h.pist_aptitude_analizi && h.pist_aptitude_analizi.delta !== 0) ? `
+        <div class="bar-entry">
+          <span class="bar-name" style="color:${h.pist_aptitude_analizi.color};">🏟️ Pist (${h.pist_aptitude_analizi.delta > 0 ? '+' + h.pist_aptitude_analizi.delta : h.pist_aptitude_analizi.delta})</span>
+          <div class="bar-track"><div class="bar-fill-gold" style="width:${Math.max(15, Math.min(100, 50 + (h.pist_aptitude_analizi.delta * 8)))}%; background:${h.pist_aptitude_analizi.delta > 0 ? 'linear-gradient(90deg, #10b981, #34d399)' : 'linear-gradient(90deg, #ef4444, #f87171)'};"></div></div>
+          <span class="bar-digit" style="color:${h.pist_aptitude_analizi.color};">${h.pist_aptitude_analizi.delta > 0 ? '+' + h.pist_aptitude_analizi.delta : h.pist_aptitude_analizi.delta}</span>
+        </div>
+        ` : ''}
         <div class="bar-entry">
           <span class="bar-name" style="color:${h.paceColor};">⏱️ Tempo Etkisi (${h.paceDelta >= 0 ? '+' + h.paceDelta : h.paceDelta})</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${Math.max(15, Math.min(100, 50 + (h.paceDelta * 8)))}%; background:${h.paceDelta >= 0 ? 'linear-gradient(90deg, #10b981, #34d399)' : 'linear-gradient(90deg, #ef4444, #f87171)'};"></div></div>
@@ -2848,7 +2875,7 @@ function parseDegreeToSeconds(degStr) {
 function computeRaceChronometricSplits(kosu, horsesWithMetrics) {
   const mesafe = parseInt(kosu.mesafe) || 1600;
   const rawPist = (kosu.pist || 'Çim').toLowerCase();
-  const pistClean = rawPist.includes('kum') ? 'Kum' : (rawPist.includes('sentetik') ? 'Sentetik' : 'Çim');
+  const pistClean = rawPist.includes('sentetik') ? 'Sentetik' : (rawPist.includes('kum') ? 'Kum' : 'Çim');
   const pace = estimateRacePace(kosu);
   const atlar = horsesWithMetrics || [];
 

@@ -491,7 +491,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Startla birlikte ön grupta konumlanır, liderin hemen arkasında pres kurarak virajı döner.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 2,
@@ -954,7 +975,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Ön grubun arkasında 3.-5. sıralarda pusuya yatar, düzlük hücumuyla sonuç arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 4 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 1 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 3,
@@ -1432,7 +1474,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yıpranmadan dengeli seyreder, son 400'de devreye girer.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 1 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 4,
@@ -1906,7 +1969,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Yarışı orta grupta takip eder, viraj çıkışı dış kulvardan hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 5,
@@ -2379,7 +2463,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Viraja kadar orta-arka grupta diri bekleyip son düzlükte dış kulvardan sert sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 6,
@@ -2833,7 +2938,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Erken tempolara karışmaz, arka grupta bekleyip son düzlükte güçlü kapanış yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 3 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 2 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 7,
@@ -3332,7 +3458,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutar, düzlükte temposunu artırarak tabelayı hedefler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (5 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 8,
@@ -3804,7 +3951,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Grupta dengeli seyreder, viraja kadar kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 1 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 9,
@@ -4229,7 +4397,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini yıpratmadan bekler, düzlükte etkili gelmeye çalışır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 10,
@@ -4733,7 +4922,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta bekleyerek son virajda pozisyon alır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -11488,7 +11698,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutar, viraja kadar temposunu korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (4 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -11893,7 +12124,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli bekler, son düzlükte mücadeleye katılır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 3,
@@ -12290,7 +12542,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Bekleme taktiği uygular, son 200'de dış kulvardan güçlü hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 4 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 1 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 4,
@@ -12790,7 +13063,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Önde veya öne yakın gitmeyi sever, liderin bitişiğinde yer tutar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 2 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 2 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 5,
@@ -13245,7 +13539,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön grubun hemen arkasında 2.-3.lükte konumlanır, virajda liderliği zorlayarak pres yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (4 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 6,
@@ -13698,7 +14013,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Kariyeri boyunca startla birlikte kafayı almayı alışkanlık edinmiştir, bariyer dibinden yüksek tempoda kaçar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 2 koşuda 1 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 7,
@@ -14108,7 +14444,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Gerilerde sabırla bekler, son 400'de patlayıcı dış kulvar sprintiyle rakiplerini avlar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -14519,7 +14876,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta sakin seyreder, viraj dönüşü hamle yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (4 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -14926,7 +15304,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar, düzlükte sprint arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 1 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 10,
@@ -15324,7 +15723,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta takip pozisyonunda kalır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 2 koşuda 0 galibiyet, 1 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 11,
@@ -15727,7 +16147,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Grup içinde dengeli koşar, virajda atağa kalkar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (3 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 12,
@@ -16121,7 +16562,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yerini korur, düzlükte sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 13,
@@ -16516,7 +16978,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride bekleyerek son düzlükte dış kulvardan gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -24470,7 +24953,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön gruba yakın konumlanır, lideri yakın takip eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -24814,7 +25318,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (60.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -25214,7 +25739,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli bekler, düzlükte hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (5 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -25570,7 +26116,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 5,
@@ -25904,7 +26471,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta sabırla bekler, son 400'de güçlü sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 6,
@@ -26279,7 +26867,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (62.1 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -26544,7 +27153,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (60.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -26857,7 +27487,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -27175,7 +27826,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (60.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -32296,7 +32968,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride pusuya yatar, son 400 sprintiyle fotoyu arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 4,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 2,
@@ -32789,7 +33482,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutar, temponun durumuna göre mukavemet arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 1 galibiyet, 2 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 3,
@@ -33280,7 +33994,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta bekler, son düzlükte güçlü gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -33729,7 +34464,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yerini muhafaza eder, viraj çıkışı hızlanır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 3 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 4 koşuda 2 galibiyet, 3 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 3
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 5,
@@ -34192,7 +34948,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön grupta liderin hemen arkasında konumlanır, virajda baskısını artırır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 5 koşuda 0 galibiyet, 3 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -34691,7 +35468,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön gruba sokulur, liderin arkasında pres kurarak yarışa tempo verir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 7,
@@ -35101,7 +35899,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Acele etmez, orta-arka grupta bekleyip düzlükte sprint gücünü devreye sokar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 5 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 6 koşuda 2 galibiyet, 5 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 5
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -35558,7 +36377,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 3,
+                  "top4": 4
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -36059,7 +36899,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla birlikte liderliği alır, önde tempo vererek kaçar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 4 koşuda 1 galibiyet, 3 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 3
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 10,
@@ -36514,7 +37375,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Gerilerde saklanır, son düzlük hücumuyla gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -43224,7 +44106,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (62.6 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -43699,7 +44602,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla beraber liderliği alır, yüksek tempoda çıktığı gibi bitirmeye çalışır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -44052,7 +44976,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -44461,7 +45406,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Ön grubun hemen arkasında konumlanır, düzlükteki gücüyle sonuca gitmeye çalışır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 5 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 0 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 5,
@@ -44789,7 +45755,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (58.8 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -45222,7 +46209,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⚠️ ÇİMDE İLK KEZ: Kum / Sentetik Atı",
+                "delta": -3,
+                "color": "#f59e0b",
+                "desc": "Kariyerinde hiç çim koşusu yok, kum/sentetikten çime geçiyor.",
+                "dirtStats": {
+                  "runs": 6,
+                  "wins": 0,
+                  "top4": 6
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -45642,7 +46650,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (3 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -46019,7 +47048,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön grupta lideri yakından takip eder, virajda pres kurar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 4 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 2 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 9,
@@ -46339,7 +47389,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (57.6 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 2,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 10,
@@ -46743,7 +47814,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Orta-arka grupta yer tutarak tempoyu takip eder, düzlük sprintiyle hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 6 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 1 galibiyet, 6 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 6
+                }
+              }
             },
             {
               "no": 11,
@@ -47014,7 +48106,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.3 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 12,
@@ -47429,7 +48542,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta viraja kadar bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 2 koşuda 1 galibiyet, 1 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 4
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 13,
@@ -47829,7 +48963,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Kariyerindeki tüm yarışlarında olduğu gibi gruptan kopmadan geride pusuya yatar, son 400 metredeki sert düzlük hücumuyla fotoyu arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 4 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 1 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 4
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -55232,7 +56387,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Kariyerinde startla birlikte kafayı almayı alışkanlık edinmiştir, yüksek tempoyla yarışı önde forse eder ve beyaz bayrak ayna peşindedir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 5 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 2 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 2,
@@ -55687,7 +56863,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Orta-arka grupta sabırla bekler, son düzlükteki güçlü sprintiyle rakiplerini yakalar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 3G / 5 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 3 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 3,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 3,
@@ -56136,7 +57333,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Ön-orta grupta 3.-4.lük çeperinde konumlanır, son virajda keskin sprintle hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 5 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 1 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 4,
@@ -56589,7 +57807,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Liderin hemen arkasında ön grupta yer tutar, düzlükte mukavemet gösterir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 5 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 2 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 5,
@@ -57093,7 +58332,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön gruba yakın seyreder, liderin arkasında 2.-3.lükte tempoyu kontrol eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 0 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 6,
@@ -57607,7 +58867,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Yarışın başında acele etmeyip geride bekler, son 400'deki patlayıcı sprintiyle hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 4 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 0 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 7,
@@ -58053,7 +59334,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön grupta liderin hemen yanına konumlanır, yüksek tempoda lideri sürekli pres altında tutar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 5G / 6 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 5 galibiyet, 6 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 5,
+                  "top4": 6
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -63196,7 +64498,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla birlikte öne düşerek tempoyu kurar, çıktığı gibi bitirmeye çalışır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 2,
@@ -63644,7 +64967,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Öndeki temponun arkasında orta grupta takip eder, düzlükte etkili sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 3 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 2 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 3,
@@ -64086,7 +65430,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Orta-arka grupta bekleme yapar, son virajda dış kulvardan uzun soluklu sprint başlatır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 4 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 2 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 4,
@@ -64604,7 +65969,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön sıralarda veya liderin arkasında tempoyu forse eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 5 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 1 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 5,
@@ -65059,7 +66445,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 2G / 4 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 2 galibiyet, 4 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 6,
@@ -65489,7 +66896,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arkada bekleyerek ekürisiyle birlikte son düzlükte güçlü tempo yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 5 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 6 koşuda 1 galibiyet, 5 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 5
+                }
+              }
             },
             {
               "no": 7,
@@ -65889,7 +67317,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (4 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -66284,7 +67733,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta viraja kadar bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (3 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -71703,7 +73173,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Liderin hemen dibinde pres kurar, virajda liderliği zorlar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 2 koşuda 0 galibiyet, 2 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 2,
@@ -71984,7 +73475,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.3 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -72245,7 +73757,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (60.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -72502,7 +74035,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (63.2 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 5,
@@ -72900,7 +74454,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "1200m sürat koşusunda startla kafayı alır, seri adımlarla bariyerden kaçar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 6,
@@ -73157,7 +74732,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (61.3 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -73460,7 +75056,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (62.6 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -73723,7 +75340,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (61.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -78020,7 +79658,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta bekler, son düzlük hücumuyla gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -78478,7 +80137,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla birlikte liderliği alır ya da liderin dibinde baskı kurarak önde tempo belirler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -78874,7 +80554,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 1 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 4,
@@ -79277,7 +80978,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta pozisyonunu korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 4 koşuda 0 galibiyet, 3 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 5,
@@ -79698,7 +81420,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Orta-arka grupta sabırla bekler, son düzlükte dış kulvardan sert sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (5 Koşuda 2 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 6,
@@ -80127,7 +81870,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Erken metrelerde geride kalır, öndekilerin yorulmasından faydalanarak sonlarda akar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 ÇİM PİST UZMANI (Çimde 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Çim pistte 5 koşuda 1 galibiyet, 1 tabela yaptı; çim aksiyonu oturmuştur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 7,
@@ -80585,7 +82349,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta viraja kadar yıpranmadan gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -81013,7 +82798,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -81468,7 +83274,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Öne erken hamle yapar, ön grupta yer tutarak son virajda atağa kalkar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (4 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 10,
@@ -81875,7 +83702,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta seyreder, düzlükte sprint arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 11,
@@ -82312,7 +84160,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride pusuya yatar, son 400'de sprint gücünü gösterir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⚠️ ÇİMDE İLK KEZ: Kum / Sentetik Atı",
+                "delta": -3,
+                "color": "#f59e0b",
+                "desc": "Kariyerinde hiç çim koşusu yok, kum/sentetikten çime geçiyor.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 12,
@@ -82752,7 +84621,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta takip pozisyonunda kalır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 13,
@@ -83191,7 +85081,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (5 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 14,
@@ -83630,7 +85541,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yerini muhafaza eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (5 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 15,
@@ -84012,7 +85944,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride bekleyerek son virajdan sonra güçlü hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🌿 Çim Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Çim pistte tecrübesi mevcut.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "İstanbul",
@@ -93120,7 +95073,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Yarışı geride bekleme yaparak kabullenir, son düzlükte dış kulvardan çok etkili sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 1 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -93563,7 +95537,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön grupta yer tutar, liderin hemen arkasında pres kurar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -94008,7 +96003,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/2T · Sentetik: 1G/2T)",
+                "delta": 4,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -94463,7 +96479,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta pozisyonunu korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 2 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 6 koşuda 2 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 5,
@@ -94876,7 +96913,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/2T · Sentetik: 0G/2T)",
+                "delta": 4,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -95318,7 +97376,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta saklanır, virajdan sonra güçlü hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -95750,7 +97829,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 4 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 0 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 4
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 8,
@@ -96159,7 +98259,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (5 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -96578,7 +98699,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride bekleyerek son metrelerdeki sprintiyle tabela arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 10,
@@ -96962,7 +99104,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta takipte kalır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 2 koşuda 1 galibiyet, 1 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 11,
@@ -97401,7 +99564,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 2 koşuda 0 galibiyet, 1 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -104201,7 +106385,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (52.9 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -104501,7 +106706,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (57.1 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -104762,7 +106988,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.3 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -105048,7 +107295,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (53.9 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 5,
@@ -105394,7 +107662,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.7 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -105831,7 +108120,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Liderin hemen arkasında 2. durumda konumlanır, virajda pres yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -106286,7 +108596,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla beraber öne hamle yapar, liderliği alarak tempoyu belirler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 2 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 8,
@@ -106662,7 +108993,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -111028,7 +113380,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 2,
@@ -111478,7 +113851,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla birlikte kafayı alır, ön tarafta tempoyu kurarak kaçar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 3,
@@ -111881,7 +114275,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Ön grupta lideri yakından takip eder, virajda pres kurar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 1 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 4,
@@ -112326,7 +114741,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yerini korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
+                "delta": -3,
+                "color": "#f59e0b",
+                "desc": "Kariyerindeki 4 koşunun tamamını Kaba Kumda koştu; sentetik pistin elastik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 5,
@@ -112756,7 +115192,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta viraja kadar bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
+                "delta": -3,
+                "color": "#f59e0b",
+                "desc": "Kariyerindeki 4 koşunun tamamını Kaba Kumda koştu; sentetik pistin elastik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -113246,7 +115703,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 1 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -113633,7 +116111,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride pusuya yatar, son 400'de dış kulvardan sert sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 8,
@@ -113979,7 +116478,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli takip eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 9,
@@ -114287,7 +116807,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (50.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 10,
@@ -114687,7 +117228,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
+                "delta": -3,
+                "color": "#f59e0b",
+                "desc": "Kariyerindeki 3 koşunun tamamını Kaba Kumda koştu; sentetik pistin elastik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 11,
@@ -115081,7 +117643,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 4 koşuda 1 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 12,
@@ -115456,7 +118039,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta bekler, son düzlükte akıcı gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 4 koşuda 1 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -122399,7 +125003,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -122660,7 +125285,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (60.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -123081,7 +125727,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Erken metrelerde tempoyu forse eder, liderin arkasında ön grupta konumlanır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)",
+                "delta": -5,
+                "color": "#ef4444",
+                "desc": "Kariyerindeki 6 koşuyu sentetikte koştu; kaba kumun derin kum yapısına ve önden gelen kickback'e ilk kez maruz kalacak, ciddi handikap.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 6,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -123400,7 +126067,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (58.3 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 5,
@@ -123650,7 +126338,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.7 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -124002,7 +126711,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Öndeki temponun arkasında yer tutar, düzlük sprintiyle sonuç arar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 3 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -124364,7 +127094,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -124734,7 +127485,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Grup arkasından takip eder, son düzlükte dış kulvardan uzun sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -125128,7 +127900,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Bekleme yarışı yapar, son virajda temposunu artırarak hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -130118,7 +132911,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 2,
@@ -130573,7 +133387,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride pusuya yatar, son düzlükte güçlü hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/3T · Sentetik: 0G/2T)",
+                "delta": 4,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -130982,7 +133817,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta bekleyerek son metrelerde sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 0 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -131421,7 +134277,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Start çıkışıyla birlikte öne fırlar, ya doğrudan liderliği alır ya da lideri çok yakın baskılar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 4 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 2 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 4
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 5,
@@ -131884,7 +134761,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta pozisyonunu korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 3G / 5 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 6 koşuda 3 galibiyet, 5 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 6,
+                  "wins": 3,
+                  "top4": 5
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -132335,7 +135233,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Öndeki liderin hemen arkasında 2.-3. durumda koşan dirençli takipçidir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 4 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 0 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 4
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -132747,7 +135666,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 1 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -133220,7 +136160,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Yarışın başında acele etmeyip arkada bekler, son 400'deki kuvvetli sprintiyle gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -133656,7 +136617,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 2 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -139787,7 +142769,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Erken metrelerdeki hızıyla startla birlikte liderliği alır, önde tempoyu belirler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/2T · Sentetik: 1G/2T)",
+                "delta": 4,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -140235,7 +143238,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder, viraja kadar diri kalır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (3 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -140682,7 +143706,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta pozisyonunu korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/2T · Sentetik: 3G/3T)",
+                "delta": 4,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 3,
+                  "top4": 3
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 4,
@@ -141114,7 +144159,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride pusuya yatar, son düzlükte dış kulvardan sert sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 2 koşuda 0 galibiyet, 1 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 5,
@@ -141570,7 +144636,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Liderin 1-2 boy gerisinde kolay tempoda bekleyerek virajda pres kurar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 3 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 2 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -142020,7 +145107,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Öne yakın gidip lideri zorlayan ateş hattı takipçisidir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 5 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 5 koşuda 2 galibiyet, 5 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 5
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -142461,7 +145569,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Arka grupta bekler, sonlarda güçlü kapanış yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 3 koşuda 1 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 8,
@@ -142908,7 +146037,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride bekleyerek son düzlükte hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 3 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 2 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -148409,7 +151559,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 4G / 6 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Kaba kumda 6 koşuda 4 galibiyet, 6 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 6,
+                  "wins": 4,
+                  "top4": 6
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 2,
@@ -148810,7 +151981,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Orta-geri grupta konumlanır, bekleme avantajıyla son düzlükte arkadan gelir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 2
+                }
+              }
             },
             {
               "no": 3,
@@ -149269,7 +152461,28 @@
               "stil_bg": "rgba(16, 185, 129, 0.15)",
               "stil_border": "rgba(16, 185, 129, 0.4)",
               "taktik_yorum": "Önde kurulan tempoyu yakından takip eder, liderliğin arkasında pres yapar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 3 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 0 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 4,
@@ -149719,7 +152932,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yer tutarak ön tarafın karıştıracağı tempoyu arkadan kollar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 4
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 5,
@@ -150014,7 +153248,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (54.3 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -150367,7 +153622,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta takipte kalır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Kaba kumda 2 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 2
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -150636,7 +153912,28 @@
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
               "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (55.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
-              "isYoungHorse": true
+              "isYoungHorse": true,
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "Adana",
@@ -155126,7 +158423,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta grup takibi yaparak bekleme yapar, son 400'de iç/orta kulvardan sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 0G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 0 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 4
+                }
+              }
             },
             {
               "no": 2,
@@ -155581,7 +158899,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geriden gelmeyi tercih eder, sonlardaki etkili ve güçlü sprintleriyle tanınır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 2 Tabela)",
+                "delta": 5,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 2 galibiyet, 2 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 2,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 3,
@@ -156012,7 +159351,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta dengeli seyreder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 6,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 4,
@@ -156472,7 +159832,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geriden sökülerek gelip son 400'de kuvvetli hücum eder.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 0G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 0 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 5,
@@ -156884,7 +160265,28 @@
               "stil_bg": "rgba(168, 85, 247, 0.15)",
               "stil_border": "rgba(168, 85, 247, 0.4)",
               "taktik_yorum": "Geride konumlanıp düzlükte güçlü ve uzun soluklu sprint atar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 2 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 1 galibiyet, 2 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
+                },
+                "turfStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 6,
@@ -157273,7 +160675,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta pozisyonunu korur.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (4 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 7,
@@ -157675,7 +161098,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta kendini saklar.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 3,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 8,
@@ -158120,7 +161564,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta yıpranmadan gider.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             },
             {
               "no": 9,
@@ -158579,7 +162044,28 @@
               "stil_bg": "rgba(239, 68, 68, 0.15)",
               "stil_border": "rgba(239, 68, 68, 0.4)",
               "taktik_yorum": "Startla birlikte önceliği alır ya da ön gruba yerleşerek önde tempo verir.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "synStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 0,
+                  "top4": 3
+                }
+              }
             },
             {
               "no": 10,
@@ -159032,7 +162518,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta viraja kadar bekler.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 0G / 1 Tabela)",
+                "delta": 4,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 2 koşuda 0 galibiyet, 1 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 2,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 1
+                }
+              }
             },
             {
               "no": 11,
@@ -159431,7 +162938,28 @@
               "stil_bg": "rgba(59, 130, 246, 0.15)",
               "stil_border": "rgba(59, 130, 246, 0.4)",
               "taktik_yorum": "Orta grupta takipte kalır.",
-              "isYoungHorse": false
+              "isYoungHorse": false,
+              "pist_aptitude_analizi": {
+                "badge": "🏟️ Sentetik Pist Uyumlu (5 Koşuda 1 Tabela)",
+                "delta": 2,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "dirtStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 5,
+                  "wins": 0,
+                  "top4": 1
+                },
+                "turfStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
             }
           ],
           "sehir": "Adana",
