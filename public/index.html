@@ -1099,7 +1099,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div class="control-group">
           <label>Hedef Bütçeniz</label>
           <div class="budget-input-wrapper">
-            <input type="number" id="budget-amount" class="budget-input" value="300" min="20" max="10000" step="10"/>
+            <input type="number" id="budget-amount" class="budget-input" value="300" min="20" max="10000" step="10" oninput="loadedWinningCoupon = null; optimizeCoupon();"/>
             <span class="currency-tag">₺</span>
           </div>
         </div>
@@ -1115,7 +1115,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
           </div>
         </div>
 
-        <button class="generate-btn" onclick="optimizeCoupon()">👑 5 Yıllık Şampiyon Kuponu Kur</button>
+        <button class="generate-btn" onclick="loadedWinningCoupon = null; optimizeCoupon()">👑 5 Yıllık Şampiyon Kuponu Kur</button>
       </div>
 
       <!-- Üretilen Özel Bütçeli Kupon Kartı -->
@@ -1438,7 +1438,10 @@ function updateDynamicDateLabels() {
   }
 }
 
-async function switchRobotProgramDate(dateKey) {
+async function switchRobotProgramDate(dateKey, keepWinningCoupon = false) {
+  if (!keepWinningCoupon) {
+    loadedWinningCoupon = null;
+  }
   const btnToday = document.getElementById('robot-date-btn-today');
   const btnTomorrow = document.getElementById('robot-date-btn-tomorrow');
   const selArchive = document.getElementById('robot-archive-date-select');
@@ -1486,13 +1489,16 @@ async function switchRobotProgramDate(dateKey) {
             enrichBultenRunningStylesAndPace(archiveBultenCache[dateKey]);
           }
         } catch(e) {}
-        if (!backtestArchive) {
-          const arcRes = await fetch('data/backtest_archive.json?t=' + timestamp);
-          backtestArchive = await arcRes.json();
-        }
-        const arcDay = backtestArchive[dateKey];
-        if (arcDay) {
-          archiveBultenCache[dateKey] = convertArchiveToBulten(arcDay);
+        // Sadece doğrudan tam bülten dosyası bulunamazsa backtest_archive özetinden dönüştür
+        if (!archiveBultenCache[dateKey]) {
+          if (!backtestArchive) {
+            const arcRes = await fetch('data/backtest_archive.json?t=' + timestamp);
+            backtestArchive = await arcRes.json();
+          }
+          const arcDay = backtestArchive[dateKey];
+          if (arcDay) {
+            archiveBultenCache[dateKey] = convertArchiveToBulten(arcDay);
+          }
         }
       }
       if (archiveBultenCache[dateKey]) {
@@ -1999,7 +2005,7 @@ async function loadWinningCouponToRobot(couponId, modelKey) {
 
   // 1. Program tarihini seç
   const dateCode = coupon.tarihKodu || (couponId.match(/\d{4}-\d{2}-\d{2}/) ? couponId.match(/\d{4}-\d{2}-\d{2}/)[0] : 'bugun');
-  await switchRobotProgramDate(dateCode);
+  await switchRobotProgramDate(dateCode, true);
 
   // 2. Hipodrom seç (Ankara, Adana, İstanbul vb.)
   const sel = document.getElementById('robot-hipodrom-select');
@@ -4779,18 +4785,21 @@ function renderAltiliPackageButtons() {
 }
 
 function selectAltiliPackage(pkgNum) {
+  loadedWinningCoupon = null;
   currentAltiliPackage = pkgNum;
   renderAltiliPackageButtons();
   optimizeCoupon();
 }
 
 function onRobotHipodromChange() {
+  loadedWinningCoupon = null;
   currentAltiliPackage = 1;
   renderAltiliPackageButtons();
   optimizeCoupon();
 }
 
 function setBudget(val) {
+  loadedWinningCoupon = null;
   document.getElementById('budget-amount').value = val;
   optimizeCoupon();
 }
@@ -4798,6 +4807,7 @@ function setBudget(val) {
 let currentPick6Strategy = 'CHAMPION_5YEAR'; // 'CHAMPION_5YEAR' (Son 5 Yılın En Çok Kazandıran Şampiyonu), 'MAX_ACCURACY', 'SINGLE_BANKO', 'MULTI_COVER'
 
 function applyChampionPreset(strat, budget) {
+  loadedWinningCoupon = null;
   const budgetInput = document.getElementById('budget-amount');
   if (budgetInput) budgetInput.value = budget;
   
@@ -4812,6 +4822,7 @@ function applyChampionPreset(strat, budget) {
 }
 
 function setPick6Strategy(strat) {
+  loadedWinningCoupon = null;
   currentPick6Strategy = strat;
   ['strat-champ-btn', 'strat-accuracy-btn', 'strat-single-btn', 'strat-multi-btn', 'strat-adaptive-btn'].forEach(id => {
     const el = document.getElementById(id);
