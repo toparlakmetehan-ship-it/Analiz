@@ -1,65 +1,59 @@
 {
-  "generated_at": "2026-11-16T11:06:10.699709",
+  "generated_at": "2026-11-16T11:13:18.306626",
   "total_horses": 200,
   "top10": [
     {
       "id": "H0012",
       "name": "Horse_12",
-      "score": 87.2
+      "score": 85.6
     },
     {
       "id": "H0127",
       "name": "Horse_127",
-      "score": 87.2
+      "score": 85.6
     },
     {
       "id": "H0124",
       "name": "Horse_124",
-      "score": 87.1
+      "score": 85.5
     },
     {
       "id": "H0154",
       "name": "Horse_154",
-      "score": 87.0
+      "score": 85.4
     },
     {
       "id": "H0187",
       "name": "Horse_187",
-      "score": 87.0
+      "score": 85.4
     },
     {
       "id": "H0034",
       "name": "Horse_34",
-      "score": 86.9
+      "score": 85.3
     },
     {
       "id": "H0040",
       "name": "Horse_40",
-      "score": 86.7
+      "score": 85.1
     },
     {
       "id": "H0092",
       "name": "Horse_92",
-      "score": 86.6
+      "score": 85.0
     },
     {
       "id": "H0173",
       "name": "Horse_173",
-      "score": 86.6
+      "score": 85.0
     },
     {
       "id": "H0013",
       "name": "Horse_13",
-      "score": 86.4
+      "score": 84.8
     }
   ],
-  "weather_cities": [
-    "Istanbul",
-    "Ankara",
-    "Izmir",
-    "Adana",
-    "Bursa"
-  ],
+  "weather_cities": [],
   "results_fetched": 0,
   "program_fetched": 0
 }
