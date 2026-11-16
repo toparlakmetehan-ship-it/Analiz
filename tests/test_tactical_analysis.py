@@ -132,3 +132,51 @@ class TacticalAnalysisTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SurfaceAptitudeTests(unittest.TestCase):
+    def setUp(self):
+        self.conn = sqlite3.connect(":memory:")
+        self.conn.row_factory = sqlite3.Row
+        self.conn.executescript("""
+            CREATE TABLE gecmis_yarislar (
+                at_id INTEGER, pist_turu TEXT, sira INTEGER
+            );
+        """)
+
+    def tearDown(self):
+        self.conn.close()
+
+    def _runs(self, surface, ranks):
+        for rank in ranks:
+            self.conn.execute(
+                "INSERT INTO gecmis_yarislar VALUES (1, ?, ?)", (surface, rank)
+            )
+
+    def test_kum_specialist_gets_positive_delta(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        self._runs("Kum", [1, 2])
+        result = build_pist_aptitude(self.conn, 1, False, "Kum", "TOROK")
+        self.assertEqual(result["delta"], 4)
+        self.assertEqual(result["dirtStats"]["runs"], 2)
+        self.assertEqual(result["dirtStats"]["wins"], 1)
+
+    def test_young_horse_surface_delta_is_zero(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        self._runs("Kum", [1, 1, 2])
+        result = build_pist_aptitude(self.conn, 1, True, "Kum", "")
+        self.assertEqual(result["delta"], 0)
+        self.assertEqual(result["dirtStats"]["runs"], 3)
+
+    def test_synthetic_horse_moving_to_dirt_gets_penalty(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        self._runs("Sentetik", [1, 2, 3])
+        result = build_pist_aptitude(self.conn, 1, False, "Kum", "")
+        self.assertEqual(result["delta"], -5)
+        self.assertEqual(result["synStats"]["runs"], 3)
+
+    def test_no_history_stays_neutral(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        result = build_pist_aptitude(self.conn, 1, False, "Kum", "")
+        self.assertEqual(result["delta"], 0)
+        self.assertEqual(result["dirtStats"]["runs"], 0)

@@ -50,6 +50,15 @@ jobs:
           restore-keys: |
             tjk-db-
 
+      - name: Başlangıç veritabanını yükle
+        run: |
+          if [ ! -s data/tjk_yaris_arsiv.db ]; then
+            gunzip -c data/tjk_seed.db.gz > data/tjk_yaris_arsiv.db
+            echo "Sıkıştırılmış başlangıç veritabanı yüklendi."
+          else
+            echo "Önbellekten gelen veritabanı kullanılıyor."
+          fi
+
       - name: Günlük TJK programı, kariyer, taktik ve tempo pipeline
         run: python run_tjk_scraper.py --target both --export-json
 
