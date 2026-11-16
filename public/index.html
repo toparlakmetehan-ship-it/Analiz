@@ -2488,6 +2488,15 @@ function isYoungInexperiencedHorse(at) {
   return false;
 }
 
+// Handikap puanı 0 olan ilk-koşu/maiden safkanlar "veri yok" sayılmamalı.
+// 0 geçerli bir TJK handikap değeridir; yalnızca alan gerçekten boşsa 40 kullanılır.
+function getEffectiveHandicap(horse, fallback = 40) {
+  const raw = horse?.handikap_puani;
+  if (raw === null || raw === undefined || raw === '') return fallback;
+  const num = Number(raw);
+  return Number.isFinite(num) ? num : fallback;
+}
+
 // TJK RESMÎ YARIŞ KOŞU BİLGİLERİYLE DOĞRULANMIŞ EMPİRİK SAFKAN TAKTİK VERİTABANI
 const VERIFIED_EMPIRICAL_TACTICS = {
   "ÜSTÜNSOY": {
@@ -3239,7 +3248,7 @@ function calculatePaceAdjustment(horse, kosu) {
   const stil = horse.kosu_stili || '';
   const sprintSpeed = horse.son_galop?.son400hiz || 52;
   const mesafe = parseInt(kosu.mesafe) || 1600;
-  const hp = horse.handikap_puani || 40;
+  const hp = getEffectiveHandicap(horse);
 
   let delta = 0;
   let label = '';
@@ -3826,13 +3835,14 @@ function calculatePowerIndex(horse, raceHorses = []) {
   const pedScore = Math.min(99, Math.max(30, rawPed + surfaceDelta));
 
   // [Faktör 3: TJK Handikap & Sınıf Gücü - %12]
-  const allHps = raceHorses.length > 0 ? raceHorses.map(h => h.handikap_puani || 40) : [40, 60];
+  const allHps = raceHorses.length > 0 ? raceHorses.map(h => getEffectiveHandicap(h)) : [40, 60];
   const maxHp = Math.max(...allHps);
   const minHp = Math.min(...allHps);
-  const hp = horse.handikap_puani || 40;
+  const hp = getEffectiveHandicap(horse);
   let handikapScore = 60;
   if (maxHp > minHp) {
-    handikapScore = Math.round(35 + ((hp - minHp) / (maxHp - minHp)) * 60);
+    // Eksik veri için kullanılan 40, gerçek maksimumun üstüne çıkarsa 95 ile sınırla.
+    handikapScore = Math.min(95, Math.max(35, Math.round(35 + ((hp - minHp) / (maxHp - minHp)) * 60)));
   } else {
     handikapScore = Math.min(96, Math.max(38, hp));
   }
