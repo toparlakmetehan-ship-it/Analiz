@@ -1099,9 +1099,10 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div class="control-group">
           <label>Hedef Bütçeniz</label>
           <div class="budget-input-wrapper">
-            <input type="number" id="budget-amount" class="budget-input" value="300" min="20" max="10000" step="10" oninput="loadedWinningCoupon = null; optimizeCoupon();"/>
+            <input type="number" id="budget-amount" class="budget-input" value="300" min="20" max="10000" step="10" oninput="handleBudgetInput(this)"/>
             <span class="currency-tag">₺</span>
           </div>
+          <div id="budget-lock-hint" style="display:none; margin-top:4px; font-size:0.7rem; font-weight:700; color:#f59e0b;">🔒 Arşiv kuponu açık — bütçeyi değiştirmek için kupon kartındaki “Canlı Bütçe Moduna Dön” butonunu kullanın.</div>
         </div>
 
         <div class="control-group">
@@ -1115,7 +1116,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
           </div>
         </div>
 
-        <button class="generate-btn" onclick="loadedWinningCoupon = null; optimizeCoupon()">👑 5 Yıllık Şampiyon Kuponu Kur</button>
+        <button class="generate-btn" onclick="generateChampionCoupon()">👑 5 Yıllık Şampiyon Kuponu Kur</button>
       </div>
 
       <!-- Üretilen Özel Bütçeli Kupon Kartı -->
@@ -1440,7 +1441,7 @@ function updateDynamicDateLabels() {
 
 async function switchRobotProgramDate(dateKey, keepWinningCoupon = false) {
   if (!keepWinningCoupon) {
-    loadedWinningCoupon = null;
+    releaseWinningCoupon();
   }
   const btnToday = document.getElementById('robot-date-btn-today');
   const btnTomorrow = document.getElementById('robot-date-btn-tomorrow');
@@ -1850,9 +1851,61 @@ async function renderWinnersView() {
 
 let loadedWinningCoupon = null;
 
+function setWinningCouponLock(locked) {
+  const input = document.getElementById('budget-amount');
+  if (input) {
+    input.readOnly = !!locked;
+    input.style.opacity = locked ? '0.72' : '';
+    input.style.cursor = locked ? 'not-allowed' : '';
+    input.title = locked
+      ? 'Arşiv kuponu açık. Bütçeyi değiştirmek için “Canlı Bütçe Moduna Dön” butonunu kullanın.'
+      : '';
+  }
+  const hint = document.getElementById('budget-lock-hint');
+  if (hint) hint.style.display = locked ? 'block' : 'none';
+}
+
+function releaseWinningCoupon(showMessage = true) {
+  const hadArchive = !!loadedWinningCoupon;
+  loadedWinningCoupon = null;
+  setWinningCouponLock(false);
+  if (hadArchive && showMessage) {
+    showToast('🔄 Arşiv kuponu kapatıldı; güncel model yeniden hesaplıyor.');
+  }
+  return hadArchive;
+}
+
+function handleBudgetInput(el) {
+  if (loadedWinningCoupon && loadedWinningCoupon.coupon) {
+    const lockedAmount = Number(loadedWinningCoupon.secenek?.maliyet);
+    const typedAmount = parseFloat(el.value);
+    if (!Number.isFinite(lockedAmount) || Math.abs(typedAmount - lockedAmount) < 0.01) {
+      if (!Number.isFinite(typedAmount)) el.value = lockedAmount;
+      return;
+    }
+    if (!window.confirm('Arşiv kuponu açık. Bu yeni tutarla güncel model yeniden hesaplansın mı?')) {
+      el.value = lockedAmount;
+      return;
+    }
+    releaseWinningCoupon(false);
+  }
+  optimizeCoupon();
+}
+
+function generateChampionCoupon() {
+  if (loadedWinningCoupon && loadedWinningCoupon.coupon) {
+    if (!window.confirm('Arşiv kuponu açık. Güncel 5 yıllık şampiyon modeliyle yeni kupon hesaplansın mı?')) {
+      return;
+    }
+    releaseWinningCoupon(false);
+  }
+  optimizeCoupon();
+}
+
 function renderExactWinningCouponInRobot(coupon, secenek) {
   const container = document.getElementById('optimized-coupon-container');
   if (!container) return;
+  setWinningCouponLock(true);
 
   const legCounts = (coupon.ayaklar || []).map(a => (a.kuponAtlar || []).length);
   const actualComb = legCounts.length === 6 ? legCounts.reduce((a, b) => a * b, 1) : 0;
@@ -1929,13 +1982,16 @@ function renderExactWinningCouponInRobot(coupon, secenek) {
             <div style="font-size:0.75rem; color:#a7f3d0;">
               ${coupon.sehir} — ${packageLabel} | Kazanılan Resmî İkramiye: <strong style="color:var(--gold-champagne); font-size:0.95rem;">${coupon.ikramiyeFormatli}</strong>
             </div>
+            <div style="font-size:0.7rem; color:#fbbf24; margin-top:3px; font-weight:700;">
+              📅 ${coupon.tarih || coupon.tarihKodu || 'Arşiv'} — Bu kupon geçmiş bir yarış gününe aittir; bugünün programına otomatik uygulanmaz.
+            </div>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:0.6rem;">
           <div style="background:#10b981; color:#08080a; font-weight:900; font-size:0.8rem; padding:5px 14px; border-radius:8px; font-family:'Cinzel',serif; box-shadow:0 0 10px rgba(16,185,129,0.5);">
             ${secenek?.roi || '167.2x ROI'} ✓
           </div>
-          <button onclick="loadedWinningCoupon = null; optimizeCoupon();" style="background:rgba(0,0,0,0.55); color:#f3e5ab; border:1px solid rgba(212,175,55,0.4); font-size:0.72rem; padding:5px 10px; border-radius:6px; cursor:pointer; font-weight:700; transition:all 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.2)'" onmouseout="this.style.background='rgba(0,0,0,0.55)'" title="Kuponu serbest bırakıp canlı bütçe hesaplayıcısına dön">
+          <button onclick="releaseWinningCoupon(); optimizeCoupon();" style="background:rgba(0,0,0,0.55); color:#f3e5ab; border:1px solid rgba(212,175,55,0.4); font-size:0.72rem; padding:5px 10px; border-radius:6px; cursor:pointer; font-weight:700; transition:all 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.2)'" onmouseout="this.style.background='rgba(0,0,0,0.55)'" title="Kuponu serbest bırakıp canlı bütçe hesaplayıcısına dön">
             🔄 Canlı Bütçe Moduna Dön
           </button>
         </div>
@@ -2034,6 +2090,7 @@ async function loadWinningCouponToRobot(couponId, modelKey) {
   // 4. Bütçeyi ayarla
   const budgetInput = document.getElementById('budget-amount');
   if (budgetInput) budgetInput.value = targetCost;
+  setWinningCouponLock(true);
 
   // 5. Stratejiyi ayarla
   currentPick6Strategy = modelKey || secenek?.modelKey || 'CHAMPION_5YEAR';
@@ -4971,21 +5028,21 @@ function renderAltiliPackageButtons() {
 }
 
 function selectAltiliPackage(pkgNum) {
-  loadedWinningCoupon = null;
+  releaseWinningCoupon();
   currentAltiliPackage = pkgNum;
   renderAltiliPackageButtons();
   optimizeCoupon();
 }
 
 function onRobotHipodromChange() {
-  loadedWinningCoupon = null;
+  releaseWinningCoupon();
   currentAltiliPackage = 1;
   renderAltiliPackageButtons();
   optimizeCoupon();
 }
 
 function setBudget(val) {
-  loadedWinningCoupon = null;
+  releaseWinningCoupon();
   document.getElementById('budget-amount').value = val;
   optimizeCoupon();
 }
@@ -4993,7 +5050,7 @@ function setBudget(val) {
 let currentPick6Strategy = 'CHAMPION_5YEAR'; // 'CHAMPION_5YEAR' (Son 5 Yılın En Çok Kazandıran Şampiyonu), 'MAX_ACCURACY', 'SINGLE_BANKO', 'MULTI_COVER'
 
 function applyChampionPreset(strat, budget) {
-  loadedWinningCoupon = null;
+  releaseWinningCoupon();
   const budgetInput = document.getElementById('budget-amount');
   if (budgetInput) budgetInput.value = budget;
   
@@ -5008,7 +5065,7 @@ function applyChampionPreset(strat, budget) {
 }
 
 function setPick6Strategy(strat) {
-  loadedWinningCoupon = null;
+  releaseWinningCoupon();
   currentPick6Strategy = strat;
   ['strat-champ-btn', 'strat-accuracy-btn', 'strat-single-btn', 'strat-multi-btn', 'strat-adaptive-btn'].forEach(id => {
     const el = document.getElementById(id);
