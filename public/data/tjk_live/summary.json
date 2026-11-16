@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:28:17.114452",
+  "generated_at": "2026-11-16T14:54:39.255191",
   "total_horses": 200,
   "top10": [
     {
@@ -53,12 +53,7 @@
       "score": 84.8
     }
   ],
-  "weather_cities": [
-    "Ankara",
-    "Izmir",
-    "Adana",
-    "Bursa"
-  ],
+  "weather_cities": [],
   "results_fetched": 0,
   "program_fetched": 0
 }
