@@ -48,7 +48,6 @@ jobs:
           python tools/tjk_comprehensive_fetch.py || echo "TJK Fetch tamamlandı."
           node tools/tjk_live_sync.js || echo "TJK Sync tamamlandı."
           node tools/enrich_race_pace_and_scenarios.js || echo "Pace Enrich tamamlandı."
-          node tools/build_tomorrow_bulten.js || echo "Tomorrow bulten tamamlandı."
 
       - name: Yeni Verileri GitHub Deposuna Kaydet (Git Commit)
         run: |

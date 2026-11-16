@@ -2465,6 +2465,8 @@ const styleDefinitions = {
 // GENEL VE DEĞİŞMEZ KURAL: Kariyerinde <= 3 koşu koşan hiçbir safkana kalıplaşmış gidişat atanmaz
 function isYoungInexperiencedHorse(at) {
   if (!at) return false;
+  // Günlük veri hattı kariyer toplamından hesapladığı bayrağı sağladıysa tek kaynak olarak kullan.
+  if (typeof at.isYoungHorse === 'boolean') return at.isYoungHorse;
   if (at.isFirstTimeStarter) return true;
   
   // 1. Resmi kariyer toplam koşu sayısı (EN KESİN VE DOĞRULANMIŞ VERİ)
@@ -3043,6 +3045,18 @@ const VERIFIED_EMPIRICAL_TACTICS = {
 };
 
 function enrichHorseRunningStyle(at, idx, raceHorses = []) {
+  // Günlük scraper'ın geçmiş yarışlardan ürettiği taktik analizi arayüzde yeniden ezme.
+  const hasCanonicalYoungTactic = at.isYoungHorse === true &&
+    at.kosu_stili === 'Taktik Serbest (İlk 3 Koşusu)' && at.tempo_delta === 0;
+  const hasPersistedTacticalAnalysis =
+    typeof at.isYoungHorse === 'boolean' &&
+    (hasCanonicalYoungTactic || (!at.isYoungHorse && ['GUNCEL', 'KISMI', 'TEK_OLCUM', 'DEGISKEN', 'YETERSIZ_VERI'].includes(at.taktik_durumu))) &&
+    typeof at.kosu_stili === 'string' && at.kosu_stili.trim() !== '' &&
+    typeof at.stil_ikon === 'string' &&
+    typeof at.taktik_yorum === 'string' && at.taktik_yorum.trim() !== '' &&
+    Number.isFinite(at.tempo_delta);
+  if (hasPersistedTacticalAnalysis) return;
+
   // KURAL 1: Yarış hayatının ilk 3 koşusundaki safkanlara kalıplaşmış gidişat atanmaz
   if (isYoungInexperiencedHorse(at)) {
     const sprintSpeed = at.son_galop?.son400hiz ? at.son_galop.son400hiz.toFixed(1) : '53.5';
@@ -3056,31 +3070,16 @@ function enrichHorseRunningStyle(at, idx, raceHorses = []) {
     return;
   }
 
-  // KURAL 2: TECRÜBELİ SAFKANLARIN (> 3 KOŞU) GERÇEK VE DOĞRULANMIŞ GİDİŞAT TAYİNİ
+  // Tecrübeli safkan için doğrulanmış ara pozisyonu yoksa stil tahmin etme.
   at.isYoungHorse = false;
-  const horseNameUpper = (at.isim || '').toUpperCase().trim();
-  const verified = VERIFIED_EMPIRICAL_TACTICS[horseNameUpper];
-
-  let matched = null;
-  if (verified) {
-    const baseDef = styleDefinitions[verified.style] || styleDefinitions.ortagrup;
-    matched = {
-      ...baseDef,
-      taktik: verified.comment || baseDef.taktik
-    };
-  } else {
-    // Güvenli nötr orta grup (Asla kafadan takı/sprint ile sahte taktik atanmaz!)
-    matched = {
-      ...styleDefinitions.ortagrup,
-      taktik: 'Geçmiş yarışlarında orta grupta dengeli pozisyon almış, viraja kadar diri kalmayı seçmiştir.'
-    };
-  }
-  at.kosu_stili = matched.stil;
-  at.stil_ikon = matched.ikon;
-  at.stil_renk = matched.renk;
-  at.stil_bg = matched.bg;
-  at.stil_border = matched.border;
-  at.taktik_yorum = matched.taktik;
+  at.kosu_stili = 'Yetersiz Veri';
+  at.taktik_durumu = 'YETERSIZ_VERI';
+  at.stil_ikon = '❓';
+  at.stil_renk = '#94a3b8';
+  at.stil_bg = 'rgba(148, 163, 184, 0.12)';
+  at.stil_border = 'rgba(148, 163, 184, 0.35)';
+  at.taktik_yorum = 'Doğrulanmış yarış içi ara-pozisyon ölçümü yok; taktik ve tempo etkisi tahmin edilmedi.';
+  at.tempo_delta = 0;
 }
 
 function enrichRaceRunningStylesAndPace(kosu) {
@@ -3100,8 +3099,32 @@ function estimateRacePace(kosu) {
   const atlar = (kosu.atlar || []).filter(h => !h.isKosmaz);
   // Yarış hayatının ilk 3 koşusundaki atlar taktik karakterleri henüz oturmadığı için tempo kitlemesine sokulmaz
   const tecrubeliAtlar = atlar.filter(h => !isYoungInexperiencedHorse(h) && !h.isYoungHorse);
-  const kacaklar = tecrubeliAtlar.filter(h => (h.kosu_stili || '').includes('Kaçak'));
-  const presciler = tecrubeliAtlar.filter(h => (h.kosu_stili || '').includes('Pres'));
+  if (tecrubeliAtlar.length === 0) {
+    return {
+      type: 'BALANCED',
+      badge: '🌱 GELİŞİM & TEMPO KOŞUSU',
+      title: 'GELİŞİM / İLK KOŞULAR TEMPOSU',
+      color: '#38bdf8',
+      bg: 'linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(14, 165, 233, 0.05))',
+      border: 'rgba(56, 189, 248, 0.4)',
+      desc: 'Koşudaki safkanların tamamı yarış hayatının ilk 3 koşusundadır. Karakter oturmadığından gidişat senaryosu kilitlenmez; taktik tahmini yapılmaz.',
+      kimeYarar: 'Taktik verisi bulunmuyor; atların tempo etkisi nötrdür.'
+    };
+  }
+  const measuredAtlar = tecrubeliAtlar.filter(h =>
+    ['GUNCEL', 'KISMI', 'TEK_OLCUM', 'DEGISKEN', 'VERIFIED'].includes(h.taktik_durumu) &&
+    ['Kaçak / Lider', 'Presçi', 'Orta Grup', 'Düzlük Sprinteri'].includes(h.kosu_stili)
+  );
+  if (measuredAtlar.length < 3 || (tecrubeliAtlar.length && measuredAtlar.length / tecrubeliAtlar.length < 0.5)) {
+    return {
+      type: 'UNKNOWN', badge: '❓ YETERSİZ TAKTİK VERİSİ', title: 'TEMPO TAHMİNİ YAPILAMADI',
+      color: '#94a3b8', bg: 'rgba(148, 163, 184, 0.08)', border: 'rgba(148, 163, 184, 0.35)',
+      desc: `Ölçülmüş taktik verisi ${measuredAtlar.length}/${tecrubeliAtlar.length} tecrübeli safkanda mevcut; tempo senaryosu için en az 3 at ve %50 kapsam gerekir.`,
+      kimeYarar: 'Taktik verisi yetersiz; atlar arası tempo avantajı hesaplanmadı.'
+    };
+  }
+  const kacaklar = measuredAtlar.filter(h => (h.kosu_stili || '').includes('Kaçak'));
+  const presciler = measuredAtlar.filter(h => (h.kosu_stili || '').includes('Pres'));
 
   // Eğer tüm safkanlar ilk 3 koşusundaysa (örn. 2-3 yaş Maiden)
   if (tecrubeliAtlar.length === 0) {
@@ -3174,7 +3197,7 @@ function estimateRacePace(kosu) {
 // ── HAK EDİLMİŞ VE KADEMELİ TAKTİK PUAN HESAPLAMA (Maksimum ±2 Puan) ──
 function calculatePaceAdjustment(horse, kosu) {
   // KURAL: İlk 3 koşusundaki safkanlara gidişat puanı uygulanmaz (0 Puan Nötr)
-  if (isYoungInexperiencedHorse(horse) || horse.isYoungHorse) {
+  if (isYoungInexperiencedHorse(horse)) {
     const sprintSpeed = horse.son_galop?.son400hiz ? horse.son_galop.son400hiz.toFixed(1) : '53.5';
     return {
       delta: 0,
@@ -3183,7 +3206,36 @@ function calculatePaceAdjustment(horse, kosu) {
     };
   }
 
+  // Yetersiz ölçümde veya koşu temposu hesaplanamadıysa etki daima nötrdür.
+  if (horse.taktik_durumu === 'YETERSIZ_VERI' ||
+      ['UNKNOWN', 'YETERSIZ_VERI'].includes(kosu.tempo_senaryosu?.tempo_kodu)) {
+    return { delta: 0, label: 'Doğrulanmış taktik/tempo verisi yetersiz; nötr (0 Puan)', color: '#94a3b8' };
+  }
+
+  // Günlük scraper'ın ölçülmüş taktik analizini koru.
+  if (
+    horse.isYoungHorse === true ||
+    (horse.isYoungHorse === false && ['GUNCEL', 'KISMI', 'TEK_OLCUM', 'DEGISKEN'].includes(horse.taktik_durumu) &&
+     typeof horse.kosu_stili === 'string' && Number.isFinite(horse.tempo_delta))
+  ) {
+    const delta = horse.isYoungHorse ? 0 : horse.tempo_delta;
+    const color = delta > 0 ? '#10b981' : (delta < 0 ? '#ef4444' : '#94a3b8');
+    return {
+      delta,
+      label: `Geçmiş yarış taktik analizinden gelen tempo etkisi (${delta > 0 ? '+' : ''}${delta} Puan)`,
+      color,
+      paceType: kosu.tempo_senaryosu?.tempo_kodu || null
+    };
+  }
+
   const pace = estimateRacePace(kosu);
+  if (pace.type === 'UNKNOWN') {
+    return {
+      delta: 0,
+      label: 'Doğrulanmış taktik verisi yetersiz; tempo etkisi nötr (0 Puan)',
+      color: '#94a3b8'
+    };
+  }
   const stil = horse.kosu_stili || '';
   const sprintSpeed = horse.son_galop?.son400hiz || 52;
   const mesafe = parseInt(kosu.mesafe) || 1600;
@@ -4030,30 +4082,42 @@ function renderRaceDetails() {
     let galopHtml = '';
     if (h.son_galop) {
       const g = h.son_galop;
-      galopHtml = `
-        <div class="galop-chamber">
-          <div class="chamber-head" style="border-bottom:1px solid rgba(212,175,55,0.2);padding-bottom:0.4rem;margin-bottom:0.6rem;">
-            <span style="display:flex;align-items:center;gap:0.4rem;color:#34d399;font-weight:700;font-size:0.75rem;">
-              ✓ TJK RESMÎ İDMAN PİSTİ RAPORU · ${g.hipodrom || 'Pist'} (${g.pist || 'Kum - İç'})
-            </span>
-            <span style="font-family:'Cinzel';font-size:0.75rem;">${g.tarih || ''}</span>
+      const hasRealGalop = g.tur !== 'Resmî Galop Yok' && g.derece !== 'Resmî Galop Kaydı Yok' && (g.derece || g.toplam_derece);
+      if (hasRealGalop) {
+        galopHtml = `
+          <div class="galop-chamber">
+            <div class="chamber-head" style="border-bottom:1px solid rgba(212,175,55,0.2);padding-bottom:0.4rem;margin-bottom:0.6rem;">
+              <span style="display:flex;align-items:center;gap:0.4rem;color:#34d399;font-weight:700;font-size:0.75rem;">
+                ✓ TJK RESMÎ İDMAN PİSTİ · ${g.sehir || g.hipodrom || 'Pist'} (${g.pist || 'Kum'}) · ${g.tur || 'Galop'}
+              </span>
+              <span style="font-family:'Cinzel';font-size:0.75rem;color:#fcd34d;">⏱️ ${g.tarih || ''}</span>
+            </div>
+            <div class="chamber-trio">
+              <div class="chamber-cell">
+                <div class="cell-num" style="font-size:0.8rem;color:#f8fafc;">${g.derece || g.toplam_derece || '-'}</div>
+                <div class="cell-tag">Resmî Bölüm Dereceleri</div>
+              </div>
+              <div class="chamber-cell">
+                <div class="cell-num" style="color:var(--text-gold);font-size:0.8rem;">${g.d_400 ? '400: ' + g.d_400 : (g.son_400 || '-')}</div>
+                <div class="cell-tag">Son 400 Kopuş</div>
+              </div>
+              <div class="chamber-cell">
+                <div class="cell-num" style="color:#34d399;font-size:0.8rem;">${g.son400hiz ? g.son400hiz.toFixed(1) + ' km/h' : (g.durum_kodu || '-')}</div>
+                <div class="cell-tag">Sprint Hızı</div>
+              </div>
+            </div>
           </div>
-          <div class="chamber-trio">
-            <div class="chamber-cell">
-              <div class="cell-num">${g.toplam_derece || g.derece || '-'}</div>
-              <div class="cell-tag">Toplam İdman</div>
-            </div>
-            <div class="chamber-cell">
-              <div class="cell-num" style="color:var(--text-gold);">${g.son_400 || '-'}</div>
-              <div class="cell-tag">Son 400 Kopuş</div>
-            </div>
-            <div class="chamber-cell">
-              <div class="cell-num">${g.son400hiz ? g.son400hiz.toFixed(1) + ' km/s' : (g.durum_kodu || 'ÇR')}</div>
-              <div class="cell-tag">Sprint Hızı</div>
+        `;
+      } else {
+        galopHtml = `
+          <div class="galop-chamber" style="border:1px dashed rgba(148,163,184,0.3);background:rgba(15,23,42,0.4);">
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;color:#94a3b8;padding:0.2rem 0;">
+              <span>ℹ️ TJK Resmî İdman Pisti Kaydı Bulunmuyor</span>
+              <span style="font-size:0.7rem;color:#64748b;">(Genç / Dinlendirilen Safkan)</span>
             </div>
           </div>
-        </div>
-      `;
+        `;
+      }
     }
 
     monument.innerHTML = `
@@ -4087,6 +4151,7 @@ function renderRaceDetails() {
           </span>
         </div>
         <div style="font-size:0.73rem; color:#cbd5e1; line-height:1.4;">${h.taktik_yorum || 'Yarışın temposuna göre konumlanacaktır.'}</div>
+        ${['GUNCEL', 'KISMI', 'TEK_OLCUM', 'DEGISKEN'].includes(h.taktik_durumu) ? `<div style="font-size:0.64rem;color:#94a3b8;margin-top:0.25rem;">Kaynak: Accurace ara-pozisyon ölçümü (resmî olmayan) · ${h.taktik_durumu === 'GUNCEL' ? '3+ koşu' : (h.taktik_durumu === 'KISMI' ? '2 koşu' : (h.taktik_durumu === 'DEGISKEN' ? 'değişken stil' : 'tek koşu'))}</div>` : ''}
         <div style="font-size:0.71rem; color:${h.paceColor}; margin-top:4px; font-weight:600; display:flex; align-items:center; gap:0.3rem;">
           <span>⚡</span> ${h.paceLabel} <span style="color:#94a3b8; font-weight:400;">(Ham Güç: ${h.baseRoyalScore} P → Nihai: <b style="color:#f8fafc;">${h.royalScore} P</b>)</span>
         </div>

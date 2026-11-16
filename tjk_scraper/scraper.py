@@ -1,10 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-TJK Web Scraper Ana Motoru
-Bugün ve yarının resmî yarış programını ve programdaki her atın
-geçmiş koşularını TJK.org'dan çeker, ilişkisel veritabanına kaydeder.
+TJK Web Scraper ve Analiz Orkestrasyon Motoru
+5 Aşamalı Günlük Otomatik Veri & Analiz Pipeline:
+  Aşama 1: Dünün (ve işlenmemiş son günlerin) resmî sonuçları ve gidişat verilerini topla (yaris_sonuclari, gecmis_yarislar)
+  Aşama 2: Bugün ve yarının resmî yarış programını eksiksiz topla (kosular, program_kayitlari)
+  Aşama 3: Programdaki her at için kariyer geçmişini kontrol et ve yeni koşuları kaydet (gecmis_yarislar)
+  Aşama 4: At bazında koşu stili / taktiği türet (turev_at_taktikleri - Kural 1 & 2'ye tam sadakat)
+  Aşama 5: Koşu bazında tempo tahmini ve koşu içi etkileri türet (turev_kosu_tempolari, turev_kosu_at_etkileri)
+  Aşama 6: Canlı bülten JSON dosyalarını (bulten_bugun.json, bulten_yarin.json) doğrulanmış verilerle güncelle
+  Aşama 7: Doğrulama ve ayrıntılı özet raporu sun
 """
 
+import os
+import re
+import json
 import time
 import urllib.parse
 import logging
@@ -23,13 +32,21 @@ from .db import (
     upsert_sahip,
     upsert_program_kaydi,
     upsert_gecmis_yaris,
+    upsert_yaris_sonucu,
+    upsert_idman_kaydi,
+    check_yaris_sonucu_exists,
+    check_gecmis_yaris_exists,
     get_cached_at_ids_today,
     log_scrape_run
 )
 from .parser import (
     parse_daily_race_program_html,
-    parse_horse_profile_html
+    parse_horse_profile_html,
+    parse_daily_race_results_html,
+    parse_tjk_idman_html
 )
+from .analytics import run_full_tactical_and_pace_pipeline
+from .accurace import fetch_race, normalize_city_slug, parse_race_date
 from .validator import validate_database_integrity, print_validation_report
 
 # Log yapılandırması
@@ -58,7 +75,7 @@ BASE_HEADERS = {
 
 
 class TJKScraper:
-    def __init__(self, db_path=None, request_delay=0.6, max_retries=3):
+    def __init__(self, db_path=None, request_delay=0.5, max_retries=3):
         self.db_path = db_path
         self.request_delay = request_delay
         self.max_retries = max_retries
@@ -76,9 +93,7 @@ class TJKScraper:
             try:
                 time.sleep(self.request_delay)
                 resp = self.session.get(url, timeout=15)
-                # TJK bazen 500 veya 404 dönebilir
                 if resp.status_code == 200:
-                    # Charset kontrolü (TJK genelde utf-8 kullanır)
                     if resp.encoding.lower() not in ['utf-8', 'utf8']:
                         resp.encoding = 'utf-8'
                     return resp.text
@@ -94,10 +109,120 @@ class TJKScraper:
         logger.error(f"❌ {description} {self.max_retries} denemede çekilemedi: {url}")
         return None
 
+    # =========================================================================
+    # AŞAMA 1: DÜNÜN / GEÇMİŞ GÜNLERİN SONUÇLARI VE GİDİŞAT VERİSİ
+    # =========================================================================
+    def discover_active_results_hipodroms_for_date(self, target_date_dmy):
+        """
+        Belirtilen tarihte sonuçları olan hipodromları tarar.
+        """
+        active_results = []
+        q_date = urllib.parse.quote(target_date_dmy)
+
+        for sehir_id, sehir_adi, hipodrom_adi in TJK_HIPODROMLAR:
+            q_sehir = urllib.parse.quote(sehir_adi)
+            url = f"https://www.tjk.org/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari?SehirId={sehir_id}&QueryParameter_Tarih={q_date}&SehirAdi={q_sehir}&Era=yesterday"
+            html = self._fetch_url_with_retry(url, description=f"{sehir_adi} Sonuçları")
+            if not html:
+                continue
+
+            if 'tablesorter' in html or 'gunlukYarisSonuclari' in html or 'Son 800' in html:
+                active_results.append({
+                    "sehir_id": sehir_id,
+                    "sehir_adi": sehir_adi,
+                    "hipodrom_adi": hipodrom_adi,
+                    "html": html
+                })
+                logger.info(f"🏆 Yarış Sonuçları Bulundu: {sehir_adi} ({target_date_dmy})")
+
+        return active_results
+
+    def scrape_and_save_race_results(self, target_date_obj):
+        """
+        Belirtilen tarihin yarış sonuçlarını, gidişat ve fark verilerini toplar.
+        Kayıt bazlı kontrol (UNIQUE) yaparak yaris_sonuclari ve gecmis_yarislar'a yazar.
+        """
+        dmy_str = target_date_obj.strftime("%d/%m/%Y")
+        iso_str = target_date_obj.strftime("%Y-%m-%d")
+        logger.info(f"\n--- [AŞAMA 1] Yarış Sonuçları ve Gidişat Verileri Çekiliyor: {dmy_str} ---")
+
+        active_results = self.discover_active_results_hipodroms_for_date(dmy_str)
+        if not active_results:
+            logger.info(f"ℹ️ {dmy_str} tarihi için sonuç sayfası bulunamadı veya koşu yok.")
+            return {"tarih": iso_str, "toplam_sonuc": 0, "toplam_kosu": 0}
+
+        conn = get_db_connection(self.db_path) if self.db_path else get_db_connection()
+        total_races = 0
+        total_results = 0
+
+        for hip in active_results:
+            sehir_id = hip["sehir_id"]
+            sehir_adi = hip["sehir_adi"]
+            hipodrom_adi = hip["hipodrom_adi"]
+
+            with conn:
+                upsert_hipodrom(conn, sehir_id, sehir_adi, hipodrom_adi)
+
+            races_results = parse_daily_race_results_html(hip["html"], sehir_id, sehir_adi, iso_str)
+            total_races += len(races_results)
+
+            for race in races_results:
+                kosu_no = race["kosu_no"]
+                for horse_res in race.get("sonuclar", []):
+                    at_id = horse_res.get("at_id")
+                    if not at_id:
+                        continue
+
+                    with conn:
+                        # 1. At kaydını önce ekle (Foreign key constraint için şart)
+                        upsert_at(conn, {
+                            "id": at_id,
+                            "at_adi": horse_res.get("at_ismi")
+                        })
+
+                        # 2. Ham yarış sonuçları tablosuna ekle
+                        upsert_yaris_sonucu(conn, horse_res)
+                        total_results += 1
+
+                        # 3. Geçmiş yarış formatında ekle
+                        gy_data = {
+                            "at_id": at_id,
+                            "tarih": iso_str,
+                            "hipodrom_sehir": sehir_adi,
+                            "mesafe": race.get("mesafe"),
+                            "mesafe_raw": str(race.get("mesafe")) if race.get("mesafe") else "",
+                            "pist_turu": race.get("pist_turu"),
+                            "pist_durumu": "Normal",
+                            "pist_raw": race.get("pist_turu"),
+                            "sira": horse_res.get("sira"),
+                            "sira_raw": horse_res.get("sira_raw"),
+                            "derece_raw": horse_res.get("derece_raw"),
+                            "derece_saniye": horse_res.get("derece_saniye"),
+                            "kilo": None,
+                            "jokey_ad": None,
+                            "start_no": horse_res.get("start_no"),
+                            "taki": None,
+                            "ganyan": horse_res.get("ganyan"),
+                            "ganyan_raw": str(horse_res.get("ganyan")) if horse_res.get("ganyan") else "",
+                            "kosu_no": kosu_no,
+                            "kosu_cinsi": race.get("kosu_cinsi"),
+                            "fark": str(horse_res.get("fark_boy")) if horse_res.get("fark_boy") is not None else horse_res.get("fark_raw"),
+                            "video_url": horse_res.get("video_url")
+                        }
+                        upsert_gecmis_yaris(conn, gy_data)
+
+            logger.info(f"   ✓ {sehir_adi}: {len(races_results)} koşu, {sum(len(r.get('sonuclar', [])) for r in races_results)} safkan sonucu işlendi.")
+
+        conn.close()
+        logger.info(f"✅ Sonuçlar tamamlandı: Toplam {total_races} koşu, {total_results} safkan sonucu arşive eklendi.")
+        return {"tarih": iso_str, "toplam_sonuc": total_results, "toplam_kosu": total_races}
+
+    # =========================================================================
+    # AŞAMA 2: GÜNLÜK YARIŞ PROGRAMI (BUGÜN VE YARIN)
+    # =========================================================================
     def discover_active_hipodroms_for_date(self, target_date_dmy):
         """
         Belirtilen tarihte (örn: '16/11/2026') TJK'da koşusu olan hipodromları tarar.
-        (sehir_id, sehir_adi, hipodrom_adi, html_content) listesi döner.
         """
         active_hipodroms = []
         q_date = urllib.parse.quote(target_date_dmy)
@@ -109,7 +234,6 @@ class TJKScraper:
             if not html:
                 continue
 
-            # Eğer sayfada yarış tablosu (tablesorter) varsa yarış vardır
             if 'class="tablesorter"' in html or "gunlukYarisProgramiTable" in html:
                 active_hipodroms.append({
                     "sehir_id": sehir_id,
@@ -121,6 +245,108 @@ class TJKScraper:
 
         return active_hipodroms
 
+    def scrape_program_for_date(self, conn, target_date_obj, day_label="bugun"):
+        """
+        Tarihin yarış programını çeker, kosular ve program_kayitlari tablolarına kaydeder.
+        """
+        dmy_str = target_date_obj.strftime("%d/%m/%Y")
+        iso_str = target_date_obj.strftime("%Y-%m-%d")
+
+        logger.info(f"\n--- [AŞAMA 2] Yarış Programı Çekiliyor: {day_label.upper()} ({dmy_str}) ---")
+        active_hipodroms = self.discover_active_hipodroms_for_date(dmy_str)
+
+        if not active_hipodroms:
+            logger.info(f"ℹ️ {dmy_str} ({day_label}) için TJK'da resmî yarış programı bulunamadı.")
+            return {"tarih": iso_str, "durum": "PROGRAM_YOK", "horses": []}
+
+        horses_in_program = []
+        kosu_count = 0
+
+        for hip in active_hipodroms:
+            sehir_id = hip["sehir_id"]
+            sehir_adi = hip["sehir_adi"]
+            hipodrom_adi = hip["hipodrom_adi"]
+
+            with conn:
+                upsert_hipodrom(conn, sehir_id, sehir_adi, hipodrom_adi)
+
+            kosular = parse_daily_race_program_html(hip["html"], sehir_id, sehir_adi, iso_str)
+            logger.info(f"📍 {sehir_adi}: {len(kosular)} koşu ayrıştırıldı.")
+            kosu_count += len(kosular)
+
+            for k in kosular:
+                with conn:
+                    kosu_id = upsert_kosu(conn, k)
+
+                # Resmî TJK İdman Pisti ve Galop Verilerini Çek
+                if k.get("kosu_kodu") and k.get("idman_atkodu"):
+                    self.scrape_and_save_race_idman(
+                        conn, sehir_id, sehir_adi, k["kosu_no"],
+                        k["kosu_kodu"], k["idman_atkodu"], iso_str
+                    )
+
+                for at_data in k.get("atlar", []):
+                    at_id = at_data.get("at_id")
+                    at_adi = at_data.get("at_adi")
+
+                    with conn:
+                        if at_data.get("jokey_id") and at_data.get("jokey_ad"):
+                            upsert_jokey(conn, at_data["jokey_id"], at_data["jokey_ad"])
+                        if at_data.get("antrenor_id") and at_data.get("antrenor_ad"):
+                            upsert_antrenor(conn, at_data["antrenor_id"], at_data["antrenor_ad"])
+                        if at_data.get("sahip_id") and at_data.get("sahip_ad"):
+                            upsert_sahip(conn, at_data["sahip_id"], at_data["sahip_ad"])
+
+                        if at_id:
+                            upsert_at(conn, {
+                                "id": at_id,
+                                "at_adi": at_adi,
+                                "baba_id": at_data.get("baba_id"),
+                                "baba_adi": at_data.get("baba_adi"),
+                                "anne_id": at_data.get("anne_id"),
+                                "anne_adi": at_data.get("anne_adi"),
+                                "kisrak_babasi_adi": at_data.get("kisrak_babasi_adi"),
+                                "yas": at_data.get("yas"),
+                                "yas_cinsiyet": at_data.get("yas_cinsiyet"),
+                                "profil_eksik_mi": False
+                            })
+
+                        at_data["kosu_id"] = kosu_id
+                        upsert_program_kaydi(conn, at_data)
+
+                    if at_id and (at_id, at_adi) not in horses_in_program:
+                        horses_in_program.append((at_id, at_adi))
+
+        logger.info(f"✅ {day_label.capitalize()} programı kaydedildi: {kosu_count} koşu, {len(horses_in_program)} tekil safkan.")
+        return {
+            "tarih": iso_str,
+            "durum": "BASARILI",
+            "kosu_count": kosu_count,
+            "horses": horses_in_program
+        }
+
+    def scrape_and_save_race_idman(self, conn, sehir_id, sehir_adi, kosu_no, kosu_kodu, sample_atkodu, iso_str):
+        """
+        TJK resmî İdman Pisti sayfasından koşudaki tüm atların galop verilerini çeker ve idman_pist_kayitlari tablosuna kaydeder.
+        """
+        if not kosu_kodu or not sample_atkodu:
+            return {}
+
+        url = f"https://www.tjk.org/TR/YarisSever/Info/idmanpisti/Kosu?KosuKodu={kosu_kodu}&Atkodu={sample_atkodu}"
+        html = self._fetch_url_with_retry(url, description=f"{sehir_adi} {kosu_no}. Koşu Resmî İdman/Galop Verisi")
+        if not html:
+            return {}
+
+        galop_map = parse_tjk_idman_html(html, kosu_no, sehir_id, iso_str, kosu_kodu)
+        with conn:
+            for at_no, rec in galop_map.items():
+                upsert_idman_kaydi(conn, rec)
+
+        return galop_map
+
+    # =========================================================================
+    # AŞAMA 3: AT PROFİL VE KARİYER GEÇMİŞİ GÜNCELLEMESİ
+    # =========================================================================
     def scrape_horse_profile(self, at_id, at_adi=""):
         """TJK AtKosuBilgileri sayfasından tek bir atın profil ve geçmişini çeker."""
         if not at_id:
@@ -140,162 +366,632 @@ class TJKScraper:
             logger.error(f"At {at_id} ({at_adi}) profil parse hatası: {e}")
             return None
 
-    def run_sync_for_date(self, target_date_obj, day_label="bugun"):
+    def update_horse_careers(self, conn, horses_to_fetch):
         """
-        Belirtilen bir tarih için tüm süreci baştan sona işletir:
-        1. Aktif hipodromları keşfet
-        2. Günlük program koşu ve at kayıtlarını veritabanına ekle
-        3. Programdaki her atın tüm geçmiş koşularını profilinden çekip kaydet
-        4. Doğrulama ve raporlama yap
+        Programdaki safkanların kariyer geçmişlerini günceller.
+        Bugün önbelleğe alınmamış atları TJK'dan çeker.
         """
-        start_time = time.time()
-        dmy_str = target_date_obj.strftime("%d/%m/%Y")
-        iso_str = target_date_obj.strftime("%Y-%m-%d")
+        today_iso = self.get_turkey_now().strftime("%Y-%m-%d")
+        cached_at_ids = get_cached_at_ids_today(conn, today_iso)
+        logger.info(f"\n--- [AŞAMA 3] At Kariyer Geçmişi Güncellemesi ({len(horses_to_fetch)} Safkan) ---")
+        logger.info(f"📦 Bugün Önbelleğe Alınmış At Sayısı: {len(cached_at_ids)}")
 
-        logger.info(f"\n{'='*60}")
-        logger.info(f"🚀 TJK VERİ TOPLAMA BAŞLATILDI: {day_label.upper()} ({dmy_str})")
-        logger.info(f"{'='*60}")
+        fetched_count = 0
+        skipped_count = 0
+        failed_count = 0
 
-        conn = get_db_connection(self.db_path) if self.db_path else get_db_connection()
-
-        # 1. Hipodromları Tara
-        active_hipodroms = self.discover_active_hipodroms_for_date(dmy_str)
-        if not active_hipodroms:
-            if day_label == "yarin":
-                logger.info(f"ℹ️ {dmy_str} (Yarın) için henüz TJK tarafından resmî yarış programı açıklanmamış. İşlem temiz sonlandırıldı.")
-            else:
-                logger.warning(f"⚠️ {dmy_str} ({day_label}) için koşu programı bulunamadı.")
-            conn.close()
-            return {
-                "tarih": iso_str,
-                "durum": "PROGRAM_YOK",
-                "mesaj": "Resmî program bulunamadı"
-            }
-
-        # Önbellek: Bugün zaten profili başarıyla çekilmiş atların listesi
-        bugun_iso = self.get_turkey_now().strftime("%Y-%m-%d")
-        cached_at_ids = get_cached_at_ids_today(conn, bugun_iso)
-        logger.info(f"📦 Önbellekteki At Sayısı: {len(cached_at_ids)} (Tekrar çekilmeyecek)")
-
-        total_races_count = 0
-        total_horses_in_program = 0
-        horses_to_fetch_profile = []
-
-        # 2. Günlük Programı Parse ve DB'ye Kaydet
-        for hip in active_hipodroms:
-            sehir_id = hip["sehir_id"]
-            sehir_adi = hip["sehir_adi"]
-            hipodrom_adi = hip["hipodrom_adi"]
-
-            with conn:
-                upsert_hipodrom(conn, sehir_id, sehir_adi, hipodrom_adi)
-
-            kosular = parse_daily_race_program_html(hip["html"], sehir_id, sehir_adi, iso_str)
-            logger.info(f"📍 {sehir_adi}: {len(kosular)} koşu ayrıştırıldı.")
-            total_races_count += len(kosular)
-
-            for k in kosular:
-                with conn:
-                    kosu_id = upsert_kosu(conn, k)
-
-                for at_data in k.get("atlar", []):
-                    total_horses_in_program += 1
-                    at_id = at_data.get("at_id")
-                    at_adi = at_data.get("at_adi")
-
-                    # İlişkili kişileri kaydet
-                    with conn:
-                        if at_data.get("jokey_id") and at_data.get("jokey_ad"):
-                            upsert_jokey(conn, at_data["jokey_id"], at_data["jokey_ad"])
-                        if at_data.get("antrenor_id") and at_data.get("antrenor_ad"):
-                            upsert_antrenor(conn, at_data["antrenor_id"], at_data["antrenor_ad"])
-                        if at_data.get("sahip_id") and at_data.get("sahip_ad"):
-                            upsert_sahip(conn, at_data["sahip_id"], at_data["sahip_ad"])
-
-                        # At temel kaydı (profil öncesi)
-                        if at_id:
-                            upsert_at(conn, {
-                                "id": at_id,
-                                "at_adi": at_adi,
-                                "baba_id": at_data.get("baba_id"),
-                                "baba_adi": at_data.get("baba_adi"),
-                                "anne_id": at_data.get("anne_id"),
-                                "anne_adi": at_data.get("anne_adi"),
-                                "kisrak_babasi_adi": at_data.get("kisrak_babasi_adi"),
-                                "yas": at_data.get("yas"),
-                                "yas_cinsiyet": at_data.get("yas_cinsiyet"),
-                                "profil_eksik_mi": False
-                            })
-
-                        # Program kaydı (koşudaki performansı)
-                        at_data["kosu_id"] = kosu_id
-                        upsert_program_kaydi(conn, at_data)
-
-                    if at_id and at_id not in horses_to_fetch_profile:
-                        horses_to_fetch_profile.append((at_id, at_adi))
-
-        # 3. Her Atın Profil ve Tüm Geçmiş Yarışlarını Çek
-        logger.info(f"\n🏇 Toplam {len(horses_to_fetch_profile)} tekil safkan için profil ve geçmiş yarış taraması başlıyor...")
-
-        fetched_profile_count = 0
-        skipped_cache_count = 0
-        failed_profile_count = 0
-
-        for at_id, at_adi in horses_to_fetch_profile:
+        for at_id, at_adi in horses_to_fetch:
             if at_id in cached_at_ids:
-                skipped_cache_count += 1
+                skipped_count += 1
                 continue
 
             profile = self.scrape_horse_profile(at_id, at_adi)
             if profile:
-                profile["son_profil_cekilme_tarihi"] = bugun_iso
+                profile["son_profil_cekilme_tarihi"] = today_iso
                 with conn:
                     upsert_at(conn, profile)
-                    # Geçmiş koşuları kaydet
                     for yaris in profile.get("gecmis_yarislar", []):
                         upsert_gecmis_yaris(conn, yaris)
 
                 cached_at_ids.add(at_id)
-                fetched_profile_count += 1
-                if fetched_profile_count % 10 == 0 or fetched_profile_count == len(horses_to_fetch_profile):
-                    logger.info(f"   [{fetched_profile_count}/{len(horses_to_fetch_profile)}] {at_adi} geçmiş koşuları kaydedildi ({len(profile.get('gecmis_yarislar', []))} yarış).")
+                fetched_count += 1
+                if fetched_count % 10 == 0 or fetched_count == len(horses_to_fetch):
+                    logger.info(f"   [{fetched_count}/{len(horses_to_fetch)}] {at_adi} geçmişi kaydedildi ({len(profile.get('gecmis_yarislar', []))} koşu).")
             else:
-                failed_profile_count += 1
-                logger.warning(f"⚠️ At {at_id} ({at_adi}) profil sayfasına ulaşılamadı. Eksik veri olarak işaretlendi.")
+                failed_count += 1
+                logger.warning(f"⚠️ At {at_id} ({at_adi}) profili çekilemedi. Eksik veri olarak işaretlendi.")
                 with conn:
                     conn.execute("UPDATE atlar SET profil_eksik_mi = 1 WHERE id = ?", (at_id,))
                     conn.execute("UPDATE program_kayitlari SET veri_durumu = 'EKSIK', hata_notu = 'Profil sayfasına ulaşılamadı' WHERE at_id = ?", (at_id,))
 
-        elapsed = round(time.time() - start_time, 2)
-        logger.info(f"🏁 Veri çekme tamamlandı ({elapsed} sn). Yeni çekilen: {fetched_profile_count}, Önbellekten atlanan: {skipped_cache_count}, Başarısız: {failed_profile_count}")
+        logger.info(f"✅ Kariyer güncellemesi tamamlandı: {fetched_count} yeni çekildi, {skipped_count} önbellekten atlandı, {failed_count} başarısız.")
+        return {"fetched": fetched_count, "skipped": skipped_count, "failed": failed_count}
 
-        # 4. Doğrulama ve Raporlama
-        summary = validate_database_integrity(conn, iso_str)
-        print_validation_report(summary)
+    # =========================================================================
+    # AŞAMA 4: RESMÎ OLMAYAN ARA-POZİSYON ÖNBELLEĞİ
+    # =========================================================================
+    def refresh_accurace_cache(self, conn, horses_to_fetch, max_new_races=400, history_depth=8):
+        """Yakın geçmişteki yarış ölçümlerini sınırlı hızda önbelleğe alır.
 
-        # Log tablosuna yaz
-        summary["hedef_gun"] = day_label
-        summary["tarih_str"] = iso_str
-        summary["calisma_suresi_sn"] = elapsed
-        with conn:
-            log_scrape_run(conn, summary)
-
-        conn.close()
-        return summary
-
-    def run_daily_pipeline(self, target="both"):
+        Aynı yarışı paylaşan hedef atlar önce işlenir; böylece tek istekle birden
+        fazla atın taktik kanıtı toplanır.
         """
-        Günlük otomatik pipeline:
-        target: 'today', 'tomorrow', 'both'
+        candidates = {}
+        for at_id, _at_name in horses_to_fetch:
+            rows = conn.execute(
+                "SELECT tarih, hipodrom_sehir, kosu_no, mesafe "
+                "FROM gecmis_yarislar WHERE at_id = ?",
+                (at_id,),
+            ).fetchall()
+            dated_rows = []
+            for row in rows:
+                date_iso = parse_race_date(row["tarih"])
+                city_slug = normalize_city_slug(row["hipodrom_sehir"])
+                if date_iso and city_slug and row["kosu_no"]:
+                    dated_rows.append((date_iso, city_slug, int(row["kosu_no"]), row["mesafe"]))
+            dated_rows.sort(key=lambda item: item[0], reverse=True)
+            for date_iso, city_slug, race_no, distance in dated_rows[:history_depth]:
+                key = (date_iso, city_slug, race_no)
+                item = candidates.setdefault(key, {"distances": set(), "horses": set()})
+                if distance:
+                    item["distances"].add(int(distance))
+                item["horses"].add(at_id)
+
+        pending = []
+        for key, item in candidates.items():
+            cached = conn.execute(
+                "SELECT status, checked_at FROM accurace_race_cache "
+                "WHERE date_iso = ? AND city_slug = ? AND race_no = ?",
+                key,
+            ).fetchone()
+            if cached and cached["status"] == "OK":
+                continue
+            if cached:
+                # Kalıcı veri yokluğunu 30 gün, geçici hatayı 1 gün tekrar deneme.
+                retry_window = "-30 days" if cached["status"] == "NO_DATA" else "-1 day"
+                if conn.execute(
+                    "SELECT datetime(?) > datetime('now', ?)",
+                    (cached["checked_at"], retry_window),
+                ).fetchone()[0]:
+                    continue
+            pending.append((key, item))
+
+        # Paylaşılan yarışlar önce: tek istekte en çok atın kanıtı toplanır.
+        pending.sort(key=lambda entry: -len(entry[1]["horses"]))
+        selected = pending[:max(0, max_new_races)]
+        fetched = 0
+        failed = 0
+        self.session.headers.update({"Accept": "text/html,application/xhtml+xml"})
+        for index, ((date_iso, city_slug, race_no), item) in enumerate(selected, 1):
+            if self.request_delay > 0:
+                time.sleep(max(self.request_delay, 0.5))
+            source_url = f"https://accurace.net/network/{date_iso}/{city_slug}/{race_no}"
+            status = "ERROR"
+            payload_json = None
+            error_message = None
+            try:
+                race_data = fetch_race(self.session, date_iso, city_slug, race_no)
+                if item["distances"] and race_data.get("distance") not in item["distances"]:
+                    raise ValueError(
+                        f"Mesafe uyuşmadı: {race_data.get('distance')} not in {sorted(item['distances'])}"
+                    )
+                if not race_data.get("horses") or not any(h.get("checkpoints") for h in race_data["horses"]):
+                    raise ValueError("Sayfada kullanılabilir ara-pozisyon ölçümü yok")
+                race_data["city_slug"] = city_slug
+                race_data["requested_race_no"] = race_no
+                payload_json = json.dumps(race_data, ensure_ascii=False)
+                status = "OK"
+                fetched += 1
+            except requests.HTTPError as exc:
+                response = getattr(exc, "response", None)
+                status = "NOT_FOUND" if response is not None and response.status_code == 404 else "ERROR"
+                error_message = str(exc)[:500]
+                failed += 1
+            except Exception as exc:
+                error_message = str(exc)[:500]
+                if any(marker in error_message for marker in (
+                    "yarış tablosu bulunamadı",
+                    "eşleştirilebilir at bulunamadı",
+                    "kullanılabilir ara-pozisyon ölçümü yok",
+                )):
+                    status = "NO_DATA"
+                failed += 1
+                logger.warning("Accurace ara-pozisyon verisi alınamadı (%s/%s/%s): %s", date_iso, city_slug, race_no, exc)
+
+            with conn:
+                conn.execute(
+                    "INSERT INTO accurace_race_cache "
+                    "(date_iso, city_slug, race_no, status, payload_json, source_url, error_message, checked_at) "
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP) "
+                    "ON CONFLICT(date_iso, city_slug, race_no) DO UPDATE SET "
+                    "status=excluded.status, payload_json=excluded.payload_json, "
+                    "source_url=excluded.source_url, error_message=excluded.error_message, "
+                    "checked_at=CURRENT_TIMESTAMP",
+                    (date_iso, city_slug, race_no, status, payload_json, source_url, error_message),
+                )
+            if index % 25 == 0:
+                logger.info(
+                    "   Accurace önbellek ilerlemesi: %s/%s (başarılı %s, hatalı %s)",
+                    index, len(selected), fetched, failed,
+                )
+
+        logger.info(
+            "Accurace önbelleği: %d yeni yarış ölçümü alındı, %d hata, %d sırada bekliyor "
+            "(kaynak resmî değildir).", fetched, failed, max(0, len(pending) - len(selected))
+        )
+        return {"fetched": fetched, "failed": failed, "pending": max(0, len(pending) - len(selected))}
+
+    # =========================================================================
+    # AŞAMA 6: CANLI BÜLTEN JSON DOSYALARINI GÜNCELLEME
+    # =========================================================================
+    def sync_bulten_json_from_db(self, conn, target_date_iso, target_json_path):
         """
+        SQLite'daki resmî kosular, program_kayitlari, turev_at_taktikleri,
+        turev_kosu_tempolari ve turev_kosu_at_etkileri tablolarından okuyarak
+        UI bülten JSON dosyasını (bulten_bugun.json / bulten_yarin.json) eksiksiz senkronize eder.
+        """
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT k.id, k.kosu_no, k.saat, k.mesafe, k.pist_turu, k.pist_durumu, k.kosu_cinsi,
+                   k.ikramiye_1, h.id as hip_id, h.sehir_adi, h.hipodrom_adi
+            FROM kosular k
+            JOIN hipodromlar h ON k.hipodrom_id = h.id
+            WHERE k.tarih = ?
+            ORDER BY h.sehir_adi, k.kosu_no
+        """, (target_date_iso,))
+        kosu_rows = cursor.fetchall()
+
+        if not kosu_rows:
+            logger.info(f"ℹ️ {target_date_iso} için veritabanında koşu bulunamadığından {target_json_path} güncellenmedi.")
+            return False
+
+        existing_data = {}
+        if os.path.exists(target_json_path):
+            try:
+                with open(target_json_path, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+            except Exception:
+                pass
+
+        dt_obj = datetime.strptime(target_date_iso, "%Y-%m-%d")
+        dmy_dot = dt_obj.strftime("%d.%m.%Y")
+        dmy_slash = dt_obj.strftime("%d/%m/%Y")
+        gun_adlari = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
+        gun_adi = gun_adlari[dt_obj.weekday()]
+
+        hipodrom_map = {}
+
+        # Her şehir için toplam koşu sayısını belirle
+        city_races_map = {}
+        for r in kosu_rows:
+            sehir = r["sehir_adi"]
+            city_races_map[sehir] = city_races_map.get(sehir, 0) + 1
+
+        for r in kosu_rows:
+            sehir = r["sehir_adi"]
+            total_races_in_city = city_races_map[sehir]
+
+            if sehir not in hipodrom_map:
+                hip_id_slug = sehir.lower().replace('ş', 's').replace('ı', 'i').replace('ö', 'o').replace('ü', 'u').replace('ç', 'c').replace('ğ', 'g')
+                old_hip = next((h for h in existing_data.get("hipodromlar", []) if h.get("sehir") == sehir), {})
+
+                birim_fiyat = 1.25 if sehir in ["İstanbul", "Ankara", "İzmir", "Bursa", "Adana", "Antalya", "Kocaeli"] else 0.80
+                birim_label = f"Büyük Şehir Hipodromu ({birim_fiyat:.2f} ₺)" if birim_fiyat == 1.25 else f"Güneydoğu Hipodromu ({birim_fiyat:.2f} ₺)"
+
+                hipodrom_map[sehir] = {
+                    "id": hip_id_slug,
+                    "isim": r["hipodrom_adi"],
+                    "sehir": sehir,
+                    "tarih": dmy_dot,
+                    "havaDurumu": old_hip.get("havaDurumu", {"temp": 16, "conditionText": "Açık", "humidity": 55, "wind": 10}),
+                    "rawTrackInfo": old_hip.get("rawTrackInfo", "Normal"),
+                    "cimOlcum": old_hip.get("cimOlcum", "Yarış Yok"),
+                    "kumOlcum": old_hip.get("kumOlcum", "Kum (3.7 Normal)"),
+                    "sentetikOlcum": old_hip.get("sentetikOlcum", "Yarış Yok"),
+                    "birimFiyat": birim_fiyat,
+                    "birimFiyatEtiket": birim_label,
+                    "asgariKuponTL": 20.0,
+                    "kosular": []
+                }
+
+            kosu_id = r["id"]
+            k_no = r["kosu_no"]
+
+            # Altılı ayağı tespiti: Son 6 koşu altılıdır
+            start_altili_kosu = max(1, total_races_in_city - 6 + 1)
+            altili_ayagi = None
+            if k_no >= start_altili_kosu and (k_no - start_altili_kosu + 1) <= 6:
+                altili_ayagi = k_no - start_altili_kosu + 1
+
+            # Türev tempo senaryosunu çek
+            cursor.execute("SELECT * FROM turev_kosu_tempolari WHERE kosu_id = ?", (kosu_id,))
+            tempo_row = cursor.fetchone()
+
+            olasi_kacanlar = []
+            if tempo_row and tempo_row["olasi_liderler"]:
+                try:
+                    olasi_kacanlar = json.loads(tempo_row["olasi_liderler"])
+                except Exception:
+                    olasi_kacanlar = []
+
+            avantajli_stiller = ["Presçi", "Orta Grup"]
+            if tempo_row and tempo_row["avantajli_stiller"]:
+                avantajli_stiller = [s.strip() for s in tempo_row["avantajli_stiller"].split("ve")]
+
+            tempo_senaryosu = {
+                "tempo_sinifi": tempo_row["tahmini_tempo"] if tempo_row else "Dengeli / Normal",
+                "tempo_kodu": tempo_row["tempo_kodu"] if tempo_row else "DENGELI",
+                "tempo_skoru": tempo_row["tempo_skoru"] if tempo_row else 50.0,
+                "liderlik_baskisi_sayisi": tempo_row["kacak_sayisi"] if tempo_row else 0,
+                "on_grup_baskisi_sayisi": tempo_row["presci_sayisi"] if tempo_row else 0,
+                "avantajli_stiller": avantajli_stiller,
+                "senaryo_yorumu": tempo_row["tempo_analiz_yorumu"] if tempo_row else "Dengeli seyir.",
+                "olasi_kacanlar": olasi_kacanlar
+            }
+
+            # Koşunun resmî TJK idman pisti / galop kayıtlarını çek
+            cursor.execute("""
+                SELECT * FROM idman_pist_kayitlari
+                WHERE tarih = ? AND hipodrom_id = ? AND kosu_no = ?
+            """, (target_date_iso, r["hip_id"], k_no))
+            idman_rows = cursor.fetchall()
+            idman_by_no = {row["at_no"]: row for row in idman_rows}
+            idman_by_name = {re.sub(r'\s*\(\d+\)\s*$', '', row["at_adi"]).strip().upper(): row for row in idman_rows}
+
+            # Koşudaki atları çek
+            cursor.execute("""
+                SELECT pk.*, a.at_adi, a.baba_adi, a.anne_adi, a.kisrak_babasi_adi, a.yas as at_yas,
+                       a.toplam_kosu as at_toplam_kosu, a.yas_cinsiyet,
+                       tat.hesaplanan_stil, tat.stil_ikon, tat.kural_aciklamasi, tat.veri_durumu as taktik_durumu,
+                       tke.pace_delta, tke.kulvar_yorumu, tke.taktik_rol
+                FROM program_kayitlari pk
+                LEFT JOIN atlar a ON pk.at_id = a.id
+                LEFT JOIN turev_at_taktikleri tat ON pk.at_id = tat.at_id
+                LEFT JOIN turev_kosu_at_etkileri tke ON (pk.at_id = tke.at_id AND pk.kosu_id = tke.kosu_id)
+                WHERE pk.kosu_id = ?
+                ORDER BY pk.at_no
+            """, (kosu_id,))
+            at_rows = cursor.fetchall()
+
+            atlar_list = []
+            for at in at_rows:
+                yas = at["at_yas"] or 3
+                clean_runs = "".join(filter(str.isdigit, at["son_6_yaris"] or ""))
+                career_starts = at["at_toplam_kosu"]
+                if career_starts is None:
+                    career_starts = len(clean_runs)
+                is_young = career_starts <= 3
+
+                stil = at["hesaplanan_stil"] or (
+                    "Taktik Serbest (İlk 3 Koşusu)" if is_young else "Yetersiz Veri"
+                )
+                ikon = at["stil_ikon"] or ("🌱" if is_young else "❓")
+
+                if "Kaçak" in stil or "Lider" in stil:
+                    renk = "#eab308"
+                elif "Pres" in stil:
+                    renk = "#f97316"
+                elif "Orta" in stil:
+                    renk = "#3b82f6"
+                elif "Sprinter" in stil or "Düzlük" in stil:
+                    renk = "#a855f7"
+                elif "Serbest" in stil or is_young:
+                    renk = "#38bdf8"
+                else:
+                    renk = "#94a3b8"
+
+                tactical_comment = at["kural_aciklamasi"]
+                if not tactical_comment:
+                    tactical_comment = (
+                        "Kariyerinin ilk 3 koşusu; stil serbest, tempo delta nötr."
+                        if is_young else
+                        "Doğrulanmış ara-pozisyon verisi yok; stil ve tempo etkisi tahmin edilmedi."
+                    )
+
+                hp = at["handikap_puani"] or 0
+
+                # Temiz at adı (Örn: ARSLANBEYLİ(6) -> ARSLANBEYLİ)
+                raw_at_name = at["at_adi"] or ""
+                clean_name = re.sub(r'\s*\(\d+\)\s*$', '', raw_at_name).strip()
+
+                # Resmî İdman Pisti / Galop verisi eşleştir
+                galop_rec = idman_by_no.get(at["at_no"]) or idman_by_name.get(clean_name.upper())
+                if not clean_name and galop_rec and galop_rec["at_adi"]:
+                    clean_name = galop_rec["at_adi"]
+                if not clean_name:
+                    clean_name = f"SAF-KAN {at['at_no']}"
+
+                if galop_rec and galop_rec["derece_ozet"] and galop_rec["derece_ozet"] != "İdman Derecesi Yok":
+                    son_galop = {
+                        "tarih": galop_rec["idman_tarihi"] or "",
+                        "pist": galop_rec["pist_turu"] or "Kum",
+                        "sehir": galop_rec["idman_hipodromu"] or sehir,
+                        "tur": galop_rec["idman_turu"] or "Galop",
+                        "derece": galop_rec["derece_ozet"],
+                        "son400hiz": galop_rec["son_400_hiz_kmh"],
+                        "d_1200": galop_rec["d_1200"] or "",
+                        "d_1000": galop_rec["d_1000"] or "",
+                        "d_800": galop_rec["d_800"] or "",
+                        "d_600": galop_rec["d_600"] or "",
+                        "d_400": galop_rec["d_400"] or "",
+                        "d_200": galop_rec["d_200"] or "",
+                        "durum_kodu": galop_rec["durum_kodu"] or f"{galop_rec['idman_hipodromu']} {galop_rec['pist_turu']}"
+                    }
+                else:
+                    son_galop = {
+                        "tarih": "",
+                        "pist": "",
+                        "sehir": "",
+                        "tur": "Resmî Galop Yok",
+                        "derece": "Resmî Galop Kaydı Yok",
+                        "son400hiz": None,
+                        "d_1200": "",
+                        "d_1000": "",
+                        "d_800": "",
+                        "d_600": "",
+                        "d_400": "",
+                        "d_200": "",
+                        "durum_kodu": "Kayıtsız"
+                    }
+
+                atlar_list.append({
+                    "no": at["at_no"],
+                    "isim": clean_name,
+                    "yas": yas,
+                    "cinsiyet": at["yas_cinsiyet"] or "3y d e",
+                    "irk": "Arap" if "Arap" in (r["kosu_cinsi"] or "") or "a" in (at["yas_cinsiyet"] or "").lower() else "İngiliz",
+                    "baba": at["baba_adi"] or "",
+                    "anne": at["anne_adi"] or "",
+                    "kisrak_babasi": at["kisrak_babasi_adi"] or "",
+                    "jokey": at["jokey_ad"] or "",
+                    "siklet": at["kilo"] or 58.0,
+                    "apranti_indirimi": False,
+                    "kulvar": at["start_no"] or 1,
+                    "handikap_puani": hp,
+                    "son_yarislar": at["son_6_yaris"] or "",
+                    "dinlenme_gunu": at["kgs"] or 20,
+                    "takilar": at["takilar"].split() if at["takilar"] else [],
+                    "isYoungHorse": is_young,
+                    "taktik_durumu": at["taktik_durumu"] or ("ILK_3_KOSU_SERBEST" if is_young else "YETERSIZ_VERI"),
+                    "kosu_stili": stil,
+                    "stil_ikon": ikon,
+                    "stil_renk": renk,
+                    "stil_bg": f"{renk}1f",
+                    "stil_border": f"{renk}59",
+                    "agf_orani": at["agf_orani"] or 10.0,
+                    "ganyan": at["ganyan_raw"] or "3.50",
+                    "son_galop": son_galop,
+                    "taktik_yorum": tactical_comment,
+                    "tempo_delta": (at["pace_delta"] if at["pace_delta"] is not None else 0) if at["taktik_durumu"] in ("GUNCEL", "KISMI", "TEK_OLCUM", "DEGISKEN") else 0,
+                    "kulvar_yorumu": at["kulvar_yorumu"] or "",
+                    "sahip": at["sahip_ad"] or "",
+                    "antrenor": at["antrenor_ad"] or "",
+                    "ekuriGrup": at["ekuri"] or ""
+                })
+
+            hipodrom_map[sehir]["kosular"].append({
+                "kosu_no": r["kosu_no"],
+                "saat": r["saat"] or f"{14+r['kosu_no']}:00",
+                "mesafe": r["mesafe"] or 1400,
+                "pist": r["pist_turu"] or "Kum",
+                "pist_tipi": "Kaba Kum" if r["pist_turu"] == "Kum" else (r["pist_turu"] or "Kaba Kum"),
+                "grup_sinifi": r["kosu_cinsi"] or "Şartlı",
+                "ikramiye": f"{r['ikramiye_1']:,.0f} ₺".replace(',', '.') if r["ikramiye_1"] else "250.000 ₺",
+                "altiliAyagi": altili_ayagi,
+                "tempo_senaryosu": tempo_senaryosu,
+                "atlar": atlar_list
+            })
+
+        output_payload = {
+            "tarih": dmy_dot,
+            "seciliGun": dmy_slash,
+            "gunAdi": gun_adi,
+            "expectedCities": list(hipodrom_map.keys()),
+            "guncellemeZamani": datetime.now().isoformat(),
+            "sonSenkronizasyon": datetime.now().strftime("%H:%M:%S"),
+            "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
+            "hipodromlar": list(hipodrom_map.values())
+        }
+
+        os.makedirs(os.path.dirname(os.path.abspath(target_json_path)), exist_ok=True)
+        with open(target_json_path, 'w', encoding='utf-8') as f:
+            json.dump(output_payload, f, ensure_ascii=False, indent=2)
+
+        logger.info(f"💾 Bülten JSON Güncellendi: {target_json_path} ({len(hipodrom_map)} Hipodrom, {len(kosu_rows)} Koşu)")
+        return True
+
+    # =========================================================================
+    # ANA ORKESTRASYON: 5 AŞAMALI GÜNLÜK PİPELİNE
+    # =========================================================================
+    def run_daily_pipeline(self, target="both", days_back=1):
+        """
+        Kullanıcının talep ettiği 5 Aşamalı Günlük Otomasyon Görevi:
+          1. Dünün (ve geriye dönük days_back günün) sonuçlarını ve gidişat verilerini topla
+          2. Bugün ve yarının programını topla (kosular, program_kayitlari)
+          3. Programdaki her at için kariyer geçmişini çek/güncelle (gecmis_yarislar)
+          4. At koşu stillerini / taktiklerini hesapla (turev_at_taktikleri)
+          5. Koşu tempo tahminlerini ve at etkilerini hesapla (turev_kosu_tempolari, turev_kosu_at_etkileri)
+          6. Canlı bülten JSON dosyalarını doğrula ve güncelle
+          7. Özet raporu yazdır
+        """
+        start_time = time.time()
         now = self.get_turkey_now()
+        yesterday = now - timedelta(days=1)
         tomorrow = now + timedelta(days=1)
 
-        results = {}
+        conn = get_db_connection(self.db_path) if self.db_path else get_db_connection()
+
+        logger.info("\n" + "=" * 75)
+        logger.info("🐎 ROYAL TURF - TJK RESMÎ GÜNLÜK VERİ TOPLAMA VE ANALİZ PİPELİNE'I BAŞLATILDI")
+        logger.info(f"📅 Sistem Zamanı (İstanbul): {now.strftime('%d/%m/%Y %H:%M:%S')}")
+        logger.info("=" * 75)
+
+        pipeline_summary = {
+            "baslangic": now.isoformat(),
+            "asama_1_sonuclar": {},
+            "asama_2_program": {},
+            "asama_3_kariyer": {},
+            "asama_4_ve_5_analiz": {},
+            "bulten_senkronizasyonu": {},
+            "uyarilar": []
+        }
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 1: DÜNÜN (VE İŞLENMEMİŞ SON GÜNLERİN) SONUÇLARI VE GİDİŞAT VERİSİ
+        # ---------------------------------------------------------------------
+        try:
+            for day_offset in range(days_back, 0, -1):
+                past_date = now - timedelta(days=day_offset)
+                res_info = self.scrape_and_save_race_results(past_date)
+                pipeline_summary["asama_1_sonuclar"][past_date.strftime("%Y-%m-%d")] = res_info
+        except Exception as e:
+            logger.error(f"❌ [Aşama 1 Hatası] Yarış sonuçları çekilirken hata: {e}")
+            pipeline_summary["uyarilar"].append(f"Aşama 1 Sonuç çekme hatası: {e}")
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 2: BUGÜN VE YARININ YARIŞ PROGRAMI
+        # ---------------------------------------------------------------------
+        all_program_horses = []
+        target_dates = []
+
         if target in ["today", "both"]:
-            results["today"] = self.run_sync_for_date(now, day_label="bugun")
+            try:
+                res_today = self.scrape_program_for_date(conn, now, day_label="bugun")
+                pipeline_summary["asama_2_program"]["bugun"] = res_today
+                all_program_horses.extend(res_today.get("horses", []))
+                target_dates.append(now.strftime("%Y-%m-%d"))
+            except Exception as e:
+                logger.error(f"❌ [Aşama 2 Hatası] Bugün programı çekilirken hata: {e}")
+                pipeline_summary["uyarilar"].append(f"Aşama 2 Bugün program hatası: {e}")
 
         if target in ["tomorrow", "both"]:
-            results["tomorrow"] = self.run_sync_for_date(tomorrow, day_label="yarin")
+            try:
+                res_tomorrow = self.scrape_program_for_date(conn, tomorrow, day_label="yarin")
+                pipeline_summary["asama_2_program"]["yarin"] = res_tomorrow
+                all_program_horses.extend(res_tomorrow.get("horses", []))
+                target_dates.append(tomorrow.strftime("%Y-%m-%d"))
+            except Exception as e:
+                logger.error(f"❌ [Aşama 2 Hatası] Yarın programı çekilirken hata: {e}")
+                pipeline_summary["uyarilar"].append(f"Aşama 2 Yarın program hatası: {e}")
 
-        return results
+        # Tekil at listesi
+        unique_horses = list({h[0]: h for h in all_program_horses}.values())
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 3: AT GEÇMİŞLERİNİ GÜNCELLE
+        # ---------------------------------------------------------------------
+        try:
+            res_careers = self.update_horse_careers(conn, unique_horses)
+            pipeline_summary["asama_3_kariyer"] = res_careers
+        except Exception as e:
+            logger.error(f"❌ [Aşama 3 Hatası] At kariyerleri güncellenirken hata: {e}")
+            pipeline_summary["uyarilar"].append(f"Aşama 3 Kariyer güncelleme hatası: {e}")
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 4: RESMÎ OLMAYAN ARA-POZİSYON ÖLÇÜMLERİNİ ÖNBELLEĞE AL
+        # ---------------------------------------------------------------------
+        try:
+            logger.info("\n--- [AŞAMA 4] Accurace ara-pozisyon ölçümleri kontrol ediliyor (resmî olmayan kaynak) ---")
+            cache_summary = self.refresh_accurace_cache(
+                conn, unique_horses, max_new_races=800, history_depth=10
+            )
+            pipeline_summary["accurace_onbellek"] = cache_summary
+        except Exception as e:
+            logger.error(f"❌ [Aşama 4 Hatası] Accurace ölçümleri alınırken hata: {e}")
+            pipeline_summary["uyarilar"].append(f"Accurace ara-pozisyon verisi alınamadı: {e}")
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 5 & 6: KOŞU STİLİ (TAKTIK) VE YARIŞ TEMPO TAHMİNİ HESAPLAMA
+        # ---------------------------------------------------------------------
+        try:
+            logger.info("\n--- [AŞAMA 5 & 6] Doğrulanmış taktik ve tempo analizi çalıştırılıyor ---")
+            analysis_summary = run_full_tactical_and_pace_pipeline(conn, target_dates)
+            pipeline_summary["asama_4_ve_5_analiz"] = analysis_summary
+
+            # Eğer bugün veya yarın için tempo tahmini boşsa uyar!
+            if analysis_summary.get("kosu_sayisi", 0) == 0:
+                warning_msg = "⚠️ DİKKAT: Bugün ve yarın için hiçbir koşuya tempo tahmini üretilemedi!"
+                logger.warning(warning_msg)
+                pipeline_summary["uyarilar"].append(warning_msg)
+        except Exception as e:
+            logger.error(f"❌ [Aşama 4 & 5 Hatası] Analiz motorunda hata: {e}")
+            pipeline_summary["uyarilar"].append(f"Aşama 4 & 5 Analiz hatası: {e}")
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 6: BÜLTEN JSON DOSYALARINI GÜNCELLE
+        # ---------------------------------------------------------------------
+        try:
+            logger.info("\n--- [AŞAMA 6] Canlı Bülten JSON Dosyaları Güncelleniyor ---")
+            today_iso = now.strftime("%Y-%m-%d")
+            tomorrow_iso = tomorrow.strftime("%Y-%m-%d")
+
+            bulten_bugun_path = "public/data/bulten_bugun.json"
+            bulten_yarin_path = "public/data/bulten_yarin.json"
+
+            sync_today = self.sync_bulten_json_from_db(conn, today_iso, bulten_bugun_path)
+            pipeline_summary["bulten_senkronizasyonu"]["bugun"] = sync_today
+
+            sync_tomorrow = self.sync_bulten_json_from_db(conn, tomorrow_iso, bulten_yarin_path)
+            pipeline_summary["bulten_senkronizasyonu"]["yarin"] = sync_tomorrow
+        except Exception as e:
+            logger.error(f"❌ [Aşama 6 Hatası] Bülten JSON senkronizasyon hatası: {e}")
+            pipeline_summary["uyarilar"].append(f"Aşama 6 JSON senkronizasyon hatası: {e}")
+
+        elapsed = round(time.time() - start_time, 2)
+        pipeline_summary["toplam_sure_sn"] = elapsed
+
+        # ---------------------------------------------------------------------
+        # AŞAMA 7: ÇALIŞMA SONU ÖZETİ VE RAPORU
+        # ---------------------------------------------------------------------
+        self.print_pipeline_summary(pipeline_summary)
+
+        conn.close()
+        return pipeline_summary
+
+    def print_pipeline_summary(self, summary):
+        """Pipeline çalışması sonucunda konsola detaylı özet yazdırır."""
+        print("\n" + "=" * 75)
+        print("📊 TJK GÜNLÜK PİPELİNE ÇALIŞMA RAPORU VE ÖZETİ")
+        print("=" * 75)
+
+        # Aşama 1 Sonuçları
+        print("\n[Aşama 1: Dünün / Geçmiş Yarış Sonuçları]")
+        for d, s in summary.get("asama_1_sonuclar", {}).items():
+            print(f"  • {d}: {s.get('toplam_kosu', 0)} koşu, {s.get('toplam_sonuc', 0)} safkan sonucu arşive eklendi.")
+
+        # Aşama 2 Program
+        print("\n[Aşama 2: Günlük Yarış Programı]")
+        for lbl, p in summary.get("asama_2_program", {}).items():
+            status = p.get("durum")
+            count = p.get("kosu_count", 0)
+            horses = len(p.get("horses", []))
+            print(f"  • {lbl.upper()}: {status} ({count} koşu, {horses} tekil at)")
+
+        # Aşama 3 Kariyer
+        print("\n[Aşama 3: At Kariyer Geçmişi Güncellemesi]")
+        kar = summary.get("asama_3_kariyer", {})
+        print(f"  • Yeni Profil Çekilen: {kar.get('fetched', 0)}")
+        print(f"  • Önbellekten Atlanan: {kar.get('skipped', 0)}")
+        print(f"  • Başarısız / Ulaşılamayan: {kar.get('failed', 0)}")
+
+        # Aşama 4 & 5 Analiz
+        print("\n[Aşama 4 & 5: Taktik & Tempo Tahmin Motoru]")
+        an = summary.get("asama_4_ve_5_analiz", {})
+        print(f"  • Koşu Stili Güncellenen Safkan Sayısı: {an.get('at_sayisi', 0)}")
+        print(f"  • Yetersiz Veri Safkan Sayısı: {an.get('yetersiz_veri_sayisi', 0)}")
+        print(f"  • Kısmi Ölçümlü (2 koşu): {an.get('kismi_olcum_sayisi', 0)}")
+        print(f"  • Değişken Stilli (baskın taktik atandı): {an.get('degisken_stil_sayisi', 0)}")
+        print(f"  • Tecrübesiz Genç Safkan (Kural 1 - İlk 3 Koşu): {an.get('tecrubesiz_sayisi', 0)}")
+        print(f"  • Tempo Tahmini Üretilen Koşu Sayısı: {an.get('kosu_sayisi', 0)}")
+
+        # Uyarılar
+        warnings = summary.get("uyarilar", [])
+        if warnings:
+            print("\n⚠️ PİPELİNE UYARILARI:")
+            for w in warnings:
+                print(f"  ! {w}")
+        else:
+            print("\n✅ HİÇBİR HATA VEYA UYARI YOK: Tüm adımlar %100 başarıyla tamamlandı.")
+
+        print(f"\n⏱️ Toplam Çalışma Süresi: {summary.get('toplam_sure_sn', 0)} saniye")
+        print("=" * 75 + "\n")

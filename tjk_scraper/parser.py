@@ -80,6 +80,59 @@ def parse_money(raw_str):
     return None
 
 
+def parse_margin_to_lengths(fark_str):
+    """
+    TJK bitiriş farkı metnini (örn: 'Yarım Boy', '1 Boy', 'Boyun', 'Baş', 'Burun', '2,5 Boy')
+    sayısal boy cinsine çevirir.
+    """
+    if not fark_str:
+        return None
+    f = str(fark_str).strip().lower()
+    if f == 'burun':
+        return 0.05
+    elif f == 'baş':
+        return 0.1
+    elif f == 'boyun':
+        return 0.25
+    elif 'yarım' in f or '1/2' in f:
+        return 0.5
+    m = re.search(r'([\d\.,]+)', f)
+    if m:
+        try:
+            return float(m.group(1).replace(',', '.'))
+        except ValueError:
+            return None
+    return None
+
+
+def parse_late_break_lengths(gec_cikis_str):
+    """Geç çıkış metnini (örn: '2 Boy', '3 Boy') sayısal boya çevirir."""
+    if not gec_cikis_str:
+        return None
+    f = str(gec_cikis_str).strip().lower()
+    m = re.search(r'([\d\.,]+)', f)
+    if m:
+        try:
+            return float(m.group(1).replace(',', '.'))
+        except ValueError:
+            return None
+    return None
+
+
+def parse_son_800_times(son_800_str):
+    """
+    Son 800 metnini (örn: '0.58.20-0.58.38', '0.51.36') saniye cinsine çevirir.
+    (min_sn, max_sn) tuple döner.
+    """
+    if not son_800_str:
+        return None, None
+    s = str(son_800_str).replace('Son 800', '').replace(':', '').strip()
+    parts = s.split('-')
+    t1 = parse_degree_to_seconds(parts[0].strip()) if len(parts) > 0 else None
+    t2 = parse_degree_to_seconds(parts[1].strip()) if len(parts) > 1 else t1
+    return t1, t2
+
+
 def extract_query_param(url, param_name):
     """URL içerisinden parametre değerini regex ile çeker."""
     if not url:
@@ -203,6 +256,8 @@ def parse_horse_row(tr_elem, race_id):
     at_a = td_name.find('a')
     at_adi = at_a.get_text(strip=True) if at_a else td_name.get_text(strip=True)
     at_adi = re.sub(r'[\r\n\t]+', ' ', at_adi).strip()
+    # At adından parantez içindeki kapı/forma numarasını temizle (Örn: ARSLANBEYLİ(6) -> ARSLANBEYLİ)
+    at_adi = re.sub(r'\s*\(\d+\)\s*$', '', at_adi).strip()
 
     at_id = None
     if at_a and at_a.get('href'):
@@ -390,8 +445,22 @@ def parse_daily_race_program_html(html_content, sehir_id, sehir_adi, tarih_iso):
         header_data["tarih"] = tarih_iso
         header_data["hipodrom_id"] = sehir_id
 
-        # At satırları
+        # At satırları ve İdman Linki
         table = tables[i]
+        kosu_kodu = None
+        idman_atkodu = None
+        idman_a = table.find('a', href=lambda h: h and 'KosuKodu=' in h and 'Atkodu=' in h)
+        if idman_a:
+            m_k = re.search(r'KosuKodu=(\d+)', idman_a['href'])
+            m_at = re.search(r'Atkodu=(\d+)', idman_a['href'])
+            if m_k:
+                kosu_kodu = int(m_k.group(1))
+            if m_at:
+                idman_atkodu = int(m_at.group(1))
+
+        header_data["kosu_kodu"] = kosu_kodu
+        header_data["idman_atkodu"] = idman_atkodu
+
         tbody = table.find('tbody')
         rows = tbody.find_all('tr') if tbody else table.find_all('tr')[1:]
 
@@ -605,3 +674,284 @@ def parse_horse_profile_html(html_content, at_id):
     }
 
     return profile_data
+
+
+# --------------------------------------------------------------------------
+# 3. GÜNLÜK YARIŞ SONUÇLARI VE GİDİŞAT AYRIŞTIRMA (GunlukYarisSonuclari)
+# --------------------------------------------------------------------------
+
+def parse_daily_race_results_html(html, sehir_id, sehir_adi, target_date_iso):
+    """
+    TJK GunlukYarisSonuclari sayfasındaki tüm koşuları ve bitiriş/gidişat detaylarını ayrıştırır.
+    Her koşu için: mesafe, pist, son 800, video linki, accurace linki, komiser raporu.
+    Her at için: sıra, at_id, isim, derece (sn), fark (boy), geç çıkış (boy), ganyan, AGF, start_no, HP.
+    """
+    if not html:
+        return []
+
+    soup = BeautifulSoup(html, 'html.parser')
+    panes = soup.find('div', class_='races-panes')
+    if not panes:
+        return []
+
+    races = []
+    race_divs = [c for c in panes.children if getattr(c, 'name', None) == 'div']
+
+    for div_idx, div in enumerate(race_divs):
+        # 1. Koşu No ve Saat
+        kosu_no = div_idx + 1
+        saat = None
+        for elem in div.find_all(True):
+            t = elem.get_text(strip=True)
+            m = re.search(r'(\d+)\.\s*Koşu(?:\s*(\d{1,2}[\.:]\d{2}))?', t)
+            if m:
+                kosu_no = int(m.group(1))
+                saat = m.group(2).replace('.', ':') if m.group(2) else None
+                break
+
+        rh = div.find('h3', class_='race-config')
+        config_text = rh.get_text(" ", strip=True) if rh else ""
+
+        # Mesafe & Pist
+        mesafe = None
+        pist_turu = "Kum"
+        m_msf = re.search(r'(\d{3,4})\s*(?:m|metre)?\s*(Kum|Çim|Sentetik)', config_text, re.I)
+        if m_msf:
+            mesafe = int(m_msf.group(1))
+            pist_turu = m_msf.group(2).title()
+        else:
+            m_m = re.search(r'(\d{3,4})', config_text)
+            mesafe = int(m_m.group(1)) if m_m else None
+            m_p = re.search(r'(Kum|Çim|Sentetik)', config_text, re.I)
+            if m_p:
+                pist_turu = m_p.group(1).title()
+
+        kosu_cinsi = config_text.split(',')[0].strip() if ',' in config_text else config_text[:40].strip()
+        grup_bilgisi = config_text.split(',')[1].strip() if ',' in config_text and len(config_text.split(',')) > 1 else ""
+
+        # Linkler
+        video_url = None
+        kosu_kodu = None
+        video_a = rh.find('a', href=lambda h: h and 'KosuKodu' in h) if rh else None
+        if video_a:
+            v_href = video_a['href']
+            video_url = "https://www.tjk.org/TR/YarisSever/Info/" + v_href.lstrip('./') if not v_href.startswith('http') else v_href
+            m_k = re.search(r'KosuKodu=(\d+)', v_href)
+            if m_k:
+                kosu_kodu = int(m_k.group(1))
+
+        accurace_url = None
+        acc_a = rh.find('a', href=lambda h: h and 'accurace' in h) if rh else None
+        if acc_a:
+            accurace_url = acc_a['href']
+
+        fotofinish_url = None
+        foto_a = rh.find('a', href=lambda h: h and 'fotoftp' in h) if rh else None
+        if foto_a:
+            fotofinish_url = foto_a['href']
+
+        komiser_url = None
+        kom_a = div.find('a', href=lambda h: h and 'raporftp' in h and '.pdf' in h)
+        if kom_a:
+            komiser_url = kom_a['href']
+
+        # Son 800 Derecesi
+        s800_el = div.find('div', class_='bsinfo-Son800')
+        son_800_raw = s800_el.get_text(strip=True).replace('Son 800', '').replace(':', '').strip() if s800_el else None
+        s800_min, s800_max = parse_son_800_times(son_800_raw)
+
+        # At sonuçları tablosu
+        table = div.find('table')
+        horses = []
+        if table:
+            rows = table.find_all('tr')[1:]
+            for r in rows:
+                tds = r.find_all('td')
+                if len(tds) < 14:
+                    continue
+                sira_raw = tds[1].get_text(strip=True)
+                m_s = re.search(r'\d+', sira_raw)
+                sira = int(m_s.group()) if m_s else None
+
+                at_td = tds[2]
+                at_a = at_td.find('a', href=lambda h: h and 'AtId=' in h)
+                at_id = None
+                if at_a:
+                    m_id = re.search(r'QueryParameter_AtId=(\d+)', at_a['href'])
+                    if m_id:
+                        at_id = int(m_id.group(1))
+                    at_name = at_a.get_text(strip=True)
+                else:
+                    at_name = at_td.get_text(strip=True)
+
+                m_no = re.search(r'\((\d+)\)', at_td.get_text())
+                at_no = int(m_no.group(1)) if m_no else None
+
+                derece_raw = tds[9].get_text(strip=True)
+                derece_saniye = parse_degree_to_seconds(derece_raw)
+                gny = parse_clean_float(tds[10].get_text(strip=True))
+                agf = tds[11].get_text(strip=True)
+                st = parse_clean_int(tds[12].get_text(strip=True))
+                fark_raw = tds[13].get_text(strip=True)
+                fark_boy = parse_margin_to_lengths(fark_raw)
+                gec_cikis_raw = tds[14].get_text(strip=True) if len(tds) > 14 else ""
+                gec_cikis_boy = parse_late_break_lengths(gec_cikis_raw)
+                hp = parse_clean_int(tds[15].get_text(strip=True)) if len(tds) > 15 else None
+
+                horses.append({
+                    "tarih": target_date_iso,
+                    "hipodrom_id": sehir_id,
+                    "sehir_adi": sehir_adi,
+                    "kosu_no": kosu_no,
+                    "kosu_kodu": kosu_kodu,
+                    "at_id": at_id,
+                    "at_no": at_no,
+                    "at_ismi": at_name,
+                    "sira": sira,
+                    "sira_raw": sira_raw,
+                    "derece_raw": derece_raw,
+                    "derece_saniye": derece_saniye,
+                    "fark_raw": fark_raw,
+                    "fark_boy": fark_boy,
+                    "gec_cikis_raw": gec_cikis_raw,
+                    "gec_cikis_boy": gec_cikis_boy,
+                    "ganyan": gny,
+                    "agf": agf,
+                    "start_no": st,
+                    "hp": hp,
+                    "son_800_raw": son_800_raw,
+                    "son_800_saniye": s800_min,
+                    "video_url": video_url,
+                    "accurace_url": accurace_url,
+                    "fotofinish_url": fotofinish_url,
+                    "komiser_raporu_url": komiser_url,
+                    "gidisat_yorumu": None
+                })
+
+        races.append({
+            "kosu_no": kosu_no,
+            "saat": saat,
+            "mesafe": mesafe,
+            "pist_turu": pist_turu,
+            "kosu_cinsi": kosu_cinsi,
+            "grup_bilgisi": grup_bilgisi,
+            "kosu_kodu": kosu_kodu,
+            "son_800_raw": son_800_raw,
+            "son_800_saniye": s800_min,
+            "video_url": video_url,
+            "accurace_url": accurace_url,
+            "fotofinish_url": fotofinish_url,
+            "komiser_raporu_url": komiser_url,
+            "sonuclar": horses
+        })
+
+    return races
+
+
+# --------------------------------------------------------------------------
+# 4. RESMÎ TJK İDMAN PİSTİ VE GALOP VERİLERİ AYRIŞTIRMA
+# --------------------------------------------------------------------------
+
+def parse_tjk_idman_html(html_content, kosu_no, hipodrom_id, tarih_iso, kosu_kodu):
+    """
+    TJK /Info/idmanpisti/Kosu sayfasındaki resmî galop tablosunu ayrıştırır.
+    Her at için:
+    at_no, at_adi, d_1200, d_1000, d_800, d_600, d_400, d_200,
+    idman_tarihi, pist_turu, idman_turu, idman_hipodromu,
+    derece_ozet, son_400_hiz_kmh, durum_kodu
+    """
+    if not html_content:
+        return {}
+
+    soup = BeautifulSoup(html_content, 'html.parser')
+    tbl = soup.find('table')
+    if not tbl:
+        return {}
+
+    galop_map = {}
+    rows = tbl.find_all('tr')[1:]
+    for r in rows:
+        tds = [td.get_text(strip=True) for td in r.find_all(['td', 'th'])]
+        if len(tds) < 17:
+            continue
+
+        at_no_str = tds[0]
+        at_adi = tds[1]
+        clean_at_adi = re.sub(r'\s*\(\d+\)\s*$', '', at_adi).strip()
+
+        d_1200 = tds[7] if len(tds) > 7 else ""
+        d_1000 = tds[8] if len(tds) > 8 else ""
+        d_800 = tds[9] if len(tds) > 9 else ""
+        d_600 = tds[10] if len(tds) > 10 else ""
+        d_400 = tds[11] if len(tds) > 11 else ""
+        d_200 = tds[12] if len(tds) > 12 else ""
+        idman_tarihi = tds[13] if len(tds) > 13 else ""
+        pist = tds[14] if len(tds) > 14 else ""
+        idman_turu = tds[15] if len(tds) > 15 else ""
+        idman_hipodromu = tds[16] if len(tds) > 16 else ""
+
+        son400hiz = None
+        main_derece = ""
+
+        if d_400:
+            main_derece = f"400: {d_400}"
+            parts = d_400.split('.')
+            try:
+                if len(parts) == 3:
+                    sec = int(parts[0]) * 60 + int(parts[1]) + int(parts[2]) / 100.0
+                elif len(parts) == 2:
+                    sec = int(parts[0]) + int(parts[1]) / 100.0
+                else:
+                    sec = float(d_400)
+                if sec > 0:
+                    son400hiz = round((400.0 / sec) * 3.6, 1)
+            except Exception:
+                pass
+        elif d_600:
+            parts = d_600.split('.')
+            try:
+                if len(parts) == 3:
+                    sec = int(parts[0]) * 60 + int(parts[1]) + int(parts[2]) / 100.0
+                elif len(parts) == 2:
+                    sec = int(parts[0]) + int(parts[1]) / 100.0
+                else:
+                    sec = float(d_600)
+                if sec > 0:
+                    son400hiz = round((400.0 / (sec * 400.0 / 600.0)) * 3.6, 1)
+            except Exception:
+                pass
+
+        if d_600:
+            main_derece = f"600: {d_600} / " + main_derece if main_derece else f"600: {d_600}"
+        if d_800:
+            main_derece = f"800: {d_800} / " + main_derece if main_derece else f"800: {d_800}"
+        if d_1000:
+            main_derece = f"1000: {d_1000} / " + main_derece if main_derece else f"1000: {d_1000}"
+
+        main_derece = main_derece.strip(" /")
+
+        at_no = parse_clean_int(at_no_str) or 1
+        rec = {
+            "tarih": tarih_iso,
+            "hipodrom_id": hipodrom_id,
+            "kosu_no": kosu_no,
+            "kosu_kodu": kosu_kodu,
+            "at_no": at_no,
+            "at_adi": clean_at_adi,
+            "d_1200": d_1200,
+            "d_1000": d_1000,
+            "d_800": d_800,
+            "d_600": d_600,
+            "d_400": d_400,
+            "d_200": d_200,
+            "idman_tarihi": idman_tarihi,
+            "pist_turu": pist,
+            "idman_turu": idman_turu,
+            "idman_hipodromu": idman_hipodromu,
+            "derece_ozet": main_derece or "İdman Derecesi Yok",
+            "son_400_hiz_kmh": son400hiz,
+            "durum_kodu": f"{idman_hipodromu} {pist}" if idman_hipodromu else "ÇR"
+        }
+        galop_map[at_no] = rec
+
+    return galop_map

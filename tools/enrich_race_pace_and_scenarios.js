@@ -108,7 +108,18 @@ bulten.hipodromlar.forEach(hip => {
       // ══════════════════════════════════════════════════════════════════════════
       // BÖLÜM 1: GİDİŞAT VE TAKTİK KALİBRASYONU (KURAL 1 & KURAL 2)
       // ══════════════════════════════════════════════════════════════════════════
-      if (isYoungInexperiencedHorse(at)) {
+      const hasPersistedTacticalAnalysis =
+        typeof at.isYoungHorse === 'boolean' &&
+        (at.isYoungHorse || ['GUNCEL', 'KISMI', 'TEK_OLCUM', 'DEGISKEN', 'YETERSIZ_VERI'].includes(at.taktik_durumu)) &&
+        typeof at.kosu_stili === 'string' && at.kosu_stili.trim() !== '' &&
+        typeof at.stil_ikon === 'string' &&
+        typeof at.taktik_yorum === 'string' && at.taktik_yorum.trim() !== '' &&
+        Number.isFinite(at.tempo_delta);
+
+      if (hasPersistedTacticalAnalysis) {
+        // Accurace ara-pozisyon ölçümünden gelen kayıtlı taktiği ezme.
+        if (at.isYoungHorse) youngCount++;
+      } else if (isYoungInexperiencedHorse(at)) {
         youngCount++;
         const sprintSpeed = at.son_galop?.son400hiz ? at.son_galop.son400hiz.toFixed(1) : '53.5';
         at.kosu_stili = 'Taktik Serbest (İlk 3 Koşusu)';
