@@ -6,8 +6,8 @@
     "Bursa",
     "Şanlıurfa"
   ],
-  "guncellemeZamani": "2026-11-16T10:40:58.485Z",
-  "sonSenkronizasyon": "13:40:58",
+  "guncellemeZamani": "2026-11-16T11:04:13.645Z",
+  "sonSenkronizasyon": "13:24:12",
   "kaynak": "TJK Resmî Yarış Programı (Bursa Osmangazi & Şanlıurfa)",
   "hipodromlar": [
     {
@@ -1373,12 +1373,12 @@
               "yas": 2,
               "irk": "İngiliz",
               "cinsiyet": "Erkek",
-              "baba": "DAREDEVIL",
-              "anne": "LADY FURIOUS",
+              "baba": "HAKEEM",
+              "anne": "DİLANIM",
               "kisrak_babasi": "LION HEART",
-              "jokey": "H.ÇİZİK",
+              "jokey": "GÖK.BEKTAŞ",
               "siklet": 57,
-              "kulvar": 1,
+              "kulvar": 5,
               "handikap_puani": 39,
               "son_yarislar": "22",
               "dinlenme_gunu": 16,
@@ -1390,8 +1390,8 @@
               "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
               "stil_ikon": "🌱",
               "stil_renk": "#38bdf8",
-              "agf_orani": 42,
-              "ganyan": "1.90",
+              "agf_orani": 32,
+              "ganyan": "2.10",
               "son_galop": {
                 "derece": "23.9",
                 "son400hiz": 60.2
@@ -1405,9 +1405,9 @@
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "synStats": {
                   "runs": 0,
@@ -1423,19 +1423,20 @@
             },
             {
               "no": 2,
-              "isim": "KING OF BURSA",
+              "isim": "ALBORA KHAN",
               "yas": 2,
               "irk": "İngiliz",
               "cinsiyet": "Erkek",
-              "baba": "PAPA CLEM",
-              "anne": "BURSA GÜZELİ",
-              "kisrak_babasi": "VICTORY GALLOP",
-              "jokey": "M.KAYA",
-              "siklet": 57,
-              "kulvar": 2,
-              "handikap_puani": 35,
-              "son_yarislar": "34",
-              "dinlenme_gunu": 20,
+              "baba": "ELARQAM",
+              "anne": "HİPNOZ",
+              "kisrak_babasi": "MORE THAN READY",
+              "jokey": "M.BAĞ",
+              "siklet": 54,
+              "apranti_indirimi": true,
+              "kulvar": 9,
+              "handikap_puani": 33,
+              "son_yarislar": "43",
+              "dinlenme_gunu": 22,
               "takilar": [
                 "KG",
                 "SK"
@@ -1444,24 +1445,24 @@
               "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
               "stil_ikon": "🌱",
               "stil_renk": "#38bdf8",
-              "agf_orani": 26,
-              "ganyan": "3.20",
+              "agf_orani": 14,
+              "ganyan": "5.40",
               "son_galop": {
-                "derece": "24.4",
-                "son400hiz": 59
+                "derece": "24.6",
+                "son400hiz": 58.4
               },
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
-              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (58.4 km/h) ile fiziksel tempo potansiyeli takip edilir.",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "synStats": {
                   "runs": 0,
@@ -1477,44 +1478,45 @@
             },
             {
               "no": 3,
-              "isim": "BLUE SHADOW",
+              "isim": "COLLECTOR MAN",
               "yas": 2,
               "irk": "İngiliz",
               "cinsiyet": "Erkek",
-              "baba": "BODEMEISTER",
-              "anne": "SHADOW DANCER",
-              "kisrak_babasi": "ROYAL ABJAR",
-              "jokey": "A.YILDIZ",
+              "baba": "EPAULETTE",
+              "anne": "ÇAR BRUSK",
+              "kisrak_babasi": "LION HEART",
+              "jokey": "M.M.BİLGİN",
               "siklet": 57,
-              "kulvar": 3,
-              "handikap_puani": 31,
-              "son_yarislar": "5",
-              "dinlenme_gunu": 25,
+              "kulvar": 2,
+              "handikap_puani": 35,
+              "son_yarislar": "32",
+              "dinlenme_gunu": 18,
               "takilar": [
-                "KG"
+                "KG",
+                "DB"
               ],
               "isYoungHorse": true,
               "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
               "stil_ikon": "🌱",
               "stil_renk": "#38bdf8",
-              "agf_orani": 15,
-              "ganyan": "5.80",
+              "agf_orani": 22,
+              "ganyan": "3.20",
               "son_galop": {
-                "derece": "24.9",
-                "son400hiz": 57.8
+                "derece": "24.1",
+                "son400hiz": 59.8
               },
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
-              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (57.8 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.8 km/h) ile fiziksel tempo potansiyeli takip edilir.",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "synStats": {
                   "runs": 0,
@@ -1530,45 +1532,45 @@
             },
             {
               "no": 4,
-              "isim": "NOBLE RUNNER",
+              "isim": "LIVES IN THE SKY",
               "yas": 2,
               "irk": "İngiliz",
               "cinsiyet": "Erkek",
-              "baba": "MENDIP",
-              "anne": "NOBLE LADY",
-              "kisrak_babasi": "KANEKO",
-              "jokey": "M.M.BİLGİN",
+              "baba": "KLIMT",
+              "anne": "FROZEN",
+              "kisrak_babasi": "TALIP HAN",
+              "jokey": "H.ÇİZİK",
               "siklet": 57,
-              "kulvar": 4,
-              "handikap_puani": 28,
-              "son_yarislar": "6",
-              "dinlenme_gunu": 30,
+              "kulvar": 10,
+              "handikap_puani": 36,
+              "son_yarislar": "24",
+              "dinlenme_gunu": 14,
               "takilar": [
                 "KG",
-                "DB"
+                "SK"
               ],
               "isYoungHorse": true,
               "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
               "stil_ikon": "🌱",
               "stil_renk": "#38bdf8",
-              "agf_orani": 9,
-              "ganyan": "9.50",
+              "agf_orani": 18,
+              "ganyan": "4.10",
               "son_galop": {
-                "derece": "25.3",
-                "son400hiz": 56.9
+                "derece": "24.3",
+                "son400hiz": 59.2
               },
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
-              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.9 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (59.2 km/h) ile fiziksel tempo potansiyeli takip edilir.",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "synStats": {
                   "runs": 0,
@@ -1584,42 +1586,42 @@
             },
             {
               "no": 5,
-              "isim": "SILVER QUEEN",
+              "isim": "SARPİKO",
               "yas": 2,
               "irk": "İngiliz",
-              "cinsiyet": "Dişi",
-              "baba": "TOROK",
-              "anne": "SILVER LADY",
-              "kisrak_babasi": "SRI PEKAN",
-              "jokey": "R.KETME",
-              "siklet": 55,
-              "kulvar": 5,
-              "handikap_puani": 24,
-              "son_yarislar": "7",
-              "dinlenme_gunu": 35,
+              "cinsiyet": "Erkek",
+              "baba": "BODEMEISTER",
+              "anne": "FEVZUŞ",
+              "kisrak_babasi": "ROYAL ABJAR",
+              "jokey": "C.ALTUN",
+              "siklet": 57,
+              "kulvar": 8,
+              "handikap_puani": 28,
+              "son_yarislar": "5",
+              "dinlenme_gunu": 28,
               "takilar": [
-                "SK"
+                "KG"
               ],
               "isYoungHorse": true,
               "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
               "stil_ikon": "🌱",
               "stil_renk": "#38bdf8",
               "agf_orani": 5,
-              "ganyan": "16.00",
+              "ganyan": "14.50",
               "son_galop": {
-                "derece": "25.7",
-                "son400hiz": 56
+                "derece": "25.2",
+                "son400hiz": 57
               },
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
-              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (57.0 km/h) ile fiziksel tempo potansiyeli takip edilir.",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -1637,19 +1639,126 @@
             },
             {
               "no": 6,
-              "isim": "FAST LIGHTNING",
+              "isim": "TRUST MY POWER",
               "yas": 2,
               "irk": "İngiliz",
               "cinsiyet": "Erkek",
-              "baba": "FAST 'N' FAMOUS",
-              "anne": "LIGHTNING STORM",
-              "kisrak_babasi": "LUXOR",
+              "baba": "MENDIP",
+              "anne": "MARQUISE",
+              "kisrak_babasi": "COMMON GROUNDS",
+              "jokey": "A.İNCİ",
+              "siklet": 57,
+              "kulvar": 7,
+              "handikap_puani": 26,
+              "son_yarislar": "6",
+              "dinlenme_gunu": 35,
+              "takilar": [
+                "SK"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 3,
+              "ganyan": "22.00",
+              "son_galop": {
+                "derece": "25.6",
+                "son400hiz": 56.1
+              },
+              "stil_bg": "rgba(56, 189, 248, 0.12)",
+              "stil_border": "rgba(56, 189, 248, 0.35)",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (56.1 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
+            },
+            {
+              "no": 7,
+              "isim": "NOBIL BIGTIME",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Erkek",
+              "baba": "NOBEL PRIZE",
+              "anne": "PANA GIOTA",
+              "kisrak_babasi": "PERFECT STORM",
               "jokey": "MAH.TURAN",
               "siklet": 57,
-              "kulvar": 6,
-              "handikap_puani": 20,
-              "son_yarislar": "8",
-              "dinlenme_gunu": 40,
+              "kulvar": 1,
+              "handikap_puani": 24,
+              "son_yarislar": "7",
+              "dinlenme_gunu": 30,
+              "takilar": [
+                "KG",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 2,
+              "ganyan": "28.00",
+              "son_galop": {
+                "derece": "25.9",
+                "son400hiz": 55.4
+              },
+              "stil_bg": "rgba(56, 189, 248, 0.12)",
+              "stil_border": "rgba(56, 189, 248, 0.35)",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (55.4 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
+            },
+            {
+              "no": 8,
+              "isim": "DETERMINED GIRL",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "KULOĞLU",
+              "anne": "SILVER PLANE",
+              "kisrak_babasi": "SILVER TRAIN",
+              "jokey": "O.ATMACA",
+              "siklet": 55,
+              "kulvar": 4,
+              "handikap_puani": 25,
+              "son_yarislar": "6",
+              "dinlenme_gunu": 25,
               "takilar": [
                 "KG"
               ],
@@ -1657,22 +1766,131 @@
               "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
               "stil_ikon": "🌱",
               "stil_renk": "#38bdf8",
-              "agf_orani": 3,
-              "ganyan": "28.00",
+              "agf_orani": 2,
+              "ganyan": "31.00",
               "son_galop": {
-                "derece": "26.2",
-                "son400hiz": 54.9
+                "derece": "26.0",
+                "son400hiz": 55.2
               },
               "stil_bg": "rgba(56, 189, 248, 0.12)",
               "stil_border": "rgba(56, 189, 248, 0.35)",
-              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (54.9 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (55.2 km/h) ile fiziksel tempo potansiyeli takip edilir.",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
                   "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
+            },
+            {
+              "no": 9,
+              "isim": "MUKADDES HATUN",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "EPAULETTE",
+              "anne": "KEVSER HANIM",
+              "kisrak_babasi": "LION HEART",
+              "jokey": "Ö.F.ÖZEN",
+              "siklet": 54,
+              "apranti_indirimi": true,
+              "kulvar": 3,
+              "handikap_puani": 22,
+              "son_yarislar": "8",
+              "dinlenme_gunu": 40,
+              "takilar": [
+                "SK",
+                "DB"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 1,
+              "ganyan": "38.00",
+              "son_galop": {
+                "derece": "26.4",
+                "son400hiz": 54.5
+              },
+              "stil_bg": "rgba(56, 189, 248, 0.12)",
+              "stil_border": "rgba(56, 189, 248, 0.35)",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (54.5 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "synStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                },
+                "turfStats": {
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
+                }
+              }
+            },
+            {
+              "no": 10,
+              "isim": "TONCHI",
+              "yas": 2,
+              "irk": "İngiliz",
+              "cinsiyet": "Dişi",
+              "baba": "SINCLAR",
+              "anne": "SECRET TO SECRET",
+              "kisrak_babasi": "WIN RIVER WIN",
+              "jokey": "B.M.MIRIK",
+              "siklet": 55,
+              "kulvar": 6,
+              "handikap_puani": 20,
+              "son_yarislar": "0",
+              "dinlenme_gunu": 42,
+              "takilar": [
+                "KG",
+                "K"
+              ],
+              "isYoungHorse": true,
+              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
+              "stil_ikon": "🌱",
+              "stil_renk": "#38bdf8",
+              "agf_orani": 1,
+              "ganyan": "45.00",
+              "son_galop": {
+                "derece": "26.7",
+                "son400hiz": 53.9
+              },
+              "stil_bg": "rgba(56, 189, 248, 0.12)",
+              "stil_border": "rgba(56, 189, 248, 0.35)",
+              "taktik_yorum": "Yarış hayatının henüz başında (≤3 koşu). Koşu karakteri henüz oturmadığı için kalıplaşmış gidişat atanmaz; galop sprint hızı (53.9 km/h) ile fiziksel tempo potansiyeli takip edilir.",
+              "pist_aptitude_analizi": {
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+                "delta": 0,
+                "color": "#38bdf8",
+                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "dirtStats": {
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },

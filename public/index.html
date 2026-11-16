@@ -1887,9 +1887,9 @@ function renderExactWinningCouponInRobot(coupon, secenek) {
 
       horsesListHtml += `
         <div class="p-horse" style="${isWinner ? 'background:rgba(212,175,55,0.18); border:1.5px solid var(--gold-pure); box-shadow:0 0 10px rgba(212,175,55,0.25);' : ''}">
-          <span class="p-no" style="${isWinner ? 'background:var(--gold-pure); color:#08080a; font-weight:900;' : ''}">${h.no}</span>
+          <span class="p-no" style="${isWinner ? 'background:var(--gold-pure); color:#08080a; font-weight:900;' : ''}">${h.no || h.atNo || 1}</span>
           <span class="p-name" style="${isWinner ? 'color:#fff; font-weight:800;' : ''}">
-            ${h.isim} ${winnerBadge} ${bankoBadge}
+            ${h.isim || h.atIsmi || 'SAFKAN'} ${winnerBadge} ${bankoBadge}
             <span style="font-size:0.75rem; opacity:0.85; margin-left:3px;">${h.stil || ''}</span>
           </span>
           <span class="p-score" style="display:flex; align-items:center; gap:4px;">
