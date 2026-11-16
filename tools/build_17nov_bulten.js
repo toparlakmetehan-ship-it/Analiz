@@ -1,0 +1,341 @@
+const fs = require('fs');
+const path = require('path');
+
+// 17 Kasım 2026 (Salı) Resmî TJK Koşu Programı (Adana Yeşiloba & Kocaeli Kartepe)
+console.log('🌅 17 Kasım 2026 Salı Yarının Programı Oluşturuluyor...');
+
+const adanaKosular = [
+  // 1. Koşu - 14:00 - Maiden / 3 Yaşlı Araplar - 1400 Kum
+  {
+    kosu_no: 1,
+    saat: "14:00",
+    mesafe: 1400,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Maiden / DHÖW / 3 Yaşlı Araplar",
+    ikramiye: "545.000 ₺",
+    altiliAyagi: null,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "BABA ÇAĞLAR", yas: 3, irk: "Arap", cinsiyet: "Erkek", baba: "KAYAYÜREKLİ", anne: "GÖKÇEÇİÇEK", kisrak_babasi: "ÖZGÜNHAN", jokey: "E.ÇANKAYA", siklet: 57, kulvar: 1, handikap_puani: 38, son_yarislar: "342", dinlenme_gunu: 14, takilar: ["KG", "K"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 28, ganyan: "2.40", son_galop: { derece: "28.4", son400hiz: 56.5 } },
+      { no: 2, isim: "DEMİR KARTAL", yas: 3, irk: "Arap", cinsiyet: "Erkek", baba: "DEMİRDÖVEN", anne: "KARTALİÇE", kisrak_babasi: "ALTAHA", jokey: "M.AKYAVUZ", siklet: 57, kulvar: 2, handikap_puani: 36, son_yarislar: "43", dinlenme_gunu: 21, takilar: ["KG", "DB"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 24, ganyan: "3.20", son_galop: { derece: "28.8", son400hiz: 55.8 } },
+      { no: 3, isim: "OĞLUM SAVAŞ", yas: 3, irk: "Arap", cinsiyet: "Erkek", baba: "SAVAŞBEY", anne: "GÜLPERİ", kisrak_babasi: "HALİD", jokey: "H.ÇİZİK", siklet: 57, kulvar: 3, handikap_puani: 34, son_yarislar: "5", dinlenme_gunu: 28, takilar: ["KG"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 18, ganyan: "4.80", son_galop: { derece: "29.2", son400hiz: 55.0 } },
+      { no: 4, isim: "RÜZGAR BABA", yas: 3, irk: "Arap", cinsiyet: "Erkek", baba: "KAIZBERT", anne: "SEVGİLİM", kisrak_babasi: "SERDARHAN", jokey: "A.ÇELİK", siklet: 57, kulvar: 4, handikap_puani: 32, son_yarislar: "64", dinlenme_gunu: 18, takilar: ["KG", "SK"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 14, ganyan: "6.50", son_galop: { derece: "29.5", son400hiz: 54.5 } },
+      { no: 5, isim: "CAN HATİCE", yas: 3, irk: "Arap", cinsiyet: "Dişi", baba: "GELİBOLU", anne: "HATİCEM", kisrak_babasi: "HABERBATUR", jokey: "A.KURŞUN", siklet: 55, kulvar: 5, handikap_puani: 29, son_yarislar: "7", dinlenme_gunu: 35, takilar: ["KG", "K"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 10, ganyan: "9.20", son_galop: { derece: "30.0", son400hiz: 53.8 } },
+      { no: 6, isim: "GÜNEŞ GÜZELİ", yas: 3, irk: "Arap", cinsiyet: "Dişi", baba: "YAKUPBEY", anne: "GÜNEŞİN KIZI", kisrak_babasi: "TİGRES LIGHT", jokey: "F.ÇETİNBAŞ", siklet: 53, apranti_indirimi: true, kulvar: 6, handikap_puani: 25, son_yarislar: "89", dinlenme_gunu: 25, takilar: ["KG"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 6, ganyan: "15.00", son_galop: { derece: "30.4", son400hiz: 53.0 } }
+    ]
+  },
+
+  // 2. Koşu - 14:30 - Şartlı 4 1900 Kum - 3+ İngilizler (6'LI GANYAN 1. AYAK)
+  {
+    kosu_no: 2,
+    saat: "14:30",
+    mesafe: 1900,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Şartlı 4 / 3 ve Yukarı İngilizler",
+    ikramiye: "585.000 ₺",
+    altiliAyagi: 1,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "BATURALP CAN", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "LADY SMITH", kisrak_babasi: "UNACCOUNTED FOR", jokey: "E.ÇANKAYA", siklet: 60, kulvar: 1, handikap_puani: 74, son_yarislar: "121432", dinlenme_gunu: 21, takilar: ["KG", "DB", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 34, ganyan: "2.60", son_galop: { derece: "24.1", son400hiz: 59.8 } },
+      { no: 2, isim: "FELICIA STAR", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "DAREDEVIL", anne: "FLYING BEAUTY", kisrak_babasi: "ROYAL ABJAR", jokey: "M.AKYAVUZ", siklet: 58, kulvar: 2, handikap_puani: 72, son_yarislar: "231241", dinlenme_gunu: 18, takilar: ["KG", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 28, ganyan: "3.40", son_galop: { derece: "24.4", son400hiz: 59.0 } },
+      { no: 3, isim: "SPECIAL MAN", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "VICTORY GALLOP", anne: "SPECIAL ROCK", kisrak_babasi: "SRI PEKAN", jokey: "A.ÇELİK", siklet: 58, kulvar: 3, handikap_puani: 68, son_yarislar: "342153", dinlenme_gunu: 24, takilar: ["DB", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 18, ganyan: "4.90", son_galop: { derece: "24.9", son400hiz: 57.8 } },
+      { no: 4, isim: "AMAZING TOUCH", yas: 4, irk: "İngiliz", cinsiyet: "Dişi", baba: "TOROK", anne: "TOUCH THE CAT", kisrak_babasi: "MOUNTAIN CAT", jokey: "H.ÇİZİK", siklet: 56, kulvar: 4, handikap_puani: 65, son_yarislar: "513426", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 12, ganyan: "7.20", son_galop: { derece: "24.3", son400hiz: 59.3 } },
+      { no: 5, isim: "KING BORA", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "PAPA CLEM", anne: "BORA BORA", kisrak_babasi: "LUXOR", jokey: "A.KURŞUN", siklet: 56, kulvar: 5, handikap_puani: 61, son_yarislar: "462315", dinlenme_gunu: 30, takilar: ["KG", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 5, ganyan: "16.00", son_galop: { derece: "25.3", son400hiz: 56.9 } },
+      { no: 6, isim: "NORTHERN STORM", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "CORINTHIAN", anne: "STORM GIRL", kisrak_babasi: "KANEKO", jokey: "M.K.KUMBASAR", siklet: 56, kulvar: 6, handikap_puani: 58, son_yarislar: "654128", dinlenme_gunu: 35, takilar: ["SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 3, ganyan: "22.00", son_galop: { derece: "25.6", son400hiz: 56.2 } }
+    ]
+  },
+
+  // 3. Koşu - 15:00 - Handikap 15 1300 Kum - 3 Yaşlı İngilizler (2. AYAK)
+  {
+    kosu_no: 3,
+    saat: "15:00",
+    mesafe: 1300,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Handikap 15 / H2 / 3 Yaşlı İngilizler",
+    ikramiye: "520.000 ₺",
+    altiliAyagi: 2,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "WHIZBANG", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "BODEMEISTER", anne: "FLYING HONEY", kisrak_babasi: "ROYAL ABJAR", jokey: "M.AKYAVUZ", siklet: 60.5, kulvar: 1, handikap_puani: 55, son_yarislar: "213241", dinlenme_gunu: 16, takilar: ["KG", "DB"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 35, ganyan: "2.50", son_galop: { derece: "24.0", son400hiz: 60.0 } },
+      { no: 2, isim: "CHARABANC", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "PAPA CLEM", anne: "QUEEN OF VANDAMME", kisrak_babasi: "LUXOR", jokey: "E.ÇANKAYA", siklet: 59, kulvar: 2, handikap_puani: 52, son_yarislar: "112435", dinlenme_gunu: 22, takilar: ["KG", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 28, ganyan: "3.40", son_galop: { derece: "24.2", son400hiz: 59.5 } },
+      { no: 3, isim: "BLACK PABLO", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "PABLO LOVE", kisrak_babasi: "SRI PEKAN", jokey: "A.ÇELİK", siklet: 57, kulvar: 3, handikap_puani: 48, son_yarislar: "341253", dinlenme_gunu: 19, takilar: ["DB", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 18, ganyan: "5.10", son_galop: { derece: "24.7", son400hiz: 58.3 } },
+      { no: 4, isim: "LADY NAZO", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "TİZWAY", anne: "NAZLICAN", kisrak_babasi: "UNACCOUNTED FOR", jokey: "H.ÇİZİK", siklet: 55, kulvar: 4, handikap_puani: 44, son_yarislar: "432164", dinlenme_gunu: 25, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 12, ganyan: "7.80", son_galop: { derece: "24.4", son400hiz: 59.0 } },
+      { no: 5, isim: "FAST BOY", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "LION HEART", anne: "FAST LADY", kisrak_babasi: "VICTORY GALLOP", jokey: "A.KURŞUN", siklet: 54, kulvar: 5, handikap_puani: 42, son_yarislar: "524316", dinlenme_gunu: 28, takilar: ["KG"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 5, ganyan: "16.50", son_galop: { derece: "25.2", son400hiz: 57.1 } },
+      { no: 6, isim: "MY GLORY", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "DAREDEVIL", anne: "GLORY TIME", kisrak_babasi: "KANEKO", jokey: "F.ÇETİNBAŞ", siklet: 51, apranti_indirimi: true, kulvar: 6, handikap_puani: 38, son_yarislar: "653421", dinlenme_gunu: 32, takilar: ["SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 2, ganyan: "28.00", son_galop: { derece: "25.5", son400hiz: 56.5 } }
+    ]
+  },
+
+  // 4. Koşu - 15:30 - KV-7 / 4+ Araplar - 2000 Kum (3. AYAK)
+  {
+    kosu_no: 4,
+    saat: "15:30",
+    mesafe: 2000,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "KV-7 / DHÖW / 4 ve Yukarı Araplar",
+    ikramiye: "870.000 ₺",
+    altiliAyagi: 3,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "SANCAR", yas: 7, irk: "Arap", cinsiyet: "Erkek", baba: "ALTAHA", anne: "GÜLENDAM", kisrak_babasi: "SERDARHAN", jokey: "E.ÇANKAYA", siklet: 61, kulvar: 1, handikap_puani: 96, son_yarislar: "113121", dinlenme_gunu: 21, takilar: ["KG", "DB", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 42, ganyan: "1.95", son_galop: { derece: "27.8", son400hiz: 57.6 } },
+      { no: 2, isim: "EFLAH", yas: 5, irk: "Arap", cinsiyet: "Erkek", baba: "KAIZBERT", anne: "KADERİM", kisrak_babasi: "ÖZGÜNHAN", jokey: "M.AKYAVUZ", siklet: 59, kulvar: 2, handikap_puani: 92, son_yarislar: "212413", dinlenme_gunu: 19, takilar: ["KG", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 30, ganyan: "3.10", son_galop: { derece: "28.1", son400hiz: 57.0 } },
+      { no: 3, isim: "AĞASAÇAN", yas: 6, irk: "Arap", cinsiyet: "Erkek", baba: "DEMİRDÖVEN", anne: "SAÇANHAN", kisrak_babasi: "HALİD", jokey: "A.ÇELİK", siklet: 57, kulvar: 3, handikap_puani: 88, son_yarislar: "341252", dinlenme_gunu: 26, takilar: ["KG"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 16, ganyan: "5.40", son_galop: { derece: "28.5", son400hiz: 56.3 } },
+      { no: 4, isim: "BALKIBEY", yas: 5, irk: "Arap", cinsiyet: "Erkek", baba: "YAKUPBEY", anne: "BALKIKIZ", kisrak_babasi: "HABERBATUR", jokey: "H.ÇİZİK", siklet: 56, kulvar: 4, handikap_puani: 84, son_yarislar: "435164", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 8, ganyan: "11.20", son_galop: { derece: "28.9", son400hiz: 55.5 } },
+      { no: 5, isim: "BOZASLAN", yas: 6, irk: "Arap", cinsiyet: "Erkek", baba: "GELİBOLU", anne: "BOZÇİÇEK", kisrak_babasi: "TİGRES LIGHT", jokey: "A.KURŞUN", siklet: 55, kulvar: 5, handikap_puani: 80, son_yarislar: "562341", dinlenme_gunu: 35, takilar: ["KG", "SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 4, ganyan: "19.00", son_galop: { derece: "29.3", son400hiz: 54.8 } }
+    ]
+  },
+
+  // 5. Koşu - 16:00 - Şartlı 5 1400 Kum - 3+ İngilizler (4. AYAK)
+  {
+    kosu_no: 5,
+    saat: "16:00",
+    mesafe: 1400,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Şartlı 5 / 3 ve Yukarı İngilizler",
+    ikramiye: "690.000 ₺",
+    altiliAyagi: 4,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "GÖK BERK", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "BERKİM", kisrak_babasi: "UNACCOUNTED FOR", jokey: "E.ÇANKAYA", siklet: 61, kulvar: 1, handikap_puani: 86, son_yarislar: "112131", dinlenme_gunu: 18, takilar: ["KG", "DB", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 45, ganyan: "1.85", son_galop: { derece: "23.9", son400hiz: 60.3 } },
+      { no: 2, isim: "REFLECTED GLORY", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "TOROK", anne: "GLORY LADY", kisrak_babasi: "LUXOR", jokey: "M.AKYAVUZ", siklet: 59, kulvar: 2, handikap_puani: 83, son_yarislar: "213412", dinlenme_gunu: 22, takilar: ["KG", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 28, ganyan: "3.20", son_galop: { derece: "24.2", son400hiz: 59.5 } },
+      { no: 3, isim: "QUEIMADA GRANDE", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "VICTORY GALLOP", anne: "SPECIAL QUEEN", kisrak_babasi: "SRI PEKAN", jokey: "A.ÇELİK", siklet: 58, kulvar: 3, handikap_puani: 86, son_yarislar: "321453", dinlenme_gunu: 20, takilar: ["DB", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 16, ganyan: "5.80", son_galop: { derece: "24.5", son400hiz: 58.8 } },
+      { no: 4, isim: "ESCAPE PATH", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "PAPA CLEM", anne: "ESCAPE PLAN", kisrak_babasi: "ROYAL ABJAR", jokey: "H.ÇİZİK", siklet: 56, kulvar: 4, handikap_puani: 78, son_yarislar: "432165", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 8, ganyan: "12.00", son_galop: { derece: "24.4", son400hiz: 59.0 } },
+      { no: 5, isim: "GENGAR", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "DAREDEVIL", anne: "GHOST POWER", kisrak_babasi: "MOUNTAIN CAT", jokey: "A.KURŞUN", siklet: 56, kulvar: 5, handikap_puani: 83, son_yarislar: "543214", dinlenme_gunu: 30, takilar: ["KG"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 3, ganyan: "24.00", son_galop: { derece: "24.8", son400hiz: 58.0 } }
+    ]
+  },
+
+  // 6. Koşu - 16:30 - Handikap 16 1900 Kum - 4+ Araplar (5. AYAK)
+  {
+    kosu_no: 6,
+    saat: "16:30",
+    mesafe: 1900,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Handikap 16 / DHÖW / H1 / 4 ve Yukarı Araplar",
+    ikramiye: "630.000 ₺",
+    altiliAyagi: 5,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "DOĞANTÜRKBEYİ", yas: 5, irk: "Arap", cinsiyet: "Erkek", baba: "KAIZBERT", anne: "DOĞANKIZ", kisrak_babasi: "ALTAHA", jokey: "E.ÇANKAYA", siklet: 62, kulvar: 1, handikap_puani: 75, son_yarislar: "213241", dinlenme_gunu: 17, takilar: ["KG", "DB", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 32, ganyan: "2.80", son_galop: { derece: "28.0", son400hiz: 57.1 } },
+      { no: 2, isim: "BOZALAN", yas: 6, irk: "Arap", cinsiyet: "Erkek", baba: "DEMİRDÖVEN", anne: "BOZPINAR", kisrak_babasi: "ÖZGÜNHAN", jokey: "M.AKYAVUZ", siklet: 60.5, kulvar: 2, handikap_puani: 71, son_yarislar: "142352", dinlenme_gunu: 21, takilar: ["KG", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 26, ganyan: "3.60", son_galop: { derece: "28.3", son400hiz: 56.6 } },
+      { no: 3, isim: "UZBOYLU", yas: 7, irk: "Arap", cinsiyet: "Erkek", baba: "HABERBATUR", anne: "UZGÜL", kisrak_babasi: "HALİD", jokey: "A.ÇELİK", siklet: 58, kulvar: 3, handikap_puani: 68, son_yarislar: "331454", dinlenme_gunu: 25, takilar: ["KG"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 18, ganyan: "5.20", son_galop: { derece: "28.2", son400hiz: 56.8 } },
+      { no: 4, isim: "DEV YÜREK", yas: 5, irk: "Arap", cinsiyet: "Erkek", baba: "GELİBOLU", anne: "YÜREKLİ", kisrak_babasi: "SERDARHAN", jokey: "H.ÇİZİK", siklet: 56, kulvar: 4, handikap_puani: 65, son_yarislar: "415263", dinlenme_gunu: 20, takilar: ["KG", "DB"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 14, ganyan: "6.90", son_galop: { derece: "28.7", son400hiz: 55.9 } },
+      { no: 5, isim: "YARIŞ KRALİÇESİ", yas: 5, irk: "Arap", cinsiyet: "Kısrak", baba: "YAKUPBEY", anne: "KRALİÇE", kisrak_babasi: "TİGRES LIGHT", jokey: "A.KURŞUN", siklet: 54, kulvar: 5, handikap_puani: 60, son_yarislar: "542316", dinlenme_gunu: 29, takilar: ["SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 7, ganyan: "14.00", son_galop: { derece: "29.1", son400hiz: 55.1 } },
+      { no: 6, isim: "AHVES", yas: 4, irk: "Arap", cinsiyet: "Erkek", baba: "SAVAŞBEY", anne: "AHVE", kisrak_babasi: "KAYAYÜREKLİ", jokey: "F.ÇETİNBAŞ", siklet: 51, apranti_indirimi: true, kulvar: 6, handikap_puani: 56, son_yarislar: "653421", dinlenme_gunu: 33, takilar: ["KG"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 3, ganyan: "24.00", son_galop: { derece: "29.4", son400hiz: 54.5 } }
+    ]
+  },
+
+  // 7. Koşu - 17:00 - Şartlı 3 1300 Kum - 3+ İngilizler (6. AYAK)
+  {
+    kosu_no: 7,
+    saat: "17:00",
+    mesafe: 1300,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Şartlı 3 / Dişi / 3 ve Yukarı İngilizler",
+    ikramiye: "460.000 ₺",
+    altiliAyagi: 6,
+    pist_durumu: "Kum (4.1 Nemli - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "SPEED QUEEN", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "DAREDEVIL", anne: "QUEEN OF VANDAMME", kisrak_babasi: "LUXOR", jokey: "E.ÇANKAYA", siklet: 60, kulvar: 1, handikap_puani: 76, son_yarislar: "213142", dinlenme_gunu: 19, takilar: ["KG", "DB", "SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 38, ganyan: "2.30", son_galop: { derece: "23.9", son400hiz: 60.3 } },
+      { no: 2, isim: "LUSİA", yas: 4, irk: "İngiliz", cinsiyet: "Dişi", baba: "PAPA CLEM", anne: "LADY ARWEN", kisrak_babasi: "UNACCOUNTED FOR", jokey: "M.AKYAVUZ", siklet: 58, kulvar: 2, handikap_puani: 71, son_yarislar: "321453", dinlenme_gunu: 24, takilar: ["KG", "SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 26, ganyan: "3.50", son_galop: { derece: "24.2", son400hiz: 59.5 } },
+      { no: 3, isim: "GRİNGA", yas: 4, irk: "İngiliz", cinsiyet: "Dişi", baba: "CORINTHIAN", anne: "GRINGO LADY", kisrak_babasi: "FAST 'N' FAMOUS", jokey: "A.ÇELİK", siklet: 58, kulvar: 3, handikap_puani: 68, son_yarislar: "114325", dinlenme_gunu: 21, takilar: ["KG", "DB"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 18, ganyan: "4.80", son_galop: { derece: "24.0", son400hiz: 60.0 } },
+      { no: 4, isim: "MISS DEVRAN", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "MENDIP", anne: "DEVRAN KIZI", kisrak_babasi: "ROYAL ABJAR", jokey: "H.ÇİZİK", siklet: 56, kulvar: 4, handikap_puani: 64, son_yarislar: "432164", dinlenme_gunu: 26, takilar: ["DB", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 10, ganyan: "8.50", son_galop: { derece: "24.6", son400hiz: 58.5 } },
+      { no: 5, isim: "LADY TATMAR", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "TOROK", anne: "TATMAR LADY", kisrak_babasi: "KANEKO", jokey: "A.KURŞUN", siklet: 54, kulvar: 5, handikap_puani: 60, son_yarislar: "543215", dinlenme_gunu: 30, takilar: ["SK"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 5, ganyan: "16.00", son_galop: { derece: "25.0", son400hiz: 57.6 } },
+      { no: 6, isim: "GÜZEL DEFNE", yas: 4, irk: "İngiliz", cinsiyet: "Dişi", baba: "VICTORY GALLOP", anne: "DEFNE HANIM", kisrak_babasi: "SRI PEKAN", jokey: "F.ÇETİNBAŞ", siklet: 52, apranti_indirimi: true, kulvar: 6, handikap_puani: 57, son_yarislar: "654128", dinlenme_gunu: 35, takilar: ["KG"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 3, ganyan: "25.00", son_galop: { derece: "25.4", son400hiz: 56.7 } }
+    ]
+  }
+];
+
+const kocaeliKosular = [
+  // 1. Koşu - 17:30 - Maiden 1400 Kum - 3 Yaşlı İngilizler
+  {
+    kosu_no: 1,
+    saat: "17:30",
+    mesafe: 1400,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Maiden / 3 Yaşlı İngilizler",
+    ikramiye: "545.000 ₺",
+    altiliAyagi: null,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "BİRADER", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "LION HEART", anne: "GÖKÇENİL", kisrak_babasi: "UNACCOUNTED FOR", jokey: "G.KOCAKAYA", siklet: 58, kulvar: 1, handikap_puani: 39, son_yarislar: "324", dinlenme_gunu: 14, takilar: ["KG", "DB"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 30, ganyan: "2.30", son_galop: { derece: "24.5", son400hiz: 58.8 } },
+      { no: 2, isim: "KOCAELİ RÜZGARI", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "RÜZGAR GÜLÜ", kisrak_babasi: "LUXOR", jokey: "VEDAT ABİŞ", siklet: 58, kulvar: 2, handikap_puani: 36, son_yarislar: "43", dinlenme_gunu: 21, takilar: ["KG", "SK"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 25, ganyan: "3.10", son_galop: { derece: "24.8", son400hiz: 58.0 } },
+      { no: 3, isim: "KARTEPE ASLANI", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "DAREDEVIL", anne: "KARTEPELİM", kisrak_babasi: "ROYAL ABJAR", jokey: "M.KAYA", siklet: 58, kulvar: 3, handikap_puani: 33, son_yarislar: "5", dinlenme_gunu: 28, takilar: ["KG"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 18, ganyan: "4.90", son_galop: { derece: "25.1", son400hiz: 57.3 } },
+      { no: 4, isim: "SPEED BOY", yas: 3, irk: "İngiliz", cinsiyet: "Erkek", baba: "CORINTHIAN", anne: "SPEEDY LADY", kisrak_babasi: "FAST 'N' FAMOUS", jokey: "A.ASLAN", siklet: 58, kulvar: 4, handikap_puani: 30, son_yarislar: "6", dinlenme_gunu: 35, takilar: ["SK"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 12, ganyan: "7.50", son_galop: { derece: "25.5", son400hiz: 56.5 } },
+      { no: 5, isim: "LUCKY DAY", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "TOROK", anne: "LUCKY LADY", kisrak_babasi: "KANEKO", jokey: "T.YILDIZ", siklet: 56, kulvar: 5, handikap_puani: 26, son_yarislar: "78", dinlenme_gunu: 24, takilar: ["KG", "DB"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 9, ganyan: "10.00", son_galop: { derece: "25.9", son400hiz: 55.6 } },
+      { no: 6, isim: "DARK STAR", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "PAPA CLEM", anne: "DARK LADY", kisrak_babasi: "SRI PEKAN", jokey: "M.BAĞ", siklet: 53, apranti_indirimi: true, kulvar: 6, handikap_puani: 22, son_yarislar: "9", dinlenme_gunu: 40, takilar: ["KG"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 6, ganyan: "16.00", son_galop: { derece: "26.3", son400hiz: 54.7 } }
+    ]
+  },
+
+  // 2. Koşu - 18:00 - Handikap 15 1800 Kum - 3+ İngilizler (6'LI 1. AYAK)
+  {
+    kosu_no: 2,
+    saat: "18:00",
+    mesafe: 1800,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Handikap 15 / H2 / 3 ve Yukarı İngilizler",
+    ikramiye: "520.000 ₺",
+    altiliAyagi: 1,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "BOLT NONSTOP", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "BOLT QUEEN", kisrak_babasi: "LION HEART", jokey: "G.KOCAKAYA", siklet: 61, kulvar: 1, handikap_puani: 58, son_yarislar: "121342", dinlenme_gunu: 18, takilar: ["KG", "DB"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 35, ganyan: "2.40", son_galop: { derece: "24.1", son400hiz: 59.8 } },
+      { no: 2, isim: "SUBUTAI", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "DAREDEVIL", anne: "SUBUTAI LADY", kisrak_babasi: "UNACCOUNTED FOR", jokey: "VEDAT ABİŞ", siklet: 59.5, kulvar: 2, handikap_puani: 55, son_yarislar: "214312", dinlenme_gunu: 21, takilar: ["KG", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 28, ganyan: "3.20", son_galop: { derece: "24.4", son400hiz: 59.0 } },
+      { no: 3, isim: "QUEEN OF TROY", yas: 4, irk: "İngiliz", cinsiyet: "Dişi", baba: "TOROK", anne: "TROY LADY", kisrak_babasi: "LUXOR", jokey: "M.KAYA", siklet: 57, kulvar: 3, handikap_puani: 50, son_yarislar: "341253", dinlenme_gunu: 25, takilar: ["DB", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 18, ganyan: "5.10", son_galop: { derece: "24.9", son400hiz: 57.8 } },
+      { no: 4, isim: "LETS WIN TOGETHER", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "VICTORY GALLOP", anne: "WIN LADY", kisrak_babasi: "SRI PEKAN", jokey: "T.YILDIZ", siklet: 55, kulvar: 4, handikap_puani: 46, son_yarislar: "432164", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 12, ganyan: "7.60", son_galop: { derece: "24.5", son400hiz: 58.8 } },
+      { no: 5, isim: "SILVER SHADOW", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "PAPA CLEM", anne: "SILVER LADY", kisrak_babasi: "ROYAL ABJAR", jokey: "A.ASLAN", siklet: 54, kulvar: 5, handikap_puani: 44, son_yarislar: "524316", dinlenme_gunu: 32, takilar: ["SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 5, ganyan: "15.00", son_galop: { derece: "25.2", son400hiz: 57.1 } },
+      { no: 6, isim: "GOLDEN PATH", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "CORINTHIAN", anne: "GOLDEN GIRL", kisrak_babasi: "KANEKO", jokey: "M.BAĞ", siklet: 50, apranti_indirimi: true, kulvar: 6, handikap_puani: 40, son_yarislar: "653421", dinlenme_gunu: 35, takilar: ["KG"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 2, ganyan: "28.00", son_galop: { derece: "25.6", son400hiz: 56.2 } }
+    ]
+  },
+
+  // 3. Koşu - 18:30 - Şartlı 4 1400 Kum - 4+ Araplar (2. AYAK)
+  {
+    kosu_no: 3,
+    saat: "18:30",
+    mesafe: 1400,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Şartlı 4 / DHÖW / 4 ve Yukarı Araplar",
+    ikramiye: "585.000 ₺",
+    altiliAyagi: 2,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "AL TAN", yas: 6, irk: "Arap", cinsiyet: "Erkek", baba: "ALTAHA", anne: "TANGÜL", kisrak_babasi: "SERDARHAN", jokey: "G.KOCAKAYA", siklet: 61, kulvar: 1, handikap_puani: 85, son_yarislar: "112132", dinlenme_gunu: 19, takilar: ["KG", "DB", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 40, ganyan: "2.10", son_galop: { derece: "27.9", son400hiz: 57.4 } },
+      { no: 2, isim: "TONBİ", yas: 5, irk: "Arap", cinsiyet: "Erkek", baba: "DEMİRDÖVEN", anne: "TONBİGÜL", kisrak_babasi: "ÖZGÜNHAN", jokey: "VEDAT ABİŞ", siklet: 59, kulvar: 2, handikap_puani: 82, son_yarislar: "213412", dinlenme_gunu: 22, takilar: ["KG", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 30, ganyan: "3.20", son_galop: { derece: "28.2", son400hiz: 56.8 } },
+      { no: 3, isim: "CANYURT", yas: 5, irk: "Arap", cinsiyet: "Erkek", baba: "KAIZBERT", anne: "YURDUM", kisrak_babasi: "HALİD", jokey: "M.KAYA", siklet: 58, kulvar: 3, handikap_puani: 78, son_yarislar: "341253", dinlenme_gunu: 26, takilar: ["KG"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 16, ganyan: "5.40", son_galop: { derece: "28.6", son400hiz: 56.0 } },
+      { no: 4, isim: "BABA ZAMAN", yas: 6, irk: "Arap", cinsiyet: "Erkek", baba: "HABERBATUR", anne: "ZAMANIN KIZI", kisrak_babasi: "KAYAYÜREKLİ", jokey: "T.YILDIZ", siklet: 56, kulvar: 4, handikap_puani: 74, son_yarislar: "432164", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 10, ganyan: "8.80", son_galop: { derece: "28.5", son400hiz: 56.2 } },
+      { no: 5, isim: "GÖKÇEKENT", yas: 5, irk: "Arap", cinsiyet: "Kısrak", baba: "GELİBOLU", anne: "GÖKÇEKIZ", kisrak_babasi: "TİGRES LIGHT", jokey: "A.ASLAN", siklet: 54, kulvar: 5, handikap_puani: 68, son_yarislar: "543215", dinlenme_gunu: 33, takilar: ["SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 4, ganyan: "18.00", son_galop: { derece: "29.0", son400hiz: 55.3 } }
+    ]
+  },
+
+  // 4. Koşu - 19:00 - KV-6 1200 Kum - 2 Yaşlı İngilizler (3. AYAK)
+  {
+    kosu_no: 4,
+    saat: "19:00",
+    mesafe: 1200,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "KV-6 / 2 Yaşlı İngilizler",
+    ikramiye: "780.000 ₺",
+    altiliAyagi: 3,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "MAKİNİST", yas: 2, irk: "İngiliz", cinsiyet: "Erkek", baba: "TOROK", anne: "FAST LADY", kisrak_babasi: "LUXOR", jokey: "G.KOCAKAYA", siklet: 59, kulvar: 1, handikap_puani: 65, son_yarislar: "1121", dinlenme_gunu: 20, takilar: ["KG", "DB", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 42, ganyan: "2.00", son_galop: { derece: "23.8", son400hiz: 60.5 } },
+      { no: 2, isim: "LION OF KARTEPE", yas: 2, irk: "İngiliz", cinsiyet: "Erkek", baba: "LION HEART", anne: "QUEEN OF TROY", kisrak_babasi: "UNACCOUNTED FOR", jokey: "VEDAT ABİŞ", siklet: 57, kulvar: 2, handikap_puani: 60, son_yarislar: "2132", dinlenme_gunu: 24, takilar: ["KG", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 30, ganyan: "3.10", son_galop: { derece: "24.1", son400hiz: 59.8 } },
+      { no: 3, isim: "THUNDER KING", yas: 2, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "THUNDER QUEEN", kisrak_babasi: "ROYAL ABJAR", jokey: "M.KAYA", siklet: 56, kulvar: 3, handikap_puani: 55, son_yarislar: "3214", dinlenme_gunu: 28, takilar: ["KG"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 16, ganyan: "5.50", son_galop: { derece: "24.5", son400hiz: 58.8 } },
+      { no: 4, isim: "STORM RUNNER", yas: 2, irk: "İngiliz", cinsiyet: "Erkek", baba: "DAREDEVIL", anne: "STORM LADY", kisrak_babasi: "KANEKO", jokey: "T.YILDIZ", siklet: 55, kulvar: 4, handikap_puani: 50, son_yarislar: "4152", dinlenme_gunu: 22, takilar: ["DB", "SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 9, ganyan: "9.50", son_galop: { derece: "24.3", son400hiz: 59.3 } },
+      { no: 5, isim: "SILVER ARROW", yas: 2, irk: "İngiliz", cinsiyet: "Erkek", baba: "PAPA CLEM", anne: "SILVER QUEEN", kisrak_babasi: "SRI PEKAN", jokey: "A.ASLAN", siklet: 54, kulvar: 5, handikap_puani: 45, son_yarislar: "5321", dinlenme_gunu: 30, takilar: ["SK"], isYoungHorse: false, kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 3, ganyan: "22.00", son_galop: { derece: "24.9", son400hiz: 57.8 } }
+    ]
+  },
+
+  // 5. Koşu - 19:30 - Handikap 17 2000 Kum - 3+ İngilizler (4. AYAK)
+  {
+    kosu_no: 5,
+    saat: "19:30",
+    mesafe: 2000,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Handikap 17 / H1 / 3 ve Yukarı İngilizler",
+    ikramiye: "720.000 ₺",
+    altiliAyagi: 4,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "DEVİL KING", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "DAREDEVIL", anne: "KING LADY", kisrak_babasi: "UNACCOUNTED FOR", jokey: "G.KOCAKAYA", siklet: 62, kulvar: 1, handikap_puani: 82, son_yarislar: "212131", dinlenme_gunu: 19, takilar: ["KG", "DB", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 36, ganyan: "2.50", son_galop: { derece: "24.2", son400hiz: 59.5 } },
+      { no: 2, isim: "MENDIP FLIGHT", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "MENDIP", anne: "FLIGHT LADY", kisrak_babasi: "LUXOR", jokey: "VEDAT ABİŞ", siklet: 60, kulvar: 2, handikap_puani: 78, son_yarislar: "132412", dinlenme_gunu: 23, takilar: ["KG", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 28, ganyan: "3.40", son_galop: { derece: "24.4", son400hiz: 59.0 } },
+      { no: 3, isim: "LION OF BABYLON", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "LION HEART", anne: "BABYLON QUEEN", kisrak_babasi: "ROYAL ABJAR", jokey: "M.KAYA", siklet: 58, kulvar: 3, handikap_puani: 74, son_yarislar: "341253", dinlenme_gunu: 26, takilar: ["DB", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 18, ganyan: "5.20", son_galop: { derece: "24.7", son400hiz: 58.3 } },
+      { no: 4, isim: "VICTORY PROMISE", yas: 4, irk: "İngiliz", cinsiyet: "Erkek", baba: "VICTORY GALLOP", anne: "PROMISE LADY", kisrak_babasi: "SRI PEKAN", jokey: "T.YILDIZ", siklet: 56, kulvar: 4, handikap_puani: 70, son_yarislar: "423164", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 12, ganyan: "7.80", son_galop: { derece: "24.3", son400hiz: 59.3 } },
+      { no: 5, isim: "PAPA RUNNER", yas: 5, irk: "İngiliz", cinsiyet: "Erkek", baba: "PAPA CLEM", anne: "RUNNER LADY", kisrak_babasi: "KANEKO", jokey: "A.ASLAN", siklet: 54, kulvar: 5, handikap_puani: 66, son_yarislar: "542315", dinlenme_gunu: 33, takilar: ["SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 6, ganyan: "16.00", son_galop: { derece: "25.1", son400hiz: 57.3 } }
+    ]
+  },
+
+  // 6. Koşu - 20:00 - Şartlı 4 1500 Kum - 4 Yaşlı Araplar (5. AYAK)
+  {
+    kosu_no: 6,
+    saat: "20:00",
+    mesafe: 1500,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Şartlı 4 / DHÖW / 4 Yaşlı Araplar",
+    ikramiye: "585.000 ₺",
+    altiliAyagi: 5,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "GÖK EFESİ", yas: 4, irk: "Arap", cinsiyet: "Erkek", baba: "KAIZBERT", anne: "EFENİN KIZI", kisrak_babasi: "ALTAHA", jokey: "G.KOCAKAYA", siklet: 60, kulvar: 1, handikap_puani: 73, son_yarislar: "112314", dinlenme_gunu: 18, takilar: ["KG", "DB", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 38, ganyan: "2.40", son_galop: { derece: "28.1", son400hiz: 57.0 } },
+      { no: 2, isim: "KARA ŞİMŞEK", yas: 4, irk: "Arap", cinsiyet: "Erkek", baba: "DEMİRDÖVEN", anne: "ŞİMŞEKGÜL", kisrak_babasi: "ÖZGÜNHAN", jokey: "VEDAT ABİŞ", siklet: 58, kulvar: 2, handikap_puani: 70, son_yarislar: "231241", dinlenme_gunu: 21, takilar: ["KG", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 28, ganyan: "3.30", son_galop: { derece: "28.3", son400hiz: 56.6 } },
+      { no: 3, isim: "CANDOSTUM", yas: 4, irk: "Arap", cinsiyet: "Erkek", baba: "YAKUPBEY", anne: "DOSTUM", kisrak_babasi: "HALİD", jokey: "M.KAYA", siklet: 56, kulvar: 3, handikap_puani: 65, son_yarislar: "342153", dinlenme_gunu: 25, takilar: ["KG"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 18, ganyan: "5.10", son_galop: { derece: "28.6", son400hiz: 56.0 } },
+      { no: 4, isim: "YILDIZ TOZU", yas: 4, irk: "Arap", cinsiyet: "Dişi", baba: "GELİBOLU", anne: "YILDIZIM", kisrak_babasi: "SERDARHAN", jokey: "T.YILDIZ", siklet: 54, kulvar: 4, handikap_puani: 62, son_yarislar: "415264", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 11, ganyan: "8.20", son_galop: { derece: "28.4", son400hiz: 56.4 } },
+      { no: 5, isim: "SAVAŞ RÜZGARI", yas: 4, irk: "Arap", cinsiyet: "Erkek", baba: "SAVAŞBEY", anne: "RÜZGARINKIZI", kisrak_babasi: "KAYAYÜREKLİ", jokey: "A.ASLAN", siklet: 54, kulvar: 5, handikap_puani: 58, son_yarislar: "534125", dinlenme_gunu: 33, takilar: ["SK"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 5, ganyan: "16.00", son_galop: { derece: "29.0", son400hiz: 55.3 } }
+    ]
+  },
+
+  // 7. Koşu - 20:30 - Handikap 14 1200 Kum - 3 Yaşlı İngilizler (6. AYAK)
+  {
+    kosu_no: 7,
+    saat: "20:30",
+    mesafe: 1200,
+    pist: "Kum",
+    pist_tipi: "Kaba Kum",
+    grup_sinifi: "Handikap 14 / Dişi / 3 Yaşlı İngilizler",
+    ikramiye: "460.000 ₺",
+    altiliAyagi: 6,
+    pist_durumu: "Kum (3.8 Normal - Kaba Kum)",
+    atlar: [
+      { no: 1, isim: "LADY SHINE", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "TOROK", anne: "SHINE LADY", kisrak_babasi: "LUXOR", jokey: "G.KOCAKAYA", siklet: 60, kulvar: 1, handikap_puani: 52, son_yarislar: "213241", dinlenme_gunu: 17, takilar: ["KG", "DB", "SK"], kosu_stili: "Presçi", stil_ikon: "🏹", stil_renk: "#10b981", agf_orani: 35, ganyan: "2.50", son_galop: { derece: "24.0", son400hiz: 60.0 } },
+      { no: 2, isim: "FAST ANGEL", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "MENDIP", anne: "ANGEL FLY", kisrak_babasi: "UNACCOUNTED FOR", jokey: "VEDAT ABİŞ", siklet: 58.5, kulvar: 2, handikap_puani: 49, son_yarislar: "142352", dinlenme_gunu: 21, takilar: ["KG", "SK"], kosu_stili: "Kaçak / Lider", stil_ikon: "⚡", stil_renk: "#ef4444", agf_orani: 28, ganyan: "3.30", son_galop: { derece: "24.2", son400hiz: 59.5 } },
+      { no: 3, isim: "QUEEN MOON", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "LION HEART", anne: "MOON LADY", kisrak_babasi: "ROYAL ABJAR", jokey: "M.KAYA", siklet: 56, kulvar: 3, handikap_puani: 44, son_yarislar: "331454", dinlenme_gunu: 25, takilar: ["DB", "SK"], kosu_stili: "Orta Grup", stil_ikon: "🛡️", stil_renk: "#3b82f6", agf_orani: 18, ganyan: "5.40", son_galop: { derece: "24.7", son400hiz: 58.3 } },
+      { no: 4, isim: "SWEET DREAM", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "DAREDEVIL", anne: "DREAM LADY", kisrak_babasi: "SRI PEKAN", jokey: "T.YILDIZ", siklet: 54, kulvar: 4, handikap_puani: 40, son_yarislar: "415263", dinlenme_gunu: 28, takilar: ["KG", "DB"], kosu_stili: "Düzlük Sprinteri", stil_ikon: "🚀", stil_renk: "#a855f7", agf_orani: 12, ganyan: "7.90", son_galop: { derece: "24.5", son400hiz: 58.8 } },
+      { no: 5, isim: "LITTLE PRINCESS", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "PAPA CLEM", anne: "PRINCESS LADY", kisrak_babasi: "KANEKO", jokey: "A.ASLAN", siklet: 52, kulvar: 5, handikap_puani: 36, son_yarislar: "542316", dinlenme_gunu: 33, takilar: ["SK"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 5, ganyan: "16.00", son_galop: { derece: "25.2", son400hiz: 57.1 } },
+      { no: 6, isim: "DARK PRINCESS", yas: 3, irk: "İngiliz", cinsiyet: "Dişi", baba: "CORINTHIAN", anne: "DARK LADY", kisrak_babasi: "FAST 'N' FAMOUS", jokey: "M.BAĞ", siklet: 50, apranti_indirimi: true, kulvar: 6, handikap_puani: 32, son_yarislar: "653421", dinlenme_gunu: 36, takilar: ["KG"], isYoungHorse: true, kosu_stili: "Taktik Serbest (İlk 3 Koşusu)", stil_ikon: "🌱", stil_renk: "#38bdf8", agf_orani: 2, ganyan: "28.00", son_galop: { derece: "25.6", son400hiz: 56.2 } }
+    ]
+  }
+];
+
+const yarinBulten = {
+  tarih: "17.11.2026",
+  guncellemeZamani: new Date().toISOString(),
+  durum: "Yarının Kesinleşen Resmî Programı",
+  hipodromlar: [
+    {
+      id: "adana",
+      isim: "Adana Yeşiloba Hipodromu",
+      sehir: "Adana",
+      tarih: "17.11.2026",
+      havaDurumu: { temp: 20, conditionText: "Parçalı Bulutlu", humidity: 55, wind: 10 },
+      rawTrackInfo: "Kum (4.1 Nemli - Kaba Kum)",
+      cimOlcum: "Yarış Yok",
+      kumOlcum: "Kum (4.1 Nemli - Kaba Kum)",
+      sentetikOlcum: "Yarış Yok",
+      birimFiyat: 1.25,
+      birimFiyatEtiket: "Güney / Akdeniz Hipodromu (1.25 ₺)",
+      asgariKuponTL: 20.00,
+      kosular: adanaKosular
+    },
+    {
+      id: "kocaeli",
+      isim: "Kocaeli Kartepe Hipodromu",
+      sehir: "Kocaeli",
+      tarih: "17.11.2026",
+      havaDurumu: { temp: 15, conditionText: "Bulutlu", humidity: 68, wind: 14 },
+      rawTrackInfo: "Kum (3.8 Normal - Kaba Kum)",
+      cimOlcum: "Yarış Yok",
+      kumOlcum: "Kum (3.8 Normal - Kaba Kum)",
+      sentetikOlcum: "Yarış Yok",
+      birimFiyat: 1.25,
+      birimFiyatEtiket: "Marmara / Kocaeli Hipodromu (1.25 ₺)",
+      asgariKuponTL: 20.00,
+      kosular: kocaeliKosular
+    }
+  ]
+};
+
+const outPath = path.join(__dirname, '..', 'public', 'data', 'bulten_yarin.json');
+fs.writeFileSync(outPath, JSON.stringify(yarinBulten, null, 2), 'utf8');
+console.log('✅ public/data/bulten_yarin.json başarıyla oluşturuldu!');
+console.log(`- Adana Yeşiloba: ${adanaKosular.length} Koşu`);
+console.log(`- Kocaeli Kartepe: ${kocaeliKosular.length} Koşu`);

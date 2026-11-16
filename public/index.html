@@ -842,7 +842,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
   <div class="nav-views">
     <button class="view-btn active" onclick="switchView('bulten-view')">🏛 Resmî Canlı Bülten</button>
     <button class="view-btn" onclick="switchView('robot-view')">💰 Bütçeli 6'lı Robotu</button>
-    <button class="view-btn" onclick="switchView('winners-view')">🏆 Tutan 6'lılar (634K ₺ Bugün)</button>
+    <button class="view-btn" onclick="switchView('winners-view')">🏆 Tutan 6'lılar (634K ₺ & Arşiv)</button>
     <button class="view-btn" onclick="switchView('backtest-view')">📊 Model Doğrulama & Geçmiş</button>
   </div>
 
@@ -861,7 +861,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
   ══════════════════════════════════════════════════════════ -->
   <div class="view-pane active" id="bulten-view">
     <div class="hero-head">
-      <span class="hero-tag" id="hero-program-date-tag">15 Kasım 2026 Resmî TJK Koşu Programı</span>
+      <span class="hero-tag" id="hero-program-date-tag">16 Kasım 2026 Resmî TJK Koşu Programı (Bursa Osmangazi & Şanlıurfa)</span>
     <h2>Asil Safkanlar, <em>Derin Soy Kütüğü</em> & Biyomekanik Analiz</h2>
     <p style="color:var(--text-muted);max-width:750px;margin:0 auto;font-size:0.95rem;line-height:1.7;">
       Tırnağından galobuna, baba/anne orijininden jokey sinerjisine kadar TJK resmi bültenindeki gerçek safkanlar.
@@ -872,10 +872,10 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
     ══════════════════════════════════════════════════════════ -->
     <div class="program-date-switch-bar">
       <button id="btn-date-today" onclick="switchProgramDate('bugun')" class="date-switch-btn active" title="Bugünün koşularını görüntüle">
-        📅 BUGÜN (15 KASIM PAZAR) <span class="badge-pill-live">BİTEN PROGRAM</span>
+        📅 BUGÜN (16 KASIM PAZARTESİ) <span class="badge-pill-live">BURSA & ŞANLIURFA</span>
       </button>
       <button id="btn-date-tomorrow" onclick="switchProgramDate('yarin')" class="date-switch-btn" title="Yarının programını ve 6'lı ganyan analizlerini aç">
-        🌅 YARININ PROGRAMI (16 KASIM PAZARTESİ) <span class="badge-pill-new">BURSA & ŞANLIURFA ✨</span>
+        🌅 YARININ PROGRAMI (17 KASIM SALI) <span class="badge-pill-new">ADANA & KOCAELİ ✨</span>
       </button>
     </div>
     </div>
@@ -936,8 +936,8 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
           <span style="font-size:2rem; filter:drop-shadow(0 0 8px #fcf6ba);">🏆</span>
           <div>
             <div style="font-size:1rem; font-weight:800; font-family:'Cinzel',serif; color:#fff; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
-              <span>BUGÜN ADANA 1. VE 2. 6'LISI BİRLİKTE TUTTU!</span>
-              <span style="background:rgba(16,185,129,0.35); border:1px solid #10b981; color:#34d399; font-size:0.75rem; padding:2px 8px; border-radius:12px; font-weight:800;">633.679,93 TL RESMÎ İKRAMİYE</span>
+              <span>15 KASIM ADANA 1. VE 2. 6'LISI BİRLİKTE TUTTU!</span>
+              <span style="background:rgba(16,185,129,0.35); border:1px solid #10b981; color:#34d399; font-size:0.75rem; padding:2px 8px; border-radius:12px; font-weight:800;">634.354 TL RESMÎ İKRAMİYE</span>
             </div>
             <div style="font-size:0.78rem; color:#cbd5e1; margin-top:3px;">
               Tek Bankolu Ekonomik Modelimiz <strong style="color:var(--gold-champagne);">2.572,50 ₺</strong> ile 6/6 tam isabet kazandırdı (<strong style="color:#34d399;">209x ROI</strong>).
@@ -957,15 +957,16 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
           <span style="font-family:'Cinzel',serif; font-size:0.82rem; font-weight:800; color:var(--gold-champagne); letter-spacing:1px; text-transform:uppercase;">6'LI PROGRAM GÜNÜ SEÇİN:</span>
         </div>
         <div style="display:flex; gap:0.6rem; flex-wrap:wrap; align-items:center;">
-          <button id="robot-date-btn-today" onclick="switchRobotProgramDate('bugun')" class="preset-btn active" style="font-weight:700; font-size:0.8rem; padding:0.55rem 1.1rem; border-color:var(--gold-pure);" title="Bugünün 15 Kasım İstanbul ve Adana programı">
-            📅 BUGÜN (15 KASIM İSTANBUL & ADANA)
+          <button id="robot-date-btn-today" onclick="switchRobotProgramDate('bugun')" class="preset-btn active" style="font-weight:700; font-size:0.8rem; padding:0.55rem 1.1rem; border-color:var(--gold-pure);" title="Bugünün 16 Kasım Bursa ve Şanlıurfa programı">
+            📅 BUGÜN (16 KASIM BURSA & ŞANLIURFA)
           </button>
-          <button id="robot-date-btn-tomorrow" onclick="switchRobotProgramDate('yarin')" class="preset-btn" style="font-weight:700; font-size:0.8rem; padding:0.55rem 1.1rem;" title="Yarının 16 Kasım Bursa ve Şanlıurfa programı">
-            🌅 YARIN (16 KASIM BURSA & ŞANLIURFA ✨)
+          <button id="robot-date-btn-tomorrow" onclick="switchRobotProgramDate('yarin')" class="preset-btn" style="font-weight:700; font-size:0.8rem; padding:0.55rem 1.1rem;" title="Yarının 17 Kasım Adana ve Kocaeli programı">
+            🌅 YARIN (17 KASIM ADANA & KOCAELİ ✨)
           </button>
           <div style="display:flex; align-items:center; gap:0.4rem;">
             <select id="robot-archive-date-select" onchange="onRobotArchiveDateChange(this.value)" style="background:#08080a; border:1px solid rgba(212,175,55,0.6); color:var(--gold-champagne); padding:0.55rem 0.9rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; outline:none;">
               <option value="">🏛️ GEÇMİŞ GÜNLER ARŞİVİNDEN 6'LI KUR...</option>
+              <option value="2026-11-15">15 Kasım Pazar (Adana 634K ₺ ve 3.240 ₺ Tutan, İstanbul)</option>
               <option value="2026-11-14">14 Kasım Cumartesi (Ankara 185K ₺ Tutan, İzmir, Diyarbakır)</option>
               <option value="2026-11-13">13 Kasım Cuma (İstanbul 320K ₺ Tutan, Bursa, Şanlıurfa)</option>
               <option value="2026-11-12">12 Kasım Perşembe (İzmir, Kocaeli)</option>
@@ -1395,6 +1396,48 @@ let archiveBultenCache = {};
 let currentWinnersFilter = 'ALL';
 
 // ── ROBOT PROGRAM GÜNÜ & ARŞİV TARİHİ DEĞİŞTİRİCİ ──
+
+function getBultenCities(b) {
+  if (!b || !b.hipodromlar || !b.hipodromlar.length) return '';
+  return b.hipodromlar.map(h => h.sehir || (h.isim ? h.isim.replace(' Hipodromu', '') : '')).filter(Boolean).join(' & ');
+}
+
+function updateDynamicDateLabels() {
+  const bugunTarih = (bultenBugunCache && bultenBugunCache.tarih) || (bulten && bulten.tarih) || '16.11.2026';
+  const bugunSehirler = getBultenCities(bultenBugunCache || bulten) || 'Bursa & Şanlıurfa';
+  const yarinTarih = (bultenYarinCache && bultenYarinCache.tarih) || '17.11.2026';
+  const yarinSehirler = getBultenCities(bultenYarinCache) || 'Adana & Kocaeli';
+
+  const btnToday = document.getElementById('btn-date-today');
+  const btnTomorrow = document.getElementById('btn-date-tomorrow');
+  if (btnToday) {
+    btnToday.innerHTML = `📅 BUGÜN (${bugunTarih}) <span class="badge-pill-live">${bugunSehirler}</span>`;
+    btnToday.title = `${bugunTarih} ${bugunSehirler} koşularını görüntüle`;
+  }
+  if (btnTomorrow) {
+    btnTomorrow.innerHTML = `🌅 YARININ PROGRAMI (${yarinTarih}) <span class="badge-pill-new">${yarinSehirler} ✨</span>`;
+    btnTomorrow.title = `Yarının ${yarinTarih} ${yarinSehirler} programını aç`;
+  }
+
+  const rBtnToday = document.getElementById('robot-date-btn-today');
+  const rBtnTomorrow = document.getElementById('robot-date-btn-tomorrow');
+  if (rBtnToday) {
+    rBtnToday.innerText = `📅 BUGÜN (${bugunTarih} ${bugunSehirler})`;
+    rBtnToday.title = `Bugünün ${bugunTarih} ${bugunSehirler} programı`;
+  }
+  if (rBtnTomorrow) {
+    rBtnTomorrow.innerText = `🌅 YARIN (${yarinTarih} ${yarinSehirler} ✨)`;
+    rBtnTomorrow.title = `Yarının ${yarinTarih} ${yarinSehirler} programı`;
+  }
+
+  const heroTag = document.getElementById('hero-program-date-tag');
+  if (heroTag) {
+    const curDate = (bulten && bulten.tarih) || bugunTarih;
+    const curCities = getBultenCities(bulten) || bugunSehirler;
+    heroTag.innerText = `${curDate} Resmî TJK Koşu Programı (${curCities})`;
+  }
+}
+
 async function switchRobotProgramDate(dateKey) {
   const btnToday = document.getElementById('robot-date-btn-today');
   const btnTomorrow = document.getElementById('robot-date-btn-tomorrow');
@@ -1422,7 +1465,7 @@ async function switchRobotProgramDate(dateKey) {
       }
       bulten = bultenYarinCache;
       enrichBultenRunningStylesAndPace(bulten);
-      showToast('🌅 16 Kasım Yarının 6\'lı Programı Yüklendi (Bursa & Şanlıurfa)');
+      updateDynamicDateLabels(); showToast(`🌅 ${bulten.tarih || '17.11.2026'} Yarının 6'lı Programı Yüklendi (${getBultenCities(bulten)})`);
     } else if (dateKey === 'bugun') {
       if (!bultenBugunCache) {
         const res = await fetch('data/bulten_bugun.json?t=' + timestamp);
@@ -1430,10 +1473,19 @@ async function switchRobotProgramDate(dateKey) {
       }
       bulten = bultenBugunCache;
       enrichBultenRunningStylesAndPace(bulten);
-      showToast('📅 15 Kasım Bugünün 6\'lı Programı Yüklendi (İstanbul & Adana)');
+      updateDynamicDateLabels(); showToast(`📅 ${bulten.tarih || '16.11.2026'} Bugünün 6'lı Programı Yüklendi (${getBultenCities(bulten)})`);
     } else {
       // Geçmiş Günler Arşivi
       if (!archiveBultenCache[dateKey]) {
+        // Öncelikli olarak doğrudan bulten_YYYY_MM_DD.json dosyasını dene (tam zengin bülten)
+        const dateCode = dateKey.replace(/-/g, '_');
+        try {
+          const directRes = await fetch(`data/bulten_${dateCode}.json?t=${timestamp}`);
+          if (directRes.ok) {
+            archiveBultenCache[dateKey] = await directRes.json();
+            enrichBultenRunningStylesAndPace(archiveBultenCache[dateKey]);
+          }
+        } catch(e) {}
         if (!backtestArchive) {
           const arcRes = await fetch('data/backtest_archive.json?t=' + timestamp);
           backtestArchive = await arcRes.json();
@@ -1906,7 +1958,7 @@ function loadWinningCouponToRobot(couponId, modelKey) {
 
   // 1. Program tarihini seç
   if (couponId.includes('2026-11-15')) {
-    switchRobotProgramDate('bugun');
+    switchRobotProgramDate('2026-11-15');
   } else if (couponId.includes('2026-11-14')) {
     switchRobotProgramDate('2026-11-14');
   } else {
@@ -2075,10 +2127,11 @@ async function initPlatform() {
     bultenBugunCache = bulten;
     enrichBultenRunningStylesAndPace(bulten);
 
-    // Yarının programını arka planda önbelleğe al (tek tıkla anında açılsın)
     fetch('data/bulten_yarin.json?t=' + timestamp).then(r => r.json()).then(data => {
       bultenYarinCache = data;
+      updateDynamicDateLabels();
     }).catch(e => console.warn('Yarın bülteni preload bypassed:', e.message));
+    updateDynamicDateLabels();
     backtestData = await btRes.json();
     try {
       backtestArchive = await arcRes.json();

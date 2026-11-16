@@ -7187,5 +7187,654 @@
         }
       }
     ]
+  },
+  "2026-11-15": {
+    "tarih": "15 Kasım 2026 (Pazar)",
+    "tarihKodu": "2026-11-15",
+    "sehirler": [
+      "Adana",
+      "İstanbul"
+    ],
+    "toplamKosu": 17,
+    "ilk1Isabet": 7,
+    "ilk2Isabet": 12,
+    "ilk3Isabet": 15,
+    "ilk4Isabet": 17,
+    "ilk1IsabetOrani": 41.2,
+    "ilk2IsabetOrani": 70.6,
+    "ilk3IsabetOrani": 88.2,
+    "ilk4IsabetOrani": 100,
+    "tutanAltililar": [
+      {
+        "hipodrom": "Adana Yeşiloba Hipodromu",
+        "altiliTuru": "2. 6'lı Ganyan (3. - 8. Koşular)",
+        "tutanModel": "5 Yıllık Şampiyon: İkramiye & +EV Avcısı (Asil Banko + Kilit Ayak)",
+        "tutar": "3.240 ₺",
+        "ikramiye": "3.240 ₺ (6/6 TAM İSABET)",
+        "durum": "TUTTU"
+      },
+      {
+        "hipodrom": "Adana Yeşiloba Hipodromu",
+        "altiliTuru": "1. 6'lı Ganyan (1. - 6. Koşular)",
+        "tutanModel": "Ekonomik / Çifte Kilit Kasa Kurgusu",
+        "tutar": "540 ₺",
+        "ikramiye": "634.354 ₺ (6/6 MEGA DEV İKRAMİYE)",
+        "durum": "TUTTU"
+      }
+    ],
+    "karsilastirmalar": [
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1900,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "ÜSTÜNSOY",
+          "ganyan": "10.45"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "ÜSTÜNSOY",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "YALNIZ AŞIK",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "BALKIBEY",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "AĞILMUS ASLANI",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1600,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "SEYRET BENİ",
+          "ganyan": "1.55"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "SEYRET BENİ",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "ÇELİK ABİ",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "ALATTİN",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "BABA ZAMAN",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1400,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "ALWAYS HARD",
+          "ganyan": "999.99"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "ALWAYS HARD",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "BEST LINE",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "BÜYÜK ATTİLA",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "DON ÇİÇİ",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 2000,
+        "pist": "Sentetik",
+        "kazanan": {
+          "no": 1,
+          "isim": "ACOUSTIC SONG",
+          "ganyan": "45.15"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "ACOUSTIC SONG",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "GHOST COMMANDER",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "ROCK FOR EVER",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "VOLITIVO",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1800,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "AYTOR",
+          "ganyan": "3.00"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "AYTOR",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "BATURALP CAN",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "EMANET",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "HAYRETBİŞEY",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1400,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "CHARABANC",
+          "ganyan": "25.90"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "CHARABANC",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "LETS WIN TOGETHER",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "SPECIAL MAN",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "SUBUTAI",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 2400,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "AL TAN",
+          "ganyan": "7.70"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "AL TAN",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "HANDSOME KING",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "KALKÜTA",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "TOR GOLD",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1400,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "MY ZEKO",
+          "ganyan": "561.20"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "MY ZEKO",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "ALWAYS ON",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "AMENTES",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "APARAJİTO",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "İstanbul",
+        "mesafe": 1200,
+        "pist": "Çim",
+        "kazanan": {
+          "no": 1,
+          "isim": "NOX ATRA",
+          "ganyan": "1.05"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "NOX ATRA",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "HERKHAN STAR",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "ANGEL QUEST",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "FLYING JO",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "AĞASAÇAN",
+          "ganyan": "14.35"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "AĞASAÇAN",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "ŞAHKAYA",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "BAY ARAZ",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "ALİMENDER",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "DALLAS MAN",
+          "ganyan": "999.99"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "DALLAS MAN",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "DİONER",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "HAKVERDİ",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "ROMAN HAN",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1500,
+        "pist": "Sentetik",
+        "kazanan": {
+          "no": 1,
+          "isim": "PİSİFORMİS",
+          "ganyan": "999.99"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "PİSİFORMİS",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "BOZALAN",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "DEV YÜREK",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "KING ULUDAĞ",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BALTAZARR",
+          "ganyan": "999.99"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "BALTAZARR",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "HYPER ROCKER",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "LAS WEGAS",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "LOVE OF AMERICA",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1200,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "LEVERO",
+          "ganyan": "999.99"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "LEVERO",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "ROSAS DEL ROSEDAL",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "DOLCE MARE",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "GRINGA",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1400,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "GÖK BERK",
+          "ganyan": "4.20"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "GÖK BERK",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "BLACK PABLO",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "REFLECTED GLORY",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "CUCURELLA",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "ASPUWA",
+          "ganyan": "4.90"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "ASPUWA",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "FIRE OF VALERIA",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "NOBLE CREST",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "MISS DEVRAN",
+            "puan": 75
+          }
+        ]
+      },
+      {
+        "sehir": "Adana",
+        "mesafe": 2100,
+        "pist": "Sentetik",
+        "kazanan": {
+          "no": 1,
+          "isim": "QUEIMADA GRANDE",
+          "ganyan": "1.15"
+        },
+        "tahminler": [
+          {
+            "sira": 1,
+            "no": 1,
+            "isim": "QUEIMADA GRANDE",
+            "puan": 75
+          },
+          {
+            "sira": 2,
+            "no": 2,
+            "isim": "ESCAPE PATH",
+            "puan": 75
+          },
+          {
+            "sira": 3,
+            "no": 3,
+            "isim": "SOLİDO HERMANOS",
+            "puan": 75
+          },
+          {
+            "sira": 4,
+            "no": 4,
+            "isim": "ANOTHER BANGER",
+            "puan": 75
+          }
+        ]
+      }
+    ]
   }
 }
