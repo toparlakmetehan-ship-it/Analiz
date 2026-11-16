@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v18-bursa-race4-full-10-horses';
+const APP_VERSION = 'v19-official-live-tjk-bulten-all-real-horses';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
