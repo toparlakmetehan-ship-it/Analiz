@@ -4291,7 +4291,7 @@ function renderRaceDetails() {
       <table class="monument-specs">
         <tr><td class="k">Jokey & Apranti</td><td class="v">${h.jokey} ${h.apranti_indirimi ? '<span style="color:var(--text-gold);font-size:0.75rem;">(AP)</span>' : ''}</td></tr>
         <tr><td class="k">Sıklet / Kilo</td><td class="v">${h.siklet} kg (Kulvar: ${h.kulvar || h.no})</td></tr>
-        <tr><td class="k">Handikap Puanı</td><td class="v" style="color:var(--text-gold);">${h.handikap_puani || '-'}</td></tr>
+        <tr><td class="k">Handikap Puanı</td><td class="v" style="color:var(--text-gold);">${h.handikap_puani ?? '-'}</td></tr>
         <tr><td class="k">Son 6 Koşu</td><td class="v" style="letter-spacing:1px;">${h.son_yarislar || '-'}</td></tr>
         <tr><td class="k">Dinlenme (KGS)</td><td class="v">${h.dinlenme_gunu || '-'} Gün</td></tr>
         <tr><td class="k">AGF / Oran</td><td class="v">${h.agf_orani ? '%' + h.agf_orani : '-'} / ${h.ganyan ? h.ganyan + ' ₺' : '-'}</td></tr>
