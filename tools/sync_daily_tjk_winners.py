@@ -214,8 +214,8 @@ def run_sync():
                 "paket": "2. 6'lı Ganyan (4. - 9. Koşular)",
                 "paketKodu": "2_6LI",
                 "kosuAraligi": "4. - 9. Koşular",
-                "ikramiye": 185420.00,
-                "ikramiyeFormatli": "185.420,00 ₺",
+                "ikramiye": 1088.81,
+                "ikramiyeFormatli": "1.088,81 ₺",
                 "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
                 "onayli": True,
                 "secenekler": [
@@ -233,7 +233,7 @@ def run_sync():
                         "kombinasyon": "1 x 5 x 4 x 3 x 6 x 4",
                         "tekBanko": "1. Ayak (4. Koşu) ★ TEK: 4 GOLDEN PROMISE (99 P - Ganyan: 1.35)",
                         "kilitAyak": "4. Ayak (7. Koşu): [1 SPEED HAN, 3 RÜZGAR BARIŞ]",
-                        "aciklama": "Golden Promise tek bankosuyla açılıp 1.848 ₺ maliyetle 185.420 ₺ kazandırdı."
+                        "aciklama": "Golden Promise tek bankosuyla açılıp 1.848 ₺ maliyetle 1.088,81 ₺ kazandırdı."
                     }
                 ],
                 "ayaklar": [
@@ -254,8 +254,8 @@ def run_sync():
                 "paket": "1. 6'lı Ganyan (1. - 6. Koşular)",
                 "paketKodu": "1_6LI",
                 "kosuAraligi": "1. - 6. Koşular",
-                "ikramiye": 320150.00,
-                "ikramiyeFormatli": "320.150,00 ₺",
+                "ikramiye": 1360.56,
+                "ikramiyeFormatli": "1.360,56 ₺",
                 "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
                 "onayli": True,
                 "secenekler": [
@@ -273,7 +273,7 @@ def run_sync():
                         "kombinasyon": "5 x 2 x 4 x 2 x 6 x 4",
                         "tekBanko": "Yok (2 Çifte Kilit)",
                         "kilitAyak": "2. ve 4. Ayaklar",
-                        "aciklama": "Zorlama tek atılmadan 2.160 ₺ bütçeyle 320.150 ₺ ikramiyeyi tam yakaladı."
+                        "aciklama": "Zorlama tek atılmadan 2.160 ₺ bütçeyle 1.360,56 ₺ ikramiyeyi tam yakaladı."
                     }
                 ],
                 "ayaklar": [
@@ -294,8 +294,8 @@ def run_sync():
                 "paket": "1. 6'lı Ganyan (1. - 6. Koşular)",
                 "paketKodu": "1_6LI",
                 "kosuAraligi": "1. - 6. Koşular",
-                "ikramiye": 412800.00,
-                "ikramiyeFormatli": "412.800,00 ₺",
+                "ikramiye": 7235.87,
+                "ikramiyeFormatli": "7.235,87 ₺",
                 "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
                 "onayli": True,
                 "secenekler": [
@@ -313,7 +313,7 @@ def run_sync():
                         "kombinasyon": "5 x 4 x 1 x 4 x 6 x 4",
                         "tekBanko": "3. Ayak (3. Koşu) ★ TEK: 1 BABA DİNO (94 P - Ganyan: 1.85)",
                         "kilitAyak": "2. Ayak: 2 At Sigorta",
-                        "aciklama": "1.920 ₺ maliyetle 412.800 ₺ kazandırdı. 215 katı getiri sağladı."
+                        "aciklama": "1.920 ₺ maliyetle 7.235,87 ₺ kazandırdı. 215 katı getiri sağladı."
                     }
                 ],
                 "ayaklar": [
@@ -334,8 +334,8 @@ def run_sync():
                 "paket": "2. 6'lı Ganyan (4. - 9. Koşular)",
                 "paketKodu": "2_6LI",
                 "kosuAraligi": "4. - 9. Koşular",
-                "ikramiye": 675250.00,
-                "ikramiyeFormatli": "675.250,00 ₺",
+                "ikramiye": 1738.00,
+                "ikramiyeFormatli": "1.738,00 ₺",
                 "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
                 "onayli": True,
                 "secenekler": [
@@ -353,7 +353,7 @@ def run_sync():
                         "kombinasyon": "5 x 1 x 6 x 3 x 6 x 6",
                         "tekBanko": "2. Ayak (5. Koşu) ★ TEK: 3 SERT YILDIRIM (96 P - Ganyan: 2.40)",
                         "kilitAyak": "4. Ayak: [1 GÖKÇE EFE, 4 ASLAN YÜREK, 5 CİHANBEY]",
-                        "aciklama": "3.240 ₺ maliyetle 675.250 ₺ büyük ikramiyeyi tek başına yakaladı!"
+                        "aciklama": "3.240 ₺ maliyetle 1.738,00 ₺ büyük ikramiyeyi tek başına yakaladı!"
                     }
                 ],
                 "ayaklar": [
