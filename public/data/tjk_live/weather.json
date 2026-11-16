@@ -2,7 +2,7 @@
   "Istanbul": {
     "latitude": 41.03005,
     "longitude": 29.018282,
-    "generationtime_ms": 0.40662288665771484,
+    "generationtime_ms": 0.18131732940673828,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -19,15 +19,15 @@
       "surface_pressure": "hPa"
     },
     "current": {
-      "time": "2026-11-16T22:30",
+      "time": "2026-11-16T23:00",
       "interval": 900,
-      "temperature_2m": 12.5,
+      "temperature_2m": 12.4,
       "relative_humidity_2m": 93,
-      "wind_speed_10m": 3.8,
-      "wind_direction_10m": 139,
+      "wind_speed_10m": 3.6,
+      "wind_direction_10m": 143,
       "precipitation": 0.0,
       "weather_code": 3,
-      "surface_pressure": 1015.6
+      "surface_pressure": 1015.1
     },
     "hourly_units": {
       "time": "iso8601",
@@ -145,7 +145,7 @@
   "Ankara": {
     "latitude": 39.94997,
     "longitude": 32.884026,
-    "generationtime_ms": 0.5990266799926758,
+    "generationtime_ms": 0.164031982421875,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -162,15 +162,15 @@
       "surface_pressure": "hPa"
     },
     "current": {
-      "time": "2026-11-16T22:30",
+      "time": "2026-11-16T23:00",
       "interval": 900,
-      "temperature_2m": 6.0,
+      "temperature_2m": 5.8,
       "relative_humidity_2m": 95,
       "wind_speed_10m": 4.7,
-      "wind_direction_10m": 94,
+      "wind_direction_10m": 90,
       "precipitation": 0.0,
       "weather_code": 1,
-      "surface_pressure": 917.4
+      "surface_pressure": 917.0
     },
     "hourly_units": {
       "time": "iso8601",
@@ -288,7 +288,7 @@
   "Izmir": {
     "latitude": 38.432575,
     "longitude": 27.208298,
-    "generationtime_ms": 0.3851652145385742,
+    "generationtime_ms": 0.19991397857666016,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -305,15 +305,15 @@
       "surface_pressure": "hPa"
     },
     "current": {
-      "time": "2026-11-16T22:30",
+      "time": "2026-11-16T23:00",
       "interval": 900,
-      "temperature_2m": 12.8,
-      "relative_humidity_2m": 90,
-      "wind_speed_10m": 4.2,
-      "wind_direction_10m": 70,
+      "temperature_2m": 12.6,
+      "relative_humidity_2m": 91,
+      "wind_speed_10m": 3.9,
+      "wind_direction_10m": 68,
       "precipitation": 0.0,
       "weather_code": 3,
-      "surface_pressure": 1017.7
+      "surface_pressure": 1017.4
     },
     "hourly_units": {
       "time": "iso8601",
@@ -431,7 +431,7 @@
   "Adana": {
     "latitude": 36.97813,
     "longitude": 35.33118,
-    "generationtime_ms": 0.4075765609741211,
+    "generationtime_ms": 0.16486644744873047,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -448,15 +448,15 @@
       "surface_pressure": "hPa"
     },
     "current": {
-      "time": "2026-11-16T22:30",
+      "time": "2026-11-16T23:00",
       "interval": 900,
-      "temperature_2m": 15.9,
+      "temperature_2m": 15.7,
       "relative_humidity_2m": 93,
-      "wind_speed_10m": 6.2,
+      "wind_speed_10m": 4.9,
       "wind_direction_10m": 54,
       "precipitation": 0.0,
       "weather_code": 2,
-      "surface_pressure": 1014.9
+      "surface_pressure": 1014.7
     },
     "hourly_units": {
       "time": "iso8601",
@@ -574,7 +574,7 @@
   "Bursa": {
     "latitude": 40.212605,
     "longitude": 29.01397,
-    "generationtime_ms": 0.42617321014404297,
+    "generationtime_ms": 0.1537799835205078,
     "utc_offset_seconds": 10800,
     "timezone": "Europe/Istanbul",
     "timezone_abbreviation": "GMT+3",
@@ -591,15 +591,15 @@
       "surface_pressure": "hPa"
     },
     "current": {
-      "time": "2026-11-16T22:30",
+      "time": "2026-11-16T23:00",
       "interval": 900,
-      "temperature_2m": 9.3,
-      "relative_humidity_2m": 96,
-      "wind_speed_10m": 3.1,
-      "wind_direction_10m": 21,
+      "temperature_2m": 8.9,
+      "relative_humidity_2m": 97,
+      "wind_speed_10m": 3.0,
+      "wind_direction_10m": 14,
       "precipitation": 0.0,
       "weather_code": 45,
-      "surface_pressure": 992.9
+      "surface_pressure": 992.5
     },
     "hourly_units": {
       "time": "iso8601",
