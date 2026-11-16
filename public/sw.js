@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v13-auto-rollover-nov16-bursa-urfa';
+const APP_VERSION = 'v14-fix-ankara-archive-render';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
