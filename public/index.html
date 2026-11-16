@@ -3177,6 +3177,111 @@ function calculatePaceAdjustment(horse, kosu) {
 }
 
 // ── ÇAMUR & ISLAK ZEMİN PEDİGRİ / ORİJİN ANALİZ MOTORU ──
+function getLiveHipodromTrackInfo(hip) {
+  if (!hip) return {
+    hasCim: false,
+    hasKum: true,
+    hasSentetik: false,
+    cimVal: '3.3 (Normal)',
+    kumStatus: 'Normal',
+    summaryHtml: '🏜️ <b>TJK Resmî:</b> Kum (Normal)',
+    buttonLabel: '🏜️ TJK Canlı (Kum Normal)',
+    badgeLive: '🏜️ TJK RESMÎ (KUM NORMAL)'
+  };
+
+  const kosular = hip.kosular || [];
+  const pistTypes = kosular.map(k => (k.pist || '').toLowerCase());
+  const hasCim = pistTypes.some(p => p.includes('çim'));
+  const hasKum = pistTypes.some(p => p.includes('kum') && !p.includes('sentetik'));
+  const hasSentetik = pistTypes.some(p => p.includes('sentetik'));
+
+  // Open-Meteo canlı telemetrisi ve TJK penetrometre hesaplaması
+  let cimVal = '3.3 (Normal)';
+  let cimStatus = 'Normal';
+  if (weatherData.precip >= 3.0) {
+    cimVal = '4.3 (Ağır / Çamur)';
+    cimStatus = 'Ağır / Çamur';
+  } else if (weatherData.precip >= 1.0) {
+    cimVal = '3.9 (Çok Yumuşak)';
+    cimStatus = 'Çok Yumuşak';
+  } else if (weatherData.precip >= 0.2) {
+    cimVal = '3.6 (Yumuşak)';
+    cimStatus = 'Yumuşak';
+  } else if (weatherData.humidity >= 85) {
+    cimVal = '3.5 (Yumuşak)';
+    cimStatus = 'Yumuşak';
+  } else if (weatherData.humidity >= 70) {
+    cimVal = '3.4 (Normal / İyi)';
+    cimStatus = 'Normal / İyi';
+  } else if (weatherData.humidity < 45) {
+    cimVal = '3.2 (Sert / Hızlı)';
+    cimStatus = 'Sert';
+  }
+
+  // Kum zemini nem ve su durumu
+  let kumStatus = 'Normal';
+  if (weatherData.precip >= 2.0) {
+    kumStatus = 'Çamurlu / Ağır';
+  } else if (weatherData.precip >= 0.5) {
+    kumStatus = 'Islak / Sulu';
+  } else if (weatherData.humidity >= 80) {
+    kumStatus = `Nemli (%${weatherData.humidity})`;
+  } else if (weatherData.humidity >= 60) {
+    kumStatus = `Normal / Hafif Nemli (%${weatherData.humidity})`;
+  } else {
+    kumStatus = `Kuru / Normal (%${weatherData.humidity})`;
+  }
+
+  let sentetikStatus = weatherData.precip >= 0.5 ? 'Islak' : 'Standart (Normal)';
+
+  // Bültendeki kayıtlı resmî ölçüm varsa önceliklendir
+  let cimDisplay = hasCim ? (hip.cimOlcum && !hip.cimOlcum.includes('Yarış Yok') ? hip.cimOlcum : `Çim ${cimVal}`) : 'Yarış Yok';
+  let kumDisplay = hasKum ? (hip.kumOlcum || `Kum (${kumStatus})`) : 'Yarış Yok';
+  let sentetikDisplay = hasSentetik ? `Sentetik (${sentetikStatus})` : 'Yarış Yok';
+
+  let summaryHtml = '';
+  let buttonLabel = '';
+  let badgeLive = '';
+
+  if (hasCim && hasKum) {
+    summaryHtml = `🌱 <b>TJK Çim:</b> ${cimDisplay} &nbsp;·&nbsp; 🏜️ <b>TJK Kum:</b> ${kumDisplay}`;
+    buttonLabel = `🌱 TJK Canlı (${cimVal})`;
+    badgeLive = `🌱 TJK RESMÎ (${cimVal.toUpperCase()})`;
+  } else if (hasCim && hasSentetik) {
+    summaryHtml = `🌱 <b>TJK Çim:</b> ${cimDisplay} &nbsp;·&nbsp; 🏟️ <b>Sentetik:</b> ${sentetikDisplay}`;
+    buttonLabel = `🌱 TJK Canlı (${cimVal})`;
+    badgeLive = `🌱 TJK RESMÎ (${cimVal.toUpperCase()})`;
+  } else if (hasSentetik && !hasCim && !hasKum) {
+    summaryHtml = `🏟️ <b>TJK Resmî Sentetik:</b> ${sentetikDisplay} <span style="color:#94a3b8; font-size:0.7rem; margin-left:4px;">(Sentetik Pist)</span>`;
+    buttonLabel = `🏟️ TJK Canlı (Sentetik Normal)`;
+    badgeLive = `🏟️ TJK RESMÎ (SENTETİK NORMAL)`;
+  } else if (hasKum && !hasCim) {
+    summaryHtml = `🏜️ <b>TJK Resmî Kum Ölçümü:</b> ${kumDisplay} <span style="color:#94a3b8; font-size:0.7rem; margin-left:4px;">(Çim Pisti Yoktur · Tüm Koşular Kum)</span>`;
+    buttonLabel = `🏜️ TJK Canlı (Kum ${kumStatus})`;
+    badgeLive = `🏜️ TJK RESMÎ (KUM ${kumStatus.toUpperCase()})`;
+  } else {
+    summaryHtml = `🌱 <b>TJK Ölçümü:</b> ${cimDisplay} · ${kumDisplay}`;
+    buttonLabel = `🌱 TJK Canlı (3.3 Normal)`;
+    badgeLive = `🌱 TJK RESMÎ (3.3 NORMAL)`;
+  }
+
+  return {
+    hasCim,
+    hasKum,
+    hasSentetik,
+    cimVal,
+    cimStatus,
+    kumStatus,
+    sentetikStatus,
+    cimDisplay,
+    kumDisplay,
+    sentetikDisplay,
+    summaryHtml,
+    buttonLabel,
+    badgeLive
+  };
+}
+
 function calculateMudTrackDelta(horse, kosu, condition = currentTrackCondition) {
   const sire = (horse.baba || '').toUpperCase();
   const mareSire = (horse.kisrak_babasi || '').toUpperCase();
@@ -3285,11 +3390,35 @@ function calculateMudTrackDelta(horse, kosu, condition = currentTrackCondition) 
     };
   }
 
-  // CANLI (TJK Ölçümü: Normal)
+  // CANLI (Pist tipine ve telemetriye göre dinamik rozet)
+  const pistType = (kosu?.pist || '').toLowerCase();
+  if (pistType.includes('kum') && !pistType.includes('sentetik')) {
+    const kStatus = weatherData.humidity >= 80 ? 'NEMLİ' : 'NORMAL';
+    return {
+      delta: 0,
+      badge: `🏜️ TJK RESMÎ (KUM ${kStatus})`,
+      desc: 'TJK canlı kum zemin ölçümü; zemin düzeltmesi uygulanmadı.',
+      color: '#94a3b8',
+      type: 'LIVE'
+    };
+  }
+  if (pistType.includes('sentetik')) {
+    return {
+      delta: 0,
+      badge: '🏟️ TJK RESMÎ (SENTETİK NORMAL)',
+      desc: 'TJK canlı sentetik zemin ölçümü standart; zemin düzeltmesi uygulanmadı.',
+      color: '#94a3b8',
+      type: 'LIVE'
+    };
+  }
+
+  // Çim koşusu
+  const hip = bulten && bulten.hipodromlar ? bulten.hipodromlar[currentHipIdx] : null;
+  const tInfo = getLiveHipodromTrackInfo(hip);
   return {
     delta: 0,
-    badge: '🌱 TJK RESMÎ (3.3 NORMAL)',
-    desc: 'TJK canlı pist ölçümü normal; zemin düzeltmesi uygulanmadı.',
+    badge: tInfo.badgeLive,
+    desc: 'TJK canlı çim pist penetrometre ölçümü; zemin düzeltmesi uygulanmadı.',
     color: '#94a3b8',
     type: 'LIVE'
   };
@@ -3337,7 +3466,8 @@ async function fetchLiveTrackAndWeather(isManual = false) {
   renderWeatherAndTrackBar();
 
   if (isManual) {
-    showToast(`✓ TJK Resmî Pist ve Hava Ölçümü Güncellendi (${weatherData.lastSync}): ${weatherData.temp}°C, ${weatherData.conditionText}, Nem %${weatherData.humidity}`);
+    const tInfo = getLiveHipodromTrackInfo(hip);
+    showToast(`✓ TJK Resmî Pist ve Hava Ölçümü Güncellendi (${weatherData.lastSync}): ${weatherData.temp}°C, ${weatherData.conditionText}, Nem %${weatherData.humidity} · ${tInfo.buttonLabel}`);
   }
 }
 
@@ -3371,7 +3501,9 @@ function setTrackCondition(condition) {
   } else if (condition === 'CIMDEN_KUMA_ALINDI') {
     showToast('🔄 Çimden Kuma Alındı: Kum orijinlerine +6 puan, saf çimcilere -6 puan uygulandı.');
   } else {
-    showToast('🌱 TJK Canlı Resmî Pist (3.3 Normal) Zeminine Dönüldü.');
+    const hip = bulten && bulten.hipodromlar ? bulten.hipodromlar[currentHipIdx] : null;
+    const tInfo = getLiveHipodromTrackInfo(hip);
+    showToast(`✓ TJK Canlı Resmî Pist Zeminine Dönüldü (${tInfo.buttonLabel})`);
   }
 }
 
@@ -3379,6 +3511,7 @@ function renderWeatherAndTrackBar() {
   const container = document.getElementById('live-weather-track-container');
   if (!container || !bulten || !bulten.hipodromlar || !bulten.hipodromlar[currentHipIdx]) return;
   const hip = bulten.hipodromlar[currentHipIdx];
+  const tInfo = getLiveHipodromTrackInfo(hip);
 
   let activeSimBadge = '';
   if (currentTrackCondition === 'AGIR_CAMUR_CIM') {
@@ -3431,7 +3564,7 @@ function renderWeatherAndTrackBar() {
             </div>
           </div>
           <div style="font-size:0.75rem; color:#38bdf8; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); padding:0.4rem 0.6rem; border-radius:6px; margin-top:0.4rem;">
-            🌱 <b>TJK Resmî Ölçümü:</b> ${hip.cimOlcum || 'Çim 3.3 (Normal)'} · ${hip.kumOlcum || 'Kum (Normal)'}
+            ${tInfo.summaryHtml}
           </div>
         </div>
 
@@ -3443,17 +3576,21 @@ function renderWeatherAndTrackBar() {
           </div>
           <div style="display:flex; flex-wrap:wrap; gap:0.45rem;">
             <button onclick="setTrackCondition('CANLI')" class="track-sim-btn ${currentTrackCondition === 'CANLI' ? 'active' : ''}">
-              🌱 TJK Canlı (3.3 Normal)
+              ${tInfo.buttonLabel}
             </button>
-            <button onclick="setTrackCondition('AGIR_CAMUR_CIM')" class="track-sim-btn ${currentTrackCondition === 'AGIR_CAMUR_CIM' ? 'active' : ''}">
-              🌧️ Ağır / Çamur Çim (4.5+)
-            </button>
-            <button onclick="setTrackCondition('ISLAK_SULU_KUM')" class="track-sim-btn ${currentTrackCondition === 'ISLAK_SULU_KUM' ? 'active' : ''}">
-              🌊 Islak / Çamurlu Kum
-            </button>
-            <button onclick="setTrackCondition('CIMDEN_KUMA_ALINDI')" class="track-sim-btn ${currentTrackCondition === 'CIMDEN_KUMA_ALINDI' ? 'active' : ''}">
-              🔄 Çimden Kuma Alındı
-            </button>
+            ${tInfo.hasCim ? `
+              <button onclick="setTrackCondition('AGIR_CAMUR_CIM')" class="track-sim-btn ${currentTrackCondition === 'AGIR_CAMUR_CIM' ? 'active' : ''}">
+                🌧️ Ağır / Çamur Çim (4.5+)
+              </button>
+              <button onclick="setTrackCondition('CIMDEN_KUMA_ALINDI')" class="track-sim-btn ${currentTrackCondition === 'CIMDEN_KUMA_ALINDI' ? 'active' : ''}">
+                🔄 Çimden Kuma Alındı
+              </button>
+            ` : ''}
+            ${tInfo.hasKum ? `
+              <button onclick="setTrackCondition('ISLAK_SULU_KUM')" class="track-sim-btn ${currentTrackCondition === 'ISLAK_SULU_KUM' ? 'active' : ''}">
+                🌊 Islak / Sulu Kum
+              </button>
+            ` : ''}
           </div>
           <div style="font-size:0.68rem; color:#94a3b8; margin-top:0.5rem; line-height:1.35;">
             * Butonlara tıklandığında koşudaki tüm safkanların pedigrisi (baba, kısrak babası, kardeşlerin ıslak pist derecesi) taranır; <b>Çamur Canavarlarına +4 / +6 Puan</b>, çamurda batan kuru zemin safkanlarına <b>-5 / -6 Puan</b> yansıtılarak kupon yeniden oluşturulur.
@@ -3464,7 +3601,6 @@ function renderWeatherAndTrackBar() {
     </div>
   `;
 }
-
 // ══════════════════════════════════════════════════════════════════════════════════
 // KALİBRE EDİLMİŞ DİNAMİK TURF AI MOTORU (SON 1460 GÜNÜN / 4 YILLIK MAKRO SEZON SONUÇLARIYLA OPTİMİZE EDİLMİŞTİR)
 // KATSAYI DAĞILIMI (SON 1460 GÜNLÜK 4 YILLIK MAKRO SEZON OPTİMİZASYONU - TOPLAM %100):

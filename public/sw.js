@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v14-fix-ankara-archive-render';
+const APP_VERSION = 'v15-track-telemetry-upgrade';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
