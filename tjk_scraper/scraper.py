@@ -373,15 +373,31 @@ class TJKScraper:
         """
         today_iso = self.get_turkey_now().strftime("%Y-%m-%d")
         cached_at_ids = get_cached_at_ids_today(conn, today_iso)
+        # Bugün çekilmiş olsa bile kariyer toplamı 0 kalmış atları yeniden dene.
+        # Programda son 6 formu olan bir at gerçekte 0 koşulu olamaz; bu durum
+        # profil sayfasının geçici olarak eksik ayrıştırıldığını gösterir.
+        suspicious_cached_ids = {
+            row["at_id"] for row in conn.execute(
+                """
+                SELECT DISTINCT p.at_id
+                FROM program_kayitlari p
+                JOIN atlar a ON a.id = p.at_id
+                WHERE COALESCE(p.son_6_yaris, '') <> ''
+                  AND COALESCE(a.toplam_kosu, 0) = 0
+                """
+            )
+        }
         logger.info(f"\n--- [AŞAMA 3] At Kariyer Geçmişi Güncellemesi ({len(horses_to_fetch)} Safkan) ---")
         logger.info(f"📦 Bugün Önbelleğe Alınmış At Sayısı: {len(cached_at_ids)}")
+        if suspicious_cached_ids:
+            logger.info(f"🔁 Kariyer toplamı 0 görünen, yeniden denenecek at sayısı: {len(suspicious_cached_ids)}")
 
         fetched_count = 0
         skipped_count = 0
         failed_count = 0
 
         for at_id, at_adi in horses_to_fetch:
-            if at_id in cached_at_ids:
+            if at_id in cached_at_ids and at_id not in suspicious_cached_ids:
                 skipped_count += 1
                 continue
 
