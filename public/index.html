@@ -2098,6 +2098,99 @@ function getTjkCityRate(sehirName) {
   return { birimFiyat: 1.25, bolge: 'Büyük Şehir Hipodromu (1.25 ₺)', minKupon: 20.00 };
 }
 
+// ═══════════════════════════════════════════════════════════════
+// TJK RESMÎ 6'LI GANYAN PAKET VE AYAK TESPİT MOTORU
+// Her gün ve her hipodrom için kaç adet 6'lı olduğunu,
+// hangi koşudan başlayıp bittiğini ve altılı dışı koşuları tespit eder
+// ═══════════════════════════════════════════════════════════════
+function getHipodromAltiliPackages(hip) {
+  if (!hip || !hip.kosular || hip.kosular.length < 6) return [];
+  const kosular = hip.kosular;
+  const total = kosular.length;
+
+  // 1. TJK verisindeki altiliAyagi işaretlerini incele (1, "1", "1. Ayak")
+  let firstLegIdx = -1;
+  for (let i = 0; i < total; i++) {
+    const a = kosular[i].altiliAyagi;
+    if (a === 1 || a === '1' || a === '1. Ayak' || (typeof a === 'string' && a.trim().startsWith('1'))) {
+      firstLegIdx = i;
+      break;
+    }
+  }
+
+  // Açık 1. ayak işareti bulunamazsa:
+  if (firstLegIdx === -1) {
+    // 7 koşulu bültende 1. koşu null/boş ise (Bursa/Adana/Kocaeli gibi) 2. koşudan başlar
+    if (kosular[0].altiliAyagi == null && total === 7) {
+      firstLegIdx = 1;
+    } else {
+      firstLegIdx = 0;
+    }
+  }
+
+  const packages = [];
+  const pkg1EndIdx = firstLegIdx + 5;
+  if (pkg1EndIdx < total) {
+    const pkg1Races = kosular.slice(firstLegIdx, firstLegIdx + 6);
+    const startNum = kosular[firstLegIdx].id || kosular[firstLegIdx].kosuNo || (firstLegIdx + 1);
+    const endNum = kosular[pkg1EndIdx].id || kosular[pkg1EndIdx].kosuNo || (pkg1EndIdx + 1);
+
+    // TJK Kuralı: 2. 6'lı Ganyan yalnızca en az 8 koşulu programlarda olur
+    const hasPkg2 = (total >= 8 && firstLegIdx <= (total - 7));
+
+    packages.push({
+      pkgNum: 1,
+      startIndex: firstLegIdx,
+      endIndex: pkg1EndIdx,
+      startRaceNum: startNum,
+      endRaceNum: endNum,
+      kosular: pkg1Races,
+      label: hasPkg2 ? `1. 6'LI GANYAN (${startNum}. - ${endNum}. KOŞULAR)` : `6'LI GANYAN (${startNum}. - ${endNum}. KOŞULAR)`,
+      buttonLabel: hasPkg2 ? `1. 6'lı Ganyan (${startNum}. - ${endNum}. Koşular)` : `6'lı Ganyan (${startNum}. - ${endNum}. Koşular)`,
+      shortLabel: hasPkg2 ? `1. 6'lı (${startNum}-${endNum})` : `6'lı (${startNum}-${endNum})`
+    });
+
+    if (hasPkg2) {
+      const pkg2StartIdx = total - 6;
+      const pkg2EndIdx = total - 1;
+      const pkg2StartNum = kosular[pkg2StartIdx].id || kosular[pkg2StartIdx].kosuNo || (pkg2StartIdx + 1);
+      const pkg2EndNum = kosular[pkg2EndIdx].id || kosular[pkg2EndIdx].kosuNo || total;
+      const pkg2Races = kosular.slice(pkg2StartIdx, total);
+
+      packages.push({
+        pkgNum: 2,
+        startIndex: pkg2StartIdx,
+        endIndex: pkg2EndIdx,
+        startRaceNum: pkg2StartNum,
+        endRaceNum: pkg2EndNum,
+        kosular: pkg2Races,
+        label: `2. 6'LI GANYAN (${pkg2StartNum}. - ${pkg2EndNum}. KOŞULAR)`,
+        buttonLabel: `2. 6'lı Ganyan (${pkg2StartNum}. - ${pkg2EndNum}. Koşular)`,
+        shortLabel: `2. 6'lı (${pkg2StartNum}-${pkg2EndNum})`
+      });
+    }
+  } else {
+    // Son 6 koşu
+    const startIdx = Math.max(0, total - 6);
+    const pkgRaces = kosular.slice(startIdx, total);
+    const startNum = kosular[startIdx].id || kosular[startIdx].kosuNo || (startIdx + 1);
+    const endNum = kosular[total - 1].id || kosular[total - 1].kosuNo || total;
+    packages.push({
+      pkgNum: 1,
+      startIndex: startIdx,
+      endIndex: total - 1,
+      startRaceNum: startNum,
+      endRaceNum: endNum,
+      kosular: pkgRaces,
+      label: `6'LI GANYAN (${startNum}. - ${endNum}. KOŞULAR)`,
+      buttonLabel: `6'lı Ganyan (${startNum}. - ${endNum}. Koşular)`,
+      shortLabel: `6'lı (${startNum}-${endNum})`
+    });
+  }
+
+  return packages;
+}
+
 
 // ═══════════════════════════════════════════════════════════════
 // PROGRAM GÜNÜ DEĞİŞTİRME MOTORU (BUGÜN & YARIN KESİNTİSİZ GEÇİŞ)
@@ -2293,9 +2386,17 @@ function renderKosular() {
       </span>
     ` : '';
 
+    let altiliPill = '';
+    if (kosu.altiliAyagi) {
+      altiliPill = `<span style="font-family:'JetBrains Mono', monospace; font-size:0.68rem; font-weight:800; background:${isActive ? '#10b981' : 'rgba(16,185,129,0.2)'}; color:${isActive ? '#04060a' : '#34d399'}; padding:1px 5px; border-radius:4px; border:1px solid #10b981; margin-left:3px;">🎯 ${kosu.altiliAyagi}. Ayak</span>`;
+    } else if (hip.kosular.length >= 7 && (idx === 0 || kosu.altiliAyagi == null)) {
+      altiliPill = `<span style="font-size:0.65rem; font-weight:700; background:rgba(239,68,68,0.15); color:#f87171; padding:1px 5px; border-radius:4px; border:1px solid rgba(239,68,68,0.3); margin-left:3px;">⚠️ Altılı Dışı</span>`;
+    }
+
     btn.innerHTML = `
       ${saatBadge}
       <span style="font-weight:700;">${kosu.id || (idx + 1)}. Koşu</span>
+      ${altiliPill}
       <span style="font-size:0.72rem; opacity:0.85;">(${horseCount} At)</span>
     `;
 
@@ -3836,6 +3937,13 @@ function renderRaceDetails() {
   const saatBadge = kosu.saat ? `<span style="font-family:'JetBrains Mono',monospace; font-size:1.15rem; color:#f59e0b; font-weight:800; background:rgba(0,0,0,0.45); padding:2px 8px; border-radius:6px; border:1px solid rgba(245,158,11,0.35); margin-left:6px;">⏱️ ${kosu.saat}</span>` : '';
   const pistMesafe = `${kosu.pist || 'Pist'} ${kosu.mesafe ? kosu.mesafe + 'm' : ''}`;
 
+  let altiliStatusBadge = '';
+  if (kosu.altiliAyagi) {
+    altiliStatusBadge = `<span style="font-size:0.75rem; font-weight:800; background:rgba(16,185,129,0.2); color:#34d399; border:1px solid #10b981; padding:3px 8px; border-radius:6px; margin-left:6px;">🎯 6'LI GANYAN ${kosu.altiliAyagi}. AYAK</span>`;
+  } else if (hip.kosular.length >= 7 && (currentKosuIdx === 0 || kosu.altiliAyagi == null)) {
+    altiliStatusBadge = `<span style="font-size:0.75rem; font-weight:800; background:rgba(239,68,68,0.18); color:#f87171; border:1px solid rgba(239,68,68,0.4); padding:3px 8px; border-radius:6px; margin-left:6px;">⚠️ 6'LI GANYAN DIŞI (Altılı 2. Koşuda Başlar)</span>`;
+  }
+
   const curtain = document.getElementById('race-curtain');
   curtain.innerHTML = `
     <div class="curtain-item">
@@ -3843,6 +3951,7 @@ function renderRaceDetails() {
       <p style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
         <span>${kosu.id || (currentKosuIdx + 1)}. Koşu</span>
         ${saatBadge}
+        ${altiliStatusBadge}
         <span style="font-size:0.85rem; color:#94a3b8; font-weight:500;">(${pistMesafe})</span>
       </p>
     </div>
@@ -4743,9 +4852,13 @@ function initRobotSelector() {
   sel.innerHTML = '';
   bulten.hipodromlar.forEach((hip, idx) => {
     const rateInfo = getTjkCityRate(hip.sehir || hip.isim);
+    const pkgs = getHipodromAltiliPackages(hip);
+    const altiliSummary = pkgs.length > 0 
+      ? (pkgs.length === 2 ? "2 Adet 6'lı" : `Tek 6'lı: ${pkgs[0].startRaceNum}.-${pkgs[0].endRaceNum}. Koşular`)
+      : "6'lı Yok";
     const opt = document.createElement('option');
     opt.value = idx;
-    opt.innerText = `${hip.isim || hip.sehir} (${hip.kosular.length} Koşu - Birim: ${rateInfo.birimFiyat.toFixed(2)} ₺)`;
+    opt.innerText = `${hip.isim || hip.sehir} (${hip.kosular.length} Koşu · ${altiliSummary} · Birim: ${rateInfo.birimFiyat.toFixed(2)} ₺)`;
     sel.appendChild(opt);
   });
 
@@ -4755,33 +4868,30 @@ function initRobotSelector() {
 function renderAltiliPackageButtons() {
   const hipIdx = parseInt(document.getElementById('robot-hipodrom-select').value) || 0;
   const hip = bulten.hipodromlar[hipIdx];
-  const totalRaces = (hip.kosular || []).length;
   const container = document.getElementById('altili-package-pills');
   if (!container) return;
   container.innerHTML = '';
 
-  // 1. 6'lı Ganyan (Her zaman 1. - 6. koşular)
-  const btn1 = document.createElement('button');
-  btn1.className = `preset-btn ${currentAltiliPackage === 1 ? 'active' : ''}`;
-  btn1.style.fontWeight = '700';
-  btn1.innerText = "1. 6'lı Ganyan (1. - 6. Koşular)";
-  btn1.onclick = () => selectAltiliPackage(1);
-  container.appendChild(btn1);
+  const packages = getHipodromAltiliPackages(hip);
+  if (packages.length === 0) {
+    container.innerHTML = `<span style="font-size:0.75rem; color:#f87171; font-weight:700; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.3); padding:4px 10px; border-radius:6px;">⚠️ ${(hip.isim || hip.sehir)} hipodromunda 6'lı Ganyan için yeterli koşu bulunmamaktadır (En az 6 koşu gerekir).</span>`;
+    currentAltiliPackage = 1;
+    return;
+  }
 
-  // Eğer hipodromda 8 veya daha fazla koşu varsa 2. 6'lı Ganyan mevcuttur
-  if (totalRaces >= 8) {
-    const start2 = totalRaces - 5; // Örn 9 koşu için 4. koşu, 8 koşu için 3. koşu
-    const end2 = totalRaces;
-    const btn2 = document.createElement('button');
-    btn2.className = `preset-btn ${currentAltiliPackage === 2 ? 'active' : ''}`;
-    btn2.style.fontWeight = '700';
-    btn2.innerText = `2. 6'lı Ganyan (${start2}. - ${end2}. Koşular)`;
-    btn2.onclick = () => selectAltiliPackage(2);
-    container.appendChild(btn2);
-  } else {
-    // 8'den azsa otomatik 1. 6'lıya dön
+  // Geçerli paket seçimi (varsa tut, yoksa 1'e dön)
+  if (currentAltiliPackage === 2 && packages.length < 2) {
     currentAltiliPackage = 1;
   }
+
+  packages.forEach(pkg => {
+    const btn = document.createElement('button');
+    btn.className = `preset-btn ${currentAltiliPackage === pkg.pkgNum ? 'active' : ''}`;
+    btn.style.fontWeight = '700';
+    btn.innerText = pkg.buttonLabel;
+    btn.onclick = () => selectAltiliPackage(pkg.pkgNum);
+    container.appendChild(btn);
+  });
 }
 
 function selectAltiliPackage(pkgNum) {
@@ -4853,23 +4963,20 @@ function optimizeCoupon() {
   const targetBudget = parseFloat(document.getElementById('budget-amount').value) || 300;
   const hip = bulten.hipodromlar[hipIdx];
   const allKosular = hip.kosular || [];
-  if (allKosular.length < 6) return;
-
-  // 1. 6'lı mı yoksa 2. 6'lı mı seçili?
-  let kosular = [];
-  let packageLabel = "1. 6'LI GANYAN (1. - 6. KOŞULAR)";
-  let startRaceOffset = 1;
-
-  if (currentAltiliPackage === 2 && allKosular.length >= 8) {
-    const startIdx = allKosular.length - 6;
-    kosular = allKosular.slice(startIdx);
-    startRaceOffset = startIdx + 1;
-    packageLabel = `2. 6'LI GANYAN (${startRaceOffset}. - ${allKosular.length}. KOŞULAR)`;
-  } else {
-    kosular = allKosular.slice(0, 6);
-    startRaceOffset = 1;
-    packageLabel = "1. 6'LI GANYAN (1. - 6. KOŞULAR)";
+  const packages = getHipodromAltiliPackages(hip);
+  if (packages.length === 0) {
+    const container = document.getElementById('optimized-coupon-container');
+    if (container) {
+      container.innerHTML = `<div class="custom-coupon-card" style="text-align:center; padding:2rem;"><p style="color:#f87171; font-weight:700;">⚠️ ${hip.isim || hip.sehir} hipodromunda 6'lı Ganyan için en az 6 koşu gereklidir (${allKosular.length} koşu mevcut).</p></div>`;
+    }
+    return;
   }
+
+  // TJK Resmî Paketine göre seçili koşuları bağla
+  const activePkg = packages.find(p => p.pkgNum === currentAltiliPackage) || packages[0];
+  const kosular = activePkg.kosular;
+  const packageLabel = activePkg.label;
+  const startRaceOffset = activePkg.startRaceNum;
 
   // Hipodromun TJK resmi birim fiyatını al
   const rateInfo = getTjkCityRate(hip.sehir || hip.isim);
@@ -4881,7 +4988,7 @@ function optimizeCoupon() {
   // En yüksek 6'lı yakalama (%42.8 - %46.2) ve en yüksek net kazanç (+EV 8.4x ROI)
   // ══════════════════════════════════════════════════════════════════════════════
   const ratedLegs = kosular.map((k, idx) => {
-    const realRaceNum = startRaceOffset + idx;
+    const realRaceNum = k.id || k.kosuNo || (startRaceOffset + idx);
     const scored = getHorsesWithFinalTacticalScores(k);
 
     const topDiff = scored.length > 1 ? (scored[0].royalScore - scored[1].royalScore) : 25;

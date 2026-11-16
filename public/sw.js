@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v16-fix-archive-bulten-loading-and-reproducibility';
+const APP_VERSION = 'v17-dynamic-tjk-altili-races-and-packages';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
