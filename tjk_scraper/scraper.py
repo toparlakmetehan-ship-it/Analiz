@@ -74,6 +74,148 @@ BASE_HEADERS = {
 }
 
 
+# Pist yatkınlığında kullanılan aygır soy eğilimleri (JS enricher ile aynı sözlük).
+PIST_SIRE_BIAS = {
+    'NATIVE KHAN': ('SENTETIK', 'Sentetik & Çim Otoritesi'),
+    'TOROK': ('SENTETIK', 'Sentetik ve Çim Uzmanı'),
+    'LUXOR': ('SENTETIK', 'Sentetik / Açık Koşu Çim Uzmanı'),
+    "FAST 'N' FAMOUS": ('SENTETIK', 'Sentetik Sprint Gücü'),
+    'INVINCIBLE SPIRIT': ('SENTETIK', 'Sentetik / All-Weather Orijini'),
+    'APPROVE': ('SENTETIK', 'Sentetik Sprint Yatkını'),
+    'DAREDEVIL': ('KUM', 'Safkan Kaba Kum Gücü'),
+    'BODEMEISTER': ('KUM', 'Kaba Kum Güç & Dayanıklılık'),
+    'TİZWAY': ('KUM', 'Kaba Kum Klasik Mesafe Aygırı'),
+    'CUVEE': ('KUM', 'Kaba Kum Erken Sürat Aygırı'),
+    'LION HEART': ('KUM', 'Kaba Kum Dayanıklı Sprint'),
+    'CORINTHIAN': ('KUM', 'Kaba Kum Gücü Yüksek'),
+    'BILGIN': ('KUM', 'Arap Kaba Kum Çamur Otoritesi'),
+    'HABERBATUR': ('KUM', 'Arap Kaba Kum Güç Hattı'),
+    'ÖZGÜNHAN': ('KUM', 'Arap Kaba Kum Otoritesi'),
+    'GOBAK BEY': ('KUM', 'Arap Kaba Kum Güç Hattı'),
+    'VICTORY GALLOP': ('DUAL', 'Kum & Sentetik Şampiyonu'),
+    'KAIZBERT': ('DUAL', 'Kum ve Sentetikte Yenilmez (Arap)'),
+    'PAPA CLEM': ('DUAL', 'Kum & Sentetik Dengeli Hat'),
+    'MENDIP': ('DUAL', 'Kum ve Sentetikte Yüksek Form'),
+    'ÖZHABER': ('DUAL', 'Kum & Sentetik Çift Yönlü'),
+    'KANEKO': ('DUAL', 'Kum & Sentetik Güçlü Hat'),
+}
+
+
+def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name=""):
+    """Geçmiş yarışlardan kum/sentetik/çim istatistiklerini ve pist deltasını üretir."""
+    empty = {"runs": 0, "wins": 0, "top4": 0}
+    dirt, syn, turf = dict(empty), dict(empty), dict(empty)
+
+    if at_id:
+        rows = conn.execute(
+            "SELECT pist_turu, sira FROM gecmis_yarislar WHERE at_id = ?", (at_id,)
+        ).fetchall()
+        for row in rows:
+            trk = (row["pist_turu"] or "").strip()
+            if "Sentetik" in trk:
+                bucket = syn
+            elif "Çim" in trk or "Cim" in trk:
+                bucket = turf
+            elif "Kum" in trk:
+                bucket = dirt
+            else:
+                continue
+            bucket["runs"] += 1
+            raw_rank = str(row["sira"] or "").strip()
+            rank = int(raw_rank) if raw_rank.isdigit() else 99
+            if rank == 1:
+                bucket["wins"] += 1
+            if rank <= 4:
+                bucket["top4"] += 1
+
+    stats = {
+        "dirtStats": dict(dirt),
+        "synStats": dict(syn),
+        "turfStats": dict(turf),
+    }
+
+    if is_young:
+        return {
+            "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
+            "delta": 0,
+            "color": "#38bdf8",
+            "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+            **stats,
+        }
+
+    track = (race_track or "").strip().lower()
+    badge, delta, color, desc = "", 0, "#f3e5ab", ""
+
+    if "sentetik" in track:
+        if (dirt["wins"] >= 1 and syn["wins"] >= 1) or (dirt["top4"] >= 2 and syn["top4"] >= 2):
+            badge = f"⭐ DUAL-PİST USTASI (Kum: {dirt['wins']}G/{dirt['top4']}T · Sentetik: {syn['wins']}G/{syn['top4']}T)"
+            delta, color = 4, "#34d399"
+            desc = "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir."
+        elif syn["runs"] >= 2 and (syn["wins"] >= 1 or (syn["top4"] / syn["runs"]) >= 0.5):
+            badge = f"👑 SENTETİK PİST UZMANI (Sentetikte {syn['wins']}G / {syn['top4']} Tabela)"
+            delta, color = (5 if syn["wins"] >= 2 else 4), "#10b981"
+            desc = f"Sentetik pistte {syn['runs']} koşuda {syn['wins']} galibiyet, {syn['top4']} tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır."
+        elif syn["runs"] >= 2 and syn["top4"] == 0 and dirt["top4"] >= 2:
+            badge = "⚠️ PİST RİSKİ: KABA KUM ATI (Sentetikte 0 Tabela)"
+            delta, color = -5, "#ef4444"
+            desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['top4']} tabela yapmasına rağmen, sentetikte {syn['runs']} koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkiliyor."
+        elif syn["runs"] == 0 and dirt["runs"] >= 3:
+            sire_key = (sire_name or "").upper()
+            match = next(((bias, text) for key, (bias, text) in PIST_SIRE_BIAS.items() if key in sire_key), None)
+            if match and match[0] in ("SENTETIK", "DUAL"):
+                badge = f"🌱 SENTETİKTE İLK KEZ: Soyu ({match[1]}) Sentetikle Uyumlu"
+                delta, color = 0, "#38bdf8"
+                desc = f"Kariyerinde sentetik koşusu yok ancak aygırı {match[1]} olduğundan sentetik aksiyonuna yatkındır."
+            else:
+                badge = "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var"
+                delta, color = -3, "#f59e0b"
+                desc = f"Kariyerindeki {dirt['runs']} koşunun tamamını Kaba Kumda koştu; sentetik pistin elastik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır."
+        else:
+            detail = f"{syn['runs']} Koşuda {syn['top4']} Tabela" if syn["runs"] > 0 else "Dengeli Hat"
+            badge = f"🏟️ Sentetik Pist Uyumlu ({detail})"
+            delta, color = (2 if syn["top4"] > 0 else 0), "#f3e5ab"
+            desc = "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir."
+
+    elif "kum" in track:
+        if (dirt["wins"] >= 1 and syn["wins"] >= 1) or (dirt["top4"] >= 2 and syn["top4"] >= 2):
+            badge = f"⭐ DUAL-PİST USTASI (Kum: {dirt['wins']}G/{dirt['top4']}T · Sentetik: {syn['wins']}G/{syn['top4']}T)"
+            delta, color = 4, "#34d399"
+            desc = "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler."
+        elif dirt["runs"] >= 2 and (dirt["wins"] >= 1 or (dirt["top4"] / dirt["runs"]) >= 0.5):
+            badge = f"🔥 KABA KUM UZMANI (Kumda {dirt['wins']}G / {dirt['top4']} Tabela)"
+            delta, color = (5 if dirt["wins"] >= 2 else 4), "#10b981"
+            desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['wins']} galibiyet, {dirt['top4']} tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir."
+        elif dirt["runs"] == 0 and syn["runs"] >= 3:
+            badge = "⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)"
+            delta, color = -5, "#ef4444"
+            desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; kaba kumun derin kum yapısına ve önden gelen kickback'e ilk kez maruz kalacak, ciddi handikap."
+        elif dirt["runs"] >= 2 and dirt["top4"] == 0 and (syn["top4"] >= 2 or turf["top4"] >= 2):
+            badge = "⚠️ PİST UYARISI: Kaba Kumda 0 Tabela (Sentetik/Çim Atı)"
+            delta, color = -4, "#ef4444"
+            desc = "Kaba kumdaki önceki yarışlarında tabelaya giremedi; safkanın sentetik veya çim performansı kaba kuma göre belirgin şekilde üstündür."
+        else:
+            detail = f"{dirt['runs']} Koşuda {dirt['top4']} Tabela" if dirt["runs"] > 0 else "Dengeli Hat"
+            badge = f"🏟️ Kaba Kum Deneyimli ({detail})"
+            delta, color = (2 if dirt["top4"] > 0 else 0), "#f3e5ab"
+            desc = "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır."
+
+    else:
+        if turf["runs"] >= 2 and (turf["wins"] >= 1 or (turf["top4"] / turf["runs"]) >= 0.5):
+            badge = f"🌿 ÇİM PİST UZMANI (Çimde {turf['wins']}G / {turf['top4']} Tabela)"
+            delta, color = (5 if turf["wins"] >= 2 else 4), "#10b981"
+            desc = f"Çim pistte {turf['runs']} koşuda {turf['wins']} galibiyet, {turf['top4']} tabela yaptı; çim aksiyonu oturmuştur."
+        elif turf["runs"] == 0 and (dirt["runs"] >= 3 or syn["runs"] >= 3):
+            badge = "⚠️ ÇİMDE İLK KEZ: Kum / Sentetik Atı"
+            delta, color = -3, "#f59e0b"
+            desc = "Kariyerinde hiç çim koşusu yok, kum/sentetikten çime geçiyor."
+        else:
+            badge = f"🌿 Çim Pist Uyumlu ({turf['runs']} Koşuda {turf['top4']} Tabela)"
+            delta, color = (2 if turf["top4"] > 0 else 0), "#f3e5ab"
+            desc = "Çim pistte tecrübesi mevcut."
+
+    return {"badge": badge, "delta": delta, "color": color, "desc": desc, **stats}
+
+
 class TJKScraper:
     def __init__(self, db_path=None, request_delay=0.5, max_retries=3):
         self.db_path = db_path
@@ -463,8 +605,13 @@ class TJKScraper:
             if cached and cached["status"] == "OK":
                 continue
             if cached:
-                # Kalıcı veri yokluğunu 30 gün, geçici hatayı 1 gün tekrar deneme.
-                retry_window = "-30 days" if cached["status"] == "NO_DATA" else "-1 day"
+                # Veri yokluğunu 7 gün, 404'ü 30 gün, geçici hatayı 12 saat sonra yeniden dene.
+                if cached["status"] == "NO_DATA":
+                    retry_window = "-7 days"
+                elif cached["status"] == "NOT_FOUND":
+                    retry_window = "-30 days"
+                else:
+                    retry_window = "-12 hours"
                 if conn.execute(
                     "SELECT datetime(?) > datetime('now', ?)",
                     (cached["checked_at"], retry_window),
@@ -486,7 +633,30 @@ class TJKScraper:
             payload_json = None
             error_message = None
             try:
-                race_data = fetch_race(self.session, date_iso, city_slug, race_no)
+                race_data = None
+                last_exc = None
+                # Geçici ağ/5xx/429 hatalarında aynı çalışma içinde kısa backoff ile 2 kez daha dene.
+                for attempt in range(3):
+                    try:
+                        race_data = fetch_race(self.session, date_iso, city_slug, race_no)
+                        break
+                    except requests.HTTPError as exc:
+                        last_exc = exc
+                        response = getattr(exc, "response", None)
+                        status_code = getattr(response, "status_code", None)
+                        if status_code in (429, 500, 502, 503, 504) and attempt < 2:
+                            time.sleep(1.5 * (attempt + 1))
+                            continue
+                        raise
+                    except requests.RequestException as exc:
+                        last_exc = exc
+                        if attempt < 2:
+                            time.sleep(1.5 * (attempt + 1))
+                            continue
+                        raise
+                if race_data is None:
+                    raise last_exc or RuntimeError("Accurace verisi alınamadı")
+
                 if item["distances"] and race_data.get("distance") not in item["distances"]:
                     raise ValueError(
                         f"Mesafe uyuşmadı: {race_data.get('distance')} not in {sorted(item['distances'])}"
@@ -531,11 +701,26 @@ class TJKScraper:
                     index, len(selected), fetched, failed,
                 )
 
+        try:
+            cache_summary = {
+                row["status"]: row["n"]
+                for row in conn.execute(
+                    "SELECT status, COUNT(*) AS n FROM accurace_race_cache GROUP BY status"
+                ).fetchall()
+            }
+            logger.info("Accurace önbellek durumu: %s", cache_summary)
+        except Exception:
+            cache_summary = {}
         logger.info(
             "Accurace önbelleği: %d yeni yarış ölçümü alındı, %d hata, %d sırada bekliyor "
             "(kaynak resmî değildir).", fetched, failed, max(0, len(pending) - len(selected))
         )
-        return {"fetched": fetched, "failed": failed, "pending": max(0, len(pending) - len(selected))}
+        return {
+            "fetched": fetched,
+            "failed": failed,
+            "pending": max(0, len(pending) - len(selected)),
+            "cache": cache_summary,
+        }
 
     # =========================================================================
     # AŞAMA 6: CANLI BÜLTEN JSON DOSYALARINI GÜNCELLEME
@@ -782,7 +967,10 @@ class TJKScraper:
                     "kulvar_yorumu": at["kulvar_yorumu"] or "",
                     "sahip": at["sahip_ad"] or "",
                     "antrenor": at["antrenor_ad"] or "",
-                    "ekuriGrup": at["ekuri"] or ""
+                    "ekuriGrup": at["ekuri"] or "",
+                    "pist_aptitude_analizi": build_pist_aptitude(
+                        conn, at["at_id"], is_young, r["pist_turu"], at["baba_adi"] or ""
+                    )
                 })
 
             hipodrom_map[sehir]["kosular"].append({

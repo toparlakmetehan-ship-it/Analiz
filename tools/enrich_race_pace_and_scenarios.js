@@ -105,6 +105,14 @@ bulten.hipodromlar.forEach(hip => {
     const raceTrack = (kosu.pist || '').trim(); // 'Kum', 'Sentetik', 'Çim'
     
     atlar.forEach((at, idx) => {
+      // Python export'undan gelen gerçek pist istatistikleri varsa koru.
+      const existingPist = at.pist_aptitude_analizi;
+      const existingPistRuns = existingPist
+        ? ['dirtStats', 'synStats', 'turfStats'].reduce(
+            (sum, key) => sum + Number(existingPist[key]?.runs || 0), 0
+          )
+        : 0;
+
       // ══════════════════════════════════════════════════════════════════════════
       // BÖLÜM 1: GİDİŞAT VE TAKTİK KALİBRASYONU (KURAL 1 & KURAL 2)
       // ══════════════════════════════════════════════════════════════════════════
@@ -289,15 +297,17 @@ bulten.hipodromlar.forEach(hip => {
         }
       }
 
-      at.pist_aptitude_analizi = {
-        badge,
-        delta,
-        color,
-        desc,
-        dirtStats: { runs: dirtRuns, wins: dirtWins, top4: dirtTop4 },
-        synStats: { runs: synRuns, wins: synWins, top4: synTop4 },
-        turfStats: { runs: turfRuns, wins: turfWins, top4: turfTop4 }
-      };
+      if (!existingPistRuns) {
+        at.pist_aptitude_analizi = {
+          badge,
+          delta,
+          color,
+          desc,
+          dirtStats: { runs: dirtRuns, wins: dirtWins, top4: dirtTop4 },
+          synStats: { runs: synRuns, wins: synWins, top4: synTop4 },
+          turfStats: { runs: turfRuns, wins: turfWins, top4: turfTop4 }
+        };
+      }
     });
   });
 });

@@ -105,18 +105,23 @@ def calculate_horse_tactical_style(conn, at_id, at_name=""):
     observations = observations[:8]
 
     style_counts = {"KACAK": 0, "PRESCI": 0, "ORTA_GRUP": 0, "SPRINTER": 0}
+    # Son ölçüm daha ağır bassın: 8,7,6... şeklinde azalan ağırlık.
+    weighted_counts = {"KACAK": 0, "PRESCI": 0, "ORTA_GRUP": 0, "SPRINTER": 0}
     style_sequence = []
-    for observation in observations:
+    for idx, observation in enumerate(observations):
         code = classify_race_style(
             observation["horse"],
             observation["field_size"],
             observation["distance"],
         )
         if code in style_counts:
+            weight = max(1, len(observations) - idx)
             style_counts[code] += 1
-            style_sequence.append((observation["date"], code))
+            weighted_counts[code] += weight
+            style_sequence.append((observation["date"], code, weight))
 
     total = sum(style_counts.values())
+    weighted_total = sum(weighted_counts.values())
     if total == 0:
         record = {
             "at_id": at_id,
@@ -139,14 +144,19 @@ def calculate_horse_tactical_style(conn, at_id, at_name=""):
         upsert_turev_at_taktigi(conn, record)
         return record
 
-    ranked_styles = sorted(style_counts.items(), key=lambda item: item[1], reverse=True)
-    winning_count = ranked_styles[0][1]
-    tied_codes = [code for code, count in ranked_styles if count == winning_count]
+    ranked_styles = sorted(weighted_counts.items(), key=lambda item: item[1], reverse=True)
+    winning_weight = ranked_styles[0][1]
+    tied_codes = [code for code, count in ranked_styles if count == winning_weight]
     # Eşitlikte en güncel ölçümün stilini baskın kabul et.
     winning_code = next(
-        code for _date, code in style_sequence if code in tied_codes
+        code for _date, code, _weight in style_sequence if code in tied_codes
     )
-    consistency = winning_count / total
+    winning_count = style_counts[winning_code]
+    raw_consistency = winning_count / total if total else 0.0
+    weighted_consistency = winning_weight / weighted_total if weighted_total else 0.0
+    # Eşit ağırlıklı veya son-ölçüm ağırlıklı kanıtlardan biri %60'ı geçiyorsa
+    # stil yeterince tutarlıdır; ağırlıklandırma güveni düşürmesin.
+    consistency = max(raw_consistency, weighted_consistency)
     unique_winner = len(tied_codes) == 1
 
     if total >= 3 and consistency >= 0.60 and unique_winner:
@@ -167,7 +177,10 @@ def calculate_horse_tactical_style(conn, at_id, at_name=""):
         "SPRINTER": ("Düzlük Sprinteri", "🚀"),
     }
     stil, ikon = style_labels[winning_code]
-    style_ratios = {code: round(100.0 * count / total, 1) for code, count in style_counts.items()}
+    style_ratios = {
+        code: round(100.0 * count / weighted_total, 1)
+        for code, count in weighted_counts.items()
+    }
     if veri_durumu == "GUNCEL":
         aciklama = (
             f"Son {total} sınıflandırılabilir geçmiş koşunun {winning_count} tanesinde "

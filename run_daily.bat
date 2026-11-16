@@ -9,6 +9,9 @@ set PYEXIT=%ERRORLEVEL%
 echo [%date% %time%] pipeline_exit=%PYEXIT% >> "%LOG%"
 if not "%PYEXIT%"=="0" goto :pipeline_fail
 
+node tools\verify_bulten_contract.js >> "%LOG%" 2>&1
+if errorlevel 1 goto :contract_fail
+
 "%GIT%" add public/data/bulten_bugun.json public/data/bulten_yarin.json >> "%LOG%" 2>&1
 "%GIT%" diff --cached --quiet
 if errorlevel 1 (
@@ -30,6 +33,10 @@ endlocal & exit /b 1
 :pushed
 echo [%date% %time%] push tamamlandi >> "%LOG%"
 endlocal & exit /b 0
+
+:contract_fail
+echo [%date% %time%] veri sozlesmesi BASARISIZ >> "%LOG%"
+endlocal & exit /b 1
 
 :pipeline_fail
 echo [%date% %time%] pipeline BASARISIZ >> "%LOG%"

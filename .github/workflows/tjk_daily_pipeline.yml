@@ -1,0 +1,94 @@
+name: TJK Günlük Taktik ve Tempo Bulut Pipeline
+
+on:
+  schedule:
+    # 04:30 UTC = 07:30 TRT. Yerel 08:30 görevinden önce çalışır.
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Python bağımlılıkları
+        run: pip install requests beautifulsoup4 urllib3
+
+      - name: Veri dizinini hazırla
+        run: mkdir -p data
+
+      - name: SQLite veritabanını önbellekten geri yükle
+        uses: actions/cache@v4
+        with:
+          path: data/tjk_yaris_arsiv.db*
+          key: tjk-db-${{ github.run_id }}
+          restore-keys: |
+            tjk-db-
+
+      - name: Günlük TJK programı, kariyer, taktik ve tempo pipeline
+        run: python run_tjk_scraper.py --target both --export-json
+
+      - name: Bülten veri sözleşmesi
+        run: node tools/verify_bulten_contract.js
+
+      - name: Runtime puanlama kontrolü
+        run: node tools/verify_all_tactics_runtime.js
+
+      - name: Veriyi commit et ve gönder
+        run: |
+          git config --global user.name "TJK Daily Bot"
+          git config --global user.email "bot@royalturf.club"
+          git add public/data/bulten_bugun.json public/data/bulten_yarin.json
+          if git diff --cached --quiet; then
+            echo "Yeni bülten değişikliği yok."
+          else
+            git commit -m "chore(tjk): gunluk bulut taktik/tempo guncellemesi"
+            pushed=0
+            for i in 1 2 3; do
+              if git pull --rebase -X theirs origin main && git push; then
+                pushed=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$pushed" -ne 1 ]; then
+              echo "Push başarısız."
+              exit 1
+            fi
+          fi
+
+      - name: GitHub Pages için yapılandır
+        uses: actions/configure-pages@v4
+
+      - name: Site dosyalarını hazırla
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: Canlı yayına ver
+        uses: actions/deploy-pages@v4

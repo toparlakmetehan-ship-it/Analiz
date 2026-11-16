@@ -1,0 +1,54 @@
+name: TJK Veri ve Puan Kalite Kontrolü
+
+on:
+  push:
+    paths:
+      - 'public/index.html'
+      - 'public/data/bulten_bugun.json'
+      - 'public/data/bulten_yarin.json'
+      - 'tjk_scraper/**'
+      - 'tests/**'
+      - 'tools/**'
+      - '.github/workflows/tjk_quality.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Python bağımlılıkları
+        run: pip install requests beautifulsoup4
+
+      - name: Taktik/tempo birim testleri
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Python sözdizimi
+        run: python -m compileall -q tjk_scraper
+
+      - name: Ön yüz JavaScript sözdizimi
+        run: node tools/verify_script_syntax.js
+
+      - name: Runtime puanlama kontrolü
+        run: node tools/verify_all_tactics_runtime.js
+
+      - name: Bülten veri sözleşmesi
+        run: node tools/verify_bulten_contract.js
