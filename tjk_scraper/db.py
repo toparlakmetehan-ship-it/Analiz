@@ -343,6 +343,17 @@ CREATE TABLE IF NOT EXISTS idman_pist_kayitlari (
     UNIQUE(tarih, hipodrom_id, kosu_no, at_no)
 );
 
+-- 16. GÜNLÜK 6'LI GANYAN PAKETLERİ (TJK İŞARETLERİNDEN)
+CREATE TABLE IF NOT EXISTS gunluk_altili_paketleri (
+    tarih TEXT NOT NULL,
+    hipodrom_id INTEGER NOT NULL REFERENCES hipodromlar(id),
+    paket_no INTEGER NOT NULL,
+    baslangic_kosu INTEGER NOT NULL,
+    bitis_kosu INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (tarih, hipodrom_id, paket_no)
+);
+
 -- İndeksler
 CREATE INDEX IF NOT EXISTS idx_kosular_tarih ON kosular(tarih);
 CREATE INDEX IF NOT EXISTS idx_program_kosu ON program_kayitlari(kosu_id);
@@ -362,6 +373,36 @@ def get_db_connection(db_path=DEFAULT_DB_PATH):
     conn.execute("PRAGMA journal_mode = WAL;")
     conn.row_factory = sqlite3.Row
     return conn
+
+
+def replace_altili_paketleri(conn, tarih, hipodrom_id, packages):
+    """Bir hipodromun günlük altılı paketlerini TJK işaretlerinden yeniler."""
+    conn.execute(
+        "DELETE FROM gunluk_altili_paketleri WHERE tarih = ? AND hipodrom_id = ?",
+        (tarih, hipodrom_id)
+    )
+    for pkg in packages or []:
+        start = int(pkg["baslangicKosu"])
+        conn.execute(
+            """INSERT OR REPLACE INTO gunluk_altili_paketleri
+               (tarih, hipodrom_id, paket_no, baslangic_kosu, bitis_kosu)
+               VALUES (?, ?, ?, ?, ?)""",
+            (tarih, hipodrom_id, int(pkg["paketNo"]), start, start + 5)
+        )
+
+
+def get_altili_paketleri(conn, tarih, hipodrom_id):
+    rows = conn.execute(
+        """SELECT paket_no, baslangic_kosu, bitis_kosu
+           FROM gunluk_altili_paketleri
+           WHERE tarih = ? AND hipodrom_id = ?
+           ORDER BY paket_no""",
+        (tarih, hipodrom_id)
+    ).fetchall()
+    return [
+        {"paketNo": r["paket_no"], "baslangicKosu": r["baslangic_kosu"], "bitisKosu": r["bitis_kosu"]}
+        for r in rows
+    ]
 
 
 def init_db(db_path=DEFAULT_DB_PATH):

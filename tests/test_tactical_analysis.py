@@ -180,3 +180,66 @@ class SurfaceAptitudeTests(unittest.TestCase):
         result = build_pist_aptitude(self.conn, 1, False, "Kum", "")
         self.assertEqual(result["delta"], 0)
         self.assertEqual(result["dirtStats"]["runs"], 0)
+
+
+class AltiliPackageTests(unittest.TestCase):
+    def test_two_official_package_markers_are_parsed(self):
+        from tjk_scraper.parser import parse_altili_package_starts
+        html = """
+        <div class="races-panes">
+          <div><div>1. Koşu 18.00</div>
+            <div class="bahisTipiGridContainer"><div class="bahisTipiCard">
+              <h4>1. 6'LI GANYAN Bu koşudan başlar</h4>
+            </div></div>
+          </div>
+          <div><div>2. Koşu 18.30</div></div>
+          <div><div>3. Koşu 19.00</div>
+            <div class="bahisTipiGridContainer"><div class="bahisTipiCard">
+              <h4>2. 6'LI GANYAN Bu koşudan başlar</h4>
+            </div></div>
+          </div>
+        </div>
+        """
+        self.assertEqual(
+            parse_altili_package_starts(html),
+            [
+                {"paketNo": 1, "baslangicKosu": 1},
+                {"paketNo": 2, "baslangicKosu": 3},
+            ],
+        )
+
+    def test_single_package_marker_is_parsed(self):
+        from tjk_scraper.parser import parse_altili_package_starts
+        html = """
+        <div class="races-panes">
+          <div><div>2. Koşu 18.30</div>
+            <div class="bahisTipiGridContainer"><div class="bahisTipiCard">
+              <h4>1. 6'LI GANYAN Bu koşudan başlar</h4>
+            </div></div>
+          </div>
+        </div>
+        """
+        self.assertEqual(
+            parse_altili_package_starts(html),
+            [{"paketNo": 1, "baslangicKosu": 2}],
+        )
+
+    def test_single_package_without_number_is_parsed(self):
+        from tjk_scraper.parser import parse_altili_package_starts
+        html = """
+        <div class="races-panes">
+          <div><div>2. Koşu 18.30</div>
+            <div class="bahisTipiGridContainer"><div class="bahisTipiCard">
+              <h4>6'LI GANYAN Bu koşudan başlar</h4>
+            </div></div>
+          </div>
+        </div>
+        """
+        self.assertEqual(
+            parse_altili_package_starts(html),
+            [{"paketNo": 1, "baslangicKosu": 2}],
+        )
+
+    def test_no_marker_returns_empty(self):
+        from tjk_scraper.parser import parse_altili_package_starts
+        self.assertEqual(parse_altili_package_starts("<div>1. Koşu 18.00</div>"), [])

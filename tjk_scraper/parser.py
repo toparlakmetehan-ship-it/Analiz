@@ -955,3 +955,37 @@ def parse_tjk_idman_html(html_content, kosu_no, hipodrom_id, tarih_iso, kosu_kod
         galop_map[at_no] = rec
 
     return galop_map
+
+
+def parse_altili_package_starts(html_content):
+    """TJK programındaki 'N. 6'LI GANYAN Bu koşudan başlar' kartlarını bulur.
+
+    Dönüş: [{"paketNo": 1, "baslangicKosu": 1}, {"paketNo": 2, "baslangicKosu": 3}]
+    Böylece 8/9 koşulu programlarda 1. ve 2. altılı paketleri tahminle değil,
+    TJK'nın kendi işaretleriyle ayrıştırılır.
+    """
+    soup = BeautifulSoup(html_content, 'html.parser')
+    packages = []
+    seen = set()
+    for card in soup.select('div.bahisTipiCard h4'):
+        text = card.get_text(' ', strip=True)
+        # Tek paketli hipodromlarda TJK başına "1." koymaz:
+        # "6'LI GANYAN Bu koşudan başlar" da 1. paket sayılır.
+        m = re.match(r"(?:(\d+)\.\s*)?6['’]?LI\s+GANYAN\s+Bu\s+koşudan\s+başlar", text, re.I)
+        if not m:
+            continue
+        paket_no = int(m.group(1) or 1)
+        start_race = None
+        for parent in card.parents:
+            parent_text = parent.get_text(' ', strip=True)
+            rm = re.match(r"^(\d+)\.\s*Koşu\b", parent_text)
+            if rm:
+                start_race = int(rm.group(1))
+                break
+        if not start_race or (paket_no, start_race) in seen:
+            continue
+        seen.add((paket_no, start_race))
+        packages.append({"paketNo": paket_no, "baslangicKosu": start_race})
+
+    packages.sort(key=lambda p: (p["paketNo"], p["baslangicKosu"]))
+    return packages

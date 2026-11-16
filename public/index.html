@@ -2165,6 +2165,46 @@ function getHipodromAltiliPackages(hip) {
   const kosular = hip.kosular;
   const total = kosular.length;
 
+  // 0. Python pipeline'ının TJK programından çıkardığı resmî paket işaretleri.
+  //    Örn. Şanlıurfa 8 koşu: 1. 6'lı (1-6) + 2. 6'lı (3-8).
+  const officialPackages = Array.isArray(hip.altiliPaketleri) ? hip.altiliPaketleri : [];
+  if (officialPackages.length > 0) {
+    const findRaceIndex = (raceNo) => kosular.findIndex((k, idx) =>
+      Number(k.kosu_no ?? k.kosuNo ?? (idx + 1)) === Number(raceNo)
+    );
+    const official = officialPackages
+      .map(p => {
+        const startIdx = findRaceIndex(p.baslangicKosu);
+        const endIdx = findRaceIndex(p.bitisKosu);
+        if (startIdx < 0 || endIdx < 0 || endIdx < startIdx) return null;
+        const races = kosular.slice(startIdx, endIdx + 1);
+        const startNum = races[0]?.kosu_no ?? p.baslangicKosu;
+        const endNum = races[races.length - 1]?.kosu_no ?? p.bitisKosu;
+        const hasSecond = officialPackages.length > 1;
+        return {
+          // Tek paket varsa daima 1 kabul et; TJK bazen başına numara koymaz.
+          pkgNum: officialPackages.length === 1 ? 1 : (Number(p.paketNo) || 1),
+          startIndex: startIdx,
+          endIndex: endIdx,
+          startRaceNum: startNum,
+          endRaceNum: endNum,
+          kosular: races,
+          label: hasSecond
+            ? `${p.paketNo}. 6'LI GANYAN (${startNum}. - ${endNum}. KOŞULAR)`
+            : `6'LI GANYAN (${startNum}. - ${endNum}. KOŞULAR)`,
+          buttonLabel: hasSecond
+            ? `${p.paketNo}. 6'lı Ganyan (${startNum}. - ${endNum}. Koşular)`
+            : `6'lı Ganyan (${startNum}. - ${endNum}. Koşular)`,
+          shortLabel: hasSecond
+            ? `${p.paketNo}. 6'lı (${startNum}-${endNum})`
+            : `6'lı (${startNum}-${endNum})`
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.pkgNum - b.pkgNum);
+    if (official.length > 0) return official;
+  }
+
   // 1. TJK verisindeki altiliAyagi işaretlerini incele (1, "1", "1. Ayak")
   let firstLegIdx = -1;
   for (let i = 0; i < total; i++) {
@@ -2246,6 +2286,17 @@ function getHipodromAltiliPackages(hip) {
   }
 
   return packages;
+}
+
+function getAltiliBadgeText(kosu) {
+  const packages = Array.isArray(kosu?.altiliPaketleri) ? kosu.altiliPaketleri : [];
+  if (packages.length > 0) {
+    return [...packages]
+      .sort((a, b) => Number(a.paketNo) - Number(b.paketNo))
+      .map(p => `${p.paketNo}. 6'lı: ${p.ayakNo}. Ayak`)
+      .join(' · ');
+  }
+  return kosu?.altiliAyagi ? `${kosu.altiliAyagi}. Ayak` : '';
 }
 
 
@@ -2444,9 +2495,10 @@ function renderKosular() {
     ` : '';
 
     let altiliPill = '';
-    if (kosu.altiliAyagi) {
-      altiliPill = `<span style="font-family:'JetBrains Mono', monospace; font-size:0.68rem; font-weight:800; background:${isActive ? '#10b981' : 'rgba(16,185,129,0.2)'}; color:${isActive ? '#04060a' : '#34d399'}; padding:1px 5px; border-radius:4px; border:1px solid #10b981; margin-left:3px;">🎯 ${kosu.altiliAyagi}. Ayak</span>`;
-    } else if (hip.kosular.length >= 7 && (idx === 0 || kosu.altiliAyagi == null)) {
+    const altiliBadgeText = getAltiliBadgeText(kosu);
+    if (altiliBadgeText) {
+      altiliPill = `<span style="font-family:'JetBrains Mono', monospace; font-size:0.68rem; font-weight:800; background:${isActive ? '#10b981' : 'rgba(16,185,129,0.2)'}; color:${isActive ? '#04060a' : '#34d399'}; padding:1px 5px; border-radius:4px; border:1px solid #10b981; margin-left:3px;">🎯 ${altiliBadgeText}</span>`;
+    } else if (hip.kosular.length >= 7) {
       altiliPill = `<span style="font-size:0.65rem; font-weight:700; background:rgba(239,68,68,0.15); color:#f87171; padding:1px 5px; border-radius:4px; border:1px solid rgba(239,68,68,0.3); margin-left:3px;">⚠️ Altılı Dışı</span>`;
     }
 
@@ -4058,10 +4110,11 @@ function renderRaceDetails() {
   const pistMesafe = `${kosu.pist || 'Pist'} ${kosu.mesafe ? kosu.mesafe + 'm' : ''}`;
 
   let altiliStatusBadge = '';
-  if (kosu.altiliAyagi) {
-    altiliStatusBadge = `<span style="font-size:0.75rem; font-weight:800; background:rgba(16,185,129,0.2); color:#34d399; border:1px solid #10b981; padding:3px 8px; border-radius:6px; margin-left:6px;">🎯 6'LI GANYAN ${kosu.altiliAyagi}. AYAK</span>`;
-  } else if (hip.kosular.length >= 7 && (currentKosuIdx === 0 || kosu.altiliAyagi == null)) {
-    altiliStatusBadge = `<span style="font-size:0.75rem; font-weight:800; background:rgba(239,68,68,0.18); color:#f87171; border:1px solid rgba(239,68,68,0.4); padding:3px 8px; border-radius:6px; margin-left:6px;">⚠️ 6'LI GANYAN DIŞI (Altılı 2. Koşuda Başlar)</span>`;
+  const altiliBadgeText = getAltiliBadgeText(kosu);
+  if (altiliBadgeText) {
+    altiliStatusBadge = `<span style="font-size:0.75rem; font-weight:800; background:rgba(16,185,129,0.2); color:#34d399; border:1px solid #10b981; padding:3px 8px; border-radius:6px; margin-left:6px;">🎯 6'LI GANYAN: ${altiliBadgeText}</span>`;
+  } else if (hip.kosular.length >= 7) {
+    altiliStatusBadge = `<span style="font-size:0.75rem; font-weight:800; background:rgba(239,68,68,0.18); color:#f87171; border:1px solid rgba(239,68,68,0.4); padding:3px 8px; border-radius:6px; margin-left:6px;">⚠️ 6'LI GANYAN DIŞI</span>`;
   }
 
   const curtain = document.getElementById('race-curtain');

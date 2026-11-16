@@ -6,8 +6,8 @@
     "Ankara",
     "Antalya"
   ],
-  "guncellemeZamani": "2026-11-16T19:31:51.096393",
-  "sonSenkronizasyon": "19:31:51",
+  "guncellemeZamani": "2026-11-16T23:01:53.884341",
+  "sonSenkronizasyon": "23:01:53",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -28,6 +28,18 @@
       "birimFiyat": 1.25,
       "birimFiyatEtiket": "Büyük Şehir Hipodromu (1.25 ₺)",
       "asgariKuponTL": 20.0,
+      "altiliPaketleri": [
+        {
+          "paketNo": 1,
+          "baslangicKosu": 1,
+          "bitisKosu": 6
+        },
+        {
+          "paketNo": 2,
+          "baslangicKosu": 3,
+          "bitisKosu": 8
+        }
+      ],
       "kosular": [
         {
           "kosu_no": 1,
@@ -37,7 +49,13 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "1. Koşu 14.30",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": null,
+          "altiliAyagi": 1,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 1
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -857,7 +875,13 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "2. Koşu 15.00",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": null,
+          "altiliAyagi": 2,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 2
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Süratli / Tempolu",
             "tempo_kodu": "SURATLI",
@@ -1393,7 +1417,17 @@
           "pist_tipi": "Sentetik",
           "grup_sinifi": "3. Koşu 15.30",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 1,
+          "altiliAyagi": 3,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 3
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 1
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Çok Hızlı / Yüksek Baskı",
             "tempo_kodu": "COK_HIZLI",
@@ -2299,7 +2333,17 @@
           "pist_tipi": "Sentetik",
           "grup_sinifi": "4. Koşu 16.00",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 2,
+          "altiliAyagi": 4,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 4
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 2
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Süratli / Tempolu",
             "tempo_kodu": "SURATLI",
@@ -3278,7 +3322,17 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "5. Koşu 16.30",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 3,
+          "altiliAyagi": 5,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 5
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 3
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Süratli / Tempolu",
             "tempo_kodu": "SURATLI",
@@ -4026,7 +4080,17 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "6. Koşu 17.00ÖMER CAF KOŞUSU",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 4,
+          "altiliAyagi": 6,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 6
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 4
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -4637,6 +4701,12 @@
           "grup_sinifi": "7. Koşu 17.30",
           "ikramiye": "250.000 ₺",
           "altiliAyagi": 5,
+          "altiliPaketleri": [
+            {
+              "paketNo": 2,
+              "ayakNo": 5
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -5462,6 +5532,12 @@
           "grup_sinifi": "8. Koşu 18.00",
           "ikramiye": "250.000 ₺",
           "altiliAyagi": 6,
+          "altiliPaketleri": [
+            {
+              "paketNo": 2,
+              "ayakNo": 6
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -6659,6 +6735,18 @@
       "birimFiyat": 1.25,
       "birimFiyatEtiket": "Büyük Şehir Hipodromu (1.25 ₺)",
       "asgariKuponTL": 20.0,
+      "altiliPaketleri": [
+        {
+          "paketNo": 1,
+          "baslangicKosu": 1,
+          "bitisKosu": 6
+        },
+        {
+          "paketNo": 2,
+          "baslangicKosu": 3,
+          "bitisKosu": 8
+        }
+      ],
       "kosular": [
         {
           "kosu_no": 1,
@@ -6668,7 +6756,13 @@
           "pist_tipi": "Sentetik",
           "grup_sinifi": "1. Koşu 17.45",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": null,
+          "altiliAyagi": 1,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 1
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -7338,7 +7432,13 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "2. Koşu 18.30",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": null,
+          "altiliAyagi": 2,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 2
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -7801,7 +7901,17 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "3. Koşu 19.00",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 1,
+          "altiliAyagi": 3,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 3
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 1
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -8541,7 +8651,17 @@
           "pist_tipi": "Sentetik",
           "grup_sinifi": "4. Koşu 19.30",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 2,
+          "altiliAyagi": 4,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 4
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 2
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
@@ -9146,7 +9266,17 @@
           "pist_tipi": "Kaba Kum",
           "grup_sinifi": "5. Koşu 20.00ANTALYA JANDARMA KOŞUSU",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 3,
+          "altiliAyagi": 5,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 5
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 3
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Ağır / Yavaş",
             "tempo_kodu": "YAVAS",
@@ -9821,7 +9951,17 @@
           "pist_tipi": "Sentetik",
           "grup_sinifi": "6. Koşu 20.30",
           "ikramiye": "250.000 ₺",
-          "altiliAyagi": 4,
+          "altiliAyagi": 6,
+          "altiliPaketleri": [
+            {
+              "paketNo": 1,
+              "ayakNo": 6
+            },
+            {
+              "paketNo": 2,
+              "ayakNo": 4
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Süratli / Tempolu",
             "tempo_kodu": "SURATLI",
@@ -10505,6 +10645,12 @@
           "grup_sinifi": "7. Koşu 21.00",
           "ikramiye": "250.000 ₺",
           "altiliAyagi": 5,
+          "altiliPaketleri": [
+            {
+              "paketNo": 2,
+              "ayakNo": 5
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Ağır / Yavaş",
             "tempo_kodu": "YAVAS",
@@ -11107,6 +11253,12 @@
           "grup_sinifi": "8. Koşu 21.30",
           "ikramiye": "250.000 ₺",
           "altiliAyagi": 6,
+          "altiliPaketleri": [
+            {
+              "paketNo": 2,
+              "ayakNo": 6
+            }
+          ],
           "tempo_senaryosu": {
             "tempo_sinifi": "Çok Hızlı / Yüksek Baskı",
             "tempo_kodu": "COK_HIZLI",

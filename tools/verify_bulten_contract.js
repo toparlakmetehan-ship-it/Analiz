@@ -52,6 +52,88 @@ for (const file of FILES) {
   if (!data.tarih) errors.push(`${file}: tarih yok`);
   if (horses.length === 0) errors.push(`${file}: at listesi boş`);
 
+  // 6'lı Ganyan paket sözleşmesi: tek/çift paket, başlangıç-bitiş ve ayak numaraları.
+  for (const hip of data.hipodromlar || []) {
+    const hipName = hip.sehir || hip.isim || 'Hipodrom';
+    const raceNos = (hip.kosular || []).map((r, idx) => Number(r.kosu_no ?? (idx + 1))).filter(Number.isFinite);
+    const raceNoSet = new Set(raceNos);
+    const packages = Array.isArray(hip.altiliPaketleri) ? hip.altiliPaketleri : [];
+    const seenPkg = new Set();
+
+    if (packages.length > 2) {
+      errors.push(`${file} ${hipName}: 2'den fazla 6'lı paketi (${packages.length})`);
+    }
+    for (const pkg of packages) {
+      const pkgNo = Number(pkg.paketNo);
+      const start = Number(pkg.baslangicKosu);
+      const end = Number(pkg.bitisKosu);
+      if (!Number.isInteger(pkgNo) || pkgNo < 1) errors.push(`${file} ${hipName}: geçersiz paketNo ${pkg.paketNo}`);
+      if (seenPkg.has(pkgNo)) errors.push(`${file} ${hipName}: tekrarlanan paketNo ${pkgNo}`);
+      seenPkg.add(pkgNo);
+      if (!Number.isInteger(start) || !Number.isInteger(end) || end !== start + 5) {
+        errors.push(`${file} ${hipName} ${pkgNo}. paket: aralık ${pkg.baslangicKosu}-${pkg.bitisKosu} (6 koşu olmalı)`);
+      }
+      if (!raceNoSet.has(start) || !raceNoSet.has(end)) {
+        errors.push(`${file} ${hipName} ${pkgNo}. paket: ${start}-${end} programda yok`);
+      }
+    }
+
+    if (packages.length === 0) {
+      // Resmî paket işareti olmayan (örn. 7 koşulu Bursa) geri dönüş:
+      // koşu bazındaki tek paket 1..6 sırasıyla devam etmeli.
+      const fallback = (hip.kosular || []).map(race => ({
+        race,
+        actual: Array.isArray(race.altiliPaketleri) ? race.altiliPaketleri : []
+      }));
+      const starts = fallback.filter(x => Number(x.actual[0]?.ayakNo) === 1);
+      if (starts.length > 1) errors.push(`${file} ${hipName}: birden fazla geri dönüş 6'lı başlangıcı`);
+      for (const { race, actual } of fallback) {
+        const raceNo = Number(race.kosu_no);
+        if (actual.length === 0) {
+          if (race.altiliAyagi !== null && race.altiliAyagi !== undefined) {
+            errors.push(`${file} ${hipName} K${raceNo}: altiliPaketleri boş ama altiliAyagi=${race.altiliAyagi}`);
+          }
+          continue;
+        }
+        if (actual.length !== 1 || Number(actual[0].paketNo) !== 1) {
+          errors.push(`${file} ${hipName} K${raceNo}: geri dönüş paketi tek ve 1. paket olmalı`);
+        }
+        if (Number(race.altiliAyagi) !== Number(actual[0].ayakNo)) {
+          errors.push(`${file} ${hipName} K${raceNo}: altiliAyagi ${race.altiliAyagi}, paket ayağı ${actual[0].ayakNo}`);
+        }
+      }
+      if (starts.length === 1) {
+        const startNo = Number(starts[0].race.kosu_no);
+        for (let offset = 0; offset < 6; offset++) {
+          const race = (hip.kosular || []).find(r => Number(r.kosu_no) === startNo + offset);
+          const ayak = Number(race?.altiliPaketleri?.[0]?.ayakNo);
+          if (ayak !== offset + 1) errors.push(`${file} ${hipName} K${startNo + offset}: geri dönüş 6'lı ${offset + 1}. ayak değil (${ayak || 'yok'})`);
+        }
+      }
+      continue;
+    }
+
+    for (const race of hip.kosular || []) {
+      const raceNo = Number(race.kosu_no);
+      const expected = packages
+        .filter(p => Number(p.baslangicKosu) <= raceNo && raceNo <= Number(p.bitisKosu))
+        .map(p => ({ paketNo: Number(p.paketNo), ayakNo: raceNo - Number(p.baslangicKosu) + 1 }))
+        .sort((a, b) => a.paketNo - b.paketNo);
+      const actual = Array.isArray(race.altiliPaketleri) ? race.altiliPaketleri : [];
+      if (JSON.stringify(expected) !== JSON.stringify(actual.map(p => ({ paketNo: Number(p.paketNo), ayakNo: Number(p.ayakNo) })))) {
+        errors.push(`${file} ${hipName} K${raceNo}: altiliPaketleri beklenen ${JSON.stringify(expected)}, bulunan ${JSON.stringify(actual)}`);
+      }
+      if (expected.length > 0) {
+        const primary = expected.find(p => p.paketNo === 1) || expected[0];
+        if (Number(race.altiliAyagi) !== primary.ayakNo) {
+          errors.push(`${file} ${hipName} K${raceNo}: altiliAyagi ${race.altiliAyagi}, beklenen ${primary.ayakNo}`);
+        }
+      } else if (race.altiliAyagi !== null && race.altiliAyagi !== undefined) {
+        errors.push(`${file} ${hipName} K${raceNo}: altili dışı ama altiliAyagi=${race.altiliAyagi}`);
+      }
+    }
+  }
+
   for (const { hip, race, horse } of horses) {
     const where = `${file} ${hip.sehir || hip.isim} K${race.kosu_no} #${horse.no} ${horse.isim}`;
     const required = ['taktik_durumu', 'kosu_stili', 'tempo_delta', 'isYoungHorse', 'handikap_puani', 'pist_aptitude_analizi', 'son_yarislar'];

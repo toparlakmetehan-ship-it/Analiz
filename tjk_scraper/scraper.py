@@ -37,13 +37,16 @@ from .db import (
     check_yaris_sonucu_exists,
     check_gecmis_yaris_exists,
     get_cached_at_ids_today,
-    log_scrape_run
+    log_scrape_run,
+    replace_altili_paketleri,
+    get_altili_paketleri
 )
 from .parser import (
     parse_daily_race_program_html,
     parse_horse_profile_html,
     parse_daily_race_results_html,
-    parse_tjk_idman_html
+    parse_tjk_idman_html,
+    parse_altili_package_starts
 )
 from .analytics import run_full_tactical_and_pace_pipeline
 from .accurace import fetch_race, normalize_city_slug, parse_race_date
@@ -413,7 +416,17 @@ class TJKScraper:
                 upsert_hipodrom(conn, sehir_id, sehir_adi, hipodrom_adi)
 
             kosular = parse_daily_race_program_html(hip["html"], sehir_id, sehir_adi, iso_str)
-            logger.info(f"📍 {sehir_adi}: {len(kosular)} koşu ayrıştırıldı.")
+            altili_paketleri = parse_altili_package_starts(hip["html"])
+            if altili_paketleri:
+                with conn:
+                    replace_altili_paketleri(conn, iso_str, sehir_id, altili_paketleri)
+                logger.info(
+                    "📍 %s: %d koşu, %d altılı paketi (%s) ayrıştırıldı.",
+                    sehir_adi, len(kosular), len(altili_paketleri),
+                    ", ".join(f"{p['paketNo']}. paket {p['baslangicKosu']}. koşu" for p in altili_paketleri)
+                )
+            else:
+                logger.info(f"📍 {sehir_adi}: {len(kosular)} koşu ayrıştırıldı (resmî altılı işareti bulunamadı).")
             kosu_count += len(kosular)
 
             for k in kosular:
@@ -792,17 +805,34 @@ class TJKScraper:
                     "birimFiyat": birim_fiyat,
                     "birimFiyatEtiket": birim_label,
                     "asgariKuponTL": 20.0,
+                    "altiliPaketleri": get_altili_paketleri(conn, target_date_iso, r["hip_id"]),
                     "kosular": []
                 }
 
             kosu_id = r["id"]
             k_no = r["kosu_no"]
 
-            # Altılı ayağı tespiti: Son 6 koşu altılıdır
-            start_altili_kosu = max(1, total_races_in_city - 6 + 1)
-            altili_ayagi = None
-            if k_no >= start_altili_kosu and (k_no - start_altili_kosu + 1) <= 6:
-                altili_ayagi = k_no - start_altili_kosu + 1
+            # Altılı ayağı tespiti: önce TJK'nın resmî paket işaretleri.
+            # Birden fazla paket varsa (örn. 1-6 ve 3-8) her koşu için tüm paketler yazılır.
+            official_pkgs = hipodrom_map[sehir].get("altiliPaketleri", [])
+            race_pkgs = []
+            if official_pkgs:
+                for pkg in official_pkgs:
+                    p_start = int(pkg["baslangicKosu"])
+                    p_end = int(pkg["bitisKosu"])
+                    if p_start <= k_no <= p_end:
+                        race_pkgs.append({
+                            "paketNo": int(pkg["paketNo"]),
+                            "ayakNo": k_no - p_start + 1
+                        })
+            else:
+                # Resmî işaret yoksa güvenli geri dönüş: son 6 koşu tek paket.
+                start_last6 = max(1, total_races_in_city - 5)
+                if start_last6 <= k_no <= start_last6 + 5:
+                    race_pkgs.append({"paketNo": 1, "ayakNo": k_no - start_last6 + 1})
+
+            primary_pkg = next((p for p in race_pkgs if p["paketNo"] == 1), race_pkgs[0] if race_pkgs else None)
+            altili_ayagi = primary_pkg["ayakNo"] if primary_pkg else None
 
             # Türev tempo senaryosunu çek
             cursor.execute("SELECT * FROM turev_kosu_tempolari WHERE kosu_id = ?", (kosu_id,))
@@ -982,6 +1012,7 @@ class TJKScraper:
                 "grup_sinifi": r["kosu_cinsi"] or "Şartlı",
                 "ikramiye": f"{r['ikramiye_1']:,.0f} ₺".replace(',', '.') if r["ikramiye_1"] else "250.000 ₺",
                 "altiliAyagi": altili_ayagi,
+                "altiliPaketleri": race_pkgs,
                 "tempo_senaryosu": tempo_senaryosu,
                 "atlar": atlar_list
             })
