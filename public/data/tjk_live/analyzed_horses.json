@@ -17,14 +17,14 @@
       "form": 99.3,
       "jockey": 97,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 88.0,
-      "total": 86.9,
-      "risk": 0.131
+      "total": 87.0,
+      "risk": 0.13
     },
-    "total_score": 86.9
+    "total_score": 87.0
   },
   {
     "horse_id": "H0127",
@@ -44,7 +44,7 @@
       "form": 99.3,
       "jockey": 100,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 75.0,
@@ -71,7 +71,7 @@
       "form": 99.9,
       "jockey": 96,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.5,
@@ -79,33 +79,6 @@
       "risk": 0.132
     },
     "total_score": 86.8
-  },
-  {
-    "horse_id": "H0154",
-    "name": "Horse_154",
-    "finish_time": 110.08,
-    "weight": 528,
-    "jockey": "Joker3",
-    "track": "Sand",
-    "distance": 1625,
-    "weather": "Cloudy",
-    "track_type": "Grass",
-    "race_time": 556,
-    "jockey_recent_performance": 100,
-    "predicted_finish_time": 109.96161651611328,
-    "risk_score": 100,
-    "analysis": {
-      "form": 98.8,
-      "jockey": 100,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 73.5,
-      "total": 86.7,
-      "risk": 0.133
-    },
-    "total_score": 86.7
   },
   {
     "horse_id": "H0187",
@@ -125,14 +98,14 @@
       "form": 98.6,
       "jockey": 98,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 83.5,
-      "total": 86.7,
-      "risk": 0.133
+      "total": 86.8,
+      "risk": 0.132
     },
-    "total_score": 86.7
+    "total_score": 86.8
   },
   {
     "horse_id": "H0034",
@@ -152,14 +125,41 @@
       "form": 98.2,
       "jockey": 94,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 99.5,
-      "total": 86.6,
-      "risk": 0.134
+      "total": 86.7,
+      "risk": 0.133
     },
-    "total_score": 86.6
+    "total_score": 86.7
+  },
+  {
+    "horse_id": "H0154",
+    "name": "Horse_154",
+    "finish_time": 110.08,
+    "weight": 528,
+    "jockey": "Joker3",
+    "track": "Sand",
+    "distance": 1625,
+    "weather": "Cloudy",
+    "track_type": "Grass",
+    "race_time": 556,
+    "jockey_recent_performance": 100,
+    "predicted_finish_time": 109.96161651611328,
+    "risk_score": 100,
+    "analysis": {
+      "form": 98.8,
+      "jockey": 100,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 73.5,
+      "total": 86.7,
+      "risk": 0.133
+    },
+    "total_score": 86.7
   },
   {
     "horse_id": "H0040",
@@ -179,7 +179,7 @@
       "form": 100.0,
       "jockey": 97,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.0,
@@ -206,14 +206,14 @@
       "form": 99.2,
       "jockey": 95,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.0,
-      "total": 86.3,
-      "risk": 0.137
+      "total": 86.4,
+      "risk": 0.136
     },
-    "total_score": 86.3
+    "total_score": 86.4
   },
   {
     "horse_id": "H0173",
@@ -233,7 +233,7 @@
       "form": 96.6,
       "jockey": 95,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 96.5,
@@ -260,14 +260,14 @@
       "form": 99.2,
       "jockey": 94,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.0,
-      "total": 86.1,
-      "risk": 0.139
+      "total": 86.2,
+      "risk": 0.138
     },
-    "total_score": 86.1
+    "total_score": 86.2
   },
   {
     "horse_id": "H0052",
@@ -287,7 +287,7 @@
       "form": 97.6,
       "jockey": 98,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 73.5,
@@ -314,7 +314,7 @@
       "form": 99.4,
       "jockey": 99,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 60.5,
@@ -341,7 +341,7 @@
       "form": 99.9,
       "jockey": 93,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.5,
@@ -368,7 +368,7 @@
       "form": 98.3,
       "jockey": 90,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.5,
@@ -395,10 +395,37 @@
       "form": 99.4,
       "jockey": 91,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 81.5,
+      "total": 85.5,
+      "risk": 0.145
+    },
+    "total_score": 85.5
+  },
+  {
+    "horse_id": "H0075",
+    "name": "Horse_75",
+    "finish_time": 71.19,
+    "weight": 499,
+    "jockey": "Joker3",
+    "track": "Grass",
+    "distance": 1894,
+    "weather": "Rainy",
+    "track_type": "Dirt",
+    "race_time": 465,
+    "jockey_recent_performance": 91,
+    "predicted_finish_time": 71.4153823852539,
+    "risk_score": 0,
+    "analysis": {
+      "form": 97.7,
+      "jockey": 91,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 88.0,
       "total": 85.4,
       "risk": 0.146
     },
@@ -422,7 +449,7 @@
       "form": 97.5,
       "jockey": 93,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 82.5,
@@ -449,7 +476,7 @@
       "form": 99.5,
       "jockey": 92,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 76.5,
@@ -476,37 +503,10 @@
       "form": 98.2,
       "jockey": 88,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 97.0,
-      "total": 85.3,
-      "risk": 0.147
-    },
-    "total_score": 85.3
-  },
-  {
-    "horse_id": "H0075",
-    "name": "Horse_75",
-    "finish_time": 71.19,
-    "weight": 499,
-    "jockey": "Joker3",
-    "track": "Grass",
-    "distance": 1894,
-    "weather": "Rainy",
-    "track_type": "Dirt",
-    "race_time": 465,
-    "jockey_recent_performance": 91,
-    "predicted_finish_time": 71.4153823852539,
-    "risk_score": 0,
-    "analysis": {
-      "form": 97.7,
-      "jockey": 91,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 88.0,
       "total": 85.3,
       "risk": 0.147
     },
@@ -530,7 +530,7 @@
       "form": 99.4,
       "jockey": 91,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 76.5,
@@ -538,33 +538,6 @@
       "risk": 0.148
     },
     "total_score": 85.2
-  },
-  {
-    "horse_id": "H0195",
-    "name": "Horse_195",
-    "finish_time": 78.45,
-    "weight": 471,
-    "jockey": "Joker1",
-    "track": "Dirt",
-    "distance": 1753,
-    "weather": "Sunny",
-    "track_type": "Dirt",
-    "race_time": 1159,
-    "jockey_recent_performance": 88,
-    "predicted_finish_time": 78.73271942138672,
-    "risk_score": 0,
-    "analysis": {
-      "form": 97.2,
-      "jockey": 88,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 98.0,
-      "total": 85.1,
-      "risk": 0.149
-    },
-    "total_score": 85.1
   },
   {
     "horse_id": "H0190",
@@ -584,14 +557,41 @@
       "form": 99.1,
       "jockey": 96,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 55.0,
-      "total": 85.0,
-      "risk": 0.15
+      "total": 85.1,
+      "risk": 0.149
     },
-    "total_score": 85.0
+    "total_score": 85.1
+  },
+  {
+    "horse_id": "H0195",
+    "name": "Horse_195",
+    "finish_time": 78.45,
+    "weight": 471,
+    "jockey": "Joker1",
+    "track": "Dirt",
+    "distance": 1753,
+    "weather": "Sunny",
+    "track_type": "Dirt",
+    "race_time": 1159,
+    "jockey_recent_performance": 88,
+    "predicted_finish_time": 78.73271942138672,
+    "risk_score": 0,
+    "analysis": {
+      "form": 97.2,
+      "jockey": 88,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 98.0,
+      "total": 85.1,
+      "risk": 0.149
+    },
+    "total_score": 85.1
   },
   {
     "horse_id": "H0137",
@@ -611,7 +611,7 @@
       "form": 99.0,
       "jockey": 87,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 88.5,
@@ -619,33 +619,6 @@
       "risk": 0.151
     },
     "total_score": 84.9
-  },
-  {
-    "horse_id": "H0198",
-    "name": "Horse_198",
-    "finish_time": 118.12,
-    "weight": 515,
-    "jockey": "Joker2",
-    "track": "Sand",
-    "distance": 1921,
-    "weather": "Rainy",
-    "track_type": "Dirt",
-    "race_time": 1368,
-    "jockey_recent_performance": 87,
-    "predicted_finish_time": 118.06954193115234,
-    "risk_score": 100,
-    "analysis": {
-      "form": 99.5,
-      "jockey": 87,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 80.0,
-      "total": 84.6,
-      "risk": 0.154
-    },
-    "total_score": 84.6
   },
   {
     "horse_id": "H0044",
@@ -665,14 +638,41 @@
       "form": 99.1,
       "jockey": 87,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 81.0,
-      "total": 84.5,
-      "risk": 0.155
+      "total": 84.6,
+      "risk": 0.154
     },
-    "total_score": 84.5
+    "total_score": 84.6
+  },
+  {
+    "horse_id": "H0198",
+    "name": "Horse_198",
+    "finish_time": 118.12,
+    "weight": 515,
+    "jockey": "Joker2",
+    "track": "Sand",
+    "distance": 1921,
+    "weather": "Rainy",
+    "track_type": "Dirt",
+    "race_time": 1368,
+    "jockey_recent_performance": 87,
+    "predicted_finish_time": 118.06954193115234,
+    "risk_score": 100,
+    "analysis": {
+      "form": 99.5,
+      "jockey": 87,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 80.0,
+      "total": 84.6,
+      "risk": 0.154
+    },
+    "total_score": 84.6
   },
   {
     "horse_id": "H0113",
@@ -692,7 +692,7 @@
       "form": 97.5,
       "jockey": 85,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 96.0,
@@ -719,14 +719,14 @@
       "form": 98.1,
       "jockey": 90,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 66.0,
-      "total": 84.1,
-      "risk": 0.159
+      "total": 84.2,
+      "risk": 0.158
     },
-    "total_score": 84.1
+    "total_score": 84.2
   },
   {
     "horse_id": "H0063",
@@ -746,14 +746,14 @@
       "form": 99.4,
       "jockey": 82,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 90.0,
-      "total": 84.0,
+      "total": 84.1,
       "risk": 0.159
     },
-    "total_score": 84.0
+    "total_score": 84.1
   },
   {
     "horse_id": "H0116",
@@ -773,7 +773,7 @@
       "form": 95.5,
       "jockey": 90,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.5,
@@ -800,7 +800,7 @@
       "form": 100.0,
       "jockey": 86,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 63.0,
@@ -827,14 +827,14 @@
       "form": 99.1,
       "jockey": 82,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 77.5,
-      "total": 83.3,
-      "risk": 0.167
+      "total": 83.4,
+      "risk": 0.166
     },
-    "total_score": 83.3
+    "total_score": 83.4
   },
   {
     "horse_id": "H0084",
@@ -854,14 +854,14 @@
       "form": 100.0,
       "jockey": 84,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 63.0,
-      "total": 83.2,
+      "total": 83.3,
       "risk": 0.167
     },
-    "total_score": 83.2
+    "total_score": 83.3
   },
   {
     "horse_id": "H0107",
@@ -881,14 +881,14 @@
       "form": 97.7,
       "jockey": 86,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.0,
-      "total": 83.0,
-      "risk": 0.17
+      "total": 83.1,
+      "risk": 0.169
     },
-    "total_score": 83.0
+    "total_score": 83.1
   },
   {
     "horse_id": "H0199",
@@ -908,14 +908,14 @@
       "form": 99.4,
       "jockey": 83,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 65.5,
-      "total": 83.0,
-      "risk": 0.17
+      "total": 83.1,
+      "risk": 0.169
     },
-    "total_score": 83.0
+    "total_score": 83.1
   },
   {
     "horse_id": "H0004",
@@ -935,14 +935,14 @@
       "form": 97.7,
       "jockey": 85,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 64.5,
-      "total": 82.9,
-      "risk": 0.171
+      "total": 83.0,
+      "risk": 0.17
     },
-    "total_score": 82.9
+    "total_score": 83.0
   },
   {
     "horse_id": "H0108",
@@ -962,7 +962,7 @@
       "form": 99.6,
       "jockey": 79,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 75.5,
@@ -989,7 +989,7 @@
       "form": 98.2,
       "jockey": 80,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 79.0,
@@ -1016,7 +1016,7 @@
       "form": 99.7,
       "jockey": 84,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 53.5,
@@ -1043,7 +1043,7 @@
       "form": 98.4,
       "jockey": 77,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 84.0,
@@ -1070,41 +1070,14 @@
       "form": 96.2,
       "jockey": 77,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.5,
-      "total": 82.3,
-      "risk": 0.177
+      "total": 82.4,
+      "risk": 0.176
     },
-    "total_score": 82.3
-  },
-  {
-    "horse_id": "H0028",
-    "name": "Horse_28",
-    "finish_time": 89,
-    "weight": 412,
-    "jockey": "Joker2",
-    "track": "Dirt",
-    "distance": 1122,
-    "weather": "Rainy",
-    "track_type": "Grass",
-    "race_time": 664,
-    "jockey_recent_performance": 79,
-    "predicted_finish_time": 88.89873504638672,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.0,
-      "jockey": 79,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 68.5,
-      "total": 82.3,
-      "risk": 0.177
-    },
-    "total_score": 82.3
+    "total_score": 82.4
   },
   {
     "horse_id": "H0032",
@@ -1124,10 +1097,37 @@
       "form": 99.8,
       "jockey": 75,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 82.0,
+      "total": 82.4,
+      "risk": 0.176
+    },
+    "total_score": 82.4
+  },
+  {
+    "horse_id": "H0028",
+    "name": "Horse_28",
+    "finish_time": 89,
+    "weight": 412,
+    "jockey": "Joker2",
+    "track": "Dirt",
+    "distance": 1122,
+    "weather": "Rainy",
+    "track_type": "Grass",
+    "race_time": 664,
+    "jockey_recent_performance": 79,
+    "predicted_finish_time": 88.89873504638672,
+    "risk_score": 0,
+    "analysis": {
+      "form": 99.0,
+      "jockey": 79,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 68.5,
       "total": 82.3,
       "risk": 0.177
     },
@@ -1151,10 +1151,64 @@
       "form": 99.9,
       "jockey": 76,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 73.5,
+      "total": 82.2,
+      "risk": 0.178
+    },
+    "total_score": 82.2
+  },
+  {
+    "horse_id": "H0074",
+    "name": "Horse_74",
+    "finish_time": 71.11,
+    "weight": 558,
+    "jockey": "Joker1",
+    "track": "Sand",
+    "distance": 1913,
+    "weather": "Rainy",
+    "track_type": "Grass",
+    "race_time": 1405,
+    "jockey_recent_performance": 82,
+    "predicted_finish_time": 71.30412292480469,
+    "risk_score": 0,
+    "analysis": {
+      "form": 98.1,
+      "jockey": 82,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 58.5,
+      "total": 82.2,
+      "risk": 0.178
+    },
+    "total_score": 82.2
+  },
+  {
+    "horse_id": "H0130",
+    "name": "Horse_130",
+    "finish_time": 108.01,
+    "weight": 419,
+    "jockey": "Joker5",
+    "track": "Sand",
+    "distance": 1190,
+    "weather": "Cloudy",
+    "track_type": "Sand",
+    "race_time": 1082,
+    "jockey_recent_performance": 77,
+    "predicted_finish_time": 107.95014953613281,
+    "risk_score": 100,
+    "analysis": {
+      "form": 99.4,
+      "jockey": 77,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 72.0,
       "total": 82.2,
       "risk": 0.178
     },
@@ -1178,64 +1232,10 @@
       "form": 96.8,
       "jockey": 76,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 87.5,
-      "total": 82.1,
-      "risk": 0.179
-    },
-    "total_score": 82.1
-  },
-  {
-    "horse_id": "H0074",
-    "name": "Horse_74",
-    "finish_time": 71.11,
-    "weight": 558,
-    "jockey": "Joker1",
-    "track": "Sand",
-    "distance": 1913,
-    "weather": "Rainy",
-    "track_type": "Grass",
-    "race_time": 1405,
-    "jockey_recent_performance": 82,
-    "predicted_finish_time": 71.30412292480469,
-    "risk_score": 0,
-    "analysis": {
-      "form": 98.1,
-      "jockey": 82,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 58.5,
-      "total": 82.1,
-      "risk": 0.179
-    },
-    "total_score": 82.1
-  },
-  {
-    "horse_id": "H0130",
-    "name": "Horse_130",
-    "finish_time": 108.01,
-    "weight": 419,
-    "jockey": "Joker5",
-    "track": "Sand",
-    "distance": 1190,
-    "weather": "Cloudy",
-    "track_type": "Sand",
-    "race_time": 1082,
-    "jockey_recent_performance": 77,
-    "predicted_finish_time": 107.95014953613281,
-    "risk_score": 100,
-    "analysis": {
-      "form": 99.4,
-      "jockey": 77,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 72.0,
       "total": 82.1,
       "risk": 0.179
     },
@@ -1259,14 +1259,14 @@
       "form": 99.0,
       "jockey": 72,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.0,
-      "total": 82.0,
+      "total": 82.1,
       "risk": 0.179
     },
-    "total_score": 82.0
+    "total_score": 82.1
   },
   {
     "horse_id": "H0050",
@@ -1286,14 +1286,14 @@
       "form": 99.6,
       "jockey": 78,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 52.5,
-      "total": 81.4,
-      "risk": 0.186
+      "total": 81.5,
+      "risk": 0.185
     },
-    "total_score": 81.4
+    "total_score": 81.5
   },
   {
     "horse_id": "H0078",
@@ -1313,10 +1313,64 @@
       "form": 99.2,
       "jockey": 74,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.5,
+      "total": 81.5,
+      "risk": 0.185
+    },
+    "total_score": 81.5
+  },
+  {
+    "horse_id": "H0100",
+    "name": "Horse_100",
+    "finish_time": 114.92,
+    "weight": 488,
+    "jockey": "Joker2",
+    "track": "Grass",
+    "distance": 1700,
+    "weather": "Cloudy",
+    "track_type": "Grass",
+    "race_time": 649,
+    "jockey_recent_performance": 70,
+    "predicted_finish_time": 114.66461944580078,
+    "risk_score": 100,
+    "analysis": {
+      "form": 97.4,
+      "jockey": 70,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 93.5,
+      "total": 81.4,
+      "risk": 0.186
+    },
+    "total_score": 81.4
+  },
+  {
+    "horse_id": "H0167",
+    "name": "Horse_167",
+    "finish_time": 88.68,
+    "weight": 472,
+    "jockey": "Joker2",
+    "track": "Grass",
+    "distance": 1018,
+    "weather": "Windy",
+    "track_type": "Dirt",
+    "race_time": 1377,
+    "jockey_recent_performance": 66,
+    "predicted_finish_time": 88.64971160888672,
+    "risk_score": 0,
+    "analysis": {
+      "form": 99.7,
+      "jockey": 66,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 98.5,
       "total": 81.4,
       "risk": 0.186
     },
@@ -1340,7 +1394,7 @@
       "form": 99.2,
       "jockey": 73,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.0,
@@ -1348,60 +1402,6 @@
       "risk": 0.186
     },
     "total_score": 81.4
-  },
-  {
-    "horse_id": "H0100",
-    "name": "Horse_100",
-    "finish_time": 114.92,
-    "weight": 488,
-    "jockey": "Joker2",
-    "track": "Grass",
-    "distance": 1700,
-    "weather": "Cloudy",
-    "track_type": "Grass",
-    "race_time": 649,
-    "jockey_recent_performance": 70,
-    "predicted_finish_time": 114.66461944580078,
-    "risk_score": 100,
-    "analysis": {
-      "form": 97.4,
-      "jockey": 70,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 93.5,
-      "total": 81.3,
-      "risk": 0.187
-    },
-    "total_score": 81.3
-  },
-  {
-    "horse_id": "H0167",
-    "name": "Horse_167",
-    "finish_time": 88.68,
-    "weight": 472,
-    "jockey": "Joker2",
-    "track": "Grass",
-    "distance": 1018,
-    "weather": "Windy",
-    "track_type": "Dirt",
-    "race_time": 1377,
-    "jockey_recent_performance": 66,
-    "predicted_finish_time": 88.64971160888672,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.7,
-      "jockey": 66,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 98.5,
-      "total": 81.3,
-      "risk": 0.187
-    },
-    "total_score": 81.3
   },
   {
     "horse_id": "H0030",
@@ -1421,7 +1421,7 @@
       "form": 99.7,
       "jockey": 75,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 57.5,
@@ -1448,7 +1448,7 @@
       "form": 99.5,
       "jockey": 65,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 98.0,
@@ -1475,12 +1475,12 @@
       "form": 98.9,
       "jockey": 71,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.5,
       "total": 81.0,
-      "risk": 0.191
+      "risk": 0.19
     },
     "total_score": 81.0
   },
@@ -1502,7 +1502,7 @@
       "form": 99.2,
       "jockey": 66,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 94.0,
@@ -1529,12 +1529,12 @@
       "form": 99.6,
       "jockey": 69,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 79.0,
       "total": 81.0,
-      "risk": 0.191
+      "risk": 0.19
     },
     "total_score": 81.0
   },
@@ -1556,7 +1556,7 @@
       "form": 98.2,
       "jockey": 74,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 64.5,
@@ -1583,7 +1583,7 @@
       "form": 99.3,
       "jockey": 64,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 97.5,
@@ -1610,10 +1610,37 @@
       "form": 99.2,
       "jockey": 65,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 90.0,
+      "total": 80.6,
+      "risk": 0.194
+    },
+    "total_score": 80.6
+  },
+  {
+    "horse_id": "H0120",
+    "name": "Horse_120",
+    "finish_time": 72.64,
+    "weight": 511,
+    "jockey": "Joker5",
+    "track": "Grass",
+    "distance": 1076,
+    "weather": "Sunny",
+    "track_type": "Grass",
+    "race_time": 172,
+    "jockey_recent_performance": 66,
+    "predicted_finish_time": 72.67227935791016,
+    "risk_score": 0,
+    "analysis": {
+      "form": 99.7,
+      "jockey": 66,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 82.0,
       "total": 80.6,
       "risk": 0.194
     },
@@ -1637,37 +1664,10 @@
       "form": 99.1,
       "jockey": 65,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 87.5,
-      "total": 80.5,
-      "risk": 0.196
-    },
-    "total_score": 80.5
-  },
-  {
-    "horse_id": "H0120",
-    "name": "Horse_120",
-    "finish_time": 72.64,
-    "weight": 511,
-    "jockey": "Joker5",
-    "track": "Grass",
-    "distance": 1076,
-    "weather": "Sunny",
-    "track_type": "Grass",
-    "race_time": 172,
-    "jockey_recent_performance": 66,
-    "predicted_finish_time": 72.67227935791016,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.7,
-      "jockey": 66,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 82.0,
       "total": 80.5,
       "risk": 0.195
     },
@@ -1691,14 +1691,14 @@
       "form": 95.9,
       "jockey": 69,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 87.0,
-      "total": 80.4,
-      "risk": 0.196
+      "total": 80.5,
+      "risk": 0.195
     },
-    "total_score": 80.4
+    "total_score": 80.5
   },
   {
     "horse_id": "H0041",
@@ -1718,7 +1718,7 @@
       "form": 99.7,
       "jockey": 65,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 81.0,
@@ -1745,7 +1745,7 @@
       "form": 97.9,
       "jockey": 68,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 76.5,
@@ -1753,33 +1753,6 @@
       "risk": 0.198
     },
     "total_score": 80.2
-  },
-  {
-    "horse_id": "H0029",
-    "name": "Horse_29",
-    "finish_time": 98.93,
-    "weight": 549,
-    "jockey": "Joker3",
-    "track": "Grass",
-    "distance": 1454,
-    "weather": "Sunny",
-    "track_type": "Sand",
-    "race_time": 880,
-    "jockey_recent_performance": 71,
-    "predicted_finish_time": 98.70358276367188,
-    "risk_score": 38.02000045776367,
-    "analysis": {
-      "form": 97.7,
-      "jockey": 71,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 63.0,
-      "total": 80.1,
-      "risk": 0.199
-    },
-    "total_score": 80.1
   },
   {
     "horse_id": "H0005",
@@ -1799,14 +1772,41 @@
       "form": 99.3,
       "jockey": 69,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.0,
-      "total": 80.0,
-      "risk": 0.2
+      "total": 80.1,
+      "risk": 0.199
     },
-    "total_score": 80.0
+    "total_score": 80.1
+  },
+  {
+    "horse_id": "H0029",
+    "name": "Horse_29",
+    "finish_time": 98.93,
+    "weight": 549,
+    "jockey": "Joker3",
+    "track": "Grass",
+    "distance": 1454,
+    "weather": "Sunny",
+    "track_type": "Sand",
+    "race_time": 880,
+    "jockey_recent_performance": 71,
+    "predicted_finish_time": 98.70358276367188,
+    "risk_score": 38.02000045776367,
+    "analysis": {
+      "form": 97.7,
+      "jockey": 71,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 63.0,
+      "total": 80.1,
+      "risk": 0.199
+    },
+    "total_score": 80.1
   },
   {
     "horse_id": "H0060",
@@ -1826,7 +1826,7 @@
       "form": 96.0,
       "jockey": 71,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.0,
@@ -1853,14 +1853,14 @@
       "form": 97.9,
       "jockey": 68,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 71.0,
-      "total": 79.9,
-      "risk": 0.201
+      "total": 80.0,
+      "risk": 0.2
     },
-    "total_score": 79.9
+    "total_score": 80.0
   },
   {
     "horse_id": "H0122",
@@ -1880,7 +1880,7 @@
       "form": 97.7,
       "jockey": 64,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.5,
@@ -1907,41 +1907,14 @@
       "form": 100.0,
       "jockey": 60,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 87.0,
-      "total": 79.6,
-      "risk": 0.204
+      "total": 79.7,
+      "risk": 0.203
     },
-    "total_score": 79.6
-  },
-  {
-    "horse_id": "H0043",
-    "name": "Horse_43",
-    "finish_time": 89.82,
-    "weight": 475,
-    "jockey": "Joker5",
-    "track": "Sand",
-    "distance": 1785,
-    "weather": "Cloudy",
-    "track_type": "Dirt",
-    "race_time": 846,
-    "jockey_recent_performance": 56,
-    "predicted_finish_time": 89.99406433105469,
-    "risk_score": 0,
-    "analysis": {
-      "form": 98.3,
-      "jockey": 56,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 100,
-      "total": 79.1,
-      "risk": 0.209
-    },
-    "total_score": 79.1
+    "total_score": 79.7
   },
   {
     "horse_id": "H0047",
@@ -1961,10 +1934,37 @@
       "form": 97.5,
       "jockey": 61,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.0,
+      "total": 79.2,
+      "risk": 0.208
+    },
+    "total_score": 79.2
+  },
+  {
+    "horse_id": "H0043",
+    "name": "Horse_43",
+    "finish_time": 89.82,
+    "weight": 475,
+    "jockey": "Joker5",
+    "track": "Sand",
+    "distance": 1785,
+    "weather": "Cloudy",
+    "track_type": "Dirt",
+    "race_time": 846,
+    "jockey_recent_performance": 56,
+    "predicted_finish_time": 89.99406433105469,
+    "risk_score": 0,
+    "analysis": {
+      "form": 98.3,
+      "jockey": 56,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 100,
       "total": 79.1,
       "risk": 0.209
     },
@@ -1988,7 +1988,7 @@
       "form": 98.7,
       "jockey": 63,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 68.5,
@@ -2015,7 +2015,7 @@
       "form": 99.6,
       "jockey": 54,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 99.5,
@@ -2042,7 +2042,7 @@
       "form": 97.7,
       "jockey": 61,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 79.5,
@@ -2069,7 +2069,7 @@
       "form": 97.1,
       "jockey": 57,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.5,
@@ -2096,7 +2096,7 @@
       "form": 98.8,
       "jockey": 56,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 87.5,
@@ -2123,14 +2123,14 @@
       "form": 99.5,
       "jockey": 61,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 59.0,
-      "total": 78.3,
-      "risk": 0.217
+      "total": 78.4,
+      "risk": 0.216
     },
-    "total_score": 78.3
+    "total_score": 78.4
   },
   {
     "horse_id": "H0117",
@@ -2150,14 +2150,14 @@
       "form": 99.8,
       "jockey": 58,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 67.5,
-      "total": 78.2,
-      "risk": 0.218
+      "total": 78.3,
+      "risk": 0.217
     },
-    "total_score": 78.2
+    "total_score": 78.3
   },
   {
     "horse_id": "H0002",
@@ -2177,7 +2177,7 @@
       "form": 99.8,
       "jockey": 51,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.0,
@@ -2204,7 +2204,7 @@
       "form": 99.5,
       "jockey": 58,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 64.5,
@@ -2231,7 +2231,7 @@
       "form": 99.6,
       "jockey": 50,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 90.0,
@@ -2258,7 +2258,7 @@
       "form": 98.5,
       "jockey": 53,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 81.0,
@@ -2285,14 +2285,14 @@
       "form": 98.8,
       "jockey": 56,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.5,
-      "total": 77.3,
-      "risk": 0.227
+      "total": 77.4,
+      "risk": 0.226
     },
-    "total_score": 77.3
+    "total_score": 77.4
   },
   {
     "horse_id": "H0086",
@@ -2312,14 +2312,14 @@
       "form": 99.8,
       "jockey": 49,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.5,
-      "total": 77.3,
-      "risk": 0.227
+      "total": 77.4,
+      "risk": 0.226
     },
-    "total_score": 77.3
+    "total_score": 77.4
   },
   {
     "horse_id": "H0025",
@@ -2339,14 +2339,14 @@
       "form": 98.9,
       "jockey": 46,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 100,
-      "total": 77.2,
-      "risk": 0.228
+      "total": 77.3,
+      "risk": 0.227
     },
-    "total_score": 77.2
+    "total_score": 77.3
   },
   {
     "horse_id": "H0163",
@@ -2366,7 +2366,7 @@
       "form": 98.5,
       "jockey": 48,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 90.5,
@@ -2393,7 +2393,7 @@
       "form": 99.3,
       "jockey": 49,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 80.5,
@@ -2420,7 +2420,7 @@
       "form": 99.5,
       "jockey": 50,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.5,
@@ -2447,10 +2447,37 @@
       "form": 98.7,
       "jockey": 45,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 95.0,
+      "total": 76.8,
+      "risk": 0.232
+    },
+    "total_score": 76.8
+  },
+  {
+    "horse_id": "H0180",
+    "name": "Horse_180",
+    "finish_time": 75.35,
+    "weight": 513,
+    "jockey": "Joker1",
+    "track": "Grass",
+    "distance": 1874,
+    "weather": "Sunny",
+    "track_type": "Grass",
+    "race_time": 470,
+    "jockey_recent_performance": 50,
+    "predicted_finish_time": 75.62952423095703,
+    "risk_score": 0,
+    "analysis": {
+      "form": 97.2,
+      "jockey": 50,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 81.0,
       "total": 76.7,
       "risk": 0.233
     },
@@ -2474,37 +2501,10 @@
       "form": 99.2,
       "jockey": 50,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 69.5,
-      "total": 76.6,
-      "risk": 0.234
-    },
-    "total_score": 76.6
-  },
-  {
-    "horse_id": "H0180",
-    "name": "Horse_180",
-    "finish_time": 75.35,
-    "weight": 513,
-    "jockey": "Joker1",
-    "track": "Grass",
-    "distance": 1874,
-    "weather": "Sunny",
-    "track_type": "Grass",
-    "race_time": 470,
-    "jockey_recent_performance": 50,
-    "predicted_finish_time": 75.62952423095703,
-    "risk_score": 0,
-    "analysis": {
-      "form": 97.2,
-      "jockey": 50,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 81.0,
       "total": 76.6,
       "risk": 0.234
     },
@@ -2528,41 +2528,14 @@
       "form": 97.1,
       "jockey": 53,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 65.0,
-      "total": 76.4,
-      "risk": 0.236
+      "total": 76.5,
+      "risk": 0.235
     },
-    "total_score": 76.4
-  },
-  {
-    "horse_id": "H0104",
-    "name": "Horse_104",
-    "finish_time": 90.74,
-    "weight": 544,
-    "jockey": "Joker4",
-    "track": "Sand",
-    "distance": 1706,
-    "weather": "Rainy",
-    "track_type": "Grass",
-    "race_time": 476,
-    "jockey_recent_performance": 49,
-    "predicted_finish_time": 90.76986694335938,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.7,
-      "jockey": 49,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 65.5,
-      "total": 76.3,
-      "risk": 0.237
-    },
-    "total_score": 76.3
+    "total_score": 76.5
   },
   {
     "horse_id": "H0087",
@@ -2582,41 +2555,41 @@
       "form": 99.3,
       "jockey": 49,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 66.5,
-      "total": 76.2,
-      "risk": 0.238
+      "total": 76.3,
+      "risk": 0.237
     },
-    "total_score": 76.2
+    "total_score": 76.3
   },
   {
-    "horse_id": "H0143",
-    "name": "Horse_143",
-    "finish_time": 84.38,
-    "weight": 392,
+    "horse_id": "H0104",
+    "name": "Horse_104",
+    "finish_time": 90.74,
+    "weight": 544,
     "jockey": "Joker4",
     "track": "Sand",
-    "distance": 1331,
-    "weather": "Windy",
-    "track_type": "Sand",
-    "race_time": 199,
-    "jockey_recent_performance": 51,
-    "predicted_finish_time": 84.52151489257812,
+    "distance": 1706,
+    "weather": "Rainy",
+    "track_type": "Grass",
+    "race_time": 476,
+    "jockey_recent_performance": 49,
+    "predicted_finish_time": 90.76986694335938,
     "risk_score": 0,
     "analysis": {
-      "form": 98.6,
-      "jockey": 51,
+      "form": 99.7,
+      "jockey": 49,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
-      "physical": 58.5,
-      "total": 76.1,
-      "risk": 0.239
+      "physical": 65.5,
+      "total": 76.3,
+      "risk": 0.237
     },
-    "total_score": 76.1
+    "total_score": 76.3
   },
   {
     "horse_id": "H0054",
@@ -2636,14 +2609,41 @@
       "form": 99.2,
       "jockey": 51,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 54.5,
-      "total": 76.0,
-      "risk": 0.24
+      "total": 76.1,
+      "risk": 0.239
     },
-    "total_score": 76.0
+    "total_score": 76.1
+  },
+  {
+    "horse_id": "H0143",
+    "name": "Horse_143",
+    "finish_time": 84.38,
+    "weight": 392,
+    "jockey": "Joker4",
+    "track": "Sand",
+    "distance": 1331,
+    "weather": "Windy",
+    "track_type": "Sand",
+    "race_time": 199,
+    "jockey_recent_performance": 51,
+    "predicted_finish_time": 84.52151489257812,
+    "risk_score": 0,
+    "analysis": {
+      "form": 98.6,
+      "jockey": 51,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 58.5,
+      "total": 76.1,
+      "risk": 0.239
+    },
+    "total_score": 76.1
   },
   {
     "horse_id": "H0022",
@@ -2663,14 +2663,14 @@
       "form": 97.8,
       "jockey": 49,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 65.5,
-      "total": 75.8,
-      "risk": 0.242
+      "total": 75.9,
+      "risk": 0.241
     },
-    "total_score": 75.8
+    "total_score": 75.9
   },
   {
     "horse_id": "H0033",
@@ -2690,14 +2690,14 @@
       "form": 99.6,
       "jockey": 48,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 61.0,
-      "total": 75.8,
-      "risk": 0.242
+      "total": 75.9,
+      "risk": 0.241
     },
-    "total_score": 75.8
+    "total_score": 75.9
   },
   {
     "horse_id": "H0119",
@@ -2717,12 +2717,12 @@
       "form": 99.0,
       "jockey": 43,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 82.0,
       "total": 75.8,
-      "risk": 0.243
+      "risk": 0.242
     },
     "total_score": 75.8
   },
@@ -2744,14 +2744,14 @@
       "form": 95.9,
       "jockey": 47,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 77.5,
-      "total": 75.5,
-      "risk": 0.245
+      "total": 75.6,
+      "risk": 0.244
     },
-    "total_score": 75.5
+    "total_score": 75.6
   },
   {
     "horse_id": "H0031",
@@ -2771,7 +2771,7 @@
       "form": 73.1,
       "jockey": 72,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 86.5,
@@ -2798,7 +2798,7 @@
       "form": 98.9,
       "jockey": 41,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 81.5,
@@ -2825,14 +2825,14 @@
       "form": 98.4,
       "jockey": 41,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 80.5,
-      "total": 75.1,
-      "risk": 0.249
+      "total": 75.2,
+      "risk": 0.248
     },
-    "total_score": 75.1
+    "total_score": 75.2
   },
   {
     "horse_id": "H0145",
@@ -2852,14 +2852,14 @@
       "form": 97.5,
       "jockey": 40,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 83.5,
-      "total": 74.8,
-      "risk": 0.252
+      "total": 74.9,
+      "risk": 0.251
     },
-    "total_score": 74.8
+    "total_score": 74.9
   },
   {
     "horse_id": "H0144",
@@ -2879,7 +2879,7 @@
       "form": 99.7,
       "jockey": 34,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.5,
@@ -2906,7 +2906,7 @@
       "form": 98.7,
       "jockey": 41,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 68.5,
@@ -2914,33 +2914,6 @@
       "risk": 0.254
     },
     "total_score": 74.6
-  },
-  {
-    "horse_id": "H0135",
-    "name": "Horse_135",
-    "finish_time": 74.21,
-    "weight": 445,
-    "jockey": "Joker4",
-    "track": "Sand",
-    "distance": 1810,
-    "weather": "Windy",
-    "track_type": "Grass",
-    "race_time": 352,
-    "jockey_recent_performance": 35,
-    "predicted_finish_time": 74.22781372070312,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.8,
-      "jockey": 35,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 85.0,
-      "total": 74.5,
-      "risk": 0.255
-    },
-    "total_score": 74.5
   },
   {
     "horse_id": "H0027",
@@ -2960,14 +2933,41 @@
       "form": 98.9,
       "jockey": 41,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 64.0,
-      "total": 74.4,
-      "risk": 0.256
+      "total": 74.5,
+      "risk": 0.255
     },
-    "total_score": 74.4
+    "total_score": 74.5
+  },
+  {
+    "horse_id": "H0135",
+    "name": "Horse_135",
+    "finish_time": 74.21,
+    "weight": 445,
+    "jockey": "Joker4",
+    "track": "Sand",
+    "distance": 1810,
+    "weather": "Windy",
+    "track_type": "Grass",
+    "race_time": 352,
+    "jockey_recent_performance": 35,
+    "predicted_finish_time": 74.22781372070312,
+    "risk_score": 0,
+    "analysis": {
+      "form": 99.8,
+      "jockey": 35,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 85.0,
+      "total": 74.5,
+      "risk": 0.255
+    },
+    "total_score": 74.5
   },
   {
     "horse_id": "H0072",
@@ -2987,14 +2987,14 @@
       "form": 95.9,
       "jockey": 39,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 81.0,
-      "total": 74.1,
-      "risk": 0.259
+      "total": 74.2,
+      "risk": 0.258
     },
-    "total_score": 74.1
+    "total_score": 74.2
   },
   {
     "horse_id": "H0088",
@@ -3014,7 +3014,7 @@
       "form": 99.7,
       "jockey": 41,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 53.0,
@@ -3041,7 +3041,7 @@
       "form": 98.5,
       "jockey": 32,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 95.5,
@@ -3068,7 +3068,7 @@
       "form": 99.1,
       "jockey": 41,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 56.5,
@@ -3095,7 +3095,7 @@
       "form": 96.1,
       "jockey": 43,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 59.5,
@@ -3122,14 +3122,14 @@
       "form": 99.4,
       "jockey": 36,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 65.5,
-      "total": 73.6,
-      "risk": 0.264
+      "total": 73.7,
+      "risk": 0.263
     },
-    "total_score": 73.6
+    "total_score": 73.7
   },
   {
     "horse_id": "H0024",
@@ -3149,37 +3149,10 @@
       "form": 98.3,
       "jockey": 37,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 63.5,
-      "total": 73.5,
-      "risk": 0.265
-    },
-    "total_score": 73.5
-  },
-  {
-    "horse_id": "H0192",
-    "name": "Horse_192",
-    "finish_time": 92.33,
-    "weight": 430,
-    "jockey": "Joker3",
-    "track": "Dirt",
-    "distance": 1716,
-    "weather": "Rainy",
-    "track_type": "Grass",
-    "race_time": 1075,
-    "jockey_recent_performance": 32,
-    "predicted_finish_time": 92.28616333007812,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.6,
-      "jockey": 32,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 77.5,
       "total": 73.5,
       "risk": 0.265
     },
@@ -3203,14 +3176,41 @@
       "form": 98.4,
       "jockey": 39,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 54.5,
-      "total": 73.4,
-      "risk": 0.266
+      "total": 73.5,
+      "risk": 0.265
     },
-    "total_score": 73.4
+    "total_score": 73.5
+  },
+  {
+    "horse_id": "H0192",
+    "name": "Horse_192",
+    "finish_time": 92.33,
+    "weight": 430,
+    "jockey": "Joker3",
+    "track": "Dirt",
+    "distance": 1716,
+    "weather": "Rainy",
+    "track_type": "Grass",
+    "race_time": 1075,
+    "jockey_recent_performance": 32,
+    "predicted_finish_time": 92.28616333007812,
+    "risk_score": 0,
+    "analysis": {
+      "form": 99.6,
+      "jockey": 32,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 77.5,
+      "total": 73.5,
+      "risk": 0.265
+    },
+    "total_score": 73.5
   },
   {
     "horse_id": "H0014",
@@ -3230,14 +3230,14 @@
       "form": 98.9,
       "jockey": 31,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 80.5,
-      "total": 73.2,
+      "total": 73.3,
       "risk": 0.267
     },
-    "total_score": 73.2
+    "total_score": 73.3
   },
   {
     "horse_id": "H0020",
@@ -3257,7 +3257,7 @@
       "form": 98.0,
       "jockey": 30,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 88.0,
@@ -3284,14 +3284,14 @@
       "form": 97.3,
       "jockey": 34,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 72.5,
-      "total": 73.0,
-      "risk": 0.27
+      "total": 73.1,
+      "risk": 0.269
     },
-    "total_score": 73.0
+    "total_score": 73.1
   },
   {
     "horse_id": "H0128",
@@ -3311,14 +3311,14 @@
       "form": 97.9,
       "jockey": 32,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 71.0,
-      "total": 72.7,
-      "risk": 0.273
+      "total": 72.8,
+      "risk": 0.272
     },
-    "total_score": 72.7
+    "total_score": 72.8
   },
   {
     "horse_id": "H0158",
@@ -3338,7 +3338,7 @@
       "form": 99.1,
       "jockey": 31,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 68.5,
@@ -3365,7 +3365,7 @@
       "form": 97.3,
       "jockey": 35,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 60.5,
@@ -3373,33 +3373,6 @@
       "risk": 0.273
     },
     "total_score": 72.7
-  },
-  {
-    "horse_id": "H0037",
-    "name": "Horse_37",
-    "finish_time": 78.13,
-    "weight": 452,
-    "jockey": "Joker2",
-    "track": "Sand",
-    "distance": 1098,
-    "weather": "Rainy",
-    "track_type": "Grass",
-    "race_time": 560,
-    "jockey_recent_performance": 24,
-    "predicted_finish_time": 78.23111724853516,
-    "risk_score": 0,
-    "analysis": {
-      "form": 99.0,
-      "jockey": 24,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 88.5,
-      "total": 72.3,
-      "risk": 0.277
-    },
-    "total_score": 72.3
   },
   {
     "horse_id": "H0185",
@@ -3419,10 +3392,37 @@
       "form": 99.9,
       "jockey": 23,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 89.5,
+      "total": 72.4,
+      "risk": 0.276
+    },
+    "total_score": 72.4
+  },
+  {
+    "horse_id": "H0037",
+    "name": "Horse_37",
+    "finish_time": 78.13,
+    "weight": 452,
+    "jockey": "Joker2",
+    "track": "Sand",
+    "distance": 1098,
+    "weather": "Rainy",
+    "track_type": "Grass",
+    "race_time": 560,
+    "jockey_recent_performance": 24,
+    "predicted_finish_time": 78.23111724853516,
+    "risk_score": 0,
+    "analysis": {
+      "form": 99.0,
+      "jockey": 24,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 88.5,
       "total": 72.3,
       "risk": 0.277
     },
@@ -3446,14 +3446,14 @@
       "form": 99.1,
       "jockey": 32,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 55.0,
-      "total": 72.2,
-      "risk": 0.278
+      "total": 72.3,
+      "risk": 0.277
     },
-    "total_score": 72.2
+    "total_score": 72.3
   },
   {
     "horse_id": "H0170",
@@ -3473,14 +3473,14 @@
       "form": 98.9,
       "jockey": 23,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 88.5,
-      "total": 72.0,
-      "risk": 0.28
+      "total": 72.1,
+      "risk": 0.279
     },
-    "total_score": 72.0
+    "total_score": 72.1
   },
   {
     "horse_id": "H0181",
@@ -3500,7 +3500,7 @@
       "form": 99.8,
       "jockey": 22,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 77.0,
@@ -3527,7 +3527,7 @@
       "form": 99.5,
       "jockey": 21,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.5,
@@ -3535,33 +3535,6 @@
       "risk": 0.289
     },
     "total_score": 71.1
-  },
-  {
-    "horse_id": "H0161",
-    "name": "Horse_161",
-    "finish_time": 85.92,
-    "weight": 508,
-    "jockey": "Joker2",
-    "track": "Dirt",
-    "distance": 1668,
-    "weather": "Sunny",
-    "track_type": "Grass",
-    "race_time": 466,
-    "jockey_recent_performance": 18,
-    "predicted_finish_time": 85.80397033691406,
-    "risk_score": 0,
-    "analysis": {
-      "form": 98.8,
-      "jockey": 18,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 83.5,
-      "total": 70.8,
-      "risk": 0.292
-    },
-    "total_score": 70.8
   },
   {
     "horse_id": "H0006",
@@ -3581,14 +3554,41 @@
       "form": 96.2,
       "jockey": 24,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 71.5,
-      "total": 70.7,
-      "risk": 0.293
+      "total": 70.8,
+      "risk": 0.292
     },
-    "total_score": 70.7
+    "total_score": 70.8
+  },
+  {
+    "horse_id": "H0161",
+    "name": "Horse_161",
+    "finish_time": 85.92,
+    "weight": 508,
+    "jockey": "Joker2",
+    "track": "Dirt",
+    "distance": 1668,
+    "weather": "Sunny",
+    "track_type": "Grass",
+    "race_time": 466,
+    "jockey_recent_performance": 18,
+    "predicted_finish_time": 85.80397033691406,
+    "risk_score": 0,
+    "analysis": {
+      "form": 98.8,
+      "jockey": 18,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 83.5,
+      "total": 70.8,
+      "risk": 0.292
+    },
+    "total_score": 70.8
   },
   {
     "horse_id": "H0111",
@@ -3608,7 +3608,7 @@
       "form": 99.9,
       "jockey": 14,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.5,
@@ -3635,7 +3635,7 @@
       "form": 97.9,
       "jockey": 16,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 90.0,
@@ -3662,7 +3662,7 @@
       "form": 99.8,
       "jockey": 21,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 58.0,
@@ -3689,7 +3689,7 @@
       "form": 97.8,
       "jockey": 18,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 78.5,
@@ -3716,7 +3716,7 @@
       "form": 99.3,
       "jockey": 15,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 80.5,
@@ -3743,7 +3743,7 @@
       "form": 99.5,
       "jockey": 18,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.5,
@@ -3770,7 +3770,7 @@
       "form": 99.1,
       "jockey": 17,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 66.0,
@@ -3797,7 +3797,7 @@
       "form": 98.0,
       "jockey": 19,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 61.5,
@@ -3824,7 +3824,7 @@
       "form": 34.8,
       "jockey": 95,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 69.5,
@@ -3851,14 +3851,14 @@
       "form": 98.5,
       "jockey": 14,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.0,
-      "total": 69.2,
-      "risk": 0.308
+      "total": 69.3,
+      "risk": 0.307
     },
-    "total_score": 69.2
+    "total_score": 69.3
   },
   {
     "horse_id": "H0055",
@@ -3878,7 +3878,7 @@
       "form": 99.0,
       "jockey": 8,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.0,
@@ -3905,7 +3905,7 @@
       "form": 99.8,
       "jockey": 5,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 96.5,
@@ -3932,14 +3932,14 @@
       "form": 98.4,
       "jockey": 13,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 66.5,
-      "total": 68.8,
-      "risk": 0.312
+      "total": 68.9,
+      "risk": 0.311
     },
-    "total_score": 68.8
+    "total_score": 68.9
   },
   {
     "horse_id": "H0186",
@@ -3959,14 +3959,14 @@
       "form": 99.2,
       "jockey": 11,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.5,
-      "total": 68.8,
-      "risk": 0.312
+      "total": 68.9,
+      "risk": 0.311
     },
-    "total_score": 68.8
+    "total_score": 68.9
   },
   {
     "horse_id": "H0026",
@@ -3986,14 +3986,14 @@
       "form": 97.0,
       "jockey": 6,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 99.5,
-      "total": 68.7,
-      "risk": 0.313
+      "total": 68.8,
+      "risk": 0.312
     },
-    "total_score": 68.7
+    "total_score": 68.8
   },
   {
     "horse_id": "H0019",
@@ -4013,14 +4013,14 @@
       "form": 50.0,
       "jockey": 66,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.5,
-      "total": 68.6,
-      "risk": 0.314
+      "total": 68.7,
+      "risk": 0.313
     },
-    "total_score": 68.6
+    "total_score": 68.7
   },
   {
     "horse_id": "H0053",
@@ -4040,7 +4040,7 @@
       "form": 97.9,
       "jockey": 9,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 78.0,
@@ -4067,7 +4067,7 @@
       "form": 98.4,
       "jockey": 3,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 96.0,
@@ -4094,7 +4094,7 @@
       "form": 99.3,
       "jockey": 0,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 99.5,
@@ -4121,7 +4121,7 @@
       "form": 99.2,
       "jockey": 11,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 55.5,
@@ -4148,7 +4148,7 @@
       "form": 99.0,
       "jockey": 2,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.5,
@@ -4175,12 +4175,12 @@
       "form": 99.2,
       "jockey": 11,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 53.0,
       "total": 68.0,
-      "risk": 0.321
+      "risk": 0.32
     },
     "total_score": 68.0
   },
@@ -4202,7 +4202,7 @@
       "form": 30.6,
       "jockey": 86,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.5,
@@ -4229,14 +4229,14 @@
       "form": 99.6,
       "jockey": 5,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 68.5,
-      "total": 67.6,
-      "risk": 0.324
+      "total": 67.7,
+      "risk": 0.323
     },
-    "total_score": 67.6
+    "total_score": 67.7
   },
   {
     "horse_id": "H0036",
@@ -4256,14 +4256,14 @@
       "form": 99.7,
       "jockey": 6,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.5,
-      "total": 67.5,
-      "risk": 0.325
+      "total": 67.6,
+      "risk": 0.324
     },
-    "total_score": 67.5
+    "total_score": 67.6
   },
   {
     "horse_id": "H0048",
@@ -4283,14 +4283,14 @@
       "form": 98.2,
       "jockey": 2,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 85.5,
-      "total": 67.5,
-      "risk": 0.325
+      "total": 67.6,
+      "risk": 0.324
     },
-    "total_score": 67.5
+    "total_score": 67.6
   },
   {
     "horse_id": "H0189",
@@ -4310,7 +4310,7 @@
       "form": 99.2,
       "jockey": 3,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 73.0,
@@ -4337,7 +4337,7 @@
       "form": 100.0,
       "jockey": 3,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 67.5,
@@ -4345,33 +4345,6 @@
       "risk": 0.327
     },
     "total_score": 67.3
-  },
-  {
-    "horse_id": "H0176",
-    "name": "Horse_176",
-    "finish_time": 99.86,
-    "weight": 404,
-    "jockey": "Joker3",
-    "track": "Sand",
-    "distance": 1914,
-    "weather": "Windy",
-    "track_type": "Grass",
-    "race_time": 1118,
-    "jockey_recent_performance": 56,
-    "predicted_finish_time": 95.64030456542969,
-    "risk_score": 15.449999809265137,
-    "analysis": {
-      "form": 57.8,
-      "jockey": 56,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 64.5,
-      "total": 67.2,
-      "risk": 0.328
-    },
-    "total_score": 67.2
   },
   {
     "horse_id": "H0065",
@@ -4391,14 +4364,41 @@
       "form": 99.7,
       "jockey": 4,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.0,
-      "total": 67.1,
-      "risk": 0.329
+      "total": 67.2,
+      "risk": 0.328
     },
-    "total_score": 67.1
+    "total_score": 67.2
+  },
+  {
+    "horse_id": "H0176",
+    "name": "Horse_176",
+    "finish_time": 99.86,
+    "weight": 404,
+    "jockey": "Joker3",
+    "track": "Sand",
+    "distance": 1914,
+    "weather": "Windy",
+    "track_type": "Grass",
+    "race_time": 1118,
+    "jockey_recent_performance": 56,
+    "predicted_finish_time": 95.64030456542969,
+    "risk_score": 15.449999809265137,
+    "analysis": {
+      "form": 57.8,
+      "jockey": 56,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 64.5,
+      "total": 67.2,
+      "risk": 0.328
+    },
+    "total_score": 67.2
   },
   {
     "horse_id": "H0196",
@@ -4418,7 +4418,7 @@
       "form": 98.6,
       "jockey": 1,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 78.5,
@@ -4445,14 +4445,14 @@
       "form": 97.9,
       "jockey": 3,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 69.0,
-      "total": 66.8,
-      "risk": 0.332
+      "total": 66.9,
+      "risk": 0.331
     },
-    "total_score": 66.8
+    "total_score": 66.9
   },
   {
     "horse_id": "H0008",
@@ -4472,7 +4472,7 @@
       "form": 97.8,
       "jockey": 1,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.0,
@@ -4499,7 +4499,7 @@
       "form": 79.3,
       "jockey": 21,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 65.0,
@@ -4526,7 +4526,7 @@
       "form": 25.4,
       "jockey": 80,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 86.5,
@@ -4553,14 +4553,14 @@
       "form": 51.8,
       "jockey": 39,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.5,
-      "total": 63.6,
-      "risk": 0.364
+      "total": 63.7,
+      "risk": 0.363
     },
-    "total_score": 63.6
+    "total_score": 63.7
   },
   {
     "horse_id": "H0153",
@@ -4580,14 +4580,14 @@
       "form": 3.1,
       "jockey": 98,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 97.5,
-      "total": 63.5,
-      "risk": 0.365
+      "total": 63.6,
+      "risk": 0.364
     },
-    "total_score": 63.5
+    "total_score": 63.6
   },
   {
     "horse_id": "H0172",
@@ -4607,7 +4607,7 @@
       "form": 15.5,
       "jockey": 89,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.0,
@@ -4634,7 +4634,7 @@
       "form": 78.0,
       "jockey": 3,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 71.0,
@@ -4661,7 +4661,7 @@
       "form": 35.5,
       "jockey": 52,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 75.5,
@@ -4688,14 +4688,14 @@
       "form": 0,
       "jockey": 96,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.5,
-      "total": 61.0,
-      "risk": 0.39
+      "total": 61.1,
+      "risk": 0.389
     },
-    "total_score": 61.0
+    "total_score": 61.1
   },
   {
     "horse_id": "H0151",
@@ -4715,7 +4715,7 @@
       "form": 0,
       "jockey": 93,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 71.0,
@@ -4742,7 +4742,7 @@
       "form": 0,
       "jockey": 85,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 79.5,
@@ -4769,7 +4769,7 @@
       "form": 0,
       "jockey": 84,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 68.0,
@@ -4796,7 +4796,7 @@
       "form": 0,
       "jockey": 84,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 67.5,
@@ -4823,7 +4823,7 @@
       "form": 0,
       "jockey": 82,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 72.0,
@@ -4850,7 +4850,7 @@
       "form": 0,
       "jockey": 79,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 56.0,
@@ -4877,7 +4877,7 @@
       "form": 0,
       "jockey": 61,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 98.0,
@@ -4904,7 +4904,7 @@
       "form": 0,
       "jockey": 61,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 93.5,
@@ -4931,7 +4931,7 @@
       "form": 0,
       "jockey": 40,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 92.0,
@@ -4958,7 +4958,7 @@
       "form": 0,
       "jockey": 33,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 91.5,
@@ -4985,14 +4985,14 @@
       "form": 0,
       "jockey": 31,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 95.0,
-      "total": 49.2,
-      "risk": 0.508
+      "total": 49.3,
+      "risk": 0.507
     },
-    "total_score": 49.2
+    "total_score": 49.3
   },
   {
     "horse_id": "H0077",
@@ -5012,14 +5012,14 @@
       "form": 0,
       "jockey": 37,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 70.5,
-      "total": 49.2,
-      "risk": 0.508
+      "total": 49.3,
+      "risk": 0.507
     },
-    "total_score": 49.2
+    "total_score": 49.3
   },
   {
     "horse_id": "H0133",
@@ -5039,10 +5039,37 @@
       "form": 0,
       "jockey": 22,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 93.5,
+      "total": 47.4,
+      "risk": 0.526
+    },
+    "total_score": 47.4
+  },
+  {
+    "horse_id": "H0138",
+    "name": "Horse_138",
+    "finish_time": 115.09,
+    "weight": 428,
+    "jockey": "Joker1",
+    "track": "Grass",
+    "distance": 1681,
+    "weather": "Windy",
+    "track_type": "Dirt",
+    "race_time": 1228,
+    "jockey_recent_performance": 26,
+    "predicted_finish_time": 89.37643432617188,
+    "risk_score": 0,
+    "analysis": {
+      "form": 0,
+      "jockey": 26,
+      "track_fit": 100,
+      "weather": 83.3,
+      "pedigree": 60,
+      "trainer": 60,
+      "physical": 76.5,
       "total": 47.4,
       "risk": 0.526
     },
@@ -5066,37 +5093,10 @@
       "form": 0,
       "jockey": 31,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 56.0,
-      "total": 47.3,
-      "risk": 0.527
-    },
-    "total_score": 47.3
-  },
-  {
-    "horse_id": "H0138",
-    "name": "Horse_138",
-    "finish_time": 115.09,
-    "weight": 428,
-    "jockey": "Joker1",
-    "track": "Grass",
-    "distance": 1681,
-    "weather": "Windy",
-    "track_type": "Dirt",
-    "race_time": 1228,
-    "jockey_recent_performance": 26,
-    "predicted_finish_time": 89.37643432617188,
-    "risk_score": 0,
-    "analysis": {
-      "form": 0,
-      "jockey": 26,
-      "track_fit": 100,
-      "weather": 83.0,
-      "pedigree": 60,
-      "trainer": 60,
-      "physical": 76.5,
       "total": 47.3,
       "risk": 0.527
     },
@@ -5120,7 +5120,7 @@
       "form": 0,
       "jockey": 27,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 67.0,
@@ -5147,14 +5147,14 @@
       "form": 0,
       "jockey": 24,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 74.5,
-      "total": 46.8,
-      "risk": 0.532
+      "total": 46.9,
+      "risk": 0.531
     },
-    "total_score": 46.8
+    "total_score": 46.9
   },
   {
     "horse_id": "H0080",
@@ -5174,14 +5174,14 @@
       "form": 0,
       "jockey": 22,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 80.5,
-      "total": 46.7,
-      "risk": 0.533
+      "total": 46.8,
+      "risk": 0.532
     },
-    "total_score": 46.7
+    "total_score": 46.8
   },
   {
     "horse_id": "H0017",
@@ -5201,7 +5201,7 @@
       "form": 0,
       "jockey": 21,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 72.0,
@@ -5228,7 +5228,7 @@
       "form": 0,
       "jockey": 20,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 76.0,
@@ -5255,14 +5255,14 @@
       "form": 0,
       "jockey": 21,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 64.5,
-      "total": 45.7,
-      "risk": 0.543
+      "total": 45.8,
+      "risk": 0.542
     },
-    "total_score": 45.7
+    "total_score": 45.8
   },
   {
     "horse_id": "H0094",
@@ -5282,14 +5282,14 @@
       "form": 0,
       "jockey": 17,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 62.5,
-      "total": 44.8,
-      "risk": 0.552
+      "total": 44.9,
+      "risk": 0.551
     },
-    "total_score": 44.8
+    "total_score": 44.9
   },
   {
     "horse_id": "H0083",
@@ -5309,7 +5309,7 @@
       "form": 0,
       "jockey": 12,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 57.5,
@@ -5336,7 +5336,7 @@
       "form": 0,
       "jockey": 1,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 94.0,
@@ -5363,14 +5363,14 @@
       "form": 0,
       "jockey": 1,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 88.5,
-      "total": 42.9,
-      "risk": 0.571
+      "total": 43.0,
+      "risk": 0.57
     },
-    "total_score": 42.9
+    "total_score": 43.0
   },
   {
     "horse_id": "H0159",
@@ -5390,7 +5390,7 @@
       "form": 0,
       "jockey": 6,
       "track_fit": 100,
-      "weather": 83.0,
+      "weather": 83.3,
       "pedigree": 60,
       "trainer": 60,
       "physical": 67.5,

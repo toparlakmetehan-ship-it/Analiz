@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-16T19:13:16.225156",
+  "generated_at": "2026-11-16T19:45:43.900710",
   "total_horses": 200,
   "top10": [
     {
       "id": "H0012",
       "name": "Horse_12",
-      "score": 86.9
+      "score": 87.0
     },
     {
       "id": "H0127",
@@ -18,19 +18,19 @@
       "score": 86.8
     },
     {
-      "id": "H0154",
-      "name": "Horse_154",
-      "score": 86.7
-    },
-    {
       "id": "H0187",
       "name": "Horse_187",
-      "score": 86.7
+      "score": 86.8
     },
     {
       "id": "H0034",
       "name": "Horse_34",
-      "score": 86.6
+      "score": 86.7
+    },
+    {
+      "id": "H0154",
+      "name": "Horse_154",
+      "score": 86.7
     },
     {
       "id": "H0040",
@@ -40,7 +40,7 @@
     {
       "id": "H0092",
       "name": "Horse_92",
-      "score": 86.3
+      "score": 86.4
     },
     {
       "id": "H0173",
@@ -50,7 +50,7 @@
     {
       "id": "H0013",
       "name": "Horse_13",
-      "score": 86.1
+      "score": 86.2
     }
   ],
   "weather_cities": [
