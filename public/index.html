@@ -3835,7 +3835,8 @@ function calculatePowerIndex(horse, raceHorses = []) {
   const pedScore = Math.min(99, Math.max(30, rawPed + surfaceDelta));
 
   // [Faktör 3: TJK Handikap & Sınıf Gücü - %12]
-  const allHps = raceHorses.length > 0 ? raceHorses.map(h => getEffectiveHandicap(h)) : [40, 60];
+  const activeRaceHorses = raceHorses.filter(h => !h.isKosmaz);
+  const allHps = activeRaceHorses.length > 0 ? activeRaceHorses.map(h => getEffectiveHandicap(h)) : [40, 60];
   const maxHp = Math.max(...allHps);
   const minHp = Math.min(...allHps);
   const hp = getEffectiveHandicap(horse);
