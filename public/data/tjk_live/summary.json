@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T16:27:00.803804",
+  "generated_at": "2026-11-16T16:38:42.650384",
   "total_horses": 200,
   "top10": [
     {
@@ -57,8 +57,7 @@
     "Istanbul",
     "Ankara",
     "Izmir",
-    "Adana",
-    "Bursa"
+    "Adana"
   ],
   "results_fetched": 0,
   "program_fetched": 0
