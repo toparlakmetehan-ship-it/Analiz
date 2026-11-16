@@ -6,8 +6,8 @@
     "Bursa",
     "Şanlıurfa"
   ],
-  "guncellemeZamani": "2026-11-16T23:01:53.841624",
-  "sonSenkronizasyon": "23:01:53",
+  "guncellemeZamani": "2026-11-16T20:06:06.676Z",
+  "sonSenkronizasyon": "23:06:06",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -27,7 +27,7 @@
       "sentetikOlcum": "Yarış Yok",
       "birimFiyat": 1.25,
       "birimFiyatEtiket": "Büyük Şehir Hipodromu (1.25 ₺)",
-      "asgariKuponTL": 20.0,
+      "asgariKuponTL": 20,
       "altiliPaketleri": [
         {
           "paketNo": 1,
@@ -5717,7 +5717,7 @@
       "sentetikOlcum": "Yarış Yok",
       "birimFiyat": 0.8,
       "birimFiyatEtiket": "Güneydoğu Hipodromu (0.80 ₺)",
-      "asgariKuponTL": 20.0,
+      "asgariKuponTL": 20,
       "altiliPaketleri": [
         {
           "paketNo": 1,
