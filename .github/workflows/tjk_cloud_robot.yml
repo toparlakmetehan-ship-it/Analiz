@@ -1,9 +1,6 @@
 name: TJK 7-24 Canlı Bulut Robotu ve Otomatik Güncelleme
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     # Sabah 09:00 TRT (06:00 UTC) - Günün Programı & Galopları
     - cron: '0 6 * * *'
