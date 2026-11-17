@@ -1,0 +1,2674 @@
+[
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "raceName": "",
+    "distance": 1900,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "ÜSTÜNSOY",
+        "age": 3,
+        "sire": "ÖZHABER",
+        "dam": "CERENİM",
+        "starts": 10,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.AKPINAR"
+      },
+      {
+        "no": 2,
+        "name": "YALNIZ AŞIK",
+        "age": 3,
+        "sire": "AŞIKBEY",
+        "dam": "JETKIZ",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "H.ÇİZİK"
+      },
+      {
+        "no": 3,
+        "name": "BALKIBEY",
+        "age": 3,
+        "sire": "SERDÜMEN",
+        "dam": "DENİZBOZAN",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.SÖZEN"
+      },
+      {
+        "no": 4,
+        "name": "AĞILMUS ASLANI",
+        "age": 3,
+        "sire": "GÜMBÜRGÜMBÜR",
+        "dam": "NAZZA",
+        "starts": 9,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "Ö.YILDIRIM"
+      },
+      {
+        "no": 5,
+        "name": "UZBOYLU",
+        "age": 3,
+        "sire": "ANKA",
+        "dam": "BETÜL",
+        "starts": 10,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "E.BOZDAĞ"
+      },
+      {
+        "no": 6,
+        "name": "DOSTBAŞAR",
+        "age": 3,
+        "sire": "YILMABAŞAR",
+        "dam": "HEYBELİADA",
+        "starts": 10,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "A.KURŞUN"
+      },
+      {
+        "no": 7,
+        "name": "AYDIN DAYI",
+        "age": 3,
+        "sire": "YAKUPBEY",
+        "dam": "CANAYCAN",
+        "starts": 16,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 8,
+        "name": "TAŞKARA",
+        "age": 3,
+        "sire": "BERKSOY",
+        "dam": "NAKİYE",
+        "starts": 7,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "B.AKÇAY"
+      },
+      {
+        "no": 9,
+        "name": "EFE KAPTAN",
+        "age": 3,
+        "sire": "GÜMBÜRGÜMBÜR",
+        "dam": "DRAMATİK",
+        "starts": 9,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "A.KAÇMAZ"
+      },
+      {
+        "no": 10,
+        "name": "ALKATRAZ KUŞÇUSU",
+        "age": 3,
+        "sire": "BATMANASLANI",
+        "dam": "KINALI KUZU",
+        "starts": 10,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "GKR",
+          "K"
+        ],
+        "jockey": "G.ÖZÇELİK"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "raceName": "",
+    "distance": 1600,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "SEYRET BENİ",
+        "age": 5,
+        "sire": "SERHANTAY",
+        "dam": "İRGÜN",
+        "starts": 50,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "BERK.GÖKÇE"
+      },
+      {
+        "no": 2,
+        "name": "ÇELİK ABİ",
+        "age": 4,
+        "sire": "BALTACI",
+        "dam": "FLY SULTAN",
+        "starts": 28,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "B.AKÇAY"
+      },
+      {
+        "no": 3,
+        "name": "ALATTİN",
+        "age": 5,
+        "sire": "AYABAKAN",
+        "dam": "SEBİLE",
+        "starts": 46,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "R.KETME"
+      },
+      {
+        "no": 4,
+        "name": "BABA ZAMAN",
+        "age": 7,
+        "sire": "SULTAN DE FAUST",
+        "dam": "ATIĞ HATUN",
+        "starts": 104,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.KAYA"
+      },
+      {
+        "no": 5,
+        "name": "EFLAH",
+        "age": 5,
+        "sire": "ÖZGÜNHAN",
+        "dam": "SEPYA",
+        "starts": 38,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "H.KARATAŞ"
+      },
+      {
+        "no": 6,
+        "name": "SANCAR",
+        "age": 9,
+        "sire": "ALTAHA",
+        "dam": "RENGİN",
+        "starts": 83,
+        "currentStyle": "Kaçak / Lider",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.SÖZEN"
+      },
+      {
+        "no": 7,
+        "name": "LUSİA",
+        "age": 7,
+        "sire": "KAIZBERT",
+        "dam": "DOST ELİ",
+        "starts": 68,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "G.ÖZÇELİK"
+      },
+      {
+        "no": 8,
+        "name": "KAYIPSIZ",
+        "age": 4,
+        "sire": "ODİNHAN",
+        "dam": "HANKIZI",
+        "starts": 21,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "V.ABİŞ"
+      },
+      {
+        "no": 9,
+        "name": "ELLİYEDİ",
+        "age": 5,
+        "sire": "MADRABAZ",
+        "dam": "ABAKAY",
+        "starts": 17,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 10,
+        "name": "ORMANCIBEY",
+        "age": 6,
+        "sire": "TURBO",
+        "dam": "İNCİÇİÇEĞİ",
+        "starts": 18,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.BOZDAĞ"
+      },
+      {
+        "no": 11,
+        "name": "CAYMAZBEY",
+        "age": 4,
+        "sire": "GÜMBÜRGÜMBÜR",
+        "dam": "ÜZÜM TANESİ",
+        "starts": 8,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "MAH.TURAN"
+      },
+      {
+        "no": 12,
+        "name": "DELİ ŞİMŞEK",
+        "age": 4,
+        "sire": "AYABAKAN",
+        "dam": "NURHANIM",
+        "starts": 11,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.ASLAN"
+      },
+      {
+        "no": 13,
+        "name": "DİLARASULTANIM",
+        "age": 5,
+        "sire": "TAMERİNOĞLU",
+        "dam": "YILDIRIMKIZ",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.KAÇMAZ"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 3,
+    "raceName": "",
+    "distance": 1400,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "ALWAYS HARD",
+        "age": 2,
+        "sire": "NATIVE KHAN",
+        "dam": "KIZIL BULUT",
+        "starts": 5,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.KAÇMAZ"
+      },
+      {
+        "no": 2,
+        "name": "BEST LINE",
+        "age": 2,
+        "sire": "ELARQAM",
+        "dam": "HONEYMOON",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "H.ÇİZİK"
+      },
+      {
+        "no": 3,
+        "name": "BÜYÜK ATTİLA",
+        "age": 2,
+        "sire": "PADRE PADRONE",
+        "dam": "EYE IN THE SKY",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "ER.CANKILIÇ"
+      },
+      {
+        "no": 4,
+        "name": "DON ÇİÇİ",
+        "age": 2,
+        "sire": "EPAULETTE",
+        "dam": "NORMA'S JOY",
+        "starts": 2,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "K"
+        ],
+        "jockey": "M.KAYA"
+      },
+      {
+        "no": 5,
+        "name": "DRAGON PRIME",
+        "age": 2,
+        "sire": "LUXOR",
+        "dam": "MISS SUNSHINE",
+        "starts": 4,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.BOZDAĞ"
+      },
+      {
+        "no": 6,
+        "name": "MACAPA",
+        "age": 2,
+        "sire": "VICTOIRE PISA",
+        "dam": "JUNGLE LAW",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.YILDIZ"
+      },
+      {
+        "no": 7,
+        "name": "MIO ZIO",
+        "age": 2,
+        "sire": "KLUGER",
+        "dam": "SAMOTHRAKI",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 8,
+        "name": "OĞLUM DORA",
+        "age": 2,
+        "sire": "TIGER MOTH",
+        "dam": "OVER ALL",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "R.KETME"
+      },
+      {
+        "no": 9,
+        "name": "RECHARGE MY HEART",
+        "age": 2,
+        "sire": "CAIRO PRINCE",
+        "dam": "CHANEL NUMBER ONE",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "Ö.YILDIRIM"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "raceName": "",
+    "distance": 2000,
+    "track": "Sentetik",
+    "horses": [
+      {
+        "no": 1,
+        "name": "ACOUSTIC SONG",
+        "age": 3,
+        "sire": "AMERİKALI",
+        "dam": "ACOUSTIC COVER",
+        "starts": 11,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.AKPINAR"
+      },
+      {
+        "no": 2,
+        "name": "GHOST COMMANDER",
+        "age": 3,
+        "sire": "AIR VICE MARSHAL",
+        "dam": "INNOCENT GHOST",
+        "starts": 15,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "ER.CANKILIÇ"
+      },
+      {
+        "no": 3,
+        "name": "ROCK FOR EVER",
+        "age": 3,
+        "sire": "PAPA CLEM",
+        "dam": "WINŞAH",
+        "starts": 24,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "BERK.GÖKÇE"
+      },
+      {
+        "no": 4,
+        "name": "VOLITIVO",
+        "age": 3,
+        "sire": "VICTOIRE PISA",
+        "dam": "BELLA BRAVA",
+        "starts": 12,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.KAYA"
+      },
+      {
+        "no": 5,
+        "name": "BOAZ",
+        "age": 3,
+        "sire": "PAPA CLEM",
+        "dam": "RIDE HIGH",
+        "starts": 18,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "A.KURŞUN"
+      },
+      {
+        "no": 6,
+        "name": "TYPHOON",
+        "age": 3,
+        "sire": "MYBOYCHARLIE",
+        "dam": "AYSUN SULTAN",
+        "starts": 27,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "O.ÖZTÜRK"
+      },
+      {
+        "no": 7,
+        "name": "SOCIAL BEE",
+        "age": 3,
+        "sire": "KLIMT",
+        "dam": "ALWAYS PERFECT",
+        "starts": 22,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "V.ABİŞ"
+      },
+      {
+        "no": 8,
+        "name": "HARP",
+        "age": 3,
+        "sire": "ANGEL OF DEATH",
+        "dam": "ALWAYS ON MY MIND",
+        "starts": 13,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "Ö.YILDIRIM"
+      },
+      {
+        "no": 9,
+        "name": "MAKİNİST",
+        "age": 3,
+        "sire": "SUPER SAVER",
+        "dam": "LAUD",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 10,
+        "name": "DARKROK",
+        "age": 3,
+        "sire": "TOROK",
+        "dam": "FATAL ATTRACTION",
+        "starts": 15,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.KAÇMAZ"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "raceName": "",
+    "distance": 1800,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "AYTOR",
+        "age": 2,
+        "sire": "DARK ANGEL*",
+        "dam": "GLORIFICATION",
+        "starts": 2,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "V.ABİŞ"
+      },
+      {
+        "no": 2,
+        "name": "BATURALP CAN",
+        "age": 2,
+        "sire": "MARCAVELLY",
+        "dam": "SNOWFLAKE",
+        "starts": 13,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "H.ÇİZİK"
+      },
+      {
+        "no": 3,
+        "name": "EMANET",
+        "age": 2,
+        "sire": "KLIMT",
+        "dam": "HİLALCAN",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "Ö.YILDIRIM"
+      },
+      {
+        "no": 4,
+        "name": "HAYRETBİŞEY",
+        "age": 2,
+        "sire": "KIRCAALİ",
+        "dam": "PLAYA DEL AMOR",
+        "starts": 7,
+        "currentStyle": "Presçi",
+        "gear": [],
+        "jockey": "H.KARATAŞ"
+      },
+      {
+        "no": 5,
+        "name": "MISTER EZEL",
+        "age": 2,
+        "sire": "OGHUZ",
+        "dam": "CUBA LIBRE",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "Z.KARABULUT"
+      },
+      {
+        "no": 6,
+        "name": "STEEL WINGS",
+        "age": 2,
+        "sire": "GENERAL QUARTERS",
+        "dam": "SİNKIZI",
+        "starts": 7,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "MAH.TURAN"
+      },
+      {
+        "no": 7,
+        "name": "VICTORY OF TOMO",
+        "age": 2,
+        "sire": "TOUCH THE WOLF",
+        "dam": "GÜLENGÜL",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "K"
+        ],
+        "jockey": "A.SÖZEN"
+      },
+      {
+        "no": 8,
+        "name": "WIND OF ROMANCE",
+        "age": 2,
+        "sire": "TIZWAY",
+        "dam": "WIND OF JOY",
+        "starts": 5,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.KURŞUN"
+      },
+      {
+        "no": 9,
+        "name": "BOLD LOVE",
+        "age": 2,
+        "sire": "INVINCIBLE ARMY",
+        "dam": "CHAPEL CHOIR",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "S.BOYRAZ"
+      },
+      {
+        "no": 10,
+        "name": "KUPA DOKUZLUSU",
+        "age": 2,
+        "sire": "TOROK",
+        "dam": "GLEN",
+        "starts": 7,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "G.ÖZÇELİK"
+      },
+      {
+        "no": 11,
+        "name": "LOLAN BEAUTY",
+        "age": 2,
+        "sire": "MYBOYCHARLIE",
+        "dam": "NO WARNING",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "M.A.SOLMAZ"
+      },
+      {
+        "no": 12,
+        "name": "SANAE",
+        "age": 2,
+        "sire": "SATONO ARES",
+        "dam": "SUMMER WINE",
+        "starts": 9,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 13,
+        "name": "SPEED QUEEN",
+        "age": 2,
+        "sire": "KANEKO",
+        "dam": "HOPEFUL",
+        "starts": 11,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "A.YILDIZ"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "raceName": "",
+    "distance": 1400,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "CHARABANC",
+        "age": 5,
+        "sire": "REAL SOLUTION",
+        "dam": "CELLO",
+        "starts": 17,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "V.ABİŞ"
+      },
+      {
+        "no": 2,
+        "name": "LETS WIN TOGETHER",
+        "age": 4,
+        "sire": "TOUCH THE WOLF",
+        "dam": "Fİ FENOMONİ",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "K"
+        ],
+        "jockey": "A.KURŞUN"
+      },
+      {
+        "no": 3,
+        "name": "SPECIAL MAN",
+        "age": 4,
+        "sire": "LUXOR",
+        "dam": "KIZIM MELİKE",
+        "starts": 22,
+        "currentStyle": "Presçi",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.SÖZEN"
+      },
+      {
+        "no": 4,
+        "name": "SUBUTAI",
+        "age": 7,
+        "sire": "COUNTERATTACK*",
+        "dam": "AAMAAL",
+        "starts": 73,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "ER.CANKILIÇ"
+      },
+      {
+        "no": 5,
+        "name": "TONBİ",
+        "age": 4,
+        "sire": "APPROVE",
+        "dam": "NEFERU",
+        "starts": 18,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "S.KAYA"
+      },
+      {
+        "no": 6,
+        "name": "AMAZING TOUCH",
+        "age": 4,
+        "sire": "TOUCH THE WOLF",
+        "dam": "AMAZING LOVE",
+        "starts": 20,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "H.KARATAŞ"
+      },
+      {
+        "no": 7,
+        "name": "WHIZBANG",
+        "age": 3,
+        "sire": "SADLER'S JOY",
+        "dam": "VALUE CHAIN",
+        "starts": 22,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "K"
+        ],
+        "jockey": "S.BOYRAZ"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "raceName": "",
+    "distance": 2400,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "AL TAN",
+        "age": 5,
+        "sire": "LUXOR",
+        "dam": "NO MORE STRIKE",
+        "starts": 41,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "V.ABİŞ"
+      },
+      {
+        "no": 2,
+        "name": "HANDSOME KING",
+        "age": 4,
+        "sire": "VICTOIRE PISA",
+        "dam": "NADİRE",
+        "starts": 27,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "A.KURŞUN"
+      },
+      {
+        "no": 3,
+        "name": "KALKÜTA",
+        "age": 4,
+        "sire": "POWERSCOURT",
+        "dam": "KARAK",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "S.BOYRAZ"
+      },
+      {
+        "no": 4,
+        "name": "TOR GOLD",
+        "age": 5,
+        "sire": "TOROK",
+        "dam": "SUZİ GOLD",
+        "starts": 28,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "H.ÇİZİK"
+      },
+      {
+        "no": 5,
+        "name": "TRUELY",
+        "age": 4,
+        "sire": "VICTOIRE PISA",
+        "dam": "HOW COME",
+        "starts": 25,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "H.KARATAŞ"
+      },
+      {
+        "no": 6,
+        "name": "BRANDO",
+        "age": 3,
+        "sire": "PAPA CLEM",
+        "dam": "ATEŞ GIRL",
+        "starts": 17,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "Ö.YILDIRIM"
+      },
+      {
+        "no": 7,
+        "name": "RAND AL THOR",
+        "age": 3,
+        "sire": "GRAYSTORM",
+        "dam": "MÜZEYYEN HANIM",
+        "starts": 13,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "A.YILDIZ"
+      },
+      {
+        "no": 8,
+        "name": "SUPER TOMO",
+        "age": 3,
+        "sire": "SUPER SAVER",
+        "dam": "TUĞÇE HANIM",
+        "starts": 37,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "A.SÖZEN"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 8,
+    "raceName": "",
+    "distance": 1400,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "MY ZEKO",
+        "age": 2,
+        "sire": "RHYTHM DIVINE",
+        "dam": "NEOTRIC",
+        "starts": 7,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "K"
+        ],
+        "jockey": "H.KARATAŞ"
+      },
+      {
+        "no": 2,
+        "name": "ALWAYS ON",
+        "age": 2,
+        "sire": "BLUEGRASS CAT",
+        "dam": "MISS DREAM",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "V.ABİŞ"
+      },
+      {
+        "no": 3,
+        "name": "AMENTES",
+        "age": 2,
+        "sire": "BEDWULF",
+        "dam": "SON EYLÜL",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "K"
+        ],
+        "jockey": "H.ÇİZİK"
+      },
+      {
+        "no": 4,
+        "name": "APARAJİTO",
+        "age": 2,
+        "sire": "BATTLEGROUND",
+        "dam": "BONA DEA",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "A.YILDIZ"
+      },
+      {
+        "no": 5,
+        "name": "BOLT NONSTOP",
+        "age": 2,
+        "sire": "KING DAVID",
+        "dam": "SUNAM",
+        "starts": 7,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "MAH.TURAN"
+      },
+      {
+        "no": 6,
+        "name": "KING LEGACY",
+        "age": 2,
+        "sire": "HELLO YOUMZAIN",
+        "dam": "THREE SIDED STORY",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 7,
+        "name": "MARMARALI",
+        "age": 2,
+        "sire": "TIZWAY",
+        "dam": "WILD HEART",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "A.KURŞUN"
+      },
+      {
+        "no": 8,
+        "name": "WIND OF FEAR",
+        "age": 2,
+        "sire": "KLIMT",
+        "dam": "NAUGHTY GIRL",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "G.ÖZÇELİK"
+      }
+    ]
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "raceName": "",
+    "distance": 1200,
+    "track": "Çim",
+    "horses": [
+      {
+        "no": 1,
+        "name": "NOX ATRA",
+        "age": 5,
+        "sire": "DAREDEVIL",
+        "dam": "KATSUYA",
+        "starts": 27,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "Ç.TAŞCI"
+      },
+      {
+        "no": 2,
+        "name": "HERKHAN STAR",
+        "age": 4,
+        "sire": "NATIVE KHAN",
+        "dam": "HERRING",
+        "starts": 40,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "A.SÖZEN"
+      },
+      {
+        "no": 3,
+        "name": "ANGEL QUEST",
+        "age": 5,
+        "sire": "AIR VICE MARSHAL",
+        "dam": "ISLAND QUEST",
+        "starts": 39,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "E.AKPINAR"
+      },
+      {
+        "no": 4,
+        "name": "FLYING JO",
+        "age": 5,
+        "sire": "MYBOYCHARLIE",
+        "dam": "FLO JO",
+        "starts": 39,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "B.AKÇAY"
+      },
+      {
+        "no": 5,
+        "name": "MODİGLİANİ",
+        "age": 4,
+        "sire": "MYBOYCHARLIE",
+        "dam": "HATCHE",
+        "starts": 33,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "G.ÖZÇELİK"
+      },
+      {
+        "no": 6,
+        "name": "HILDA",
+        "age": 3,
+        "sire": "LAWMAN",
+        "dam": "BAILEYS PARISIENNE",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "K"
+        ],
+        "jockey": "E.BOZDAĞ"
+      },
+      {
+        "no": 7,
+        "name": "GLONASS",
+        "age": 3,
+        "sire": "RULER OF THE WORLD",
+        "dam": "DANDY STORY",
+        "starts": 25,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "A.ASLAN"
+      },
+      {
+        "no": 8,
+        "name": "REDATIVE",
+        "age": 4,
+        "sire": "NATIVE KHAN",
+        "dam": "RED ONE",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "GÖK.BEKTAŞ"
+      },
+      {
+        "no": 9,
+        "name": "RUN LOLA RUN",
+        "age": 3,
+        "sire": "TOROK",
+        "dam": "ELMASTÜTÜN",
+        "starts": 13,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "E.AKTUĞ"
+      },
+      {
+        "no": 10,
+        "name": "BEETHOVEN",
+        "age": 3,
+        "sire": "COPPERFIELD",
+        "dam": "BAIADERA",
+        "starts": 4,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SKG",
+          "K"
+        ],
+        "jockey": "A.KAÇMAZ"
+      },
+      {
+        "no": 11,
+        "name": "KYLIAN",
+        "age": 4,
+        "sire": "BODEMEISTER",
+        "dam": "SİNTRA",
+        "starts": 16,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "Z.KARABULUT"
+      },
+      {
+        "no": 12,
+        "name": "FIRST MAY",
+        "age": 3,
+        "sire": "DEDEMİR",
+        "dam": "DEEP WATER GIRL",
+        "starts": 16,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "ZÜL.AYDOĞDİ"
+      },
+      {
+        "no": 13,
+        "name": "SENSHI AMAZON",
+        "age": 3,
+        "sire": "MER DE GLACE",
+        "dam": "FOLLE BLANCHE",
+        "starts": 14,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "S.AKBULAT SELÇUK AKBULAT cezalı olduğundan yarışta at binemeyecektir."
+      },
+      {
+        "no": 14,
+        "name": "KUZU DAYI",
+        "age": 3,
+        "sire": "MYBOYCHARLIE",
+        "dam": "GÜLİZ",
+        "starts": 8,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "U.LEVENT"
+      },
+      {
+        "no": 15,
+        "name": "BE MY PELİNTAY",
+        "age": 3,
+        "sire": "LUXOR",
+        "dam": "AMAYA",
+        "starts": 4,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "B.KARAGÖZ"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "raceName": "",
+    "distance": 1300,
+    "track": "Kum",
+    "horses": [
+      {
+        "no": 1,
+        "name": "AĞASAÇAN",
+        "age": 4,
+        "sire": "FATİH AĞA",
+        "dam": "GÜZELDİZDAR",
+        "starts": 33,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.ATLAMAZ"
+      },
+      {
+        "no": 2,
+        "name": "ŞAHKAYA",
+        "age": 4,
+        "sire": "YÜREKKAYA",
+        "dam": "DESTENAZ",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.ÇELİK"
+      },
+      {
+        "no": 3,
+        "name": "BAY ARAZ",
+        "age": 4,
+        "sire": "TÜMÖZ BEY",
+        "dam": "GÜZ GÜZELİ",
+        "starts": 10,
+        "currentStyle": "Orta Grup",
+        "gear": [],
+        "jockey": "M.KIYAK"
+      },
+      {
+        "no": 4,
+        "name": "ALİMENDER",
+        "age": 4,
+        "sire": "DEMİRDÖVEN",
+        "dam": "GÜLPARE",
+        "starts": 13,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      },
+      {
+        "no": 5,
+        "name": "SEVDA MEVSİMİ",
+        "age": 4,
+        "sire": "UFUKBİR",
+        "dam": "ŞENGÜLÜM",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.T.COŞKUN"
+      },
+      {
+        "no": 6,
+        "name": "BAŞ DAĞYUDAN",
+        "age": 4,
+        "sire": "TAMERİNOĞLU",
+        "dam": "STORM GIRL",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "M.AKYAVUZ"
+      },
+      {
+        "no": 7,
+        "name": "TEPELİ",
+        "age": 4,
+        "sire": "UÇANBEY",
+        "dam": "BİLGEAT",
+        "starts": 9,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "R.KURT"
+      },
+      {
+        "no": 8,
+        "name": "GÜZELMİNE",
+        "age": 4,
+        "sire": "FATİH AĞA",
+        "dam": "ZELYURT GÜLÜ",
+        "starts": 29,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "İ.AKYAVUZ"
+      },
+      {
+        "no": 9,
+        "name": "YÜCEOĞUL",
+        "age": 4,
+        "sire": "TAMERİNOĞLU",
+        "dam": "YÜCELAY",
+        "starts": 12,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "MÜS.ÇELİK"
+      },
+      {
+        "no": 10,
+        "name": "GÖREN ABİ",
+        "age": 4,
+        "sire": "AYABAKAN",
+        "dam": "ABİ DEVRAN",
+        "starts": 4,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.AKDAĞ"
+      },
+      {
+        "no": 11,
+        "name": "KÜLÜNÇE BEYİ",
+        "age": 4,
+        "sire": "SERHANTAY",
+        "dam": "AHUCEREN",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.UYAR"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 2,
+    "raceName": "",
+    "distance": 1300,
+    "track": "Kum",
+    "horses": [
+      {
+        "no": 1,
+        "name": "DALLAS MAN",
+        "age": 2,
+        "sire": "PAPA CLEM",
+        "dam": "ADİLE TEYZE",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "K"
+        ],
+        "jockey": "SAL.ÇELİK"
+      },
+      {
+        "no": 2,
+        "name": "DİONER",
+        "age": 2,
+        "sire": "GENERAL QUARTERS",
+        "dam": "SUZİ DIOMAND",
+        "starts": 2,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "F.S.M.SANSAR"
+      },
+      {
+        "no": 3,
+        "name": "HAKVERDİ",
+        "age": 2,
+        "sire": "NOBEL PRIZE",
+        "dam": "STROLL ON",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "İ.GÖÇER"
+      },
+      {
+        "no": 4,
+        "name": "ROMAN HAN",
+        "age": 2,
+        "sire": "SATONO ARES",
+        "dam": "ZALASULTAN",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "R.KURT"
+      },
+      {
+        "no": 5,
+        "name": "THUNDERSTRUCK",
+        "age": 2,
+        "sire": "BLUEGRASS CAT",
+        "dam": "VEGASTRUCK",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      },
+      {
+        "no": 6,
+        "name": "VEGVİSİR",
+        "age": 2,
+        "sire": "FEARLESS KING",
+        "dam": "PRINCESS FATIMA",
+        "starts": 5,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "F.R.BEBEK"
+      },
+      {
+        "no": 7,
+        "name": "SUFERING",
+        "age": 2,
+        "sire": "GÜNGÖR BABA",
+        "dam": "GÖLCÜK FIRTINASI",
+        "starts": 7,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.AKYAVUZ"
+      },
+      {
+        "no": 8,
+        "name": "VOOSEKEB",
+        "age": 2,
+        "sire": "MYBOYCHARLIE",
+        "dam": "PORTO ALEGRE",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "M.G.ARSLAN"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "raceName": "",
+    "distance": 1500,
+    "track": "Sentetik",
+    "horses": [
+      {
+        "no": 1,
+        "name": "PİSİFORMİS",
+        "age": 3,
+        "sire": "GÜRSU",
+        "dam": "CANIMINİÇİ",
+        "starts": 5,
+        "currentStyle": "Presçi",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "M.T.COŞKUN"
+      },
+      {
+        "no": 2,
+        "name": "BOZALAN",
+        "age": 3,
+        "sire": "ÖZGÜNHAN",
+        "dam": "VERA",
+        "starts": 12,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "SAL.ÇELİK"
+      },
+      {
+        "no": 3,
+        "name": "DEV YÜREK",
+        "age": 3,
+        "sire": "BERKSOY",
+        "dam": "ŞEKERPINAR",
+        "starts": 8,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.ÇELİK"
+      },
+      {
+        "no": 4,
+        "name": "KING ULUDAĞ",
+        "age": 3,
+        "sire": "BAŞ HÜKÜMDAR",
+        "dam": "SÖZLÜM",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "MÜS.ÇELİK"
+      },
+      {
+        "no": 5,
+        "name": "EYLÜLSEL",
+        "age": 3,
+        "sire": "EMBİR HAN",
+        "dam": "ÇAKIRCELEP",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "V.DEMİR"
+      },
+      {
+        "no": 6,
+        "name": "GÜZEL DEFNE",
+        "age": 3,
+        "sire": "SONALP",
+        "dam": "AHUNİGAR",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "GKR",
+          "K"
+        ],
+        "jockey": "E.ATLAMAZ"
+      },
+      {
+        "no": 7,
+        "name": "ŞARK AYAZI",
+        "age": 3,
+        "sire": "YAKUPBEY",
+        "dam": "NEŞENAZ",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "R.KURT"
+      },
+      {
+        "no": 8,
+        "name": "YARIŞ KRALİÇESİ",
+        "age": 3,
+        "sire": "AFRİKAANDER",
+        "dam": "ÇEŞMİ SİYAH",
+        "starts": 4,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "F.R.BEBEK"
+      },
+      {
+        "no": 9,
+        "name": "AHVES",
+        "age": 3,
+        "sire": "AYABAKAN",
+        "dam": "SANTİAGO",
+        "starts": 2,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.G.ARSLAN"
+      },
+      {
+        "no": 10,
+        "name": "KAĞANPU",
+        "age": 3,
+        "sire": "SERDÜMEN",
+        "dam": "BOSNA ZAMBAĞI",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.AKYAVUZ"
+      },
+      {
+        "no": 11,
+        "name": "ZÜMRÜTCAN",
+        "age": 3,
+        "sire": "SERHANTAY",
+        "dam": "ZİRENKKAYA",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "GKR",
+          "K"
+        ],
+        "jockey": "M.UYAR"
+      },
+      {
+        "no": 12,
+        "name": "O BİR KRALİÇE",
+        "age": 3,
+        "sire": "GÜMBÜRGÜMBÜR",
+        "dam": "ZAFER YOLU",
+        "starts": 5,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.A.AKGÖBEK"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 4,
+    "raceName": "",
+    "distance": 1300,
+    "track": "Kum",
+    "horses": [
+      {
+        "no": 1,
+        "name": "BALTAZARR",
+        "age": 2,
+        "sire": "MARCAVELLY",
+        "dam": "AMAZON QUEEN",
+        "starts": 3,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "R.KURT"
+      },
+      {
+        "no": 2,
+        "name": "HYPER ROCKER",
+        "age": 2,
+        "sire": "AGRESIVO",
+        "dam": "BELGİNİM",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      },
+      {
+        "no": 3,
+        "name": "LAS WEGAS",
+        "age": 2,
+        "sire": "AVERY ISLAND",
+        "dam": "AUTUMNGOLD",
+        "starts": 7,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "SAL.ÇELİK"
+      },
+      {
+        "no": 4,
+        "name": "LOVE OF AMERICA",
+        "age": 2,
+        "sire": "AMERİKALI",
+        "dam": "SEVDALUK",
+        "starts": 2,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "MÜS.ÇELİK"
+      },
+      {
+        "no": 5,
+        "name": "OĞUZUM",
+        "age": 2,
+        "sire": "HEP BERABER",
+        "dam": "VICTORY",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "F.S.M.SANSAR"
+      },
+      {
+        "no": 6,
+        "name": "VICTORY ADDICT",
+        "age": 2,
+        "sire": "HASAFET",
+        "dam": "BATMACI",
+        "starts": 4,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "K"
+        ],
+        "jockey": "A.ÇELİK"
+      },
+      {
+        "no": 7,
+        "name": "WHITE TRACE PUPETS",
+        "age": 2,
+        "sire": "CEMALCAN",
+        "dam": "GRAND BAZAAR",
+        "starts": 4,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.T.COŞKUN"
+      },
+      {
+        "no": 8,
+        "name": "HÜLYA ÇİÇEĞİ",
+        "age": 2,
+        "sire": "KULOĞLU",
+        "dam": "SENSİZ OLMAZ",
+        "starts": 4,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "İ.AKYAVUZ"
+      },
+      {
+        "no": 9,
+        "name": "SHA CARRI",
+        "age": 2,
+        "sire": "BODEMEISTER",
+        "dam": "ALLORA",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "M.AKYAVUZ"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "raceName": "",
+    "distance": 1200,
+    "track": "Kum",
+    "horses": [
+      {
+        "no": 1,
+        "name": "LEVERO",
+        "age": 3,
+        "sire": "NATIVE KHAN",
+        "dam": "SOUL SILVER",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.T.COŞKUN"
+      },
+      {
+        "no": 2,
+        "name": "ROSAS DEL ROSEDAL",
+        "age": 3,
+        "sire": "KANEKO",
+        "dam": "REAL GIRL",
+        "starts": 33,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      },
+      {
+        "no": 3,
+        "name": "DOLCE MARE",
+        "age": 3,
+        "sire": "BODEMEISTER",
+        "dam": "GIFTED SULTAN",
+        "starts": 11,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "E.ATLAMAZ"
+      },
+      {
+        "no": 4,
+        "name": "GRINGA",
+        "age": 3,
+        "sire": "OUTWORK",
+        "dam": "CAROLINA SOUTH",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "A.ÇELİK"
+      },
+      {
+        "no": 5,
+        "name": "CEMO CAN",
+        "age": 3,
+        "sire": "TILSIT",
+        "dam": "EL KIZI",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "İ.AKYAVUZ"
+      },
+      {
+        "no": 6,
+        "name": "FELICIA STAR",
+        "age": 3,
+        "sire": "KANEKO",
+        "dam": "KARMA",
+        "starts": 16,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "SAL.ÇELİK"
+      },
+      {
+        "no": 7,
+        "name": "KARDAHA",
+        "age": 3,
+        "sire": "KLIMT",
+        "dam": "IRMAK PRENSES",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.AKYAVUZ"
+      },
+      {
+        "no": 8,
+        "name": "LADY NAZO",
+        "age": 3,
+        "sire": "KLIMT",
+        "dam": "RENGİN",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.ÖZDEMİR"
+      },
+      {
+        "no": 9,
+        "name": "RUNNER ON RIVER",
+        "age": 3,
+        "sire": "TOUCH THE WOLF",
+        "dam": "GLORIA MUNDI",
+        "starts": 9,
+        "currentStyle": "Presçi",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.BAYIR"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "raceName": "",
+    "distance": 1400,
+    "track": "Kum",
+    "horses": [
+      {
+        "no": 1,
+        "name": "GÖK BERK",
+        "age": 4,
+        "sire": "TOUGH GUY",
+        "dam": "AMARİ",
+        "starts": 18,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.AKYAVUZ"
+      },
+      {
+        "no": 2,
+        "name": "BLACK PABLO",
+        "age": 4,
+        "sire": "KANEKO",
+        "dam": "CONTROLLABLE",
+        "starts": 28,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "MÜS.ÇELİK"
+      },
+      {
+        "no": 3,
+        "name": "REFLECTED GLORY",
+        "age": 4,
+        "sire": "WAR OF WILL",
+        "dam": "REFRESHING",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.ÇELİK"
+      },
+      {
+        "no": 4,
+        "name": "CUCURELLA",
+        "age": 4,
+        "sire": "GOOD CURRY",
+        "dam": "DAYLIGHT",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "SKG",
+          "K"
+        ],
+        "jockey": "F.S.M.SANSAR"
+      },
+      {
+        "no": 5,
+        "name": "DOĞANTÜRKBEYİ",
+        "age": 4,
+        "sire": "TIZWAY",
+        "dam": "HIZ DELİSİ",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "İ.AKYAVUZ"
+      },
+      {
+        "no": 6,
+        "name": "NIGHTFLYERS",
+        "age": 4,
+        "sire": "SIDNEY'S CANDY",
+        "dam": "ANOTHERMOUTHTOFEED",
+        "starts": 39,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "SAL.ÇELİK"
+      },
+      {
+        "no": 7,
+        "name": "SILENT TREATMENT",
+        "age": 3,
+        "sire": "BODEMEISTER",
+        "dam": "ART POWER",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.G.ARSLAN"
+      },
+      {
+        "no": 8,
+        "name": "FIRE OF TYGAR",
+        "age": 3,
+        "sire": "GOOD CURRY",
+        "dam": "SABİN",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 7,
+    "raceName": "",
+    "distance": 1300,
+    "track": "Kum",
+    "horses": [
+      {
+        "no": 1,
+        "name": "ASPUWA",
+        "age": 2,
+        "sire": "GOOD CURRY",
+        "dam": "FİRDES TAY",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.AKDEMİR"
+      },
+      {
+        "no": 2,
+        "name": "FIRE OF VALERIA",
+        "age": 2,
+        "sire": "FEARLESS KING",
+        "dam": "KUM GİBİ",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "M.T.COŞKUN"
+      },
+      {
+        "no": 3,
+        "name": "NOBLE CREST",
+        "age": 2,
+        "sire": "KLIMT",
+        "dam": "AFRA",
+        "starts": 8,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "K"
+        ],
+        "jockey": "A.ÇELİK"
+      },
+      {
+        "no": 4,
+        "name": "MISS DEVRAN",
+        "age": 2,
+        "sire": "VICTOIRE PISA",
+        "dam": "ÇAĞLASU",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "K"
+        ],
+        "jockey": "B.KELEŞOĞLU"
+      },
+      {
+        "no": 5,
+        "name": "TORYUMLU",
+        "age": 2,
+        "sire": "SATONO ARES",
+        "dam": "AKDERE",
+        "starts": 2,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "SAL.ÇELİK"
+      },
+      {
+        "no": 6,
+        "name": "AMORES",
+        "age": 2,
+        "sire": "KANEKO",
+        "dam": "LET HER GO",
+        "starts": 4,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "SK",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      },
+      {
+        "no": 7,
+        "name": "LADY TATMAR",
+        "age": 2,
+        "sire": "HEMSWORTH",
+        "dam": "DOLCE VITA",
+        "starts": 1,
+        "currentStyle": "Taktik Serbest (İlk 3 Koşusu)",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "İ.AKYAVUZ"
+      }
+    ]
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "raceName": "",
+    "distance": 2100,
+    "track": "Sentetik",
+    "horses": [
+      {
+        "no": 1,
+        "name": "QUEIMADA GRANDE",
+        "age": 9,
+        "sire": "LUXOR",
+        "dam": "NIGHTINGALE",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.ÇELİK"
+      },
+      {
+        "no": 2,
+        "name": "ESCAPE PATH",
+        "age": 4,
+        "sire": "EUPRHATES",
+        "dam": "BAHTIYARLI",
+        "starts": 39,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "SK",
+          "K"
+        ],
+        "jockey": "İ.AKYAVUZ"
+      },
+      {
+        "no": 3,
+        "name": "SOLİDO HERMANOS",
+        "age": 6,
+        "sire": "MENDIP",
+        "dam": "HEAVEN'S HELP",
+        "starts": 6,
+        "currentStyle": "Presçi",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.KIYAK"
+      },
+      {
+        "no": 4,
+        "name": "ANOTHER BANGER",
+        "age": 5,
+        "sire": "KANEKO",
+        "dam": "AL RADDA",
+        "starts": 38,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.S.ÇELİK"
+      },
+      {
+        "no": 5,
+        "name": "BOUCHERON",
+        "age": 5,
+        "sire": "ABBAS YOLCU",
+        "dam": "LIFETIME",
+        "starts": 64,
+        "currentStyle": "Presçi",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "SKG",
+          "K"
+        ],
+        "jockey": "M.T.COŞKUN"
+      },
+      {
+        "no": 6,
+        "name": "EXPRESS",
+        "age": 5,
+        "sire": "AUTHORIZED",
+        "dam": "BLUE BEADS",
+        "starts": 6,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "R.KURT"
+      },
+      {
+        "no": 7,
+        "name": "SHINING FORCE",
+        "age": 4,
+        "sire": "HAKEEM",
+        "dam": "IM A DREAMER",
+        "starts": 6,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "M.ÖZDEMİR"
+      },
+      {
+        "no": 8,
+        "name": "BERİD",
+        "age": 5,
+        "sire": "NATIVE KHAN",
+        "dam": "AYSULTAN",
+        "starts": 78,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "DB",
+          "K"
+        ],
+        "jockey": "V.DEMİR"
+      },
+      {
+        "no": 9,
+        "name": "GENGAR",
+        "age": 4,
+        "sire": "PAPA CLEM",
+        "dam": "HIPNOZ",
+        "starts": 24,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "KG",
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "A.ÇELİK"
+      },
+      {
+        "no": 10,
+        "name": "YÖRÜKÇEM",
+        "age": 3,
+        "sire": "EPAULETTE",
+        "dam": "STRAWBERRY",
+        "starts": 8,
+        "currentStyle": "Düzlük Sprinteri",
+        "gear": [
+          "DB",
+          "SK",
+          "K"
+        ],
+        "jockey": "E.ATLAMAZ"
+      },
+      {
+        "no": 11,
+        "name": "FALCONGIRL",
+        "age": 4,
+        "sire": "MY FREEDOM",
+        "dam": "INCREDIBLE TOUCH",
+        "starts": 32,
+        "currentStyle": "Orta Grup",
+        "gear": [
+          "KG",
+          "K"
+        ],
+        "jockey": "F.R.BEBEK"
+      }
+    ]
+  }
+]

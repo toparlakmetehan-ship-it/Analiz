@@ -143,7 +143,7 @@ def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name=""):
             "delta": 0,
             "color": "#38bdf8",
             "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
-            **stats,
+            "stats": stats,
         }
 
     track = (race_track or "").strip().lower()

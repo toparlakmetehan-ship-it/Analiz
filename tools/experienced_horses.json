@@ -1,0 +1,2077 @@
+[
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 1,
+    "name": "ÜSTÜNSOY",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "E.AKPINAR",
+    "toplamKosu": 10
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 2,
+    "name": "YALNIZ AŞIK",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "H.ÇİZİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 3,
+    "name": "BALKIBEY",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.SÖZEN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 4,
+    "name": "AĞILMUS ASLANI",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "Ö.YILDIRIM",
+    "toplamKosu": 9
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 5,
+    "name": "UZBOYLU",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "E.BOZDAĞ",
+    "toplamKosu": 10
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 6,
+    "name": "DOSTBAŞAR",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "A.KURŞUN",
+    "toplamKosu": 10
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 7,
+    "name": "AYDIN DAYI",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "E.AKTUĞ",
+    "toplamKosu": 16
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 8,
+    "name": "TAŞKARA",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "B.AKÇAY",
+    "toplamKosu": 7
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 9,
+    "name": "EFE KAPTAN",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "A.KAÇMAZ",
+    "toplamKosu": 9
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 1,
+    "horseNo": 10,
+    "name": "ALKATRAZ KUŞÇUSU",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "GKR",
+      "K"
+    ],
+    "jokey": "G.ÖZÇELİK",
+    "toplamKosu": 10
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 1,
+    "name": "SEYRET BENİ",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "BERK.GÖKÇE",
+    "toplamKosu": 50
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 2,
+    "name": "ÇELİK ABİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "B.AKÇAY",
+    "toplamKosu": 28
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 3,
+    "name": "ALATTİN",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "R.KETME",
+    "toplamKosu": 46
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 4,
+    "name": "BABA ZAMAN",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.KAYA",
+    "toplamKosu": 104
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 5,
+    "name": "EFLAH",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "H.KARATAŞ",
+    "toplamKosu": 38
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 6,
+    "name": "SANCAR",
+    "isYoung": false,
+    "currentStyle": "Kaçak / Lider",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.SÖZEN",
+    "toplamKosu": 83
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 7,
+    "name": "LUSİA",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "G.ÖZÇELİK",
+    "toplamKosu": 68
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 8,
+    "name": "KAYIPSIZ",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "V.ABİŞ",
+    "toplamKosu": 21
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 9,
+    "name": "ELLİYEDİ",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "E.AKTUĞ",
+    "toplamKosu": 17
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 10,
+    "name": "ORMANCIBEY",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "E.BOZDAĞ",
+    "toplamKosu": 18
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 11,
+    "name": "CAYMAZBEY",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "MAH.TURAN",
+    "toplamKosu": 8
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 12,
+    "name": "DELİ ŞİMŞEK",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.ASLAN",
+    "toplamKosu": 11
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 2,
+    "horseNo": 13,
+    "name": "DİLARASULTANIM",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.KAÇMAZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 3,
+    "horseNo": 1,
+    "name": "ALWAYS HARD",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.KAÇMAZ",
+    "toplamKosu": 5
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 3,
+    "horseNo": 3,
+    "name": "BÜYÜK ATTİLA",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "ER.CANKILIÇ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 3,
+    "horseNo": 5,
+    "name": "DRAGON PRIME",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "E.BOZDAĞ",
+    "toplamKosu": 4
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 1,
+    "name": "ACOUSTIC SONG",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "E.AKPINAR",
+    "toplamKosu": 11
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 2,
+    "name": "GHOST COMMANDER",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "ER.CANKILIÇ",
+    "toplamKosu": 15
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 3,
+    "name": "ROCK FOR EVER",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "BERK.GÖKÇE",
+    "toplamKosu": 24
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 4,
+    "name": "VOLITIVO",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.KAYA",
+    "toplamKosu": 12
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 5,
+    "name": "BOAZ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "A.KURŞUN",
+    "toplamKosu": 18
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 6,
+    "name": "TYPHOON",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "O.ÖZTÜRK",
+    "toplamKosu": 27
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 7,
+    "name": "SOCIAL BEE",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "V.ABİŞ",
+    "toplamKosu": 22
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 8,
+    "name": "HARP",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "Ö.YILDIRIM",
+    "toplamKosu": 13
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 9,
+    "name": "MAKİNİST",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "E.AKTUĞ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 4,
+    "horseNo": 10,
+    "name": "DARKROK",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.KAÇMAZ",
+    "toplamKosu": 15
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 2,
+    "name": "BATURALP CAN",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "H.ÇİZİK",
+    "toplamKosu": 13
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 4,
+    "name": "HAYRETBİŞEY",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [],
+    "jokey": "H.KARATAŞ",
+    "toplamKosu": 7
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 6,
+    "name": "STEEL WINGS",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "MAH.TURAN",
+    "toplamKosu": 7
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 7,
+    "name": "VICTORY OF TOMO",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "A.SÖZEN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 8,
+    "name": "WIND OF ROMANCE",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.KURŞUN",
+    "toplamKosu": 5
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 10,
+    "name": "KUPA DOKUZLUSU",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "G.ÖZÇELİK",
+    "toplamKosu": 7
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 12,
+    "name": "SANAE",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "E.AKTUĞ",
+    "toplamKosu": 9
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 5,
+    "horseNo": 13,
+    "name": "SPEED QUEEN",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "A.YILDIZ",
+    "toplamKosu": 11
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 1,
+    "name": "CHARABANC",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "V.ABİŞ",
+    "toplamKosu": 17
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 2,
+    "name": "LETS WIN TOGETHER",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "A.KURŞUN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 3,
+    "name": "SPECIAL MAN",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.SÖZEN",
+    "toplamKosu": 22
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 4,
+    "name": "SUBUTAI",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "ER.CANKILIÇ",
+    "toplamKosu": 73
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 5,
+    "name": "TONBİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "S.KAYA",
+    "toplamKosu": 18
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 6,
+    "name": "AMAZING TOUCH",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "H.KARATAŞ",
+    "toplamKosu": 20
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 6,
+    "horseNo": 7,
+    "name": "WHIZBANG",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "S.BOYRAZ",
+    "toplamKosu": 22
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 1,
+    "name": "AL TAN",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "V.ABİŞ",
+    "toplamKosu": 41
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 2,
+    "name": "HANDSOME KING",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "A.KURŞUN",
+    "toplamKosu": 27
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 3,
+    "name": "KALKÜTA",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "S.BOYRAZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 4,
+    "name": "TOR GOLD",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "H.ÇİZİK",
+    "toplamKosu": 28
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 5,
+    "name": "TRUELY",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "H.KARATAŞ",
+    "toplamKosu": 25
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 6,
+    "name": "BRANDO",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "Ö.YILDIRIM",
+    "toplamKosu": 17
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 7,
+    "name": "RAND AL THOR",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "A.YILDIZ",
+    "toplamKosu": 13
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 7,
+    "horseNo": 8,
+    "name": "SUPER TOMO",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "A.SÖZEN",
+    "toplamKosu": 37
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 8,
+    "horseNo": 1,
+    "name": "MY ZEKO",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "H.KARATAŞ",
+    "toplamKosu": 7
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 8,
+    "horseNo": 5,
+    "name": "BOLT NONSTOP",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "MAH.TURAN",
+    "toplamKosu": 7
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 1,
+    "name": "NOX ATRA",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "Ç.TAŞCI",
+    "toplamKosu": 27
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 2,
+    "name": "HERKHAN STAR",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "A.SÖZEN",
+    "toplamKosu": 40
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 3,
+    "name": "ANGEL QUEST",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "E.AKPINAR",
+    "toplamKosu": 39
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 4,
+    "name": "FLYING JO",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "B.AKÇAY",
+    "toplamKosu": 39
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 5,
+    "name": "MODİGLİANİ",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "G.ÖZÇELİK",
+    "toplamKosu": 33
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 6,
+    "name": "HILDA",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "E.BOZDAĞ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 7,
+    "name": "GLONASS",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "A.ASLAN",
+    "toplamKosu": 25
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 8,
+    "name": "REDATIVE",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "GÖK.BEKTAŞ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 9,
+    "name": "RUN LOLA RUN",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "E.AKTUĞ",
+    "toplamKosu": 13
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 10,
+    "name": "BEETHOVEN",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SKG",
+      "K"
+    ],
+    "jokey": "A.KAÇMAZ",
+    "toplamKosu": 4
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 11,
+    "name": "KYLIAN",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "Z.KARABULUT",
+    "toplamKosu": 16
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 12,
+    "name": "FIRST MAY",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "ZÜL.AYDOĞDİ",
+    "toplamKosu": 16
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 13,
+    "name": "SENSHI AMAZON",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "S.AKBULAT SELÇUK AKBULAT cezalı olduğundan yarışta at binemeyecektir.",
+    "toplamKosu": 14
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 14,
+    "name": "KUZU DAYI",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "U.LEVENT",
+    "toplamKosu": 8
+  },
+  {
+    "city": "İstanbul",
+    "raceNo": 9,
+    "horseNo": 15,
+    "name": "BE MY PELİNTAY",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "B.KARAGÖZ",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 1,
+    "name": "AĞASAÇAN",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "E.ATLAMAZ",
+    "toplamKosu": 33
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 2,
+    "name": "ŞAHKAYA",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.ÇELİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 3,
+    "name": "BAY ARAZ",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [],
+    "jokey": "M.KIYAK",
+    "toplamKosu": 10
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 4,
+    "name": "ALİMENDER",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "M.S.ÇELİK",
+    "toplamKosu": 13
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 5,
+    "name": "SEVDA MEVSİMİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.T.COŞKUN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 6,
+    "name": "BAŞ DAĞYUDAN",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "M.AKYAVUZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 7,
+    "name": "TEPELİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "R.KURT",
+    "toplamKosu": 9
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 8,
+    "name": "GÜZELMİNE",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "İ.AKYAVUZ",
+    "toplamKosu": 29
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 9,
+    "name": "YÜCEOĞUL",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "MÜS.ÇELİK",
+    "toplamKosu": 12
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 10,
+    "name": "GÖREN ABİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.AKDAĞ",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 1,
+    "horseNo": 11,
+    "name": "KÜLÜNÇE BEYİ",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.UYAR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 2,
+    "horseNo": 6,
+    "name": "VEGVİSİR",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "F.R.BEBEK",
+    "toplamKosu": 5
+  },
+  {
+    "city": "Adana",
+    "raceNo": 2,
+    "horseNo": 7,
+    "name": "SUFERING",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.AKYAVUZ",
+    "toplamKosu": 7
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 1,
+    "name": "PİSİFORMİS",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "M.T.COŞKUN",
+    "toplamKosu": 5
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 2,
+    "name": "BOZALAN",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "SAL.ÇELİK",
+    "toplamKosu": 12
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 3,
+    "name": "DEV YÜREK",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.ÇELİK",
+    "toplamKosu": 8
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 4,
+    "name": "KING ULUDAĞ",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "MÜS.ÇELİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 5,
+    "name": "EYLÜLSEL",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "V.DEMİR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 6,
+    "name": "GÜZEL DEFNE",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "GKR",
+      "K"
+    ],
+    "jokey": "E.ATLAMAZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 7,
+    "name": "ŞARK AYAZI",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "R.KURT",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 8,
+    "name": "YARIŞ KRALİÇESİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "F.R.BEBEK",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 10,
+    "name": "KAĞANPU",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.AKYAVUZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 11,
+    "name": "ZÜMRÜTCAN",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "GKR",
+      "K"
+    ],
+    "jokey": "M.UYAR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 3,
+    "horseNo": 12,
+    "name": "O BİR KRALİÇE",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.A.AKGÖBEK",
+    "toplamKosu": 5
+  },
+  {
+    "city": "Adana",
+    "raceNo": 4,
+    "horseNo": 3,
+    "name": "LAS WEGAS",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "SAL.ÇELİK",
+    "toplamKosu": 7
+  },
+  {
+    "city": "Adana",
+    "raceNo": 4,
+    "horseNo": 6,
+    "name": "VICTORY ADDICT",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "A.ÇELİK",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 4,
+    "horseNo": 7,
+    "name": "WHITE TRACE PUPETS",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.T.COŞKUN",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 4,
+    "horseNo": 8,
+    "name": "HÜLYA ÇİÇEĞİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "İ.AKYAVUZ",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 4,
+    "horseNo": 9,
+    "name": "SHA CARRI",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "M.AKYAVUZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 1,
+    "name": "LEVERO",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.T.COŞKUN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 2,
+    "name": "ROSAS DEL ROSEDAL",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "M.S.ÇELİK",
+    "toplamKosu": 33
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 3,
+    "name": "DOLCE MARE",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "E.ATLAMAZ",
+    "toplamKosu": 11
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 4,
+    "name": "GRINGA",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "A.ÇELİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 5,
+    "name": "CEMO CAN",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "İ.AKYAVUZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 6,
+    "name": "FELICIA STAR",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "SAL.ÇELİK",
+    "toplamKosu": 16
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 7,
+    "name": "KARDAHA",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.AKYAVUZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 8,
+    "name": "LADY NAZO",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.ÖZDEMİR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 5,
+    "horseNo": 9,
+    "name": "RUNNER ON RIVER",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.BAYIR",
+    "toplamKosu": 9
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 1,
+    "name": "GÖK BERK",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.AKYAVUZ",
+    "toplamKosu": 18
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 2,
+    "name": "BLACK PABLO",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "MÜS.ÇELİK",
+    "toplamKosu": 28
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 3,
+    "name": "REFLECTED GLORY",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.ÇELİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 4,
+    "name": "CUCURELLA",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "SKG",
+      "K"
+    ],
+    "jokey": "F.S.M.SANSAR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 5,
+    "name": "DOĞANTÜRKBEYİ",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "İ.AKYAVUZ",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 6,
+    "name": "NIGHTFLYERS",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "SAL.ÇELİK",
+    "toplamKosu": 39
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 7,
+    "name": "SILENT TREATMENT",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.G.ARSLAN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 6,
+    "horseNo": 8,
+    "name": "FIRE OF TYGAR",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "M.S.ÇELİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 7,
+    "horseNo": 1,
+    "name": "ASPUWA",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.AKDEMİR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 7,
+    "horseNo": 2,
+    "name": "FIRE OF VALERIA",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "M.T.COŞKUN",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 7,
+    "horseNo": 3,
+    "name": "NOBLE CREST",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "K"
+    ],
+    "jokey": "A.ÇELİK",
+    "toplamKosu": 8
+  },
+  {
+    "city": "Adana",
+    "raceNo": 7,
+    "horseNo": 4,
+    "name": "MISS DEVRAN",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "K"
+    ],
+    "jokey": "B.KELEŞOĞLU",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 7,
+    "horseNo": 6,
+    "name": "AMORES",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "SK",
+      "K"
+    ],
+    "jokey": "M.S.ÇELİK",
+    "toplamKosu": 4
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 1,
+    "name": "QUEIMADA GRANDE",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.ÇELİK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 2,
+    "name": "ESCAPE PATH",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "SK",
+      "K"
+    ],
+    "jokey": "İ.AKYAVUZ",
+    "toplamKosu": 39
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 3,
+    "name": "SOLİDO HERMANOS",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.KIYAK",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 4,
+    "name": "ANOTHER BANGER",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.S.ÇELİK",
+    "toplamKosu": 38
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 5,
+    "name": "BOUCHERON",
+    "isYoung": false,
+    "currentStyle": "Presçi",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "SKG",
+      "K"
+    ],
+    "jokey": "M.T.COŞKUN",
+    "toplamKosu": 64
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 6,
+    "name": "EXPRESS",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "R.KURT",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 7,
+    "name": "SHINING FORCE",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "M.ÖZDEMİR",
+    "toplamKosu": 6
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 8,
+    "name": "BERİD",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "DB",
+      "K"
+    ],
+    "jokey": "V.DEMİR",
+    "toplamKosu": 78
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 9,
+    "name": "GENGAR",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "KG",
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "A.ÇELİK",
+    "toplamKosu": 24
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 10,
+    "name": "YÖRÜKÇEM",
+    "isYoung": false,
+    "currentStyle": "Düzlük Sprinteri",
+    "takilar": [
+      "DB",
+      "SK",
+      "K"
+    ],
+    "jokey": "E.ATLAMAZ",
+    "toplamKosu": 8
+  },
+  {
+    "city": "Adana",
+    "raceNo": 8,
+    "horseNo": 11,
+    "name": "FALCONGIRL",
+    "isYoung": false,
+    "currentStyle": "Orta Grup",
+    "takilar": [
+      "KG",
+      "K"
+    ],
+    "jokey": "F.R.BEBEK",
+    "toplamKosu": 32
+  }
+]
