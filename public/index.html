@@ -6185,5 +6185,13 @@ function openTekAtModalFromMobile() {
   </div>
 </div>
 
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister());
+    console.log('Service workers unregistered');
+  });
+}
+</script>
 </body>
 </html>
