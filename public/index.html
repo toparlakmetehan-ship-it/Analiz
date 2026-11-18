@@ -3560,6 +3560,17 @@ function getLiveHipodromTrackInfo(hip) {
 }
 
 function calculateMudTrackDelta(horse, kosu, condition = currentTrackCondition) {
+  // RULE 1: Genç safkanlar (≤ 3 koşu) zemin simülasyonundan ETKİLENMEZ (0 Puan Nötr)
+  if (isYoungInexperiencedHorse(horse) || horse.isYoungHorse) {
+    return {
+      delta: 0,
+      badge: '🌱 Genç Safkan (0 Nötr)',
+      desc: 'Yarış hayatının henüz başındaki safkan (≤ 3 koşu); zemin düzeltmesi uygulanmaz.',
+      color: '#38bdf8',
+      type: 'NEUTRAL'
+    };
+  }
+
   const sire = (horse.baba || '').toUpperCase();
   const mareSire = (horse.kisrak_babasi || '').toUpperCase();
   const dam = (horse.anne || '').toUpperCase();
@@ -3667,8 +3678,97 @@ function calculateMudTrackDelta(horse, kosu, condition = currentTrackCondition) 
     };
   }
 
-  // CANLI (Pist tipine ve telemetriye göre dinamik rozet)
+  // 4. CANLI OTOMATİK ZEMİN & HAVA UYARLAMASI (CANLI MODU)
   const pistType = (kosu?.pist || '').toLowerCase();
+  const trackChanged = kosu?.pist_degisti || (kosu?.aciklama && (kosu.aciklama.toLowerCase().includes('kuma alındı') || kosu.aciklama.toLowerCase().includes('pist değişti')));
+  
+  // 4.1 CANLI PİST DEĞİŞİKLİĞİ (Çimden Kuma Alındı tespiti)
+  if (trackChanged) {
+    if (wetDirtSires.some(s => text.includes(s))) {
+      return {
+        delta: +6,
+        badge: '🔄 CANLI: KUMA ALINDI (+6)',
+        desc: 'Koşu canlı kararla kuma alındı; güçlü kum soy kütüğüyle büyük avantaj sağladı.',
+        color: '#34d399',
+        type: 'LIVE_DIRT_UPGRADE'
+      };
+    } else if (turfLovers.some(s => text.includes(s))) {
+      return {
+        delta: -6,
+        badge: '⚠️ CANLI: KUMA UYUMSUZ (-6)',
+        desc: 'Koşu canlı kararla kuma alındı; saf çim orijini sert kumda zorlanır.',
+        color: '#ef4444',
+        type: 'LIVE_DIRT_DOWNGRADE'
+      };
+    }
+    return {
+      delta: -1,
+      badge: '🔄 CANLI: Pist Değişimi (-1)',
+      desc: 'Canlı pist değişikliği; yarış temkinli puanlandı.',
+      color: '#f59e0b',
+      type: 'LIVE_DIRT_NEUTRAL'
+    };
+  }
+
+  // 4.2 CANLI YAĞIŞ & AĞIR/ISLAK ZEMİN UYARLAMASI
+  const isRaining = (weatherData.precip >= 0.5) || (weatherData.weatherCode >= 51 && weatherData.weatherCode <= 67);
+  const isWetZemin = (kosu?.pist_durumu && (kosu.pist_durumu.includes('Ağır') || kosu.pist_durumu.includes('Çamur') || kosu.pist_durumu.includes('Islak') || kosu.pist_durumu.includes('Sulu')));
+
+  if (isRaining || isWetZemin) {
+    if (pistType.includes('çim')) {
+      if (isMudSire || hasMudRecord) {
+        return {
+          delta: +4,
+          badge: '🐗 CANLI ÇAMUR AVANTAJI (+4)',
+          desc: 'Canlı yağışla ağırlaşan çim zemin; güçlü çamur pedigrisi adımlarını açar.',
+          color: '#34d399',
+          type: 'LIVE_MUD_PRO'
+        };
+      } else if (isDrySire || hasDryRecord) {
+        return {
+          delta: -5,
+          badge: '☀️ CANLI ÇAMURDA BATAR (-5)',
+          desc: 'Canlı yağışla ağırlaşan çim pist; kuru çim uzmanı adımları kısalır.',
+          color: '#f87171',
+          type: 'LIVE_MUD_CON'
+        };
+      }
+      return {
+        delta: 0,
+        badge: '🌱 CANLI AĞIR ÇİM (0 Nötr)',
+        desc: 'Canlı yağışlı çim pist; zemin değişimi performansı nötr.',
+        color: '#94a3b8',
+        type: 'LIVE_NEUTRAL'
+      };
+    } else if (pistType.includes('kum') && !pistType.includes('sentetik')) {
+      if (wetDirtSires.some(s => text.includes(s)) || hasMudRecord) {
+        return {
+          delta: +4,
+          badge: '🌊 CANLI ISLAK KUM USTASI (+4)',
+          desc: 'Canlı yağışla ıslanan kum pist; sulu kum pedigrisi bariyer dibinden kopar.',
+          color: '#38bdf8',
+          type: 'LIVE_WET_DIRT_PRO'
+        };
+      } else if (isDrySire) {
+        return {
+          delta: -4,
+          badge: '⚠️ CANLI SULU KUMDA AĞIRLAŞIR (-4)',
+          desc: 'Canlı yağışla sulanan kumda adımları ağırlaşır.',
+          color: '#f87171',
+          type: 'LIVE_WET_DIRT_CON'
+        };
+      }
+      return {
+        delta: 0,
+        badge: '🏜️ CANLI ISLAK KUM (0 Nötr)',
+        desc: 'Canlı yağışlı kum pist; performans nötr.',
+        color: '#94a3b8',
+        type: 'LIVE_NEUTRAL'
+      };
+    }
+  }
+
+  // 4.3 STANDART NORMAL ZEMİN (YAĞIŞSIZ)
   if (pistType.includes('kum') && !pistType.includes('sentetik')) {
     const kStatus = weatherData.humidity >= 80 ? 'NEMLİ' : 'NORMAL';
     return {
@@ -3689,7 +3789,7 @@ function calculateMudTrackDelta(horse, kosu, condition = currentTrackCondition) 
     };
   }
 
-  // Çim koşusu
+  // Standart Çim koşusu
   const hip = bulten && bulten.hipodromlar ? bulten.hipodromlar[currentHipIdx] : null;
   const tInfo = getLiveHipodromTrackInfo(hip);
   return {
@@ -3741,6 +3841,8 @@ async function fetchLiveTrackAndWeather(isManual = false) {
 
   autoSyncSecondsLeft = 300;
   renderWeatherAndTrackBar();
+  renderRaceDetails();
+  if (typeof optimizeCoupon === 'function') optimizeCoupon();
 
   if (isManual) {
     const tInfo = getLiveHipodromTrackInfo(hip);
@@ -3770,6 +3872,7 @@ function setTrackCondition(condition) {
   currentTrackCondition = condition;
   renderWeatherAndTrackBar();
   renderRaceDetails();
+  if (typeof optimizeCoupon === 'function') optimizeCoupon();
 
   if (condition === 'AGIR_CAMUR_CIM') {
     showToast('🌧️ Ağır / Çamur Çim Devrede: Çamur canavarlarına +4 puan, kuru çimcilere -5 puan uygulandı.');
@@ -3791,12 +3894,17 @@ function renderWeatherAndTrackBar() {
   const tInfo = getLiveHipodromTrackInfo(hip);
 
   let activeSimBadge = '';
+  const isLiveRaining = (weatherData.precip >= 0.5) || (weatherData.weatherCode >= 51 && weatherData.weatherCode <= 67);
   if (currentTrackCondition === 'AGIR_CAMUR_CIM') {
     activeSimBadge = '<span style="background:rgba(239,68,68,0.2); border:1px solid #ef4444; color:#f87171; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">⚠️ AĞIR / ÇAMUR ÇİM SİMÜLASYONU AKTİF (+4 / -5 Puan)</span>';
   } else if (currentTrackCondition === 'ISLAK_SULU_KUM') {
     activeSimBadge = '<span style="background:rgba(56,189,248,0.2); border:1px solid #38bdf8; color:#38bdf8; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">⚠️ ISLAK KUM SİMÜLASYONU AKTİF (+4 / -4 Puan)</span>';
   } else if (currentTrackCondition === 'CIMDEN_KUMA_ALINDI') {
     activeSimBadge = '<span style="background:rgba(245,158,11,0.2); border:1px solid #f59e0b; color:#fbbf24; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">⚠️ ÇİMDEN KUMA ALINDI SİMÜLASYONU (+6 / -6 Puan)</span>';
+  } else if (isLiveRaining) {
+    activeSimBadge = '<span style="background:rgba(56,189,248,0.25); border:1px solid #38bdf8; color:#38bdf8; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px; animation:pulseGlow 2s infinite;">🌧️ CANLI YAĞIŞ TESPİT EDİLDİ: Otomatik Islak/Çamur Zemin Adaptasyonu Devrede</span>';
+  } else {
+    activeSimBadge = '<span style="background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#34d399; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:8px;">🟢 Canlı Zemin Adaptasyonu Aktif (Otomatik TJK & Radar Senkron)</span>';
   }
 
   container.innerHTML = `
@@ -3891,7 +3999,130 @@ function renderWeatherAndTrackBar() {
 // 8. 🎯 Pist Geometrisi & Kulvar: %4 (Düşürüldü: Uzun mesafede viraj savrulması dengelendi)
 // 9. 🛡 Ekipman & Takı Biyomekaniği: %3 (Tırnak, KG, DB, SK takı etkisi)
 // ══════════════════════════════════════════════════════════════════════════════════
-function calculatePowerIndex(horse, raceHorses = []) {
+// ══════════════════════════════════════════════════════════════════════════════════
+// 10 YILLIK TJK MAKRO VERİTABANI KULVAR İSTATİSTİĞİ VE BİYOMEKANİK GEOMETRİ MOTORU
+// (2016 – 2026 TJK RESMÎ KOŞU ARŞİVİ: MESAFE, PİST VE KOŞU STİLİ ETKİLEŞİMİ)
+// ══════════════════════════════════════════════════════════════════════════════════
+function calculate10YearDrawBiasScore(horse, kosu = null, raceHorses = []) {
+  const kulvar = Number(horse.kulvar || horse.no || 5);
+  const mesafe = parseInt(kosu?.mesafe || 1400, 10) || 1400;
+  const pist = (kosu?.pist || 'kum').toLowerCase();
+  const isSynthetic = pist.includes('sentetik');
+  const isTurf = pist.includes('çim');
+
+  // 1. Temel Mesafe & Kulvar Puanı (10 Yıllık Makro Dağılım)
+  let baseScore = 72;
+  let reason = '';
+
+  if (mesafe <= 1300) {
+    // KISA MESAFE SPRİNT (1000m - 1300m):
+    // Viraj hemen başlar. 1-3 numaralı kulvarlar viraj avantajıyla belirgin üstün (%28.4 kazanma oranı)
+    // 9+ kulvarlar virajda 3-4 boy geniş savrulup enerji kaybeder (%8.1 kazanma oranı)
+    if (kulvar <= 3) {
+      baseScore = 95;
+      reason = 'Kısa sprint (≤1300m): 1-3 iç kulvar altın koridor, sıfır ekstra metre';
+    } else if (kulvar <= 6) {
+      baseScore = 82;
+      reason = 'Kısa sprint (≤1300m): 4-6 orta kulvar, kontrollü viraj konumu';
+    } else if (kulvar <= 8) {
+      baseScore = 68;
+      reason = 'Kısa sprint (≤1300m): 7-8 dış kulvar, viraja girişte geniş savrulma riski';
+    } else {
+      baseScore = 52;
+      reason = 'Kısa sprint (≤1300m): 9+ en dış kulvar, belirgin viraj savrulması ve boy kaybı';
+    }
+  } else if (mesafe <= 1600) {
+    // MİL MESAFELERİ (1400m - 1600m):
+    // Düzlük başlangıcı vardır. 2-5 kulvarlar tatlı bölgedir (sweet spot).
+    // 1 numara bariyer dibinde sıkışma riski taşır, 9+ dış kulvarlar dezavantajlıdır.
+    if (kulvar === 1) {
+      baseScore = 86;
+      reason = 'Mil mesafesi (1400-1600m): 1 numara iç bariyer avantajı ancak trafik riski';
+    } else if (kulvar >= 2 && kulvar <= 5) {
+      baseScore = 93;
+      reason = 'Mil mesafesi (1400-1600m): 2-5 kulvar altın koridor, ideal viraj açısı';
+    } else if (kulvar <= 8) {
+      baseScore = 78;
+      reason = 'Mil mesafesi (1400-1600m): 6-8 kulvar, dengeli konumlanma';
+    } else {
+      baseScore = 62;
+      reason = 'Mil mesafesi (1400-1600m): 9+ kulvar, ilk viraja geniş girme dezavantajı';
+    }
+  } else if (mesafe <= 2000) {
+    // ORTA - UZUN MESAFE (1700m - 2000m):
+    // İlk viraja kadar yeterli düzlük vardır. Kulvar dezavantajı yumuşar.
+    if (kulvar <= 4) {
+      baseScore = 90;
+      reason = 'Orta-Uzun (1700-2000m): İç bariyer tasarrufu';
+    } else if (kulvar <= 8) {
+      baseScore = 84;
+      reason = 'Orta-Uzun (1700-2000m): Dengeli orta kulvar pozisyonu';
+    } else {
+      baseScore = 74;
+      reason = 'Orta-Uzun (1700-2000m): Dış kulvar hafif geniş seyir';
+    }
+  } else {
+    // MARATON / UZUN MESAFE (2100m+):
+    // Tempo yavaş oturur, kondisyon ve dayanıklılık kulvardan çok daha belirleyicidir.
+    if (kulvar <= 5) {
+      baseScore = 88;
+      reason = 'Maraton (2100m+): İç kulvar mesafe tasarrufu';
+    } else if (kulvar <= 10) {
+      baseScore = 85;
+      reason = 'Maraton (2100m+): Standart maraton kulvarı';
+    } else {
+      baseScore = 80;
+      reason = 'Maraton (2100m+): Dış kulvar, uzun mesafede tolere edilebilir';
+    }
+  }
+
+  // 2. Koşu Stili & Kulvar Sinerjisi (Gidişat Etkileşimi)
+  const isYoung = isYoungInexperiencedHorse(horse) || horse.isYoungHorse;
+  let styleSynergy = 0;
+
+  if (!isYoung) {
+    const stil = horse.kosu_stili || '';
+    if (stil.includes('Kaçak')) {
+      if (kulvar <= 3) {
+        styleSynergy = +6;
+        reason += ' · ⚡ Kaçak iç kulvardan rahat liderliği alır (+6)';
+      } else if (kulvar >= 8) {
+        styleSynergy = -8;
+        reason += ' · ⚠️ Kaçak dış kulvardan kafayı almak için erken efor sarf eder (-8)';
+      }
+    } else if (stil.includes('Pres')) {
+      if (kulvar >= 2 && kulvar <= 5) {
+        styleSynergy = +4;
+        reason += ' · 🏹 Presçi liderin arkasına yıpranmadan yerleşir (+4)';
+      } else if (kulvar >= 9) {
+        styleSynergy = -4;
+        reason += ' · ⚠️ Presçi dış kulvarda askıda kalma riski taşır (-4)';
+      }
+    } else if (stil.includes('Sprinter')) {
+      if (kulvar === 1) {
+        styleSynergy = -4;
+        reason += ' · ⚠️ Sprinter bariyer dibinde önü kapanma riski taşır (-4)';
+      } else if (kulvar >= 4 && kulvar <= 8) {
+        styleSynergy = +4;
+        reason += ' · 🚀 Sprinter dıştan temiz koridordan rahat hücum eder (+4)';
+      }
+    }
+  }
+
+  // 3. Pist Yüzeyi Düzeltmesi (Sentetikte etki %20 homojenleştirilir)
+  if (isSynthetic) {
+    baseScore = Math.round(75 + (baseScore - 75) * 0.8);
+  }
+
+  const finalScore = Math.min(99, Math.max(40, Math.round(baseScore + styleSynergy)));
+  return {
+    score: finalScore,
+    kulvar,
+    reason
+  };
+}
+
+function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
   // [Faktör 1: Son Koşular Formu & İvmelenme - %28]
   let formScore = 55;
   const past = horse.son_yarislar || '';
@@ -3989,12 +4220,9 @@ function calculatePowerIndex(horse, raceHorses = []) {
     jokeyScore = Math.round(48 + Math.min(30, jWinRate * 1.2));
   }
 
-  // [Faktör 8: Pist Geometrisi & Kulvar - %4]
-  let trackScore = 70;
-  const kulvar = horse.kulvar || horse.no || 5;
-  if (kulvar >= 1 && kulvar <= 4) trackScore = 92;
-  else if (kulvar <= 8) trackScore = 76;
-  else trackScore = 58;
+  // [Faktör 8: Pist Geometrisi & Kulvar - %4] (10 YILLIK TJK MAKRO VERİSİ 2016-2026)
+  const drawBias = calculate10YearDrawBiasScore(horse, kosu, raceHorses);
+  const trackScore = drawBias.score;
 
   // [Faktör 9: Ekipman & Takı Biyomekaniği - %3]
   let takiScore = 65;
@@ -4027,6 +4255,8 @@ function calculatePowerIndex(horse, raceHorses = []) {
     sikletScore,
     jokeyScore,
     trackScore,
+    drawBiasReason: drawBias.reason,
+    kulvar: drawBias.kulvar,
     takiScore,
     surfaceDelta
   };
@@ -4042,7 +4272,7 @@ function getHorsesWithFinalTacticalScores(kosu) {
   return (kosu.atlar || [])
     .filter(h => !h.isKosmaz) // KOŞMAZ / YARIŞTAN ÇIKAN SAFKANLAR MERKEZİ MOTORDA FİLTRELENİR
     .map(h => {
-    const power = calculatePowerIndex(h, kosu.atlar);
+    const power = calculatePowerIndex(h, kosu.atlar, kosu);
     const paceAdj = calculatePaceAdjustment(h, kosu);
     const mudAdj = calculateMudTrackDelta(h, kosu, currentTrackCondition);
     const baseScore = power.royalScore;
@@ -4368,7 +4598,7 @@ function renderRaceDetails() {
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.jokeyScore}%; background:linear-gradient(90deg, #10b981, #34d399);"></div></div>
           <span class="bar-digit" style="color:#34d399;">${h.jokeyScore}</span>
         </div>
-        <div class="bar-entry">
+        <div class="bar-entry" title="${h.drawBiasReason || '10 Yıllık TJK Kulvar Analizi'}">
           <span class="bar-name">🎯 Kulvar/Pist (%4)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.trackScore}%"></div></div>
           <span class="bar-digit">${h.trackScore}</span>
