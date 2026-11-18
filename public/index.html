@@ -842,7 +842,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
   <div class="nav-views">
     <button class="view-btn active" onclick="switchView('bulten-view')">🏛 Resmî Canlı Bülten</button>
     <button class="view-btn" onclick="switchView('robot-view')">💰 Bütçeli 6'lı Robotu</button>
-    <button class="view-btn" onclick="switchView('winners-view')">🏆 Tutan 6'lılar (634K ₺ & Arşiv)</button>
+    <button class="view-btn" onclick="switchView('winners-view')">🏆 Tutan 6'lılar (647K ₺ & Arşiv)</button>
     <button class="view-btn" onclick="switchView('backtest-view')">📊 Model Doğrulama & Geçmiş</button>
   </div>
 
@@ -1368,12 +1368,13 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
           <span style="font-family:'Cinzel',serif; font-size:0.82rem; font-weight:800; color:var(--gold-champagne);">FİLTRE:</span>
           <div class="preset-pills" id="winners-filter-pills" style="margin:0; flex-wrap:wrap;">
-            <button class="preset-btn active" onclick="filterWinnersView('ALL')" id="wf-ALL">🏆 TÜMÜ</button>
+            <button class="preset-btn active" onclick="filterWinnersView('ALL')" id="wf-ALL">🏆 TÜMÜ (7 KUPON)</button>
+            <button class="preset-btn" onclick="filterWinnersView('2026-11-17')" id="wf-2026-11-17">17 KASIM (2.480 ₺ Antalya)</button>
             <button class="preset-btn" onclick="filterWinnersView('2026-11-15')" id="wf-2026-11-15">15 KASIM (634K ₺ Adana 1. & 2. 6'lı)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-14')" id="wf-2026-11-14">14 KASIM (185K ₺ Ankara)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-13')" id="wf-2026-11-13">13 KASIM (320K ₺ İst)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-10')" id="wf-2026-11-10">10 KASIM (412K ₺ Adana)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-07')" id="wf-2026-11-07">07 KASIM (675K ₺ Ankara)</button>
+            <button class="preset-btn" onclick="filterWinnersView('2026-11-14')" id="wf-2026-11-14">14 KASIM (1.088 ₺ Ankara)</button>
+            <button class="preset-btn" onclick="filterWinnersView('2026-11-13')" id="wf-2026-11-13">13 KASIM (1.360 ₺ İst)</button>
+            <button class="preset-btn" onclick="filterWinnersView('2026-11-10')" id="wf-2026-11-10">10 KASIM (7.235 ₺ Adana)</button>
+            <button class="preset-btn" onclick="filterWinnersView('2026-11-07')" id="wf-2026-11-07">07 KASIM (1.738 ₺ Ankara)</button>
           </div>
         </div>
         <div style="font-size:0.75rem; color:#94a3b8;">
@@ -1695,15 +1696,11 @@ async function renderWinnersView() {
 
   // 1. Özet Metrikleri Render Et
   const stats = data.ozetIstatistikler || {};
-  const todayPrizeFormatted = stats.bugunToplamKazancFormatli || 
-    (typeof stats.bugunToplamKazanc === 'number' ? stats.bugunToplamKazanc.toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ₺' : 
-    (typeof stats.bugunAdanaIkramiyesi === 'number' ? stats.bugunAdanaIkramiyesi.toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ₺' : '633.679,93 ₺'));
-  
-  const allTimePrizeFormatted = typeof stats.toplamKazanilanIkramiye === 'number' ? 
-    stats.toplamKazanilanIkramiye.toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ₺' : '645.103,17 ₺';
-    
-  const allTimeNetFormatted = typeof stats.toplamNetKar === 'number' ? 
-    '+' + stats.toplamNetKar.toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ₺' : '+634.343,17 ₺';
+  const todayPrizeFormatted = stats.bugunToplamKazancFormatli || '633.679,93 ₺';
+  const allTimePrizeFormatted = stats.toplamKazanilanIkramiyeFormatli || '647.583,67 ₺';
+  const minCostFormatted = stats.enDusukKuponMaliyetiFormatli || '80,00 ₺';
+  const allTimeNetFormatted = stats.toplamNetKar ? ('+' + Number(stats.toplamNetKar).toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ₺') : '+643.107,67 ₺';
+  const roiText = stats.kumulatifRoi || '144.7x';
 
   summaryGrid.innerHTML = `
     <div class="champ-metric-card" style="background:rgba(8,8,10,0.85); border:1px solid rgba(212,175,55,0.4); border-radius:14px; padding:1.1rem; text-align:center;">
@@ -1713,18 +1710,18 @@ async function renderWinnersView() {
     </div>
     <div class="champ-metric-card" style="background:linear-gradient(135deg, rgba(16,185,129,0.22), rgba(8,8,10,0.85)); border:1.5px solid #10b981; border-radius:14px; padding:1.1rem; text-align:center; box-shadow:0 0 18px rgba(16,185,129,0.25);">
       <div style="font-size:1.75rem; font-weight:900; font-family:'Cinzel',serif; color:#34d399;">${todayPrizeFormatted}</div>
-      <div style="font-size:0.72rem; font-weight:700; color:#fff; text-transform:uppercase; margin-top:3px;">Bugünün Kazancı (15 Kasım)</div>
+      <div style="font-size:0.72rem; font-weight:700; color:#fff; text-transform:uppercase; margin-top:3px;">Mega Rekor Kazanç (15 Kasım)</div>
       <div style="font-size:0.65rem; color:#a7f3d0; margin-top:3px;">(Adana 1. ve 2. 6'lısı Birlikte Tuttu 🏆)</div>
     </div>
     <div class="champ-metric-card" style="background:rgba(8,8,10,0.85); border:1px solid rgba(56,189,248,0.3); border-radius:14px; padding:1.1rem; text-align:center;">
-      <div style="font-size:1.8rem; font-weight:900; font-family:'Cinzel',serif; color:#38bdf8;">1.890,00 ₺</div>
+      <div style="font-size:1.8rem; font-weight:900; font-family:'Cinzel',serif; color:#38bdf8;">${minCostFormatted}</div>
       <div style="font-size:0.72rem; font-weight:700; color:#cbd5e1; text-transform:uppercase; margin-top:3px;">En Düşük Tutan Kupon Bedeli</div>
-      <div style="font-size:0.65rem; color:#94a3b8; margin-top:3px;">(1. 6'lı: 1.890 ₺ | 2. 6'lı: 2.572,50 ₺)</div>
+      <div style="font-size:0.65rem; color:#94a3b8; margin-top:3px;">(Ankara: 80 ₺ | Antalya: 216 ₺ | Adana: 540 ₺)</div>
     </div>
     <div class="champ-metric-card" style="background:rgba(8,8,10,0.85); border:1px solid rgba(192,132,252,0.3); border-radius:14px; padding:1.1rem; text-align:center;">
       <div style="font-size:1.8rem; font-weight:900; font-family:'Cinzel',serif; color:#c084fc;">${allTimeNetFormatted}</div>
-      <div style="font-size:0.72rem; font-weight:700; color:#cbd5e1; text-transform:uppercase; margin-top:3px;">Net Kâr (${stats.kumulatifRoi || '163.4x'})</div>
-      <div style="font-size:0.65rem; color:#e9d5ff; margin-top:3px;">(Yatırılan Her 1 ₺ için 163,4 ₺ Getiri)</div>
+      <div style="font-size:0.72rem; font-weight:700; color:#cbd5e1; text-transform:uppercase; margin-top:3px;">Net Kâr (${roiText})</div>
+      <div style="font-size:0.65rem; color:#e9d5ff; margin-top:3px;">(Yatırılan Her 1 ₺ için ${roiText.replace('x','')} ₺ Getiri)</div>
     </div>
   `;
 
@@ -1741,7 +1738,12 @@ async function renderWinnersView() {
 
   let htmlCards = '';
   filtered.forEach(item => {
-    const isToday = item.tarihKodu === '2026-11-15';
+    const isYesterday = item.tarihKodu === '2026-11-17';
+    const isRecord = item.tarihKodu === '2026-11-15';
+    const highlight = isYesterday || isRecord;
+    const badgeHtml = isYesterday 
+      ? '<span style="background:#10b981; color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">DÜNÜN KUPONU ✨</span>'
+      : (isRecord ? '<span style="background:var(--gold-pure); color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">634K MEGA REKOR 🏆</span>' : '');
 
     // Seçenekler / Modeller HTML
     let seceneklerHtml = '';
@@ -1806,7 +1808,7 @@ async function renderWinnersView() {
     });
 
     htmlCards += `
-      <div class="winner-record-card" style="background:${isToday ? 'linear-gradient(135deg, rgba(20,24,33,0.98), rgba(8,8,10,0.98))' : 'rgba(12,14,20,0.92)'}; border:${isToday ? '2px solid var(--gold-pure)' : '1px solid rgba(212,175,55,0.35)'}; border-radius:18px; padding:1.5rem; margin-bottom:2rem; box-shadow:${isToday ? '0 0 35px rgba(212,175,55,0.22)' : 'none'};">
+      <div class="winner-record-card" style="background:${highlight ? 'linear-gradient(135deg, rgba(20,24,33,0.98), rgba(8,8,10,0.98))' : 'rgba(12,14,20,0.92)'}; border:${highlight ? '2px solid var(--gold-pure)' : '1px solid rgba(212,175,55,0.35)'}; border-radius:18px; padding:1.5rem; margin-bottom:2rem; box-shadow:${highlight ? '0 0 35px rgba(212,175,55,0.22)' : 'none'};">
         <!-- Kart Üst Barı -->
         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; border-bottom:1px solid rgba(212,175,55,0.25); padding-bottom:1rem; margin-bottom:1.2rem;">
           <div>
@@ -1814,7 +1816,7 @@ async function renderWinnersView() {
               <span style="font-size:1.4rem;">🏆</span>
               <span style="font-family:'Cinzel',serif; font-size:1.2rem; font-weight:900; color:#fff;">${item.sehir}</span>
               <span style="background:rgba(212,175,55,0.2); border:1px solid var(--gold-pure); color:var(--gold-champagne); font-size:0.72rem; font-weight:800; padding:3px 10px; border-radius:12px;">${item.paket}</span>
-              ${isToday ? '<span style="background:#10b981; color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">BUGÜNÜN REKORU ✨</span>' : ''}
+              ${badgeHtml}
             </div>
             <div style="font-size:0.8rem; color:#cbd5e1;">
               📅 ${item.tarih} | Resmî Koşu Aralığı: ${item.kosuAraligi}
