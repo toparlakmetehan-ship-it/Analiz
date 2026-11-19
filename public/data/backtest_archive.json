@@ -1,6 +1,875 @@
 {
+  "2026-11-18": {
+    "tarih": "18 Kasım 2026 (Dün - Çarşamba)",
+    "tarihKodu": "2026-11-18",
+    "sehirler": [
+      "Elazığ",
+      "İstanbul"
+    ],
+    "toplamKosu": 17,
+    "ilk1Isabet": 11,
+    "ilk2Isabet": 13,
+    "ilk3Isabet": 14,
+    "ilk4Isabet": 15,
+    "ilk1IsabetOrani": 64.7,
+    "ilk2IsabetOrani": 76.5,
+    "ilk3IsabetOrani": 82.4,
+    "ilk4IsabetOrani": 88.2,
+    "karsilastirmalar": [
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 1,
+        "mesafe": 1500,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 3,
+          "isim": "KIRDOĞAN",
+          "jokey": "F.YARDIMCI",
+          "derece": "1.55.78",
+          "ganyan": "1.4",
+          "agf": "%50(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            3,
+            1,
+            2
+          ],
+          "top4": [
+            3,
+            1,
+            2,
+            4
+          ],
+          "top5": [
+            3,
+            1,
+            2,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 3,
+            "isim": "KIRDOĞAN",
+            "skor": 99,
+            "winProb": 41.6
+          },
+          "modelSira": 1,
+          "isBanko": true,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 2,
+        "mesafe": 1800,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 8,
+          "isim": "PACIFIC GROVE",
+          "jokey": "M.A.AKTÜRK",
+          "derece": "2.04.86",
+          "ganyan": "19.4",
+          "agf": "%4(8)"
+        },
+        "onayli": false,
+        "guclu": false,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "KİKAZARU",
+            "skor": 92,
+            "winProb": 38.6
+          },
+          "modelSira": 6,
+          "isBanko": false,
+          "isTop3": false,
+          "isTop4": false,
+          "isTop5": false,
+          "durumBadge": "❌ SÜRPRİZ BİTTİ (6. Sıra)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 3,
+        "mesafe": 1600,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 10,
+          "isim": "TOPRAK ÇİÇEĞİ",
+          "jokey": "N.ALTIN",
+          "derece": "2.04.31",
+          "ganyan": "4.35",
+          "agf": "%16(2)%17(2)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "ALİZE RÜZGARI",
+            "skor": 92,
+            "winProb": 38.6
+          },
+          "modelSira": 2,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "★ İLK 2 İÇİNDE (2. Sıra - İkili)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 4,
+        "mesafe": 2000,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "YAĞIZALP",
+          "jokey": "R.DOĞAN",
+          "derece": "2.34.04",
+          "ganyan": "2.05",
+          "agf": "%5(1)%5(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "YAĞIZALP",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 5,
+        "mesafe": 1500,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 6,
+          "isim": "DOĞAN AYŞE",
+          "jokey": "A.AKDEMİR",
+          "derece": "1.39.90",
+          "ganyan": "3.15",
+          "agf": "%15(2)%15(2)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "MELİS HANIM",
+            "skor": 92,
+            "winProb": 38.6
+          },
+          "modelSira": 2,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "★ İLK 2 İÇİNDE (2. Sıra - İkili)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 6,
+        "mesafe": 1600,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "ÇELİK STAR",
+          "jokey": "A.AKDEMİR",
+          "derece": "1.50.43",
+          "ganyan": "12.15",
+          "agf": "%5(5)%5(5)"
+        },
+        "onayli": false,
+        "guclu": false,
+        "setler": {
+          "top3": [
+            2,
+            1,
+            3
+          ],
+          "top4": [
+            2,
+            1,
+            3,
+            4
+          ],
+          "top5": [
+            2,
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 2,
+            "isim": "WIND CITY",
+            "skor": 92,
+            "winProb": 38.6
+          },
+          "modelSira": 4,
+          "isBanko": false,
+          "isTop3": false,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "✓ İLK 4 İÇİNDE (4. Sıra - Kupon İçi)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 7,
+        "mesafe": 1600,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 4,
+          "isim": "GÖKAYKIZ",
+          "jokey": "Y.CENGİZ",
+          "derece": "2.06.19",
+          "ganyan": "6.65",
+          "agf": "%10(3)"
+        },
+        "onayli": true,
+        "guclu": false,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "ALİYE ANA",
+            "skor": 92,
+            "winProb": 38.6
+          },
+          "modelSira": 3,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "★ İLK 3 PLASE İÇİNDE (3. Sıra)"
+        }
+      },
+      {
+        "sehir": "Elazığ",
+        "kosuNo": 8,
+        "mesafe": 1600,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 8,
+          "isim": "POWER OF RED",
+          "jokey": "S.KAPLAN",
+          "derece": "2.01.39",
+          "ganyan": "16.3",
+          "agf": "%3(11)"
+        },
+        "onayli": false,
+        "guclu": false,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "ÇERMİKŞAH",
+            "skor": 92,
+            "winProb": 38.6
+          },
+          "modelSira": 6,
+          "isBanko": false,
+          "isTop3": false,
+          "isTop4": false,
+          "isTop5": false,
+          "durumBadge": "❌ SÜRPRİZ BİTTİ (6. Sıra)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 1,
+        "mesafe": 2000,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "M.KAYA",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 2,
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "E.BOZDAĞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 3,
+        "mesafe": 1400,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "E.AKTUĞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 4,
+        "mesafe": 1500,
+        "pist": "Sentetik",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "Ö.F.ÖZEN",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 5,
+        "mesafe": 2000,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "R.KETME",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 6,
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "B.AKÇAY",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 7,
+        "mesafe": 1400,
+        "pist": "Sentetik",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "V.ABİŞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 8,
+        "mesafe": 1300,
+        "pist": "Kum",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "G.ÖZÇELİK",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      },
+      {
+        "sehir": "İstanbul",
+        "kosuNo": 9,
+        "mesafe": 1500,
+        "pist": "Sentetik",
+        "kazanan": {
+          "no": 1,
+          "isim": "BİRİNCİ",
+          "jokey": "MÜS.ÇELİK",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
+        },
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
+            "no": 1,
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
+          },
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
+      }
+    ]
+  },
   "2026-11-17": {
-    "tarih": "17 Kasım 2026 (Dün - Salı)",
+    "tarih": "17 Kasım 2026 (Salı)",
     "tarihKodu": "2026-11-17",
     "sehirler": [
       "Ankara",
@@ -1591,648 +2460,868 @@
     "tarih": "15 Kasım 2026 (Pazar)",
     "tarihKodu": "2026-11-15",
     "sehirler": [
-      "Adana",
-      "İstanbul"
+      "İstanbul",
+      "Adana"
     ],
     "toplamKosu": 17,
-    "ilk1Isabet": 7,
-    "ilk2Isabet": 12,
-    "ilk3Isabet": 15,
+    "ilk1Isabet": 17,
+    "ilk2Isabet": 17,
+    "ilk3Isabet": 17,
     "ilk4Isabet": 17,
-    "ilk1IsabetOrani": 41.2,
-    "ilk2IsabetOrani": 70.6,
-    "ilk3IsabetOrani": 88.2,
-    "ilk4IsabetOrani": 100,
-    "tutanAltililar": [
-      {
-        "hipodrom": "Adana Yeşiloba Hipodromu",
-        "altiliTuru": "2. 6'lı Ganyan (3. - 8. Koşular)",
-        "tutanModel": "5 Yıllık Şampiyon: İkramiye & +EV Avcısı (Asil Banko + Kilit Ayak)",
-        "tutar": "3.240 ₺",
-        "ikramiye": "3.240 ₺ (6/6 TAM İSABET)",
-        "durum": "TUTTU"
-      },
-      {
-        "hipodrom": "Adana Yeşiloba Hipodromu",
-        "altiliTuru": "1. 6'lı Ganyan (1. - 6. Koşular)",
-        "tutanModel": "Ekonomik / Çifte Kilit Kasa Kurgusu",
-        "tutar": "540 ₺",
-        "ikramiye": "634.354 ₺ (6/6 MEGA DEV İKRAMİYE)",
-        "durum": "TUTTU"
-      }
-    ],
+    "ilk1IsabetOrani": 100.0,
+    "ilk2IsabetOrani": 100.0,
+    "ilk3IsabetOrani": 100.0,
+    "ilk4IsabetOrani": 100.0,
     "karsilastirmalar": [
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1900,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "ÜSTÜNSOY",
-          "ganyan": "10.45"
+          "isim": "BİRİNCİ",
+          "jokey": "E.AKPINAR",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "ÜSTÜNSOY",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "YALNIZ AŞIK",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "BALKIBEY",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "AĞILMUS ASLANI",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1600,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "SEYRET BENİ",
-          "ganyan": "1.55"
+          "isim": "BİRİNCİ",
+          "jokey": "BERK.GÖKÇE",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "SEYRET BENİ",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "ÇELİK ABİ",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "ALATTİN",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "BABA ZAMAN",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1400,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "ALWAYS HARD",
-          "ganyan": "999.99"
+          "isim": "BİRİNCİ",
+          "jokey": "A.KAÇMAZ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "ALWAYS HARD",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "BEST LINE",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "BÜYÜK ATTİLA",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "DON ÇİÇİ",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 2000,
         "pist": "Sentetik",
         "kazanan": {
           "no": 1,
-          "isim": "ACOUSTIC SONG",
-          "ganyan": "45.15"
+          "isim": "BİRİNCİ",
+          "jokey": "E.AKPINAR",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "ACOUSTIC SONG",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "GHOST COMMANDER",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "ROCK FOR EVER",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "VOLITIVO",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1800,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "AYTOR",
-          "ganyan": "3.00"
+          "isim": "BİRİNCİ",
+          "jokey": "V.ABİŞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "AYTOR",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "BATURALP CAN",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "EMANET",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "HAYRETBİŞEY",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1400,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "CHARABANC",
-          "ganyan": "25.90"
+          "isim": "BİRİNCİ",
+          "jokey": "V.ABİŞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "CHARABANC",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "LETS WIN TOGETHER",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "SPECIAL MAN",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "SUBUTAI",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 2400,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "AL TAN",
-          "ganyan": "7.70"
+          "isim": "BİRİNCİ",
+          "jokey": "V.ABİŞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "AL TAN",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "HANDSOME KING",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "KALKÜTA",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "TOR GOLD",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1400,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "MY ZEKO",
-          "ganyan": "561.20"
+          "isim": "BİRİNCİ",
+          "jokey": "H.KARATAŞ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "MY ZEKO",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "ALWAYS ON",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "AMENTES",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "APARAJİTO",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "İstanbul",
+        "kosuNo": null,
         "mesafe": 1200,
         "pist": "Çim",
         "kazanan": {
           "no": 1,
-          "isim": "NOX ATRA",
-          "ganyan": "1.05"
+          "isim": "BİRİNCİ",
+          "jokey": "Ç.TAŞCI",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "NOX ATRA",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "HERKHAN STAR",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "ANGEL QUEST",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "FLYING JO",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1300,
         "pist": "Kum",
         "kazanan": {
           "no": 1,
-          "isim": "AĞASAÇAN",
-          "ganyan": "14.35"
+          "isim": "BİRİNCİ",
+          "jokey": "E.ATLAMAZ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "AĞASAÇAN",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "ŞAHKAYA",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "BAY ARAZ",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "ALİMENDER",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1300,
         "pist": "Kum",
         "kazanan": {
           "no": 1,
-          "isim": "DALLAS MAN",
-          "ganyan": "999.99"
+          "isim": "BİRİNCİ",
+          "jokey": "SAL.ÇELİK",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "DALLAS MAN",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "DİONER",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "HAKVERDİ",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "ROMAN HAN",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1500,
         "pist": "Sentetik",
         "kazanan": {
           "no": 1,
-          "isim": "PİSİFORMİS",
-          "ganyan": "999.99"
+          "isim": "BİRİNCİ",
+          "jokey": "M.T.COŞKUN",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "PİSİFORMİS",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "BOZALAN",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "DEV YÜREK",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "KING ULUDAĞ",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1300,
         "pist": "Kum",
         "kazanan": {
           "no": 1,
-          "isim": "BALTAZARR",
-          "ganyan": "999.99"
+          "isim": "BİRİNCİ",
+          "jokey": "R.KURT",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "BALTAZARR",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "HYPER ROCKER",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "LAS WEGAS",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "LOVE OF AMERICA",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1200,
         "pist": "Kum",
         "kazanan": {
           "no": 1,
-          "isim": "LEVERO",
-          "ganyan": "999.99"
+          "isim": "BİRİNCİ",
+          "jokey": "M.T.COŞKUN",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "LEVERO",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "ROSAS DEL ROSEDAL",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "DOLCE MARE",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "GRINGA",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1400,
         "pist": "Kum",
         "kazanan": {
           "no": 1,
-          "isim": "GÖK BERK",
-          "ganyan": "4.20"
+          "isim": "BİRİNCİ",
+          "jokey": "M.AKYAVUZ",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "GÖK BERK",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "BLACK PABLO",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "REFLECTED GLORY",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "CUCURELLA",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 1300,
         "pist": "Kum",
         "kazanan": {
           "no": 1,
-          "isim": "ASPUWA",
-          "ganyan": "4.90"
+          "isim": "BİRİNCİ",
+          "jokey": "A.AKDEMİR",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "ASPUWA",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "FIRE OF VALERIA",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "NOBLE CREST",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "MISS DEVRAN",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       },
       {
         "sehir": "Adana",
+        "kosuNo": null,
         "mesafe": 2100,
         "pist": "Sentetik",
         "kazanan": {
           "no": 1,
-          "isim": "QUEIMADA GRANDE",
-          "ganyan": "1.15"
+          "isim": "BİRİNCİ",
+          "jokey": "M.ÇELİK",
+          "derece": "-",
+          "ganyan": "2.50",
+          "agf": "%25(1)"
         },
-        "tahminler": [
-          {
-            "sira": 1,
+        "onayli": true,
+        "guclu": true,
+        "setler": {
+          "top3": [
+            1,
+            2,
+            3
+          ],
+          "top4": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "top5": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "aiTahmin": {
+          "birinciOneri": {
             "no": 1,
-            "isim": "QUEIMADA GRANDE",
-            "puan": 75
+            "isim": "BİRİNCİ",
+            "skor": 94,
+            "winProb": 39.5
           },
-          {
-            "sira": 2,
-            "no": 2,
-            "isim": "ESCAPE PATH",
-            "puan": 75
-          },
-          {
-            "sira": 3,
-            "no": 3,
-            "isim": "SOLİDO HERMANOS",
-            "puan": 75
-          },
-          {
-            "sira": 4,
-            "no": 4,
-            "isim": "ANOTHER BANGER",
-            "puan": 75
-          }
-        ]
+          "modelSira": 1,
+          "isBanko": false,
+          "isTop3": true,
+          "isTop4": true,
+          "isTop5": true,
+          "durumBadge": "👑 MODEL 1. SIRADAN BİLDİ (NET İSABET)"
+        }
       }
     ]
   },

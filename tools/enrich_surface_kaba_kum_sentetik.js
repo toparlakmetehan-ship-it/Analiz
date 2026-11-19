@@ -1,202 +1,382 @@
 const fs = require('fs');
 const path = require('path');
 
-const bultenPath = path.join(__dirname, '..', 'public', 'data', 'bulten_bugun.json');
-const bulten = JSON.parse(fs.readFileSync(bultenPath, 'utf8'));
-
 // ══════════════════════════════════════════════════════════════════════════════════
-// AYGIRLARIN KABA KUM VE SENTETİK YATKINLIK PROFİLLERİ (TJK DERECELİ AYGIR HAVUZU)
+// AYGIRLAR VE KISRAK BABALARININ KABA KUM VE SENTETİK YATKINLIK PROFİLLERİ
+// (TJK Resmî Dereceli & Kan Hattı Aygır Havuzu - Arap & İngiliz)
 // ══════════════════════════════════════════════════════════════════════════════════
 const sireProfiles = {
-  // Sentetik Dominant (Polytrack / Tapeta / All-Weather uzmanı hatlar)
+  // ──────────────────────────────────────────────────────────────────────────
+  // 1. KABA KUM DOMİNANT (Ağır Kum, Kickback Direnci, Güç ve Çamur Hatları)
+  // ──────────────────────────────────────────────────────────────────────────
+  // ARAP:
+  'OVA': { bias: 'KUM', text: 'Kaba Kum & Çamur Otoritesi (Şentay Hattı)' },
+  'SANCAKBEYI': { bias: 'KUM', text: 'Ağır Kaba Kum Efsanesi' },
+  'HABERBATUR': { bias: 'KUM', text: 'Arap Kaba Kum Güç Hattı' },
+  'OZGUNHAN': { bias: 'KUM', text: 'Arap Kaba Kum Otoritesi' },
+  'BILGIN': { bias: 'KUM', text: 'Arap Kaba Kum & Çamur Ustası' },
+  'GOBAK BEY': { bias: 'KUM', text: 'Kaba Kum Arap Güç Hattı' },
+  'GOBAKTI': { bias: 'KUM', text: 'Kaba Kum Arap Güç Hattı' },
+  'ALTAHA': { bias: 'KUM', text: 'Kaba Kum Güç & Dayanıklılık' },
+  'SENTAY': { bias: 'KUM', text: 'Kaba Kum Efsanesi' },
+  'TUMOZ BEY': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'AYABAKAN': { bias: 'KUM', text: 'Kaba Kum Güçlü Hat' },
+  'KARAUZUM': { bias: 'KUM', text: 'Kaba Kum Dayanıklılık' },
+  'GUNTAY': { bias: 'KUM', text: 'Kaba Kum Güçlü Hat' },
+  'BERKSOY': { bias: 'KUM', text: 'Kaba Kum Sert Aygır' },
+  'UCANOGLU': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'SARRAF': { bias: 'KUM', text: 'Kaba Kum Erken Sürat & Güç' },
+  'DEMIRKAZIK': { bias: 'KUM', text: 'Kaba Kum Otoritesi' },
+  'KAFKAS SAHI': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'GELIBOLU': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'EMBIR HAN': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'DAYIBEY': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'BABA MEVLUT': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'YELGECEN': { bias: 'KUM', text: 'Kaba Kum Hattı' },
+  'COMERTKAN': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'SONALP': { bias: 'KUM', text: 'Kaba Kum Hattı' },
+  'YAKUPBEY': { bias: 'KUM', text: 'Kaba Kum Hattı' },
+  'HURBATUR': { bias: 'KUM', text: 'Ağır Kum & Çamur Efsanesi' },
+  'SERGEN': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'KAMAN': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'DILIRAN': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'GUMBURGUMBUR': { bias: 'KUM', text: 'Kaba Kum Sprint & Güç' },
+  'ORCUN': { bias: 'KUM', text: 'Kaba Kum & Dayanıklılık' },
+  'UCANBEY': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'BOZOK': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'HISARBEY': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'SAADIN GUCU': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'KOSANEFE': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'ANADOLUKAYA': { bias: 'KUM', text: 'Kaba Kum Hattı' },
+
+  // İNGİLİZ:
+  'DAREDEVIL': { bias: 'KUM', text: 'Safkan Kaba Kum Gücü' },
+  'BODEMEISTER': { bias: 'KUM', text: 'Kaba Kum Güç & Dayanıklılık' },
+  'TIZWAY': { bias: 'KUM', text: 'Kaba Kum Klasik Mesafe Aygırı' },
+  'CUVEE': { bias: 'KUM', text: 'Kaba Kum Erken Sürat Aygırı' },
+  'LION HEART': { bias: 'KUM', text: 'Kaba Kum Dayanıklı Sprint' },
+  'CORINTHIAN': { bias: 'KUM', text: 'Kaba Kum Gücü Yüksek' },
+  'RUN AWAY AND HIDE': { bias: 'KUM', text: 'Kaba Kum Erken Hız ve Güç' },
+  'SUPER SAVER': { bias: 'KUM', text: 'Kaba Kum ve Ağır Pist Şampiyonu' },
+  'BOSPORUS': { bias: 'KUM', text: 'Kaba Kum Sürat Otoritesi' },
+  'SPEEDY WOLF': { bias: 'KUM', text: 'Kaba Kum Sprint Hattı' },
+  'EXPANSION': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'HAKEEM': { bias: 'KUM', text: 'Kaba Kum Güçlü Hat' },
+  'PULPIT': { bias: 'KUM', text: 'Kaba Kum Amerikan Hattı' },
+  'TAPIT': { bias: 'KUM', text: 'Kaba Kum Efsanesi' },
+  'UNACCOUNTED FOR': { bias: 'KUM', text: 'Kaba Kum Dayanıklılık Efsanesi' },
+  'STRIKE THE GOLD': { bias: 'KUM', text: 'Kaba Kum ve Çamur Efsanesi' },
+  'WEST BY WEST': { bias: 'KUM', text: 'Kaba Kum Otoritesi' },
+  'ROYAL ABJAR': { bias: 'KUM', text: 'Kaba Kum Sürat Hattı' },
+  'TRIPPE DAYS': { bias: 'KUM', text: 'Kaba Kum Sürat Hattı' },
+  'DUTYFREE': { bias: 'KUM', text: 'Kaba Kum Sürat Gücü' },
+  'AFTER MARKET': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'TALIPHAN': { bias: 'KUM', text: 'Kaba Kum ve Güç Hattı' },
+  'SMARTY JONES': { bias: 'KUM', text: 'Kaba Kum Şampiyonu' },
+  'YONAGUSKA': { bias: 'KUM', text: 'Kaba Kum Sürat Aygırı' },
+  'PLEASANTLY PERFECT': { bias: 'KUM', text: 'Kaba Kum Klasik Mesafe' },
+  'PERFECT STORM': { bias: 'KUM', text: 'Kaba Kum Sürat Hattı' },
+  'PRESSING': { bias: 'KUM', text: 'Kaba Kum Güç Hattı' },
+  'WIN RIVER WIN': { bias: 'KUM', text: 'Kaba Kum ve Çamur Otoritesi' },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 2. DUAL (Hem Kaba Kumda Hem Sentetikte Çift Yönlü Güçlü Hatlar)
+  // ──────────────────────────────────────────────────────────────────────────
+  'VICTORY GALLOP': { bias: 'DUAL', text: 'Kum & Sentetik Şampiyonu' },
+  'KAIZBERT': { bias: 'DUAL', text: 'Kum ve Sentetikte Yenilmez (Arap)' },
+  'PAPA CLEM': { bias: 'DUAL', text: 'Kum & Sentetik Dengeli Hat' },
+  'MENDIP': { bias: 'DUAL', text: 'Kum ve Sentetikte Yüksek Form' },
+  'OZHABER': { bias: 'DUAL', text: 'Kum & Sentetik Çift Yönlü' },
+  'KANEKO': { bias: 'DUAL', text: 'Kum & Sentetik Güçlü Hat' },
+  'TURBO': { bias: 'DUAL', text: 'Kum & Sentetikte Üst Düzey Güç' },
+  'AUTHORIZED': { bias: 'DUAL', text: 'Kum & Çim Dayanıklı Hat' },
+  'SMART ROBIN': { bias: 'DUAL', text: 'Kum & Sentetik Dengeli Hat' },
+  'CRIMEAN TATAR': { bias: 'DUAL', text: 'Kum & Sentetik Dengeli' },
+  'TAMERINOGLU': { bias: 'DUAL', text: 'Kum & Sentetik Başarılı' },
+  'GURSU': { bias: 'DUAL', text: 'Kum & Sentetik Çift Yönlü' },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 3. SENTETİK & ÇİM DOMİNANT (Polytrack / Tapeta / Çim Uzmanı Hatlar)
+  // ──────────────────────────────────────────────────────────────────────────
   'NATIVE KHAN': { bias: 'SENTETIK', text: 'Sentetik & Çim Otoritesi' },
   'TOROK': { bias: 'SENTETIK', text: 'Sentetik ve Çim Uzmanı' },
   'LUXOR': { bias: 'SENTETIK', text: 'Sentetik / Açık Koşu Çim Uzmanı' },
   'FAST \'N\' FAMOUS': { bias: 'SENTETIK', text: 'Sentetik Sprint Gücü' },
   'INVINCIBLE SPIRIT': { bias: 'SENTETIK', text: 'Sentetik / All-Weather Orijini' },
   'APPROVE': { bias: 'SENTETIK', text: 'Sentetik Sprint Yatkını' },
-  // Kaba Kum Dominant (Ağır Kum, Kickback, Güç ve Çamur hattı)
-  'DAREDEVIL': { bias: 'KUM', text: 'Safkan Kaba Kum Gücü' },
-  'BODEMEISTER': { bias: 'KUM', text: 'Kaba Kum Güç & Dayanıklılık' },
-  'TİZWAY': { bias: 'KUM', text: 'Kaba Kum Klasik Mesafe Aygırı' },
-  'CUVEE': { bias: 'KUM', text: 'Kaba Kum Erken Sürat Aygırı' },
-  'LION HEART': { bias: 'KUM', text: 'Kaba Kum Dayanıklı Sprint' },
-  'CORINTHIAN': { bias: 'KUM', text: 'Kaba Kum Gücü Yüksek' },
-  'BILGIN': { bias: 'KUM', text: 'Arap Kaba Kum Çamur Otoritesi' },
-  'HABERBATUR': { bias: 'KUM', text: 'Arap Kaba Kum Güç Hattı' },
-  'ÖZGÜNHAN': { bias: 'KUM', text: 'Arap Kaba Kum Otoritesi' },
-  'GOBAK BEY': { bias: 'KUM', text: 'Kaba Kum Arap Güç Hattı' },
-  // Dual (Hem Kaba Kumda Hem Sentetikte Yüksek Performans Verenler)
-  'VICTORY GALLOP': { bias: 'DUAL', text: 'Kum & Sentetik Şampiyonu' },
-  'KAIZBERT': { bias: 'DUAL', text: 'Kum ve Sentetikte Yenilmez (Arap)' },
-  'PAPA CLEM': { bias: 'DUAL', text: 'Kum & Sentetik Dengeli Hat' },
-  'MENDIP': { bias: 'DUAL', text: 'Kum ve Sentetikte Yüksek Form' },
-  'ÖZHABER': { bias: 'DUAL', text: 'Kum & Sentetik Çift Yönlü' },
-  'KANEKO': { bias: 'DUAL', text: 'Kum & Sentetik Güçlü Hat' }
+  'SATONO ARES': { bias: 'SENTETIK', text: 'Sentetik & Çim Japon Hattı' },
+  'GENERAL QUARTERS': { bias: 'SENTETIK', text: 'Sentetik ve Çim Yatkını' },
+  'POWERSCOURT': { bias: 'SENTETIK', text: 'Çim & Sentetik Uzmanı' },
+  'MARCAVELLY': { bias: 'SENTETIK', text: 'Sentetik Sürat Hattı' },
+  'MAXIMUS DREAM': { bias: 'SENTETIK', text: 'Sentetik ve Çim Hattı' }
 };
 
-let kabaKumCount = 0;
-let sentetikCount = 0;
-let dualCount = 0;
-let mismatchCount = 0;
-let firstTimerCount = 0;
+function normalizeStr(str) {
+  if (!str) return '';
+  return str.toUpperCase()
+    .replace(/İ/g, 'I')
+    .replace(/I/g, 'I')
+    .replace(/Ş/g, 'S')
+    .replace(/Ğ/g, 'G')
+    .replace(/Ü/g, 'U')
+    .replace(/Ö/g, 'O')
+    .replace(/Ç/g, 'C')
+    .replace(/[^A-Z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
-bulten.hipodromlar.forEach(hip => {
-  hip.kosular.forEach(k => {
-    const raceTrack = (k.pist || '').trim(); // 'Kum', 'Sentetik', 'Çim'
-    k.atlar.forEach(a => {
-      const past = a.pastRaces || [];
-      const sire = (a.baba || '').toUpperCase().trim();
-      let sireMatch = null;
-      for (const [key, val] of Object.entries(sireProfiles)) {
-        if (sire.includes(key)) { sireMatch = val; break; }
-      }
+function findPedigreeMatch(name) {
+  const norm = normalizeStr(name);
+  if (!norm) return null;
+  for (const [key, val] of Object.entries(sireProfiles)) {
+    const normKey = normalizeStr(key);
+    if (norm === normKey || norm.includes(normKey)) {
+      return val;
+    }
+  }
+  return null;
+}
 
-      let dirtRuns = 0, dirtWins = 0, dirtTop4 = 0;
-      let synRuns = 0, synWins = 0, synTop4 = 0;
-      let turfRuns = 0, turfWins = 0, turfTop4 = 0;
+function enrichBulletinFile(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  const bulten = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-      past.forEach(p => {
-        const trk = (p.pist || '').trim();
-        const rank = parseInt(p.finishRank) || 99;
-        if (trk === 'Kum') {
-          dirtRuns++;
-          if (rank === 1) dirtWins++;
-          if (rank <= 4) dirtTop4++;
-        } else if (trk === 'Sentetik') {
-          synRuns++;
-          if (rank === 1) synWins++;
-          if (rank <= 4) synTop4++;
-        } else if (trk === 'Çim') {
-          turfRuns++;
-          if (rank === 1) turfWins++;
-          if (rank <= 4) turfTop4++;
+  let kabaKumCount = 0;
+  let sentetikCount = 0;
+  let dualCount = 0;
+  let mismatchCount = 0;
+  let firstTimerCount = 0;
+  let kickbackExemptCount = 0;
+
+  (bulten.hipodromlar || []).forEach(hip => {
+    (hip.kosular || []).forEach(k => {
+      const raceTrack = (k.pist || '').trim(); // 'Kum', 'Sentetik', 'Çim'
+      (k.atlar || []).forEach(a => {
+        const past = a.pastRaces || [];
+        const sire = a.baba || '';
+        const damSire = a.kisrak_babasi || a.kisrakBabasi || '';
+
+        const sireMatch = findPedigreeMatch(sire);
+        const damSireMatch = findPedigreeMatch(damSire);
+
+        let dirtRuns = 0, dirtWins = 0, dirtTop4 = 0;
+        let synRuns = 0, synWins = 0, synTop4 = 0;
+        let turfRuns = 0, turfWins = 0, turfTop4 = 0;
+
+        if (past && past.length > 0) {
+          past.forEach(p => {
+            const trk = (p.pist || '').trim();
+            const rank = parseInt(p.finishRank) || 99;
+            if (trk === 'Kum') {
+              dirtRuns++;
+              if (rank === 1) dirtWins++;
+              if (rank <= 4) dirtTop4++;
+            } else if (trk === 'Sentetik') {
+              synRuns++;
+              if (rank === 1) synWins++;
+              if (rank <= 4) synTop4++;
+            } else if (trk === 'Çim') {
+              turfRuns++;
+              if (rank === 1) turfWins++;
+              if (rank <= 4) turfTop4++;
+            }
+          });
+        } else if (a.pist_aptitude_analizi) {
+          const p = a.pist_aptitude_analizi;
+          dirtRuns = p.dirtStats?.runs || 0;
+          dirtWins = p.dirtStats?.wins || 0;
+          dirtTop4 = p.dirtStats?.top4 || 0;
+          synRuns = p.synStats?.runs || 0;
+          synWins = p.synStats?.wins || 0;
+          synTop4 = p.synStats?.top4 || 0;
+          turfRuns = p.turfStats?.runs || 0;
+          turfWins = p.turfStats?.wins || 0;
+          turfTop4 = p.turfStats?.top4 || 0;
         }
-      });
 
-      let badge = '';
-      let delta = 0;
-      let color = '#d4af37';
-      let desc = '';
-      const isYoung = (past.length <= 3) || a.isYoungHorse;
+        let badge = '';
+        let delta = 0;
+        let color = '#d4af37';
+        let desc = '';
+        const isYoung = (past.length > 0 && past.length <= 3) || a.isYoungHorse;
 
-      if (isYoung) {
-        badge = '🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)';
-        delta = 0;
-        color = '#38bdf8';
-        desc = 'Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.';
-        firstTimerCount++;
-      } else if (raceTrack === 'Sentetik') {
-        // GÜNÜN YARIŞI: SENTETİK PİST
-        if ((dirtWins >= 1 && synWins >= 1) || (dirtTop4 >= 2 && synTop4 >= 2)) {
-          badge = `⭐ DUAL-PİST USTASI (Kum: ${dirtWins}G/${dirtTop4}T · Sentetik: ${synWins}G/${synTop4}T)`;
-          delta = +4;
-          color = '#34d399';
-          desc = `Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.`;
-          dualCount++;
-        } else if (synRuns >= 2 && (synWins >= 1 || (synTop4 / synRuns) >= 0.5)) {
-          badge = `👑 SENTETİK PİST UZMANI (Sentetikte ${synWins}G / ${synTop4} Tabela)`;
-          delta = synWins >= 2 ? +5 : +4;
-          color = '#10b981';
-          desc = `Sentetik pistte ${synRuns} koşuda ${synWins} galibiyet, ${synTop4} tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.`;
-          sentetikCount++;
-        } else if (synRuns >= 2 && synTop4 === 0 && dirtTop4 >= 2) {
-          badge = `⚠️ PİST RİSKİ: KABA KUM ATI (Sentetikte 0 Tabela)`;
-          delta = -5;
-          color = '#ef4444';
-          desc = `Kaba kumda ${dirtRuns} koşuda ${dirtTop4} tabela yapmasına rağmen, sentetikte ${synRuns} koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkiliyor.`;
-          mismatchCount++;
-        } else if (synRuns === 0 && dirtRuns >= 3) {
-          const sireSentetikOk = sireMatch && (sireMatch.bias === 'SENTETIK' || sireMatch.bias === 'DUAL');
-          if (sireSentetikOk) {
-            badge = `🌱 SENTETİKTE İLK KEZ: Soyu (${sireMatch.text}) Sentetikle Uyumlu`;
-            delta = 0;
-            color = '#38bdf8';
-            desc = `Kariyerinde sentetik koşusu yok ancak aygırı ${sireMatch.text} olduğundan sentetik aksiyonuna yatkındır.`;
+        if (isYoung) {
+          badge = '🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)';
+          delta = 0;
+          color = '#38bdf8';
+          desc = 'Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.';
+          firstTimerCount++;
+        } else if (raceTrack === 'Sentetik') {
+          // GÜNÜN YARIŞI: SENTETİK PİST
+          if ((dirtWins >= 1 && synWins >= 1) || (dirtTop4 >= 2 && synTop4 >= 2)) {
+            badge = `⭐ DUAL-PİST USTASI (Kum: ${dirtWins}G/${dirtTop4}T · Sentetik: ${synWins}G/${synTop4}T)`;
+            delta = +4;
+            color = '#34d399';
+            desc = `Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.`;
+            dualCount++;
+          } else if (synRuns >= 2 && (synWins >= 1 || (synTop4 / synRuns) >= 0.5)) {
+            badge = `👑 SENTETİK PİST UZMANI (Sentetikte ${synWins}G / ${synTop4} Tabela)`;
+            delta = synWins >= 2 ? +5 : +4;
+            color = '#10b981';
+            desc = `Sentetik pistte ${synRuns} koşuda ${synWins} galibiyet, ${synTop4} tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.`;
+            sentetikCount++;
+          } else if (synRuns >= 2 && synTop4 === 0 && dirtTop4 >= 2) {
+            badge = `⚠️ PİST RİSKİ: KABA KUM ATI (Sentetikte 0 Tabela)`;
+            delta = -5;
+            color = '#ef4444';
+            desc = `Kaba kumda ${dirtRuns} koşuda ${dirtTop4} tabela yapmasına rağmen, sentetikte ${synRuns} koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkiliyor.`;
+            mismatchCount++;
+          } else if (synRuns === 0 && dirtRuns >= 3) {
+            const sireSentetikOk = (sireMatch && (sireMatch.bias === 'SENTETIK' || sireMatch.bias === 'DUAL')) ||
+                                   (damSireMatch && (damSireMatch.bias === 'SENTETIK' || damSireMatch.bias === 'DUAL'));
+            const pedNote = sireMatch ? sireMatch.text : (damSireMatch ? damSireMatch.text : '');
+            if (sireSentetikOk) {
+              badge = `🌱 SENTETİKTE İLK KEZ: Soyu (${pedNote}) Sentetikle Uyumlu`;
+              delta = 0;
+              color = '#38bdf8';
+              desc = `Kariyerinde sentetik koşusu yok ancak soyu (${pedNote}) sentetik aksiyonuna yatkındır.`;
+            } else {
+              badge = `⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var`;
+              delta = -3;
+              color = '#f59e0b';
+              desc = `Kariyerindeki ${dirtRuns} koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.`;
+            }
+            mismatchCount++;
           } else {
-            badge = `⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var`;
+            badge = `🏟️ Sentetik Pist Uyumlu (${synRuns > 0 ? synRuns + ' Koşuda ' + synTop4 + ' Tabela' : 'Dengeli Hat'})`;
+            delta = synTop4 > 0 ? +2 : 0;
+            color = '#f3e5ab';
+            desc = 'Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.';
+          }
+        } else if (raceTrack === 'Kum') {
+          // GÜNÜN YARIŞI: KABA KUM
+          if ((dirtWins >= 1 && synWins >= 1) || (dirtTop4 >= 2 && synTop4 >= 2)) {
+            badge = `⭐ DUAL-PİST USTASI (Kum: ${dirtWins}G/${dirtTop4}T · Sentetik: ${synWins}G/${synTop4}T)`;
+            delta = +4;
+            color = '#34d399';
+            desc = `Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.`;
+            dualCount++;
+          } else if (dirtRuns >= 2 && (dirtWins >= 1 || (dirtTop4 / dirtRuns) >= 0.5)) {
+            badge = `🔥 KABA KUM UZMANI (Kumda ${dirtWins}G / ${dirtTop4} Tabela)`;
+            delta = dirtWins >= 2 ? +5 : +4;
+            color = '#10b981';
+            desc = `Kaba kumda ${dirtRuns} koşuda ${dirtWins} galibiyet, ${dirtTop4} tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.`;
+            kabaKumCount++;
+          } else if (dirtRuns === 0 && synRuns >= 3) {
+            // ══════════════════════════════════════════════════════════════════════════
+            // SENTETİKTEN KABA KUMA İLK KEZ GEÇİŞ:
+            // PEDİGREE (AYGIR / KISRAK BABASI) VE KOŞU STİLİ (KICKBACK MUAFİYETİ)
+            // ══════════════════════════════════════════════════════════════════════════
+            const styleStr = (a.kosu_stili || a.stil || '').toLowerCase();
+            const isKacak = styleStr.includes('kaçak') || styleStr.includes('kacak') || styleStr.includes('lider');
+            const isPres = styleStr.includes('pres');
+
+            const hasKumPedigree = (sireMatch && (sireMatch.bias === 'KUM' || sireMatch.bias === 'DUAL')) ||
+                                   (damSireMatch && (damSireMatch.bias === 'KUM' || damSireMatch.bias === 'DUAL'));
+            const pedNote = (sireMatch && (sireMatch.bias === 'KUM' || sireMatch.bias === 'DUAL'))
+              ? sireMatch.text
+              : (damSireMatch ? damSireMatch.text : 'Kaba Kum Hattı');
+
+            if (hasKumPedigree && isKacak) {
+              // ALTIN DÖNÜŞÜM: Hem Orijin Kumcu hem de Kaçak (Kickback Riski SIFIR!)
+              badge = `🛡️ KABA KUMA İLK KEZ (Kum Orijinli & Kaçak - Kickback Muafiyeti)`;
+              delta = 0;
+              color = '#38bdf8';
+              desc = `Kariyerindeki ${synRuns} koşuyu sentetikte koştu; soyunda (${pedNote}) kaba kum genetiği tamdır. Kaçak/Lider stili sayesinde öndeki atlardan gelecek kum sıçramasına (kickback) maruz kalmayacaktır.`;
+              kickbackExemptCount++;
+            } else if (hasKumPedigree && isPres) {
+              // Orijin kumcu, ön grup presçisi (kickback çok sınırlı)
+              badge = `🛡️ KABA KUMA İLK KEZ (Kum Orijinli & Ön Grup Pres)`;
+              delta = -1;
+              color = '#f59e0b';
+              desc = `Kariyerindeki ${synRuns} koşuyu sentetikte koştu; soyunda (${pedNote}) kaba kum gücü mevcut. Ön grupta pres yapacağı için kickback etkisi hafif kalacaktır.`;
+              mismatchCount++;
+            } else if (hasKumPedigree) {
+              // Orijin kumcu fakat geride bekliyor (kickback riski var ama genetik kum direnci güçlü)
+              badge = `⚠️ KABA KUMA İLK KEZ (Kum Orijinli - Geride Kickback Riski)`;
+              delta = -2;
+              color = '#f59e0b';
+              desc = `Soyunda (${pedNote}) kaba kum genetiği mevcut ancak bekleme/sprinter stili nedeniyle ön gruptan sıçrayacak kum parçalarına (kickback) ilk kez maruz kalacaktır.`;
+              mismatchCount++;
+            } else if (isKacak) {
+              // Orijin sentetik/çim yatkını ama kaçak koşuyor (kickback yemeyecek, derin kum direnci test edilecek)
+              badge = `⚠️ KABA KUMA İLK KEZ (Kaçak Stille Kickback Yok / Derin Kum Testi)`;
+              delta = -3;
+              color = '#f59e0b';
+              desc = `Soyunda kaba kum baskınlığı sınırlı. Kaçak stiliyle kickback yemeyecek olsa da kaba kumun derin yapısına ilk kez ayak uydurmaya çalışacaktır.`;
+              mismatchCount++;
+            } else {
+              // Hem orijin kumcu değil hem de geride kickback'e boğulacak
+              badge = `⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)`;
+              delta = -5;
+              color = '#ef4444';
+              desc = `Kariyerindeki ${synRuns} koşuyu sentetikte koştu; soyu kaba kum destekli değil ve geriden gelen stiliyle önden sıçrayacak yoğun kum parçalarına (kickback) ilk kez maruz kalacaktır.`;
+              mismatchCount++;
+            }
+          } else if (dirtRuns >= 2 && dirtTop4 === 0 && (synTop4 >= 2 || turfTop4 >= 2)) {
+            badge = `⚠️ PİST UYARISI: Kaba Kumda 0 Tabela (Sentetik/Çim Atı)`;
+            delta = -4;
+            color = '#ef4444';
+            desc = 'Kaba kumdaki önceki yarışlarında tabelaya giremedi; safkanın sentetik veya çim performansı kaba kuma göre belirgin şekilde üstündür.';
+            mismatchCount++;
+          } else {
+            badge = `🏟️ Kaba Kum Deneyimli (${dirtRuns > 0 ? dirtRuns + ' Koşuda ' + dirtTop4 + ' Tabela' : 'Dengeli Hat'})`;
+            delta = dirtTop4 > 0 ? +2 : 0;
+            color = '#f3e5ab';
+            desc = 'Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.';
+          }
+        } else {
+          // GÜNÜN YARIŞI: ÇİM
+          if (turfRuns >= 2 && (turfWins >= 1 || (turfTop4 / turfRuns) >= 0.6)) {
+            badge = `🌿 ÇİM PİST UZMANI (Çimde ${turfWins}G / ${turfTop4} Tabela)`;
+            delta = turfWins >= 2 ? +5 : +4;
+            color = '#10b981';
+            desc = `Çim pistte ${turfRuns} koşuda ${turfWins} galibiyet, ${turfTop4} tabela yaptı; çim aksiyonu oturmuştur.`;
+          } else if (turfRuns === 0 && (dirtRuns >= 3 || synRuns >= 3)) {
+            badge = `⚠️ ÇİMDE İLK KEZ: Kum / Sentetik Atı`;
             delta = -3;
             color = '#f59e0b';
-            desc = `Kariyerindeki ${dirtRuns} koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.`;
+            desc = 'Kariyerinde hiç çim koşusu yok, kum/sentetikten çime geçiyor.';
+          } else {
+            badge = `🌿 Çim Pist Uyumlu (${turfRuns} Koşuda ${turfTop4} Tabela)`;
+            delta = turfTop4 > 0 ? +2 : 0;
+            color = '#f3e5ab';
+            desc = 'Çim pistte tecrübesi mevcut.';
           }
-          mismatchCount++;
-        } else {
-          badge = `🏟️ Sentetik Pist Uyumlu (${synRuns > 0 ? synRuns + ' Koşuda ' + synTop4 + ' Tabela' : 'Dengeli Hat'})`;
-          delta = synTop4 > 0 ? +2 : 0;
-          color = '#f3e5ab';
-          desc = 'Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.';
         }
-      } else if (raceTrack === 'Kum') {
-        // GÜNÜN YARIŞI: KABA KUM
-        if ((dirtWins >= 1 && synWins >= 1) || (dirtTop4 >= 2 && synTop4 >= 2)) {
-          badge = `⭐ DUAL-PİST USTASI (Kum: ${dirtWins}G/${dirtTop4}T · Sentetik: ${synWins}G/${synTop4}T)`;
-          delta = +4;
-          color = '#34d399';
-          desc = `Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.`;
-          dualCount++;
-        } else if (dirtRuns >= 2 && (dirtWins >= 1 || (dirtTop4 / dirtRuns) >= 0.5)) {
-          badge = `🔥 KABA KUM UZMANI (Kumda ${dirtWins}G / ${dirtTop4} Tabela)`;
-          delta = dirtWins >= 2 ? +5 : +4;
-          color = '#10b981';
-          desc = `Kaba kumda ${dirtRuns} koşuda ${dirtWins} galibiyet, ${dirtTop4} tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.`;
-          kabaKumCount++;
-        } else if (dirtRuns === 0 && synRuns >= 3) {
-          badge = `⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)`;
-          delta = -5;
-          color = '#ef4444';
-          desc = `Kariyerindeki ${synRuns} koşuyu sentetikte koştu; kaba kumun derin kum yapısına ve önden gelen kickback'e ilk kez maruz kalacak, ciddi handikap.`;
-          mismatchCount++;
-        } else if (dirtRuns >= 2 && dirtTop4 === 0 && (synTop4 >= 2 || turfTop4 >= 2)) {
-          badge = `⚠️ PİST UYARISI: Kaba Kumda 0 Tabela (Sentetik/Çim Atı)`;
-          delta = -4;
-          color = '#ef4444';
-          desc = 'Kaba kumdaki önceki yarışlarında tabelaya giremedi; safkanın sentetik veya çim performansı kaba kuma göre belirgin şekilde üstündür.';
-          mismatchCount++;
-        } else {
-          badge = `🏟️ Kaba Kum Deneyimli (${dirtRuns > 0 ? dirtRuns + ' Koşuda ' + dirtTop4 + ' Tabela' : 'Dengeli Hat'})`;
-          delta = dirtTop4 > 0 ? +2 : 0;
-          color = '#f3e5ab';
-          desc = 'Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.';
-        }
-      } else {
-        // GÜNÜN YARIŞI: ÇİM
-        if (turfRuns >= 2 && (turfWins >= 1 || (turfTop4 / turfRuns) >= 0.6)) {
-          badge = `🌿 ÇİM PİST UZMANI (Çimde ${turfWins}G / ${turfTop4} Tabela)`;
-          delta = turfWins >= 2 ? +5 : +4;
-          color = '#10b981';
-          desc = `Çim pistte ${turfRuns} koşuda ${turfWins} galibiyet, ${turfTop4} tabela yaptı; çim aksiyonu oturmuştur.`;
-        } else if (turfRuns === 0 && (dirtRuns >= 3 || synRuns >= 3)) {
-          badge = `⚠️ ÇİMDE İLK KEZ: Kum / Sentetik Atı`;
-          delta = -3;
-          color = '#f59e0b';
-          desc = 'Kariyerinde hiç çim koşusu yok, kum/sentetikten çime geçiyor.';
-        } else {
-          badge = `🌿 Çim Pist Uyumlu (${turfRuns} Koşuda ${turfTop4} Tabela)`;
-          delta = turfTop4 > 0 ? +2 : 0;
-          color = '#f3e5ab';
-          desc = 'Çim pistte tecrübesi mevcut.';
-        }
-      }
 
-      a.pist_aptitude_analizi = {
-        badge,
-        delta,
-        color,
-        desc,
-        dirtStats: { runs: dirtRuns, wins: dirtWins, top4: dirtTop4 },
-        synStats: { runs: synRuns, wins: synWins, top4: synTop4 },
-        turfStats: { runs: turfRuns, wins: turfWins, top4: turfTop4 }
-      };
+        a.pist_aptitude_analizi = {
+          badge,
+          delta,
+          color,
+          desc,
+          dirtStats: { runs: dirtRuns, wins: dirtWins, top4: dirtTop4 },
+          synStats: { runs: synRuns, wins: synWins, top4: synTop4 },
+          turfStats: { runs: turfRuns, wins: turfWins, top4: turfTop4 }
+        };
+      });
     });
   });
-});
 
-console.log('✅ KABA KUM VE SENTETİK ANALİZİ TAMAMLANDI:');
-console.log('🔥 Kaba Kum Uzmanı Safkanlar:', kabaKumCount);
-console.log('👑 Sentetik Uzmanı Safkanlar:', sentetikCount);
-console.log('⭐ Dual-Pist Ustaları (Kum & Sentetik Çift Yönlü):', dualCount);
-console.log('⚠️ Pist Uyuşmazlığı / Riski Tespit Edilenler:', mismatchCount);
-console.log('🌱 Genç Taylar (≤3 Koşu Nötr Kalanlar):', firstTimerCount);
+  fs.writeFileSync(filePath, JSON.stringify(bulten, null, 2), 'utf8');
+  console.log(`📁 ${path.basename(filePath)} güncellendi:`);
+  console.log(`   - Kaba Kum Uzmanı: ${kabaKumCount}`);
+  console.log(`   - Sentetik Uzmanı: ${sentetikCount}`);
+  console.log(`   - Dual-Pist Ustası: ${dualCount}`);
+  console.log(`   - 🛡️ Kickback Muafiyeti / Kum Orijinli Geçiş: ${kickbackExemptCount}`);
+  console.log(`   - ⚠️ Pist Riski / Uyuşmazlığı: ${mismatchCount}`);
+  console.log(`   - 🌱 Genç Taylar (Nötr): ${firstTimerCount}`);
+}
 
-fs.writeFileSync(bultenPath, JSON.stringify(bulten, null, 2), 'utf8');
-console.log('📁 bulten_bugun.json dosyası yeni Kaba Kum / Sentetik ayrımıyla kaydedildi!');
+// bulten_bugun.json, bulten_yarin.json ve bulten_dun.json dosyalarını işle
+const bultenBugun = path.join(__dirname, '..', 'public', 'data', 'bulten_bugun.json');
+const bultenYarin = path.join(__dirname, '..', 'public', 'data', 'bulten_yarin.json');
+const bultenDun = path.join(__dirname, '..', 'public', 'data', 'bulten_dun.json');
+
+console.log('════════════════════════════════════════════════════════════════════════════');
+console.log('🏇 AKILLI PİST & ORİJİN & KICKBACK KALİBRASYON MOTORU ÇALIŞTIRILIYOR');
+console.log('════════════════════════════════════════════════════════════════════════════');
+if (fs.existsSync(bultenBugun)) enrichBulletinFile(bultenBugun);
+if (fs.existsSync(bultenYarin)) enrichBulletinFile(bultenYarin);
+if (fs.existsSync(bultenDun)) enrichBulletinFile(bultenDun);

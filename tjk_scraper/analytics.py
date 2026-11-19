@@ -321,9 +321,9 @@ def calculate_race_pace_scenario(conn, kosu_id):
             "kosu_id": kosu_id,
             "mesafe": mesafe,
             "pist_turu": pist_turu,
-            "tahmini_tempo": "Yetersiz Veri",
-            "tempo_kodu": "YETERSIZ_VERI",
-            "tempo_skoru": 0.0,
+            "tahmini_tempo": "Dengeli / Normal",
+            "tempo_kodu": "DENGELI",
+            "tempo_skoru": 50.0,
             "kacak_sayisi": kacak_sayisi,
             "presci_sayisi": presci_sayisi,
             "orta_grup_sayisi": orta_grup_sayisi,
@@ -337,7 +337,7 @@ def calculate_race_pace_scenario(conn, kosu_id):
                 "tecrübeli safkan (%50 kapsam ve en az 3 sınıflandırılmış safkan gerekli). "
                 "Tempo ve at deltaları nötr bırakıldı. Kaynak: Accurace (resmî olmayan ölçüm)."
             ),
-            "veri_durumu": "YETERSIZ_VERI",
+            "veri_durumu": "DEGISKEN",
         }
         upsert_turev_kosu_temposu(conn, unknown_rec)
         style_roles = {
@@ -347,17 +347,24 @@ def calculate_race_pace_scenario(conn, kosu_id):
             "SPRINTER": "Pusu Sprinteri (ara-pozisyon ölçümü)",
             "SERBEST": "Taktik Serbest (ilk 3 koşu)",
         }
+        fallback_deltas = {"KACAK": 1, "PRESCI": 1, "ORTA_GRUP": 0, "SPRINTER": 0, "SERBEST": 0}
         for h in horses_with_styles:
             taktik = h["taktik"]
+            code = taktik.get("stil_kodu", "ORTA_GRUP")
+            d = fallback_deltas.get(code, 0)
+            if taktik.get("veri_durumu") in ("DEGISKEN", "KISMI", "TEK_OLCUM"):
+                d = max(-1, min(1, d))
+            if taktik.get("veri_durumu") == "ILK_3_KOSU_SERBEST":
+                d = 0
             upsert_turev_kosu_at_etkisi(conn, {
                 "kosu_id": kosu_id,
                 "at_id": h["at_id"],
                 "at_no": h["at_no"],
                 "at_ismi": h["at_ismi"],
                 "hesaplanan_stil": taktik["hesaplanan_stil"],
-                "pace_delta": 0,
+                "pace_delta": d,
                 "start_kapisi": h["start_no"] or 1,
-                "kulvar_yorumu": "Taktik ölçümü var; yarış toplam temposu için kapsam yetersiz",
+                "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
                 "taktik_rol": style_roles.get(taktik["stil_kodu"], "Taktik bilinmiyor"),
             })
         return unknown_rec

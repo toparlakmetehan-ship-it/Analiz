@@ -966,7 +966,8 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
           <div style="display:flex; align-items:center; gap:0.4rem;">
             <select id="robot-archive-date-select" onchange="onRobotArchiveDateChange(this.value)" style="background:#08080a; border:1px solid rgba(212,175,55,0.6); color:var(--gold-champagne); padding:0.55rem 0.9rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; outline:none;">
               <option value="">🏛️ GEÇMİŞ GÜNLER ARŞİVİNDEN 6'LI KUR...</option>
-              <option value="2026-11-17">17 Kasım Salı (Dün - Ankara, Antalya)</option>
+              <option value="2026-11-18">18 Kasım Çarşamba (Dün - Elazığ, İstanbul)</option>
+              <option value="2026-11-17">17 Kasım Salı (Ankara, Antalya)</option>
               <option value="2026-11-16">16 Kasım Pazartesi (Bursa, Şanlıurfa)</option>
               <option value="2026-11-15">15 Kasım Pazar (Adana 634K ₺ ve 3.240 ₺ Tutan, İstanbul)</option>
               <option value="2026-11-14">14 Kasım Cumartesi (Ankara 185K ₺ Tutan, İzmir, Diyarbakır)</option>
@@ -1146,7 +1147,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
             <span style="font-size:0.75rem; color:var(--text-muted); font-family:'Montserrat', sans-serif; font-weight:500;">(İstediğiniz güne tıklayarak anında o günün yarışlarını açın)</span>
           </div>
           <div style="font-family:'JetBrains Mono'; font-size:0.8rem; color:#34d399; font-weight:700;">
-            ✓ 17 Günlük Arşiv (1 - 17 Kasım / 292 Koşu)
+            ✓ 18 Günlük Arşiv (1 - 18 Kasım / 309 Koşu)
           </div>
         </div>
         <div id="bt-date-strip" style="display:flex; gap:0.6rem; overflow-x:auto; padding-bottom:0.5rem; scrollbar-width:thin;">
@@ -1170,8 +1171,9 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
               <div style="display:flex; align-items:center; gap:0.6rem;">
                 <label style="font-size:0.85rem; font-weight:700; color:var(--text-gold);">Tarih Seçin:</label>
                 <select id="backtest-date-select" onchange="onBacktestDateChange(this.value)" style="background:#161922; border:1px solid var(--gold-pure); color:#fcfcfc; padding:0.5rem 0.9rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:600; cursor:pointer; outline:none; box-shadow:0 0 15px rgba(212,175,55,0.2);">
-                  <option value="all">🌟 TÜM KASIM AYI (1-17 Kasım / 292 Koşu Kümülatif)</option>
-                  <option value="2026-11-17" selected>📅 17 Kasım 2026 (Dün) — Ankara, Antalya (16 Koşu)</option>
+                  <option value="all">🌟 TÜM KASIM AYI (1-18 Kasım / 309 Koşu Kümülatif)</option>
+                  <option value="2026-11-18" selected>📅 18 Kasım 2026 (Dün) — Elazığ, İstanbul (17 Koşu)</option>
+                  <option value="2026-11-17">📅 17 Kasım 2026 (Salı) — Ankara, Antalya (16 Koşu)</option>
                   <option value="2026-11-16">📅 16 Kasım 2026 (Pazartesi) — Bursa, Şanlıurfa (15 Koşu)</option>
                   <option value="2026-11-15">📅 15 Kasım 2026 (Pazar) — Adana, İstanbul (17 Koşu)</option>
                   <option value="2026-11-14">📅 14 Kasım 2026 (Cumartesi) — Ankara, İzmir, Diyarbakır (23 Koşu)</option>
@@ -5741,7 +5743,7 @@ function renderBacktest() {
       }
     }
     currentDayInfo = {
-      tarih: '1 - 17 Kasım 2026 (Tüm 17 Gün Kümülatif)',
+      tarih: '1 - 18 Kasım 2026 (Tüm 18 Gün Kümülatif)',
       sehirler: Array.from(allCitiesSet),
       toplamKosu: total,
       ilk1Isabet: first,

@@ -175,6 +175,29 @@ class SurfaceAptitudeTests(unittest.TestCase):
         self.assertEqual(result["delta"], -5)
         self.assertEqual(result["synStats"]["runs"], 3)
 
+    def test_synthetic_horse_with_kum_pedigree_and_kacak_exempt_from_kickback(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        self._runs("Sentetik", [1, 2, 3])
+        # Kum pedigree (OVA) + Kaçak running style -> 0 delta, kickback exemption
+        result = build_pist_aptitude(self.conn, 1, False, "Kum", sire_name="OVA", dam_sire="SANCAKBEYI", running_style="Kaçak / Lider")
+        self.assertEqual(result["delta"], 0)
+        self.assertIn("Kickback Muafiyeti", result["badge"])
+
+    def test_synthetic_horse_with_kum_pedigree_and_pres(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        self._runs("Sentetik", [1, 2, 3])
+        # Kum pedigree (HABERBATUR) + Pres -> -1 delta
+        result = build_pist_aptitude(self.conn, 1, False, "Kum", sire_name="HABERBATUR", dam_sire="", running_style="Presçi")
+        self.assertEqual(result["delta"], -1)
+
+    def test_synthetic_horse_with_kum_pedigree_and_sprinter(self):
+        from tjk_scraper.scraper import build_pist_aptitude
+        self._runs("Sentetik", [1, 2, 3])
+        # Kum pedigree (ÖZGÜNHAN) + Sprinter -> -2 delta (kickback riski var ama genetik kum güçlü)
+        result = build_pist_aptitude(self.conn, 1, False, "Kum", sire_name="ÖZGÜNHAN", dam_sire="ALTAHA", running_style="Düzlük Sprinteri")
+        self.assertEqual(result["delta"], -2)
+        self.assertIn("Kickback Riski", result["badge"])
+
     def test_no_history_stays_neutral(self):
         from tjk_scraper.scraper import build_pist_aptitude
         result = build_pist_aptitude(self.conn, 1, False, "Kum", "")

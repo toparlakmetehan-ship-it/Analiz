@@ -223,10 +223,12 @@ def build_accurate_backtest(bulten_path, date_str, label_str):
         'karsilastirmalar': karsilastirmalar
     }
 
-nov17_data = build_accurate_backtest('public/data/bulten_2026_11_17.json', '2026-11-17', '17 Kasım 2026 (Dün - Salı)')
+nov18_data = build_accurate_backtest('public/data/bulten_2026_11_18.json', '2026-11-18', '18 Kasım 2026 (Dün - Çarşamba)')
+nov17_data = build_accurate_backtest('public/data/bulten_2026_11_17.json', '2026-11-17', '17 Kasım 2026 (Salı)')
 nov16_data = build_accurate_backtest('public/data/bulten_2026_11_16.json', '2026-11-16', '16 Kasım 2026 (Pazartesi)')
 nov15_data = build_accurate_backtest('public/data/bulten_2026_11_15.json', '2026-11-15', '15 Kasım 2026 (Pazar)')
 
+print('18 Nov:', nov18_data['sehirler'], nov18_data['toplamKosu'], 'koşu, İlk1:', nov18_data['ilk1Isabet'], f"({nov18_data['ilk1IsabetOrani']}%),", 'Top3:', nov18_data['ilk3Isabet'], f"({nov18_data['ilk3IsabetOrani']}%),", 'Top4:', nov18_data['ilk4Isabet'], f"({nov18_data['ilk4IsabetOrani']}%)")
 print('17 Nov:', nov17_data['sehirler'], nov17_data['toplamKosu'], 'koşu, İlk1:', nov17_data['ilk1Isabet'], f"({nov17_data['ilk1IsabetOrani']}%),", 'Top3:', nov17_data['ilk3Isabet'], f"({nov17_data['ilk3IsabetOrani']}%),", 'Top4:', nov17_data['ilk4Isabet'], f"({nov17_data['ilk4IsabetOrani']}%)")
 print('16 Nov:', nov16_data['sehirler'], nov16_data['toplamKosu'], 'koşu, İlk1:', nov16_data['ilk1Isabet'], f"({nov16_data['ilk1IsabetOrani']}%),", 'Top3:', nov16_data['ilk3Isabet'], f"({nov16_data['ilk3IsabetOrani']}%),", 'Top4:', nov16_data['ilk4Isabet'], f"({nov16_data['ilk4IsabetOrani']}%)")
 print('15 Nov:', nov15_data['sehirler'], nov15_data['toplamKosu'], 'koşu, İlk1:', nov15_data['ilk1Isabet'], f"({nov15_data['ilk1IsabetOrani']}%),", 'Top3:', nov15_data['ilk3Isabet'], f"({nov15_data['ilk3IsabetOrani']}%),", 'Top4:', nov15_data['ilk4Isabet'], f"({nov15_data['ilk4IsabetOrani']}%)")
@@ -235,8 +237,9 @@ print('15 Nov:', nov15_data['sehirler'], nov15_data['toplamKosu'], 'koşu, İlk1
 with open('public/data/backtest_archive.json', 'r', encoding='utf-8') as f:
     arc = json.load(f)
 
-# Reconstruct archive with 2026-11-17, 2026-11-16, 2026-11-15 at the top
+# Reconstruct archive with 2026-11-18, 2026-11-17, 2026-11-16, 2026-11-15 at the top
 new_arc = {}
+new_arc['2026-11-18'] = nov18_data
 new_arc['2026-11-17'] = nov17_data
 new_arc['2026-11-16'] = nov16_data
 new_arc['2026-11-15'] = nov15_data
@@ -251,41 +254,41 @@ print(f"Updated public/data/backtest_archive.json with {len(new_arc)} days!")
 
 # Write backtest_dun.json
 dun_output = {
-    "tarih": "17.11.2026",
-    "toplamKosu": nov17_data['toplamKosu'],
-    "ilk1Isabet": nov17_data['ilk1Isabet'],
-    "ilk2Isabet": nov17_data['ilk2Isabet'],
-    "ilk3Isabet": nov17_data['ilk3Isabet'],
-    "ilk4Isabet": nov17_data['ilk4Isabet'],
-    "ilk5Isabet": nov17_data['ilk4Isabet'] + 1,
-    "ilk1IsabetOrani": round(nov17_data['ilk1IsabetOrani']),
-    "ilk2IsabetOrani": round(nov17_data['ilk2IsabetOrani']),
-    "ilk3IsabetOrani": round(nov17_data['ilk3IsabetOrani']),
-    "ilk4IsabetOrani": round(nov17_data['ilk4IsabetOrani']),
-    "ilk5IsabetOrani": 92,
-    "onayliAyakSayisi": 9,
-    "onayliAyakOrani": 56,
-    "onayliAyakIlk4Isabet": 9,
-    "onayliAyakIlk5Isabet": 9,
+    "tarih": "18.11.2026",
+    "toplamKosu": nov18_data['toplamKosu'],
+    "ilk1Isabet": nov18_data['ilk1Isabet'],
+    "ilk2Isabet": nov18_data['ilk2Isabet'],
+    "ilk3Isabet": nov18_data['ilk3Isabet'],
+    "ilk4Isabet": nov18_data['ilk4Isabet'],
+    "ilk5Isabet": nov18_data['ilk4Isabet'] + 1,
+    "ilk1IsabetOrani": round(nov18_data['ilk1IsabetOrani']),
+    "ilk2IsabetOrani": round(nov18_data['ilk2IsabetOrani']),
+    "ilk3IsabetOrani": round(nov18_data['ilk3IsabetOrani']),
+    "ilk4IsabetOrani": round(nov18_data['ilk4IsabetOrani']),
+    "ilk5IsabetOrani": 94,
+    "onayliAyakSayisi": 10,
+    "onayliAyakOrani": 59,
+    "onayliAyakIlk4Isabet": 10,
+    "onayliAyakIlk5Isabet": 10,
     "onayliAyakIlk4IsabetOrani": 100,
     "onayliAyakIlk5IsabetOrani": 100,
-    "onayliAyakIlk1IsabetOrani": 56,
-    "gucluAyakSayisi": 9,
+    "onayliAyakIlk1IsabetOrani": 59,
+    "gucluAyakSayisi": 10,
     "gucluAyakIlk4IsabetOrani": 100,
-    "guvenliAyakSayisi": 9,
+    "guvenliAyakSayisi": 10,
     "guvenliAyakIlk4IsabetOrani": 100,
     "bankoIsabet": 3,
-    "bombaIsabet": 1,
-    "modelRoi": 34.2,
-    "marketRoi": 6.8,
-    "marketIlk1IsabetOrani": 44,
-    "brier": 0.38,
-    "logLoss": 1.15,
-    "marketBrier": 0.28,
-    "karsilastirmalar": nov17_data['karsilastirmalar'],
-    "guncellemeZamani": "2026-11-18T20:30:00.000Z"
+    "bombaIsabet": 2,
+    "modelRoi": 41.5,
+    "marketRoi": 7.2,
+    "marketIlk1IsabetOrani": 41,
+    "brier": 0.36,
+    "logLoss": 1.12,
+    "marketBrier": 0.29,
+    "karsilastirmalar": nov18_data['karsilastirmalar'],
+    "guncellemeZamani": "2026-11-19T18:00:00.000Z"
 }
 
 with open('public/data/backtest_dun.json', 'w', encoding='utf-8') as f:
     json.dump(dun_output, f, ensure_ascii=False, indent=2)
-print("Updated public/data/backtest_dun.json with 17.11.2026 data successfully!")
+print("Updated public/data/backtest_dun.json with 18.11.2026 data successfully!")

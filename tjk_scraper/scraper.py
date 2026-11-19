@@ -79,32 +79,104 @@ BASE_HEADERS = {
 
 # Pist yatkınlığında kullanılan aygır soy eğilimleri (JS enricher ile aynı sözlük).
 PIST_SIRE_BIAS = {
+    # 1. KABA KUM DOMİNANT (Arap & İngiliz)
+    'OVA': ('KUM', 'Kaba Kum & Çamur Otoritesi (Şentay Hattı)'),
+    'SANCAKBEYI': ('KUM', 'Ağır Kaba Kum Efsanesi'),
+    'HABERBATUR': ('KUM', 'Arap Kaba Kum Güç Hattı'),
+    'OZGUNHAN': ('KUM', 'Arap Kaba Kum Otoritesi'),
+    'BILGIN': ('KUM', 'Arap Kaba Kum & Çamur Ustası'),
+    'GOBAK BEY': ('KUM', 'Kaba Kum Arap Güç Hattı'),
+    'GOBAKTI': ('KUM', 'Kaba Kum Arap Güç Hattı'),
+    'ALTAHA': ('KUM', 'Kaba Kum Güç & Dayanıklılık'),
+    'SENTAY': ('KUM', 'Kaba Kum Efsanesi'),
+    'TUMOZ BEY': ('KUM', 'Kaba Kum Güç Hattı'),
+    'AYABAKAN': ('KUM', 'Kaba Kum Güçlü Hat'),
+    'KARAUZUM': ('KUM', 'Kaba Kum Dayanıklılık'),
+    'GUNTAY': ('KUM', 'Kaba Kum Güçlü Hat'),
+    'BERKSOY': ('KUM', 'Kaba Kum Sert Aygır'),
+    'UCANOGLU': ('KUM', 'Kaba Kum Güç Hattı'),
+    'SARRAF': ('KUM', 'Kaba Kum Erken Sürat & Güç'),
+    'DEMIRKAZIK': ('KUM', 'Kaba Kum Otoritesi'),
+    'KAFKAS SAHI': ('KUM', 'Kaba Kum Güç Hattı'),
+    'GELIBOLU': ('KUM', 'Kaba Kum Güç Hattı'),
+    'EMBIR HAN': ('KUM', 'Kaba Kum Güç Hattı'),
+    'DAYIBEY': ('KUM', 'Kaba Kum Güç Hattı'),
+    'BABA MEVLUT': ('KUM', 'Kaba Kum Güç Hattı'),
+    'YELGECEN': ('KUM', 'Kaba Kum Hattı'),
+    'COMERTKAN': ('KUM', 'Kaba Kum Güç Hattı'),
+    'SONALP': ('KUM', 'Kaba Kum Hattı'),
+    'YAKUPBEY': ('KUM', 'Kaba Kum Hattı'),
+    'HURBATUR': ('KUM', 'Ağır Kum & Çamur Efsanesi'),
+    'SERGEN': ('KUM', 'Kaba Kum Güç Hattı'),
+    'KAMAN': ('KUM', 'Kaba Kum Güç Hattı'),
+    'DILIRAN': ('KUM', 'Kaba Kum Güç Hattı'),
+    'GUMBURGUMBUR': ('KUM', 'Kaba Kum Sprint & Güç'),
+    'ORCUN': ('KUM', 'Kaba Kum & Dayanıklılık'),
+    'UCANBEY': ('KUM', 'Kaba Kum Güç Hattı'),
+    'DAREDEVIL': ('KUM', 'Safkan Kaba Kum Gücü'),
+    'BODEMEISTER': ('KUM', 'Kaba Kum Güç & Dayanıklılık'),
+    'TIZWAY': ('KUM', 'Kaba Kum Klasik Mesafe Aygırı'),
+    'CUVEE': ('KUM', 'Kaba Kum Erken Sürat Aygırı'),
+    'LION HEART': ('KUM', 'Kaba Kum Dayanıklı Sprint'),
+    'CORINTHIAN': ('KUM', 'Kaba Kum Gücü Yüksek'),
+    'RUN AWAY AND HIDE': ('KUM', 'Kaba Kum Erken Hız ve Güç'),
+    'SUPER SAVER': ('KUM', 'Kaba Kum ve Ağır Pist Şampiyonu'),
+    'BOSPORUS': ('KUM', 'Kaba Kum Sürat Otoritesi'),
+    'SPEEDY WOLF': ('KUM', 'Kaba Kum Sprint Hattı'),
+    'EXPANSION': ('KUM', 'Kaba Kum Güç Hattı'),
+    'HAKEEM': ('KUM', 'Kaba Kum Güçlü Hat'),
+    'PULPIT': ('KUM', 'Kaba Kum Amerikan Hattı'),
+    'TAPIT': ('KUM', 'Kaba Kum Efsanesi'),
+    'UNACCOUNTED FOR': ('KUM', 'Kaba Kum Dayanıklılık Efsanesi'),
+    'STRIKE THE GOLD': ('KUM', 'Kaba Kum ve Çamur Efsanesi'),
+    'WEST BY WEST': ('KUM', 'Kaba Kum Otoritesi'),
+    'ROYAL ABJAR': ('KUM', 'Kaba Kum Sürat Hattı'),
+    'TRIPPE DAYS': ('KUM', 'Kaba Kum Sürat Hattı'),
+    'DUTYFREE': ('KUM', 'Kaba Kum Sürat Gücü'),
+    'AFTER MARKET': ('KUM', 'Kaba Kum Güç Hattı'),
+    'TALIPHAN': ('KUM', 'Kaba Kum ve Güç Hattı'),
+    # 2. DUAL (KUM & SENTETİK)
+    'VICTORY GALLOP': ('DUAL', 'Kum & Sentetik Şampiyonu'),
+    'KAIZBERT': ('DUAL', 'Kum ve Sentetikte Yenilmez (Arap)'),
+    'PAPA CLEM': ('DUAL', 'Kum & Sentetik Dengeli Hat'),
+    'MENDIP': ('DUAL', 'Kum ve Sentetikte Yüksek Form'),
+    'OZHABER': ('DUAL', 'Kum & Sentetik Çift Yönlü'),
+    'KANEKO': ('DUAL', 'Kum & Sentetik Güçlü Hat'),
+    'TURBO': ('DUAL', 'Kum & Sentetikte Üst Düzey Güç'),
+    'AUTHORIZED': ('DUAL', 'Kum & Çim Dayanıklı Hat'),
+    'SMART ROBIN': ('DUAL', 'Kum & Sentetik Dengeli Hat'),
+    'TAMERINOGLU': ('DUAL', 'Kum & Sentetik Başarılı'),
+    'GURSU': ('DUAL', 'Kum & Sentetik Çift Yönlü'),
+    # 3. SENTETİK & ÇİM
     'NATIVE KHAN': ('SENTETIK', 'Sentetik & Çim Otoritesi'),
     'TOROK': ('SENTETIK', 'Sentetik ve Çim Uzmanı'),
     'LUXOR': ('SENTETIK', 'Sentetik / Açık Koşu Çim Uzmanı'),
     "FAST 'N' FAMOUS": ('SENTETIK', 'Sentetik Sprint Gücü'),
     'INVINCIBLE SPIRIT': ('SENTETIK', 'Sentetik / All-Weather Orijini'),
     'APPROVE': ('SENTETIK', 'Sentetik Sprint Yatkını'),
-    'DAREDEVIL': ('KUM', 'Safkan Kaba Kum Gücü'),
-    'BODEMEISTER': ('KUM', 'Kaba Kum Güç & Dayanıklılık'),
-    'TİZWAY': ('KUM', 'Kaba Kum Klasik Mesafe Aygırı'),
-    'CUVEE': ('KUM', 'Kaba Kum Erken Sürat Aygırı'),
-    'LION HEART': ('KUM', 'Kaba Kum Dayanıklı Sprint'),
-    'CORINTHIAN': ('KUM', 'Kaba Kum Gücü Yüksek'),
-    'BILGIN': ('KUM', 'Arap Kaba Kum Çamur Otoritesi'),
-    'HABERBATUR': ('KUM', 'Arap Kaba Kum Güç Hattı'),
-    'ÖZGÜNHAN': ('KUM', 'Arap Kaba Kum Otoritesi'),
-    'GOBAK BEY': ('KUM', 'Arap Kaba Kum Güç Hattı'),
-    'VICTORY GALLOP': ('DUAL', 'Kum & Sentetik Şampiyonu'),
-    'KAIZBERT': ('DUAL', 'Kum ve Sentetikte Yenilmez (Arap)'),
-    'PAPA CLEM': ('DUAL', 'Kum & Sentetik Dengeli Hat'),
-    'MENDIP': ('DUAL', 'Kum ve Sentetikte Yüksek Form'),
-    'ÖZHABER': ('DUAL', 'Kum & Sentetik Çift Yönlü'),
-    'KANEKO': ('DUAL', 'Kum & Sentetik Güçlü Hat'),
+    'SATONO ARES': ('SENTETIK', 'Sentetik & Çim Japon Hattı'),
 }
 
 
-def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name=""):
+def normalize_horse_name(name):
+    if not name:
+        return ""
+    trans = str.maketrans("İıŞşĞğÜüÖöÇç", "IISSGGUUOOCC")
+    return name.translate(trans).upper().strip()
+
+
+def find_pedigree_bias(name):
+    norm = normalize_horse_name(name)
+    if not norm:
+        return None
+    for key, val in PIST_SIRE_BIAS.items():
+        norm_key = normalize_horse_name(key)
+        if norm_key in norm or norm in norm_key:
+            return val
+    return None
+
+
+def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name="", dam_sire="", running_style=""):
     """Geçmiş yarışlardan kum/sentetik/çim istatistiklerini ve pist deltasını üretir."""
     empty = {"runs": 0, "wins": 0, "top4": 0}
     dirt, syn, turf = dict(empty), dict(empty), dict(empty)
@@ -189,9 +261,36 @@ def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name=""):
             delta, color = (5 if dirt["wins"] >= 2 else 4), "#10b981"
             desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['wins']} galibiyet, {dirt['top4']} tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir."
         elif dirt["runs"] == 0 and syn["runs"] >= 3:
-            badge = "⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)"
-            delta, color = -5, "#ef4444"
-            desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; kaba kumun derin kum yapısına ve önden gelen kickback'e ilk kez maruz kalacak, ciddi handikap."
+            style_str = (running_style or "").lower()
+            is_kacak = ("kaçak" in style_str) or ("kacak" in style_str) or ("lider" in style_str)
+            is_pres = "pres" in style_str
+
+            sire_match = find_pedigree_bias(sire_name)
+            dam_sire_match = find_pedigree_bias(dam_sire)
+
+            has_kum_ped = (sire_match and sire_match[0] in ("KUM", "DUAL")) or (dam_sire_match and dam_sire_match[0] in ("KUM", "DUAL"))
+            ped_text = (sire_match[1] if (sire_match and sire_match[0] in ("KUM", "DUAL")) else (dam_sire_match[1] if dam_sire_match else "Kaba Kum Hattı"))
+
+            if has_kum_ped and is_kacak:
+                badge = "🛡️ KABA KUMA İLK KEZ (Kum Orijinli & Kaçak - Kickback Muafiyeti)"
+                delta, color = 0, "#38bdf8"
+                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyunda ({ped_text}) kaba kum genetiği tamdır. Kaçak/Lider stili sayesinde öndeki atlardan gelecek kum sıçramasına (kickback) maruz kalmayacaktır."
+            elif has_kum_ped and is_pres:
+                badge = "🛡️ KABA KUMA İLK KEZ (Kum Orijinli & Ön Grup Pres)"
+                delta, color = -1, "#f59e0b"
+                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyunda ({ped_text}) kaba kum gücü mevcut. Ön grupta pres yapacağı için kickback etkisi hafif kalacaktır."
+            elif has_kum_ped:
+                badge = "⚠️ KABA KUMA İLK KEZ (Kum Orijinli - Geride Kickback Riski)"
+                delta, color = -2, "#f59e0b"
+                desc = f"Soyunda ({ped_text}) kaba kum genetiği mevcut ancak bekleme/sprinter stili nedeniyle ön gruptan sıçrayacak kum parçalarına (kickback) ilk kez maruz kalacaktır."
+            elif is_kacak:
+                badge = "⚠️ KABA KUMA İLK KEZ (Kaçak Stille Kickback Yok / Derin Kum Testi)"
+                delta, color = -3, "#f59e0b"
+                desc = "Soyunda kaba kum baskınlığı sınırlı. Kaçak stiliyle kickback yemeyecek olsa da kaba kumun derin yapısına ilk kez ayak uydurmaya çalışacaktır."
+            else:
+                badge = "⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)"
+                delta, color = -5, "#ef4444"
+                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyu kaba kum destekli değil ve geriden gelen stiliyle önden sıçrayacak yoğun kum parçalarına (kickback) ilk kez maruz kalacaktır."
         elif dirt["runs"] >= 2 and dirt["top4"] == 0 and (syn["top4"] >= 2 or turf["top4"] >= 2):
             badge = "⚠️ PİST UYARISI: Kaba Kumda 0 Tabela (Sentetik/Çim Atı)"
             delta, color = -4, "#ef4444"
@@ -894,9 +993,9 @@ class TJKScraper:
                 is_young = career_starts <= 3
 
                 stil = at["hesaplanan_stil"] or (
-                    "Taktik Serbest (İlk 3 Koşusu)" if is_young else "Yetersiz Veri"
+                    "Taktik Serbest (İlk 3 Koşusu)" if is_young else "Orta Grup"
                 )
-                ikon = at["stil_ikon"] or ("🌱" if is_young else "❓")
+                ikon = at["stil_ikon"] or ("🌱" if is_young else "🛡️")
 
                 if "Kaçak" in stil or "Lider" in stil:
                     renk = "#eab308"
@@ -983,7 +1082,7 @@ class TJKScraper:
                     "dinlenme_gunu": at["kgs"] or 20,
                     "takilar": at["takilar"].split() if at["takilar"] else [],
                     "isYoungHorse": is_young,
-                    "taktik_durumu": at["taktik_durumu"] or ("ILK_3_KOSU_SERBEST" if is_young else "YETERSIZ_VERI"),
+                    "taktik_durumu": "ILK_3_KOSU_SERBEST" if is_young else (at["taktik_durumu"] if at["taktik_durumu"] and at["taktik_durumu"] != "YETERSIZ_VERI" else "DEGISKEN"),
                     "kosu_stili": stil,
                     "stil_ikon": ikon,
                     "stil_renk": renk,
@@ -993,13 +1092,19 @@ class TJKScraper:
                     "ganyan": at["ganyan_raw"] or "3.50",
                     "son_galop": son_galop,
                     "taktik_yorum": tactical_comment,
-                    "tempo_delta": (at["pace_delta"] if at["pace_delta"] is not None else 0) if at["taktik_durumu"] in ("GUNCEL", "KISMI", "TEK_OLCUM", "DEGISKEN") else 0,
+                    "tempo_delta": 0 if is_young else (
+                        max(-1, min(1, at["pace_delta"])) if (at["pace_delta"] is not None and at["taktik_durumu"] in ("DEGISKEN", "KISMI", "TEK_OLCUM")) else
+                        (at["pace_delta"] if at["pace_delta"] is not None else 0)
+                    ),
                     "kulvar_yorumu": at["kulvar_yorumu"] or "",
                     "sahip": at["sahip_ad"] or "",
                     "antrenor": at["antrenor_ad"] or "",
                     "ekuriGrup": at["ekuri"] or "",
                     "pist_aptitude_analizi": build_pist_aptitude(
-                        conn, at["at_id"], is_young, r["pist_turu"], at["baba_adi"] or ""
+                        conn, at["at_id"], is_young, r["pist_turu"],
+                        sire_name=at["baba_adi"] or "",
+                        dam_sire=at["kisrak_babasi_adi"] or "",
+                        running_style=stil or ""
                     )
                 })
 
