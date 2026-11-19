@@ -4128,11 +4128,39 @@ function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
   else if (kgs > 120) kgsScore = 48;
   else if (kgs < 7) kgsScore = 55;
 
-  // [Faktör 5: Resmî Galop & Son 400 Kopuş Hızı - %9]
+  // [Faktör 5: Resmî Galop, Son 400 Kopuş Hızı & İdman Zemin Direnci - %9]
   let galopScore = 62;
   if (horse.son_galop && horse.son_galop.son400hiz) {
-    const speed = horse.son_galop.son400hiz;
+    let speed = horse.son_galop.son400hiz;
+    const gPist = (horse.son_galop.pist || '').toLowerCase();
+    const gCity = (horse.son_galop.sehir || horse.son_galop.hipodrom || '').toLowerCase();
+
+    // Kaba Kum vs Sentetik idman ayrımı (Kaba kumun derin yapısı ve sürtünme direnci çok daha zordur)
+    const isGalopSentetik = gPist.includes('sentetik') || (gCity.includes('istanbul') && (gPist.includes('iç') || gPist.includes('kum')));
+    const isGalopKabaKum = !isGalopSentetik && (gPist.includes('kum') || gCity.includes('ankara') || gCity.includes('izmir') || gCity.includes('adana') || gCity.includes('antalya') || gCity.includes('kocaeli') || gCity.includes('bursa') || gCity.includes('şanlıurfa') || gCity.includes('elazığ') || gCity.includes('diyarbakır'));
+
+    // Kaba kumda derece çıkarmak sentetiğe göre fiziksel olarak daha zordur; kaba kum idmanı kas ve ciğer kondisyonunu daha çok açar:
+    if (isGalopKabaKum) {
+      speed += 1.8; // Kaba kum zemin direnci eşdeğerlik dengesi (+1.8 km/h fiziksel güç karşılığı)
+    }
+
     galopScore = Math.min(99, Math.max(35, Math.round(30 + (speed - 46) * 7.2)));
+
+    // Çapraz Zemin Etkileşimi (İdman Pisti x Bugünkü Koşu Pisti)
+    const raceTrack = (kosu && kosu.pist) ? kosu.pist.toLowerCase() : 'kum';
+    if (raceTrack.includes('kum') && !raceTrack.includes('sentetik')) {
+      // Bugünkü koşu KABA KUM:
+      if (isGalopKabaKum) {
+        galopScore = Math.min(99, galopScore + 3); // Ağır kumda idmanlı, zemin uyumu ve kickback direnci tam
+      } else if (isGalopSentetik) {
+        galopScore = Math.max(35, galopScore - 3); // Sentetikte kolay aktı, derin kaba kumun direncinde nefes testi yaşayabilir
+      }
+    } else if (raceTrack.includes('sentetik')) {
+      // Bugünkü koşu SENTETİK:
+      if (isGalopKabaKum) {
+        galopScore = Math.min(99, galopScore + 3); // Ağır kaba kumda güç depolayan safkan, hafif sentetikte yaylanır ve akıcı koşar
+      }
+    }
   }
 
   // [Faktör 6: Sıklet (Kilo) Dinamiği - %8]
@@ -4366,13 +4394,44 @@ function renderRaceDetails() {
       const g = h.son_galop;
       const hasRealGalop = g.tur !== 'Resmî Galop Yok' && g.derece !== 'Resmî Galop Kaydı Yok' && (g.derece || g.toplam_derece);
       if (hasRealGalop) {
+        const gPist = (g.pist || '').toLowerCase();
+        const gCity = (g.sehir || g.hipodrom || '').toLowerCase();
+        const isGalopSentetik = gPist.includes('sentetik') || (gCity.includes('istanbul') && (gPist.includes('iç') || gPist.includes('kum')));
+        const isGalopKabaKum = !isGalopSentetik && (gPist.includes('kum') || gCity.includes('ankara') || gCity.includes('izmir') || gCity.includes('adana') || gCity.includes('antalya') || gCity.includes('kocaeli') || gCity.includes('bursa') || gCity.includes('şanlıurfa') || gCity.includes('elazığ') || gCity.includes('diyarbakır'));
+
+        let galopTrackBadge = '';
+        if (isGalopKabaKum) {
+          galopTrackBadge = `<span style="background:rgba(245,158,11,0.18); color:#f59e0b; border:1px solid rgba(245,158,11,0.4); padding:2px 8px; border-radius:6px; font-size:0.7rem; font-weight:700;">🏔️ Ağır Kaba Kum İdmanlı (+Direnç & Güç)</span>`;
+        } else if (isGalopSentetik) {
+          galopTrackBadge = `<span style="background:rgba(56,189,248,0.18); color:#38bdf8; border:1px solid rgba(56,189,248,0.4); padding:2px 8px; border-radius:6px; font-size:0.7rem; font-weight:700;">🏟️ Sentetik İdmanlı (Akıcı Zemin)</span>`;
+        }
+
+        const racePist = (kosu && kosu.pist) ? kosu.pist.toLowerCase() : 'kum';
+        let crossPistNote = '';
+        if (racePist.includes('kum') && !racePist.includes('sentetik')) {
+          if (isGalopKabaKum) {
+            crossPistNote = `<div style="font-size:0.72rem; color:#34d399; font-weight:600; margin-top:0.4rem; display:flex; align-items:center; gap:0.3rem;">✓ Kaba Kum İdmanlı: Ağır zemin direnci ve kickback kondisyonu tam.</div>`;
+          } else if (isGalopSentetik) {
+            crossPistNote = `<div style="font-size:0.72rem; color:#f87171; font-weight:600; margin-top:0.4rem; display:flex; align-items:center; gap:0.3rem;">⚠️ İdman Sentetikte Yapıldı: Kaba kumun derin kum yapısında son 200'de nefes testi yaşayabilir.</div>`;
+          }
+        } else if (racePist.includes('sentetik')) {
+          if (isGalopKabaKum) {
+            crossPistNote = `<div style="font-size:0.72rem; color:#34d399; font-weight:600; margin-top:0.4rem; display:flex; align-items:center; gap:0.3rem;">⚡ Ağır Kum İdmanlı: Sentetik pistte adımları açılır, akıcı yaylanma avantajı sağlar.</div>`;
+          } else if (isGalopSentetik) {
+            crossPistNote = `<div style="font-size:0.72rem; color:#38bdf8; font-weight:600; margin-top:0.4rem; display:flex; align-items:center; gap:0.3rem;">✓ Sentetik İdman & Sentetik Koşu: Zemin uyumu tam.</div>`;
+          }
+        }
+
         galopHtml = `
           <div class="galop-chamber">
-            <div class="chamber-head" style="border-bottom:1px solid rgba(212,175,55,0.2);padding-bottom:0.4rem;margin-bottom:0.6rem;">
+            <div class="chamber-head" style="border-bottom:1px solid rgba(212,175,55,0.2);padding-bottom:0.4rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;">
               <span style="display:flex;align-items:center;gap:0.4rem;color:#34d399;font-weight:700;font-size:0.75rem;">
                 ✓ TJK RESMÎ İDMAN PİSTİ · ${g.sehir || g.hipodrom || 'Pist'} (${g.pist || 'Kum'}) · ${g.tur || 'Galop'}
               </span>
-              <span style="font-family:'Cinzel';font-size:0.75rem;color:#fcd34d;">⏱️ ${g.tarih || ''}</span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                ${galopTrackBadge}
+                <span style="font-family:'Cinzel';font-size:0.75rem;color:#fcd34d;">⏱️ ${g.tarih || ''}</span>
+              </div>
             </div>
             <div class="chamber-trio">
               <div class="chamber-cell">
@@ -4388,6 +4447,7 @@ function renderRaceDetails() {
                 <div class="cell-tag">Sprint Hızı</div>
               </div>
             </div>
+            ${crossPistNote}
           </div>
         `;
       } else {
