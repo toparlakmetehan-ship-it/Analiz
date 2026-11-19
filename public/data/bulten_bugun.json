@@ -199,7 +199,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (5 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
@@ -343,7 +343,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
@@ -413,10 +413,10 @@
               "antrenor": "M.DOLAK",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/2T · Sentetik: 1G/4T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 3,
                   "wins": 0,
@@ -486,10 +486,10 @@
               "antrenor": "M.TEKİNALP",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/5T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 7,
                   "wins": 1,
@@ -559,7 +559,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
@@ -662,9 +662,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
-                "delta": -3,
+                "delta": -1,
                 "color": "#f59e0b",
-                "desc": "Kariyerindeki 9 koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "desc": "Kariyerindeki 9 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 0,
@@ -734,7 +734,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
@@ -947,9 +947,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
-                "delta": -3,
+                "delta": -1,
                 "color": "#f59e0b",
-                "desc": "Kariyerindeki 5 koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "desc": "Kariyerindeki 5 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
                   "runs": 5,
                   "wins": 0,
@@ -1235,9 +1235,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
-                "delta": -3,
+                "delta": -1,
                 "color": "#f59e0b",
-                "desc": "Kariyerindeki 3 koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "desc": "Kariyerindeki 3 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
                   "runs": 3,
                   "wins": 0,
@@ -1415,10 +1415,10 @@
               "antrenor": "A.KARATOPRAK",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 5G/16T · Sentetik: 0G/3T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 25,
                   "wins": 5,
@@ -1488,7 +1488,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 7G / 26 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 40 koşuda 7 galibiyet, 26 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -1561,9 +1561,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/8T · Sentetik: 1G/2T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 2,
@@ -1630,9 +1630,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/8T · Sentetik: 2G/11T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 12,
                   "wins": 1,
@@ -1701,10 +1701,10 @@
               "antrenor": "M.CAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 5G/32T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 46,
                   "wins": 5,
@@ -1775,10 +1775,10 @@
               "antrenor": "İ.ÇEÇAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/19T · Sentetik: 0G/5T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 36,
                   "wins": 3,
@@ -1846,10 +1846,10 @@
               "antrenor": "M.A.CANPOLATLI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 6G/18T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 42,
                   "wins": 6,
@@ -1920,9 +1920,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/7T · Sentetik: 4G/6T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 13,
                   "wins": 3,
@@ -1993,9 +1993,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/8T · Sentetik: 2G/4T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 13,
                   "wins": 3,
@@ -2065,7 +2065,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 3G / 9 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 15 koşuda 3 galibiyet, 9 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -2245,7 +2245,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
@@ -2680,10 +2680,10 @@
               "antrenor": "RAM. KAYA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/3T · Sentetik: 0G/5T)",
-                "delta": 4,
-                "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (0G / 5T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 10 koşuda 0G/5T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 3,
                   "wins": 0,
@@ -2753,10 +2753,10 @@
               "antrenor": "M.ATAL",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/2T · Sentetik: 0G/5T)",
-                "delta": 4,
-                "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (0G / 5T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 5 koşuda 0G/5T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 3,
                   "wins": 0,
@@ -2827,9 +2827,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
-                "delta": -3,
+                "delta": -1,
                 "color": "#f59e0b",
-                "desc": "Kariyerindeki 6 koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "desc": "Kariyerindeki 6 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
                   "runs": 6,
                   "wins": 0,
@@ -2899,7 +2899,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
@@ -3084,10 +3084,10 @@
               "antrenor": "TU.TURAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/3T · Sentetik: 3G/5T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 7,
                   "wins": 0,
@@ -3157,10 +3157,10 @@
               "antrenor": "M.DOLAK",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/5T · Sentetik: 4G/24T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 5,
                   "wins": 0,
@@ -3230,10 +3230,10 @@
               "antrenor": "D.TEKELİ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⚠️ PİST RİSKİ: KABA KUM ATI (Sentetikte 0 Tabela)",
-                "delta": -5,
+                "badge": "⚠️ PİST RİSKİ: KABA KUM TERCİHLİ (Sentetikte 0 Tabela)",
+                "delta": -2,
                 "color": "#ef4444",
-                "desc": "Kaba kumda 8 koşuda 5 tabela yapmasına rağmen, sentetikte 3 koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkiliyor.",
+                "desc": "Kaba kumda 8 koşuda 5 tabela yapmasına rağmen, sentetikte 3 koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkileyebilir.",
                 "dirtStats": {
                   "runs": 8,
                   "wins": 0,
@@ -3303,10 +3303,10 @@
               "antrenor": "T.YILMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 4 Tabela)",
-                "delta": 4,
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 4T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Sentetik pistte 7 koşuda 1 galibiyet, 4 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "desc": "Sentetikte 7 koşuda 1G/4T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 0,
                   "wins": 0,
@@ -3375,10 +3375,10 @@
               "antrenor": "A.DEMİRKIRAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/3T · Sentetik: 3G/8T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 12,
                   "wins": 0,
@@ -3448,10 +3448,10 @@
               "antrenor": "RAM. KAYA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/4T · Sentetik: 2G/19T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 0,
@@ -3522,9 +3522,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/4T · Sentetik: 1G/3T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
                   "runs": 15,
                   "wins": 2,
@@ -3663,10 +3663,10 @@
               "antrenor": "A.SEYFİ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 1G / 13 Tabela)",
-                "delta": 4,
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 13T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Sentetik pistte 26 koşuda 1 galibiyet, 13 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır.",
+                "desc": "Sentetikte 26 koşuda 1G/13T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 1,
                   "wins": 0,
@@ -3734,10 +3734,10 @@
               "antrenor": "TU.TURAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 0G/2T · Sentetik: 2G/8T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir.",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 6,
                   "wins": 0,
@@ -3848,7 +3848,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 9 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 21 koşuda 2 galibiyet, 9 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -3920,10 +3920,10 @@
               "antrenor": "E.ERGÖKÇEN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 7 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 7T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 10 koşuda 1 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 10 koşuda 1G/7T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 1,
@@ -3993,10 +3993,10 @@
               "antrenor": "T.ATEŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 2 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 2T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 5 koşuda 1G/2T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 5,
                   "wins": 1,
@@ -4066,7 +4066,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 10 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 21 koşuda 2 galibiyet, 10 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -4139,10 +4139,10 @@
               "antrenor": "Ş.GÜMÜŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 4 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 4T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 8 koşuda 1 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 8 koşuda 1G/4T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 8,
                   "wins": 1,
@@ -4212,10 +4212,10 @@
               "antrenor": "T.ATEŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 4 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 4T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 8 koşuda 1 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 8 koşuda 1G/4T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 8,
                   "wins": 1,
@@ -4285,10 +4285,10 @@
               "antrenor": "İ.ATMACA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 11 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 11T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 29 koşuda 1 galibiyet, 11 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 29 koşuda 1G/11T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 29,
                   "wins": 1,
@@ -4395,7 +4395,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 5G / 10 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 24 koşuda 5 galibiyet, 10 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -4467,9 +4467,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/10T · Sentetik: 1G/1T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 18,
                   "wins": 4,
@@ -4539,9 +4539,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 10G/21T · Sentetik: 1G/5T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 32,
                   "wins": 10,
@@ -4612,9 +4612,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/11T · Sentetik: 2G/5T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 14,
                   "wins": 3,
@@ -4684,9 +4684,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/13T · Sentetik: 3G/10T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 14,
                   "wins": 4,
@@ -5149,9 +5149,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
-                "delta": -3,
+                "delta": -1,
                 "color": "#f59e0b",
-                "desc": "Kariyerindeki 6 koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "desc": "Kariyerindeki 6 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
                   "runs": 6,
                   "wins": 0,
@@ -5220,9 +5220,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
-                "delta": -3,
+                "delta": -1,
                 "color": "#f59e0b",
-                "desc": "Kariyerindeki 11 koşunun tamamını Kaba Kumda koştu; sentetik pistin sentetik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır.",
+                "desc": "Kariyerindeki 11 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
                   "runs": 11,
                   "wins": 0,
@@ -5646,10 +5646,10 @@
               "antrenor": "S.Z.A.MİNASOĞLU",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 7 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 7T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 10 koşuda 1 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 10 koşuda 1G/7T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 1,
@@ -5719,7 +5719,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 7 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 9 koşuda 2 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -5791,7 +5791,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 7 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 10 koşuda 2 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -5932,10 +5932,10 @@
               "antrenor": "H.SUNKAR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 7 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 7T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 10 koşuda 1 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 10 koşuda 1G/7T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 1,
@@ -6003,10 +6003,10 @@
               "antrenor": "H.SUNKAR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 8 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 8T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 9 koşuda 1 galibiyet, 8 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 9 koşuda 1G/8T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 1,
@@ -6180,10 +6180,10 @@
               "antrenor": "SEY.GÖKÇE",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 5 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 5T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 8 koşuda 0 galibiyet, 5 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 8 koşuda 0G/5T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 8,
                   "wins": 0,
@@ -6253,7 +6253,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (8 Koşuda 3 Tabela)",
-                "delta": 2,
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -6326,7 +6326,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (6 Koşuda 2 Tabela)",
-                "delta": 2,
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -6399,7 +6399,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (5 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -6689,7 +6689,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (10 Koşuda 2 Tabela)",
-                "delta": 2,
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -6762,7 +6762,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (3 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -6906,10 +6906,10 @@
               "antrenor": "Y.K.GÜRSOY",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 6 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 6T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 9 koşuda 0 galibiyet, 6 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 9 koşuda 0G/6T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 0,
@@ -6979,10 +6979,10 @@
               "antrenor": "Y.GÜNDOĞDİ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 0G / 2 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 2T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 2 koşuda 0 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 2 koşuda 0G/2T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 2,
                   "wins": 0,
@@ -7088,10 +7088,10 @@
               "antrenor": "S.C.GÖZÜNGÜ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/13T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 24,
                   "wins": 3,
@@ -7160,9 +7160,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 7G/16T · Sentetik: 1G/1T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 47,
                   "wins": 7,
@@ -7233,7 +7233,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 5G / 16 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 38 koşuda 5 galibiyet, 16 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -7305,10 +7305,10 @@
               "antrenor": "S.UYSAL",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 5G / 15 Tabela)",
-                "delta": 5,
+                "badge": "🔥 KABA KUM DENEYİMLİ (5G / 15T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 38 koşuda 5 galibiyet, 15 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 38 koşuda 5G/15T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 38,
                   "wins": 5,
@@ -7378,10 +7378,10 @@
               "antrenor": "O.TAŞDEMİR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 3G / 17 Tabela)",
-                "delta": 5,
+                "badge": "🔥 KABA KUM DENEYİMLİ (3G / 17T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 46 koşuda 3 galibiyet, 17 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 46 koşuda 3G/17T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 46,
                   "wins": 3,
@@ -7450,10 +7450,10 @@
               "antrenor": "F.ŞEN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/18T · Sentetik: 0G/3T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 46,
                   "wins": 2,
@@ -7522,7 +7522,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 19 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 42 koşuda 2 galibiyet, 19 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -7594,10 +7594,10 @@
               "antrenor": "S.ŞAHYAZICI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/16T · Sentetik: 0G/3T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 28,
                   "wins": 3,
@@ -7668,7 +7668,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 5 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 10 koşuda 2 galibiyet, 5 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -7739,7 +7739,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 18 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 41 koşuda 2 galibiyet, 18 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -7811,10 +7811,10 @@
               "antrenor": "A.ATAŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/16T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 43,
                   "wins": 1,
@@ -7883,10 +7883,10 @@
               "antrenor": "FAH.CEYLAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/9T · Sentetik: 0G/4T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 24,
                   "wins": 1,
@@ -7956,9 +7956,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/15T · Sentetik: 1G/2T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 40,
                   "wins": 3,
@@ -8028,10 +8028,10 @@
               "antrenor": "S.YUDUM",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 3G / 7 Tabela)",
-                "delta": 5,
+                "badge": "🔥 KABA KUM DENEYİMLİ (3G / 7T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 36 koşuda 3 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 36 koşuda 3G/7T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 36,
                   "wins": 3,
@@ -8139,9 +8139,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/14T · Sentetik: 2G/4T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 18,
                   "wins": 1,
@@ -8210,9 +8210,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/16T · Sentetik: 1G/4T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 18,
                   "wins": 3,
@@ -8283,7 +8283,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 4G / 13 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 17 koşuda 4 galibiyet, 13 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -8358,7 +8358,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 4G / 7 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 10 koşuda 4 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -8430,7 +8430,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (3 Koşuda 1 Tabela)",
-                "delta": 2,
+                "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -8503,9 +8503,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/8T · Sentetik: 2G/3T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 16,
                   "wins": 1,
@@ -8578,9 +8578,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/8T · Sentetik: 1G/5T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 25,
                   "wins": 1,
@@ -8650,9 +8650,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/12T · Sentetik: 1G/1T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 35,
                   "wins": 1,
@@ -8758,10 +8758,10 @@
               "antrenor": "Ş.ÖZDENİZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/32T · Sentetik: 0G/3T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 43,
                   "wins": 3,
@@ -8831,10 +8831,10 @@
               "antrenor": "H.DURMUŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/17T · Sentetik: 0G/3T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 28,
                   "wins": 3,
@@ -8904,7 +8904,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 6G / 18 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 22 koşuda 6 galibiyet, 18 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -8977,9 +8977,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/9T · Sentetik: 1G/3T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 16,
                   "wins": 4,
@@ -9048,10 +9048,10 @@
               "antrenor": "Y.AKKUŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 5G/24T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 46,
                   "wins": 5,
@@ -9120,9 +9120,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/5T · Sentetik: 1G/4T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 3,
@@ -9192,7 +9192,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (9 Koşuda 2 Tabela)",
-                "delta": 2,
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -9263,9 +9263,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 16G/28T · Sentetik: 2G/5T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 38,
                   "wins": 16,
@@ -9442,10 +9442,10 @@
               "antrenor": "E.TURAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 1 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 1T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 4 koşuda 1 galibiyet, 1 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 4 koşuda 1G/1T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 4,
                   "wins": 1,
@@ -9514,10 +9514,10 @@
               "antrenor": "K.ŞENGEL",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 2 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 2T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 2 koşuda 1 galibiyet, 2 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 2 koşuda 1G/2T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 2,
                   "wins": 1,
@@ -9656,10 +9656,10 @@
               "antrenor": "S.ŞAHYAZICI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 4 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 4T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 5 koşuda 1G/4T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 5,
                   "wins": 1,
@@ -9759,9 +9759,9 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/13T · Sentetik: 2G/2T)",
-                "delta": 4,
+                "delta": 2,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
                   "runs": 24,
                   "wins": 1,
@@ -9831,7 +9831,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 13 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 19 koşuda 2 galibiyet, 13 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -9901,10 +9901,10 @@
               "antrenor": "Ş.ÖZDENİZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 4 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 4T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 5 koşuda 1 galibiyet, 4 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 5 koşuda 1G/4T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 5,
                   "wins": 1,
@@ -9974,10 +9974,10 @@
               "antrenor": "İ.H.BAYDAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/5T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 7,
                   "wins": 1,
@@ -10046,10 +10046,10 @@
               "antrenor": "Z.KURT",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 7 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 7T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 9 koşuda 1 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 9 koşuda 1G/7T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 1,
@@ -10118,10 +10118,10 @@
               "antrenor": "E.ATEŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 7 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 7T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 9 koşuda 1 galibiyet, 7 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 9 koşuda 1G/7T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 1,
@@ -10190,7 +10190,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM UZMANI (Kumda 2G / 6 Tabela)",
-                "delta": 5,
+                "delta": 2,
                 "color": "#10b981",
                 "desc": "Kaba kumda 11 koşuda 2 galibiyet, 6 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
@@ -10261,10 +10261,10 @@
               "antrenor": "H.DURMUŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 6 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 6T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 14 koşuda 1 galibiyet, 6 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 14 koşuda 1G/6T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 14,
                   "wins": 1,
@@ -10335,10 +10335,10 @@
               "antrenor": "K.KÖYLÜ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 3 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 3T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 4 koşuda 1 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 4 koşuda 1G/3T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 4,
                   "wins": 1,
@@ -10623,10 +10623,10 @@
               "antrenor": "S.C.GÖZÜNGÜ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 5 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 5T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 8 koşuda 1 galibiyet, 5 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 8 koşuda 1G/5T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 8,
                   "wins": 1,
@@ -10696,10 +10696,10 @@
               "antrenor": "S.C.GÖZÜNGÜ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/2T · Sentetik: 0G/2T)",
-                "delta": 4,
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
                 "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 1,
@@ -10770,7 +10770,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (6 Koşuda 2 Tabela)",
-                "delta": 2,
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
@@ -10843,10 +10843,10 @@
               "antrenor": "SEY.GÖKÇE",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM UZMANI (Kumda 1G / 3 Tabela)",
-                "delta": 4,
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 3T)",
+                "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 9 koşuda 1 galibiyet, 3 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
+                "desc": "Kaba kumda 9 koşuda 1G/3T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 1,
@@ -10917,7 +10917,7 @@
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (13 Koşuda 4 Tabela)",
-                "delta": 2,
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {

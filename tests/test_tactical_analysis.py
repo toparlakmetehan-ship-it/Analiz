@@ -157,7 +157,7 @@ class SurfaceAptitudeTests(unittest.TestCase):
         from tjk_scraper.scraper import build_pist_aptitude
         self._runs("Kum", [1, 2])
         result = build_pist_aptitude(self.conn, 1, False, "Kum", "TOROK")
-        self.assertEqual(result["delta"], 4)
+        self.assertEqual(result["delta"], 1)
         self.assertEqual(result["dirtStats"]["runs"], 2)
         self.assertEqual(result["dirtStats"]["wins"], 1)
 
@@ -172,7 +172,7 @@ class SurfaceAptitudeTests(unittest.TestCase):
         from tjk_scraper.scraper import build_pist_aptitude
         self._runs("Sentetik", [1, 2, 3])
         result = build_pist_aptitude(self.conn, 1, False, "Kum", "")
-        self.assertEqual(result["delta"], -5)
+        self.assertEqual(result["delta"], -2)
         self.assertEqual(result["synStats"]["runs"], 3)
 
     def test_synthetic_horse_with_kum_pedigree_and_kacak_exempt_from_kickback(self):
@@ -186,16 +186,16 @@ class SurfaceAptitudeTests(unittest.TestCase):
     def test_synthetic_horse_with_kum_pedigree_and_pres(self):
         from tjk_scraper.scraper import build_pist_aptitude
         self._runs("Sentetik", [1, 2, 3])
-        # Kum pedigree (HABERBATUR) + Pres -> -1 delta
+        # Kum pedigree (HABERBATUR) + Pres -> 0 delta (ön grup presçisi kickback yemez)
         result = build_pist_aptitude(self.conn, 1, False, "Kum", sire_name="HABERBATUR", dam_sire="", running_style="Presçi")
-        self.assertEqual(result["delta"], -1)
+        self.assertEqual(result["delta"], 0)
 
     def test_synthetic_horse_with_kum_pedigree_and_sprinter(self):
         from tjk_scraper.scraper import build_pist_aptitude
         self._runs("Sentetik", [1, 2, 3])
-        # Kum pedigree (ÖZGÜNHAN) + Sprinter -> -2 delta (kickback riski var ama genetik kum güçlü)
+        # Kum pedigree (ÖZGÜNHAN) + Sprinter -> -1 delta (kickback riski var ama genetik kum güçlü)
         result = build_pist_aptitude(self.conn, 1, False, "Kum", sire_name="ÖZGÜNHAN", dam_sire="ALTAHA", running_style="Düzlük Sprinteri")
-        self.assertEqual(result["delta"], -2)
+        self.assertEqual(result["delta"], -1)
         self.assertIn("Kickback Riski", result["badge"])
 
     def test_no_history_stays_neutral(self):

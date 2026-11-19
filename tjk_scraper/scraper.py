@@ -222,18 +222,26 @@ def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name="", dam_sir
     badge, delta, color, desc = "", 0, "#f3e5ab", ""
 
     if "sentetik" in track:
-        if (dirt["wins"] >= 1 and syn["wins"] >= 1) or (dirt["top4"] >= 2 and syn["top4"] >= 2):
+        if dirt["wins"] >= 1 and syn["wins"] >= 1:
             badge = f"⭐ DUAL-PİST USTASI (Kum: {dirt['wins']}G/{dirt['top4']}T · Sentetik: {syn['wins']}G/{syn['top4']}T)"
-            delta, color = 4, "#34d399"
-            desc = "Hem Kaba Kumda hem Sentetik pistte yüksek tabela ve galibiyete sahip çift yönlü safkan; pist şartı seçmez, sentetikte de çok diridir."
-        elif syn["runs"] >= 2 and (syn["wins"] >= 1 or (syn["top4"] / syn["runs"]) >= 0.5):
+            delta, color = 2, "#34d399"
+            desc = "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir."
+        elif (dirt["wins"] >= 1 and syn["top4"] >= 2) or (syn["wins"] >= 1 and dirt["top4"] >= 2):
+            badge = "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)"
+            delta, color = 1, "#34d399"
+            desc = "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar."
+        elif syn["runs"] >= 3 and syn["wins"] >= 2 and (syn["top4"] / syn["runs"]) >= 0.4:
             badge = f"👑 SENTETİK PİST UZMANI (Sentetikte {syn['wins']}G / {syn['top4']} Tabela)"
-            delta, color = (5 if syn["wins"] >= 2 else 4), "#10b981"
-            desc = f"Sentetik pistte {syn['runs']} koşuda {syn['wins']} galibiyet, {syn['top4']} tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcı, ayak uyumu tamdır."
-        elif syn["runs"] >= 2 and syn["top4"] == 0 and dirt["top4"] >= 2:
-            badge = "⚠️ PİST RİSKİ: KABA KUM ATI (Sentetikte 0 Tabela)"
-            delta, color = -5, "#ef4444"
-            desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['top4']} tabela yapmasına rağmen, sentetikte {syn['runs']} koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkiliyor."
+            delta, color = 2, "#10b981"
+            desc = f"Sentetik pistte {syn['runs']} koşuda {syn['wins']} galibiyet, {syn['top4']} tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcıdır."
+        elif syn["runs"] >= 2 and (syn["wins"] >= 1 or (syn["top4"] / syn["runs"]) >= 0.5):
+            badge = f"🔥 SENTETİK PİST DENEYİMLİ ({syn['wins']}G / {syn['top4']}T)"
+            delta, color = 1, "#10b981"
+            desc = f"Sentetikte {syn['runs']} koşuda {syn['wins']}G/{syn['top4']}T elde etti; sentetik zemine ayak uyumu yüksektir."
+        elif syn["runs"] >= 3 and syn["top4"] == 0 and dirt["top4"] >= 2:
+            badge = "⚠️ PİST RİSKİ: KABA KUM TERCİHLİ (Sentetikte 0 Tabela)"
+            delta, color = -2, "#ef4444"
+            desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['top4']} tabela yapmasına rağmen, sentetikte {syn['runs']} koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkileyebilir."
         elif syn["runs"] == 0 and dirt["runs"] >= 3:
             sire_key = (sire_name or "").upper()
             match = next(((bias, text) for key, (bias, text) in PIST_SIRE_BIAS.items() if key in sire_key), None)
@@ -243,23 +251,31 @@ def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name="", dam_sir
                 desc = f"Kariyerinde sentetik koşusu yok ancak aygırı {match[1]} olduğundan sentetik aksiyonuna yatkındır."
             else:
                 badge = "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var"
-                delta, color = -3, "#f59e0b"
-                desc = f"Kariyerindeki {dirt['runs']} koşunun tamamını Kaba Kumda koştu; sentetik pistin elastik yapısına ilk kez çıkıyor, zemin değişikliği risk taşır."
+                delta, color = -1, "#f59e0b"
+                desc = f"Kariyerindeki {dirt['runs']} koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı."
         else:
             detail = f"{syn['runs']} Koşuda {syn['top4']} Tabela" if syn["runs"] > 0 else "Dengeli Hat"
             badge = f"🏟️ Sentetik Pist Uyumlu ({detail})"
-            delta, color = (2 if syn["top4"] > 0 else 0), "#f3e5ab"
+            delta, color = (1 if syn["top4"] >= 2 else 0), "#f3e5ab"
             desc = "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir."
 
     elif "kum" in track:
-        if (dirt["wins"] >= 1 and syn["wins"] >= 1) or (dirt["top4"] >= 2 and syn["top4"] >= 2):
+        if dirt["wins"] >= 1 and syn["wins"] >= 1:
             badge = f"⭐ DUAL-PİST USTASI (Kum: {dirt['wins']}G/{dirt['top4']}T · Sentetik: {syn['wins']}G/{syn['top4']}T)"
-            delta, color = 4, "#34d399"
-            desc = "Hem Kaba Kumda hem Sentetikte tabela ve galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler."
-        elif dirt["runs"] >= 2 and (dirt["wins"] >= 1 or (dirt["top4"] / dirt["runs"]) >= 0.5):
+            delta, color = 2, "#34d399"
+            desc = "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler."
+        elif (dirt["wins"] >= 1 and syn["top4"] >= 2) or (syn["wins"] >= 1 and dirt["top4"] >= 2):
+            badge = "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)"
+            delta, color = 1, "#34d399"
+            desc = "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir."
+        elif dirt["runs"] >= 3 and dirt["wins"] >= 2 and (dirt["top4"] / dirt["runs"]) >= 0.4:
             badge = f"🔥 KABA KUM UZMANI (Kumda {dirt['wins']}G / {dirt['top4']} Tabela)"
-            delta, color = (5 if dirt["wins"] >= 2 else 4), "#10b981"
+            delta, color = 2, "#10b981"
             desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['wins']} galibiyet, {dirt['top4']} tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir."
+        elif dirt["runs"] >= 2 and (dirt["wins"] >= 1 or (dirt["top4"] / dirt["runs"]) >= 0.5):
+            badge = f"🔥 KABA KUM DENEYİMLİ (${dirt['wins']}G / ${dirt['top4']}T)"
+            delta, color = 1, "#10b981"
+            desc = f"Kaba kumda {dirt['runs']} koşuda {dirt['wins']}G/{dirt['top4']}T elde etti, zemin şartlarına aşinadır."
         elif dirt["runs"] == 0 and syn["runs"] >= 3:
             style_str = (running_style or "").lower()
             is_kacak = ("kaçak" in style_str) or ("kacak" in style_str) or ("lider" in style_str)
@@ -277,42 +293,46 @@ def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name="", dam_sir
                 desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyunda ({ped_text}) kaba kum genetiği tamdır. Kaçak/Lider stili sayesinde öndeki atlardan gelecek kum sıçramasına (kickback) maruz kalmayacaktır."
             elif has_kum_ped and is_pres:
                 badge = "🛡️ KABA KUMA İLK KEZ (Kum Orijinli & Ön Grup Pres)"
-                delta, color = -1, "#f59e0b"
-                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyunda ({ped_text}) kaba kum gücü mevcut. Ön grupta pres yapacağı için kickback etkisi hafif kalacaktır."
+                delta, color = 0, "#38bdf8"
+                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyunda ({ped_text}) kaba kum gücü mevcut. Ön grupta pres yapacağı için kickback etkisi önemsizdir."
             elif has_kum_ped:
                 badge = "⚠️ KABA KUMA İLK KEZ (Kum Orijinli - Geride Kickback Riski)"
-                delta, color = -2, "#f59e0b"
+                delta, color = -1, "#f59e0b"
                 desc = f"Soyunda ({ped_text}) kaba kum genetiği mevcut ancak bekleme/sprinter stili nedeniyle ön gruptan sıçrayacak kum parçalarına (kickback) ilk kez maruz kalacaktır."
             elif is_kacak:
                 badge = "⚠️ KABA KUMA İLK KEZ (Kaçak Stille Kickback Yok / Derin Kum Testi)"
-                delta, color = -3, "#f59e0b"
+                delta, color = -1, "#f59e0b"
                 desc = "Soyunda kaba kum baskınlığı sınırlı. Kaçak stiliyle kickback yemeyecek olsa da kaba kumun derin yapısına ilk kez ayak uydurmaya çalışacaktır."
             else:
                 badge = "⚠️ PİST RİSKİ: SENTETİK ATI (Kaba Kuma İlk Kez Çıkıyor)"
-                delta, color = -5, "#ef4444"
-                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; soyu kaba kum destekli değil ve geriden gelen stiliyle önden sıçrayacak yoğun kum parçalarına (kickback) ilk kez maruz kalacaktır."
-        elif dirt["runs"] >= 2 and dirt["top4"] == 0 and (syn["top4"] >= 2 or turf["top4"] >= 2):
+                delta, color = -2, "#ef4444"
+                desc = f"Kariyerindeki {syn['runs']} koşuyu sentetikte koştu; kaba kumun derin yapısına ve geriden gelirken önden sıçrayacak kum parçalarına (kickback) ilk kez maruz kalacaktır."
+        elif dirt["runs"] >= 3 and dirt["top4"] == 0 and (syn["top4"] >= 2 or turf["top4"] >= 2):
             badge = "⚠️ PİST UYARISI: Kaba Kumda 0 Tabela (Sentetik/Çim Atı)"
-            delta, color = -4, "#ef4444"
+            delta, color = -2, "#ef4444"
             desc = "Kaba kumdaki önceki yarışlarında tabelaya giremedi; safkanın sentetik veya çim performansı kaba kuma göre belirgin şekilde üstündür."
         else:
             detail = f"{dirt['runs']} Koşuda {dirt['top4']} Tabela" if dirt["runs"] > 0 else "Dengeli Hat"
             badge = f"🏟️ Kaba Kum Deneyimli ({detail})"
-            delta, color = (2 if dirt["top4"] > 0 else 0), "#f3e5ab"
+            delta, color = (1 if dirt["top4"] >= 2 else 0), "#f3e5ab"
             desc = "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır."
 
     else:
-        if turf["runs"] >= 2 and (turf["wins"] >= 1 or (turf["top4"] / turf["runs"]) >= 0.5):
+        if turf["runs"] >= 3 and turf["wins"] >= 2 and (turf["top4"] / turf["runs"]) >= 0.5:
             badge = f"🌿 ÇİM PİST UZMANI (Çimde {turf['wins']}G / {turf['top4']} Tabela)"
-            delta, color = (5 if turf["wins"] >= 2 else 4), "#10b981"
+            delta, color = 2, "#10b981"
             desc = f"Çim pistte {turf['runs']} koşuda {turf['wins']} galibiyet, {turf['top4']} tabela yaptı; çim aksiyonu oturmuştur."
+        elif turf["runs"] >= 2 and (turf["wins"] >= 1 or (turf["top4"] / turf["runs"]) >= 0.5):
+            badge = f"🌿 ÇİM PİST DENEYİMLİ (${turf['wins']}G / ${turf['top4']}T)"
+            delta, color = 1, "#10b981"
+            desc = f"Çim pistte {turf['runs']} koşuda {turf['wins']}G/{turf['top4']}T elde etti, zemine aşinadır."
         elif turf["runs"] == 0 and (dirt["runs"] >= 3 or syn["runs"] >= 3):
             badge = "⚠️ ÇİMDE İLK KEZ: Kum / Sentetik Atı"
-            delta, color = -3, "#f59e0b"
+            delta, color = -1, "#f59e0b"
             desc = "Kariyerinde hiç çim koşusu yok, kum/sentetikten çime geçiyor."
         else:
             badge = f"🌿 Çim Pist Uyumlu ({turf['runs']} Koşuda {turf['top4']} Tabela)"
-            delta, color = (2 if turf["top4"] > 0 else 0), "#f3e5ab"
+            delta, color = (1 if turf["top4"] >= 2 else 0), "#f3e5ab"
             desc = "Çim pistte tecrübesi mevcut."
 
     return {"badge": badge, "delta": delta, "color": color, "desc": desc, **stats}
@@ -968,6 +988,14 @@ class TJKScraper:
             idman_by_no = {row["at_no"]: row for row in idman_rows}
             idman_by_name = {re.sub(r'\s*\(\d+\)\s*$', '', row["at_adi"]).strip().upper(): row for row in idman_rows}
 
+            # İstanbul Veliefendi Hipodromunda kaba kum yoktur, tüm kum koşuları Sentetik pisttir.
+            if sehir == "İstanbul":
+                effective_pist = "Çim" if r["pist_turu"] == "Çim" else "Sentetik"
+                effective_pist_tipi = "Çim" if r["pist_turu"] == "Çim" else "Sentetik (Polytrack)"
+            else:
+                effective_pist = r["pist_turu"] or "Kum"
+                effective_pist_tipi = "Kaba Kum" if r["pist_turu"] == "Kum" else (r["pist_turu"] or "Kaba Kum")
+
             # Koşudaki atları çek
             cursor.execute("""
                 SELECT pk.*, a.at_adi, a.baba_adi, a.anne_adi, a.kisrak_babasi_adi, a.yas as at_yas,
@@ -1101,7 +1129,7 @@ class TJKScraper:
                     "antrenor": at["antrenor_ad"] or "",
                     "ekuriGrup": at["ekuri"] or "",
                     "pist_aptitude_analizi": build_pist_aptitude(
-                        conn, at["at_id"], is_young, r["pist_turu"],
+                        conn, at["at_id"], is_young, effective_pist,
                         sire_name=at["baba_adi"] or "",
                         dam_sire=at["kisrak_babasi_adi"] or "",
                         running_style=stil or ""
@@ -1112,8 +1140,8 @@ class TJKScraper:
                 "kosu_no": r["kosu_no"],
                 "saat": r["saat"] or f"{14+r['kosu_no']}:00",
                 "mesafe": r["mesafe"] or 1400,
-                "pist": r["pist_turu"] or "Kum",
-                "pist_tipi": "Kaba Kum" if r["pist_turu"] == "Kum" else (r["pist_turu"] or "Kaba Kum"),
+                "pist": effective_pist,
+                "pist_tipi": effective_pist_tipi,
                 "grup_sinifi": r["kosu_cinsi"] or "Şartlı",
                 "ikramiye": f"{r['ikramiye_1']:,.0f} ₺".replace(',', '.') if r["ikramiye_1"] else "250.000 ₺",
                 "altiliAyagi": altili_ayagi,

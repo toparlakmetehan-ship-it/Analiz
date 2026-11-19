@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v33-fix-today-cities-antalya-izmir-20261119';
+const APP_VERSION = 'v34-calibrate-rational-deltas-and-istanbul-track-20261119';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
