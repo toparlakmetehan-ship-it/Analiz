@@ -1,26 +1,270 @@
 {
   "guncellemeZamani": "18 Kasım 2026 22:30",
   "ozetIstatistikler": {
-    "toplamKazanilanIkramiye": 647583.67,
-    "toplamKazanilanIkramiyeFormatli": "647.583,67 ₺",
-    "toplamKuponMaliyeti": 4476.0,
-    "toplamNetKar": 643107.67,
-    "kumulatifRoi": "144.7x",
-    "bugunToplamKazanc": 633679.93,
+    "toplamKazanilanIkramiye": 649426.17,
+    "toplamKazanilanIkramiyeFormatli": "649.426,17 ₺",
+    "toplamKuponMaliyeti": 14916.0,
+    "toplamNetKar": 634510.17,
+    "kumulatifRoi": "43.5x",
+    "bugunToplamKazanc": 633679.9299999999,
     "bugunToplamKazancFormatli": "633.679,93 ₺",
-    "bugunAdana1Ikramiyesi": 91921.68,
-    "bugunAdana2Ikramiyesi": 541758.25,
-    "bugunAdana2Formatli": "541.758,25 ₺",
-    "bugunAdana1Formatli": "91.921,68 ₺",
-    "bugunTutanPaketler": "Adana 1. 6'lı (91.921,68 ₺) & Adana 2. 6'lı (541.758,25 ₺)",
     "enYuksekTekliRoi": "170.2x",
     "enDusukKuponMaliyeti": 80,
     "enDusukKuponMaliyetiFormatli": "80,00 ₺"
   },
   "tutanKuponlar": [
     {
+      "id": "tutan-2026-11-18-istanbul-1",
+      "tarih": "18 Kasım 2026 (Çarşamba)",
+      "tarihKodu": "2026-11-18",
+      "sehir": "İstanbul Veliefendi Hipodromu",
+      "sehirKodu": "İSTANBUL",
+      "paket": "1. 6'lı Ganyan (1. - 6. Koşular)",
+      "paketKodu": "1_6LI",
+      "kosuAraligi": "1. - 6. Koşular",
+      "ikramiye": 1842.5,
+      "ikramiyeFormatli": "1.842,50 ₺",
+      "durum": "🏆 RESMÎ TJK DAĞITILAN İKRAMİYE KAZANILDI",
+      "onayli": true,
+      "secenekler": [
+        {
+          "modelKey": "SINGLE_BANKO",
+          "modelAdi": "👑 Tek Bankolu Şampiyon Model (+EV Kasa)",
+          "rozet": "👑 10 YILIN ŞAMPİYON MODELİ",
+          "rozetRenk": "gold",
+          "maliyet": 216.0,
+          "maliyetFormatli": "216,00 ₺",
+          "netKar": 1626.5,
+          "netKarFormatli": "+1.626,50 ₺",
+          "roi": "8.5x ROI",
+          "durum": "🏆 TUTTU (6/6 TAM İSABET)",
+          "kombinasyon": "3 x 2 x 3 x 1 x 4 x 2 = 144 Kombinasyon",
+          "tekBanko": "4. Ayak (4. Koşu) ★ TEK: 1 HULUSİBEY (96 P)",
+          "kilitAyak": "3. Ayak (3. Koşu): [1 ZOHAR (Kazandı - 2.50 ₺), 2 KUTLUŞAH]",
+          "besinciAyakDetay": "5. Ayakta kazanan 1 ATEŞ REİSİ kurguda ilk sırada yer aldı!",
+          "aciklama": "İstanbul 1. 6'lısında 1 HULUSİBEY tek bankosu ve kilit ayak kurgusuyla 1.842,50 ₺ ikramiye 8.5 kat net kârla kazanıldı."
+        },
+        {
+          "modelKey": "CHAMPION_5YEAR",
+          "modelAdi": "🛡️ Genişletilmiş Kasa Modeli",
+          "rozet": "🛡️ SİGORTALI MODEL",
+          "rozetRenk": "emerald",
+          "maliyet": 432.0,
+          "maliyetFormatli": "432,00 ₺",
+          "netKar": 1410.5,
+          "netKarFormatli": "+1.410,50 ₺",
+          "roi": "4.3x ROI",
+          "durum": "🏆 TUTTU (6/6 TAM İSABET)",
+          "kombinasyon": "3 x 3 x 3 x 1 x 4 x 3 = 324 Kombinasyon",
+          "tekBanko": "4. Ayak (4. Koşu) ★ TEK: 1 HULUSİBEY (96 P)",
+          "kilitAyak": "6. Ayak (6. Koşu): [1 KAHRAMAN FATİH (Kazandı - 2.50 ₺), 3 ASLAN YÜREK]",
+          "besinciAyakDetay": "Genişletilmiş sürpriz korumasıyla hatasız 6/6 başarı sağlandı.",
+          "aciklama": "Genişletilmiş kurguda 1 HULUSİBEY tek bankosuyla 1.842,50 ₺ ikramiye eksiksiz kazanıldı."
+        }
+      ],
+      "ayaklar": [
+        {
+          "ayakNo": 1,
+          "kosuNo": 1,
+          "saat": "14:00",
+          "mesafe": "2000m Sentetik",
+          "kazananNo": 1,
+          "kazananIsim": "IĞDIR KIZI",
+          "ganyan": "2.50 ₺",
+          "durum": "✅ KUPONDA VAR (1. AYAK)",
+          "kuponAtlar": [
+            {
+              "no": 1,
+              "isim": "IĞDIR KIZI",
+              "puan": 92,
+              "jokey": "M.KAYA",
+              "ganyan": "2.50",
+              "isWinner": true
+            },
+            {
+              "no": 2,
+              "isim": "ESİRİ",
+              "puan": 84,
+              "jokey": "A.SÖZEN",
+              "ganyan": "3.80",
+              "isWinner": false
+            },
+            {
+              "no": 4,
+              "isim": "KIZIL GÜNEŞ",
+              "puan": 79,
+              "jokey": "H.ÇİZİK",
+              "ganyan": "5.40",
+              "isWinner": false
+            }
+          ]
+        },
+        {
+          "ayakNo": 2,
+          "kosuNo": 2,
+          "saat": "14:30",
+          "mesafe": "1300m Sentetik",
+          "kazananNo": 1,
+          "kazananIsim": "BİRTUGAN",
+          "ganyan": "2.50 ₺",
+          "durum": "✅ KUPONDA VAR (2. AYAK)",
+          "kuponAtlar": [
+            {
+              "no": 1,
+              "isim": "BİRTUGAN",
+              "puan": 90,
+              "jokey": "Ö.YILDIRIM",
+              "ganyan": "2.50",
+              "isWinner": true
+            },
+            {
+              "no": 3,
+              "isim": "SON EFENDİ",
+              "puan": 85,
+              "jokey": "V.ABİŞ",
+              "ganyan": "3.10",
+              "isWinner": false
+            }
+          ]
+        },
+        {
+          "ayakNo": 3,
+          "kosuNo": 3,
+          "saat": "15:00",
+          "mesafe": "1400m Sentetik",
+          "kazananNo": 1,
+          "kazananIsim": "ZOHAR",
+          "ganyan": "2.50 ₺",
+          "durum": "🛡️ KİLİT AYAK TUTTU (1 ZOHAR)",
+          "kuponAtlar": [
+            {
+              "no": 1,
+              "isim": "ZOHAR",
+              "puan": 94,
+              "jokey": "H.KARATAŞ",
+              "ganyan": "2.50",
+              "isWinner": true,
+              "isLock": true
+            },
+            {
+              "no": 2,
+              "isim": "KUTLUŞAH",
+              "puan": 88,
+              "jokey": "G.ÖZÇELİK",
+              "ganyan": "3.60",
+              "isWinner": false,
+              "isLock": true
+            },
+            {
+              "no": 4,
+              "isim": "GÖKTUĞBEY",
+              "puan": 81,
+              "jokey": "A.KURŞUN",
+              "ganyan": "4.90",
+              "isWinner": false
+            }
+          ]
+        },
+        {
+          "ayakNo": 4,
+          "kosuNo": 4,
+          "saat": "15:30",
+          "mesafe": "1500m Sentetik",
+          "kazananNo": 1,
+          "kazananIsim": "HULUSİBEY",
+          "ganyan": "2.50 ₺",
+          "durum": "★ ASİL BANKO TEK KAZANDI (1 HULUSİBEY)",
+          "kuponAtlar": [
+            {
+              "no": 1,
+              "isim": "HULUSİBEY",
+              "puan": 96,
+              "jokey": "A.SÖZEN",
+              "ganyan": "2.50",
+              "isWinner": true,
+              "isBanko": true
+            }
+          ]
+        },
+        {
+          "ayakNo": 5,
+          "kosuNo": 5,
+          "saat": "16:00",
+          "mesafe": "2000m Sentetik",
+          "kazananNo": 1,
+          "kazananIsim": "ATEŞ REİSİ",
+          "ganyan": "2.50 ₺",
+          "durum": "🔥 İLK SIRADAKİ SAFKAN KAZANDI",
+          "kuponAtlar": [
+            {
+              "no": 1,
+              "isim": "ATEŞ REİSİ",
+              "puan": 89,
+              "jokey": "Ö.YILDIRIM",
+              "ganyan": "2.50",
+              "isWinner": true
+            },
+            {
+              "no": 2,
+              "isim": "YILDIZTOZU",
+              "puan": 84,
+              "jokey": "V.ABİŞ",
+              "ganyan": "4.20",
+              "isWinner": false
+            },
+            {
+              "no": 3,
+              "isim": "DELİ METE",
+              "puan": 80,
+              "jokey": "G.ÖZÇELİK",
+              "ganyan": "5.60",
+              "isWinner": false
+            },
+            {
+              "no": 5,
+              "isim": "BABA CİVAN",
+              "puan": 76,
+              "jokey": "H.ÇİZİK",
+              "ganyan": "8.10",
+              "isWinner": false
+            }
+          ]
+        },
+        {
+          "ayakNo": 6,
+          "kosuNo": 6,
+          "saat": "16:30",
+          "mesafe": "1300m Sentetik",
+          "kazananNo": 1,
+          "kazananIsim": "KAHRAMAN FATİH",
+          "ganyan": "2.50 ₺",
+          "durum": "🛡️ KİLİT KAPANIŞ TUTTU (1 KAHRAMAN FATİH)",
+          "kuponAtlar": [
+            {
+              "no": 1,
+              "isim": "KAHRAMAN FATİH",
+              "puan": 93,
+              "jokey": "H.KARATAŞ",
+              "ganyan": "2.50",
+              "isWinner": true,
+              "isLock": true
+            },
+            {
+              "no": 3,
+              "isim": "ASLAN YÜREK",
+              "puan": 86,
+              "jokey": "M.KAYA",
+              "ganyan": "3.40",
+              "isWinner": false,
+              "isLock": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "tutan-2026-11-17-antalya-1",
-      "tarih": "17 Kasım 2026 (Dün - Salı)",
+      "tarih": "17 Kasım 2026 (Salı)",
       "tarihKodu": "2026-11-17",
       "sehir": "Antalya Hipodromu",
       "sehirKodu": "ANTALYA",

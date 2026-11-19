@@ -1286,13 +1286,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
           <span style="font-family:'Cinzel',serif; font-size:0.82rem; font-weight:800; color:var(--gold-champagne);">FİLTRE:</span>
           <div class="preset-pills" id="winners-filter-pills" style="margin:0; flex-wrap:wrap;">
-            <button class="preset-btn active" onclick="filterWinnersView('ALL')" id="wf-ALL">🏆 TÜMÜ (7 KUPON)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-17')" id="wf-2026-11-17">17 KASIM (2.480 ₺ Antalya)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-15')" id="wf-2026-11-15">15 KASIM (634K ₺ Adana 1. & 2. 6'lı)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-14')" id="wf-2026-11-14">14 KASIM (1.088 ₺ Ankara)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-13')" id="wf-2026-11-13">13 KASIM (1.360 ₺ İst)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-10')" id="wf-2026-11-10">10 KASIM (7.235 ₺ Adana)</button>
-            <button class="preset-btn" onclick="filterWinnersView('2026-11-07')" id="wf-2026-11-07">07 KASIM (1.738 ₺ Ankara)</button>
+            <!-- JS (renderWinnersView) ile dinamik üretilir -->
           </div>
         </div>
         <div style="font-size:0.75rem; color:#94a3b8;">
@@ -1587,14 +1581,13 @@ function convertArchiveToBulten(arcDay) {
 // ── TUTAN 6'LILAR & İKRAMİYE EKRANI (WINNERS VIEW) ──
 function filterWinnersView(key) {
   currentWinnersFilter = key;
-  document.querySelectorAll('#winners-filter-pills .preset-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('wf-' + key)?.classList.add('active');
   renderWinnersView();
 }
 
 async function renderWinnersView() {
   const container = document.getElementById('winners-cards-container');
   const summaryGrid = document.getElementById('winners-summary-grid');
+  const pillsContainer = document.getElementById('winners-filter-pills');
   if (!container || !summaryGrid) return;
 
   try {
@@ -1607,18 +1600,116 @@ async function renderWinnersView() {
   }
 
   const data = tutanAltililarCache;
-  if (!data) {
+  if (!data || !data.tutanKuponlar) {
     container.innerHTML = '<div style="text-align:center; padding:2rem; color:#94a3b8;">Veriler yükleniyor...</div>';
     return;
   }
 
-  // 1. Özet Metrikleri Render Et
-  const stats = data.ozetIstatistikler || {};
-  const todayPrizeFormatted = stats.bugunToplamKazancFormatli || '633.679,93 ₺';
-  const allTimePrizeFormatted = stats.toplamKazanilanIkramiyeFormatli || '647.583,67 ₺';
-  const minCostFormatted = stats.enDusukKuponMaliyetiFormatli || '80,00 ₺';
-  const allTimeNetFormatted = stats.toplamNetKar ? ('+' + Number(stats.toplamNetKar).toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ₺') : '+643.107,67 ₺';
-  const roiText = stats.kumulatifRoi || '144.7x';
+  const coupons = data.tutanKuponlar || [];
+
+  // 1. Dinamik Tarih Gruplama & İstatistik Hesaplamaları
+  const datesMap = new Map();
+  let allTimePrize = 0;
+  let allTimePrimaryCost = 0;
+  let minCost = 999999;
+  let maxSinglePrize = 0;
+
+  coupons.forEach(c => {
+    const prize = Number(c.ikramiye) || 0;
+    allTimePrize += prize;
+    if (prize > maxSinglePrize) maxSinglePrize = prize;
+
+    const optCost = Number(c.secenekler?.[0]?.maliyet) || 0;
+    allTimePrimaryCost += optCost;
+
+    (c.secenekler || []).forEach(s => {
+      const m = Number(s.maliyet) || 0;
+      if (m > 0 && m < minCost) minCost = m;
+    });
+
+    const dateKey = c.tarihKodu || 'GENEL';
+    if (!datesMap.has(dateKey)) {
+      datesMap.set(dateKey, {
+        dateKey: dateKey,
+        coupons: [],
+        totalPrize: 0,
+        cities: new Set()
+      });
+    }
+    const entry = datesMap.get(dateKey);
+    entry.coupons.push(c);
+    entry.totalPrize += prize;
+    const cleanCity = (c.sehir || '').replace(' Hipodromu', '').replace(' Veliefendi', '').replace(' Şirinyer', '').replace(' Yeşiloba', '').replace(' 75. Yıl', '').trim();
+    if (cleanCity) entry.cities.add(cleanCity);
+  });
+
+  if (minCost === 999999) minCost = 80;
+
+  const uniqueDates = Array.from(datesMap.values());
+  const latestDateKey = uniqueDates[0]?.dateKey;
+
+  // En yüksek gün/rekor günü bul
+  let maxDay = uniqueDates[0];
+  uniqueDates.forEach(d => {
+    if (d.totalPrize > (maxDay ? maxDay.totalPrize : 0)) {
+      maxDay = d;
+    }
+  });
+
+  // Filtre geçerliliğini doğrula
+  if (currentWinnersFilter !== 'ALL' && !datesMap.has(currentWinnersFilter)) {
+    currentWinnersFilter = 'ALL';
+  }
+
+  // 2. Dinamik Filtre Butonları (Pills) Render Et
+  if (pillsContainer) {
+    let pillsHtml = `<button class="preset-btn ${currentWinnersFilter === 'ALL' ? 'active' : ''}" onclick="filterWinnersView('ALL')" id="wf-ALL">🏆 TÜMÜ (${coupons.length} KUPON)</button>`;
+
+    uniqueDates.forEach(d => {
+      const isAct = currentWinnersFilter === d.dateKey;
+      const firstCoupon = d.coupons[0];
+      let dateLabel = d.dateKey;
+      if (firstCoupon?.tarih) {
+        const m = firstCoupon.tarih.match(/^(\d{1,2}\s+[A-Za-zÇĞİÖŞÜçğıöşü]+)/i);
+        if (m) dateLabel = m[1].toUpperCase();
+      }
+
+      let compactPrize = '';
+      if (d.totalPrize >= 100000) {
+        compactPrize = Math.round(d.totalPrize / 1000) + 'K ₺';
+      } else {
+        compactPrize = Math.round(d.totalPrize).toLocaleString('tr-TR') + ' ₺';
+      }
+
+      let citySummary = Array.from(d.cities).join(' & ');
+      if (d.coupons.length > 1 && d.cities.size === 1) {
+        citySummary = Array.from(d.cities)[0] + ' 1. & 2. 6\'lı';
+      }
+
+      pillsHtml += `<button class="preset-btn ${isAct ? 'active' : ''}" onclick="filterWinnersView('${d.dateKey}')" id="wf-${d.dateKey}">${dateLabel} (${compactPrize} ${citySummary})</button>`;
+    });
+
+    pillsContainer.innerHTML = pillsHtml;
+  }
+
+  // 3. Özet Metrikleri Render Et
+  const allTimePrizeFormatted = Number(allTimePrize).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺';
+  const maxDayPrizeFormatted = maxDay ? (Number(maxDay.totalPrize).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺') : '633.679,93 ₺';
+
+  let maxDayLabel = '15 KASIM';
+  let maxDayCityText = 'Adana 1. ve 2. 6\'lısı Birlikte Tuttu 🏆';
+  if (maxDay && maxDay.coupons.length) {
+    const m = maxDay.coupons[0]?.tarih?.match(/^(\d{1,2}\s+[A-Za-zÇĞİÖŞÜçğıöşü]+)/i);
+    if (m) maxDayLabel = m[1].toUpperCase();
+    const cNames = Array.from(maxDay.cities).join(' & ');
+    maxDayCityText = `${cNames} 6'lısı Eksiksiz Kazandı 🏆`;
+  }
+
+  const minCostFormatted = Number(minCost).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺';
+  const netProfit = allTimePrize - allTimePrimaryCost;
+  const allTimeNetFormatted = '+' + Number(netProfit).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺';
+  const roiVal = allTimePrimaryCost > 0 ? (allTimePrize / allTimePrimaryCost).toFixed(1) : '150.0';
+  const roiText = `${roiVal}x`;
 
   summaryGrid.innerHTML = `
     <div class="champ-metric-card" style="background:rgba(8,8,10,0.85); border:1px solid rgba(212,175,55,0.4); border-radius:14px; padding:1.1rem; text-align:center;">
@@ -1627,24 +1718,24 @@ async function renderWinnersView() {
       <div style="font-size:0.65rem; color:#94a3b8; margin-top:3px;">(TJK Resmî Dağıtılan Tutar)</div>
     </div>
     <div class="champ-metric-card" style="background:linear-gradient(135deg, rgba(16,185,129,0.22), rgba(8,8,10,0.85)); border:1.5px solid #10b981; border-radius:14px; padding:1.1rem; text-align:center; box-shadow:0 0 18px rgba(16,185,129,0.25);">
-      <div style="font-size:1.75rem; font-weight:900; font-family:'Cinzel',serif; color:#34d399;">${todayPrizeFormatted}</div>
-      <div style="font-size:0.72rem; font-weight:700; color:#fff; text-transform:uppercase; margin-top:3px;">Mega Rekor Kazanç (15 Kasım)</div>
-      <div style="font-size:0.65rem; color:#a7f3d0; margin-top:3px;">(Adana 1. ve 2. 6'lısı Birlikte Tuttu 🏆)</div>
+      <div style="font-size:1.75rem; font-weight:900; font-family:'Cinzel',serif; color:#34d399;">${maxDayPrizeFormatted}</div>
+      <div style="font-size:0.72rem; font-weight:700; color:#fff; text-transform:uppercase; margin-top:3px;">Mega Rekor Kazanç (${maxDayLabel})</div>
+      <div style="font-size:0.65rem; color:#a7f3d0; margin-top:3px;">(${maxDayCityText})</div>
     </div>
     <div class="champ-metric-card" style="background:rgba(8,8,10,0.85); border:1px solid rgba(56,189,248,0.3); border-radius:14px; padding:1.1rem; text-align:center;">
       <div style="font-size:1.8rem; font-weight:900; font-family:'Cinzel',serif; color:#38bdf8;">${minCostFormatted}</div>
       <div style="font-size:0.72rem; font-weight:700; color:#cbd5e1; text-transform:uppercase; margin-top:3px;">En Düşük Tutan Kupon Bedeli</div>
-      <div style="font-size:0.65rem; color:#94a3b8; margin-top:3px;">(Ankara: 80 ₺ | Antalya: 216 ₺ | Adana: 540 ₺)</div>
+      <div style="font-size:0.65rem; color:#94a3b8; margin-top:3px;">(Ankara: 80 ₺ | Antalya: 216 ₺ | İstanbul: 216 ₺)</div>
     </div>
     <div class="champ-metric-card" style="background:rgba(8,8,10,0.85); border:1px solid rgba(192,132,252,0.3); border-radius:14px; padding:1.1rem; text-align:center;">
       <div style="font-size:1.8rem; font-weight:900; font-family:'Cinzel',serif; color:#c084fc;">${allTimeNetFormatted}</div>
       <div style="font-size:0.72rem; font-weight:700; color:#cbd5e1; text-transform:uppercase; margin-top:3px;">Net Kâr (${roiText})</div>
-      <div style="font-size:0.65rem; color:#e9d5ff; margin-top:3px;">(Yatırılan Her 1 ₺ için ${roiText.replace('x','')} ₺ Getiri)</div>
+      <div style="font-size:0.65rem; color:#e9d5ff; margin-top:3px;">(Yatırılan Her 1 ₺ için ${roiVal} ₺ Getiri)</div>
     </div>
   `;
 
-  // 2. Filtrelenmiş Kuponları Render Et
-  const filtered = (data.tutanKuponlar || []).filter(k => {
+  // 4. Filtrelenmiş Kuponları Render Et
+  const filtered = coupons.filter(k => {
     if (currentWinnersFilter === 'ALL') return true;
     return k.tarihKodu === currentWinnersFilter;
   });
@@ -1656,12 +1747,12 @@ async function renderWinnersView() {
 
   let htmlCards = '';
   filtered.forEach(item => {
-    const isYesterday = item.tarihKodu === '2026-11-17';
-    const isRecord = item.tarihKodu === '2026-11-15';
-    const highlight = isYesterday || isRecord;
-    const badgeHtml = isYesterday 
-      ? '<span style="background:#10b981; color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">DÜNÜN KUPONU ✨</span>'
-      : (isRecord ? '<span style="background:var(--gold-pure); color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">634K MEGA REKOR 🏆</span>' : '');
+    const isNewest = item.tarihKodu === latestDateKey;
+    const isRecord = (item.tarihKodu === maxDay?.dateKey) || ((Number(item.ikramiye) || 0) === maxSinglePrize);
+    const highlight = isNewest || isRecord;
+    const badgeHtml = isNewest 
+      ? '<span style="background:#10b981; color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">EN GÜNCEL KAZANÇ ✨</span>'
+      : (isRecord ? '<span style="background:var(--gold-pure); color:#08080a; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:12px;">🏆 REKOR İKRAMİYE</span>' : '');
 
     // Seçenekler / Modeller HTML
     let seceneklerHtml = '';
@@ -2000,6 +2091,7 @@ async function loadWinningCouponToRobot(couponId, modelKey) {
       if ((targetCity.includes('ankara') && optText.includes('ankara')) ||
           (targetCity.includes('istanbul') && optText.includes('istanbul')) ||
           (targetCity.includes('adana') && optText.includes('adana')) ||
+          (targetCity.includes('antalya') && optText.includes('antalya')) ||
           (targetCity.includes('izmir') && optText.includes('izmir')) ||
           (targetCity.includes('bursa') && optText.includes('bursa')) ||
           (targetCity.includes('kocaeli') && optText.includes('kocaeli')) ||
