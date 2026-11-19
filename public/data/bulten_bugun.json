@@ -6,8 +6,8 @@
     "Antalya",
     "İzmir"
   ],
-  "guncellemeZamani": "2026-11-19T19:07:40.361022",
-  "sonSenkronizasyon": "19:07:40",
+  "guncellemeZamani": "2026-11-19T18:45:33.370Z",
+  "sonSenkronizasyon": "21:45:33",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -804,7 +804,7 @@
               "antrenor": "RAM. KAYA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
@@ -1162,7 +1162,7 @@
               "antrenor": "MER.KORKMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
@@ -5363,7 +5363,7 @@
               "antrenor": "V.AKBAŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
@@ -6545,7 +6545,7 @@
               "antrenor": "F.ARSLANCA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
+                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Pist & Taktik Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
