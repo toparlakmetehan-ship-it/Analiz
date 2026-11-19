@@ -842,7 +842,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
   <div class="nav-views">
     <button class="view-btn active" onclick="switchView('bulten-view')">🏛 Resmî Canlı Bülten</button>
     <button class="view-btn" onclick="switchView('robot-view')">💰 Bütçeli 6'lı Robotu</button>
-    <button class="view-btn" onclick="switchView('winners-view')">🏆 Tutan 6'lılar (647K ₺ & Arşiv)</button>
+    <button class="view-btn" id="nav-btn-winners" onclick="switchView('winners-view')">🏆 Tutan 6'lılar (649K ₺ & Arşiv)</button>
     <button class="view-btn" onclick="switchView('backtest-view')">📊 Model Doğrulama & Geçmiş</button>
   </div>
 
@@ -1690,6 +1690,13 @@ async function renderWinnersView() {
     });
 
     pillsContainer.innerHTML = pillsHtml;
+  }
+
+  // Navbar üzerindeki ikramiye tutarını dinamik güncelle
+  const navBtn = document.getElementById('nav-btn-winners');
+  if (navBtn && allTimePrize > 0) {
+    const totalPrizeK = Math.round(allTimePrize / 1000);
+    navBtn.innerHTML = `🏆 Tutan 6'lılar (${totalPrizeK}K ₺ & Arşiv)`;
   }
 
   // 3. Özet Metrikleri Render Et
