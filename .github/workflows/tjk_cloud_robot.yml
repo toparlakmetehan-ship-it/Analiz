@@ -2,10 +2,10 @@ name: TJK 7-24 Canlı Bulut Robotu ve Otomatik Güncelleme
 
 on:
   schedule:
-    # Sabah 09:00 TRT (06:00 UTC) - Günün Programı & Galopları
-    - cron: '0 6 * * *'
-    # Yarış Saatlerinde (13:00 - 22:30 TRT / 10:00 - 19:30 UTC): HER 5 DAKİKADA BİR CANLI VERİ ÇEKER
-    - cron: '*/5 10-19 * * *'
+    # Sabah 06:00, 07:00, 08:00, 09:00, 10:00 TRT (03:00, 04:00, 05:00, 06:00, 07:00 UTC) - Günün Programı & Galopları
+    - cron: '0 3,4,5,6,7 * * *'
+    # Yarış Saatlerinde (11:00 - 23:00 TRT / 08:00 - 20:00 UTC): HER 10 DAKİKADA BİR CANLI VERİ ÇEKER
+    - cron: '*/10 8-20 * * *'
   workflow_dispatch:      # İstendiğinde GitHub web panelinden tek tıkla anında çalıştırma
 
 permissions:
@@ -40,10 +40,9 @@ jobs:
         run: |
           pip install requests beautifulsoup4 urllib3
 
-      - name: TJK Canlı Verileri Buluttan Otomatik Çek (5 Dakikalık Canlı Senkron)
+      - name: TJK Canlı Verileri Buluttan Otomatik Çek (Canlı Senkron)
         run: |
-          python tools/tjk_comprehensive_fetch.py || echo "TJK Fetch tamamlandı."
-          node tools/tjk_live_sync.js || echo "TJK Sync tamamlandı."
+          python -m tjk_scraper.main --target both --export-json || echo "TJK Scraper tamamlandı."
           node tools/enrich_race_pace_and_scenarios.js || echo "Pace Enrich tamamlandı."
           node tools/enrich_surface_kaba_kum_sentetik.js || echo "Surface Enrich tamamlandı."
           node tools/calibrate_tempo_deltas.js || echo "Tempo Calibrate tamamlandı."
@@ -54,7 +53,7 @@ jobs:
           git config --global user.name "TJK Cloud Bot"
           git config --global user.email "bot@royalturf.club"
           git add public/data/
-          git commit -m "chore(tjk): Canlı TJK verileri 5 dakikalık periyotla senkronize edildi [skip ci]" || echo "Yeni değişiklik yok"
+          git commit -m "chore(tjk): Canlı TJK verileri senkronize edildi [skip ci]" || echo "Yeni değişiklik yok"
           git push || echo "Push atlandı"
 
       - name: GitHub Pages için Yapılandır
