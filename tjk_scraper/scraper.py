@@ -356,7 +356,7 @@ class TJKScraper:
         for attempt in range(1, self.max_retries + 1):
             try:
                 time.sleep(self.request_delay)
-                resp = self.session.get(url, timeout=15)
+                resp = self.session.get(url, timeout=25)
                 if resp.status_code == 200:
                     if resp.encoding.lower() not in ['utf-8', 'utf8']:
                         resp.encoding = 'utf-8'
@@ -378,12 +378,55 @@ class TJKScraper:
     # =========================================================================
     def discover_active_results_hipodroms_for_date(self, target_date_dmy):
         """
-        Belirtilen tarihte sonuçları olan hipodromları tarar.
+        Belirtilen tarihte sonuçları olan hipodromları dinamik olarak tarar.
         """
         active_results = []
         q_date = urllib.parse.quote(target_date_dmy)
 
-        for sehir_id, sehir_adi, hipodrom_adi in TJK_HIPODROMLAR:
+        FOREIGN_KEYWORDS = ['Avustralya', 'Afrika', 'Krallık', 'ABD', 'Arjantin', 'Kanada', 'Karma', 'Fransa', 'İrlanda', 'Singapur', 'Hong Kong', 'BAE', 'Şili', 'Almanya']
+        TJK_CITY_MAP = {
+            'Adana': 'Adana Yeşiloba Hipodromu',
+            'İstanbul': 'İstanbul Veliefendi Hipodromu',
+            'İzmir': 'İzmir Şirinyer Hipodromu',
+            'Ankara': 'Ankara 75. Yıl Hipodromu',
+            'Bursa': 'Bursa Osmangazi Hipodromu',
+            'Antalya': 'Antalya Hipodromu',
+            'Kocaeli': 'Kocaeli Kartepe Hipodromu',
+            'Şanlıurfa': 'Şanlıurfa Hipodromu',
+            'Elazığ': 'Elazığ Hipodromu',
+            'Diyarbakır': 'Diyarbakır Hipodromu'
+        }
+
+        # 1. TJK Günlük Yarış Sonuçları sayfasından şehirleri dinamik tespit et
+        main_url = f"https://www.tjk.org/TR/YarisSever/Info/Page/GunlukYarisSonuclari?QueryParameter_Tarih={q_date}"
+        main_html = self._fetch_url_with_retry(main_url, description=f"{target_date_dmy} Ana Sonuç Sayfası")
+
+        discovered_cities = []
+        if main_html:
+            soup = BeautifulSoup(main_html, 'html.parser')
+            for a in soup.find_all('a'):
+                href = a.get('href', '')
+                if '/Info/Sehir/GunlukYarisSonuclari' in href and 'SehirId=' in href:
+                    tab_txt = a.get_text(strip=True)
+                    if any(k in tab_txt for k in FOREIGN_KEYWORDS):
+                        continue
+                    parsed = urllib.parse.urlparse(href)
+                    qs = urllib.parse.parse_qs(parsed.query)
+                    sid = int(qs.get('SehirId', [0])[0])
+                    sname = qs.get('SehirAdi', [''])[0]
+                    if not sname:
+                        sname = tab_txt.split('(')[0].strip()
+                    sname = sname.strip()
+                    for known in TJK_CITY_MAP:
+                        if known.lower() == sname.lower() or known.lower() in tab_txt.lower():
+                            sname = known
+                            break
+                    if sid and sname and not any(x[1] == sname for x in discovered_cities):
+                        discovered_cities.append((sid, sname, TJK_CITY_MAP.get(sname, f"{sname} Hipodromu")))
+
+        targets = discovered_cities if discovered_cities else TJK_HIPODROMLAR
+
+        for sehir_id, sehir_adi, hipodrom_adi in targets:
             q_sehir = urllib.parse.quote(sehir_adi)
             url = f"https://www.tjk.org/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari?SehirId={sehir_id}&QueryParameter_Tarih={q_date}&SehirAdi={q_sehir}&Era=yesterday"
             html = self._fetch_url_with_retry(url, description=f"{sehir_adi} Sonuçları")
@@ -486,12 +529,57 @@ class TJKScraper:
     # =========================================================================
     def discover_active_hipodroms_for_date(self, target_date_dmy):
         """
-        Belirtilen tarihte (örn: '16/11/2026') TJK'da koşusu olan hipodromları tarar.
+        Belirtilen tarihte (örn: '21/11/2026') TJK'da koşusu olan hipodromları dinamik tarar.
+        Önce günün ana sayfasından yerli şehir sekmelerini (Adana, İstanbul vb.) dinamik tespit eder.
         """
         active_hipodroms = []
         q_date = urllib.parse.quote(target_date_dmy)
 
-        for sehir_id, sehir_adi, hipodrom_adi in TJK_HIPODROMLAR:
+        FOREIGN_KEYWORDS = ['Avustralya', 'Afrika', 'Krallık', 'ABD', 'Arjantin', 'Kanada', 'Karma', 'Fransa', 'İrlanda', 'Singapur', 'Hong Kong', 'BAE', 'Şili', 'Almanya']
+        TJK_CITY_MAP = {
+            'Adana': 'Adana Yeşiloba Hipodromu',
+            'İstanbul': 'İstanbul Veliefendi Hipodromu',
+            'İzmir': 'İzmir Şirinyer Hipodromu',
+            'Ankara': 'Ankara 75. Yıl Hipodromu',
+            'Bursa': 'Bursa Osmangazi Hipodromu',
+            'Antalya': 'Antalya Hipodromu',
+            'Kocaeli': 'Kocaeli Kartepe Hipodromu',
+            'Şanlıurfa': 'Şanlıurfa Hipodromu',
+            'Elazığ': 'Elazığ Hipodromu',
+            'Diyarbakır': 'Diyarbakır Hipodromu'
+        }
+
+        # 1. TJK Günlük Yarış Programı ana sayfasından yerli şehirleri dinamik oku
+        main_url = f"https://www.tjk.org/TR/YarisSever/Info/Page/GunlukYarisProgrami?QueryParameter_Tarih={q_date}"
+        main_html = self._fetch_url_with_retry(main_url, description=f"{target_date_dmy} Ana Program Sayfası")
+
+        discovered_cities = []
+        if main_html:
+            soup = BeautifulSoup(main_html, 'html.parser')
+            for a in soup.find_all('a'):
+                href = a.get('href', '')
+                if '/Info/Sehir/GunlukYarisProgrami' in href and 'SehirId=' in href:
+                    tab_txt = a.get_text(strip=True)
+                    if any(k in tab_txt for k in FOREIGN_KEYWORDS):
+                        continue
+                    parsed = urllib.parse.urlparse(href)
+                    qs = urllib.parse.parse_qs(parsed.query)
+                    sid = int(qs.get('SehirId', [0])[0])
+                    sname = qs.get('SehirAdi', [''])[0]
+                    if not sname:
+                        sname = tab_txt.split('(')[0].strip()
+                    sname = sname.strip()
+                    for known in TJK_CITY_MAP:
+                        if known.lower() == sname.lower() or known.lower() in tab_txt.lower():
+                            sname = known
+                            break
+                    if sid and sname and not any(x[1] == sname for x in discovered_cities):
+                        discovered_cities.append((sid, sname, TJK_CITY_MAP.get(sname, f"{sname} Hipodromu")))
+
+        targets = discovered_cities if discovered_cities else TJK_HIPODROMLAR
+        logger.info(f"📍 {target_date_dmy} için taranacak şehirler: {[c[1] for c in targets]}")
+
+        for sehir_id, sehir_adi, hipodrom_adi in targets:
             q_sehir = urllib.parse.quote(sehir_adi)
             url = f"https://www.tjk.org/TR/YarisSever/Info/Sehir/GunlukYarisProgrami?SehirId={sehir_id}&QueryParameter_Tarih={q_date}&SehirAdi={q_sehir}"
             html = self._fetch_url_with_retry(url, description=f"{sehir_adi} Programı")
