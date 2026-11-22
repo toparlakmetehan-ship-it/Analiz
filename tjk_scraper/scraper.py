@@ -338,6 +338,107 @@ def build_pist_aptitude(conn, at_id, is_young, race_track, sire_name="", dam_sir
     return {"badge": badge, "delta": delta, "color": color, "desc": desc, **stats}
 
 
+def build_class_drop_analysis(conn, at_id, current_race_class):
+    """
+    Safkanın geçmiş yarışlarındaki açık/grup (G1, G2, G3, KV-8/9/7) koşularını analiz ederek
+    sınıf düşüşü ve üst grup sertliği avantajını belirler.
+    """
+    if not at_id:
+        return None
+
+    rows = conn.execute("""
+        SELECT kosu_cinsi, grup, sira, tarih, kilo, handikap, hipodrom_sehir
+        FROM gecmis_yarislar
+        WHERE at_id = ?
+        ORDER BY (substr(tarih, 7, 4) || '-' || substr(tarih, 4, 2) || '-' || substr(tarih, 1, 2)) DESC
+        LIMIT 10
+    """, (at_id,)).fetchall()
+
+    if not rows:
+        return None
+
+    elite_runs = []
+    for r in rows:
+        c_cinsi = (r["kosu_cinsi"] or "").upper()
+        grade = ""
+        if "G 1" in c_cinsi or "G1" in c_cinsi:
+            grade = "G 1"
+        elif "G 2" in c_cinsi or "G2" in c_cinsi:
+            grade = "G 2"
+        elif "G 3" in c_cinsi or "G3" in c_cinsi or "A 3" in c_cinsi or "A3" in c_cinsi:
+            grade = "G 3"
+        elif "KV-8" in c_cinsi or "KV-9" in c_cinsi:
+            grade = "KV-8/9"
+        elif "KV-7" in c_cinsi:
+            grade = "KV-7"
+
+        if grade:
+            raw_rank = str(r["sira"] or "").strip()
+            rank = int(raw_rank) if raw_rank.isdigit() else 99
+            elite_runs.append({
+                "kosu_cinsi": r["kosu_cinsi"],
+                "grade": grade,
+                "sira": rank,
+                "tarih": r["tarih"],
+                "kilo": r["kilo"],
+                "handikap": r["handikap"]
+            })
+
+    if not elite_runs:
+        return None
+
+    curr_lower = (current_race_class or "").lower()
+    is_current_elite = any(eg in curr_lower for eg in ["g 1", "g1", "g 2", "g2", "g 3", "g3", "a 3", "a3", "kv-8", "kv-9"])
+    is_dropping = not is_current_elite
+
+    grade_order = ["G 1", "G 2", "G 3", "KV-8/9", "KV-7"]
+    top_grade = elite_runs[0]["grade"]
+    for g in grade_order:
+        if any(er["grade"] == g for er in elite_runs):
+            top_grade = g
+            break
+
+    top_5_in_elite = sum(1 for er in elite_runs if er["sira"] <= 5)
+
+    bonus = 0.0
+    if top_grade == "G 1":
+        bonus += 4.5
+    elif top_grade == "G 2":
+        bonus += 4.0
+    elif top_grade == "G 3":
+        bonus += 3.5
+    elif top_grade == "KV-8/9":
+        bonus += 3.0
+    elif top_grade == "KV-7":
+        bonus += 2.0
+
+    if top_5_in_elite > 0:
+        bonus += min(2.5, top_5_in_elite * 0.8)
+
+    if is_dropping:
+        bonus += 1.0
+
+    final_bonus = round(min(7.0, bonus), 1)
+
+    if is_dropping:
+        badge = f"💎 SERT GRUP / SINIF DÜŞÜŞÜ ({top_grade} Tecrübeli +{final_bonus:.0f}P)"
+    else:
+        badge = f"💎 SINIF GÜCÜ: {top_grade} Yarışçısı (+{final_bonus:.0f}P)"
+
+    unique_grades = list(dict.fromkeys(er["grade"] for er in elite_runs))
+    aciklama = f"Safkan son dönemde {len(elite_runs)} kez elit açık/grup ({', '.join(unique_grades)}) koşularda boy gösterdi ({top_5_in_elite} kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+
+    return {
+        "sinif_dususu": is_dropping,
+        "ust_grup_sayisi": len(elite_runs),
+        "en_ust_grup": top_grade,
+        "grup_tabela_sayisi": top_5_in_elite,
+        "class_bonus": final_bonus,
+        "badge": badge,
+        "aciklama": aciklama
+    }
+
+
 class TJKScraper:
     def __init__(self, db_path=None, request_delay=0.5, max_retries=3):
         self.db_path = db_path
@@ -1221,6 +1322,9 @@ class TJKScraper:
                         sire_name=at["baba_adi"] or "",
                         dam_sire=at["kisrak_babasi_adi"] or "",
                         running_style=stil or ""
+                    ),
+                    "sinif_analizi": build_class_drop_analysis(
+                        conn, at["at_id"], r["kosu_cinsi"] or ""
                     )
                 })
 

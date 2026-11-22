@@ -4333,8 +4333,9 @@ function getHorsesWithFinalTacticalScores(kosu) {
     const power = calculatePowerIndex(h, kosu.atlar, kosu);
     const paceAdj = calculatePaceAdjustment(h, kosu);
     const mudAdj = calculateMudTrackDelta(h, kosu, currentTrackCondition);
+    const classBonus = (h.sinif_analizi && h.sinif_analizi.class_bonus) ? Number(h.sinif_analizi.class_bonus) : 0;
     const baseScore = power.royalScore;
-    const finalScore = Math.min(99, Math.max(30, baseScore + paceAdj.delta + mudAdj.delta));
+    const finalScore = Math.min(99, Math.max(30, Math.round(baseScore + paceAdj.delta + mudAdj.delta + classBonus)));
     return {
       ...h,
       ...power,
@@ -4348,7 +4349,10 @@ function getHorsesWithFinalTacticalScores(kosu) {
       mudDesc: mudAdj.desc,
       mudColor: mudAdj.color,
       mudType: mudAdj.type,
-      royalScore: finalScore // Nihai taktiksel skor (Tempo + Çamur/Zemin etkisi dahil)
+      classBonus: classBonus,
+      classBadge: h.sinif_analizi ? h.sinif_analizi.badge : null,
+      classDesc: h.sinif_analizi ? h.sinif_analizi.aciklama : null,
+      royalScore: finalScore // Nihai taktiksel skor (Tempo + Çamur/Zemin + Sınıf Düşüşü etkisi dahil)
     };
   }).sort((a, b) => b.royalScore - a.royalScore);
 }
@@ -4630,6 +4634,22 @@ function renderRaceDetails() {
       </div>
       ` : ''}
 
+      ${(h.sinif_analizi && h.sinif_analizi.badge) ? `
+      <div style="background:linear-gradient(135deg, rgba(16,185,129,0.15), rgba(0,0,0,0.35)); border:1px solid #10b981; padding:0.55rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+          <span style="font-size:0.76rem; font-weight:800; color:#34d399; font-family:'Cinzel',serif; display:flex; align-items:center; gap:0.35rem;">
+            ${h.sinif_analizi.badge}
+          </span>
+          <span style="font-size:0.72rem; font-weight:800; font-family:'JetBrains Mono'; color:#34d399; background:rgba(0,0,0,0.5); padding:1px 6px; border-radius:4px;">
+            +${h.sinif_analizi.class_bonus} PUAN
+          </span>
+        </div>
+        <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35;">
+          ${h.sinif_analizi.aciklama}
+        </div>
+      </div>
+      ` : ''}
+
       <div class="pedigree-vault">
         <div class="vault-line"><span class="vault-key">Aygır (Baba):</span><span class="vault-val">${h.baba || 'Bilinmiyor'}</span></div>
         <div class="vault-line"><span class="vault-key">Kısrak (Anne):</span><span class="vault-val">${h.anne || 'Bilinmiyor'}</span></div>
@@ -4715,6 +4735,13 @@ function renderRaceDetails() {
           <span class="bar-name" style="color:${h.mudColor};">🌧️ Zemin/Çamur (${h.mudDelta >= 0 ? '+' + h.mudDelta : h.mudDelta})</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${Math.max(15, Math.min(100, 50 + (h.mudDelta * 8)))}%; background:${h.mudDelta > 0 ? 'linear-gradient(90deg, #10b981, #34d399)' : 'linear-gradient(90deg, #ef4444, #f87171)'};"></div></div>
           <span class="bar-digit" style="color:${h.mudColor};">${h.mudDelta >= 0 ? '+' + h.mudDelta : h.mudDelta}</span>
+        </div>
+        ` : ''}
+        ${(h.sinif_analizi && h.sinif_analizi.class_bonus > 0) ? `
+        <div class="bar-entry">
+          <span class="bar-name" style="color:#34d399;">💎 Sınıf / Grup Gücü (+${h.sinif_analizi.class_bonus})</span>
+          <div class="bar-track"><div class="bar-fill-gold" style="width:${Math.max(15, Math.min(100, 50 + (h.sinif_analizi.class_bonus * 7)))}%; background:linear-gradient(90deg, #10b981, #34d399);"></div></div>
+          <span class="bar-digit" style="color:#34d399;">+${h.sinif_analizi.class_bonus}</span>
         </div>
         ` : ''}
       </div>
@@ -5501,9 +5528,17 @@ function optimizeCoupon() {
     const sinif = (k.grup_sinifi || '').toLowerCase();
     const horseCount = scored.length;
 
-    // Resmî 10 Yıllık TJK Backtest Risk Profili
+    // Resmî 10 Yıllık TJK Backtest Risk Profili & Kaotik Ayak Dedektörü:
+    // 1. ile 8. at (veya sonuncu at) arasındaki puan farkı <= 8 ve grupta en az 8 at koşan ayaklar
+    const spread8 = scored.length >= 8 
+      ? (scored[0].royalScore - scored[7].royalScore) 
+      : (scored.length > 1 ? (scored[0].royalScore - scored[scored.length - 1].royalScore) : 0);
+    const isChaotic = (scored.length >= 8 && spread8 <= 8);
+
     let riskLevel = 'NORMAL';
-    if (sinif.includes('maiden') || sinif.includes('şartlı 1') || (sinif.includes('handikap') && horseCount >= 12)) {
+    if (isChaotic) {
+      riskLevel = 'CHAOTIC'; // ⚡ Kaotik ayak: Tüm grup birbirine denk (Dar Puan Dağılımı - Bomba ve Sürpriz Koruması)
+    } else if (sinif.includes('maiden') || sinif.includes('şartlı 1') || (sinif.includes('handikap') && horseCount >= 12)) {
       riskLevel = 'HIGH_RISK'; // Yüksek riskli kaotik ayak (+EV Bomba ve sürpriz koruması gerekir)
     } else if ((sinif.includes('açık') || sinif.includes('grup') || sinif.includes('kv-8')) && topDiff >= 10) {
       riskLevel = 'LOW_RISK'; // Net koşu (Top 1-2 yeterli)
@@ -5536,28 +5571,29 @@ function optimizeCoupon() {
   let strategyBadgeText = "";
 
   // Doğrulanmış Asil Banko Kriteri:
-  // Puan farkı >= 4, lider güç puanı >= 80 P, pist adaptasyon deltası >= 0 ve Handikap olmayan net koşular
+  // Puan farkı >= 4, lider güç puanı >= 80 P, pist adaptasyon deltası >= 0, Kaotik olmayan ve Handikap olmayan net koşular
   const qualifiedBankoCandidates = sortedByCertainty.filter(l => {
     const topH = l.horses[0];
     const isPistMismatch = (topH?.pist_aptitude_analizi?.delta < 0);
     const isHandikap = (l.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
-    return l.diff >= 4 && (topH?.royalScore >= 80) && !isPistMismatch && !isHandikap;
+    const isChaotic = (l.riskLevel === 'CHAOTIC');
+    return l.diff >= 4 && (topH?.royalScore >= 80) && !isPistMismatch && !isHandikap && !isChaotic;
   });
 
   if (currentPick6Strategy === 'CHAMPION_5YEAR' || currentPick6Strategy === 'SMART_ADAPTIVE') {
     strategyBadgeText = "👑 10 YILLIK MAKRO ŞAMPİYON: İKRAMİYE & +EV AVCISI (8.4x ROI · EN ÇOK KAZANDIRAN)";
     if (qualifiedBankoCandidates.length > 0) {
       bankoLeg = qualifiedBankoCandidates[0];
-      const remainingNet = sortedByCertainty.filter(l => l !== bankoLeg && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      const remainingNet = sortedByCertainty.filter(l => l !== bankoLeg && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap') && l.riskLevel !== 'CHAOTIC');
       if (remainingNet.length > 0) lockLegs = [remainingNet[0]];
     } else {
       // Nitelikli banko yoksa en net 2 ayak kilitlenir (Çifte Sigorta - 10 yılda %46.2 ile en yüksek başarı)
-      const nonHandikaps = sortedByCertainty.filter(l => !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      const nonHandikaps = sortedByCertainty.filter(l => !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap') && l.riskLevel !== 'CHAOTIC');
       lockLegs = nonHandikaps.length >= 2 ? [nonHandikaps[0], nonHandikaps[1]] : [sortedByCertainty[0], sortedByCertainty[1]];
     }
   } else if (currentPick6Strategy === 'MAX_ACCURACY') {
     strategyBadgeText = "🎯 EN YÜKSEK İSABET: ÇİFTE KİLİT KASA (%46.2 BAŞARI · EN ÇOK YAKALAYAN)";
-    const nonHandikaps = sortedByCertainty.filter(l => !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+    const nonHandikaps = sortedByCertainty.filter(l => !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap') && l.riskLevel !== 'CHAOTIC');
     lockLegs = nonHandikaps.length >= 2 ? [nonHandikaps[0], nonHandikaps[1]] : [sortedByCertainty[0], sortedByCertainty[1]];
     bankoLeg = null;
   } else if (currentPick6Strategy === 'SINGLE_BANKO') {
@@ -5565,11 +5601,11 @@ function optimizeCoupon() {
     if (qualifiedBankoCandidates.length >= 2 && targetBudget <= 600) {
       bankoLeg = qualifiedBankoCandidates[0];
       bankoLeg2 = qualifiedBankoCandidates[1];
-      const rem = sortedByCertainty.filter(l => l !== bankoLeg && l !== bankoLeg2 && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      const rem = sortedByCertainty.filter(l => l !== bankoLeg && l !== bankoLeg2 && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap') && l.riskLevel !== 'CHAOTIC');
       if (rem.length > 0) lockLegs = [rem[0]];
     } else {
       bankoLeg = qualifiedBankoCandidates.length > 0 ? qualifiedBankoCandidates[0] : sortedByCertainty[0];
-      const rem = sortedByCertainty.filter(l => l !== bankoLeg && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap'));
+      const rem = sortedByCertainty.filter(l => l !== bankoLeg && !(l.kosu.grup_sinifi || '').toLowerCase().includes('handikap') && l.riskLevel !== 'CHAOTIC');
       if (rem.length > 0) lockLegs = [rem[0]];
     }
   } else {
@@ -5646,7 +5682,7 @@ function optimizeCoupon() {
   while (added && calcCost() <= targetBudget) {
     added = false;
     const candidateLegs = [...ratedLegs]
-      .filter((l, i) => l !== bankoLeg && l !== bankoLeg2 && picks[i].length < Math.min(7, l.horses.length))
+      .filter((l, i) => l !== bankoLeg && l !== bankoLeg2 && picks[i].length < (l.riskLevel === 'CHAOTIC' ? Math.min(8, l.horses.length) : Math.min(7, l.horses.length)))
       .sort((a, b) => {
         const countA = picks[ratedLegs.indexOf(a)].length;
         const countB = picks[ratedLegs.indexOf(b)].length;
@@ -5658,9 +5694,13 @@ function optimizeCoupon() {
         if (isLockA && countA >= 2 && minOtherCount < 6) return 1;
         if (isLockB && countB >= 2 && minOtherCount < 6) return -1;
 
+        // Kaotik ayak önceliği: 6 safkana ulaşana kadar bütçe önceliğini alır
+        if (a.riskLevel === 'CHAOTIC' && b.riskLevel !== 'CHAOTIC' && countA < 6) return -1;
+        if (b.riskLevel === 'CHAOTIC' && a.riskLevel !== 'CHAOTIC' && countB < 6) return 1;
+
         if (countA !== countB) return countA - countB;
 
-        const riskWeight = { 'HIGH_RISK': 3, 'NORMAL': 2, 'LOW_RISK': 1 };
+        const riskWeight = { 'CHAOTIC': 4, 'HIGH_RISK': 3, 'NORMAL': 2, 'LOW_RISK': 1 };
         return (riskWeight[b.riskLevel] - riskWeight[a.riskLevel]) || (a.diff - b.diff);
       });
 
@@ -5730,13 +5770,18 @@ function optimizeCoupon() {
           const leg = ratedLegs[idx];
           const isSingle = pickList.length === 1;
           const isLockLeg = lockLegs.includes(leg);
+          const isChaotic = leg.riskLevel === 'CHAOTIC';
           const sortedPickList = [...pickList].sort((a, b) => Number(a.no) - Number(b.no));
           const roleBadge = isSingle 
             ? '<span style="color:#10b981; font-weight:800;">★ DOĞRULANMIŞ ASİL BANKO (TEK)</span>' 
             : (isLockLeg && sortedPickList.length === 2 
                 ? '<span style="color:#60a5fa; font-weight:800;">🛡️ KİLİT AYAK (ÇİFTE SİGORTA)</span>' 
-                : `<span style="color:#c084fc; font-weight:800;">🔥 SÜRPRİZ & DEĞER KORUMASI (${sortedPickList.length} SAFKAN)</span>`);
-          const riskBadge = leg.riskLevel === 'HIGH_RISK' ? '⚠️ Yüksek Risk' : (leg.riskLevel === 'LOW_RISK' ? '💎 Net Koşu' : '⚖️ Dengeli');
+                : (isChaotic 
+                    ? `<span style="color:#f43f5e; font-weight:800;">⚡ KAOTİK AYAK (${sortedPickList.length} SAFKAN · BOMBA KORUMASI)</span>` 
+                    : `<span style="color:#c084fc; font-weight:800;">🔥 SÜRPRİZ & DEĞER KORUMASI (${sortedPickList.length} SAFKAN)</span>`));
+          const riskBadge = isChaotic 
+            ? '⚡ Kaotik Ayak (Dar Dağılım)' 
+            : (leg.riskLevel === 'HIGH_RISK' ? '⚠️ Yüksek Risk' : (leg.riskLevel === 'LOW_RISK' ? '💎 Net Koşu' : '⚖️ Dengeli'));
 
           return `
             <div class="leg-box ${isSingle ? 'single-banko' : ''}">
@@ -5758,11 +5803,14 @@ function optimizeCoupon() {
                     : (isPlusEV 
                         ? '<span style="color:#f59e0b; font-size:0.65rem; font-weight:800; background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.5); padding:1px 5px; border-radius:3px; margin-left:4px;">🔥 +EV BOMBA</span>' 
                         : (isLockLeg ? '<span style="color:#60a5fa; font-size:0.65rem; font-weight:800; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); padding:1px 5px; border-radius:3px; margin-left:4px;">🛡️ KİLİT</span>' : ''));
+                  const classDropTag = (h.classBonus > 0 || (h.sinif_analizi && h.sinif_analizi.class_bonus > 0))
+                    ? `<span style="color:#34d399; font-size:0.65rem; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10b981; padding:1px 4px; border-radius:3px; margin-left:3px;" title="${h.classBadge || (h.sinif_analizi && h.sinif_analizi.badge) || 'Sınıf Üstünlüğü'}">💎 Üst Grup (+${h.classBonus || h.sinif_analizi.class_bonus}P)</span>`
+                    : '';
 
                   return `
                   <div class="p-horse" title="${h.paceLabel || ''}">
                     <span class="p-no">${h.no || h.atNo || 1}</span>
-                    <span class="p-name">${h.isim || h.atIsmi || 'SAFKAN'} ${(h.ekuriGrup && h.ekuriGrup.trim() !== '') ? '<span style="color:#fbbf24; font-size:0.65rem; font-weight:800; background:rgba(251,191,36,0.18); border:1px solid rgba(251,191,36,0.4); padding:1px 4px; border-radius:3px; margin-left:3px;">Eküri</span>' : ''} ${horseRoleTag} <span style="font-size:0.75rem; opacity:0.85;">${h.stil_ikon || ''}</span></span>
+                    <span class="p-name">${h.isim || h.atIsmi || 'SAFKAN'} ${(h.ekuriGrup && h.ekuriGrup.trim() !== '') ? '<span style="color:#fbbf24; font-size:0.65rem; font-weight:800; background:rgba(251,191,36,0.18); border:1px solid rgba(251,191,36,0.4); padding:1px 4px; border-radius:3px; margin-left:3px;">Eküri</span>' : ''} ${horseRoleTag} ${classDropTag} <span style="font-size:0.75rem; opacity:0.85;">${h.stil_ikon || ''}</span></span>
                     <span class="p-score" style="display:flex; align-items:center; gap:4px;">
                       <strong>${h.royalScore} P</strong>
                       <span style="font-size:0.65rem; padding:1px 4px; border-radius:3px; background:rgba(0,0,0,0.4); color:${deltaColor}; border:1px solid ${deltaColor}44;">${deltaStr}</span>

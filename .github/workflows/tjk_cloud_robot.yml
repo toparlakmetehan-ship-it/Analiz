@@ -43,6 +43,7 @@ jobs:
       - name: TJK Canlı Verileri Buluttan Otomatik Çek (Canlı Senkron)
         run: |
           python -m tjk_scraper.main --target both --export-json || echo "TJK Scraper tamamlandı."
+          python tools/enrich_class_drop.py || echo "Class Drop Enrich tamamlandı."
           node tools/enrich_race_pace_and_scenarios.js || echo "Pace Enrich tamamlandı."
           node tools/enrich_surface_kaba_kum_sentetik.js || echo "Surface Enrich tamamlandı."
           node tools/calibrate_tempo_deltas.js || echo "Tempo Calibrate tamamlandı."
