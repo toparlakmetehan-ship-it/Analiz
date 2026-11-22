@@ -5528,18 +5528,21 @@ function optimizeCoupon() {
     const sinif = (k.grup_sinifi || '').toLowerCase();
     const horseCount = scored.length;
 
+    const spread6 = scored.length >= 6 ? (scored[0].royalScore - scored[5].royalScore) : 20;
+    const spread8 = scored.length >= 8 ? (scored[0].royalScore - scored[7].royalScore) : 20;
+
     // Resmî 10 Yıllık TJK Backtest Risk Profili & Kaotik Ayak Dedektörü:
-    // 1. ile 8. at (veya sonuncu at) arasındaki puan farkı <= 8 ve grupta en az 8 at koşan ayaklar
-    const spread8 = scored.length >= 8 
-      ? (scored[0].royalScore - scored[7].royalScore) 
-      : (scored.length > 1 ? (scored[0].royalScore - scored[scored.length - 1].royalScore) : 0);
-    const isChaotic = (scored.length >= 8 && spread8 <= 8);
+    // 1) At sayısı >= 12 olan geniş ayaklar (Handikap / Açık / Şartlı fark etmeksizin varyans çok yüksektir)
+    // 2) İlk 6 at arasında <= 7.5 puan veya ilk 8 at arasında <= 9.5 puan dar dağılım olan ayaklar
+    const isChaotic = (horseCount >= 12) || (scored.length >= 6 && spread6 <= 7.5) || (scored.length >= 8 && spread8 <= 9.5);
 
     let riskLevel = 'NORMAL';
     if (isChaotic) {
       riskLevel = 'CHAOTIC'; // ⚡ Kaotik ayak: Tüm grup birbirine denk (Dar Puan Dağılımı - Bomba ve Sürpriz Koruması)
-    } else if (sinif.includes('maiden') || sinif.includes('şartlı 1') || (sinif.includes('handikap') && horseCount >= 12)) {
-      riskLevel = 'HIGH_RISK'; // Yüksek riskli kaotik ayak (+EV Bomba ve sürpriz koruması gerekir)
+    } else if (sinif.includes('maiden') || sinif.includes('şartlı 1') || (sinif.includes('handikap') && horseCount >= 10)) {
+      riskLevel = 'HIGH_RISK'; // Yüksek riskli ayak (+EV Bomba ve sürpriz koruması gerekir)
+    } else if (horseCount <= 7 && topDiff >= 3) {
+      riskLevel = 'LOW_RISK'; // Küçük grup, net koşu (5-7 at)
     } else if ((sinif.includes('açık') || sinif.includes('grup') || sinif.includes('kv-8')) && topDiff >= 10) {
       riskLevel = 'LOW_RISK'; // Net koşu (Top 1-2 yeterli)
     }
@@ -5550,17 +5553,29 @@ function optimizeCoupon() {
       legIndex: idx + 1,
       horses: scored,
       diff: topDiff,
-      riskLevel: riskLevel
+      riskLevel: riskLevel,
+      horseCount: horseCount
     };
   });
 
-  // Handikap koşularında handikap puan farkı yanıltıcı olduğundan kilit ayak olamaz;
-  // Güvenilirlik sıralaması: diff yüksekliği + grup kalitesi (KV / Açık / Şartlı > Handikap)
+  // Güvenilirlik Sıralaması:
+  // 1) Kaotik / 12+ at koşan ayaklar asla kilit olamaz!
+  // 2) Küçük gruplar (5-7 at) ve net puan farkı olan koşular kilitlenir!
   const sortedByCertainty = [...ratedLegs].sort((a, b) => {
+    const isChaoticA = a.riskLevel === 'CHAOTIC';
+    const isChaoticB = b.riskLevel === 'CHAOTIC';
+    if (isChaoticA && !isChaoticB) return 1;
+    if (!isChaoticA && isChaoticB) return -1;
+
     const isHandikapA = (a.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
     const isHandikapB = (b.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
     if (isHandikapA && !isHandikapB) return 1;
     if (!isHandikapA && isHandikapB) return -1;
+
+    // Az at koşan net koşulara öncelik ver (5-7 atlık gruplar)
+    if (a.horseCount !== b.horseCount && (a.horseCount <= 7 || b.horseCount <= 7)) {
+      return a.horseCount - b.horseCount;
+    }
     return b.diff - a.diff;
   });
 
@@ -5571,13 +5586,13 @@ function optimizeCoupon() {
   let strategyBadgeText = "";
 
   // Doğrulanmış Asil Banko Kriteri:
-  // Puan farkı >= 4, lider güç puanı >= 80 P, pist adaptasyon deltası >= 0, Kaotik olmayan ve Handikap olmayan net koşular
+  // Puan farkı >= 3, lider güç puanı >= 75 P, pist adaptasyon deltası >= 0, Kaotik olmayan ve az atlı (<= 8 at) net koşular
   const qualifiedBankoCandidates = sortedByCertainty.filter(l => {
     const topH = l.horses[0];
     const isPistMismatch = (topH?.pist_aptitude_analizi?.delta < 0);
     const isHandikap = (l.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
     const isChaotic = (l.riskLevel === 'CHAOTIC');
-    return l.diff >= 4 && (topH?.royalScore >= 80) && !isPistMismatch && !isHandikap && !isChaotic;
+    return l.diff >= 3 && (topH?.royalScore >= 75) && !isPistMismatch && !isHandikap && !isChaotic && (l.horseCount <= 8);
   });
 
   if (currentPick6Strategy === 'CHAMPION_5YEAR' || currentPick6Strategy === 'SMART_ADAPTIVE') {
