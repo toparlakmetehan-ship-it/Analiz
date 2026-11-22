@@ -5559,8 +5559,8 @@ function optimizeCoupon() {
   });
 
   // Güvenilirlik Sıralaması:
-  // 1) Kaotik / 12+ at koşan ayaklar asla kilit olamaz!
-  // 2) Küçük gruplar (5-7 at) ve net puan farkı olan koşular kilitlenir!
+  // 1) Kaotik / Dar dağılımlı ayaklar asla tek/kilit olamaz!
+  // 2) 2. ata en büyük puan farkını atan (en net üstünlüğe sahip) koşu en üstte yer alır!
   const sortedByCertainty = [...ratedLegs].sort((a, b) => {
     const isChaoticA = a.riskLevel === 'CHAOTIC';
     const isChaoticB = b.riskLevel === 'CHAOTIC';
@@ -5572,10 +5572,7 @@ function optimizeCoupon() {
     if (isHandikapA && !isHandikapB) return 1;
     if (!isHandikapA && isHandikapB) return -1;
 
-    // Az at koşan net koşulara öncelik ver (5-7 atlık gruplar)
-    if (a.horseCount !== b.horseCount && (a.horseCount <= 7 || b.horseCount <= 7)) {
-      return a.horseCount - b.horseCount;
-    }
+    // En yüksek puan farkı atan safkan asil bankodur (Örn: LET IT BURN gibi liderler)
     return b.diff - a.diff;
   });
 
@@ -5586,13 +5583,13 @@ function optimizeCoupon() {
   let strategyBadgeText = "";
 
   // Doğrulanmış Asil Banko Kriteri:
-  // Puan farkı >= 3, lider güç puanı >= 75 P, pist adaptasyon deltası >= 0, Kaotik olmayan ve az atlı (<= 8 at) net koşular
+  // Puan farkı >= 3, lider güç puanı >= 75 P, pist adaptasyon deltası >= 0, Kaotik olmayan net koşular
   const qualifiedBankoCandidates = sortedByCertainty.filter(l => {
     const topH = l.horses[0];
     const isPistMismatch = (topH?.pist_aptitude_analizi?.delta < 0);
     const isHandikap = (l.kosu.grup_sinifi || '').toLowerCase().includes('handikap');
     const isChaotic = (l.riskLevel === 'CHAOTIC');
-    return l.diff >= 3 && (topH?.royalScore >= 75) && !isPistMismatch && !isHandikap && !isChaotic && (l.horseCount <= 8);
+    return l.diff >= 3 && (topH?.royalScore >= 75) && !isPistMismatch && !isHandikap && !isChaotic;
   });
 
   if (currentPick6Strategy === 'CHAMPION_5YEAR' || currentPick6Strategy === 'SMART_ADAPTIVE') {
