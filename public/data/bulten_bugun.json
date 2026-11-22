@@ -4,7 +4,6 @@
   "gunAdi": "Pazar",
   "expectedCities": [
     "Adana",
-    "Selangor Malezya",
     "İzmir"
   ],
   "guncellemeZamani": "2026-11-22T10:42:39.287149",
@@ -6928,64 +6927,6 @@
               "sinif_analizi": null
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "selangor malezya",
-      "isim": "Selangor Malezya Hipodromu",
-      "sehir": "Selangor Malezya",
-      "tarih": "22.11.2026",
-      "havaDurumu": {
-        "temp": 16,
-        "conditionText": "Açık",
-        "humidity": 55,
-        "wind": 10
-      },
-      "rawTrackInfo": "Normal",
-      "cimOlcum": "Yarış Yok",
-      "kumOlcum": "Kum (3.7 Normal)",
-      "sentetikOlcum": "Yarış Yok",
-      "birimFiyat": 0.8,
-      "birimFiyatEtiket": "Güneydoğu Hipodromu (0.80 ₺)",
-      "asgariKuponTL": 20,
-      "altiliPaketleri": [
-        {
-          "paketNo": 1,
-          "baslangicKosu": 1,
-          "bitisKosu": 6
-        }
-      ],
-      "kosular": [
-        {
-          "kosu_no": 1,
-          "saat": "10:15",
-          "mesafe": 1300,
-          "pist": "Çim",
-          "pist_tipi": "Çim",
-          "grup_sinifi": "1. Koşu 10.15HANDİKAP 40-52",
-          "ikramiye": "250.000 ₺",
-          "altiliAyagi": 1,
-          "altiliPaketleri": [
-            {
-              "paketNo": 1,
-              "ayakNo": 1
-            }
-          ],
-          "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 50,
-            "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 0,
-            "avantajli_stiller": [
-              "Presçi",
-              "Orta Grup"
-            ],
-            "senaryo_yorumu": "Dengeli seyir.",
-            "olasi_kacanlar": []
-          },
-          "atlar": []
         }
       ]
     },

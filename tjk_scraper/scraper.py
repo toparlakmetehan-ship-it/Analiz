@@ -518,12 +518,15 @@ class TJKScraper:
                     if not sname:
                         sname = tab_txt.split('(')[0].strip()
                     sname = sname.strip()
+                    matched_domestic = None
                     for known in TJK_CITY_MAP:
                         if known.lower() == sname.lower() or known.lower() in tab_txt.lower():
-                            sname = known
+                            matched_domestic = known
                             break
-                    if sid and sname and not any(x[1] == sname for x in discovered_cities):
-                        discovered_cities.append((sid, sname, TJK_CITY_MAP.get(sname, f"{sname} Hipodromu")))
+                    if not matched_domestic:
+                        continue  # Yabancı / simulcast hipodromları dahil etme
+                    if sid and not any(x[1] == matched_domestic for x in discovered_cities):
+                        discovered_cities.append((sid, matched_domestic, TJK_CITY_MAP[matched_domestic]))
 
         targets = discovered_cities if discovered_cities else TJK_HIPODROMLAR
 
@@ -670,12 +673,15 @@ class TJKScraper:
                     if not sname:
                         sname = tab_txt.split('(')[0].strip()
                     sname = sname.strip()
+                    matched_domestic = None
                     for known in TJK_CITY_MAP:
                         if known.lower() == sname.lower() or known.lower() in tab_txt.lower():
-                            sname = known
+                            matched_domestic = known
                             break
-                    if sid and sname and not any(x[1] == sname for x in discovered_cities):
-                        discovered_cities.append((sid, sname, TJK_CITY_MAP.get(sname, f"{sname} Hipodromu")))
+                    if not matched_domestic:
+                        continue  # Yabancı / simulcast hipodromları dahil etme
+                    if sid and not any(x[1] == matched_domestic for x in discovered_cities):
+                        discovered_cities.append((sid, matched_domestic, TJK_CITY_MAP[matched_domestic]))
 
         targets = discovered_cities if discovered_cities else TJK_HIPODROMLAR
         logger.info(f"📍 {target_date_dmy} için taranacak şehirler: {[c[1] for c in targets]}")
