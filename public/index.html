@@ -1318,7 +1318,10 @@ let currentWinnersFilter = 'ALL';
 
 function getBultenCities(b) {
   if (!b || !b.hipodromlar || !b.hipodromlar.length) return '';
-  return b.hipodromlar.map(h => h.sehir || (h.isim ? h.isim.replace(' Hipodromu', '') : '')).filter(Boolean).join(' & ');
+  const FOREIGN_TRACK_REGEX = /selangor|malezya|chantilly|sha tin|scottsville|kempton|meydan|flamingo|kenilworth|fairview|greyville|turffontein|kranji|afrika|avustralya|fransa|ingiltere|amerika/i;
+  const filtered = b.hipodromlar.filter(h => !FOREIGN_TRACK_REGEX.test(h.sehir || h.isim || ''));
+  const list = filtered.length ? filtered : b.hipodromlar;
+  return list.map(h => h.sehir || (h.isim ? h.isim.replace(' Hipodromu', '') : '')).filter(Boolean).join(' & ');
 }
 
 function updateDynamicDateLabels() {
@@ -3237,6 +3240,11 @@ function enrichRaceRunningStylesAndPace(kosu) {
 
 function enrichBultenRunningStylesAndPace(bultenData) {
   if (!bultenData || !bultenData.hipodromlar) return;
+  const FOREIGN_TRACK_REGEX = /selangor|malezya|chantilly|sha tin|scottsville|kempton|meydan|flamingo|kenilworth|fairview|greyville|turffontein|kranji|afrika|avustralya|fransa|ingiltere|amerika/i;
+  const domestic = bultenData.hipodromlar.filter(h => !FOREIGN_TRACK_REGEX.test(h.sehir || h.isim || ''));
+  if (domestic.length > 0) {
+    bultenData.hipodromlar = domestic;
+  }
   bultenData.hipodromlar.forEach(hip => {
     (hip.kosular || []).forEach(k => enrichRaceRunningStylesAndPace(k));
   });
@@ -4658,6 +4666,22 @@ function renderRaceDetails() {
         </div>
         <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35;">
           ${h.sinif_analizi.aciklama}
+        </div>
+      </div>
+      ` : ''}
+
+      ${(h.anne_kardesleri && h.anne_kardesleri.badge) ? `
+      <div style="background:linear-gradient(135deg, rgba(212,175,55,0.14), rgba(0,0,0,0.45)); border:1px solid rgba(212,175,55,0.5); padding:0.55rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+          <span style="font-size:0.76rem; font-weight:800; color:#f3e5ab; font-family:'Cinzel',serif; display:flex; align-items:center; gap:0.35rem;">
+            ${h.anne_kardesleri.badge}
+          </span>
+          <span style="font-size:0.72rem; font-weight:800; font-family:'JetBrains Mono'; color:#d4af37; background:rgba(0,0,0,0.5); padding:1px 6px; border-radius:4px;">
+            SOY GÜCÜ: ${h.anne_kardesleri.score || 85} P
+          </span>
+        </div>
+        <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35;">
+          ${h.anne_kardesleri.text}
         </div>
       </div>
       ` : ''}
@@ -6406,7 +6430,7 @@ if ('serviceWorker' in navigator) {
   });
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js?v=43').then(reg => {
+    navigator.serviceWorker.register('./sw.js?v=44').then(reg => {
       console.log('Royal Turf PWA Service Worker Aktif:', reg.scope);
       reg.update();
       reg.addEventListener('updatefound', () => {

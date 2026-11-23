@@ -2,7 +2,7 @@ import json
 import sqlite3
 import sys
 sys.path.append('.')
-from tjk_scraper.scraper import build_pist_aptitude, build_class_drop_analysis
+from tjk_scraper.scraper import build_pist_aptitude, build_class_drop_analysis, build_deep_maternal_siblings
 
 conn = sqlite3.connect('data/tjk_yaris_arsiv.db')
 conn.row_factory = sqlite3.Row
@@ -55,6 +55,10 @@ def enrich_file(file_path):
                     if new_sinif:
                         a["sinif_analizi"] = new_sinif
                         updated_sinif += 1
+
+                # Anne kardeşleri analizi (5 yıllık sınır olmaksızın tüm tarihsel arşiv)
+                anne_adi = a.get("anne", "")
+                a["anne_kardesleri"] = build_deep_maternal_siblings(conn, name, anne_adi)
 
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(bulten, f, ensure_ascii=False, indent=2)
