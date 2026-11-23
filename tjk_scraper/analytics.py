@@ -402,38 +402,38 @@ def calculate_race_pace_scenario(conn, kosu_id):
     if kacak_sayisi >= 3 or (kacak_sayisi >= 2 and mesafe <= 1400):
         tahmini_tempo = "Çok Hızlı / Yüksek Baskı"
         tempo_kodu = "COK_HIZLI"
-        avantajli_stiller = "Düzlük Sprinteri (🚀) ve Sabırlı Orta Grup (🛡️)"
+        avantajli_stiller = "Pusu Presçisi (🏹), Sabırlı Orta Grup (🛡️) ve Sprinter (🚀)"
         if kacak_sayisi:
             tempo_analiz_yorumu = (
                 f"Önde liderlik mücadelesine girişecek {kacak_sayisi} kaçak safkan ({lider_isimleri}) "
                 f"ve arkalarında {presci_sayisi} presçi bulunuyor. Erken temponun ilk metrelerden "
-                "itibaren çok süratli olması ve ön grubun yıpranması beklenir. Arka hatta diri bekleyen "
-                "Düzlük Sprinterleri ve sabırlı Orta Grup safkanları son 400 metrede avantajlıdır."
+                "itibaren çok süratli olması ve ön grubun yıpranması beklenir. Öndeki kapışmaya girmeden "
+                "pusuda bekleyen Presçiler (3.-4. sıra) ve sabırlı Orta Grup safkanları viraj çıkışında büyük avantaja sahiptir."
             )
         else:
             tempo_analiz_yorumu = (
                 f"Belirgin bir kaçak safkan yok; ancak {presci_sayisi} presçi ({presci_isimleri}) "
                 "ön grubu sürekli baskı altında tutacak. Yüksek ön grup baskısı ön koşanları yıpratır, "
-                "arkadan gelen sprinterlere düzlükte avantaj sağlar."
+                "arkadan gelen sprinterlere ve pusu kuran takipçilere düzlükte avantaj sağlar."
             )
-        deltas = {"KACAK": -2, "PRESCI": -1, "ORTA_GRUP": +1, "SPRINTER": +2, "SERBEST": 0, "YETERSIZ": 0}
+        deltas = {"KACAK": -2, "PRESCI": +1, "ORTA_GRUP": +1, "SPRINTER": +2, "SERBEST": 0, "YETERSIZ": 0}
 
     elif kacak_sayisi == 2 or (kacak_sayisi == 1 and presci_sayisi >= 3) or (kacak_sayisi == 0 and presci_sayisi >= 6):
         tahmini_tempo = "Süratli / Tempolu"
         tempo_kodu = "SURATLI"
-        avantajli_stiller = "Düzlük Sprinteri (🚀) ve Diri Presçi (🏹)"
+        avantajli_stiller = "Diri Presçi (🏹) ve Sabırlı Orta Grup (🛡️)"
         if kacak_sayisi:
             tempo_analiz_yorumu = (
                 f"Önde {lider_isimleri} tempolu başlayacak ve hemen arkasında {presci_isimleri} "
-                "pres uygulayacaktır. Tempolu akış, viraja kadar diri kalan sprinterleri düzlükte "
-                "yarışa ortak eder."
+                "pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup "
+                "safkanları viraj üstünde liderliği devralmaya en yakındır."
             )
         else:
             tempo_analiz_yorumu = (
                 f"Kaçak safkan bulunmuyor; {presci_sayisi} presçi ({presci_isimleri}) tempoyu "
                 "kontrollü ama süratli tutacak. Ön grupta yer tutanlar düzlüğe yıpranmadan girerse avantajlıdır."
             )
-        deltas = {"KACAK": -1, "PRESCI": 0, "ORTA_GRUP": 0, "SPRINTER": +1, "SERBEST": 0, "YETERSIZ": 0}
+        deltas = {"KACAK": -1, "PRESCI": +1, "ORTA_GRUP": +1, "SPRINTER": +1, "SERBEST": 0, "YETERSIZ": 0}
 
     elif kacak_sayisi == 1 or presci_sayisi >= 3:
         tahmini_tempo = "Dengeli / Normal"
@@ -517,9 +517,17 @@ def calculate_race_pace_scenario(conn, kosu_id):
 
         # Kulvar etkisi yorumu
         if st <= 3:
-            kulvar_yorumu = "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)"
+            if s_kod == "PRESCI":
+                kulvar_yorumu = "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)"
+            elif s_kod == "KACAK":
+                kulvar_yorumu = "⚡ Avantajlı Kulvar (Bariyer dibinden efor sarf etmeden kafayı alır)"
+            else:
+                kulvar_yorumu = "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)"
         elif st >= 8:
-            kulvar_yorumu = "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)"
+            if s_kod == "KACAK":
+                kulvar_yorumu = "⚠️ Dış Kulvar Riski (Kafayı almak için viraja kadar fazladan enerji sarfiyatı)"
+            else:
+                kulvar_yorumu = "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)"
         else:
             kulvar_yorumu = "Orta kulvar dengeli"
 

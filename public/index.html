@@ -3298,6 +3298,8 @@ function estimateRacePace(kosu) {
 
   // Yalnızca 2 veya daha fazla gerçek kaçak kafada kapışıyorsa AŞIRI YÜKSEK TEMPO olur
   if (kacaklar.length >= 2) {
+    const mesafe = parseInt(kosu.mesafe) || 1600;
+    const isUzun = mesafe >= 1800;
     return {
       type: 'FAST',
       badge: '🔥 AŞIRI YÜKSEK TEMPO',
@@ -3305,8 +3307,10 @@ function estimateRacePace(kosu) {
       color: '#ef4444',
       bg: 'linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.05))',
       border: 'rgba(239, 68, 68, 0.4)',
-      desc: `Yarışta birden fazla kaçak safkan (${kacaklar.map(h => h.isim).join(' ve ')}) startla birlikte kafayı almak için birbiriyle sert çekişmeye girecek. İlk 800 metre süratli geçileceğinden ön grupta yorulma riski yüksektir.`,
-      kimeYarar: '🛡️ Orta grupta yıpranmadan bekleyen ve son 400 kopuş hızı kuvvetli safkanlar son düzlükte avantaj sağlar.'
+      desc: `Yarışta birden fazla kaçak safkan (${kacaklar.map(h => h.isim).join(' ve ')}) startla birlikte kafayı almak için birbiriyle sert çekişmeye girecek. ${isUzun ? '1800m+ uzun mesafede erken sürat ön grubu tüketir.' : 'İlk 800 metre süratli geçileceğinden ön grupta yorulma riski yüksektir.'}`,
+      kimeYarar: isUzun
+        ? '🎯 Öndeki savaşa girmeden pusuya yatan Presçiler (3.-4. sıra) ve sabırlı Orta Grup safkanları viraj üstünde liderliği çalma şansına sahiptir.'
+        : '🏹 Erken kapışmanın hemen ardında 3.lükte pusuya yatan Presçi ve yakın takipçiler virajı döner dönmez öne fırlar.'
     };
   }
 
@@ -3410,14 +3414,16 @@ function calculatePaceAdjustment(horse, kosu) {
         : '⚠️ Erken liderlik kavgası yıpratabilir (-2 Puan)';
       color = '#ef4444';
     } else if (stil.includes('Pres')) {
-      delta = (hp >= 70) ? 0 : -1;
-      label = (delta === 0) 
-        ? '🏹 Yüksek ön grup temposunu yakın takip (0 Puan Nötr)' 
-        : '🏹 Yüksek ön grup temposunda takip (-1 Puan)';
-      color = (delta === 0) ? '#38bdf8' : '#f59e0b';
+      delta = (hp >= 70 || mesafe >= 1800) ? +2 : +1;
+      label = (delta === +2) 
+        ? '🏹 Erken kapışmayı 3.-4. sırada izleyip virajda vurma avantajı (+2 Puan)' 
+        : '🏹 Yüksek ön grup temposunun ardında pusu avantajı (+1 Puan)';
+      color = '#10b981';
     } else if (stil.includes('Orta')) {
-      delta = +1;
-      label = '🛡️ Yıpranmadan son viraja gelme avantajı (+1 Puan)';
+      delta = (mesafe >= 1800) ? +2 : +1;
+      label = (delta === +2)
+        ? '🛡️ Uzun mesafede yıpranmadan viraja gelme avantajı (+2 Puan)'
+        : '🛡️ Yıpranmadan son viraja gelme avantajı (+1 Puan)';
       color = '#3b82f6';
     } else if (stil.includes('Sprinter')) {
       if (sprintSpeed >= 53.5 && mesafe >= 1400) {
@@ -3436,15 +3442,13 @@ function calculatePaceAdjustment(horse, kosu) {
       label = `👑 Yalnız lider rölanti tempoyu bitirebilir (+${delta} Puan)`;
       color = '#10b981';
     } else if (stil.includes('Pres')) {
-      delta = +1;
-      label = '🏹 Liderin arkasında rahat takip (+1 Puan)';
+      delta = +2;
+      label = '👑 Yavaş tempoda inisiyatif alıp yarışı çalma avantajı (+2 Puan)';
       color = '#10b981';
     } else if (stil.includes('Orta')) {
-      delta = (hp >= 75 || sprintSpeed >= 54) ? 0 : -1;
-      label = (delta === 0) 
-        ? '🛡️ Dengeli takip ve diri son viraj (0 Puan Nötr)' 
-        : '🛡️ Yavaş tempoda öndekileri yakalamak zor (-1 Puan)';
-      color = (delta === 0) ? '#38bdf8' : '#f59e0b';
+      delta = +1;
+      label = '🛡️ Yavaş tempoda ön gruba yakın takip avantajı (+1 Puan)';
+      color = '#38bdf8';
     } else if (stil.includes('Sprinter')) {
       // ══════════════════════════════════════════════════════════════════════════════
       // SINIF VE SPRINT HIZI SÖNÜMLEME KURALI (ELITE CLOSER PROTECTION):
@@ -6430,7 +6434,7 @@ if ('serviceWorker' in navigator) {
   });
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js?v=44').then(reg => {
+    navigator.serviceWorker.register('./sw.js?v=45').then(reg => {
       console.log('Royal Turf PWA Service Worker Aktif:', reg.scope);
       reg.update();
       reg.addEventListener('updatefound', () => {

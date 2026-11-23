@@ -116,7 +116,7 @@
                 "durum_kodu": "Şanlıurfa Kum"
               },
               "taktik_yorum": "Son 7 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%67.9) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "KUTBETTİN SAÇAN",
               "antrenor": "S.BECENE",
@@ -189,7 +189,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%38.9). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "HÜSEYİN ATAKAYA",
               "antrenor": "E.AÇMAZ",
@@ -262,7 +262,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 6 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%76.2) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "ABDULKADİR AKDENİZ",
               "antrenor": "MEHM.KAYA",
@@ -335,7 +335,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%52.8). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "HACİ CAMUZ",
               "antrenor": "R.BARMAN",
@@ -480,7 +480,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%55.6) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "MEHMET ALİ ÇEÇAN",
               "antrenor": "MEHM.KAYA",
@@ -625,7 +625,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%63.9) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "GİZEM BARIŞ",
               "antrenor": "ES.YILDIRIM",
@@ -735,7 +735,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%83.3) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "GİZEM BARIŞ",
               "antrenor": "ES.YILDIRIM",
@@ -879,7 +879,7 @@
                 "durum_kodu": "Şanlıurfa Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%88.9) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "SEYDİ AKYILDIRIM",
               "antrenor": "Y.BAYSAL",
@@ -1243,7 +1243,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%55.6). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MUSTAFA TAŞKAYA",
               "antrenor": "R.BARMAN",
@@ -1388,7 +1388,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%75.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "EMRE DEMİR",
               "antrenor": "RES.KAYA",
@@ -3518,7 +3518,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%52.8). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "ERKAN YILDIRIM",
               "antrenor": "R.BARMAN",
@@ -3878,7 +3878,7 @@
                 "durum_kodu": "Şanlıurfa Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%61.1) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "MUSTAFA DOĞAN",
               "antrenor": "MAHMUT DOĞAN",
@@ -3950,7 +3950,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%47.2). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "DENİSE ŞAHİN",
               "antrenor": "T.TAHTA",
@@ -4096,7 +4096,7 @@
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%63.9) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MESUT SAYAR",
               "antrenor": "S.KARAKEÇİLİ",
@@ -4168,7 +4168,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%58.3) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "REFİK ÇEVİK",
               "antrenor": "R.BARMAN",
@@ -4313,7 +4313,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%47.2) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MAHMUT KARAKEÇİLİ",
               "antrenor": "MAHMUT DOĞAN",
@@ -5785,7 +5785,7 @@
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "YILMAZ TEKİNALP",
               "antrenor": "K.TAŞDEMİR",
@@ -5858,7 +5858,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%52.8). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ADNAN KESKİN",
               "antrenor": "T.AYDIN",
@@ -5931,7 +5931,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MEHMET EMİN DEMİRKAPU",
               "antrenor": "B.DEMİRKAPU",
@@ -6148,7 +6148,7 @@
                 "durum_kodu": "Şanlıurfa Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%52.8). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "NEŞET AKYAVUZ",
               "antrenor": "MEHM.KAYA",
@@ -6221,7 +6221,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 3 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%50.0). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "BEKİR CANPOLAT",
               "antrenor": "S.BAKIR",
@@ -6366,7 +6366,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%44.4). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "TAMER YÜKSEL",
               "antrenor": "ES.YILDIRIM",
@@ -6439,7 +6439,7 @@
                 "durum_kodu": "Şanlıurfa Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%58.3). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "TUBA KAYA",
               "antrenor": "RES.KAYA",
@@ -6512,7 +6512,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%47.2). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "EMRE ÜNSEVER",
               "antrenor": "MEHM.KAYA",
@@ -6657,7 +6657,7 @@
                 "durum_kodu": "Elazığ Kum"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%75.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MEHMET ERCÜMENT ULAŞ",
               "antrenor": "ES.YILDIRIM",
@@ -6940,7 +6940,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%72.2) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "CEM NARİN",
               "antrenor": "S.DURGUÇ",
@@ -7012,7 +7012,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%47.2). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "TÜLAY ÇİFTÇİ",
               "antrenor": "H.ACAR",
@@ -7084,7 +7084,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%88.9) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ŞAKİRE DEMİR",
               "antrenor": "Y.ÖZTAŞ",
@@ -7156,7 +7156,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%58.3). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "SONGÜL TEKİNALP",
               "antrenor": "Y.TEKİNALP",
@@ -9605,7 +9605,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%36.1). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "A.ENGİN GICIR",
               "antrenor": "İ.E.KURAL",
@@ -9677,7 +9677,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%58.3). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ALİ TAHİR VARUŞ",
               "antrenor": "K.BALTACI",
@@ -9749,7 +9749,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%52.8). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "CEMALETTİN KOÇ",
               "antrenor": "A.BOZKURT",
@@ -9822,7 +9822,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%47.2). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "M.LEVENT TOPSAKAL",
               "antrenor": "MİR.İPEK",
@@ -9894,7 +9894,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%86.1) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "ÜNAL KARACA",
               "antrenor": "C.TURAN",
@@ -10037,7 +10037,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "HASAN TURAN",
               "antrenor": "GÜV.GÖKÇE",
@@ -10109,7 +10109,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "SALİH TEKİNALP",
               "antrenor": "S.ÇİFTÇİ",
@@ -10181,7 +10181,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%97.2) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "MUHAMMET ALİ KILIÇ",
               "antrenor": "GÖK.GÖKÇE",
@@ -12556,7 +12556,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%44.4). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "VEYSEL KAHRAMAN",
               "antrenor": "G.TAŞDELEN",
@@ -12627,7 +12627,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%47.2) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "DEMİRHAN YILMAZ",
               "antrenor": "S.BEKTAŞ",
@@ -12700,7 +12700,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 7 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%42.9). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "Y.ERKUT ERSEVER",
               "antrenor": "C.TURAN",
@@ -12773,7 +12773,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%77.8) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "EROL AŞIK",
               "antrenor": "İ.E.KURAL",
@@ -12846,7 +12846,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%58.3) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "SERCAN KAVUŞAN",
               "antrenor": "T.İBİŞ",
@@ -12919,7 +12919,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%50.0). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "OKTAY FERHAN BİTİRMİŞ",
               "antrenor": "HAK.POLAT",
@@ -13207,7 +13207,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%97.2) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ENİS EMRE GELGİN",
               "antrenor": "A.KÜÇÜKAKSOY",
@@ -13280,7 +13280,7 @@
                 "durum_kodu": "Kayıtsız"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%69.4) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "FATİH HAYIRLIOĞLU",
               "antrenor": "Y.DEMİRKIRAN",
