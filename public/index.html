@@ -6394,7 +6394,7 @@ if ('serviceWorker' in navigator) {
   });
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js?v=41').then(reg => {
+    navigator.serviceWorker.register('./sw.js?v=42').then(reg => {
       console.log('Royal Turf PWA Service Worker Aktif:', reg.scope);
       reg.update();
       reg.addEventListener('updatefound', () => {

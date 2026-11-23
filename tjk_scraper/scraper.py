@@ -481,6 +481,8 @@ class TJKScraper:
         """
         Belirtilen tarihte sonuçları olan hipodromları dinamik olarak tarar.
         """
+        if hasattr(target_date_dmy, 'strftime'):
+            target_date_dmy = target_date_dmy.strftime('%d/%m/%Y')
         active_results = []
         q_date = urllib.parse.quote(target_date_dmy)
 
@@ -636,6 +638,8 @@ class TJKScraper:
         Belirtilen tarihte (örn: '21/11/2026') TJK'da koşusu olan hipodromları dinamik tarar.
         Önce günün ana sayfasından yerli şehir sekmelerini (Adana, İstanbul vb.) dinamik tespit eder.
         """
+        if hasattr(target_date_dmy, 'strftime'):
+            target_date_dmy = target_date_dmy.strftime('%d/%m/%Y')
         active_hipodroms = []
         q_date = urllib.parse.quote(target_date_dmy)
 
@@ -1210,15 +1214,18 @@ class TJKScraper:
             for at in at_rows:
                 yas = at["at_yas"] or 3
                 clean_runs = "".join(filter(str.isdigit, at["son_6_yaris"] or ""))
-                career_starts = at["at_toplam_kosu"]
-                if career_starts is None:
-                    career_starts = len(clean_runs)
+                career_starts = max(at["at_toplam_kosu"] or 0, len(clean_runs))
                 is_young = career_starts <= 3
 
-                stil = at["hesaplanan_stil"] or (
-                    "Taktik Serbest (İlk 3 Koşusu)" if is_young else "Orta Grup"
-                )
-                ikon = at["stil_ikon"] or ("🌱" if is_young else "🛡️")
+                stil = at["hesaplanan_stil"]
+                if is_young:
+                    stil = "Taktik Serbest (İlk 3 Koşusu)"
+                    ikon = "🌱"
+                elif not stil or stil == "Taktik Serbest (İlk 3 Koşusu)" or stil == "Yetersiz Veri":
+                    stil = "Orta Grup"
+                    ikon = "🛡️"
+                else:
+                    ikon = at["stil_ikon"] or "🛡️"
 
                 if "Kaçak" in stil or "Lider" in stil:
                     renk = "#eab308"
@@ -1305,7 +1312,7 @@ class TJKScraper:
                     "dinlenme_gunu": at["kgs"] or 20,
                     "takilar": at["takilar"].split() if at["takilar"] else [],
                     "isYoungHorse": is_young,
-                    "taktik_durumu": "ILK_3_KOSU_SERBEST" if is_young else (at["taktik_durumu"] if at["taktik_durumu"] and at["taktik_durumu"] != "YETERSIZ_VERI" else "DEGISKEN"),
+                    "taktik_durumu": "ILK_3_KOSU_SERBEST" if is_young else (at["taktik_durumu"] if at["taktik_durumu"] and at["taktik_durumu"] not in ("YETERSIZ_VERI", "ILK_3_KOSU_SERBEST") else "DEGISKEN"),
                     "kosu_stili": stil,
                     "stil_ikon": ikon,
                     "stil_renk": renk,

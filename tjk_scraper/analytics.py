@@ -50,8 +50,20 @@ def calculate_horse_tactical_style(conn, at_id, at_name=""):
     past_races = cur_past.fetchall()
     analiz_edilen_kosu_sayisi = len(past_races)
 
+    # Program kayıtlarındaki son 6 yarış formunu da kontrol et
+    son6_digits = 0
+    try:
+        son6_row = conn.execute(
+            "SELECT son_6_yaris FROM program_kayitlari WHERE at_id = ? AND son_6_yaris IS NOT NULL ORDER BY id DESC LIMIT 1",
+            (at_id,)
+        ).fetchone()
+        if son6_row and son6_row["son_6_yaris"]:
+            son6_digits = len("".join(filter(str.isdigit, str(son6_row["son_6_yaris"]))))
+    except Exception:
+        son6_digits = 0
+
     # Toplam yarış sayısını kesinleştir
-    effective_starts = max(toplam_kosu_sayisi, analiz_edilen_kosu_sayisi)
+    effective_starts = max(toplam_kosu_sayisi, analiz_edilen_kosu_sayisi, son6_digits)
 
     # ══════════════════════════════════════════════════════════════════════════
     # KURAL 1: İLK 3 KOŞUSUNU KOŞAN GENÇ SAFKANLAR (≤ 3 KOŞU)
@@ -83,15 +95,15 @@ def calculate_horse_tactical_style(conn, at_id, at_name=""):
             "at_ismi": at_name,
             "toplam_kosu_sayisi": effective_starts,
             "analiz_edilen_kosu_sayisi": 0,
-            "hesaplanan_stil": "Yetersiz Veri",
-            "stil_kodu": "YETERSIZ",
-            "stil_ikon": "❓",
+            "hesaplanan_stil": "Orta Grup",
+            "stil_kodu": "ORTA_GRUP",
+            "stil_ikon": "🛡️",
             "onde_gitme_orani": 0.0,
             "pres_orani": 0.0,
-            "orta_orani": 0.0,
+            "orta_orani": 1.0,
             "bekleme_orani": 0.0,
-            "kural_aciklamasi": "Atın veritabanında henüz incelenebilecek geçmiş koşu kaydı bulunmuyor.",
-            "veri_durumu": "YETERSIZ_VERI"
+            "kural_aciklamasi": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+            "veri_durumu": "DEGISKEN"
         }
         upsert_turev_at_taktigi(conn, record)
         return record
@@ -128,18 +140,18 @@ def calculate_horse_tactical_style(conn, at_id, at_name=""):
             "at_ismi": at_name,
             "toplam_kosu_sayisi": effective_starts,
             "analiz_edilen_kosu_sayisi": 0,
-            "hesaplanan_stil": "Yetersiz Veri",
-            "stil_kodu": "YETERSIZ",
-            "stil_ikon": "❓",
+            "hesaplanan_stil": "Orta Grup",
+            "stil_kodu": "ORTA_GRUP",
+            "stil_ikon": "🛡️",
             "onde_gitme_orani": 0.0,
             "pres_orani": 0.0,
-            "orta_orani": 0.0,
+            "orta_orani": 1.0,
             "bekleme_orani": 0.0,
             "kural_aciklamasi": (
-                "Geçmiş koşular için doğrulanmış ara-pozisyon ölçümü bulunamadı. "
-                "Kaynak: Accurace (resmî olmayan ölçüm)."
+                "Geçmiş koşular için doğrulanmış ara-pozisyon ölçümü bulunamadı; "
+                "dengeli 'Orta Grup' taktiği atandı."
             ),
-            "veri_durumu": "YETERSIZ_VERI",
+            "veri_durumu": "DEGISKEN",
         }
         upsert_turev_at_taktigi(conn, record)
         return record
