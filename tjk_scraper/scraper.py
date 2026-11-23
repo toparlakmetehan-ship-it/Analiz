@@ -1107,7 +1107,7 @@ class TJKScraper:
                 hip_id_slug = sehir.lower().replace('ş', 's').replace('ı', 'i').replace('ö', 'o').replace('ü', 'u').replace('ç', 'c').replace('ğ', 'g')
                 old_hip = next((h for h in existing_data.get("hipodromlar", []) if h.get("sehir") == sehir), {})
 
-                birim_fiyat = 1.25 if sehir in ["İstanbul", "Ankara", "İzmir", "Bursa", "Adana", "Antalya", "Kocaeli"] else 0.80
+                birim_fiyat = 1.25 if sehir in ["İstanbul", "Ankara", "İzmir", "Bursa", "Adana", "Antalya", "Kocaeli"] else 1.00
                 birim_label = f"Büyük Şehir Hipodromu ({birim_fiyat:.2f} ₺)" if birim_fiyat == 1.25 else f"Güneydoğu Hipodromu ({birim_fiyat:.2f} ₺)"
 
                 hipodrom_map[sehir] = {

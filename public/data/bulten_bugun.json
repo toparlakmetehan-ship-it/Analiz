@@ -8165,8 +8165,8 @@
       "cimOlcum": "Yarış Yok",
       "kumOlcum": "Kum (3.7 Normal)",
       "sentetikOlcum": "Yarış Yok",
-      "birimFiyat": 0.8,
-      "birimFiyatEtiket": "Güneydoğu Hipodromu (0.80 ₺)",
+      "birimFiyat": 1.0,
+      "birimFiyatEtiket": "Güneydoğu Hipodromu (1.00 ₺)",
       "asgariKuponTL": 20,
       "altiliPaketleri": [
         {
