@@ -6,8 +6,8 @@
     "Elazığ",
     "İstanbul"
   ],
-  "guncellemeZamani": "2026-11-24T13:18:47.317034",
-  "sonSenkronizasyon": "13:18:47",
+  "guncellemeZamani": "2026-11-24T19:34:31.443512",
+  "sonSenkronizasyon": "19:34:31",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -868,12 +868,12 @@
             "tempo_kodu": "SURATLI",
             "tempo_skoru": 84,
             "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 4,
             "avantajli_stiller": [
               "Diri Presçi (🏹)",
               "Sabırlı Orta Grup (🛡️)"
             ],
-            "senaryo_yorumu": "Önde #6 SARİŞİM tempolu başlayacak ve hemen arkasında #3 ÇELİK STAR, #4 ŞAHPERİ, #7 LORD OF KİRVE pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 3 at tam (3+ ölçüm), 4 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Önde #6 SARİŞİM tempolu başlayacak ve hemen arkasında #2 KING OF LINGO, #3 ÇELİK STAR, #4 ŞAHPERİ pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 4 at tam (3+ ölçüm), 3 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
               {
                 "no": 6,
@@ -887,7 +887,7 @@
               "no": 1,
               "isim": "VICTORY XECE",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "KANEKO",
               "anne": "MISS ECEM",
@@ -926,34 +926,42 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 7 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%50.0). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "BÜLENT DEMİR",
               "antrenor": "EY.YARDIMCI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "🔥 KABA KUM UZMANI (Kumda 3G / 6 Tabela)",
+                "delta": 2,
+                "color": "#10b981",
+                "desc": "Kaba kumda 6 koşuda 3 galibiyet, 6 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 3,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 1,
+                "class_bonus": 3.8,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (1 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -964,7 +972,7 @@
               "no": 2,
               "isim": "KING OF LINGO",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "TIZWAY (USA)",
               "anne": "KERVANSARAYIN KIZI",
@@ -980,12 +988,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -1003,26 +1011,26 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 7 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%96.4) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MEHMET ÇEÇAN",
               "antrenor": "C.SUBAY",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/5T · Sentetik: 1G/1T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 2,
+                  "top4": 5
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
                 },
                 "turfStats": {
                   "runs": 0,
@@ -1549,7 +1557,7 @@
               "no": 2,
               "isim": "AMALASUNTA",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "TIZWAY (USA)",
               "anne": "WORLD STAGE",
@@ -1566,7 +1574,7 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "TEK_OLCUM",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
@@ -1589,21 +1597,21 @@
                 "d_200": "",
                 "durum_kodu": "Diyarbakır Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Yalnızca 1 ölçümlü koşuda ara-pozisyonlar Orta Grup stilini gösterdi. Taktik yön göstergesidir; tempo etkisi yarı ağırlıkla uygulanır. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MEHMET DEMİRKAPI",
               "antrenor": "E.AÇMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 3T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Kaba kumda 4 koşuda 0G/3T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 },
                 "synStats": {
                   "runs": 0,
@@ -2285,7 +2293,7 @@
             "tempo_kodu": "SURATLI",
             "tempo_skoru": 84,
             "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 4,
+            "on_grup_baskisi_sayisi": 5,
             "avantajli_stiller": [
               "Diri Presçi (🏹)",
               "Sabırlı Orta Grup (🛡️)"
@@ -2382,7 +2390,7 @@
               "no": 2,
               "isim": "KATANA BOY",
               "yas": 4,
-              "cinsiyet": "4y a  a",
+              "cinsiyet": "4 y  a a",
               "irk": "Arap",
               "baba": "LION HEART (USA)",
               "anne": "PEACE TRAIL",
@@ -2400,7 +2408,7 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
@@ -2423,31 +2431,31 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%52.8) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MAHMUT CANLIKA",
               "antrenor": "R.BECENE",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/6T · Sentetik: 1G/5T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 22,
+                  "wins": 1,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 15,
+                  "wins": 1,
+                  "top4": 5
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 5,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 }
               },
               "sinif_analizi": null,
@@ -2551,7 +2559,7 @@
               "no": 4,
               "isim": "DUMANLI PARS",
               "yas": 5,
-              "cinsiyet": "5y d k",
+              "cinsiyet": "5 y  dk",
               "irk": "İngiliz",
               "baba": "AVERY ISLAND (USA)",
               "anne": "DURMAK YOK",
@@ -2568,7 +2576,7 @@
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
+              "taktik_durumu": "DEGISKEN",
               "kosu_stili": "Düzlük Sprinteri",
               "stil_ikon": "🚀",
               "stil_renk": "#a855f7",
@@ -2591,7 +2599,7 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Son 7 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%73.5) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 7 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%57.1). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "YAŞAR SÜSLÜ",
@@ -2608,7 +2616,7 @@
                   "top4": 19
                 },
                 "synStats": {
-                  "runs": 5,
+                  "runs": 6,
                   "wins": 0,
                   "top4": 1
                 },
@@ -3022,7 +3030,7 @@
               "no": 10,
               "isim": "MELONI",
               "yas": 4,
-              "cinsiyet": "4y d k",
+              "cinsiyet": "4 y  dk",
               "irk": "İngiliz",
               "baba": "AGRESIVO (USA)",
               "anne": "KARMELİTA",
@@ -3062,7 +3070,7 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%61.1) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%69.4) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "ALAETTİN ÖZCAN",
@@ -3079,7 +3087,7 @@
                   "top4": 10
                 },
                 "synStats": {
-                  "runs": 6,
+                  "runs": 7,
                   "wins": 0,
                   "top4": 0
                 },
@@ -3100,7 +3108,7 @@
               "no": 11,
               "isim": "HELLO KUTTY",
               "yas": 3,
-              "cinsiyet": "3y a  d",
+              "cinsiyet": "3 y  ad",
               "irk": "Arap",
               "baba": "EUPRHATES (USA)",
               "anne": "RAINSTORM",
@@ -3119,11 +3127,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -3141,29 +3149,29 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%41.7). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MÜSLÜM ŞİMŞEK",
               "antrenor": "E.AÇMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
+                "badge": "🏟️ Kaba Kum Deneyimli (12 Koşuda 5 Tabela)",
+                "delta": 1,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 12,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 5
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 }
@@ -4295,7 +4303,7 @@
               "no": 13,
               "isim": "OĞLUM FIRAT",
               "yas": 6,
-              "cinsiyet": "6y d  a",
+              "cinsiyet": "6 y  d a",
               "irk": "Arap",
               "baba": "PAPA CLEM (USA)",
               "anne": "STARBUST",
@@ -4334,31 +4342,31 @@
                 "d_200": "",
                 "durum_kodu": "İzmir Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%36.1). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MEHMET ÖKSÜZ",
               "antrenor": "MUH.YILDIRIM",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 38,
+                  "wins": 4,
+                  "top4": 14
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 5,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 4
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 7,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 }
               },
               "sinif_analizi": null,
@@ -4394,12 +4402,12 @@
             "tempo_kodu": "SURATLI",
             "tempo_skoru": 84,
             "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 5,
             "avantajli_stiller": [
               "Diri Presçi (🏹)",
               "Sabırlı Orta Grup (🛡️)"
             ],
-            "senaryo_yorumu": "Önde #1 SERÜVENTAY tempolu başlayacak ve hemen arkasında #2 SEYYARETAY, #5 GÜNÇİÇEK, #6 ŞUBAT BEY pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 6 at tam (3+ ölçüm), 3 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Önde #1 SERÜVENTAY tempolu başlayacak ve hemen arkasında #2 SEYYARETAY, #3 BÜCÜRÜK AKTAŞ, #5 GÜNÇİÇEK pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 8 at tam (3+ ölçüm), 1 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
               {
                 "no": 1,
@@ -4585,7 +4593,7 @@
               "no": 3,
               "isim": "BÜCÜRÜK AKTAŞ",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "AKTAŞOĞLU",
               "anne": "MY AFRODİTE",
@@ -4602,12 +4610,12 @@
                 "K"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -4625,34 +4633,42 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%58.3) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MEHMET AKTAŞ",
               "antrenor": "MEHM.KAYA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⚠️ PİST UYARISI: Kaba Kumda 0 Tabela (Sentetik/Çim Atı)",
+                "delta": -2,
+                "color": "#ef4444",
+                "desc": "Kaba kumdaki önceki yarışlarında tabelaya giremedi; safkanın sentetik veya çim performansı kaba kuma göre belirgin şekilde üstündür.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 7,
+                  "wins": 1,
+                  "top4": 6
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-8/9",
+                "grup_tabela_sayisi": 0,
+                "class_bonus": 4,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-8/9 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-8/9) koşularda boy gösterdi (0 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -4977,7 +4993,7 @@
               "no": 8,
               "isim": "ELİFİN IŞIĞI",
               "yas": 3,
-              "cinsiyet": "3y a  d",
+              "cinsiyet": "3 y  ad",
               "irk": "Arap",
               "baba": "GELİBOLU",
               "anne": "ŞANSLI",
@@ -4995,12 +5011,12 @@
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -5018,26 +5034,26 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%77.8) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "ULAŞ ÖZDEN",
               "antrenor": "R.BARMAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 6T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Kaba kumda 7 koşuda 1G/6T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 7,
+                  "wins": 1,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
                   "runs": 0,
@@ -5151,14 +5167,19 @@
             "tempo_sinifi": "Çok Hızlı / Yüksek Baskı",
             "tempo_kodu": "COK_HIZLI",
             "tempo_skoru": 99,
-            "liderlik_baskisi_sayisi": 2,
-            "on_grup_baskisi_sayisi": 1,
+            "liderlik_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 5,
             "avantajli_stiller": [
               "Pusu Presçisi (🏹), Sabırlı Orta Grup (🛡️)",
               "Sprinter (🚀)"
             ],
-            "senaryo_yorumu": "Önde liderlik mücadelesine girişecek 2 kaçak safkan (#7 KADIKÖY GÜZELİ, #9 RAHAT OLL) ve arkalarında 1 presçi bulunuyor. Erken temponun ilk metrelerden itibaren çok süratli olması ve ön grubun yıpranması beklenir. Öndeki kapışmaya girmeden pusuda bekleyen Presçiler (3.-4. sıra) ve sabırlı Orta Grup safkanları viraj çıkışında büyük avantaja sahiptir. Taktik kanıtı: 3 at tam (3+ ölçüm), 7 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Önde liderlik mücadelesine girişecek 3 kaçak safkan (#1 JAZZMASTER, #7 KADIKÖY GÜZELİ, #9 RAHAT OLL) ve arkalarında 5 presçi bulunuyor. Erken temponun ilk metrelerden itibaren çok süratli olması ve ön grubun yıpranması beklenir. Öndeki kapışmaya girmeden pusuda bekleyen Presçiler (3.-4. sıra) ve sabırlı Orta Grup safkanları viraj çıkışında büyük avantaja sahiptir. Taktik kanıtı: 8 at tam (3+ ölçüm), 2 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
+              {
+                "no": 1,
+                "isim": "JAZZMASTER",
+                "st": 8
+              },
               {
                 "no": 7,
                 "isim": "KADIKÖY GÜZELİ",
@@ -5176,7 +5197,7 @@
               "no": 1,
               "isim": "JAZZMASTER",
               "yas": 3,
-              "cinsiyet": "3y a  g",
+              "cinsiyet": "3 y  ag",
               "irk": "Arap",
               "baba": "LION HEART (USA)",
               "anne": "LHAZAREEN",
@@ -5193,12 +5214,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -5216,26 +5237,26 @@
                 "d_200": "",
                 "durum_kodu": "Kayıtsız"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 1,
-              "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%61.1) yarış içi ara-pozisyon ölçümleri Kaçak / Lider stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": -2,
+              "kulvar_yorumu": "⚠️ Dış Kulvar Riski (Kafayı almak için viraja kadar fazladan enerji sarfiyatı)",
               "sahip": "REFİK ÇEVİK",
               "antrenor": "R.BECENE",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/13T · Sentetik: 1G/1T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 23,
+                  "wins": 4,
+                  "top4": 13
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 1
                 },
                 "turfStats": {
                   "runs": 0,
@@ -5243,7 +5264,15 @@
                   "top4": 0
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 0,
+                "class_bonus": 3,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +3P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (0 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -5254,7 +5283,7 @@
               "no": 2,
               "isim": "MY ARES",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "APPROVE (IRE)",
               "anne": "SAND SPOUT",
@@ -5273,12 +5302,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -5296,29 +5325,29 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%69.4) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MEHMET TAHİR AKIL",
               "antrenor": "MEHM.KAYA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/8T · Sentetik: 2G/3T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 16,
+                  "wins": 2,
+                  "top4": 8
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 4,
+                  "wins": 2,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -5334,7 +5363,7 @@
               "no": 3,
               "isim": "RÜZGAR AGAH",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "ULAN BATOR",
               "anne": "NALAN SULTAN",
@@ -5351,12 +5380,12 @@
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -5374,24 +5403,24 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 6 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%57.1) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "EYYÜP ÇİZİK",
               "antrenor": "E.AÇMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "🔥 KABA KUM UZMANI (Kumda 3G / 9 Tabela)",
+                "delta": 2,
+                "color": "#10b981",
+                "desc": "Kaba kumda 14 koşuda 3 galibiyet, 9 tabela elde etti. Ağır kum ve kickback altında mücadele gücü çok yüksektir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 14,
+                  "wins": 3,
+                  "top4": 9
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -5401,7 +5430,15 @@
                   "top4": 0
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 1,
+                "class_bonus": 3.8,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (1 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -5412,7 +5449,7 @@
               "no": 4,
               "isim": "UNSEEN POWER",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "PAPA CLEM (USA)",
               "anne": "FLY SO HIGH",
@@ -5431,12 +5468,12 @@
                 "SGKR"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -5454,29 +5491,29 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%63.9) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "ŞAFAK GÜMÜŞ",
               "antrenor": "Y.BAYSAL",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/7T · Sentetik: 1G/7T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 14,
+                  "wins": 1,
+                  "top4": 7
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 8,
+                  "wins": 1,
+                  "top4": 7
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -5492,7 +5529,7 @@
               "no": 5,
               "isim": "ROYAL WARRIOR",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "KANEKO",
               "anne": "CELERITAS",
@@ -5511,11 +5548,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -5533,21 +5570,21 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%47.2). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "İBRAHİM HALİL TURAN",
               "antrenor": "E.AÇMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "🔥 KABA KUM DENEYİMLİ (3G / 5T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Kaba kumda 15 koşuda 3G/5T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 15,
+                  "wins": 3,
+                  "top4": 5
                 },
                 "synStats": {
                   "runs": 0,
@@ -5555,7 +5592,7 @@
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -5728,7 +5765,7 @@
               "no": 8,
               "isim": "KRAL ALPER",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "MY FREEDOM",
               "anne": "EMIKA",
@@ -5746,7 +5783,7 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
@@ -5769,31 +5806,31 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%72.2) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ĞEMDİN ULUCAN",
               "antrenor": "B.FAHRİOĞLU",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "🔥 KABA KUM DENEYİMLİ (3G / 9T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Kaba kumda 26 koşuda 3G/9T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 26,
+                  "wins": 3,
+                  "top4": 9
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 }
               },
               "sinif_analizi": null,
@@ -5805,8 +5842,8 @@
                   "ALPERİN KIZI"
                 ],
                 "totalWins": 1,
-                "text": "Anne Kardeşleri: ALPERİN KIZI (1 Galibiyet / 16 Koşu)",
-                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: ALPERİN KIZI (1 Galibiyet / 16 Koşu))"
+                "text": "Anne Kardeşleri: ALPERİN KIZI (1 Galibiyet / 17 Koşu)",
+                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: ALPERİN KIZI (1 Galibiyet / 17 Koşu))"
               }
             },
             {
@@ -7909,7 +7946,7 @@
               "no": 13,
               "isim": "BİTİRİM SEDA",
               "yas": 7,
-              "cinsiyet": "7y a k",
+              "cinsiyet": "7 y  ak",
               "irk": "Arap",
               "baba": "BİTİRİMKARINCA",
               "anne": "SEDACIK",
@@ -7948,29 +7985,29 @@
                 "d_200": "",
                 "durum_kodu": "Elazığ Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%47.2). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MAHMUT CANLIKA",
               "antrenor": "R.BECENE",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/12T · Sentetik: 1G/3T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 43,
+                  "wins": 1,
+                  "top4": 12
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -8127,7 +8164,7 @@
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Yarışta #8 ÇINARALTI KIZI tek doğal lider pozisyonundadır. Startla kafayı alıp kendi temposunu kabul ettirirse virajı avantajlı dönebilir. Arkada dengeli takip eden presçiler düzlüğe diri çıkacaktır. Taktik kanıtı: 2 at tam (3+ ölçüm), 4 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Yarışta #8 ÇINARALTI KIZI tek doğal lider pozisyonundadır. Startla kafayı alıp kendi temposunu kabul ettirirse virajı avantajlı dönebilir. Arkada dengeli takip eden presçiler düzlüğe diri çıkacaktır. Taktik kanıtı: 3 at tam (3+ ölçüm), 3 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
               {
                 "no": 8,
@@ -8141,7 +8178,7 @@
               "no": 1,
               "isim": "BİGASİ",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "GELİBOLU",
               "anne": "SİDELYA",
@@ -8159,12 +8196,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "#a855f71f",
+              "stil_border": "#a855f759",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -8182,14 +8219,14 @@
                 "d_200": "",
                 "durum_kodu": "Kayıtsız"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%55.6) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "YAKUP BALKAN",
               "antrenor": "MUR.AKKILIÇ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (6 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -8199,14 +8236,14 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 6,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 }
               },
               "sinif_analizi": null,
@@ -8952,14 +8989,14 @@
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
-            "tempo_skoru": 64,
+            "tempo_skoru": 61,
             "liderlik_baskisi_sayisi": 0,
             "on_grup_baskisi_sayisi": 4,
             "avantajli_stiller": [
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 4 presçi ve 2 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 4 at tam (3+ ölçüm), 4 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Belirgin kaçak yok; 4 presçi ve 1 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 6 at tam (3+ ölçüm), 2 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -9052,7 +9089,7 @@
               "no": 2,
               "isim": "PENÇSİR",
               "yas": 4,
-              "cinsiyet": "4y a  a",
+              "cinsiyet": "4 y  a a",
               "irk": "Arap",
               "baba": "GÜMBÜRGÜMBÜR",
               "anne": "KESKİNNAZ",
@@ -9071,12 +9108,12 @@
                 "GKR"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "#a855f71f",
+              "stil_border": "#a855f759",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -9094,31 +9131,31 @@
                 "d_200": "",
                 "durum_kodu": "Kocaeli Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%80.6) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ERKUL ÖCAL",
               "antrenor": "R.SUNA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/4T · Sentetik: 1G/8T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 4
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 14,
+                  "wins": 1,
+                  "top4": 8
                 },
                 "turfStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 11,
+                  "wins": 2,
+                  "top4": 5
                 }
               },
               "sinif_analizi": null,
@@ -9207,7 +9244,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 7,
                 "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (G 1 Tecrübeli +7P)",
-                "aciklama": "Safkan son dönemde 4 kez elit açık/grup (G 2, G 1, KV-8/9, G 3) koşularda boy gösterdi (2 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+                "aciklama": "Safkan son dönemde 4 kez elit açık/grup (G 1, G 3, G 2, KV-8/9) koşularda boy gösterdi (2 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -9389,7 +9426,7 @@
               "no": 6,
               "isim": "HAZNEDAR",
               "yas": 7,
-              "cinsiyet": "7y a  a",
+              "cinsiyet": "7 y  a a",
               "irk": "Arap",
               "baba": "ALTAHA",
               "anne": "MUDANYA",
@@ -9405,7 +9442,7 @@
                 "KG"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
@@ -9428,34 +9465,42 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%72.2) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "FERHAN GÖKTÜRK",
               "antrenor": "H.BOYRAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 7T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 14 koşuda 1G/7T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 14,
+                  "wins": 1,
+                  "top4": 7
                 },
                 "turfStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 30,
+                  "wins": 9,
+                  "top4": 17
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 8,
+                "en_ust_grup": "G 2",
+                "grup_tabela_sayisi": 7,
+                "class_bonus": 7,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (G 2 Tecrübeli +7P)",
+                "aciklama": "Safkan son dönemde 8 kez elit açık/grup (KV-7, G 3, G 2, KV-8/9) koşularda boy gösterdi (7 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -9640,14 +9685,14 @@
           "tempo_senaryosu": {
             "tempo_sinifi": "Ağır / Yavaş",
             "tempo_kodu": "YAVAS",
-            "tempo_skoru": 20,
+            "tempo_skoru": 29,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 0,
+            "on_grup_baskisi_sayisi": 1,
             "avantajli_stiller": [
               "Ön Grup Presçileri (🏹)",
               "Bariyer Tutanlar"
             ],
-            "senaryo_yorumu": "Yarışta belirgin bir kaçak safkan bulunmuyor. 0 presçi ön grupta yer tutsa da liderlik için sert bir erken hız çekişmesi yok; tempo ilk metrelerden itibaren ağır kalabilir. Koşunun son 400 metrede taktiksel bir sprinte dönüşmesi ve ön grupta yer tutan safkanların virajı yıpranmadan dönmesi beklenir. Taktik kanıtı: 2 at tam (3+ ölçüm), 3 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Yarışta belirgin bir kaçak safkan bulunmuyor. 1 presçi ön grupta yer tutsa da liderlik için sert bir erken hız çekişmesi yok; tempo ilk metrelerden itibaren ağır kalabilir. Koşunun son 400 metrede taktiksel bir sprinte dönüşmesi ve ön grupta yer tutan safkanların virajı yıpranmadan dönmesi beklenir. Taktik kanıtı: 3 at tam (3+ ölçüm), 2 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -9890,7 +9935,7 @@
               "no": 4,
               "isim": "CESUR KRAL",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "ATEŞTOPU",
               "anne": "ELA",
@@ -9943,7 +9988,7 @@
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -9967,15 +10012,15 @@
                   "ELMAPINAR"
                 ],
                 "totalWins": 1,
-                "text": "Anne Kardeşleri: ELMAPINAR (1 Galibiyet / 29 Koşu)",
-                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: ELMAPINAR (1 Galibiyet / 29 Koşu))"
+                "text": "Anne Kardeşleri: ELMAPINAR (1 Galibiyet / 30 Koşu)",
+                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: ELMAPINAR (1 Galibiyet / 30 Koşu))"
               }
             },
             {
               "no": 5,
               "isim": "MAVİ KENT",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "BABA MEVLÜT",
               "anne": "DİLSOY",
@@ -9994,11 +10039,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Düzlük Sprinteri",
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "#a855f71f",
-              "stil_border": "#a855f759",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -10016,8 +10061,8 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Son 4 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%50.0). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": -1,
+              "taktik_yorum": "Son 5 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%33.3). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ABDULLAH AVCI",
               "antrenor": "S.ÇİFTÇİ",
@@ -10028,9 +10073,9 @@
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "synStats": {
                   "runs": 3,
@@ -10054,7 +10099,7 @@
               "no": 6,
               "isim": "ÖZOĞUL",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "DİLİRAN",
               "anne": "ALESTA",
@@ -10106,19 +10151,19 @@
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 }
               },
               "sinif_analizi": null,
@@ -10132,7 +10177,7 @@
               "no": 7,
               "isim": "SUFRİ",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "DİLİRAN",
               "anne": "SABUR ABLA",
@@ -10149,7 +10194,7 @@
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
@@ -10172,7 +10217,7 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%90.0) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "FETİ DAĞ",
@@ -10184,7 +10229,7 @@
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -10194,9 +10239,9 @@
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 3,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 }
               },
               "sinif_analizi": null,
@@ -10216,7 +10261,7 @@
               "no": 8,
               "isim": "VANADYUM",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "PARPALİ",
               "anne": "DERYADENİZ",
@@ -10273,7 +10318,7 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -10294,7 +10339,7 @@
               "no": 9,
               "isim": "GÜNEŞÇEKER",
               "yas": 3,
-              "cinsiyet": "3y a  d",
+              "cinsiyet": "3 y  ad",
               "irk": "Arap",
               "baba": "ÖZGÜNHAN",
               "anne": "IŞKINTAY",
@@ -10334,7 +10379,7 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%90.0) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%93.3) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MUSTAFA YILMAZ",
@@ -10346,7 +10391,7 @@
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -10526,8 +10571,8 @@
                   "BERNAHANIM"
                 ],
                 "totalWins": 1,
-                "text": "Anne Kardeşleri: BERNAHANIM (1 Galibiyet / 18 Koşu)",
-                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: BERNAHANIM (1 Galibiyet / 18 Koşu))"
+                "text": "Anne Kardeşleri: BERNAHANIM (1 Galibiyet / 19 Koşu)",
+                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: BERNAHANIM (1 Galibiyet / 19 Koşu))"
               }
             }
           ]
@@ -10552,17 +10597,27 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 64,
-            "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 1,
+            "tempo_sinifi": "Çok Hızlı / Yüksek Baskı",
+            "tempo_kodu": "COK_HIZLI",
+            "tempo_skoru": 99,
+            "liderlik_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 3,
             "avantajli_stiller": [
-              "Tek Doğal Lider (⚡)",
-              "Takipçi Presçi (🏹)"
+              "Pusu Presçisi (🏹), Sabırlı Orta Grup (🛡️)",
+              "Sprinter (🚀)"
             ],
-            "senaryo_yorumu": "Yarışta #7 BOLD RUNNER tek doğal lider pozisyonundadır. Startla kafayı alıp kendi temposunu kabul ettirirse virajı avantajlı dönebilir. Arkada dengeli takip eden presçiler düzlüğe diri çıkacaktır. Taktik kanıtı: 2 at tam (3+ ölçüm), 10 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Önde liderlik mücadelesine girişecek 3 kaçak safkan (#1 ANGLE RISING, #6 RETTILINEO FINALE, #7 BOLD RUNNER) ve arkalarında 3 presçi bulunuyor. Erken temponun ilk metrelerden itibaren çok süratli olması ve ön grubun yıpranması beklenir. Öndeki kapışmaya girmeden pusuda bekleyen Presçiler (3.-4. sıra) ve sabırlı Orta Grup safkanları viraj çıkışında büyük avantaja sahiptir. Taktik kanıtı: 4 at tam (3+ ölçüm), 8 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
+              {
+                "no": 1,
+                "isim": "ANGLE RISING",
+                "st": 12
+              },
+              {
+                "no": 6,
+                "isim": "RETTILINEO FINALE",
+                "st": 4
+              },
               {
                 "no": 7,
                 "isim": "BOLD RUNNER",
@@ -10575,7 +10630,7 @@
               "no": 1,
               "isim": "ANGLE RISING",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "TOROK (IRE)",
               "anne": "GELANA",
@@ -10594,11 +10649,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -10616,31 +10671,31 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%38.9). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": -1,
+              "kulvar_yorumu": "⚠️ Dış Kulvar Riski (Kafayı almak için viraja kadar fazladan enerji sarfiyatı)",
               "sahip": "BÜŞRA DOĞAN",
               "antrenor": "KE.YILMAZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/7T · Sentetik: 1G/2T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 11,
+                  "wins": 4,
+                  "top4": 7
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 2
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 5,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 }
               },
               "sinif_analizi": null,
@@ -10654,7 +10709,7 @@
               "no": 2,
               "isim": "FINALLY ITS TIME",
               "yas": 3,
-              "cinsiyet": "3y d  d",
+              "cinsiyet": "3 y  dd",
               "irk": "İngiliz",
               "baba": "SUPER SAVER (USA)",
               "anne": "BLOOMY",
@@ -10673,11 +10728,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -10695,51 +10750,59 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%52.8). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "CUMA YILDIRIM",
               "antrenor": "M.AKKILIÇ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/8T · Sentetik: 2G/8T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 13,
+                  "wins": 1,
+                  "top4": 8
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 15,
+                  "wins": 2,
+                  "top4": 8
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 6,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 0,
+                "class_bonus": 3,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +3P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (0 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
-                "score": 68,
+                "score": 95,
                 "hasSiblings": true,
-                "grupGalibi": false,
+                "grupGalibi": true,
                 "siblings": [
                   "ASİL KRALİÇE"
                 ],
-                "totalWins": 0,
-                "text": "Anne Kardeşleri: ASİL KRALİÇE (0 Koşu tecrübesi)",
-                "badge": ""
+                "totalWins": 2,
+                "text": "Anne Kardeşleri: ASİL KRALİÇE (2 Galibiyet, Elit Açık/Grup Başarısı)",
+                "badge": "👑 ŞAMPİYON ANNE HATTI (Anne Kardeşleri: ASİL KRALİÇE (2 Galibiyet, Elit Açık/Grup Başarısı))"
               }
             },
             {
               "no": 3,
               "isim": "VENUS DOOM",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "TRAPPE SHOT (USA)",
               "anne": "GLASS PATH (USA)",
@@ -10779,29 +10842,29 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%50.0). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "AHMET VOLKAN SÜNTER",
               "antrenor": "E.USLU",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/8T · Sentetik: 1G/4T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 10,
+                  "wins": 2,
+                  "top4": 8
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 4
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -10817,7 +10880,7 @@
               "no": 4,
               "isim": "VALTROX",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "TOROK (IRE)",
               "anne": "GLOWING SUN",
@@ -10834,7 +10897,7 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
@@ -10857,31 +10920,31 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%61.1) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "ARZU GÜNEŞ",
               "antrenor": "T.TAŞAR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 3 Tabela)",
+                "delta": 2,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 5 koşuda 2 galibiyet, 3 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcıdır.",
                 "dirtStats": {
                   "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 10,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 5
                 }
               },
               "sinif_analizi": null,
@@ -10895,7 +10958,7 @@
               "no": 5,
               "isim": "CROWN JEWEL",
               "yas": 3,
-              "cinsiyet": "3y d  d",
+              "cinsiyet": "3 y  dd",
               "irk": "İngiliz",
               "baba": "EPAULETTE (AUS)",
               "anne": "KUDO",
@@ -10912,12 +10975,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -10935,29 +10998,29 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
+              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "HÜLYA GÖDEK",
               "antrenor": "D.ERGİN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 11,
+                  "wins": 2,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 9,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -10973,7 +11036,7 @@
               "no": 6,
               "isim": "RETTILINEO FINALE",
               "yas": 3,
-              "cinsiyet": "3y d  d",
+              "cinsiyet": "3 y  dd",
               "irk": "İngiliz",
               "baba": "TIZWAY (USA)",
               "anne": "MOONSTAR",
@@ -10991,11 +11054,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -11013,26 +11076,26 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%55.6). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": -1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ADEM SÜLEYMANOĞLU",
               "antrenor": "T.İBİŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (6 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 10,
+                  "wins": 2,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 6,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
                   "runs": 0,
@@ -11092,7 +11155,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%41.7). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 1,
+              "tempo_delta": -1,
               "kulvar_yorumu": "⚠️ Dış Kulvar Riski (Kafayı almak için viraja kadar fazladan enerji sarfiyatı)",
               "sahip": "ELİF AKIN",
               "antrenor": "GÖK.GÖKÇE",
@@ -11171,7 +11234,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%83.3) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 2,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "M.OZAN ŞER",
               "antrenor": "C.TURAN",
@@ -11285,7 +11348,7 @@
               "no": 10,
               "isim": "SARILAR KIZI",
               "yas": 4,
-              "cinsiyet": "4y d k",
+              "cinsiyet": "4 y  dk",
               "irk": "İngiliz",
               "baba": "MENDIP (USA)",
               "anne": "SARILAR GÜZELİ",
@@ -11326,29 +11389,29 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%55.6). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "SERDAR ZABUN",
               "antrenor": "T.TAŞAR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 7T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 17 koşuda 1G/7T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 17,
+                  "wins": 1,
+                  "top4": 7
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 6,
                   "wins": 0,
                   "top4": 0
                 }
@@ -11364,7 +11427,7 @@
               "no": 11,
               "isim": "DRAGON BREATH",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "MENDIP (USA)",
               "anne": "STARLIGHT CIRCUS (IRE)",
@@ -11382,11 +11445,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "#a855f71f",
+              "stil_border": "#a855f759",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -11404,26 +11467,26 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%44.4). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "FATİH HAYIRLIOĞLU",
               "antrenor": "GÜV.GÖKÇE",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 13,
+                  "wins": 1,
+                  "top4": 7
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "turfStats": {
                   "runs": 0,
@@ -11483,7 +11546,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%52.8) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "HASAN ŞER",
               "antrenor": "C.TURAN",
@@ -11538,24 +11601,30 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 64,
-            "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 3,
+            "tempo_sinifi": "Süratli / Tempolu",
+            "tempo_kodu": "SURATLI",
+            "tempo_skoru": 84,
+            "liderlik_baskisi_sayisi": 1,
+            "on_grup_baskisi_sayisi": 8,
             "avantajli_stiller": [
-              "Tek Doğal Lider (⚡)",
-              "Takipçi Presçi (🏹)"
+              "Diri Presçi (🏹)",
+              "Sabırlı Orta Grup (🛡️)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 3 presçi ve 7 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 8 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
-            "olasi_kacanlar": []
+            "senaryo_yorumu": "Önde #3 KOCA KAPTAN tempolu başlayacak ve hemen arkasında #1 UZBOYLU, #2 ÖZGÜN BAŞKAN, #4 İZOTOP pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 6 at tam (3+ ölçüm), 7 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "olasi_kacanlar": [
+              {
+                "no": 3,
+                "isim": "KOCA KAPTAN",
+                "st": 5
+              }
+            ]
           },
           "atlar": [
             {
               "no": 1,
               "isim": "UZBOYLU",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "ANKA",
               "anne": "BETÜL",
@@ -11573,11 +11642,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -11595,14 +11664,14 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş koşular için doğrulanmış ara-pozisyon ölçümü bulunamadı; dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%58.3). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ŞEYDA ERCAN",
               "antrenor": "A.TEPEBAŞI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (4 Koşuda 0 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -11612,17 +11681,25 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 1,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 8,
+                  "wins": 1,
+                  "top4": 3
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 2,
+                "en_ust_grup": "G 1",
+                "grup_tabela_sayisi": 0,
+                "class_bonus": 5.5,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (G 1 Tecrübeli +6P)",
+                "aciklama": "Safkan son dönemde 2 kez elit açık/grup (G 1, G 2) koşularda boy gösterdi (0 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 78,
                 "hasSiblings": true,
@@ -11718,7 +11795,7 @@
               "no": 3,
               "isim": "KOCA KAPTAN",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "TAYKUT",
               "anne": "GÖZTEPELİ",
@@ -11737,11 +11814,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -11759,31 +11836,31 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Sentetik"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 3 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%50.0). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": -1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ALİ ÇAPACI",
               "antrenor": "M.E.AVCI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 3T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 4 koşuda 1G/3T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 }
               },
               "sinif_analizi": null,
@@ -11875,7 +11952,7 @@
               "no": 5,
               "isim": "KARAT",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "CANBERKTAY",
               "anne": "DİLLERE DESTAN",
@@ -11892,12 +11969,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -11915,29 +11992,29 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%75.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "BORA SEVİK",
               "antrenor": "HAY.YILDIRIM",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 2
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -11996,7 +12073,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%55.6). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ERSEN BÜYÜKTÜRKLER",
               "antrenor": "G.SUBAŞI",
@@ -12080,7 +12157,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 7 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%60.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "FEVZİ AKPOLAT",
               "antrenor": "Ö.GÜNELİ",
@@ -12123,7 +12200,7 @@
               "no": 8,
               "isim": "KAYALARIN ASLANI",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "TOROS ASLANI",
               "anne": "KAFKAS MEŞALESİ",
@@ -12140,12 +12217,12 @@
                 "K"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12163,8 +12240,8 @@
                 "d_200": "0.13.80",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%63.9) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%50.0). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "HAYRİ ÖZGÜR YILMAZ",
               "antrenor": "BET.YILDIRIM",
@@ -12173,9 +12250,9 @@
                 "badge": "⚠️ PİST RİSKİ: KABA KUM TERCİHLİ (Sentetikte 0 Tabela)",
                 "delta": -2,
                 "color": "#ef4444",
-                "desc": "Kaba kumda 7 koşuda 4 tabela yapmasına rağmen, sentetikte 3 koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkileyebilir.",
+                "desc": "Kaba kumda 8 koşuda 4 tabela yapmasına rağmen, sentetikte 3 koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkileyebilir.",
                 "dirtStats": {
-                  "runs": 7,
+                  "runs": 8,
                   "wins": 1,
                   "top4": 4
                 },
@@ -12201,7 +12278,7 @@
               "no": 9,
               "isim": "YÜREK ŞAH",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "YÜREKKAYA",
               "anne": "NURGÜLÜM",
@@ -12219,12 +12296,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Düzlük Sprinteri",
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "#a855f71f",
-              "stil_border": "#a855f759",
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12242,8 +12319,8 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Son 3 sınıflandırılabilir geçmiş koşunun 2 tanesinde (%83.3) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 4 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%50.0). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "CAVİDAN KAYA ÖZASLAN",
               "antrenor": "M.DEMİRTAŞ",
@@ -12254,9 +12331,9 @@
                 "color": "#10b981",
                 "desc": "Sentetikte 2 koşuda 0G/1T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
                 },
                 "synStats": {
                   "runs": 2,
@@ -12321,7 +12398,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 6 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%57.1) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "SEYİT AHMET KORKMAZ",
               "antrenor": "S.ÇİFTÇİ",
@@ -12358,7 +12435,7 @@
               "no": 11,
               "isim": "ERYÜREKLİ",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "TAYKUT",
               "anne": "HANIM EFE",
@@ -12376,11 +12453,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12398,29 +12475,29 @@
                 "d_200": "0.13.30",
                 "durum_kodu": "İstanbul Sentetik"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%52.8). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "BATUHAN DUMAN",
               "antrenor": "S.DUMAN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚠️ PİST RİSKİ: KABA KUM TERCİHLİ (Sentetikte 0 Tabela)",
+                "delta": -2,
+                "color": "#ef4444",
+                "desc": "Kaba kumda 6 koşuda 4 tabela yapmasına rağmen, sentetikte 4 koşuda tabelaya giremedi. Sentetik zemin aksiyonunu olumsuz etkileyebilir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 4
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 }
@@ -12436,7 +12513,7 @@
               "no": 12,
               "isim": "TÜMÇIKMAZ",
               "yas": 3,
-              "cinsiyet": "3y k  e",
+              "cinsiyet": "3 y  ke",
               "irk": "İngiliz",
               "baba": "SİLAH",
               "anne": "SEYREK",
@@ -12454,12 +12531,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "#a855f71f",
+              "stil_border": "#a855f759",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12477,8 +12554,8 @@
                 "d_200": "",
                 "durum_kodu": "Kayıtsız"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%44.4) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%50.0). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "SEVİM KARACA",
               "antrenor": "C.GÜNEŞ",
@@ -12489,9 +12566,9 @@
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 2,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 1
                 },
                 "synStats": {
                   "runs": 3,
@@ -12610,17 +12687,27 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 57,
-            "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 0,
+            "tempo_sinifi": "Çok Hızlı / Yüksek Baskı",
+            "tempo_kodu": "COK_HIZLI",
+            "tempo_skoru": 99,
+            "liderlik_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 2,
             "avantajli_stiller": [
-              "Tek Doğal Lider (⚡)",
-              "Takipçi Presçi (🏹)"
+              "Pusu Presçisi (🏹), Sabırlı Orta Grup (🛡️)",
+              "Sprinter (🚀)"
             ],
-            "senaryo_yorumu": "Yarışta #5 NALDÖKEN tek doğal lider pozisyonundadır. Startla kafayı alıp kendi temposunu kabul ettirirse virajı avantajlı dönebilir. Arkada dengeli takip eden presçiler düzlüğe diri çıkacaktır. Taktik kanıtı: 0 at tam (3+ ölçüm), 6 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Önde liderlik mücadelesine girişecek 3 kaçak safkan (#2 LEOPARDESS, #3 ASİL KRALİÇE, #5 NALDÖKEN) ve arkalarında 2 presçi bulunuyor. Erken temponun ilk metrelerden itibaren çok süratli olması ve ön grubun yıpranması beklenir. Öndeki kapışmaya girmeden pusuda bekleyen Presçiler (3.-4. sıra) ve sabırlı Orta Grup safkanları viraj çıkışında büyük avantaja sahiptir. Taktik kanıtı: 3 at tam (3+ ölçüm), 3 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
+              {
+                "no": 2,
+                "isim": "LEOPARDESS",
+                "st": 3
+              },
+              {
+                "no": 3,
+                "isim": "ASİL KRALİÇE",
+                "st": 6
+              },
               {
                 "no": 5,
                 "isim": "NALDÖKEN",
@@ -12633,7 +12720,7 @@
               "no": 1,
               "isim": "HAVASUPAI",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "BODEMEISTER (USA)",
               "anne": "HOLD UP",
@@ -12650,12 +12737,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12673,34 +12760,42 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%72.2) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "GÜLİZAR YANIK",
               "antrenor": "H.SUNKAR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 6,
+                  "wins": 1,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 7,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 4
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 3,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 5,
+                "en_ust_grup": "G 2",
+                "grup_tabela_sayisi": 4,
+                "class_bonus": 7,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (G 2 Tecrübeli +7P)",
+                "aciklama": "Safkan son dönemde 5 kez elit açık/grup (KV-7, G 2, KV-8/9) koşularda boy gösterdi (4 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 88,
                 "hasSiblings": true,
@@ -12717,7 +12812,7 @@
               "no": 2,
               "isim": "LEOPARDESS",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "SUPER SAVER (USA)",
               "anne": "ORHİDEYA",
@@ -12734,11 +12829,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12756,34 +12851,42 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%52.8). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": -1,
+              "kulvar_yorumu": "⚡ Avantajlı Kulvar (Bariyer dibinden efor sarf etmeden kafayı alır)",
               "sahip": "GÜLİZAR YANIK",
               "antrenor": "H.SUNKAR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 4,
+                  "wins": 3,
+                  "top4": 4
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 1,
+                "class_bonus": 3.8,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (1 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 95,
                 "hasSiblings": true,
@@ -12800,7 +12903,7 @@
               "no": 3,
               "isim": "ASİL KRALİÇE",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "TOROK (IRE)",
               "anne": "BLOOMY",
@@ -12818,11 +12921,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12840,51 +12943,59 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 7 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%50.0). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": -1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "CUMA YILDIRIM",
               "antrenor": "M.AKKILIÇ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 4 Tabela)",
+                "delta": 2,
+                "color": "#10b981",
+                "desc": "Sentetik pistte 5 koşuda 2 galibiyet, 4 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcıdır.",
                 "dirtStats": {
                   "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 5,
+                  "wins": 2,
+                  "top4": 4
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 4,
+                "en_ust_grup": "G 2",
+                "grup_tabela_sayisi": 4,
+                "class_bonus": 7,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (G 2 Tecrübeli +7P)",
+                "aciklama": "Safkan son dönemde 4 kez elit açık/grup (KV-7, G 2, KV-8/9) koşularda boy gösterdi (4 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
-                "score": 68,
+                "score": 78,
                 "hasSiblings": true,
                 "grupGalibi": false,
                 "siblings": [
                   "FINALLY ITS TIME"
                 ],
-                "totalWins": 0,
-                "text": "Anne Kardeşleri: FINALLY ITS TIME (0 Koşu tecrübesi)",
-                "badge": ""
+                "totalWins": 3,
+                "text": "Anne Kardeşleri: FINALLY ITS TIME (3 Galibiyet / 34 Koşu)",
+                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: FINALLY ITS TIME (3 Galibiyet / 34 Koşu))"
               }
             },
             {
               "no": 4,
               "isim": "GIANT WAVE",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "TOROK (IRE)",
               "anne": "DORADISTA (GB)",
@@ -12900,12 +13011,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "#a855f71f",
+              "stil_border": "#a855f759",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -12923,34 +13034,42 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%60.0) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 2,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ÇİLEM ÖZDEMİR",
               "antrenor": "A.AVCI",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 2T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 2 koşuda 1G/2T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 2
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 1,
+                "class_bonus": 3.8,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (1 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -13001,7 +13120,7 @@
                 "durum_kodu": "Bursa Kum"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%36.1). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 1,
+              "tempo_delta": -1,
               "kulvar_yorumu": "⚠️ Dış Kulvar Riski (Kafayı almak için viraja kadar fazladan enerji sarfiyatı)",
               "sahip": "ALİ ARI",
               "antrenor": "HAS.KAYA",
@@ -13046,7 +13165,7 @@
               "no": 6,
               "isim": "OKAMİ",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "ZELZAL (FR)",
               "anne": "RESTLESS (FR)",
@@ -13103,14 +13222,14 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
                 },
                 "turfStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 1,
+                  "wins": 1,
+                  "top4": 1
                 }
               },
               "sinif_analizi": null,
@@ -13202,7 +13321,7 @@
               "no": 8,
               "isim": "ARISTOCAT",
               "yas": 2,
-              "cinsiyet": "2y a  d",
+              "cinsiyet": "2 y  ad",
               "irk": "Arap",
               "baba": "GENERAL QUARTERS (USA)",
               "anne": "CAT IN THE HAT",
@@ -13218,12 +13337,12 @@
                 "K"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -13241,34 +13360,42 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Sentetik"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 2 tanesinde (%60.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "HALUK VEFA ERSÖZ",
               "antrenor": "S.ÇİFTÇİ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 3T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 3 koşuda 1G/3T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 1,
+                "en_ust_grup": "KV-7",
+                "grup_tabela_sayisi": 1,
+                "class_bonus": 3.8,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-7 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 1 kez elit açık/grup (KV-7) koşularda boy gösterdi (1 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -13293,24 +13420,30 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 64,
-            "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 3,
+            "tempo_sinifi": "Süratli / Tempolu",
+            "tempo_kodu": "SURATLI",
+            "tempo_skoru": 84,
+            "liderlik_baskisi_sayisi": 1,
+            "on_grup_baskisi_sayisi": 4,
             "avantajli_stiller": [
-              "Tek Doğal Lider (⚡)",
-              "Takipçi Presçi (🏹)"
+              "Diri Presçi (🏹)",
+              "Sabırlı Orta Grup (🛡️)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 3 presçi ve 5 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 3 at tam (3+ ölçüm), 6 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
-            "olasi_kacanlar": []
+            "senaryo_yorumu": "Önde #1 KIZILCAHAMAM BEYİ tempolu başlayacak ve hemen arkasında #2 BELLICOSO, #3 TURKISH PUNCH, #7 SANDUHAN pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 4 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "olasi_kacanlar": [
+              {
+                "no": 1,
+                "isim": "KIZILCAHAMAM BEYİ",
+                "st": 1
+              }
+            ]
           },
           "atlar": [
             {
               "no": 1,
               "isim": "KIZILCAHAMAM BEYİ",
               "yas": 3,
-              "cinsiyet": "3y d  e",
+              "cinsiyet": "3 y  de",
               "irk": "İngiliz",
               "baba": "RUN AWAY AND HIDE (USA)",
               "anne": "ERENDIRA",
@@ -13328,12 +13461,12 @@
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -13351,21 +13484,21 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%63.9) yarış içi ara-pozisyon ölçümleri Kaçak / Lider stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": -1,
+              "kulvar_yorumu": "⚡ Avantajlı Kulvar (Bariyer dibinden efor sarf etmeden kafayı alır)",
               "sahip": "DURALİ SAVCI",
               "antrenor": "ADN.POLAT",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
+                "delta": -1,
+                "color": "#f59e0b",
+                "desc": "Kariyerindeki 14 koşunun tamamını Kaba Kumda koştu; sentetik pistin yapısına ilk kez çıkıyor, hafif adaptasyon payı ayrıldı.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 14,
+                  "wins": 7,
+                  "top4": 13
                 },
                 "synStats": {
                   "runs": 0,
@@ -13373,12 +13506,20 @@
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 3
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 6,
+                "en_ust_grup": "G 2",
+                "grup_tabela_sayisi": 5,
+                "class_bonus": 7,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (G 2 Tecrübeli +7P)",
+                "aciklama": "Safkan son dönemde 6 kez elit açık/grup (G 2, KV-8/9) koşularda boy gösterdi (5 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -13475,7 +13616,7 @@
               "no": 3,
               "isim": "TURKISH PUNCH",
               "yas": 5,
-              "cinsiyet": "5y d  a",
+              "cinsiyet": "5 y  d a",
               "irk": "Arap",
               "baba": "DAREDEVIL (USA)",
               "anne": "TAQWEEM (USA)",
@@ -13492,11 +13633,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -13514,34 +13655,42 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%50.0). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "AYDIN ÜSTÜNDAĞ",
               "antrenor": "E.USLU",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (7 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 7,
+                  "wins": 1,
+                  "top4": 5
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 7,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 25,
+                  "wins": 4,
+                  "top4": 15
                 }
               },
-              "sinif_analizi": null,
+              "sinif_analizi": {
+                "sinif_dususu": true,
+                "ust_grup_sayisi": 2,
+                "en_ust_grup": "KV-8/9",
+                "grup_tabela_sayisi": 0,
+                "class_bonus": 4,
+                "badge": "💎 SERT GRUP / SINIF DÜŞÜŞÜ (KV-8/9 Tecrübeli +4P)",
+                "aciklama": "Safkan son dönemde 2 kez elit açık/grup (KV-8/9) koşularda boy gösterdi (0 kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+              },
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -13593,7 +13742,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%55.6). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "LALE M. ATMAN",
               "antrenor": "M.E.AVCI",
@@ -13679,7 +13828,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%72.2) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "YILDIRIM GELGİN",
               "antrenor": "A.KÜÇÜKAKSOY",
@@ -13758,7 +13907,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%86.1) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ZEKİ KILIÇ",
               "antrenor": "GÜV.GÖKÇE",
@@ -13915,7 +14064,7 @@
                 "durum_kodu": "İstanbul Kum-İç"
               },
               "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%58.3). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "İSMAİL HADİOĞLU",
               "antrenor": "O.ALTUNTAŞ",
@@ -14061,7 +14210,7 @@
               "no": 1,
               "isim": "KORMAN ŞAH",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "KAMAN",
               "anne": "DERİNCAN",
@@ -14101,7 +14250,7 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%88.9) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%91.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": -2,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "DEMİRHAN YILMAZ",
@@ -14113,9 +14262,9 @@
                 "color": "#10b981",
                 "desc": "Sentetikte 4 koşuda 0G/2T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
-                  "runs": 1,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "synStats": {
                   "runs": 4,
@@ -14771,7 +14920,7 @@
               "no": 10,
               "isim": "ZEYTİN DİBİ",
               "yas": 3,
-              "cinsiyet": "3y k  d",
+              "cinsiyet": "3 y  kd",
               "irk": "İngiliz",
               "baba": "BERKSOY",
               "anne": "ÖZBAŞAK",
@@ -14811,31 +14960,31 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%47.2). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "BEŞİR KAYA",
               "antrenor": "RAM. KAYA",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (2 Koşuda 0 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 3,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 10,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 2
                 }
               },
               "sinif_analizi": null,
@@ -14867,12 +15016,12 @@
             "tempo_kodu": "SURATLI",
             "tempo_skoru": 84,
             "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 7,
+            "on_grup_baskisi_sayisi": 8,
             "avantajli_stiller": [
               "Diri Presçi (🏹)",
               "Sabırlı Orta Grup (🛡️)"
             ],
-            "senaryo_yorumu": "Önde #8 MISS CALIFORNIA tempolu başlayacak ve hemen arkasında #3 BIG AVALANCHE, #5 COME AND SEE, #6 ALPHA JUNIOR pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 6 at tam (3+ ölçüm), 8 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Önde #8 MISS CALIFORNIA tempolu başlayacak ve hemen arkasında #2 SHENRON, #3 BIG AVALANCHE, #5 COME AND SEE pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 7 at tam (3+ ölçüm), 7 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
               {
                 "no": 8,
@@ -14972,7 +15121,7 @@
               "no": 2,
               "isim": "SHENRON",
               "yas": 3,
-              "cinsiyet": "3y d  d",
+              "cinsiyet": "3 y  dd",
               "irk": "İngiliz",
               "baba": "MENDIP (USA)",
               "anne": "BIANCA CAPELLO",
@@ -14988,12 +15137,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -15011,29 +15160,29 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%75.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "SEDAT DEMİR",
               "antrenor": "Ö.GÜNELİ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/11T · Sentetik: 1G/3T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 19,
+                  "wins": 4,
+                  "top4": 11
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 4,
+                  "wins": 1,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 3,
                   "wins": 0,
                   "top4": 0
                 }
@@ -15945,7 +16094,7 @@
               "no": 14,
               "isim": "MYSTERY BOUNTY",
               "yas": 3,
-              "cinsiyet": "3y a  e",
+              "cinsiyet": "3 y  ae",
               "irk": "Arap",
               "baba": "TOUCH THE WOLF",
               "anne": "YEŞİL IŞIK",
@@ -15986,29 +16135,29 @@
                 "d_200": "",
                 "durum_kodu": "İstanbul Kum-İç"
               },
-              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "taktik_yorum": "Son 7 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%57.1). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "HAKAN BOYAV",
               "antrenor": "T.İBİŞ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 3T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Sentetikte 5 koşuda 1G/3T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 5,
+                  "wins": 1,
+                  "top4": 3
                 },
                 "turfStats": {
-                  "runs": 0,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 }
