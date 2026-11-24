@@ -4236,6 +4236,18 @@ function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
     handikapScore = Math.min(96, Math.max(38, hp));
   }
 
+  const raceClass = (kosu && kosu.grup_sinifi) ? kosu.grup_sinifi.toLowerCase() : '';
+  const isHandicap = raceClass.includes('handikap');
+  const raceDist = (kosu && kosu.mesafe) ? parseInt(kosu.mesafe) : 1600;
+  const isLongDist = raceDist >= 1800;
+  const rawSiklet = parseFloat(horse.siklet) || 56;
+
+  // Handikap yarışında 61+ kg taşıyan atın handikap gücü ağır sıklet nedeniyle törpülenir!
+  if (isHandicap) {
+    if (rawSiklet >= 61) handikapScore = Math.max(35, handikapScore - (isLongDist ? 10 : 7));
+    else if (rawSiklet <= 53) handikapScore = Math.min(99, handikapScore + (isLongDist ? 6 : 4));
+  }
+
   // [Faktör 4: Fiziksel Dinlenme & KGS - %10] (5 Yıllık TJK Optimum Dinlenme Aralığı)
   let kgsScore = 75;
   const kgs = horse.dinlenme_gunu || 21;
@@ -4281,23 +4293,32 @@ function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
     }
   }
 
-  // [Faktör 6: Sıklet (Kilo) Dinamiği - %7] (5 Yıllık TJK Sıklet-Grup Ayrımı)
-  const siklet = horse.siklet || 56;
+  // [Faktör 6: Sıklet (Kilo) Dinamiği - %10] (Handikap & Mesafe Duyarlı Sıklet Kalibrasyonu)
   let sikletScore = 76;
-  if (siklet <= 52) sikletScore = 96; // Tüy sıklet sürpriz ve kazanma avantajı
-  else if (siklet <= 55) sikletScore = 88;
-  else if (siklet <= 58) sikletScore = 76;
-  else if (siklet <= 60) sikletScore = 64;
-  else sikletScore = 50; // 61+ kg ağır sıklet handikap dezavantajı
+  if (isHandicap) {
+    // Handikap koşularında kilo farkı en belirleyici unsurdur:
+    if (rawSiklet <= 52) sikletScore = isLongDist ? 99 : 96; // Tüy sıklet sürpriz patlama avantajı
+    else if (rawSiklet <= 54.5) sikletScore = isLongDist ? 94 : 90;
+    else if (rawSiklet <= 57.5) sikletScore = 78;
+    else if (rawSiklet <= 59.5) sikletScore = isLongDist ? 54 : 64;
+    else if (rawSiklet <= 61) sikletScore = isLongDist ? 38 : 48; // 60-61 kg ağır sıklet
+    else sikletScore = isLongDist ? 25 : 35; // 62+ kg ezici ağır sıklet cezası
+  } else {
+    if (rawSiklet <= 52) sikletScore = 96;
+    else if (rawSiklet <= 55) sikletScore = 88;
+    else if (rawSiklet <= 58) sikletScore = 76;
+    else if (rawSiklet <= 60) sikletScore = 64;
+    else sikletScore = 50;
+  }
 
-  // [Faktör 7: Jokey & Apranti (≤ %10 KURALI) - %6]
-  const eliteJockeys = ['H.KARATAŞ', 'Ö.YILDIRIM', 'A.SÖZEN', 'V.ABİŞ', 'A.KURŞUN', 'G.ÖZÇELİK', 'H.ÇİZİK', 'A.YILDIZ', 'M.KAYA', 'S.KAYA', 'S.BOYRAZ', 'E.AKTUĞ', 'M.AKYAVUZ'];
+  // [Faktör 7: Jokey & Apranti (≤ %10 KURALI) - %8]
+  const eliteJockeys = ['H.KARATAŞ', 'Ö.YILDIRIM', 'A.SÖZEN', 'V.ABİŞ', 'A.KURŞUN', 'G.ÖZÇELİK', 'H.ÇİZİK', 'A.YILDIZ', 'M.KAYA', 'S.KAYA', 'S.BOYRAZ', 'E.AKTUĞ', 'M.AKYAVUZ', 'M.M.BİLGİN', 'M.ÇİÇEK', 'E.ÇANKAYA', 'F.ÇETİNBAŞ'];
   const jWinRate = horse.jokey_kazanma_orani || 10;
   let jokeyScore = 52;
   if (eliteJockeys.some(j => (horse.jokey || '').toUpperCase().includes(j))) {
-    jokeyScore = Math.round(84 + Math.min(14, jWinRate * 0.6));
+    jokeyScore = Math.round(86 + Math.min(13, jWinRate * 0.6));
   } else if (horse.apranti_indirimi) {
-    jokeyScore = Math.round(58 + Math.min(18, jWinRate));
+    jokeyScore = Math.round(62 + Math.min(18, jWinRate));
   } else {
     jokeyScore = Math.round(48 + Math.min(30, jWinRate * 1.2));
   }
@@ -4306,7 +4327,7 @@ function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
   const drawBias = calculate10YearDrawBiasScore(horse, kosu, raceHorses);
   const trackScore = drawBias.score;
 
-  // [Faktör 9: Ekipman & Takı Biyomekaniği - %2]
+  // [Faktör 9: Ekipman & Takı Biyomekaniği - %3]
   let takiScore = 65;
   const takilar = horse.takilar || [];
   if (takilar.includes('KG') && takilar.includes('DB') && takilar.includes('SK')) takiScore = 95;
@@ -4314,17 +4335,17 @@ function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
   else if (takilar.length >= 2) takiScore = 82;
   else if (takilar.length === 1) takiScore = 72;
 
-  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI (SON 5 YILIN EN ÇOK KAZANDIRAN MAKRO MODELİ - TOPLAM %100):
+  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI (AĞIR SIKLET & ELİT JOKEY KALİBRASYONLU - TOPLAM %100):
   const royalScore = Math.round(
-    (formScore * 0.28) +
+    (formScore * 0.26) +
     (pedScore * 0.20) +
-    (handikapScore * 0.14) +
-    (kgsScore * 0.10) +
-    (galopScore * 0.10) +
-    (sikletScore * 0.07) +
-    (jokeyScore * 0.06) +
+    (handikapScore * 0.12) +
+    (sikletScore * 0.10) +
+    (jokeyScore * 0.08) +
+    (kgsScore * 0.09) +
+    (galopScore * 0.09) +
     (trackScore * 0.03) +
-    (takiScore * 0.02)
+    (takiScore * 0.03)
   );
 
   return {
@@ -4471,7 +4492,38 @@ function renderRaceDetails() {
 
     let tekHorseBadge = '';
     if (hIdx === 0) {
-      if (pointDiff >= 5) {
+      const isYoung = h.isYoungHorse || (String(h.son_yarislar || '').replace(/[^0-9]/g, '').length <= 3);
+      const isHeavyHandicap = (kosu && kosu.grup_sinifi && kosu.grup_sinifi.toLowerCase().includes('handikap')) && (parseFloat(h.siklet) >= 61);
+
+      if (isYoung && pointDiff >= 3) {
+        tekHorseBadge = `
+          <div style="background:linear-gradient(90deg, rgba(56,189,248,0.18), rgba(212,175,55,0.15)); border:1px solid #38bdf8; padding:0.6rem 0.9rem; border-radius:10px; margin:0.8rem 0; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-size:0.82rem; font-weight:700; color:#38bdf8; display:flex; align-items:center; gap:0.3rem;">
+                <span>🌱</span> GELİŞİMDEKİ FAVORİ (GENÇ TAY · DİKKAT)
+              </div>
+              <div style="font-size:0.72rem; color:#bae6fd; margin-top:2px;">
+                Safkan henüz ilk 3 koşusundadır. Karakteri gelişimde olduğundan tek atmak yerine yanına rakip düşünülmelidir.
+              </div>
+            </div>
+            <span style="font-size:0.75rem; font-family:'Cinzel', serif; background:#0284c7; color:#fff; font-weight:800; padding:3px 8px; border-radius:6px; letter-spacing:1px;">GÜVEN: %60</span>
+          </div>
+        `;
+      } else if (isHeavyHandicap) {
+        tekHorseBadge = `
+          <div style="background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.5); padding:0.6rem 0.9rem; border-radius:10px; margin:0.8rem 0; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-size:0.82rem; font-weight:700; color:#f87171; display:flex; align-items:center; gap:0.3rem;">
+                <span>⚖️</span> AĞIR SIKLET RİSKİ (61+ KG HANDİKAP)
+              </div>
+              <div style="font-size:0.72rem; color:#fca5a5; margin-top:2px;">
+                Safkan ${h.siklet} kg taşımaktadır. Handikap yarışında ağır kilo son 300 metrede yorulma riski yaratır; tek atılmaz.
+              </div>
+            </div>
+            <span style="font-size:0.75rem; font-family:'Cinzel', serif; background:#ef4444; color:#fff; font-weight:800; padding:3px 8px; border-radius:6px; letter-spacing:1px;">GÜVEN: %50</span>
+          </div>
+        `;
+      } else if (pointDiff >= 5) {
         tekHorseBadge = `
           <div style="background:linear-gradient(90deg, rgba(16,185,129,0.22), rgba(212,175,55,0.2)); border:1px solid #10b981; padding:0.6rem 0.9rem; border-radius:10px; margin:0.8rem 0; display:flex; justify-content:space-between; align-items:center;">
             <div>
@@ -4479,7 +4531,7 @@ function renderRaceDetails() {
                 <span>👑</span> MODELİN MUTLAK TEKİ (GANYAN BASILIR)
               </div>
               <div style="font-size:0.72rem; color:#a7f3d0; margin-top:2px;">
-                2. sıradaki rakibine <b>+${pointDiff} puan</b> fark atmış, pist ve galop uyumu kusursuz.
+                2. sıradaki rakibine <b>+${pointDiff} puan</b> fark atmış, pist, jokey ve sıklet dengesi kusursuz.
               </div>
             </div>
             <span style="font-size:0.75rem; font-family:'Cinzel', serif; background:#10b981; color:#04060a; font-weight:800; padding:3px 8px; border-radius:6px; letter-spacing:1px;">GÜVEN: %88+</span>
@@ -4714,7 +4766,7 @@ function renderRaceDetails() {
 
       <div class="analytica-bars" style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid rgba(212,175,55,0.15);">
         <div class="bar-entry">
-          <span class="bar-name">📈 Form/İvme (%27)</span>
+          <span class="bar-name">📈 Form/İvme (%26)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.formScore}%"></div></div>
           <span class="bar-digit">${h.formScore}</span>
         </div>
@@ -4724,9 +4776,19 @@ function renderRaceDetails() {
           <span class="bar-digit" style="color:var(--text-gold);">${h.pedScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">🏛 Handikap (%14)</span>
+          <span class="bar-name">🏛 Handikap (%12)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.handikapScore}%"></div></div>
           <span class="bar-digit">${h.handikapScore}</span>
+        </div>
+        <div class="bar-entry">
+          <span class="bar-name" style="color:#f59e0b;">⚖ Sıklet/Kilo (%10)</span>
+          <div class="bar-track"><div class="bar-fill-gold" style="width:${h.sikletScore}%; background:linear-gradient(90deg, #f59e0b, #fbbf24);"></div></div>
+          <span class="bar-digit" style="color:#f59e0b;">${h.sikletScore}</span>
+        </div>
+        <div class="bar-entry">
+          <span class="bar-name" style="color:#34d399;">🏇 Jokey/Apranti (%8)</span>
+          <div class="bar-track"><div class="bar-fill-gold" style="width:${h.jokeyScore}%; background:linear-gradient(90deg, #10b981, #34d399);"></div></div>
+          <span class="bar-digit" style="color:#34d399;">${h.jokeyScore}</span>
         </div>
         <div class="bar-entry">
           <span class="bar-name">⏳ KGS/Dinlenme (%9)</span>
@@ -4734,22 +4796,12 @@ function renderRaceDetails() {
           <span class="bar-digit">${h.kgsScore}</span>
         </div>
         <div class="bar-entry">
-          <span class="bar-name">⚡ Galop Hızı (%8)</span>
+          <span class="bar-name">⚡ Galop Hızı (%9)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.galopScore}%"></div></div>
           <span class="bar-digit">${h.galopScore}</span>
         </div>
-        <div class="bar-entry">
-          <span class="bar-name">⚖ Sıklet/Kilo (%7)</span>
-          <div class="bar-track"><div class="bar-fill-gold" style="width:${h.sikletScore}%"></div></div>
-          <span class="bar-digit">${h.sikletScore}</span>
-        </div>
-        <div class="bar-entry">
-          <span class="bar-name" style="color:#34d399;">🏇 Jokey/Apranti (%8)</span>
-          <div class="bar-track"><div class="bar-fill-gold" style="width:${h.jokeyScore}%; background:linear-gradient(90deg, #10b981, #34d399);"></div></div>
-          <span class="bar-digit" style="color:#34d399;">${h.jokeyScore}</span>
-        </div>
         <div class="bar-entry" title="${h.drawBiasReason || '10 Yıllık TJK Kulvar Analizi'}">
-          <span class="bar-name">🎯 Kulvar/Pist (%4)</span>
+          <span class="bar-name">🎯 Kulvar/Pist (%3)</span>
           <div class="bar-track"><div class="bar-fill-gold" style="width:${h.trackScore}%"></div></div>
           <span class="bar-digit">${h.trackScore}</span>
         </div>
@@ -6434,7 +6486,7 @@ if ('serviceWorker' in navigator) {
   });
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js?v=45').then(reg => {
+    navigator.serviceWorker.register('./sw.js?v=46').then(reg => {
       console.log('Royal Turf PWA Service Worker Aktif:', reg.scope);
       reg.update();
       reg.addEventListener('updatefound', () => {
