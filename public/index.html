@@ -4378,9 +4378,9 @@ function getHorsesWithFinalTacticalScores(kosu) {
     const power = calculatePowerIndex(h, kosu.atlar, kosu);
     const paceAdj = calculatePaceAdjustment(h, kosu);
     const mudAdj = calculateMudTrackDelta(h, kosu, currentTrackCondition);
-    const classBonus = (h.sinif_analizi && h.sinif_analizi.class_bonus) ? Number(h.sinif_analizi.class_bonus) : 0;
+    const classBonus = 0; // KULLANICI KURALI: Üst grupta sadece koşmuş olmak suni puan vermez (İPTAL). Gerçek form/performans esastır.
     const baseScore = power.royalScore;
-    const finalScore = Math.min(99, Math.max(30, Math.round(baseScore + paceAdj.delta + mudAdj.delta + classBonus)));
+    const finalScore = Math.min(99, Math.max(30, Math.round(baseScore + paceAdj.delta + mudAdj.delta)));
     return {
       ...h,
       ...power,
@@ -4394,10 +4394,10 @@ function getHorsesWithFinalTacticalScores(kosu) {
       mudDesc: mudAdj.desc,
       mudColor: mudAdj.color,
       mudType: mudAdj.type,
-      classBonus: classBonus,
+      classBonus: 0,
       classBadge: h.sinif_analizi ? h.sinif_analizi.badge : null,
       classDesc: h.sinif_analizi ? h.sinif_analizi.aciklama : null,
-      royalScore: finalScore // Nihai taktiksel skor (Tempo + Çamur/Zemin + Sınıf Düşüşü etkisi dahil)
+      royalScore: finalScore // Nihai taktiksel skor (Tempo + Çamur/Zemin etkisi dahil, üst grup suni puanı iptal)
     };
   }).sort((a, b) => b.royalScore - a.royalScore);
 }
@@ -4711,13 +4711,13 @@ function renderRaceDetails() {
       ` : ''}
 
       ${(h.sinif_analizi && h.sinif_analizi.badge) ? `
-      <div style="background:linear-gradient(135deg, rgba(16,185,129,0.15), rgba(0,0,0,0.35)); border:1px solid #10b981; padding:0.55rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
+      <div style="background:linear-gradient(135deg, rgba(59,130,246,0.08), rgba(0,0,0,0.35)); border:1px solid rgba(59,130,246,0.3); padding:0.55rem 0.85rem; border-radius:10px; margin:0.6rem 0;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
-          <span style="font-size:0.76rem; font-weight:800; color:#34d399; font-family:'Cinzel',serif; display:flex; align-items:center; gap:0.35rem;">
+          <span style="font-size:0.76rem; font-weight:800; color:#60a5fa; font-family:'Cinzel',serif; display:flex; align-items:center; gap:0.35rem;">
             ${h.sinif_analizi.badge}
           </span>
-          <span style="font-size:0.72rem; font-weight:800; font-family:'JetBrains Mono'; color:#34d399; background:rgba(0,0,0,0.5); padding:1px 6px; border-radius:4px;">
-            +${h.sinif_analizi.class_bonus} PUAN
+          <span style="font-size:0.72rem; font-weight:800; font-family:'JetBrains Mono'; color:#94a3b8; background:rgba(0,0,0,0.5); padding:1px 6px; border-radius:4px;">
+            📊 Performans Odaklı (Puan Nötr)
           </span>
         </div>
         <div style="font-size:0.72rem; color:#cbd5e1; line-height:1.35;">
@@ -5907,8 +5907,8 @@ function optimizeCoupon() {
                     : (isPlusEV 
                         ? '<span style="color:#f59e0b; font-size:0.65rem; font-weight:800; background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.5); padding:1px 5px; border-radius:3px; margin-left:4px;">🔥 +EV BOMBA</span>' 
                         : (isLockLeg ? '<span style="color:#60a5fa; font-size:0.65rem; font-weight:800; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); padding:1px 5px; border-radius:3px; margin-left:4px;">🛡️ KİLİT</span>' : ''));
-                  const classDropTag = (h.classBonus > 0 || (h.sinif_analizi && h.sinif_analizi.class_bonus > 0))
-                    ? `<span style="color:#34d399; font-size:0.65rem; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10b981; padding:1px 4px; border-radius:3px; margin-left:3px;" title="${h.classBadge || (h.sinif_analizi && h.sinif_analizi.badge) || 'Sınıf Üstünlüğü'}">💎 Üst Grup (+${h.classBonus || h.sinif_analizi.class_bonus}P)</span>`
+                  const classDropTag = (h.sinif_analizi && h.sinif_analizi.grup_tabela_sayisi > 0)
+                    ? `<span style="color:#60a5fa; font-size:0.65rem; font-weight:800; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); padding:1px 4px; border-radius:3px; margin-left:3px;" title="Üst Grup Deneyimli (Tabelalı · Puan Nötr)">💎 Üst Grup</span>`
                     : '';
 
                   return `

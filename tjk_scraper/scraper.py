@@ -400,40 +400,24 @@ def build_class_drop_analysis(conn, at_id, current_race_class):
 
     top_5_in_elite = sum(1 for er in elite_runs if er["sira"] <= 5)
 
-    bonus = 0.0
-    if top_grade == "G 1":
-        bonus += 4.5
-    elif top_grade == "G 2":
-        bonus += 4.0
-    elif top_grade == "G 3":
-        bonus += 3.5
-    elif top_grade == "KV-8/9":
-        bonus += 3.0
-    elif top_grade == "KV-7":
-        bonus += 2.0
-
-    if top_5_in_elite > 0:
-        bonus += min(2.5, top_5_in_elite * 0.8)
+    # KULLANICI KURALI: Üst grupta sadece koşmuş olmak suni puan vermez (İPTAL EDİLDİ).
+    # Önemli olan gösterdiği gerçek performans ve tabeladır; ham güç puanına ek puan verilmez (Puan Nötr: 0.0).
+    final_bonus = 0.0
 
     if is_dropping:
-        bonus += 1.0
-
-    final_bonus = round(min(7.0, bonus), 1)
-
-    if is_dropping:
-        badge = f"💎 SERT GRUP / SINIF DÜŞÜŞÜ ({top_grade} Tecrübeli +{final_bonus:.0f}P)"
+        badge = f"💎 ÜST GRUP TECRÜBELİ ({top_grade} Koşmuş · Puan Nötr)"
     else:
-        badge = f"💎 SINIF GÜCÜ: {top_grade} Yarışçısı (+{final_bonus:.0f}P)"
+        badge = f"💎 ÜST GRUP DENEYİMİ ({top_grade} Yarışçısı · Puan Nötr)"
 
     unique_grades = list(dict.fromkeys(er["grade"] for er in elite_runs))
-    aciklama = f"Safkan son dönemde {len(elite_runs)} kez elit açık/grup ({', '.join(unique_grades)}) koşularda boy gösterdi ({top_5_in_elite} kez ilk 5'te bitirdi). Mevcut grupta belirgin kalite ve tecrübe üstünlüğü vardır."
+    aciklama = f"Safkan geçmişte {len(elite_runs)} kez elit açık/grup ({', '.join(unique_grades)}) koşularda boy göstermiştir ({top_5_in_elite} kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
 
     return {
         "sinif_dususu": is_dropping,
         "ust_grup_sayisi": len(elite_runs),
         "en_ust_grup": top_grade,
         "grup_tabela_sayisi": top_5_in_elite,
-        "class_bonus": final_bonus,
+        "class_bonus": 0.0,
         "badge": badge,
         "aciklama": aciklama
     }
