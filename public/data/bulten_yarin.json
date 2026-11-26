@@ -6,8 +6,8 @@
     "Bursa",
     "İzmir"
   ],
-  "guncellemeZamani": "2026-11-26T11:55:29.987276",
-  "sonSenkronizasyon": "11:55:29",
+  "guncellemeZamani": "2026-11-26T18:19:56.097984",
+  "sonSenkronizasyon": "18:19:56",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -8087,14 +8087,14 @@
           "tempo_senaryosu": {
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
-            "tempo_skoru": 64,
+            "tempo_skoru": 62,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 4,
+            "on_grup_baskisi_sayisi": 3,
             "avantajli_stiller": [
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 4 presçi ve 3 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 4 at tam (3+ ölçüm), 4 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Belirgin kaçak yok; 3 presçi ve 4 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 4 at tam (3+ ölçüm), 4 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -8430,7 +8430,7 @@
               "no": 5,
               "isim": "BERRUNAZ",
               "yas": 3,
-              "cinsiyet": "3 y  ad",
+              "cinsiyet": "3y a  d",
               "irk": "Arap",
               "baba": "GÜMBÜRGÜMBÜR",
               "anne": "HANCIKIZI",
@@ -8448,11 +8448,11 @@
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
               "agf_orani": 10,
               "ganyan": "3.50",
               "son_galop": {
@@ -8470,21 +8470,21 @@
                 "d_200": "",
                 "durum_kodu": "İzmir Kum"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%55.6). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 1,
+              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ALİ KÖŞGER",
               "antrenor": "B.ÖZGÜR",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM DENEYİMLİ (1G / 4T)",
-                "delta": 1,
-                "color": "#10b981",
-                "desc": "Kaba kumda 10 koşuda 1G/4T elde etti, zemin şartlarına aşinadır.",
+                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 10,
-                  "wins": 1,
-                  "top4": 4
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
                 },
                 "synStats": {
                   "runs": 0,
@@ -10138,7 +10138,7 @@
                 "d_200": "",
                 "durum_kodu": "Kayıtsız"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%63.9) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%61.1) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "CAN ERBAK",
