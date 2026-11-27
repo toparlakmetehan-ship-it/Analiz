@@ -102,10 +102,6 @@ def analyze_horse_class_history(conn, at_adi, current_race_class):
         'badge': badge,
         'aciklama': aciklama
     }
-        'class_bonus': final_bonus,
-        'badge': badge,
-        'aciklama': aciklama
-    }
 
 def enrich_bulten_file(file_path):
     if not os.path.exists(file_path):
