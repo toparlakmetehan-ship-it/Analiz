@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v48-cancel-unearned-class-bonus-20261125';
+const APP_VERSION = 'v49-adaptive-weights-surprise-slot-20261127';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',

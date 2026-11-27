@@ -904,14 +904,14 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
         <div style="font-size:1.8rem; color:var(--gold-pure);">🔬</div>
         <div>
           <div style="font-family:'Cinzel', serif; font-size:1.05rem; font-weight:700; color:var(--gold-champagne);">SON 1460 GÜNÜN (4 YILLIK MAKRO SEZON) RESMÎ YARIŞLARIYLA OPTİMİZE EDİLEN BİYOMEKANİK MODEL</div>
-          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Handikap ve ağır kilo tuzakları kalibre edilmiş; <b>Anne Kardeşleri Başarısı (%20)</b>, <b>Yarış İvmelenmesi (%26)</b>, <b>Sıklet/Kilo (%10)</b> ve <b>TJK Sınıf Gücü (%12)</b> dengelenmiştir. Jokey etkisi <b>%8 (Maks ≤ %10 Kuralı)</b> ile kalibre edilmiş, hafif kilolar ödüllendirilmiştir.</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Koşmuş atlarda <b>Soy %8</b>'e düşürülüp <b>Form (%32)</b> ve <b>Sıklet/Kilo (%14–17)</b> öne alınır; Genç/Maiden atlarda <b>Soy (%20)</b> korunur. Uzun mesafe handikapta hafif kilo + son yarış tabelası ödüllendirilir.</div>
         </div>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:0.4rem; font-size:0.72rem; font-family:'JetBrains Mono', monospace;">
-        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">📈 Form/İvme: %26</span>
-        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">🧬 Soy & Kardeşler: %20</span>
-        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🏛 Handikap: %12</span>
-        <span style="background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fbbf24; font-weight:700;">⚖ Sıklet/Kilo: %10</span>
+        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">📈 Form/İvme: %26–32</span>
+        <span style="background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fcf6ba; font-weight:700;">🧬 Soy & Kardeşler: %8–20</span>
+        <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">🏛 Handikap: %11–14</span>
+        <span style="background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#fbbf24; font-weight:700;">⚖ Sıklet/Kilo: %10–17</span>
         <span style="background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.4); padding:0.25rem 0.55rem; border-radius:6px; color:#34d399; font-weight:700;">🏇 Jokey: %8 (≤ %10 Kuralı)</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⏳ KGS: %9</span>
         <span style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); padding:0.25rem 0.55rem; border-radius:6px; color:#f3e5ab;">⚡ Galop Hızı: %9</span>
@@ -4335,12 +4335,29 @@ function calculatePowerIndex(horse, raceHorses = [], kosu = null) {
   else if (takilar.length >= 2) takiScore = 82;
   else if (takilar.length === 1) takiScore = 72;
 
-  // OPTİMİZE EDİLMİŞ TOPLAM AĞIRLIKLI ROYAL PUANI (AĞIR SIKLET & ELİT JOKEY KALİBRASYONLU - TOPLAM %100):
+  // Uzun mesafe (1800m+) hafif sıklet + taze tabela sinerjisi (son 2 yarışında ilk 3'te ve <= 53.5 kg)
+  if (isLongDist && rawSiklet <= 53.5 && past.length > 0) {
+    const lastTwo = past.slice(-2).split('');
+    if (lastTwo.some(r => ['1', '2', '3'].includes(r))) {
+      formScore = Math.min(99, formScore + 4);
+    }
+  }
+
+  // DENEYİMLİ VS GENÇ SAFKAN DİNAMİK AĞIRLIKLANDIRMASI (TOPLAM %100):
+  // Koşmuş atlarda Soy ağırlığı %20'den %8'e düşürülüp gerçek Form (%32) + Sıklet (%14-17) öne alınır.
+  const isExperienced = !horse.isYoungHorse && past.length >= 3;
+  let wForm = 0.26, wPed = 0.20, wHp = 0.12, wSiklet = 0.10;
+  if (isExperienced && isHandicap && isLongDist) {
+    wForm = 0.32; wPed = 0.08; wHp = 0.11; wSiklet = 0.17;
+  } else if (isExperienced) {
+    wForm = 0.32; wPed = 0.08; wHp = 0.14; wSiklet = 0.14;
+  }
+
   const royalScore = Math.round(
-    (formScore * 0.26) +
-    (pedScore * 0.20) +
-    (handikapScore * 0.12) +
-    (sikletScore * 0.10) +
+    (formScore * wForm) +
+    (pedScore * wPed) +
+    (handikapScore * wHp) +
+    (sikletScore * wSiklet) +
     (jokeyScore * 0.08) +
     (kgsScore * 0.09) +
     (galopScore * 0.09) +
@@ -5780,62 +5797,89 @@ function optimizeCoupon() {
   }
 
   // 3. BÜTÇEYİ DENGELİ ROUND-ROBIN ŞAMPİYON MODELLE DAĞIT
-  // En az ata sahip olan açık ayakları kademeli olarak büyütür. Böylece hiçbir ayak aç bırakılmaz,
-  // tüm ayaklar 6'şar safkana dengeli ulaşarak sürpriz ve bomba korumasını firesiz sağlar!
-  let added = true;
-  while (added && calcCost() <= targetBudget) {
-    added = false;
-    const candidateLegs = [...ratedLegs]
-      .filter((l, i) => l !== bankoLeg && l !== bankoLeg2 && picks[i].length < (l.riskLevel === 'CHAOTIC' ? Math.min(8, l.horses.length) : Math.min(7, l.horses.length)))
-      .sort((a, b) => {
-        const countA = picks[ratedLegs.indexOf(a)].length;
-        const countB = picks[ratedLegs.indexOf(b)].length;
-        const isLockA = lockLegs.includes(a);
-        const isLockB = lockLegs.includes(b);
+  // Pass 1: Dengeli dağılım (Kaotik ayaklar 8, diğerleri 7 safkana kadar)
+  // Pass 2: Büyük bütçede (örn. 1200-2500 TL) kalan bütçe ile Kaotik/Yüksek Riskli ayakları HEPSİ'ye kadar genişlet
+  // Ayrıca her Kaotik/Yüksek Riskli ayakta 5+ safkana çıkarken hafif kilolu & formda "Sürpriz Kontenjanı" seçer.
+  function isLightweightInFormSurprise(h, legHorses) {
+    const w = parseFloat(h.siklet) || 56;
+    const maxW = Math.max(...legHorses.map(x => parseFloat(x.siklet) || 56));
+    const past = (h.son_yarislar || '').replace(/[^0-9]/g, '');
+    const recent2 = past.slice(-2).split('');
+    const hasTop3 = recent2.some(r => ['1', '2', '3'].includes(r));
+    return w <= 53.5 && (maxW - w) >= 4 && hasTop3;
+  }
 
-        const nonLockCounts = picks.filter((p, idx) => ratedLegs[idx] !== bankoLeg && ratedLegs[idx] !== bankoLeg2 && !lockLegs.includes(ratedLegs[idx])).map(p => p.length);
-        const minOtherCount = nonLockCounts.length > 0 ? Math.min(...nonLockCounts) : 6;
-        if (isLockA && countA >= 2 && minOtherCount < 6) return 1;
-        if (isLockB && countB >= 2 && minOtherCount < 6) return -1;
+  for (let pass = 1; pass <= 2; pass++) {
+    let added = true;
+    while (added && calcCost() <= targetBudget) {
+      added = false;
+      const candidateLegs = [...ratedLegs]
+        .filter((l, i) => {
+          if (l === bankoLeg || l === bankoLeg2) return false;
+          const cap = pass === 1
+            ? (l.riskLevel === 'CHAOTIC' ? Math.min(8, l.horses.length) : Math.min(7, l.horses.length))
+            : ((l.riskLevel === 'CHAOTIC' || l.riskLevel === 'HIGH_RISK') ? l.horses.length : Math.min(8, l.horses.length));
+          return picks[i].length < cap;
+        })
+        .sort((a, b) => {
+          const countA = picks[ratedLegs.indexOf(a)].length;
+          const countB = picks[ratedLegs.indexOf(b)].length;
+          const isLockA = lockLegs.includes(a);
+          const isLockB = lockLegs.includes(b);
 
-        // Kaotik ayak önceliği: 6 safkana ulaşana kadar bütçe önceliğini alır
-        if (a.riskLevel === 'CHAOTIC' && b.riskLevel !== 'CHAOTIC' && countA < 6) return -1;
-        if (b.riskLevel === 'CHAOTIC' && a.riskLevel !== 'CHAOTIC' && countB < 6) return 1;
+          const nonLockCounts = picks.filter((p, idx) => ratedLegs[idx] !== bankoLeg && ratedLegs[idx] !== bankoLeg2 && !lockLegs.includes(ratedLegs[idx])).map(p => p.length);
+          const minOtherCount = nonLockCounts.length > 0 ? Math.min(...nonLockCounts) : 6;
+          if (isLockA && countA >= 2 && minOtherCount < 6) return 1;
+          if (isLockB && countB >= 2 && minOtherCount < 6) return -1;
 
-        if (countA !== countB) return countA - countB;
+          // Kaotik ayak önceliği: 6 safkana ulaşana kadar bütçe önceliğini alır
+          if (a.riskLevel === 'CHAOTIC' && b.riskLevel !== 'CHAOTIC' && countA < 6) return -1;
+          if (b.riskLevel === 'CHAOTIC' && a.riskLevel !== 'CHAOTIC' && countB < 6) return 1;
 
-        const riskWeight = { 'CHAOTIC': 4, 'HIGH_RISK': 3, 'NORMAL': 2, 'LOW_RISK': 1 };
-        return (riskWeight[b.riskLevel] - riskWeight[a.riskLevel]) || (a.diff - b.diff);
-      });
+          if (countA !== countB) return countA - countB;
 
-    for (const leg of candidateLegs) {
-      const legIdx = ratedLegs.indexOf(leg);
-      const currentPickedNos = new Set(picks[legIdx].map(p => p.no));
-      const unpicked = leg.horses.filter(h => !currentPickedNos.has(h.no));
-      if (unpicked.length === 0) continue;
+          const riskWeight = { 'CHAOTIC': 4, 'HIGH_RISK': 3, 'NORMAL': 2, 'LOW_RISK': 1 };
+          return (riskWeight[b.riskLevel] - riskWeight[a.riskLevel]) || (a.diff - b.diff);
+        });
 
-      let candidateHorse = unpicked[0];
+      for (const leg of candidateLegs) {
+        const legIdx = ratedLegs.indexOf(leg);
+        const currentPickedNos = new Set(picks[legIdx].map(p => p.no));
+        const unpicked = leg.horses.filter(h => !currentPickedNos.has(h.no));
+        if (unpicked.length === 0) continue;
 
-      picks[legIdx].push(candidateHorse);
-      let partnerAdded = null;
-      if (candidateHorse.ekuriGrup && candidateHorse.ekuriGrup.trim() !== '') {
-        const legHorses = ratedLegs[legIdx].horses;
-        const partner = legHorses.find(other => other.no !== candidateHorse.no && other.ekuriGrup === candidateHorse.ekuriGrup);
-        if (partner && !picks[legIdx].some(p => p.no === partner.no)) {
-          picks[legIdx].push(partner);
-          partnerAdded = partner;
+        let candidateHorse = unpicked[0];
+        if ((leg.riskLevel === 'CHAOTIC' || leg.riskLevel === 'HIGH_RISK') && picks[legIdx].length >= 4) {
+          const alreadyHasSurprise = picks[legIdx].some(p => p.isSurpriseSlot);
+          if (!alreadyHasSurprise) {
+            const surpriseMatch = unpicked.find(h => isLightweightInFormSurprise(h, leg.horses));
+            if (surpriseMatch) {
+              candidateHorse = { ...surpriseMatch, isSurpriseSlot: true };
+            }
+          }
         }
-      }
 
-      if (calcCost() > targetBudget) {
-        picks[legIdx].pop();
-        if (partnerAdded) {
-          const pIdx = picks[legIdx].indexOf(partnerAdded);
-          if (pIdx !== -1) picks[legIdx].splice(pIdx, 1);
+        picks[legIdx].push(candidateHorse);
+        let partnerAdded = null;
+        if (candidateHorse.ekuriGrup && candidateHorse.ekuriGrup.trim() !== '') {
+          const legHorses = ratedLegs[legIdx].horses;
+          const partner = legHorses.find(other => other.no !== candidateHorse.no && other.ekuriGrup === candidateHorse.ekuriGrup);
+          if (partner && !picks[legIdx].some(p => p.no === partner.no)) {
+            picks[legIdx].push(partner);
+            partnerAdded = partner;
+          }
         }
-      } else {
-        added = true;
-        break;
+
+        if (calcCost() > targetBudget) {
+          picks[legIdx].pop();
+          if (partnerAdded) {
+            const pIdx = picks[legIdx].indexOf(partnerAdded);
+            if (pIdx !== -1) picks[legIdx].splice(pIdx, 1);
+          }
+        } else {
+          added = true;
+          break;
+        }
       }
     }
   }
@@ -5849,6 +5893,17 @@ function optimizeCoupon() {
 
   const totalComb = picks.reduce((acc, p) => acc * getLegCombinations(p), 1);
   const budgetCompliance = Math.min(100, Math.round((finalCost / targetBudget) * 100));
+
+  const allLegHorses = ratedLegs.flatMap(l => l.horses || []);
+  const placeholderAgfCount = allLegHorses.filter(h => Number(h.agf_orani) === 10).length;
+  const missingGalopCount = allLegHorses.filter(h => !h.son_galop || h.son_galop.durum_kodu === 'Kayıtsız').length;
+  const isAgfMissing = allLegHorses.length > 0 && (placeholderAgfCount / allLegHorses.length) >= 0.8;
+  const isGalopSparse = allLegHorses.length > 0 && (missingGalopCount / allLegHorses.length) >= 0.4;
+  const missingDataWarningHtml = (isAgfMissing || isGalopSparse)
+    ? `<div style="margin:0.8rem 0; padding:0.75rem 1rem; border-radius:10px; background:rgba(245,158,11,0.14); border:1px solid rgba(245,158,11,0.55); color:#fde68a; font-size:0.78rem; line-height:1.45;">
+        <strong>⚠️ CANLI VERİ UYARISI:</strong> ${isAgfMissing ? 'Bültende canlı AGF/Ganyan oranları henüz güncellenmemiş (tüm atlar sabit şablon görünüyor). ' : ''}${isGalopSparse ? `Safkanların %${Math.round((missingGalopCount / allLegHorses.length) * 100)}'ında resmî galop kaydı eksik. ` : ''}Büyük bütçeli kupon onaylamadan önce yarış saatine yakın <b>Canlı TJK Senkronizasyonu</b> yapmanız önerilir.
+      </div>`
+    : '';
 
   // Kartı oluştur
   const container = document.getElementById('optimized-coupon-container');
@@ -5868,6 +5923,7 @@ function optimizeCoupon() {
           Hedef: ${targetBudget} ₺ | Hesaplanan: ${finalCost.toFixed(2)} ₺ (` + (misliCount > 1 ? misliCount + ' Misli' : '%100 Uyum') + `)
         </div>
       </div>
+      ${missingDataWarningHtml}
 
       <div class="legs-grid">
         ${picks.map((pickList, idx) => {
@@ -5904,9 +5960,11 @@ function optimizeCoupon() {
                   const isPlusEV = (agfVal <= 14 && !isSingle && (h.royalScore >= 66 || (h.son_galop && h.son_galop.son400hiz >= 53.5)));
                   const horseRoleTag = isSingle 
                     ? '<span style="color:#10b981; font-size:0.65rem; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10b981; padding:1px 5px; border-radius:3px; margin-left:4px;">★ ASİL BANKO</span>' 
-                    : (isPlusEV 
-                        ? '<span style="color:#f59e0b; font-size:0.65rem; font-weight:800; background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.5); padding:1px 5px; border-radius:3px; margin-left:4px;">🔥 +EV BOMBA</span>' 
-                        : (isLockLeg ? '<span style="color:#60a5fa; font-size:0.65rem; font-weight:800; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); padding:1px 5px; border-radius:3px; margin-left:4px;">🛡️ KİLİT</span>' : ''));
+                    : (h.isSurpriseSlot
+                        ? '<span style="color:#f43f5e; font-size:0.65rem; font-weight:800; background:rgba(244,63,94,0.18); border:1px solid rgba(244,63,94,0.55); padding:1px 5px; border-radius:3px; margin-left:4px;">💣 SÜRPRİZ KONTENJANI</span>'
+                        : (isPlusEV 
+                            ? '<span style="color:#f59e0b; font-size:0.65rem; font-weight:800; background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.5); padding:1px 5px; border-radius:3px; margin-left:4px;">🔥 +EV BOMBA</span>' 
+                            : (isLockLeg ? '<span style="color:#60a5fa; font-size:0.65rem; font-weight:800; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); padding:1px 5px; border-radius:3px; margin-left:4px;">🛡️ KİLİT</span>' : '')));
                   const classDropTag = (h.sinif_analizi && h.sinif_analizi.grup_tabela_sayisi > 0)
                     ? `<span style="color:#60a5fa; font-size:0.65rem; font-weight:800; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); padding:1px 4px; border-radius:3px; margin-left:3px;" title="Üst Grup Deneyimli (Tabelalı · Puan Nötr)">💎 Üst Grup</span>`
                     : '';
