@@ -2,11 +2,12 @@ name: TJK 7-24 Canlı Bulut Robotu ve Otomatik Güncelleme
 
 on:
   schedule:
-    # Sabah 06:00, 07:00, 08:00, 09:00, 10:00 TRT (03:00, 04:00, 05:00, 06:00, 07:00 UTC) - Günün Programı & Galopları
-    - cron: '0 3,4,5,6,7 * * *'
-    # Yarış Saatlerinde (11:00 - 23:00 TRT / 08:00 - 20:00 UTC): HER 10 DAKİKADA BİR CANLI VERİ ÇEKER
-    - cron: '*/10 8-20 * * *'
-  workflow_dispatch:      # İstendiğinde GitHub web panelinden tek tıkla anında çalıştırma
+    # Sabah programı (07:30 TRT), Yarış Öncesi Canlı AGF/Koşmaz (12:30, 14:00, 17:30 TRT), Akşam Sonuç (22:00 TRT)
+    - cron: '30 4,9,14 * * *'
+    - cron: '0 11,19 * * *'
+    # Yarış saatleri içi periyodik kontrol (her 30 dk)
+    - cron: '*/30 9-19 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  tjk-sync-and-deploy:
+  tjk-sync:
     runs-on: ubuntu-latest
     steps:
       - name: Depoyu Klonla
@@ -47,6 +48,7 @@ jobs:
           node tools/enrich_race_pace_and_scenarios.js || echo "Pace Enrich tamamlandı."
           node tools/enrich_surface_kaba_kum_sentetik.js || echo "Surface Enrich tamamlandı."
           node tools/calibrate_tempo_deltas.js || echo "Tempo Calibrate tamamlandı."
+          node tools/daily_model_scorecard.js || echo "Scorecard tamamlandı."
           node tools/verify_bulten_contract.js || echo "Contract Check tamamlandı."
 
       - name: Yeni Verileri GitHub Deposuna Kaydet (Git Commit)
@@ -58,12 +60,20 @@ jobs:
           git push || echo "Push atlandı"
 
       - name: GitHub Pages için Yapılandır
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Sitenin Web Dosyalarını Hazırla
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'public'
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: tjk-sync
+    steps:
       - name: GitHub Pages Üzerinden Canlı Yayına Ver
+        id: deployment
         uses: actions/deploy-pages@v4

@@ -1012,6 +1012,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
             <button id="strat-accuracy-btn" class="preset-btn" style="font-weight:700;" onclick="setPick6Strategy('MAX_ACCURACY')">🎯 En Yüksek İsabet: Çifte Kilit (%46.2 Başarı)</button>
             <button id="strat-single-btn" class="preset-btn" style="font-weight:700;" onclick="setPick6Strategy('SINGLE_BANKO')">🛡️ Tek Bankolu Ekonomik (40 - 150 ₺)</button>
             <button id="strat-multi-btn" class="preset-btn" style="font-weight:700;" onclick="setPick6Strategy('MULTI_COVER')">💎 Mega İkramiye & Bomba Havuzu</button>
+            <button id="leg1-shield-btn" class="preset-btn active" style="font-weight:700; border-color:rgba(16,185,129,0.55); color:#34d399;" onclick="toggleLeg1Shield()" title="1. Ayak kaotik/yüksek riskli ise önce 1. ayağı 9 safkana kadar sigortalar">🛡️ 1. Ayak Sigortalı: AÇIK</button>
           </div>
         </div>
 
@@ -1032,6 +1033,7 @@ footer strong { font-family: 'Cinzel', serif; color: var(--gold-pure); }
             <button class="preset-btn" onclick="setBudget(300)">300 ₺</button>
             <button class="preset-btn" onclick="setBudget(600)">600 ₺</button>
             <button class="preset-btn" onclick="setBudget(1200)">1200 ₺</button>
+            <button class="preset-btn" onclick="setBudget(2500)">2500 ₺</button>
           </div>
         </div>
 
@@ -5557,6 +5559,18 @@ function setBudget(val) {
 }
 
 let currentPick6Strategy = 'CHAMPION_5YEAR'; // 'CHAMPION_5YEAR' (Son 10 Yılın En Çok Kazandıran Şampiyonu), 'MAX_ACCURACY', 'SINGLE_BANKO', 'MULTI_COVER'
+let leg1ShieldEnabled = true;
+
+function toggleLeg1Shield() {
+  leg1ShieldEnabled = !leg1ShieldEnabled;
+  const btn = document.getElementById('leg1-shield-btn');
+  if (btn) {
+    btn.classList.toggle('active', leg1ShieldEnabled);
+    btn.innerHTML = leg1ShieldEnabled ? '🛡️ 1. Ayak Sigortalı: AÇIK' : '🛡️ 1. Ayak Sigortalı: KAPALI';
+    btn.style.color = leg1ShieldEnabled ? '#34d399' : '#94a3b8';
+  }
+  optimizeCoupon();
+}
 
 function applyChampionPreset(strat, budget) {
   releaseWinningCoupon();
@@ -5831,6 +5845,16 @@ function optimizeCoupon() {
           const minOtherCount = nonLockCounts.length > 0 ? Math.min(...nonLockCounts) : 6;
           if (isLockA && countA >= 2 && minOtherCount < 6) return 1;
           if (isLockB && countB >= 2 && minOtherCount < 6) return -1;
+
+          // 1. Ayak Sigortası: İlk ayak kaotik veya yüksek riskli ise erken elenmeyi önlemek için 9 safkana kadar öncelik alır
+          const idxA = ratedLegs.indexOf(a);
+          const idxB = ratedLegs.indexOf(b);
+          if (leg1ShieldEnabled) {
+            const needShieldA = (idxA === 0 && (a.riskLevel === 'CHAOTIC' || a.riskLevel === 'HIGH_RISK') && countA < Math.min(9, a.horses.length));
+            const needShieldB = (idxB === 0 && (b.riskLevel === 'CHAOTIC' || b.riskLevel === 'HIGH_RISK') && countB < Math.min(9, b.horses.length));
+            if (needShieldA && !needShieldB) return -1;
+            if (needShieldB && !needShieldA) return 1;
+          }
 
           // Kaotik ayak önceliği: 6 safkana ulaşana kadar bütçe önceliğini alır
           if (a.riskLevel === 'CHAOTIC' && b.riskLevel !== 'CHAOTIC' && countA < 6) return -1;
