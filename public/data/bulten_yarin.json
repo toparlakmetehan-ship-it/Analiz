@@ -6,8 +6,8 @@
     "Adana",
     "İstanbul"
   ],
-  "guncellemeZamani": "2026-11-27T15:48:11.184660",
-  "sonSenkronizasyon": "15:48:11",
+  "guncellemeZamani": "2026-11-27T18:58:15.320382",
+  "sonSenkronizasyon": "18:58:15",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -3602,7 +3602,7 @@
               "no": 3,
               "isim": "BED OF ROSES",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "CEMALCAN",
               "anne": "BE SIDE YOU",
@@ -5197,7 +5197,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, G 3, KV-7) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, KV-7, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -5461,7 +5461,7 @@
                 "grup_tabela_sayisi": 3,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 2 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-7, KV-8/9, G 2) koşularda boy göstermiştir (3 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, KV-7, G 2) koşularda boy göstermiştir (3 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -6619,7 +6619,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (G 3, KV-7, KV-8/9) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, KV-7, G 3) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -7125,7 +7125,7 @@
                 "grup_tabela_sayisi": 0,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 3, KV-7) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-7, G 3) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -7320,7 +7320,7 @@
               "no": 1,
               "isim": "AL TAYLAR",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "HAKEEM (USA)",
               "anne": "HARD OFF LADY",
@@ -7398,7 +7398,7 @@
               "no": 2,
               "isim": "BRILLIANTMAN",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "ELARQAM (GB)",
               "anne": "SPECIAL DREAM (IRE)",
@@ -7551,7 +7551,7 @@
               "no": 4,
               "isim": "PAPERCLIP",
               "yas": 2,
-              "cinsiyet": "2y a  e",
+              "cinsiyet": "2 y  ae",
               "irk": "Arap",
               "baba": "MAVİ KUMSAL",
               "anne": "DEVRİ SAADET",
@@ -7629,7 +7629,7 @@
               "no": 5,
               "isim": "TİARA",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "SATONO ARES (JPN)",
               "anne": "YELLOW ANGEL",
@@ -7862,7 +7862,7 @@
               "no": 8,
               "isim": "BEST OF NURDANIM",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "HAKEEM (USA)",
               "anne": "SLIENT WISPER",
@@ -8018,7 +8018,7 @@
               "no": 10,
               "isim": "DORİKA",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "KANEKO",
               "anne": "SWEETEST",
@@ -8214,7 +8214,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (G 1, KV-8/9) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 1) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 78,
@@ -8728,12 +8728,12 @@
             "tempo_kodu": "DENGELI",
             "tempo_skoru": 64,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 5,
+            "on_grup_baskisi_sayisi": 4,
             "avantajli_stiller": [
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 5 presçi ve 3 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 4 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Belirgin kaçak yok; 4 presçi ve 4 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 3 at tam (3+ ölçüm), 6 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -8917,7 +8917,7 @@
               "no": 3,
               "isim": "ALATTİN",
               "yas": 5,
-              "cinsiyet": "5 y  a a",
+              "cinsiyet": "5y a  a",
               "irk": "Arap",
               "baba": "AYABAKAN",
               "anne": "SEBİLE",
@@ -8934,12 +8934,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
               "agf_orani": null,
               "ganyan": null,
               "son_galop": {
@@ -8957,31 +8957,31 @@
                 "d_200": "",
                 "durum_kodu": "Bursa Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%55.6) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
+              "taktik_yorum": "Geçmiş koşular için doğrulanmış ara-pozisyon ölçümü bulunamadı; dengeli 'Orta Grup' taktiği atandı.",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "FERİDUN GÜNDÜZ",
               "antrenor": "N.GÜNDÜZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/6T · Sentetik: 2G/4T)",
-                "delta": 2,
-                "color": "#34d399",
-                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
+                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
-                  "runs": 16,
-                  "wins": 3,
-                  "top4": 6
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
                 },
                 "synStats": {
-                  "runs": 12,
-                  "wins": 2,
-                  "top4": 4
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
                 },
                 "turfStats": {
-                  "runs": 20,
-                  "wins": 2,
-                  "top4": 12
+                  "runs": 1,
+                  "wins": 0,
+                  "top4": 1
                 }
               },
               "sinif_analizi": null,
@@ -9075,7 +9075,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (G 3, KV-8/9) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 78,
@@ -9543,7 +9543,7 @@
               "no": 1,
               "isim": "BAŞKAN ONUR",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "ULAN BATOR",
               "anne": "GAZELKIZI",
@@ -9621,7 +9621,7 @@
               "no": 2,
               "isim": "BLACK MAGIC",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "KLUGER (JPN)",
               "anne": "SAGRADA GRL",
@@ -9699,7 +9699,7 @@
               "no": 3,
               "isim": "FLAME OF FOREST",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "BLUEGRASS CAT (USA)",
               "anne": "FLAX FLOWER (USA)",
@@ -9778,7 +9778,7 @@
               "no": 4,
               "isim": "JOYFUL EAGLE",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "SADLER'S JOY (USA)",
               "anne": "PERFECT GRACE",
@@ -9855,7 +9855,7 @@
               "no": 5,
               "isim": "ROYAL THUNDER",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "BLUEGRASS CAT (USA)",
               "anne": "MİNİMİNİ",
@@ -9933,7 +9933,7 @@
               "no": 6,
               "isim": "STAR BLAZE",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "BATTLEGROUND (USA)",
               "anne": "CEYLİN HATUN",
@@ -10011,7 +10011,7 @@
               "no": 7,
               "isim": "IMAGINE OF YAZ",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "SATONO ARES (JPN)",
               "anne": "DONT MAKE ME CRY",
@@ -10095,7 +10095,7 @@
               "no": 8,
               "isim": "NERAVELLE",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "BATTLEGROUND (USA)",
               "anne": "HOLYROMAN PRINCESS (GB)",
@@ -10173,7 +10173,7 @@
               "no": 9,
               "isim": "RUSH AND ROLL",
               "yas": 2,
-              "cinsiyet": "2y a  d",
+              "cinsiyet": "2 y  ad",
               "irk": "Arap",
               "baba": "LUXOR",
               "anne": "RUSH HOUR (IRE)",
@@ -10250,7 +10250,7 @@
               "no": 10,
               "isim": "SECRET TIME",
               "yas": 2,
-              "cinsiyet": "2y a  d",
+              "cinsiyet": "2 y  ad",
               "irk": "Arap",
               "baba": "TRAPPE SHOT (USA)",
               "anne": "DE FEMME",
@@ -10328,7 +10328,7 @@
               "no": 11,
               "isim": "SHADOW STORM",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "KLIMT (USA)",
               "anne": "QUEEN SUDE",
@@ -10691,7 +10691,7 @@
                 "grup_tabela_sayisi": 4,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 6 kez elit açık/grup (G 1, G 3, KV-8/9) koşularda boy göstermiştir (4 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 6 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (4 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -10778,7 +10778,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 3, KV-8/9) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-8/9, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -10863,7 +10863,7 @@
                 "grup_tabela_sayisi": 3,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, G 1, KV-7) koşularda boy göstermiştir (3 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, KV-7, G 1) koşularda boy göstermiştir (3 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11036,7 +11036,7 @@
                 "grup_tabela_sayisi": 5,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 7 kez elit açık/grup (G 3, G 2, KV-8/9, G 1) koşularda boy göstermiştir (5 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 7 kez elit açık/grup (KV-8/9, G 2, G 3, G 1) koşularda boy göstermiştir (5 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11123,7 +11123,7 @@
                 "grup_tabela_sayisi": 6,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (G 1, G 3, KV-8/9) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 88,
@@ -11215,7 +11215,7 @@
                 "grup_tabela_sayisi": 6,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, G 1, G 2) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 2, G 3, G 1) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -12422,7 +12422,7 @@
               "no": 1,
               "isim": "ALAGAR",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "KLIMT (USA)",
               "anne": "MILADY (GB)",
@@ -12501,7 +12501,7 @@
               "no": 2,
               "isim": "LATTE GUIDE",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "MYSTIC GUIDE (USA)",
               "anne": "LATTE DOLCE (USA)",
@@ -12578,7 +12578,7 @@
               "no": 3,
               "isim": "SMOOTH AS GOLD",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "GOLDENCENTS (USA)",
               "anne": "SMOOTHOVER (USA)",
@@ -12657,7 +12657,7 @@
               "no": 4,
               "isim": "STARS N ROCKETS",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "APPROVE (IRE)",
               "anne": "PLEUROTHALIS (FR)",
@@ -12732,7 +12732,7 @@
               "no": 5,
               "isim": "TIEDOLI",
               "yas": 2,
-              "cinsiyet": "2y d  e",
+              "cinsiyet": "2 y  de",
               "irk": "İngiliz",
               "baba": "KANEKO",
               "anne": "FATIMA'S GIFT (GB)",
@@ -12810,7 +12810,7 @@
               "no": 6,
               "isim": "CHESTNUT HONEY",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "SUPER SAVER (USA)",
               "anne": "NEFERU",
@@ -12887,7 +12887,7 @@
               "no": 7,
               "isim": "FINAL LADY",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "SATONO ARES (JPN)",
               "anne": "THE FAST QUEEN",
@@ -12964,7 +12964,7 @@
               "no": 8,
               "isim": "LUNA ROYAL",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "BODEMEISTER (USA)",
               "anne": "SITAMUN",
@@ -13041,7 +13041,7 @@
               "no": 9,
               "isim": "MONTEVERA",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "KING DAVID (USA)",
               "anne": "LEMON CHILLER (USA)",
@@ -13118,7 +13118,7 @@
               "no": 10,
               "isim": "QUEEN ISLAND",
               "yas": 2,
-              "cinsiyet": "2y d  d",
+              "cinsiyet": "2 y  dd",
               "irk": "İngiliz",
               "baba": "KULOĞLU",
               "anne": "DENİZYILDIZI",
@@ -14580,7 +14580,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 1, KV-7) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-7, G 1) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 88,
