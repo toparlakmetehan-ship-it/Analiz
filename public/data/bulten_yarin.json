@@ -6,8 +6,8 @@
     "Adana",
     "İstanbul"
   ],
-  "guncellemeZamani": "2026-11-27T18:58:15.320382",
-  "sonSenkronizasyon": "18:58:15",
+  "guncellemeZamani": "2026-11-27T19:23:57.577018",
+  "sonSenkronizasyon": "19:23:57",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -4251,12 +4251,12 @@
             "tempo_kodu": "DENGELI",
             "tempo_skoru": 64,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 4,
+            "on_grup_baskisi_sayisi": 3,
             "avantajli_stiller": [
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 4 presçi ve 2 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 2 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Belirgin kaçak yok; 3 presçi ve 3 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 1 at tam (3+ ölçüm), 6 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -4264,7 +4264,7 @@
               "no": 1,
               "isim": "SÜKANBEY",
               "yas": 4,
-              "cinsiyet": "4 y  a a",
+              "cinsiyet": "4y a  a",
               "irk": "Arap",
               "baba": "ANKA",
               "anne": "ÖZDİLBER",
@@ -4283,12 +4283,12 @@
                 "GKR"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
               "agf_orani": null,
               "ganyan": null,
               "son_galop": {
@@ -4306,31 +4306,31 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%52.8) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
+              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "NURCAN ŞİMŞEK",
               "antrenor": "M.PEKİN",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
-                "delta": 1,
-                "color": "#34d399",
-                "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
+                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 28,
-                  "wins": 3,
-                  "top4": 21
+                  "runs": 0,
+                  "wins": 0,
+                  "top4": 0
                 },
                 "synStats": {
-                  "runs": 2,
+                  "runs": 0,
                   "wins": 0,
-                  "top4": 2
+                  "top4": 0
                 },
                 "turfStats": {
-                  "runs": 4,
+                  "runs": 0,
                   "wins": 0,
-                  "top4": 1
+                  "top4": 0
                 }
               },
               "sinif_analizi": null,
@@ -5197,7 +5197,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, KV-7, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, G 3, KV-7) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -6619,7 +6619,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, KV-7, G 3) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 3, KV-7) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -7125,7 +7125,7 @@
                 "grup_tabela_sayisi": 0,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-7, G 3) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 3, KV-7) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -7629,7 +7629,7 @@
               "no": 5,
               "isim": "TİARA",
               "yas": 2,
-              "cinsiyet": "2 y  de",
+              "cinsiyet": "2y d  e",
               "irk": "İngiliz",
               "baba": "SATONO ARES (JPN)",
               "anne": "YELLOW ANGEL",
@@ -8214,7 +8214,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 1) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (G 1, KV-8/9) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 78,
@@ -8728,12 +8728,12 @@
             "tempo_kodu": "DENGELI",
             "tempo_skoru": 64,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 4,
+            "on_grup_baskisi_sayisi": 5,
             "avantajli_stiller": [
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 4 presçi ve 4 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 3 at tam (3+ ölçüm), 6 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Belirgin kaçak yok; 5 presçi ve 3 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 4 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -8812,7 +8812,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-7, G 1) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 1, KV-7) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -8917,7 +8917,7 @@
               "no": 3,
               "isim": "ALATTİN",
               "yas": 5,
-              "cinsiyet": "5y a  a",
+              "cinsiyet": "5 y  a a",
               "irk": "Arap",
               "baba": "AYABAKAN",
               "anne": "SEBİLE",
@@ -8934,12 +8934,12 @@
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
               "agf_orani": null,
               "ganyan": null,
               "son_galop": {
@@ -8957,31 +8957,31 @@
                 "d_200": "",
                 "durum_kodu": "Bursa Kum"
               },
-              "taktik_yorum": "Geçmiş koşular için doğrulanmış ara-pozisyon ölçümü bulunamadı; dengeli 'Orta Grup' taktiği atandı.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%55.6) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "FERİDUN GÜNDÜZ",
               "antrenor": "N.GÜNDÜZ",
               "ekuriGrup": "",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (Dengeli Hat)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/6T · Sentetik: 2G/4T)",
+                "delta": 2,
+                "color": "#34d399",
+                "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
                 "dirtStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 16,
+                  "wins": 3,
+                  "top4": 6
                 },
                 "synStats": {
-                  "runs": 0,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 12,
+                  "wins": 2,
+                  "top4": 4
                 },
                 "turfStats": {
-                  "runs": 1,
-                  "wins": 0,
-                  "top4": 1
+                  "runs": 20,
+                  "wins": 2,
+                  "top4": 12
                 }
               },
               "sinif_analizi": null,
@@ -10691,7 +10691,7 @@
                 "grup_tabela_sayisi": 4,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 6 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (4 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 6 kez elit açık/grup (G 1, KV-8/9, G 3) koşularda boy göstermiştir (4 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -10863,7 +10863,7 @@
                 "grup_tabela_sayisi": 3,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, KV-7, G 1) koşularda boy göstermiştir (3 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (G 1, KV-8/9, KV-7) koşularda boy göstermiştir (3 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -10950,7 +10950,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (G 1, KV-8/9, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11036,7 +11036,7 @@
                 "grup_tabela_sayisi": 5,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 7 kez elit açık/grup (KV-8/9, G 2, G 3, G 1) koşularda boy göstermiştir (5 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 7 kez elit açık/grup (G 1, KV-8/9, G 3, G 2) koşularda boy göstermiştir (5 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11123,7 +11123,7 @@
                 "grup_tabela_sayisi": 6,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (G 1, KV-8/9, G 3) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 88,
@@ -11215,7 +11215,7 @@
                 "grup_tabela_sayisi": 6,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 2, G 3, G 1) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (G 1, KV-8/9, G 3, G 2) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11302,7 +11302,7 @@
                 "grup_tabela_sayisi": 8,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 2 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 2, G 3, KV-7) koşularda boy göstermiştir (8 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, KV-7, G 2) koşularda boy göstermiştir (8 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -12222,7 +12222,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 5 kez elit açık/grup (KV-7, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 5 kez elit açık/grup (G 3, KV-7) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -14580,7 +14580,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-7, G 1) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 1, KV-7) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 88,
