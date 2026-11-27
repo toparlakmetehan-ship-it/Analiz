@@ -4863,7 +4863,7 @@ function renderRaceDetails() {
         <tr><td class="k">Handikap Puanı</td><td class="v" style="color:var(--text-gold);">${h.handikap_puani ?? '-'}</td></tr>
         <tr><td class="k">Son 6 Koşu</td><td class="v" style="letter-spacing:1px;">${h.son_yarislar || '-'}</td></tr>
         <tr><td class="k">Dinlenme (KGS)</td><td class="v">${h.dinlenme_gunu || '-'} Gün</td></tr>
-        <tr><td class="k">AGF / Oran</td><td class="v">${h.agf_orani ? '%' + h.agf_orani : '-'} / ${h.ganyan ? h.ganyan + ' ₺' : '-'}</td></tr>
+        <tr><td class="k">AGF / Oran</td><td class="v">${(h.agf_orani && !(Number(h.agf_orani) === 10 && String(h.ganyan) === '3.50')) ? '%' + h.agf_orani : '<span style="color:#94a3b8;">Bekleniyor</span>'} / ${(h.ganyan && !(Number(h.agf_orani) === 10 && String(h.ganyan) === '3.50')) ? h.ganyan + ' ₺' : '<span style="color:#94a3b8;">Açılmadı</span>'}</td></tr>
         <tr><td class="k">Antrenör & Sahip</td><td class="v" style="font-size:0.75rem;">${h.antrenor || '-'} / ${h.sahip || '-'}</td></tr>
       </table>
     `;
@@ -5925,7 +5925,7 @@ function optimizeCoupon() {
   const budgetCompliance = Math.min(100, Math.round((finalCost / targetBudget) * 100));
 
   const allLegHorses = ratedLegs.flatMap(l => l.horses || []);
-  const placeholderAgfCount = allLegHorses.filter(h => Number(h.agf_orani) === 10).length;
+  const placeholderAgfCount = allLegHorses.filter(h => h.agf_orani == null || (Number(h.agf_orani) === 10 && String(h.ganyan) === '3.50')).length;
   const missingGalopCount = allLegHorses.filter(h => !h.son_galop || h.son_galop.durum_kodu === 'Kayıtsız').length;
   const isAgfMissing = allLegHorses.length > 0 && (placeholderAgfCount / allLegHorses.length) >= 0.8;
   const isGalopSparse = allLegHorses.length > 0 && (missingGalopCount / allLegHorses.length) >= 0.4;
@@ -5987,7 +5987,8 @@ function optimizeCoupon() {
                   const deltaStr = (h.paceDelta > 0) ? `+${h.paceDelta}` : (h.paceDelta !== 0 ? `${h.paceDelta}` : '0');
                   const deltaColor = (h.paceDelta > 0) ? '#10b981' : ((h.paceDelta < 0) ? '#ef4444' : '#94a3b8');
                   const agfVal = parseFloat(h.agf_orani) || 0;
-                  const isPlusEV = (agfVal <= 14 && !isSingle && (h.royalScore >= 66 || (h.son_galop && h.son_galop.son400hiz >= 53.5)));
+                  const isRealAgf = agfVal > 0 && !(agfVal === 10 && String(h.ganyan) === '3.50');
+                  const isPlusEV = (isRealAgf && agfVal <= 14 && !isSingle && (h.royalScore >= 66 || (h.son_galop && h.son_galop.son400hiz >= 53.5)));
                   const horseRoleTag = isSingle 
                     ? '<span style="color:#10b981; font-size:0.65rem; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10b981; padding:1px 5px; border-radius:3px; margin-left:4px;">★ ASİL BANKO</span>' 
                     : (h.isSurpriseSlot

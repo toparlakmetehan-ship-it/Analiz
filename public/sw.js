@@ -1,5 +1,5 @@
 // ROYAL TURF — Service Worker (PWA Offline Caching & Instant Network-First Updates)
-const APP_VERSION = 'v51-honest-scorecard-ui-20261127';
+const APP_VERSION = 'v52-no-fake-placeholders-20261127';
 const CACHE_NAME = `royal-turf-${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',

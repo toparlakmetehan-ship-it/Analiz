@@ -1409,8 +1409,8 @@ class TJKScraper:
                     "stil_renk": renk,
                     "stil_bg": f"{renk}1f",
                     "stil_border": f"{renk}59",
-                    "agf_orani": at["agf_orani"] or 10.0,
-                    "ganyan": at["ganyan_raw"] or "3.50",
+                    "agf_orani": at["agf_orani"] if at["agf_orani"] else None,
+                    "ganyan": at["ganyan_raw"] if at["ganyan_raw"] else None,
                     "son_galop": son_galop,
                     "taktik_yorum": tactical_comment,
                     "tempo_delta": 0 if is_young else (
