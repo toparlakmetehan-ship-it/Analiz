@@ -6,8 +6,8 @@
     "Adana",
     "İstanbul"
   ],
-  "guncellemeZamani": "2026-11-28T02:04:03.960679",
-  "sonSenkronizasyon": "02:04:03",
+  "guncellemeZamani": "2026-11-28T14:02:51.626152",
+  "sonSenkronizasyon": "14:02:51",
   "kaynak": "TJK Resmî Yarış Programı ve İstatistik Veritabanı (Canlı Resmî Veri Akışı)",
   "hipodromlar": [
     {
@@ -57,16 +57,16 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Süratli / Tempolu",
-            "tempo_kodu": "SURATLI",
-            "tempo_skoru": 75.6,
+            "tempo_sinifi": "Dengeli / Normal",
+            "tempo_kodu": "DENGELI",
+            "tempo_skoru": 64,
             "liderlik_baskisi_sayisi": 1,
-            "on_grup_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 2,
             "avantajli_stiller": [
-              "Diri Presçi (🏹)",
-              "Sabırlı Orta Grup (🛡️)"
+              "Tek Doğal Lider (⚡)",
+              "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Önde #4 FEMALE WARRIOR tempolu başlayacak ve hemen arkasında #2 DİNAMİT KIZ, #3 MY LADY BUG, #7 QUEEN SEÇİL pusu pozisyonu alacaktır. Tempolu akışta ön gruptan hemen sonra yer tutan Presçi ve Orta Grup safkanları viraj üstünde liderliği devralmaya en yakındır. Taktik kanıtı: 6 at tam (3+ ölçüm), 3 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Yarışta #4 FEMALE WARRIOR tek doğal lider pozisyonundadır. Startla kafayı alıp kendi temposunu kabul ettirirse virajı avantajlı dönebilir. Arkada dengeli takip eden presçiler düzlüğe diri çıkacaktır. Taktik kanıtı: 4 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": [
               {
                 "no": 4,
@@ -93,19 +93,20 @@
               "son_yarislar": "137772",
               "dinlenme_gunu": 6,
               "takilar": [
+                "(2)",
                 "KG",
                 "K",
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
+              "taktik_durumu": "DEGISKEN",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "10,55",
               "son_galop": {
                 "tarih": "20.11.2026",
                 "pist": "Kum",
@@ -121,21 +122,21 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%58.3) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%44.4). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "NİYAZİ ALACADAĞLI",
               "antrenor": "R.ATLI",
-              "ekuriGrup": "",
+              "ekuriGrup": "2",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/20T · Sentetik: 1G/1T)",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 4G/21T · Sentetik: 1G/1T)",
                 "delta": 2,
                 "color": "#34d399",
                 "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 24,
+                  "runs": 25,
                   "wins": 4,
-                  "top4": 20
+                  "top4": 21
                 },
                 "synStats": {
                   "runs": 1,
@@ -197,8 +198,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "-",
               "son_galop": {
                 "tarih": "20.11.2026",
                 "pist": "Kum",
@@ -271,6 +272,7 @@
               "son_yarislar": "254425",
               "dinlenme_gunu": 20,
               "takilar": [
+                "(4)",
                 "KG",
                 "DB",
                 "SK"
@@ -282,8 +284,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 17,
+              "ganyan": "4,55",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -299,21 +301,21 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%83.3) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ERKUTAY ÖZYURTERİ",
               "antrenor": "V.YILDIRIM",
-              "ekuriGrup": "",
+              "ekuriGrup": "4",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/14T · Sentetik: 1G/1T)",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 1G/15T · Sentetik: 1G/1T)",
                 "delta": 2,
                 "color": "#34d399",
                 "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 19,
+                  "runs": 20,
                   "wins": 1,
-                  "top4": 14
+                  "top4": 15
                 },
                 "synStats": {
                   "runs": 1,
@@ -326,15 +328,7 @@
                   "top4": 1
                 }
               },
-              "sinif_analizi": {
-                "sinif_dususu": true,
-                "ust_grup_sayisi": 1,
-                "en_ust_grup": "KV-7",
-                "grup_tabela_sayisi": 0,
-                "class_bonus": 0,
-                "badge": "💎 ÜST GRUP TECRÜBELİ (KV-7 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 1 kez elit açık/grup (KV-7) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
-              },
+              "sinif_analizi": null,
               "anne_kardesleri": {
                 "score": 65,
                 "hasSiblings": false,
@@ -358,6 +352,7 @@
               "son_yarislar": "623313",
               "dinlenme_gunu": 30,
               "takilar": [
+                "(6)",
                 "DB",
                 "SK"
               ],
@@ -368,8 +363,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 20,
+              "ganyan": "3,95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -385,19 +380,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%88.9) yarış içi ara-pozisyon ölçümleri Kaçak / Lider stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": -1,
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%94.4) yarış içi ara-pozisyon ölçümleri Kaçak / Lider stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "⚡ Avantajlı Kulvar (Bariyer dibinden efor sarf etmeden kafayı alır)",
               "sahip": "EGE C. CEVHERİBUCAK",
               "antrenor": "V.YILDIRIM",
-              "ekuriGrup": "",
+              "ekuriGrup": "6",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/9T · Sentetik: 1G/1T)",
                 "delta": 2,
                 "color": "#34d399",
                 "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 11,
+                  "runs": 12,
                   "wins": 2,
                   "top4": 9
                 },
@@ -436,6 +431,7 @@
               "son_yarislar": "107082",
               "dinlenme_gunu": 13,
               "takilar": [
+                "(1)",
                 "KG",
                 "SK"
               ],
@@ -446,8 +442,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 9,
+              "ganyan": "6,90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -463,21 +459,21 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%55.6). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%44.4). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "TEKİN AKYAVUZ",
               "antrenor": "S.AKYAVUZ",
-              "ekuriGrup": "",
+              "ekuriGrup": "1",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/14T · Sentetik: 1G/1T)",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/15T · Sentetik: 1G/1T)",
                 "delta": 2,
                 "color": "#34d399",
                 "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 23,
-                  "wins": 2,
-                  "top4": 14
+                  "runs": 24,
+                  "wins": 3,
+                  "top4": 15
                 },
                 "synStats": {
                   "runs": 1,
@@ -514,6 +510,7 @@
               "son_yarislar": "451651",
               "dinlenme_gunu": 32,
               "takilar": [
+                "(5)",
                 "DB",
                 "SKG",
                 "SK"
@@ -525,8 +522,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 19,
+              "ganyan": "4,10",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -542,19 +539,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%55.6). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%47.2). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ESİN SULTAN KEPME",
               "antrenor": "V.YILDIRIM",
-              "ekuriGrup": "",
+              "ekuriGrup": "5",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/6T · Sentetik: 1G/2T)",
                 "delta": 2,
                 "color": "#34d399",
                 "desc": "Hem Kaba Kumda hem Sentetikte galibiyet yapmış çok yönlü safkan; pist şartı seçmeksizin yüksek performans sergiler.",
                 "dirtStats": {
-                  "runs": 7,
+                  "runs": 8,
                   "wins": 2,
                   "top4": 6
                 },
@@ -593,18 +590,19 @@
               "son_yarislar": "583961",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(7)",
                 "KG",
                 "K"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
+              "agf_orani": 9,
+              "ganyan": "7,65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -620,19 +618,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%52.8) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%41.7). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "BURÇİN TOPALGÖKÇELİ",
               "antrenor": "M.KILIÇSEREN",
-              "ekuriGrup": "",
+              "ekuriGrup": "7",
               "pist_aptitude_analizi": {
                 "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
                 "delta": 1,
                 "color": "#34d399",
                 "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
-                  "runs": 17,
+                  "runs": 18,
                   "wins": 4,
                   "top4": 5
                 },
@@ -671,6 +669,7 @@
               "son_yarislar": "467023",
               "dinlenme_gunu": 21,
               "takilar": [
+                "(3)",
                 "DB",
                 "SK"
               ],
@@ -681,8 +680,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 14,
+              "ganyan": "4,95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -698,21 +697,21 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%52.8). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%44.4). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "HİLMİ KESKİN",
               "antrenor": "G.KÖSE",
-              "ekuriGrup": "",
+              "ekuriGrup": "3",
               "pist_aptitude_analizi": {
                 "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
                 "delta": 1,
                 "color": "#34d399",
                 "desc": "Her iki zeminde de tabela ve galibiyet başarısı var, ağır kumda da etkili koşması beklenir.",
                 "dirtStats": {
-                  "runs": 11,
+                  "runs": 12,
                   "wins": 1,
-                  "top4": 4
+                  "top4": 5
                 },
                 "synStats": {
                   "runs": 6,
@@ -749,6 +748,7 @@
               "son_yarislar": "566056",
               "dinlenme_gunu": 6,
               "takilar": [
+                "(8)",
                 "KG",
                 "K",
                 "DB"
@@ -760,8 +760,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "6,80",
               "son_galop": {
                 "tarih": "20.11.2026",
                 "pist": "Kum",
@@ -777,19 +777,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%58.3) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "ÖMER ALAÇAM",
               "antrenor": "Ö.ALAÇAM",
-              "ekuriGrup": "",
+              "ekuriGrup": "8",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (5 Koşuda 1 Tabela)",
+                "badge": "🏟️ Kaba Kum Deneyimli (6 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 5,
+                  "runs": 6,
                   "wins": 0,
                   "top4": 1
                 },
@@ -843,15 +843,16 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 50,
+            "tempo_sinifi": "Ağır / Yavaş",
+            "tempo_kodu": "YAVAS",
+            "tempo_skoru": 43.7,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 1,
+            "on_grup_baskisi_sayisi": 2,
             "avantajli_stiller": [
-              "Yeterli taktik ölçümü yok"
+              "Ön Grup Presçileri (🏹)",
+              "Bariyer Tutanlar"
             ],
-            "senaryo_yorumu": "Ara-pozisyon ölçümüyle sınıflandırılan 2/2 tecrübeli safkan (%50 kapsam ve en az 3 sınıflandırılmış safkan gerekli). Tempo ve at deltaları nötr bırakıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+            "senaryo_yorumu": "Yarışta belirgin bir kaçak safkan bulunmuyor. 2 presçi ön grupta yer tutsa da liderlik için sert bir erken hız çekişmesi yok; tempo ilk metrelerden itibaren ağır kalabilir. Koşunun son 400 metrede taktiksel bir sprinte dönüşmesi ve ön grupta yer tutan safkanların virajı yıpranmadan dönmesi beklenir. Taktik kanıtı: 4 at tam (3+ ölçüm), 0 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -872,6 +873,7 @@
               "son_yarislar": "073823",
               "dinlenme_gunu": 13,
               "takilar": [
+                "(7)",
                 "KG",
                 "DB",
                 "SK"
@@ -883,8 +885,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 9,
+              "ganyan": "6,10",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -900,19 +902,19 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%77.8) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%83.3) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
+              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "TEKİN AKYAVUZ",
               "antrenor": "S.AKYAVUZ",
-              "ekuriGrup": "",
+              "ekuriGrup": "7",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM DENEYİMLİ (0G / 3T)",
                 "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 3 koşuda 0G/3T elde etti, zemin şartlarına aşinadır.",
+                "desc": "Kaba kumda 4 koşuda 0G/3T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 3,
+                  "runs": 4,
                   "wins": 0,
                   "top4": 3
                 },
@@ -951,6 +953,7 @@
               "son_yarislar": "6",
               "dinlenme_gunu": 7,
               "takilar": [
+                "(4)",
                 "SK"
               ],
               "isYoungHorse": true,
@@ -960,8 +963,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "43,40",
               "son_galop": {
                 "tarih": "19.11.2026",
                 "pist": "Kum",
@@ -979,19 +982,19 @@
               },
               "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
               "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "İLYAS ŞAHİN",
               "antrenor": "M.ÖZYİĞİT",
-              "ekuriGrup": "",
+              "ekuriGrup": "4",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 1,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "synStats": {
                   "runs": 0,
@@ -1034,6 +1037,7 @@
               "son_yarislar": "36",
               "dinlenme_gunu": 172,
               "takilar": [
+                "(8)",
                 "KG",
                 "K",
                 "DB"
@@ -1045,8 +1049,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "20,20",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -1064,17 +1068,17 @@
               },
               "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
               "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "DİNÇER KARABULUT",
               "antrenor": "M.ÖZYİĞİT",
-              "ekuriGrup": "",
+              "ekuriGrup": "8",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 2,
+                  "runs": 3,
                   "wins": 0,
                   "top4": 1
                 },
@@ -1113,6 +1117,7 @@
               "son_yarislar": "5",
               "dinlenme_gunu": 7,
               "takilar": [
+                "(6)",
                 "KG",
                 "SK"
               ],
@@ -1123,8 +1128,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "20,05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1142,17 +1147,17 @@
               },
               "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
               "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "DOĞAN KÜÇÜKEMRE",
               "antrenor": "C.KARATAŞ",
-              "ekuriGrup": "",
+              "ekuriGrup": "6",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 1,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 },
@@ -1191,19 +1196,20 @@
               "son_yarislar": "356",
               "dinlenme_gunu": 16,
               "takilar": [
+                "(10)",
                 "KG",
                 "K",
                 "DB"
               ],
-              "isYoungHorse": true,
-              "taktik_durumu": "ILK_3_KOSU_SERBEST",
-              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
-              "stil_ikon": "🌱",
-              "stil_renk": "#38bdf8",
-              "stil_bg": "#38bdf81f",
-              "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "isYoungHorse": false,
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
+              "agf_orani": 5,
+              "ganyan": "8,75",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1219,19 +1225,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%90.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 2,
+              "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MUSTAFA ATLI",
               "antrenor": "S.GÜRKAN",
-              "ekuriGrup": "",
+              "ekuriGrup": "10",
               "pist_aptitude_analizi": {
-                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
+                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 0 Tabela)",
                 "delta": 0,
-                "color": "#38bdf8",
-                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -1276,6 +1282,7 @@
               "son_yarislar": "55",
               "dinlenme_gunu": 137,
               "takilar": [
+                "(9)",
                 "DB",
                 "SK"
               ],
@@ -1286,8 +1293,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "38,55",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1305,17 +1312,17 @@
               },
               "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
               "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ÖZGÜR ATAŞ",
               "antrenor": "M.ÖZYİĞİT",
-              "ekuriGrup": "",
+              "ekuriGrup": "9",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -1354,6 +1361,7 @@
               "son_yarislar": "36",
               "dinlenme_gunu": 20,
               "takilar": [
+                "(1)",
                 "KG",
                 "SK"
               ],
@@ -1364,8 +1372,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "20,00",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1383,19 +1391,19 @@
               },
               "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
               "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "CEMAL YILDIZ",
               "antrenor": "C.KARATAŞ",
-              "ekuriGrup": "",
+              "ekuriGrup": "1",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 2,
-                  "wins": 0,
-                  "top4": 1
+                  "runs": 3,
+                  "wins": 1,
+                  "top4": 2
                 },
                 "synStats": {
                   "runs": 0,
@@ -1432,18 +1440,19 @@
               "son_yarislar": "433",
               "dinlenme_gunu": 93,
               "takilar": [
+                "(5)",
                 "DB",
                 "SK"
               ],
-              "isYoungHorse": true,
-              "taktik_durumu": "ILK_3_KOSU_SERBEST",
-              "kosu_stili": "Taktik Serbest (İlk 3 Koşusu)",
-              "stil_ikon": "🌱",
-              "stil_renk": "#38bdf8",
-              "stil_bg": "#38bdf81f",
-              "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "isYoungHorse": false,
+              "taktik_durumu": "GUNCEL",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
+              "agf_orani": 10,
+              "ganyan": "5,25",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1459,19 +1468,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%90.0) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 1,
+              "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "EMRE KARAYEL",
               "antrenor": "M.DAŞ",
-              "ekuriGrup": "",
+              "ekuriGrup": "5",
               "pist_aptitude_analizi": {
-                "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
-                "delta": 0,
-                "color": "#38bdf8",
-                "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
+                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 2T)",
+                "delta": 1,
+                "color": "#10b981",
+                "desc": "Kaba kumda 3 koşuda 0G/2T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 2,
+                  "runs": 3,
                   "wins": 0,
                   "top4": 2
                 },
@@ -1510,6 +1519,7 @@
               "son_yarislar": "3052",
               "dinlenme_gunu": 20,
               "takilar": [
+                "(3)",
                 "DB",
                 "SKG",
                 "SK"
@@ -1521,8 +1531,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "9,35",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1538,21 +1548,21 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%100.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%100.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "tempo_delta": 2,
+              "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "NURETTİN SEYHAN",
               "antrenor": "M.ATAL",
-              "ekuriGrup": "",
+              "ekuriGrup": "3",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 2T)",
+                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 3T)",
                 "delta": 1,
                 "color": "#10b981",
-                "desc": "Kaba kumda 3 koşuda 0G/2T elde etti, zemin şartlarına aşinadır.",
+                "desc": "Kaba kumda 4 koşuda 0G/3T elde etti, zemin şartlarına aşinadır.",
                 "dirtStats": {
-                  "runs": 3,
+                  "runs": 4,
                   "wins": 0,
-                  "top4": 2
+                  "top4": 3
                 },
                 "synStats": {
                   "runs": 0,
@@ -1581,7 +1591,7 @@
               "baba": "VEKOMA (USA)",
               "anne": "DELIGHTFUL (USA)",
               "kisrak_babasi": "BERNARDINI (USA)",
-              "jokey": "V.ABİŞ",
+              "jokey": "M.A.SOLMAZ",
               "siklet": 57,
               "apranti_indirimi": false,
               "kulvar": 6,
@@ -1589,6 +1599,7 @@
               "son_yarislar": "2",
               "dinlenme_gunu": 112,
               "takilar": [
+                "(2)",
                 "SK",
                 "YP"
               ],
@@ -1599,8 +1610,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 62,
+              "ganyan": "1,50",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1618,19 +1629,19 @@
               },
               "taktik_yorum": "Kariyerinde 3 veya daha az koşusu bulunan safkan (Genç Safkanlar Kuralı 1). Karakter henüz oturmadığı için serbest gelişim stili atanır (0 Puan Nötr).",
               "tempo_delta": 0,
-              "kulvar_yorumu": "Taktik ölçümü var; dengeli tempo kabul edildi.",
+              "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "M.REŞAT AKKAN",
               "antrenor": "A.ÇIKMAN",
-              "ekuriGrup": "",
+              "ekuriGrup": "2",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 1,
+                  "runs": 2,
                   "wins": 0,
-                  "top4": 1
+                  "top4": 2
                 },
                 "synStats": {
                   "runs": 0,
@@ -1708,18 +1719,19 @@
               "son_yarislar": "704706",
               "dinlenme_gunu": 18,
               "takilar": [
+                "(3)",
                 "KG",
                 "K"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
+              "agf_orani": 4,
+              "ganyan": "19,60",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1735,14 +1747,14 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%61.1) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 1,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%52.8). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 0,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "İMAT BOZDOĞANLI",
               "antrenor": "Y.TUNCAY",
-              "ekuriGrup": "",
+              "ekuriGrup": "3",
               "pist_aptitude_analizi": {
-                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/9T · Sentetik: 1G/4T)",
+                "badge": "⭐ DUAL-PİST USTASI (Kum: 3G/9T · Sentetik: 1G/5T)",
                 "delta": 2,
                 "color": "#34d399",
                 "desc": "Hem Kaba Kumda hem Sentetik pistte galibiyete sahip elit safkan; pist seçmez, sentetikte de çok diridir.",
@@ -1752,9 +1764,9 @@
                   "top4": 9
                 },
                 "synStats": {
-                  "runs": 11,
+                  "runs": 12,
                   "wins": 1,
-                  "top4": 4
+                  "top4": 5
                 },
                 "turfStats": {
                   "runs": 8,
@@ -1792,6 +1804,7 @@
               "son_yarislar": "990373",
               "dinlenme_gunu": 7,
               "takilar": [
+                "(8)",
                 "KG"
               ],
               "isYoungHorse": false,
@@ -1801,8 +1814,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 10,
+              "ganyan": "10,15",
               "son_galop": {
                 "tarih": "3.05.2026",
                 "pist": "Kum",
@@ -1818,12 +1831,12 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%52.8) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "İBRAHİM ÇELİK",
               "antrenor": "Y.TUNCAY",
-              "ekuriGrup": "",
+              "ekuriGrup": "8",
               "pist_aptitude_analizi": {
                 "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
                 "delta": 1,
@@ -1835,7 +1848,7 @@
                   "top4": 14
                 },
                 "synStats": {
-                  "runs": 5,
+                  "runs": 6,
                   "wins": 0,
                   "top4": 2
                 },
@@ -1869,6 +1882,7 @@
               "son_yarislar": "580810",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(9)",
                 "KG",
                 "DB",
                 "SK"
@@ -1880,8 +1894,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "17,20",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1897,24 +1911,24 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%69.4) yarış içi ara-pozisyon ölçümleri Kaçak / Lider stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%80.6) yarış içi ara-pozisyon ölçümleri Kaçak / Lider stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ABDULLAH BALKU",
               "antrenor": "M.A.CANPOLATLI",
-              "ekuriGrup": "",
+              "ekuriGrup": "9",
               "pist_aptitude_analizi": {
                 "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 3T)",
                 "delta": 1,
                 "color": "#10b981",
-                "desc": "Sentetikte 7 koşuda 1G/3T elde etti; sentetik zemine ayak uyumu yüksektir.",
+                "desc": "Sentetikte 8 koşuda 1G/3T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 7,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 7,
+                  "runs": 8,
                   "wins": 1,
                   "top4": 3
                 },
@@ -1954,19 +1968,20 @@
               "son_yarislar": "275554",
               "dinlenme_gunu": 18,
               "takilar": [
+                "(6)",
                 "DB",
                 "SKG",
                 "SK"
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "kosu_stili": "Presçi",
+              "stil_ikon": "🏹",
+              "stil_renk": "#f97316",
+              "stil_bg": "#f973161f",
+              "stil_border": "#f9731659",
+              "agf_orani": 23,
+              "ganyan": "2,10",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -1982,12 +1997,12 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%44.4). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
-              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%38.9). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": 1,
+              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "SELİM YILDIZ",
               "antrenor": "R.TAŞDELEN",
-              "ekuriGrup": "",
+              "ekuriGrup": "6",
               "pist_aptitude_analizi": {
                 "badge": "⭐ DUAL-PİST USTASI (Kum: 2G/8T · Sentetik: 3G/7T)",
                 "delta": 2,
@@ -1999,7 +2014,7 @@
                   "top4": 8
                 },
                 "synStats": {
-                  "runs": 15,
+                  "runs": 16,
                   "wins": 3,
                   "top4": 7
                 },
@@ -2039,6 +2054,7 @@
               "son_yarislar": "005770",
               "dinlenme_gunu": 6,
               "takilar": [
+                "(5)",
                 "KG",
                 "SK"
               ],
@@ -2049,8 +2065,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "3,30",
               "son_galop": {
                 "tarih": "20.11.2026",
                 "pist": "Kum-İç",
@@ -2066,14 +2082,14 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%47.2). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%38.9). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 0,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "MAHMUT AKBAŞ",
               "antrenor": "S.AKYAVUZ",
-              "ekuriGrup": "",
+              "ekuriGrup": "5",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (4 Koşuda 1 Tabela)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (5 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -2083,7 +2099,7 @@
                   "top4": 17
                 },
                 "synStats": {
-                  "runs": 4,
+                  "runs": 5,
                   "wins": 0,
                   "top4": 1
                 },
@@ -2122,6 +2138,7 @@
               "son_yarislar": "472734",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(4)",
                 "DB",
                 "SK"
               ],
@@ -2132,8 +2149,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 19,
+              "ganyan": "3,30",
               "son_galop": {
                 "tarih": "",
                 "pist": "",
@@ -2149,26 +2166,26 @@
                 "d_200": "",
                 "durum_kodu": "Kayıtsız"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 6 tanesinde (%88.9) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%94.4) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MAHMUT AKBAŞ",
               "antrenor": "S.AKYAVUZ",
-              "ekuriGrup": "",
+              "ekuriGrup": "4",
               "pist_aptitude_analizi": {
-                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 9T)",
+                "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 10T)",
                 "delta": 1,
                 "color": "#10b981",
-                "desc": "Sentetikte 16 koşuda 1G/9T elde etti; sentetik zemine ayak uyumu yüksektir.",
+                "desc": "Sentetikte 17 koşuda 1G/10T elde etti; sentetik zemine ayak uyumu yüksektir.",
                 "dirtStats": {
                   "runs": 7,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 16,
+                  "runs": 17,
                   "wins": 1,
-                  "top4": 9
+                  "top4": 10
                 },
                 "turfStats": {
                   "runs": 21,
@@ -2192,7 +2209,7 @@
               "baba": "DERHADIR",
               "anne": "KANDEZİ",
               "kisrak_babasi": "ODİNHAN",
-              "jokey": "V.ABİŞ",
+              "jokey": "E.ÇANKAYA",
               "siklet": 56.5,
               "apranti_indirimi": false,
               "kulvar": 1,
@@ -2200,18 +2217,19 @@
               "son_yarislar": "060573",
               "dinlenme_gunu": 14,
               "takilar": [
+                "(1)",
                 "K",
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Düzlük Sprinteri",
               "stil_ikon": "🚀",
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 18,
+              "ganyan": "5,25",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -2227,29 +2245,29 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%55.6). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "GİZEM ÇAKMAKOĞLU",
               "antrenor": "Y.TUNCAY",
-              "ekuriGrup": "",
+              "ekuriGrup": "1",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 0 Tabela)",
-                "delta": 0,
-                "color": "#f3e5ab",
-                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
+                "badge": "⚖️ ÇİFT PİST UYUMLU (Kum & Sentetik Formu Yüksek)",
+                "delta": 1,
+                "color": "#34d399",
+                "desc": "Her iki zeminde de tabela ve galibiyet tecrübesi bulunuyor, sentetik zemine sorunsuz uyum sağlar.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 0,
                   "top4": 6
                 },
                 "synStats": {
-                  "runs": 1,
-                  "wins": 0,
-                  "top4": 0
+                  "runs": 2,
+                  "wins": 1,
+                  "top4": 1
                 },
                 "turfStats": {
-                  "runs": 39,
+                  "runs": 38,
                   "wins": 7,
                   "top4": 22
                 }
@@ -2278,6 +2296,7 @@
               "son_yarislar": "15-7964",
               "dinlenme_gunu": 18,
               "takilar": [
+                "(2)",
                 "KG",
                 "DB",
                 "SK"
@@ -2289,8 +2308,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 15,
+              "ganyan": "4,85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -2306,26 +2325,26 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 7 tanesinde (%97.2) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 8 tanesinde (%100.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "EYYÜP BECENE",
               "antrenor": "R.BECENE",
-              "ekuriGrup": "",
+              "ekuriGrup": "2",
               "pist_aptitude_analizi": {
-                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 5 Tabela)",
+                "badge": "👑 SENTETİK PİST UZMANI (Sentetikte 2G / 6 Tabela)",
                 "delta": 2,
                 "color": "#10b981",
-                "desc": "Sentetik pistte 8 koşuda 2 galibiyet, 5 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcıdır.",
+                "desc": "Sentetik pistte 9 koşuda 2 galibiyet, 6 tabela başarısı bulunuyor. Bu zeminde aksiyonu son derece akıcıdır.",
                 "dirtStats": {
                   "runs": 3,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 8,
+                  "runs": 9,
                   "wins": 2,
-                  "top4": 5
+                  "top4": 6
                 },
                 "turfStats": {
                   "runs": 12,
@@ -2363,6 +2382,7 @@
               "son_yarislar": "360700",
               "dinlenme_gunu": 6,
               "takilar": [
+                "(7)",
                 "KG",
                 "DB",
                 "SK"
@@ -2374,8 +2394,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "19,80",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -2391,14 +2411,14 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%58.3) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "HALİT DAĞTEKİN",
               "antrenor": "M.TEK",
-              "ekuriGrup": "",
+              "ekuriGrup": "7",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (4 Koşuda 1 Tabela)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (5 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -2408,7 +2428,7 @@
                   "top4": 22
                 },
                 "synStats": {
-                  "runs": 4,
+                  "runs": 5,
                   "wins": 0,
                   "top4": 1
                 },
@@ -2464,14 +2484,20 @@
             "tempo_sinifi": "Dengeli / Normal",
             "tempo_kodu": "DENGELI",
             "tempo_skoru": 64,
-            "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 3,
+            "liderlik_baskisi_sayisi": 1,
+            "on_grup_baskisi_sayisi": 2,
             "avantajli_stiller": [
               "Tek Doğal Lider (⚡)",
               "Takipçi Presçi (🏹)"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 3 presçi ve 5 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 9 at tam (3+ ölçüm), 2 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
-            "olasi_kacanlar": []
+            "senaryo_yorumu": "Yarışta #1 BECENE REİS tek doğal lider pozisyonundadır. Startla kafayı alıp kendi temposunu kabul ettirirse virajı avantajlı dönebilir. Arkada dengeli takip eden presçiler düzlüğe diri çıkacaktır. Taktik kanıtı: 9 at tam (3+ ölçüm), 2 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "olasi_kacanlar": [
+              {
+                "no": 1,
+                "isim": "BECENE REİS",
+                "st": 1
+              }
+            ]
           },
           "atlar": [
             {
@@ -2483,7 +2509,7 @@
               "baba": "HEMSWORTH (USA)",
               "anne": "MERVE ABLA",
               "kisrak_babasi": "SMART ROBIN (JPN)",
-              "jokey": "V.ABİŞ",
+              "jokey": "İ.AKYAVUZ",
               "siklet": 57,
               "apranti_indirimi": false,
               "kulvar": 1,
@@ -2491,19 +2517,20 @@
               "son_yarislar": "426293",
               "dinlenme_gunu": 14,
               "takilar": [
+                "(4)",
                 "KG",
                 "DB",
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Kaçak / Lider",
+              "stil_ikon": "⚡",
+              "stil_renk": "#eab308",
+              "stil_bg": "#eab3081f",
+              "stil_border": "#eab30859",
+              "agf_orani": 18,
+              "ganyan": "4,30",
               "son_galop": {
                 "tarih": "12.11.2026",
                 "pist": "Kum",
@@ -2519,26 +2546,26 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum"
               },
-              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 6 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Kaçak / Lider (%52.4). Baskın taktik Kaçak / Lider kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
-              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
+              "kulvar_yorumu": "⚡ Avantajlı Kulvar (Bariyer dibinden efor sarf etmeden kafayı alır)",
               "sahip": "SAVAŞ ERCÜMENT BECENE",
               "antrenor": "R.BECENE",
-              "ekuriGrup": "",
+              "ekuriGrup": "4",
               "pist_aptitude_analizi": {
-                "badge": "🌱 SENTETİKTE İLK KEZ: Soyu (Kum & Sentetik Dengeli Hat) Sentetikle Uyumlu",
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
                 "delta": 0,
-                "color": "#38bdf8",
-                "desc": "Kariyerinde sentetik koşusu yok ancak soyu (Kum & Sentetik Dengeli Hat) sentetik aksiyonuna yatkındır.",
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
                   "runs": 7,
                   "wins": 2,
                   "top4": 5
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
                   "runs": 1,
@@ -2570,6 +2597,7 @@
               "son_yarislar": "534403",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(1)",
                 "SK"
               ],
               "isYoungHorse": false,
@@ -2579,8 +2607,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 10,
+              "ganyan": "8,50",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -2601,7 +2629,7 @@
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "D.DENİZ KANAR",
               "antrenor": "M.GÜNEŞ",
-              "ekuriGrup": "",
+              "ekuriGrup": "1",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 1 Tabela)",
                 "delta": 0,
@@ -2647,6 +2675,7 @@
               "son_yarislar": "611258",
               "dinlenme_gunu": 19,
               "takilar": [
+                "(6)",
                 "DB",
                 "SK"
               ],
@@ -2657,8 +2686,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 9,
+              "ganyan": "9,70",
               "son_galop": {
                 "tarih": "21.11.2026",
                 "pist": "Kum-İç",
@@ -2674,24 +2703,24 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
-              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 8 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%52.8) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "BÜLENT YARDIMCI",
               "antrenor": "EY.YARDIMCI",
-              "ekuriGrup": "",
+              "ekuriGrup": "6",
               "pist_aptitude_analizi": {
-                "badge": "🔥 SENTETİK PİST DENEYİMLİ (0G / 1T)",
-                "delta": 1,
-                "color": "#10b981",
-                "desc": "Sentetikte 2 koşuda 0G/1T elde etti; sentetik zemine ayak uyumu yüksektir.",
+                "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
                   "runs": 10,
                   "wins": 2,
                   "top4": 5
                 },
                 "synStats": {
-                  "runs": 2,
+                  "runs": 3,
                   "wins": 0,
                   "top4": 1
                 },
@@ -2725,6 +2754,7 @@
               "son_yarislar": "775637",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(9)",
                 "SK",
                 "ÖG"
               ],
@@ -2735,8 +2765,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "21,40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -2757,7 +2787,7 @@
               "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "BİLAL DOĞAN",
               "antrenor": "R.TAŞDELEN",
-              "ekuriGrup": "",
+              "ekuriGrup": "9",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
                 "delta": 0,
@@ -2803,6 +2833,7 @@
               "son_yarislar": "233624",
               "dinlenme_gunu": 14,
               "takilar": [
+                "(5)",
                 "SK"
               ],
               "isYoungHorse": false,
@@ -2812,8 +2843,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 28,
+              "ganyan": "2,15",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -2834,7 +2865,7 @@
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "SEMİH KATI",
               "antrenor": "H.SUNKAR",
-              "ekuriGrup": "",
+              "ekuriGrup": "5",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
                 "delta": 0,
@@ -2880,6 +2911,7 @@
               "son_yarislar": "55419",
               "dinlenme_gunu": 27,
               "takilar": [
+                "(6)",
                 "DB",
                 "SKG",
                 "SK"
@@ -2891,8 +2923,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 13,
+              "ganyan": "7,90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -2913,7 +2945,7 @@
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "CELAL DOĞAN",
               "antrenor": "Y.TUNCAY",
-              "ekuriGrup": "",
+              "ekuriGrup": "6",
               "pist_aptitude_analizi": {
                 "badge": "🔥 SENTETİK PİST DENEYİMLİ (1G / 1T)",
                 "delta": 1,
@@ -2959,6 +2991,7 @@
               "son_yarislar": "57390",
               "dinlenme_gunu": 27,
               "takilar": [
+                "(8)",
                 "DB",
                 "SKG",
                 "SK"
@@ -2970,8 +3003,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "19,55",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -2987,14 +3020,14 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%80.0) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 6 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%85.7) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ESER ÖKSÜZER",
               "antrenor": "S.ALTUNDAĞ",
-              "ekuriGrup": "",
+              "ekuriGrup": "8",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 1 Tabela)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (4 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -3004,7 +3037,7 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 3,
+                  "runs": 4,
                   "wins": 0,
                   "top4": 1
                 },
@@ -3038,6 +3071,7 @@
               "son_yarislar": "358473",
               "dinlenme_gunu": 19,
               "takilar": [
+                "(3)",
                 "DB",
                 "SKG",
                 "SK"
@@ -3049,8 +3083,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 9,
+              "ganyan": "8,65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -3071,7 +3105,7 @@
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "BÜLENT DEMİR",
               "antrenor": "EY.YARDIMCI",
-              "ekuriGrup": "",
+              "ekuriGrup": "3",
               "pist_aptitude_analizi": {
                 "badge": "⚠️ SENTETİKTE İLK KEZ: Kaba Kum Formu Var",
                 "delta": -1,
@@ -3117,6 +3151,7 @@
               "son_yarislar": "8709",
               "dinlenme_gunu": 20,
               "takilar": [
+                "(12)",
                 "K",
                 "DB"
               ],
@@ -3128,7 +3163,7 @@
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
               "agf_orani": null,
-              "ganyan": null,
+              "ganyan": "60,70",
               "son_galop": {
                 "tarih": "25.10.2026",
                 "pist": "Kum",
@@ -3144,14 +3179,14 @@
                 "d_200": "",
                 "durum_kodu": "Ankara Kum"
               },
-              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%100.0) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%100.0) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "OĞUZ YILDIRIM",
               "antrenor": "E.KARATAŞ",
-              "ekuriGrup": "",
+              "ekuriGrup": "12",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 0 Tabela)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (2 Koşuda 0 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -3161,7 +3196,7 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 1,
+                  "runs": 2,
                   "wins": 0,
                   "top4": 0
                 },
@@ -3195,6 +3230,7 @@
               "son_yarislar": "8",
               "dinlenme_gunu": 7,
               "takilar": [
+                "(11)",
                 "KG",
                 "K",
                 "DB"
@@ -3206,8 +3242,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "31,65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -3228,7 +3264,7 @@
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "NİYAZİ ALACADAĞLI",
               "antrenor": "R.ATLI",
-              "ekuriGrup": "",
+              "ekuriGrup": "11",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
@@ -3240,7 +3276,7 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
                   "top4": 0
                 },
@@ -3273,7 +3309,9 @@
               "handikap_puani": 38,
               "son_yarislar": "143434",
               "dinlenme_gunu": 14,
-              "takilar": [],
+              "takilar": [
+                "(2)"
+              ],
               "isYoungHorse": false,
               "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
@@ -3281,8 +3319,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "8,90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -3298,26 +3336,26 @@
                 "d_200": "",
                 "durum_kodu": "Şanlıurfa Kum-İç"
               },
-              "taktik_yorum": "Son 6 sınıflandırılabilir geçmiş koşunun 4 tanesinde (%85.7) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 7 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%89.3) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "RİFAT YAVUZ",
               "antrenor": "S.KARAKEÇİLİ",
-              "ekuriGrup": "",
+              "ekuriGrup": "2",
               "pist_aptitude_analizi": {
-                "badge": "🌱 SENTETİKTE İLK KEZ: Soyu (Kum & Sentetik Dengeli Hat) Sentetikle Uyumlu",
+                "badge": "🏟️ Sentetik Pist Uyumlu (1 Koşuda 1 Tabela)",
                 "delta": 0,
-                "color": "#38bdf8",
-                "desc": "Kariyerinde sentetik koşusu yok ancak soyu (Kum & Sentetik Dengeli Hat) sentetik aksiyonuna yatkındır.",
+                "color": "#f3e5ab",
+                "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
                 "dirtStats": {
                   "runs": 9,
                   "wins": 1,
                   "top4": 7
                 },
                 "synStats": {
-                  "runs": 0,
+                  "runs": 1,
                   "wins": 0,
-                  "top4": 0
+                  "top4": 1
                 },
                 "turfStats": {
                   "runs": 0,
@@ -3349,19 +3387,20 @@
               "son_yarislar": "6890",
               "dinlenme_gunu": 27,
               "takilar": [
+                "(10)",
                 "KG",
                 "K",
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "DEGISKEN",
+              "taktik_durumu": "GUNCEL",
               "kosu_stili": "Orta Grup",
               "stil_ikon": "🛡️",
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "42,45",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -3377,14 +3416,14 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 4 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%50.0). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
               "tempo_delta": 0,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "OKAN MALGİL",
               "antrenor": "M.AKYAVUZ",
-              "ekuriGrup": "",
+              "ekuriGrup": "10",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Sentetik Pist Uyumlu (2 Koşuda 0 Tabela)",
+                "badge": "🏟️ Sentetik Pist Uyumlu (3 Koşuda 0 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Sentetik pist tecrübesi mevcut; koşu sınıfına göre performansını sahaya yansıtması beklenir.",
@@ -3394,7 +3433,7 @@
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 2,
+                  "runs": 3,
                   "wins": 0,
                   "top4": 0
                 },
@@ -3433,16 +3472,16 @@
             }
           ],
           "tempo_senaryosu": {
-            "tempo_sinifi": "Dengeli / Normal",
-            "tempo_kodu": "DENGELI",
-            "tempo_skoru": 59.8,
+            "tempo_sinifi": "Ağır / Yavaş",
+            "tempo_kodu": "YAVAS",
+            "tempo_skoru": 44,
             "liderlik_baskisi_sayisi": 0,
-            "on_grup_baskisi_sayisi": 3,
+            "on_grup_baskisi_sayisi": 2,
             "avantajli_stiller": [
-              "Tek Doğal Lider (⚡)",
-              "Takipçi Presçi (🏹)"
+              "Ön Grup Presçileri (🏹)",
+              "Bariyer Tutanlar"
             ],
-            "senaryo_yorumu": "Belirgin kaçak yok; 3 presçi ve 2 orta grup safkan tempo dengesini koruyacak. Büyük bir erken hız çekişmesi beklenmiyor. Taktik kanıtı: 4 at tam (3+ ölçüm), 2 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
+            "senaryo_yorumu": "Yarışta belirgin bir kaçak safkan bulunmuyor. 2 presçi ön grupta yer tutsa da liderlik için sert bir erken hız çekişmesi yok; tempo ilk metrelerden itibaren ağır kalabilir. Koşunun son 400 metrede taktiksel bir sprinte dönüşmesi ve ön grupta yer tutan safkanların virajı yıpranmadan dönmesi beklenir. Taktik kanıtı: 1 at tam (3+ ölçüm), 5 at sınırlı (1-2 ölçüm) ara-pozisyon verisine dayanıyor.",
             "olasi_kacanlar": []
           },
           "atlar": [
@@ -3463,6 +3502,7 @@
               "son_yarislar": "20623",
               "dinlenme_gunu": 35,
               "takilar": [
+                "(2)",
                 "K",
                 "DB"
               ],
@@ -3473,8 +3513,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 14,
+              "ganyan": "5,45",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -3491,11 +3531,11 @@
                 "durum_kodu": "Adana Kum"
               },
               "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 5 tanesinde (%100.0) yarış içi ara-pozisyon ölçümleri Orta Grup stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "NİMET ARİF KURTEL",
               "antrenor": "C.DEMİR",
-              "ekuriGrup": "",
+              "ekuriGrup": "2",
               "pist_aptitude_analizi": {
                 "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
                 "delta": 0,
@@ -3528,7 +3568,7 @@
               "no": 2,
               "isim": "WHITE WRIST",
               "yas": 2,
-              "cinsiyet": "2 y  dd",
+              "cinsiyet": "2y d  d",
               "irk": "İngiliz",
               "baba": "TRAPPE SHOT (USA)",
               "anne": "EUCLASE (USA)",
@@ -3541,6 +3581,7 @@
               "son_yarislar": "478245",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(8)",
                 "KG",
                 "DB",
                 "SK",
@@ -3553,8 +3594,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "6,55",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -3575,7 +3616,7 @@
               "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
               "sahip": "SIRAÇ DEMİR",
               "antrenor": "F.DEMİR",
-              "ekuriGrup": "",
+              "ekuriGrup": "8",
               "pist_aptitude_analizi": {
                 "badge": "🔥 KABA KUM DENEYİMLİ (0G / 5T)",
                 "delta": 1,
@@ -3621,6 +3662,7 @@
               "son_yarislar": "",
               "dinlenme_gunu": 20,
               "takilar": [
+                "(5)",
                 "KG",
                 "SK"
               ],
@@ -3631,8 +3673,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "23,95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -3653,7 +3695,7 @@
               "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "SEBAHAT EBRU TÜRKMEN",
               "antrenor": "A.ÇIKMAN",
-              "ekuriGrup": "",
+              "ekuriGrup": "5",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
@@ -3686,7 +3728,7 @@
               "no": 4,
               "isim": "BELIEVER",
               "yas": 2,
-              "cinsiyet": "2 y  dd",
+              "cinsiyet": "2y d  d",
               "irk": "İngiliz",
               "baba": "AGRESIVO (USA)",
               "anne": "SHUSIENAE",
@@ -3699,19 +3741,20 @@
               "son_yarislar": "56793",
               "dinlenme_gunu": 20,
               "takilar": [
+                "(1)",
                 "KG",
                 "K",
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Düzlük Sprinteri",
-              "stil_ikon": "🚀",
-              "stil_renk": "#a855f7",
-              "stil_bg": "#a855f71f",
-              "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
+              "agf_orani": 13,
+              "ganyan": "5,95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -3727,29 +3770,29 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 4 sınıflandırılabilir geçmiş koşunun 2 tanesinde (%70.0) yarış içi ara-pozisyon ölçümleri Düzlük Sprinteri stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
-              "tempo_delta": 0,
+              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
+              "tempo_delta": 1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "SERDAL ADALI",
               "antrenor": "K.ARDA",
-              "ekuriGrup": "",
+              "ekuriGrup": "1",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (1 Koşuda 1 Tabela)",
+                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 1,
+                  "runs": 0,
                   "wins": 0,
-                  "top4": 1
+                  "top4": 0
                 },
                 "synStats": {
-                  "runs": 2,
+                  "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "turfStats": {
-                  "runs": 2,
+                  "runs": 0,
                   "wins": 0,
                   "top4": 0
                 }
@@ -3765,7 +3808,7 @@
               "no": 5,
               "isim": "BITTERSWEET",
               "yas": 2,
-              "cinsiyet": "2 y  dd",
+              "cinsiyet": "2y d  d",
               "irk": "İngiliz",
               "baba": "RUN AWAY AND HIDE (USA)",
               "anne": "BACKSTAGE",
@@ -3778,19 +3821,20 @@
               "son_yarislar": "56857",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(7)",
                 "KG",
                 "K",
                 "DB"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
+              "taktik_durumu": "DEGISKEN",
               "kosu_stili": "Presçi",
               "stil_ikon": "🏹",
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "17,90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -3806,19 +3850,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 3 tanesinde (%66.7) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Son 4 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Presçi (%50.0). Baskın taktik Presçi kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
               "tempo_delta": 1,
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "ERKAN KARACA",
               "antrenor": "M.PEKİN",
-              "ekuriGrup": "",
+              "ekuriGrup": "7",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (5 Koşuda 0 Tabela)",
+                "badge": "🏟️ Kaba Kum Deneyimli (4 Koşuda 0 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 5,
+                  "runs": 4,
                   "wins": 0,
                   "top4": 0
                 },
@@ -3857,18 +3901,19 @@
               "son_yarislar": "469568",
               "dinlenme_gunu": 11,
               "takilar": [
+                "(6)",
                 "K",
                 "DB"
               ],
               "isYoungHorse": false,
               "taktik_durumu": "DEGISKEN",
-              "kosu_stili": "Orta Grup",
-              "stil_ikon": "🛡️",
-              "stil_renk": "#3b82f6",
-              "stil_bg": "#3b82f61f",
-              "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "kosu_stili": "Düzlük Sprinteri",
+              "stil_ikon": "🚀",
+              "stil_renk": "#a855f7",
+              "stil_bg": "#a855f71f",
+              "stil_border": "#a855f759",
+              "agf_orani": 1,
+              "ganyan": "37,80",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -3884,19 +3929,19 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Orta Grup (%52.8). Baskın taktik Orta Grup kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
-              "tempo_delta": 0,
+              "taktik_yorum": "Son 8 ölçümlü koşuda stiller değişkenlik gösterdi; en sık görülen stil Düzlük Sprinteri (%47.2). Baskın taktik Düzlük Sprinteri kabul edildi, tempo etkisi sınırlandırıldı. Kaynak: Accurace (resmî olmayan ölçüm).",
+              "tempo_delta": -1,
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "MAHMUT SEVİM",
               "antrenor": "G.KÖSE",
-              "ekuriGrup": "",
+              "ekuriGrup": "6",
               "pist_aptitude_analizi": {
-                "badge": "🏟️ Kaba Kum Deneyimli (6 Koşuda 1 Tabela)",
+                "badge": "🏟️ Kaba Kum Deneyimli (7 Koşuda 1 Tabela)",
                 "delta": 0,
                 "color": "#f3e5ab",
                 "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 6,
+                  "runs": 7,
                   "wins": 0,
                   "top4": 1
                 },
@@ -3935,6 +3980,7 @@
               "son_yarislar": "33",
               "dinlenme_gunu": 23,
               "takilar": [
+                "(4)",
                 "K"
               ],
               "isYoungHorse": true,
@@ -3944,8 +3990,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 25,
+              "ganyan": "2,85",
               "son_galop": {
                 "tarih": "23.11.2026",
                 "pist": "Kum",
@@ -3966,7 +4012,7 @@
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "KEZİBAN BALTACI",
               "antrenor": "KAD.BALTACI",
-              "ekuriGrup": "",
+              "ekuriGrup": "4",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
@@ -4012,6 +4058,7 @@
               "son_yarislar": "5",
               "dinlenme_gunu": 7,
               "takilar": [
+                "(10)",
                 "KG",
                 "DB",
                 "SK"
@@ -4023,8 +4070,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "29,25",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -4045,7 +4092,7 @@
               "kulvar_yorumu": "Orta kulvar dengeli",
               "sahip": "ŞEYHMUS AKIN",
               "antrenor": "M.TEK",
-              "ekuriGrup": "",
+              "ekuriGrup": "10",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
@@ -4078,7 +4125,7 @@
               "no": 9,
               "isim": "PRINCESS DİDİ",
               "yas": 2,
-              "cinsiyet": "2 y  dd",
+              "cinsiyet": "2y d  d",
               "irk": "İngiliz",
               "baba": "KLIMT (USA)",
               "anne": "DEMİR İNCİ",
@@ -4091,6 +4138,7 @@
               "son_yarislar": "69",
               "dinlenme_gunu": 55,
               "takilar": [
+                "(3)",
                 "KG",
                 "K",
                 "DB"
@@ -4102,8 +4150,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "23,25",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -4124,19 +4172,19 @@
               "kulvar_yorumu": "Dış kulvar (Dışarıdan dolanma veya erken sprint riski)",
               "sahip": "MURAT AKÇA",
               "antrenor": "T.TÜRKMEN",
-              "ekuriGrup": "",
+              "ekuriGrup": "3",
               "pist_aptitude_analizi": {
                 "badge": "🌱 Pist Deneyimi: İlk 3 Koşusu (Taktik & Pist Nötr)",
                 "delta": 0,
                 "color": "#38bdf8",
                 "desc": "Safkan kariyerinin başında (≤3 yarış). Pist adaptasyonu ve gidişatı henüz oturmadığı için puanı nötr tutulur.",
                 "dirtStats": {
-                  "runs": 1,
+                  "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
                 "synStats": {
-                  "runs": 1,
+                  "runs": 0,
                   "wins": 0,
                   "top4": 0
                 },
@@ -4157,7 +4205,7 @@
               "no": 10,
               "isim": "ROYAL PRYTANIA",
               "yas": 2,
-              "cinsiyet": "2 y  dd",
+              "cinsiyet": "2y d  d",
               "irk": "İngiliz",
               "baba": "GENERAL QUARTERS (USA)",
               "anne": "MISS PRYTANIA (USA)",
@@ -4170,18 +4218,19 @@
               "son_yarislar": "06342",
               "dinlenme_gunu": 23,
               "takilar": [
+                "(9)",
                 "DB",
                 "SK"
               ],
               "isYoungHorse": false,
-              "taktik_durumu": "GUNCEL",
-              "kosu_stili": "Presçi",
-              "stil_ikon": "🏹",
-              "stil_renk": "#f97316",
-              "stil_bg": "#f973161f",
-              "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "taktik_durumu": "DEGISKEN",
+              "kosu_stili": "Orta Grup",
+              "stil_ikon": "🛡️",
+              "stil_renk": "#3b82f6",
+              "stil_bg": "#3b82f61f",
+              "stil_border": "#3b82f659",
+              "agf_orani": 35,
+              "ganyan": "2,60",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -4197,29 +4246,29 @@
                 "d_200": "",
                 "durum_kodu": "Adana Kum"
               },
-              "taktik_yorum": "Son 5 sınıflandırılabilir geçmiş koşunun 2 tanesinde (%60.0) yarış içi ara-pozisyon ölçümleri Presçi stilini gösterdi. Kaynak: Accurace, resmî olmayan 100 m ara-pozisyon ölçümleri; TJK yarış kaydıyla tarih, şehir, koşu, at adı ve bitiriş sırası üzerinden eşleştirildi.",
+              "taktik_yorum": "Geçmiş ara-pozisyon ölçümü olmadığı için dengeli 'Orta Grup' taktiği atandı.",
               "tempo_delta": 1,
-              "kulvar_yorumu": "👑 Altın Kulvar (Bariyer dibi pususu, viraja en kısa yoldan girer)",
+              "kulvar_yorumu": "Bariyer dibi avantajlı (Erken yer tutma kolaylığı)",
               "sahip": "V.HAKAN KELEŞ",
               "antrenor": "V.YILDIRIM",
-              "ekuriGrup": "",
+              "ekuriGrup": "9",
               "pist_aptitude_analizi": {
-                "badge": "🔥 KABA KUM DENEYİMLİ (0G / 2T)",
-                "delta": 1,
-                "color": "#10b981",
-                "desc": "Kaba kumda 3 koşuda 0G/2T elde etti, zemin şartlarına aşinadır.",
+                "badge": "🏟️ Kaba Kum Deneyimli (Dengeli Hat)",
+                "delta": 0,
+                "color": "#f3e5ab",
+                "desc": "Kaba kum pistte tecrübesi bulunuyor; yarış temposuna göre taktik konum alacaktır.",
                 "dirtStats": {
-                  "runs": 3,
+                  "runs": 0,
                   "wins": 0,
-                  "top4": 2
+                  "top4": 0
                 },
                 "synStats": {
-                  "runs": 1,
+                  "runs": 0,
                   "wins": 0,
-                  "top4": 1
+                  "top4": 0
                 },
                 "turfStats": {
-                  "runs": 1,
+                  "runs": 0,
                   "wins": 0,
                   "top4": 0
                 }
@@ -4295,8 +4344,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 13,
+              "ganyan": "2.75",
               "son_galop": {
                 "tarih": "15.10.2026",
                 "pist": "Kum",
@@ -4375,8 +4424,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 23,
+              "ganyan": "2.35",
               "son_galop": {
                 "tarih": "20.06.2026",
                 "pist": "Kum",
@@ -4454,8 +4503,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 14,
+              "ganyan": "6.05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -4539,8 +4588,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "10.80",
               "son_galop": {
                 "tarih": "15.11.2026",
                 "pist": "Kum",
@@ -4599,7 +4648,7 @@
               "baba": "TÜMÖZ BEY",
               "anne": "GÜZ GÜZELİ",
               "kisrak_babasi": "",
-              "jokey": "V.ABİŞ",
+              "jokey": "H.ÇİZİK",
               "siklet": 57.5,
               "apranti_indirimi": false,
               "kulvar": 4,
@@ -4614,8 +4663,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 42,
+              "ganyan": "4.35",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -4693,8 +4742,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "10.80",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -4772,8 +4821,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "15.90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -4887,8 +4936,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "5.45",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -4948,8 +4997,8 @@
                   "DEEP GIRL"
                 ],
                 "totalWins": 1,
-                "text": "Anne Kardeşleri: DEEP GIRL (1 Galibiyet / 13 Koşu)",
-                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: DEEP GIRL (1 Galibiyet / 13 Koşu))"
+                "text": "Anne Kardeşleri: DEEP GIRL (1 Galibiyet / 14 Koşu)",
+                "badge": "⭐ Tabela Gören Kardeşler (Anne Kardeşleri: DEEP GIRL (1 Galibiyet / 14 Koşu))"
               }
             },
             {
@@ -4980,8 +5029,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "-",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5048,7 +5097,7 @@
               "baba": "VICTOIRE PISA (JPN)",
               "anne": "PERCEPTION",
               "kisrak_babasi": "PERFECT STORM",
-              "jokey": "V.ABİŞ",
+              "jokey": "M.S.ÇELİK",
               "siklet": 60,
               "apranti_indirimi": false,
               "kulvar": 6,
@@ -5066,8 +5115,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 60,
+              "ganyan": "2.35",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5152,8 +5201,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 15,
+              "ganyan": "4.95",
               "son_galop": {
                 "tarih": "21.11.2026",
                 "pist": "Kum",
@@ -5203,7 +5252,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, G 3, KV-7) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 4 kez elit açık/grup (KV-8/9, KV-7, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -5238,8 +5287,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "13.45",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5330,8 +5379,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 11,
+              "ganyan": "4.05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5416,8 +5465,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "3.25",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5534,8 +5583,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 17,
+              "ganyan": "2.80",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -5600,7 +5649,7 @@
               "baba": "COOGER",
               "anne": "ACTALION",
               "kisrak_babasi": "LION HEART (USA)",
-              "jokey": "V.ABİŞ",
+              "jokey": "E.ÇANKAYA",
               "siklet": 61,
               "apranti_indirimi": false,
               "kulvar": 6,
@@ -5619,8 +5668,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 10,
+              "ganyan": "14.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5697,8 +5746,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "8.25",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5782,8 +5831,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "12.65",
               "son_galop": {
                 "tarih": "19.11.2026",
                 "pist": "Kum-İç",
@@ -5859,8 +5908,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "20.35",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -5945,8 +5994,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 18,
+              "ganyan": "10.90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6024,8 +6073,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 11,
+              "ganyan": "3.45",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6084,7 +6133,7 @@
               "baba": "MENDIP (USA)",
               "anne": "AMAZON QUEEN",
               "kisrak_babasi": "PLEASANTLY PERFECT (USA)",
-              "jokey": "İ.KATI",
+              "jokey": "F.S.M.SANSAR",
               "siklet": 55.5,
               "apranti_indirimi": false,
               "kulvar": 3,
@@ -6101,8 +6150,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "30.65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6179,8 +6228,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "21.00",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -6258,8 +6307,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 7,
+              "ganyan": "11.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6311,7 +6360,7 @@
                   "JOYFUL RUNNER"
                 ],
                 "totalWins": 0,
-                "text": "Anne Kardeşleri: JOYFUL RUNNER (3 Koşu tecrübesi)",
+                "text": "Anne Kardeşleri: JOYFUL RUNNER (4 Koşu tecrübesi)",
                 "badge": ""
               }
             },
@@ -6342,8 +6391,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "11.95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6421,8 +6470,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 20,
+              "ganyan": "7.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6574,8 +6623,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 12,
+              "ganyan": "4.15",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -6625,7 +6674,7 @@
                 "grup_tabela_sayisi": 1,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 3, KV-7) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, KV-7, G 3) koşularda boy göstermiştir (1 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -6660,8 +6709,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 32,
+              "ganyan": "8.90",
               "son_galop": {
                 "tarih": "18.11.2026",
                 "pist": "Kum",
@@ -6738,8 +6787,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 20,
+              "ganyan": "6.80",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -6823,8 +6872,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "7.25",
               "son_galop": {
                 "tarih": "19.11.2026",
                 "pist": "Kum",
@@ -6902,8 +6951,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "7.95",
               "son_galop": {
                 "tarih": "19.11.2026",
                 "pist": "Kum",
@@ -6996,8 +7045,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "6.95",
               "son_galop": {
                 "tarih": "27.11.2026",
                 "pist": "Kum",
@@ -7080,8 +7129,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 12,
+              "ganyan": "4.30",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -7131,7 +7180,7 @@
                 "grup_tabela_sayisi": 0,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (G 3, KV-7) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 2 kez elit açık/grup (KV-7, G 3) koşularda boy göstermiştir (0 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -7163,8 +7212,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "6.25",
               "son_galop": {
                 "tarih": "19.11.2026",
                 "pist": "Kum-İç",
@@ -7241,8 +7290,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 7,
+              "ganyan": "7.50",
               "son_galop": {
                 "tarih": "",
                 "pist": "",
@@ -7349,8 +7398,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 12,
+              "ganyan": "4.60",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -7424,19 +7473,19 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "17.55",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
                 "sehir": "Kocaeli",
                 "tur": "Galop",
-                "derece": "800: 0.51.40 / 600: 0.00.00 / 400: 0.24.60",
+                "derece": "800: 0.51.40 / 400: 0.24.60",
                 "son400hiz": 58.5,
                 "d_1200": "",
                 "d_1000": "",
                 "d_800": "0.51.40",
-                "d_600": "0.00.00",
+                "d_600": "",
                 "d_400": "0.24.60",
                 "d_200": "",
                 "durum_kodu": "Kocaeli Kum"
@@ -7502,8 +7551,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 26,
+              "ganyan": "8.65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -7580,8 +7629,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "17.55",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -7658,8 +7707,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 17,
+              "ganyan": "3.95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -7735,8 +7784,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 21,
+              "ganyan": "1.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -7813,8 +7862,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "7.65",
               "son_galop": {
                 "tarih": "21.11.2026",
                 "pist": "Kum-İç",
@@ -7891,8 +7940,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "80.70",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -7969,8 +8018,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "13.05",
               "son_galop": {
                 "tarih": "25.11.2026",
                 "pist": "Kum-İç",
@@ -8047,8 +8096,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 13,
+              "ganyan": "24.05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -8169,8 +8218,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 22,
+              "ganyan": "3.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -8255,8 +8304,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 31,
+              "ganyan": "9.70",
               "son_galop": {
                 "tarih": "25.11.2026",
                 "pist": "Kum",
@@ -8339,8 +8388,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "1.65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -8417,8 +8466,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 20,
+              "ganyan": "6.75",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -8495,8 +8544,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "11.50",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -8573,8 +8622,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 17,
+              "ganyan": "9.00",
               "son_galop": {
                 "tarih": "25.11.2026",
                 "pist": "Sentetik",
@@ -8651,8 +8700,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "11.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -8761,8 +8810,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 15,
+              "ganyan": "4.10",
               "son_galop": {
                 "tarih": "27.11.2026",
                 "pist": "Kum-İç",
@@ -8848,8 +8897,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "7.05",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -8940,8 +8989,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 14,
+              "ganyan": "2.20",
               "son_galop": {
                 "tarih": "25.11.2026",
                 "pist": "Kum",
@@ -9024,8 +9073,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 37,
+              "ganyan": "7.95",
               "son_galop": {
                 "tarih": "",
                 "pist": "",
@@ -9117,8 +9166,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 15,
+              "ganyan": "6.90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -9196,8 +9245,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "6.45",
               "son_galop": {
                 "tarih": "21.11.2026",
                 "pist": "Kum",
@@ -9289,7 +9338,7 @@
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
               "agf_orani": null,
-              "ganyan": null,
+              "ganyan": "-",
               "son_galop": {
                 "tarih": "28.03.2026",
                 "pist": "Kum",
@@ -9367,8 +9416,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "16.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -9446,8 +9495,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 10,
+              "ganyan": "8.70",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -9566,8 +9615,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "17.95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -9644,8 +9693,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 7,
+              "ganyan": "21.05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -9723,8 +9772,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 43,
+              "ganyan": "3.70",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -9800,8 +9849,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 22,
+              "ganyan": "3.70",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -9878,8 +9927,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "17.95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -9956,8 +10005,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "7.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -10033,8 +10082,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 8,
+              "ganyan": "1.35",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -10118,8 +10167,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "32.75",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -10195,8 +10244,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "39.20",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -10273,8 +10322,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "28.75",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -10350,8 +10399,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "19.90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -10468,8 +10517,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 44,
+              "ganyan": "2.60",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -10555,8 +10604,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "5.25",
               "son_galop": {
                 "tarih": "23.11.2026",
                 "pist": "Kum-İç",
@@ -10640,8 +10689,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "33.45",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -10691,7 +10740,7 @@
                 "grup_tabela_sayisi": 4,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 6 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (4 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 6 kez elit açık/grup (KV-8/9, G 1, G 3) koşularda boy göstermiştir (4 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -10727,8 +10776,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "9.20",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -10812,8 +10861,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "7.45",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -10899,8 +10948,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "11.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -10950,7 +10999,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 3 kez elit açık/grup (KV-8/9, G 1, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -10985,8 +11034,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "10.10",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11036,7 +11085,7 @@
                 "grup_tabela_sayisi": 5,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 7 kez elit açık/grup (KV-8/9, G 3, G 1, G 2) koşularda boy göstermiştir (5 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 7 kez elit açık/grup (KV-8/9, G 1, G 3, G 2) koşularda boy göstermiştir (5 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11072,8 +11121,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 6,
+              "ganyan": "13.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11123,7 +11172,7 @@
                 "grup_tabela_sayisi": 6,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, G 1) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 1, G 3) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11158,8 +11207,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 14,
+              "ganyan": "7.55",
               "son_galop": {
                 "tarih": "24.11.2026",
                 "pist": "Kum-İç",
@@ -11209,7 +11258,7 @@
                 "grup_tabela_sayisi": 6,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 1 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, G 1, G 2) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 1, G 3, G 2) koşularda boy göstermiştir (6 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11245,8 +11294,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 20,
+              "ganyan": "7.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11296,7 +11345,7 @@
                 "grup_tabela_sayisi": 8,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 2 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, G 3, KV-7, G 2) koşularda boy göstermiştir (8 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 8 kez elit açık/grup (KV-8/9, KV-7, G 3, G 2) koşularda boy göstermiştir (8 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -11331,8 +11380,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "14.15",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11454,8 +11503,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 16,
+              "ganyan": "8.05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11532,8 +11581,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 26,
+              "ganyan": "16.95",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -11610,8 +11659,8 @@
               "stil_renk": "#eab308",
               "stil_bg": "#eab3081f",
               "stil_border": "#eab30859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 10,
+              "ganyan": "4.00",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11695,8 +11744,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 10,
+              "ganyan": "8.00",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11774,8 +11823,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "25.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -11853,8 +11902,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "9.95",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -11933,7 +11982,7 @@
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
               "agf_orani": null,
-              "ganyan": null,
+              "ganyan": "78.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -12009,8 +12058,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "6.00",
               "son_galop": {
                 "tarih": "21.11.2026",
                 "pist": "Kum-İç",
@@ -12087,8 +12136,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "16.20",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -12165,8 +12214,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 27,
+              "ganyan": "3.50",
               "son_galop": {
                 "tarih": "27.10.2026",
                 "pist": "Kum",
@@ -12216,7 +12265,7 @@
                 "grup_tabela_sayisi": 2,
                 "class_bonus": 0,
                 "badge": "💎 ÜST GRUP TECRÜBELİ (G 3 Koşmuş · Puan Nötr)",
-                "aciklama": "Safkan geçmişte 5 kez elit açık/grup (G 3, KV-7) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
+                "aciklama": "Safkan geçmişte 5 kez elit açık/grup (KV-7, G 3) koşularda boy göstermiştir (2 kez ilk 5'te bitirdi). Kural gereği üst grupta koşmuş olmak tek başına puan avantajı sağlamaz; safkanın gerçek form ve tabela performansı esas alınır (Puan Nötr)."
               },
               "anne_kardesleri": {
                 "score": 65,
@@ -12252,8 +12301,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "9.10",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -12331,8 +12380,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "10.15",
               "son_galop": {
                 "tarih": "15.11.2026",
                 "pist": "Kum-İç",
@@ -12440,8 +12489,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "7.55",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -12517,8 +12566,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "19.60",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -12596,8 +12645,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 34,
+              "ganyan": "8.70",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -12671,8 +12720,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "21.20",
               "son_galop": {
                 "tarih": "25.11.2026",
                 "pist": "Kum-İç",
@@ -12749,8 +12798,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 7,
+              "ganyan": "8.90",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -12826,8 +12875,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "12.35",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -12903,8 +12952,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "14.70",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -12980,8 +13029,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 8,
+              "ganyan": "1.40",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -13057,8 +13106,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 25,
+              "ganyan": "13.20",
               "son_galop": {
                 "tarih": "25.11.2026",
                 "pist": "Kum-İç",
@@ -13134,8 +13183,8 @@
               "stil_renk": "#38bdf8",
               "stil_bg": "#38bdf81f",
               "stil_border": "#38bdf859",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 12,
+              "ganyan": "17.35",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -13244,8 +13293,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 8,
+              "ganyan": "8.05",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -13323,8 +13372,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 3,
+              "ganyan": "19.15",
               "son_galop": {
                 "tarih": "",
                 "pist": "",
@@ -13402,8 +13451,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 9,
+              "ganyan": "8.05",
               "son_galop": {
                 "tarih": "25.10.2026",
                 "pist": "Kum-İç",
@@ -13481,8 +13530,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "12.55",
               "son_galop": {
                 "tarih": "27.11.2026",
                 "pist": "Kum-İç",
@@ -13566,8 +13615,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 15,
+              "ganyan": "13.50",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum-İç",
@@ -13646,8 +13695,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 5,
+              "ganyan": "8.50",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -13726,8 +13775,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "24.85",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -13804,8 +13853,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 7,
+              "ganyan": "12.05",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum-İç",
@@ -13882,8 +13931,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "20.15",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
@@ -13961,8 +14010,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "9.10",
               "son_galop": {
                 "tarih": "",
                 "pist": "",
@@ -14040,8 +14089,8 @@
               "stil_renk": "#a855f7",
               "stil_bg": "#a855f71f",
               "stil_border": "#a855f759",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "26.75",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -14125,8 +14174,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 22,
+              "ganyan": "5.25",
               "son_galop": {
                 "tarih": "22.11.2026",
                 "pist": "Kum",
@@ -14203,8 +14252,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 2,
+              "ganyan": "17.80",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -14282,8 +14331,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "22.30",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -14366,8 +14415,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "15.35",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Sentetik",
@@ -14444,8 +14493,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 1,
+              "ganyan": "41.65",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum-İç",
@@ -14523,8 +14572,8 @@
               "stil_renk": "#f97316",
               "stil_bg": "#f973161f",
               "stil_border": "#f9731659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 12,
+              "ganyan": "4.65",
               "son_galop": {
                 "tarih": "11.10.2026",
                 "pist": "Kum",
@@ -14613,8 +14662,8 @@
               "stil_renk": "#3b82f6",
               "stil_bg": "#3b82f61f",
               "stil_border": "#3b82f659",
-              "agf_orani": null,
-              "ganyan": null,
+              "agf_orani": 4,
+              "ganyan": "14.20",
               "son_galop": {
                 "tarih": "26.11.2026",
                 "pist": "Kum",
